@@ -1,0 +1,164 @@
+.landing {
+  position: relative;
+  height: var(--landing-height);
+  padding-top: var(--landing-padding-top);
+  overflow: hidden;
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+:root[data-theme="dark"] .landing {
+  background-color: var(--bg-main-dark);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, var(--grid-opacity-dark)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, var(--grid-opacity-dark)) 1px, transparent 1px);
+}
+
+:root[data-theme="light"] .landing {
+  background-color: var(--bg-main);
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, var(--grid-opacity-light)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, var(--grid-opacity-light)) 1px, transparent 1px);
+}
+
+.transport-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.landing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--container-margin);
+}
+
+.title-border {
+  position: relative;
+  padding: var(--title-border-padding);
+  margin-bottom: var(--title-border-margin);
+  max-width: var(--container-max-width);
+  background-color: var(--title-border-bg-light);
+  border-radius: var(--title-border-radius);
+}
+
+:root[data-theme="dark"] .title-border {
+  background-color: var(--title-border-bg-dark);
+}
+
+.border-frame {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--container-frame-max-width);
+  height: 100%;
+  border: var(--border-frame-width) solid var(--border-frame-color);
+  border-radius: var(--border-frame-radius);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.border-frame::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--border-frame-glow));
+  left: calc(-1 * var(--border-frame-glow));
+  right: calc(-1 * var(--border-frame-glow));
+  bottom: calc(-1 * var(--border-frame-glow));
+  border: 1px solid var(--border-frame-glow-color);
+  border-radius: var(--border-frame-glow-radius);
+  pointer-events: none;
+}
+
+.main-title {
+  font-size: var(--main-title-size);
+  font-weight: var(--main-title-weight);
+  color: var(--text-main);
+  margin-bottom: var(--main-title-margin);
+  line-height: var(--main-title-line-height);
+}
+
+.subtitle {
+  margin-top: var(--subtitle-margin-top);
+  font-size: var(--subtitle-size);
+  color: var(--text-secondary);
+  max-width: var(--subtitle-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--subtitle-line-height);
+}
+
+.cta-button {
+  display: block;
+  width: var(--cta-button-width);
+  margin: 0 auto;
+  padding: var(--cta-button-padding);
+  background: var(--cta-button-bg);
+  color: var(--cta-button-color);
+  border: none;
+  border-radius: var(--cta-button-radius);
+  font-size: var(--cta-button-font-size);
+  font-weight: var(--cta-button-font-weight);
+  cursor: pointer;
+  transition: var(--cta-transition);
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: var(--cta-button-bg-hover);
+}
+
+@media (max-width: 768px) {
+  .landing {
+    padding-top: var(--landing-padding-top-mobile);
+    height: var(--landing-height-mobile);
+  }
+  
+  .main-title {
+    font-size: var(--main-title-size-tablet);
+    padding: 0 20px;
+  }
+  
+  .subtitle {
+    font-size: var(--subtitle-size-tablet);
+    padding: 0 20px;
+  }
+  
+  .title-border {
+    padding: var(--title-border-padding-tablet);
+    margin-bottom: var(--title-border-margin-tablet);
+  }
+  
+  .border-frame {
+    width: 95%;
+  }
+  
+  .cta-button {
+    width: var(--cta-button-width-tablet);
+    padding: var(--cta-button-padding-tablet);
+    font-size: var(--cta-button-font-size-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: var(--main-title-size-mobile);
+  }
+  
+  .title-border {
+    padding: var(--title-border-padding-mobile);
+  }
+}

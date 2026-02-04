@@ -1,0 +1,116 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--tbank-yellow);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 320px;
+  animation: slideIn 0.3s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification svg {
+  color: var(--tbank-yellow);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.updateButton {
+  flex: 1;
+  padding: 8px 12px;
+  background: var(--tbank-yellow);
+  color: var(--text-main);
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.updateButton:hover {
+  background: var(--tbank-yellow-dark);
+  transform: translateY(-1px);
+}
+
+.dismissButton {
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.dismissButton:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .notification {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: none;
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+:root[data-theme="dark"] .notification {
+  background: var(--bg-secondary);
+  border-color: var(--tbank-yellow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,27 @@
+.mapPage {
+  margin-top: var(--header-height);
+  display: grid;
+  grid-template-columns: 350px 1fr 350px;
+  height: calc(100vh - var(--header-height));
+  background: var(--bg-main);
+  gap: 1px;
+}
+
+.mapContainer {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .mapPage {
+    grid-template-columns: 300px 1fr 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mapPage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+}

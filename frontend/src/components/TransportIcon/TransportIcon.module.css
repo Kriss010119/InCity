@@ -1,0 +1,237 @@
+.transport-icon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.transport-icon-car {
+  animation: car-border-move 25s linear infinite;
+  z-index: 50;
+  left: var(--frame-x, 0);
+  top: var(--frame-y, 0);
+  width: var(--car-size, 70px);
+  height: var(--car-size, 70px);
+  transform-origin: center center;
+}
+
+.transport-icon-plane {
+  top: 60px;
+  animation: plane-snake-move-combined 20s linear infinite;
+}
+
+.transport-icon-train {
+  bottom: 70px;
+  left: -100px;
+  animation: train-move 15s linear infinite;
+  z-index: 20;
+}
+
+@keyframes car-border-move {
+  0% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(18deg);
+  }
+  
+  18% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(18deg);
+  }
+  
+  22% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(108deg);
+  }
+  
+  25% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(108deg);
+  }
+  
+  43% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(108deg);
+  }
+  
+  47% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(198deg);
+  }
+  
+  50% {
+    transform: 
+      translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(198deg);
+  }
+  
+  68% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(198deg);
+  }
+  
+  72% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(288deg);
+  }
+  
+  75% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
+      )
+      rotate(288deg);
+  }
+  
+  93% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(288deg);
+  }
+  
+  97% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(378deg);
+  }
+  
+  100% {
+    transform: 
+      translate(
+        calc(0px - var(--car-size, 70px) / 2), 
+        calc(0px - var(--car-size, 70px) / 2)
+      )
+      rotate(378deg);
+  }
+}
+
+@keyframes plane-snake-move-combined {
+  0% {
+    transform: translateX(calc(100vw + 100px)) translateY(20px);
+  }
+  10% {
+    transform: translateX(90vw) translateY(80px);
+  }
+  20% {
+    transform: translateX(80vw) translateY(20px);
+  }
+  30% {
+    transform: translateX(70vw) translateY(80px);
+  }
+  40% {
+    transform: translateX(60vw) translateY(20px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(80px);
+  }
+  60% {
+    transform: translateX(40vw) translateY(20px);
+  }
+  70% {
+    transform: translateX(30vw) translateY(80px);
+  }
+  80% {
+    transform: translateX(20vw) translateY(20px);
+  }
+  90% {
+    transform: translateX(10vw) translateY(80px);
+  }
+  100% {
+    transform: translateX(-100px) translateY(20px);
+  }
+}
+
+@keyframes train-move {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+@media (max-width: 768px) {
+  .transport-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .transport-icon-car {
+    width: 36px;
+    height: 36px;
+    animation: car-border-move-mobile 15s linear infinite;
+  }
+  
+  .transport-icon-plane {
+    top: -30px;
+  }
+  
+  .transport-icon-train {
+    bottom: -300px;
+  }
+  
+  @keyframes car-border-move-mobile {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(calc(var(--border-width, 400px) - 36px), 0);
+    }
+    50% {
+      transform: translate(
+        calc(var(--border-width, 400px) - 36px), 
+        calc(var(--border-height, 200px) - 36px)
+      );
+    }
+    75% {
+      transform: translate(0, calc(var(--border-height, 200px) - 36px));
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}

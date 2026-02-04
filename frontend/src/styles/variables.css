@@ -1,0 +1,138 @@
+:root {
+  --tbank-yellow: #ffdd2d;
+  --tbank-yellow-light:  #cacaca4a;
+  --tbank-yellow-dark: #ffbb00;
+  --tbank-red: #e30611;
+  
+  --yellow-main: var(--tbank-yellow);
+  --yellow-soft: var(--tbank-yellow-light);
+  --red-accent: var(--tbank-red);
+  
+  --bg-main: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-header-light: rgba(255, 255, 255, 0.98);
+  --bg-header-dark: rgba(18, 18, 18, 0.98);
+  
+  --text-black: #000;
+  --text-main: #1f1f1f;
+  --text-secondary: #6b6b6b;
+  --text-main-dark: #ffffff;
+  --text-secondary-dark: #b5b5b5;
+  
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.12);
+
+  --info-section-padding: 64px;
+  --info-section-padding-mobile: 32px 20px;
+  --info-section-gap: 24px;
+  --info-section-gap-mobile: 20px;
+  --info-card-padding: 32px;
+  --info-card-padding-mobile: 24px;
+  --info-card-radius: 20px;
+  --info-card-border: 1px solid var(--border-light);
+  
+  --info-card-yellow: var(--tbank-yellow);
+  --info-card-gray-light: #eaeaea;
+  --info-card-gray-dark: #2a2a2a;
+  
+  --info-title-size: 22px;
+  --info-text-size: 16px;
+  --info-line-height: 1.6;
+  
+  --info-animation-duration: 0.6s;
+  --info-animation-delay-step: 0.1s;
+  --info-translate-start: 40px;
+
+  --landing-height: calc(100vh - var(--header-height));
+  --landing-height-mobile: calc(100vh - var(--header-height-mobile));
+  --landing-padding-top: var(--header-height);
+  --landing-padding-top-mobile: var(--header-height-mobile);
+  
+  --grid-size: 50px;
+  --grid-opacity-light: 0.08;
+  --grid-opacity-dark: 0.08;
+  
+  --title-border-padding: 40px;
+  --title-border-padding-tablet: 30px 20px;
+  --title-border-padding-mobile: 20px 15px;
+  --title-border-margin: 40px;
+  --title-border-margin-tablet: 30px;
+  --title-border-radius: 15px;
+  --title-border-bg-light: rgba(255, 255, 255, 0.5);
+  --title-border-bg-dark: rgba(34, 34, 34, 0.5);
+  
+  --border-frame-width: 2px;
+  --border-frame-color: var(--tbank-yellow);
+  --border-frame-radius: 16px;
+  --border-frame-glow: 8px;
+  --border-frame-glow-color: rgba(255, 204, 0, 0.5);
+  --border-frame-glow-radius: 22px;
+  
+  --main-title-size: 52px;
+  --main-title-size-tablet: 36px;
+  --main-title-size-mobile: 28px;
+  --main-title-weight: 600;
+  --main-title-line-height: 1.2;
+  --main-title-margin: 16px;
+  
+  --subtitle-size: 18px;
+  --subtitle-size-tablet: 16px;
+  --subtitle-margin-top: 36px;
+  --subtitle-max-width: 600px;
+  --subtitle-line-height: 1.5;
+  
+  --cta-button-width: 200px;
+  --cta-button-width-tablet: 180px;
+  --cta-button-padding: 16px 32px;
+  --cta-button-padding-tablet: 14px 24px;
+  --cta-button-radius: 12px;
+  --cta-button-font-size: 1.1rem;
+  --cta-button-font-size-tablet: 1rem;
+  --cta-button-font-weight: 600;
+  --cta-button-bg: var(--tbank-yellow);
+  --cta-button-bg-hover: #ffbb33;
+  --cta-button-color: #1a1a1a;
+  --cta-transition: all 0.3s ease;
+  
+  --container-margin: 30px;
+  --container-max-width: 800px;
+  --container-frame-max-width: 900px;
+
+  --footer-bg-light: #ffffff;
+  --footer-bg-dark: #1a1a1a;
+  --footer-text-light: #666666;
+  --footer-text-dark: #b0b0b0;
+  --footer-border-light: rgba(0, 0, 0, 0.08);
+  --footer-border-dark: rgba(255, 255, 255, 0.08);
+  --footer-padding: 40px 64px;
+  --footer-padding-mobile: 30px 24px;
+  --footer-gap: 24px;
+  --footer-font-size: 14px;
+  
+  --header-height: 72px;
+  --header-padding: 0 64px;
+  --tbank-icon-size: 28px;
+  --theme-toggle-size: 40px;
+  --footer-padding: 40px 64px 30px;
+  
+  --font-size-logo: 22px;
+  --font-size-nav: 16px;
+  --font-weight-logo: 600;
+  --font-weight-nav: 500;
+  
+  --radius-pill: 10px;
+  
+  --transition-normal: 0.3s ease;
+}
+
+:root[data-theme="dark"] {
+  --bg-main: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --text-main: var(--text-main-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border-light: var(--border-dark);
+  --info-card-gray-light: var(--info-card-gray-dark);
+  --footer-bg: var(--footer-bg-dark);
+  --footer-text: var(--footer-text-dark);
+  --footer-border: var(--footer-border-dark);
+}

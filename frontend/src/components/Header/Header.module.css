@@ -1,0 +1,138 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  padding: var(--header-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-header-light);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+}
+
+:root[data-theme="dark"] .header {
+  background: var(--bg-header-dark);
+}
+
+:root[data-theme="dark"] .nav-link.active {
+    color: var( --text-black);
+}
+
+.logo-container {
+  display: flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items:center;
+  transition: transform 0.5s ease;
+}
+
+.logo-container a:hover {
+  transform: scale(1.15);
+}
+
+.tbank-icon {
+  width: var(--tbank-icon-size);
+  height: var(--tbank-icon-size);
+}
+
+.logo {
+  font-size: var(--font-size-logo);
+  font-weight: var(--font-weight-logo);
+  color: var(--text-main);
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-nav);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  transition: color, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color:  var(--text-main);
+  background-color: var(--tbank-yellow-light);
+}
+
+.nav-link.active {
+  color: var(--text-main);
+  background: var(--tbank-yellow);
+}
+
+.theme-toggle {
+  width: var(--theme-toggle-size);
+  height: var(--theme-toggle-size);
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  border-color: var(--tbank-yellow);
+}
+
+.theme-icon {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 24px;
+    height: 64px;
+  }
+  
+  .nav {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 15px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 8px;
+  }
+  
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  
+  .logo {
+    font-size: 18px;
+  }
+  
+  .logo span {
+    display: none;
+  }
+}
