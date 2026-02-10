@@ -1,6 +1,9 @@
 import styles from './Footer.module.css';
+import { useLocale } from '../../hooks/useLocale';
 
 export const Footer = () => {
+  const { t } = useLocale();
+  
   return (
     <footer className={styles.footer}>
       <div className={styles["footer-content"]}>
@@ -14,8 +17,8 @@ export const Footer = () => {
         </div>
 
         <nav className={styles["footer-nav"]}>
-          <a href="/" className={styles["footer-link"]}>Главная</a>
-          <a href="/map" className={styles["footer-link"]}>Карта</a>
+          <a href="/" className={styles["footer-link"]}>{t('nav.home')}</a>
+          <a href="/map" className={styles["footer-link"]}>{t('nav.map')}</a>
           <a 
             href="https://www.tbank.ru/travel/" 
             target="_blank" 
@@ -37,12 +40,12 @@ export const Footer = () => {
 
       <div className={styles["footer-bottom"]}>
         <div className={styles["footer-developers"]}>
-          Разработано студентами 2 курса НИУ ВШЭ ФКН ПИ Осиной Дарьей и Кудрявцевым Георгием
+          {t('footer.developers')}
         </div>
         <div className={styles["footer-copyright"]}>
-          © 2026 InCity. Все права защищены.
+          {t('footer.copyright')}
         </div>
       </div>
     </footer>
   );
-}
+};

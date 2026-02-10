@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
+import { useLocale } from '../../hooks/useLocale';
 import styles from './Header.module.css';
 
 export const Header = () => {
   const { toggleTheme, themeIcon } = useTheme();
+  const { t } = useLocale();
 
   return (
     <header className={styles.header}>
@@ -27,7 +29,7 @@ export const Header = () => {
           }
           end
         >
-          Главная
+          {t('nav.home')}
         </NavLink>
 
         <NavLink
@@ -36,7 +38,7 @@ export const Header = () => {
             `${styles["nav-link"]} ${isActive ? styles.active : ''}`
           }
         >
-          Карта
+          {t('nav.map')}
         </NavLink>
       </nav>
 
