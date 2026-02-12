@@ -53,15 +53,3 @@
   color: inherit;
   opacity: 0.9;
 }
-
-@media (max-width: 768px) {
-  .info-section {
-    grid-template-columns: 1fr;
-    padding: var(--info-section-padding-mobile);
-    gap: var(--info-section-gap-mobile);
-  }
-  
-  .info-card {
-    padding: var(--info-card-padding-mobile);
-  }
-}
