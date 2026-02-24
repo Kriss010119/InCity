@@ -1,0 +1,5474 @@
+﻿[
+  {
+    "id": 11893450987,
+    "name": "Интерактивный музей кофе",
+    "latitude": 54.6334694,
+    "longitude": 39.7650437,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "contact:vk=coffee.museum",
+      "museum=history",
+      "name=Интерактивный музей кофе",
+      "name:en=Coffee museum",
+      "opening_hours=Tu-Fr 12:00-20:00; Sa-Su 10:30-20:30",
+      "phone=+7 (903) 834-50-00",
+      "tourism=museum",
+      "website=https://museum.bravos.coffee/"
+    ]
+  },
+  {
+    "id": 11896661869,
+    "name": "Пахнет хлебом",
+    "latitude": 54.6291791,
+    "longitude": 39.7404106,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "contact:vk=pahnet_hlebom_rzn",
+      "museum=history",
+      "name=Пахнет хлебом",
+      "opening_hours=Mo-Su 10:00-19:00",
+      "phone=+7 (903) 839-29-49",
+      "tourism=museum",
+      "website=http://pahnethlebom.tilda.ws"
+    ]
+  },
+  {
+    "id": 11896701167,
+    "name": "Музей истории Рязанского шоколада",
+    "latitude": 54.6295413,
+    "longitude": 39.7412443,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "museum=history",
+      "name=Музей истории Рязанского шоколада",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 109731626,
+    "name": "Дворец Олега",
+    "latitude": 54.63704455,
+    "longitude": 39.74961845,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": 6014.687255499173,
+    "estimatedVisitMinutes": 81,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=15",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=3",
+      "museum=history",
+      "name=Дворец Олега",
+      "opening_hours=Tu-Su 10:00-18:00; Mo off",
+      "roof:colour=green",
+      "roof:shape=gabled",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450989,
+    "name": "Резиденция традиций",
+    "latitude": 54.6335787,
+    "longitude": 39.7639906,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи искусств",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "museum=art",
+      "name=Резиденция традиций",
+      "name:en=Residence of traditions",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 12857522671,
+    "name": "Фотодом имени Е.Н. Каширина",
+    "latitude": 54.6294485,
+    "longitude": 39.7397563,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи искусств",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "contact:phone=+7 4912 274404",
+      "contact:vk=https://vk.com/fotodom62",
+      "museum=art",
+      "name=Фотодом имени Е.Н. Каширина",
+      "opening_hours=Mo-Sa 10:00-19:00",
+      "operator=Рязанский государственный художественный музей",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 1345064648,
+    "name": "Галерея Иванова",
+    "latitude": 54.6294663,
+    "longitude": 39.7309409,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "fee=yes",
+      "name=Галерея Иванова",
+      "opening_hours=Tu-Su 11:00-19:00",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 2028382362,
+    "name": "Дом-музей И. П. Пожалостина",
+    "latitude": 54.7984554,
+    "longitude": 39.8383835,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "name=Дом-музей И. П. Пожалостина",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 4652905176,
+    "name": "Галерея пряников",
+    "latitude": 54.6336781,
+    "longitude": 39.760794,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "name=Галерея пряников",
+      "tourism=museum",
+      "website=http://galereya-pryanikov.ru/"
+    ]
+  },
+  {
+    "id": 6447723185,
+    "name": "Музей истории рязанского леденца",
+    "latitude": 54.6336635,
+    "longitude": 39.7437253,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-09-17",
+      "name=Музей истории рязанского леденца",
+      "opening_hours=Mo-Su 10:00-18:00",
+      "payment:cash=yes",
+      "payment:credit_cards=yes",
+      "payment:debit_cards=yes",
+      "phone=+7 491 299-77-21",
+      "tourism=museum",
+      "website=https://mirledentsa.ru/"
+    ]
+  },
+  {
+    "id": 7576857034,
+    "name": "Музей вооружения и военной техники",
+    "latitude": 54.6143053,
+    "longitude": 39.6659507,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "museum=military",
+      "name=Музей вооружения и военной техники",
+      "opening_hours:covid19=off",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450987,
+    "name": "Интерактивный музей кофе",
+    "latitude": 54.6334694,
+    "longitude": 39.7650437,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "contact:vk=coffee.museum",
+      "museum=history",
+      "name=Интерактивный музей кофе",
+      "name:en=Coffee museum",
+      "opening_hours=Tu-Fr 12:00-20:00; Sa-Su 10:30-20:30",
+      "phone=+7 (903) 834-50-00",
+      "tourism=museum",
+      "website=https://museum.bravos.coffee/"
+    ]
+  },
+  {
+    "id": 11893450988,
+    "name": "Музей истории молодёжного движения",
+    "latitude": 54.6337261,
+    "longitude": 39.7655033,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "name=Музей истории молодёжного движения",
+      "name:en=Youth movement history museum",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450989,
+    "name": "Резиденция традиций",
+    "latitude": 54.6335787,
+    "longitude": 39.7639906,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "museum=art",
+      "name=Резиденция традиций",
+      "name:en=Residence of traditions",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11896661869,
+    "name": "Пахнет хлебом",
+    "latitude": 54.6291791,
+    "longitude": 39.7404106,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "contact:vk=pahnet_hlebom_rzn",
+      "museum=history",
+      "name=Пахнет хлебом",
+      "opening_hours=Mo-Su 10:00-19:00",
+      "phone=+7 (903) 839-29-49",
+      "tourism=museum",
+      "website=http://pahnethlebom.tilda.ws"
+    ]
+  },
+  {
+    "id": 11896701167,
+    "name": "Музей истории Рязанского шоколада",
+    "latitude": 54.6295413,
+    "longitude": 39.7412443,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "museum=history",
+      "name=Музей истории Рязанского шоколада",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 12857522671,
+    "name": "Фотодом имени Е.Н. Каширина",
+    "latitude": 54.6294485,
+    "longitude": 39.7397563,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "contact:phone=+7 4912 274404",
+      "contact:vk=https://vk.com/fotodom62",
+      "museum=art",
+      "name=Фотодом имени Е.Н. Каширина",
+      "opening_hours=Mo-Sa 10:00-19:00",
+      "operator=Рязанский государственный художественный музей",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 13123027701,
+    "name": "Рязанский музей путешественников",
+    "latitude": 54.6262118,
+    "longitude": 39.7486905,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "addr:housenumber=35",
+      "addr:postcode=390000",
+      "addr:street=улица Ленина",
+      "level=2",
+      "name=Рязанский музей путешественников",
+      "opening_hours=Mo-Fr 09:00-18:00; Sa 12:00-18:00",
+      "phone=+74912255636; +74912252522",
+      "tourism=museum",
+      "website=http://travelers-rzn.ru"
+    ]
+  },
+  {
+    "id": 102840708,
+    "name": "Музей дальней авиации",
+    "latitude": 54.6537733,
+    "longitude": 39.588537099999996,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 3565.934939070403,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=11",
+      "addr:street=улица Белякова",
+      "building=yes",
+      "name=Музей дальней авиации",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 105571167,
+    "name": "Музей истории молодёжного движения",
+    "latitude": 54.622496350000006,
+    "longitude": 39.74329625,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 1675.0205242659151,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=79",
+      "addr:street=улица Свободы",
+      "building=mansion",
+      "building:levels=1",
+      "check_date:opening_hours=2023-03-01",
+      "fee=yes",
+      "name=Музей истории молодёжного движения",
+      "opening_hours=Mo,We,Fr,Sa 10:00-18:00; Tu,Th 13:00-21:00",
+      "start_date=1876",
+      "tourism=museum",
+      "wikidata=Q122988172"
+    ]
+  },
+  {
+    "id": 108524098,
+    "name": "Дом-музей И.П.Павлова",
+    "latitude": 54.631919350000004,
+    "longitude": 39.727228,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 248.90271843803737,
+    "estimatedVisitMinutes": 48,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=27",
+      "addr:street=улица Павлова",
+      "building=civic",
+      "building:levels=2",
+      "fee=yes",
+      "name=Дом-музей И.П.Павлова",
+      "opening_hours=Tu-Su 10:00-18:00",
+      "tourism=museum",
+      "website=http://www.pavlovmuseum.ru/",
+      "wheelchair=no"
+    ]
+  },
+  {
+    "id": 109731626,
+    "name": "Дворец Олега",
+    "latitude": 54.63704455,
+    "longitude": 39.74961845,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 6014.687255499173,
+    "estimatedVisitMinutes": 81,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=15",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=3",
+      "museum=history",
+      "name=Дворец Олега",
+      "opening_hours=Tu-Su 10:00-18:00; Mo off",
+      "roof:colour=green",
+      "roof:shape=gabled",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 109731627,
+    "name": "Певческий корпус",
+    "latitude": 54.636984850000005,
+    "longitude": 39.75029515,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 763.629673655347,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=18",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=2",
+      "name=Певческий корпус",
+      "roof:colour=#333333",
+      "roof:levels=1",
+      "roof:material=wood",
+      "roof:shape=hipped",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 110224798,
+    "name": "Дом для причта",
+    "latitude": 54.637828150000004,
+    "longitude": 39.749785149999994,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 306.3405115753304,
+    "estimatedVisitMinutes": 24,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=17",
+      "addr:street=Трубежная набережная",
+      "building=yes",
+      "name=Дом для причта",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 376529128,
+    "name": "Открытый музей дальней авиации",
+    "latitude": 54.65126545,
+    "longitude": 39.585645299999996,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 28974.77358016516,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "area=yes",
+      "name=Открытый музей дальней авиации",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 835142220,
+    "name": "Рязанский кремль",
+    "latitude": 54.636150549999996,
+    "longitude": 39.7501901,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 197332.35568822353,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "castle_type=kremlin",
+      "fee=no",
+      "historic=castle",
+      "name=Рязанский кремль",
+      "ruins=yes",
+      "tourism=museum",
+      "wikidata=Q4402653",
+      "wikipedia=ru:Рязанский кремль"
+    ]
+  },
+  {
+    "id": 1608340,
+    "name": "Художественный музей им. Пожалостина",
+    "latitude": 54.627148000000005,
+    "longitude": 39.7516077,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 9309.841983934093,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "name=Художественный музей им. Пожалостина",
+      "official_name=Рязанский государственный областной художественный музей им. И.П. Пожалостина",
+      "tourism=museum",
+      "type=multipolygon",
+      "wikidata=Q16693441"
+    ]
+  },
+  {
+    "id": 835142220,
+    "name": "Рязанский кремль",
+    "latitude": 54.636150549999996,
+    "longitude": 39.7501901,
+    "category": "Архитектурные объекты",
+    "subcategory": "Историческая архитектура",
+    "square": 197332.35568822353,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "castle_type=kremlin",
+      "fee=no",
+      "historic=castle",
+      "name=Рязанский кремль",
+      "ruins=yes",
+      "tourism=museum",
+      "wikidata=Q4402653",
+      "wikipedia=ru:Рязанский кремль"
+    ]
+  },
+  {
+    "id": 11553378164,
+    "name": "Сквер имени Наташи Климовой",
+    "latitude": 54.6250189,
+    "longitude": 39.7491017,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": null,
+    "estimatedVisitMinutes": 9,
+    "osmType": "node",
+    "tags": [
+      "leisure=park",
+      "name=Сквер имени Наташи Климовой"
+    ]
+  },
+  {
+    "id": 27498560,
+    "name": "Лесопарк",
+    "latitude": 54.641710950000004,
+    "longitude": 39.77719195,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 4265407.089859046,
+    "estimatedVisitMinutes": 150,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "loc_name=парк Орешек",
+      "name=Лесопарк",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 61570067,
+    "name": "Новопавловская роща",
+    "latitude": 54.6168738,
+    "longitude": 39.709636,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 63983.461831569795,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "barrier=fence",
+      "fence_type=metal",
+      "height=2.5",
+      "leisure=park",
+      "name=Новопавловская роща"
+    ]
+  },
+  {
+    "id": 96098860,
+    "name": "Сквер имени М.Д. Скобелева",
+    "latitude": 54.609425349999995,
+    "longitude": 39.81262125,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 30122.526847386056,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Сквер имени М.Д. Скобелева"
+    ]
+  },
+  {
+    "id": 99470217,
+    "name": "Парк Уткина",
+    "latitude": 54.61337705,
+    "longitude": 39.76113065,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 35935.79142248221,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Уткина"
+    ]
+  },
+  {
+    "id": 101163378,
+    "name": "Верхний городской сад",
+    "latitude": 54.625030249999995,
+    "longitude": 39.7491353,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 39731.04056446722,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Верхний городской сад"
+    ]
+  },
+  {
+    "id": 102134869,
+    "name": "площадь 26 Бакинских Комиссаров",
+    "latitude": 54.6334544,
+    "longitude": 39.75632195,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 14512.818623236857,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=площадь 26 Бакинских Комиссаров"
+    ]
+  },
+  {
+    "id": 108461876,
+    "name": "Приолэнд (Парк железнорожников)",
+    "latitude": 54.6258692,
+    "longitude": 39.70961925,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 49555.034344954045,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Приолэнд (Парк железнорожников)"
+    ]
+  },
+  {
+    "id": 109077042,
+    "name": "Соборный парк",
+    "latitude": 54.633745000000005,
+    "longitude": 39.745559549999996,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 42816.859059667855,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Соборный парк",
+      "wikidata=Q127272272",
+      "wikipedia=ru:Соборный парк (Рязань)"
+    ]
+  },
+  {
+    "id": 111966878,
+    "name": "Парк Морской славы",
+    "latitude": 54.6623371,
+    "longitude": 39.6775802,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 105291.94624548452,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Морской славы"
+    ]
+  },
+  {
+    "id": 113691626,
+    "name": "Парк им. Маргелова",
+    "latitude": 54.63204235,
+    "longitude": 39.7333309,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 7573.873264172755,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк им. Маргелова"
+    ]
+  },
+  {
+    "id": 122552855,
+    "name": "Комсомольский парк",
+    "latitude": 54.63475955,
+    "longitude": 39.644515549999994,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 118330.94492642347,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Комсомольский парк"
+    ]
+  },
+  {
+    "id": 129346279,
+    "name": "парк Железнодорожников",
+    "latitude": 54.62764435,
+    "longitude": 39.7099887,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 19485.529184591847,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=парк Железнодорожников"
+    ]
+  },
+  {
+    "id": 284834442,
+    "name": "Парк Музыкального театра",
+    "latitude": 54.61549155,
+    "longitude": 39.75753985,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 14916.308816113453,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Музыкального театра"
+    ]
+  },
+  {
+    "id": 476774328,
+    "name": "Заводской парк",
+    "latitude": 54.6075563,
+    "longitude": 39.669184099999995,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 11912.180202174888,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Заводской парк"
+    ]
+  },
+  {
+    "id": 558514846,
+    "name": "Сквер Белых Журавлей",
+    "latitude": 54.66894025,
+    "longitude": 39.66114815,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 9245.374496202421,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "description=Сквер Белых Журавлей",
+      "leisure=park",
+      "name=Сквер Белых Журавлей"
+    ]
+  },
+  {
+    "id": 613578067,
+    "name": "Мамин сквер",
+    "latitude": 54.6023888,
+    "longitude": 39.82834325,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 5621.290463981693,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Мамин сквер"
+    ]
+  },
+  {
+    "id": 641671250,
+    "name": "Сквер В.А. Молодцова",
+    "latitude": 54.662632200000004,
+    "longitude": 39.64074345,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 10034.425278348666,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "description=Небольшой аккуратный скверик, расположенный прям напротив парка Гагарина. В центре располагается памятник герою советского союза, Владимиру Молодцову. Прямо за сквером начинается зелёный бульвар Карла Маркса.",
+      "leisure=park",
+      "name=Сквер В.А. Молодцова"
+    ]
+  },
+  {
+    "id": 641689298,
+    "name": "Сквер с клумбой",
+    "latitude": 54.6615478,
+    "longitude": 39.64266215,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 1611.9564330745898,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Сквер с клумбой"
+    ]
+  },
+  {
+    "id": 787469828,
+    "name": "Аллея А. Белякова",
+    "latitude": 54.65671595,
+    "longitude": 39.59054465,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 38808.51524433359,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Аллея А. Белякова"
+    ]
+  },
+  {
+    "id": 1607297,
+    "name": "Парк братству по оружию",
+    "latitude": 54.65094305,
+    "longitude": 39.66006605,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 152262.02174515466,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк братству по оружию",
+      "natural=wood",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1608348,
+    "name": "Нижний городской сад",
+    "latitude": 54.6266325,
+    "longitude": 39.751945899999996,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 71665.90534609176,
+    "estimatedVisitMinutes": 18,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Нижний городской сад",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1653398,
+    "name": "Парк Гагарина",
+    "latitude": 54.66409445,
+    "longitude": 39.6440053,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 276529.14581670496,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк Гагарина",
+      "official_name=Парк имени Ю.А. Гагарина",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 2388065,
+    "name": "ЦПКиО",
+    "latitude": 54.610949500000004,
+    "longitude": 39.7298272,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 1169386.5058121583,
+    "estimatedVisitMinutes": 90,
+    "osmType": "relation",
+    "tags": [
+      "addr:city=Рязань",
+      "leisure=park",
+      "name=ЦПКиО",
+      "opening_hours=24/7",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 2654603,
+    "name": "Мемориальный парк",
+    "latitude": 54.61252035,
+    "longitude": 39.74346905,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 278286.1601469909,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Мемориальный парк",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 7424392,
+    "name": "Сквер им.А.В. Александрова",
+    "latitude": 54.61505565,
+    "longitude": 39.79454885,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 67112.75580837009,
+    "estimatedVisitMinutes": 18,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Сквер им.А.В. Александрова",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 14733672,
+    "name": "Парк-дендрарий",
+    "latitude": 54.60324795,
+    "longitude": 39.81443735,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 152901.11602455654,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк-дендрарий",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 17583674,
+    "name": "Рязанская ВДНХ",
+    "latitude": 54.63382425,
+    "longitude": 39.764675999999994,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 85506.23453140323,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "landuse=commercial",
+      "leisure=park",
+      "name=Рязанская ВДНХ",
+      "type=multipolygon",
+      "wikidata=Q113554351"
+    ]
+  },
+  {
+    "id": 613106575,
+    "name": "Памятник Победы",
+    "latitude": 54.6287362,
+    "longitude": 39.71063,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник Победы"
+    ]
+  },
+  {
+    "id": 736442710,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6292426,
+    "longitude": 39.7369437,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич",
+      "wikidata=Q116669130"
+    ]
+  },
+  {
+    "id": 778540134,
+    "name": "Евпатий Коловрат",
+    "latitude": 54.6296449,
+    "longitude": 39.7427616,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Евпатий Коловрат",
+      "subject:wikidata=Q4173042",
+      "subject:wikipedia=ru:Евпатий Коловрат",
+      "wikidata=Q125917940"
+    ]
+  },
+  {
+    "id": 1245049149,
+    "name": "Олег Рязанский",
+    "latitude": 54.6330862,
+    "longitude": 39.743383,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Олег Рязанский",
+      "wikidata=Q4333471",
+      "wikipedia=ru:Олег Иванович"
+    ]
+  },
+  {
+    "id": 1254311608,
+    "name": "Памятник И.П.Павлову",
+    "latitude": 54.6260852,
+    "longitude": 39.7501486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник И.П.Павлову",
+      "subject:wikidata=Q42985",
+      "subject:wikipedia=ru:Павлов, Иван Петрович",
+      "wikidata=Q116455454"
+    ]
+  },
+  {
+    "id": 1292887310,
+    "name": "Г. К. Петрову",
+    "latitude": 54.6296668,
+    "longitude": 39.7259275,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "memorial=statue",
+      "memorial:subject=Григорий Константинович Петров",
+      "name=Г. К. Петрову",
+      "subject:wikidata=Q62209",
+      "subject:wikipedia=ru:Петров, Григорий Константинович"
+    ]
+  },
+  {
+    "id": 1307597878,
+    "name": "Михаил Евграфович Салтыков-Щедрин",
+    "latitude": 54.6290278,
+    "longitude": 39.7452596,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Михаил Евграфович Салтыков-Щедрин"
+    ]
+  },
+  {
+    "id": 1428189373,
+    "name": "Памятник Ф.Полетаеву",
+    "latitude": 54.6103581,
+    "longitude": 39.7175025,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник Ф.Полетаеву",
+      "wikidata=Q3755452",
+      "wikipedia=ru:Полетаев, Фёдор Андрианович"
+    ]
+  },
+  {
+    "id": 2016251210,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6272948,
+    "longitude": 39.7105243,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич"
+    ]
+  },
+  {
+    "id": 2073602802,
+    "name": "САУ Нона",
+    "latitude": 54.6188546,
+    "longitude": 39.6716319,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=САУ Нона"
+    ]
+  },
+  {
+    "id": 2139432877,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6018023,
+    "longitude": 39.7393806,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич"
+    ]
+  },
+  {
+    "id": 2721308549,
+    "name": "Надежде Чумаковой",
+    "latitude": 54.6301967,
+    "longitude": 39.7078311,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Надежде Чумаковой"
+    ]
+  },
+  {
+    "id": 3097489118,
+    "name": "Рязань",
+    "latitude": 54.5301711,
+    "longitude": 39.7855273,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Рязань"
+    ]
+  },
+  {
+    "id": 5129539325,
+    "name": "Ульянова и Ленин",
+    "latitude": 54.6251069,
+    "longitude": 39.7486318,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Ульянова и Ленин"
+    ]
+  },
+  {
+    "id": 5129539523,
+    "name": "Военная техника",
+    "latitude": 54.6329127,
+    "longitude": 39.7353309,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Военная техника"
+    ]
+  },
+  {
+    "id": 12430635040,
+    "name": "Памятник сотрудникам и военнослужащим Росгвардии, погибшим при исполнении служебного долга",
+    "latitude": 54.6278615,
+    "longitude": 39.7095974,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "description=открыт 9 ноября 2019 г",
+      "historic=monument",
+      "name=Памятник сотрудникам и военнослужащим Росгвардии, погибшим при исполнении служебного долга"
+    ]
+  },
+  {
+    "id": 197714586,
+    "name": "Вечный огонь",
+    "latitude": 54.6112458,
+    "longitude": 39.74721175,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": 42.0108178536656,
+    "estimatedVisitMinutes": 3,
+    "osmType": "way",
+    "tags": [
+      "historic=monument",
+      "name=Вечный огонь"
+    ]
+  },
+  {
+    "id": 1165785693,
+    "name": "памятник К.Э. Циолковскому",
+    "latitude": 54.6208056,
+    "longitude": 39.757137,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=памятник К.Э. Циолковскому",
+      "wikidata=Q113415303"
+    ]
+  },
+  {
+    "id": 1248146889,
+    "name": "Памятник Молодцову",
+    "latitude": 54.6626644,
+    "longitude": 39.6408375,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник Молодцову"
+    ]
+  },
+  {
+    "id": 1252145172,
+    "name": "Георгий Победоносец",
+    "latitude": 54.6446972,
+    "longitude": 39.6586521,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "man_made=tower",
+      "memorial=statue",
+      "name=Георгий Победоносец",
+      "subject:wikidata=Q48438",
+      "subject:wikipedia=ru:Георгий Победоносец"
+    ]
+  },
+  {
+    "id": 1252145182,
+    "name": "Памятник Советско-Польскому Братству по оружию",
+    "latitude": 54.6509344,
+    "longitude": 39.6601362,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник Советско-Польскому Братству по оружию"
+    ]
+  },
+  {
+    "id": 1252222263,
+    "name": "Памятник героям гражданской войны",
+    "latitude": 54.6348766,
+    "longitude": 39.7458635,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=obelisk",
+      "name=Памятник героям гражданской войны",
+      "wikidata=Q28125495"
+    ]
+  },
+  {
+    "id": 1253913335,
+    "name": "С. А. Есенину",
+    "latitude": 54.6352421,
+    "longitude": 39.7421997,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "memorial:subject=Сергей Александрович Есенин",
+      "name=С. А. Есенину",
+      "subject:wikidata=Q31628",
+      "subject:wikipedia=ru:Есенин, Сергей Александрович"
+    ]
+  },
+  {
+    "id": 1300659569,
+    "name": "Мемориальный комплекс Площадь Победы",
+    "latitude": 54.6288551,
+    "longitude": 39.7104566,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Мемориальный комплекс Площадь Победы"
+    ]
+  },
+  {
+    "id": 1313853472,
+    "name": "В. И. Ленину",
+    "latitude": 54.7911978,
+    "longitude": 39.8347597,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В. И. Ленину"
+    ]
+  },
+  {
+    "id": 1317023885,
+    "name": "А.С. Пушкин",
+    "latitude": 54.6250701,
+    "longitude": 39.7609796,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=А.С. Пушкин"
+    ]
+  },
+  {
+    "id": 1345588313,
+    "name": "памятник М.Д. Скобелеву",
+    "latitude": 54.6087067,
+    "longitude": 39.8123137,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=памятник М.Д. Скобелеву",
+      "subject:wikidata=Q57173",
+      "subject:wikipedia=ru:Скобелев, Михаил Дмитриевич"
+    ]
+  },
+  {
+    "id": 1351832265,
+    "name": "В честь 50 летия образования СССР",
+    "latitude": 54.6633157,
+    "longitude": 39.6412848,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В честь 50 летия образования СССР"
+    ]
+  },
+  {
+    "id": 1390694487,
+    "name": "Аксенов Владимир Викторович",
+    "latitude": 54.6136658,
+    "longitude": 39.7604128,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=Аксенов Владимир Викторович",
+      "subject:wikipedia=ru:Аксёнов, Владимир Викторович"
+    ]
+  },
+  {
+    "id": 1390694488,
+    "name": "Уткин Владимир Федорович",
+    "latitude": 54.6134021,
+    "longitude": 39.7606244,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=Уткин Владимир Федорович",
+      "subject:wikidata=Q4478872",
+      "subject:wikipedia=ru:Уткин, Алексей Фёдорович"
+    ]
+  },
+  {
+    "id": 1528760361,
+    "name": "Ту-16",
+    "latitude": 54.6596707,
+    "longitude": 39.5931701,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-16"
+    ]
+  },
+  {
+    "id": 1788009798,
+    "name": "аллея Ветеранов",
+    "latitude": 54.6126768,
+    "longitude": 39.7276339,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=stone",
+      "name=аллея Ветеранов"
+    ]
+  },
+  {
+    "id": 1839307124,
+    "name": "Ильина Дубрава",
+    "latitude": 54.6076211,
+    "longitude": 39.7350052,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ильина Дубрава"
+    ]
+  },
+  {
+    "id": 1839322572,
+    "name": "А. С. Попов",
+    "latitude": 54.6138286,
+    "longitude": 39.7235901,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=А. С. Попов",
+      "subject:wikidata=Q191799",
+      "subject:wikipedia=ru:Попов, Александр Степанович"
+    ]
+  },
+  {
+    "id": 2002843223,
+    "name": "Указатель в \"Сказку\"",
+    "latitude": 54.7702954,
+    "longitude": 39.8259856,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Указатель в \"Сказку\""
+    ]
+  },
+  {
+    "id": 2671299635,
+    "name": "Героям Великой Отечественной войны",
+    "latitude": 54.7916552,
+    "longitude": 39.8349714,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=war_memorial",
+      "name=Героям Великой Отечественной войны"
+    ]
+  },
+  {
+    "id": 2671309014,
+    "name": "Николай Чудотворец",
+    "latitude": 54.8009706,
+    "longitude": 39.8383428,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Николай Чудотворец"
+    ]
+  },
+  {
+    "id": 3799066085,
+    "name": "Памятник «Слава авиации»",
+    "latitude": 54.6590134,
+    "longitude": 39.5915454,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник «Слава авиации»"
+    ]
+  },
+  {
+    "id": 3923326182,
+    "name": "Братство русского и армянского народов",
+    "latitude": 54.6423292,
+    "longitude": 39.6642681,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Братство русского и армянского народов"
+    ]
+  },
+  {
+    "id": 4197182012,
+    "name": "Установка залпового огня",
+    "latitude": 54.6116846,
+    "longitude": 39.6754871,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Установка залпового огня"
+    ]
+  },
+  {
+    "id": 4197182013,
+    "name": "БМД",
+    "latitude": 54.6120472,
+    "longitude": 39.6757067,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=БМД"
+    ]
+  },
+  {
+    "id": 4758485771,
+    "name": "Павлов И. П.",
+    "latitude": 54.6318524,
+    "longitude": 39.727026,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Павлов И. П."
+    ]
+  },
+  {
+    "id": 4964925630,
+    "name": "В.И.Ленин",
+    "latitude": 54.6330138,
+    "longitude": 39.7267944,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=В.И.Ленин"
+    ]
+  },
+  {
+    "id": 5010286311,
+    "name": "БМД-1",
+    "latitude": 54.6092487,
+    "longitude": 39.6797189,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=БМД-1"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5685662139,
+    "name": "В. И. Ленину",
+    "latitude": 54.6270981,
+    "longitude": 39.7515205,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=В. И. Ленину",
+      "subject:wikidata=Q1394"
+    ]
+  },
+  {
+    "id": 5758625325,
+    "name": "А.С. Пушкину",
+    "latitude": 54.7891405,
+    "longitude": 39.8331411,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=А.С. Пушкину"
+    ]
+  },
+  {
+    "id": 6512526556,
+    "name": "Н.Г. Чернышевскому",
+    "latitude": 54.7892654,
+    "longitude": 39.833419,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Н.Г. Чернышевскому"
+    ]
+  },
+  {
+    "id": 7362590847,
+    "name": "Самолёт Ту-22М2",
+    "latitude": 54.6515915,
+    "longitude": 39.5861837,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Самолёт Ту-22М2",
+      "name:ru=Самолёт Ту-22М2"
+    ]
+  },
+  {
+    "id": 7362590848,
+    "name": "Самолёт Ту-22ПД",
+    "latitude": 54.6513354,
+    "longitude": 39.5859048,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Самолёт Ту-22ПД",
+      "name:ru=Самолёт Ту-22ПД"
+    ]
+  },
+  {
+    "id": 7362590849,
+    "name": "Ту-16",
+    "latitude": 54.6509731,
+    "longitude": 39.5856057,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-16"
+    ]
+  },
+  {
+    "id": 7362590850,
+    "name": "Ту-22М4",
+    "latitude": 54.6509676,
+    "longitude": 39.5849821,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-22М4"
+    ]
+  },
+  {
+    "id": 7362590851,
+    "name": "Ту-95К",
+    "latitude": 54.6513502,
+    "longitude": 39.5853429,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-95К"
+    ]
+  },
+  {
+    "id": 7362590852,
+    "name": "М-4-2",
+    "latitude": 54.6517516,
+    "longitude": 39.5855809,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=М-4-2"
+    ]
+  },
+  {
+    "id": 7362643710,
+    "name": "ВМ-Т Атлант (RA-01402)",
+    "latitude": 54.6496416,
+    "longitude": 39.5855024,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ВМ-Т Атлант (RA-01402)",
+      "name:en=VM-T Atlant (RA-01402)"
+    ]
+  },
+  {
+    "id": 7537464985,
+    "name": "В. И. Ленину",
+    "latitude": 54.6217966,
+    "longitude": 39.7639298,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В. И. Ленину"
+    ]
+  },
+  {
+    "id": 8137260994,
+    "name": "А. Полин",
+    "latitude": 54.6381921,
+    "longitude": 39.6804468,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "inscription=Камень заложен в\u00A0начале улицы, названной в\u00A0честь пожарного, Героя Советского Союза Полина Александра Семеновича.",
+      "material=stone",
+      "memorial=stone",
+      "name=А. Полин",
+      "start_date=2017-12-27"
+    ]
+  },
+  {
+    "id": 8289292868,
+    "name": "ФАБ-9000 М-54",
+    "latitude": 54.6510094,
+    "longitude": 39.5854406,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-9000 М-54"
+    ]
+  },
+  {
+    "id": 8289292869,
+    "name": "ФАБ-5000 М-54",
+    "latitude": 54.6510336,
+    "longitude": 39.5854578,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-5000 М-54"
+    ]
+  },
+  {
+    "id": 8289292870,
+    "name": "ФАБ-3000 М-54",
+    "latitude": 54.6513766,
+    "longitude": 39.5857018,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-3000 М-54"
+    ]
+  },
+  {
+    "id": 8289292871,
+    "name": "Aero L-39 Albatros",
+    "latitude": 54.6511275,
+    "longitude": 39.5857157,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Aero L-39 Albatros"
+    ]
+  },
+  {
+    "id": 8536914918,
+    "name": "Черный кот",
+    "latitude": 54.6113548,
+    "longitude": 39.711881,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Черный кот"
+    ]
+  },
+  {
+    "id": 9668546421,
+    "name": "МАЗ на постаменте",
+    "latitude": 54.5691783,
+    "longitude": 39.8055316,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=МАЗ на постаменте"
+    ]
+  },
+  {
+    "id": 11015793520,
+    "name": "Памятник экипажу Ил-76",
+    "latitude": 54.6225812,
+    "longitude": 39.6562797,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник экипажу Ил-76",
+      "start_date=2023-06-24",
+      "wikidata=Q113412198",
+      "wikipedia=ru:Катастрофа Ил-76 в Рязани"
+    ]
+  },
+  {
+    "id": 11134878050,
+    "name": "ГАЗ-66, пожарный",
+    "latitude": 54.7837804,
+    "longitude": 39.8357346,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=obelisk",
+      "name=ГАЗ-66, пожарный"
+    ]
+  },
+  {
+    "id": 13263869286,
+    "name": "Памятный знак о заложении града Переславля Рязанского",
+    "latitude": 54.6346453,
+    "longitude": 39.7462154,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=stone",
+      "name=Памятный знак о заложении града Переславля Рязанского"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 114107385,
+    "name": "Погибшим в локальных войнах",
+    "latitude": 54.6315897,
+    "longitude": 39.733270399999995,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": 193.49071627423973,
+    "estimatedVisitMinutes": 1,
+    "osmType": "way",
+    "tags": [
+      "historic=memorial",
+      "memorial=war_memorial",
+      "name=Погибшим в локальных войнах",
+      "wikidata=Q119625443"
+    ]
+  },
+  {
+    "id": 1758753970,
+    "name": "Лоси",
+    "latitude": 54.6161768,
+    "longitude": 39.7345715,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Лоси",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4471136881,
+    "name": "Слоненок",
+    "latitude": 54.6053523,
+    "longitude": 39.7640952,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Слоненок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539421,
+    "name": "Гриб \"Грибы с глазами\"",
+    "latitude": 54.6261794,
+    "longitude": 39.751088,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибы с глазами\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023625,
+    "name": "Гриб \"Мудрец\"",
+    "latitude": 54.6305079,
+    "longitude": 39.7078831,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мудрец\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023626,
+    "name": "Гриб \"Рязанский коробейник\"",
+    "latitude": 54.6295453,
+    "longitude": 39.7358612,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Рязанский коробейник\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023627,
+    "name": "Гриб \"Мужичок-боровичок\"",
+    "latitude": 54.6292686,
+    "longitude": 39.7397201,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мужичок-боровичок\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023628,
+    "name": "Гриб \"Грибная команда\"",
+    "latitude": 54.6273394,
+    "longitude": 39.7409285,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибная команда\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023629,
+    "name": "Гриб \"Влюбленная пара\"",
+    "latitude": 54.6217594,
+    "longitude": 39.756683,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Влюбленная пара\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9829205592,
+    "name": "Аист Бро",
+    "latitude": 54.6023129,
+    "longitude": 39.8280824,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=statue",
+      "name=Аист Бро",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 2421550584,
+    "name": "Маски",
+    "latitude": 54.6215795,
+    "longitude": 39.7567951,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Фонтаны",
+    "square": null,
+    "estimatedVisitMinutes": 5,
+    "osmType": "node",
+    "tags": [
+      "amenity=fountain",
+      "name=Маски"
+    ]
+  },
+  {
+    "id": 112570238,
+    "name": "Лоси",
+    "latitude": 54.629989800000004,
+    "longitude": 39.74559120000001,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Фонтаны",
+    "square": 114.07470646652924,
+    "estimatedVisitMinutes": 5,
+    "osmType": "way",
+    "tags": [
+      "amenity=fountain",
+      "name=Лоси"
+    ]
+  },
+  {
+    "id": 7112753932,
+    "name": "Рязанский музыкальный театр",
+    "latitude": 54.6155236,
+    "longitude": 39.7583038,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": null,
+    "estimatedVisitMinutes": 180,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=12",
+      "addr:street=улица Циолковского",
+      "alt_name=Рязанский областной музыкальный театр",
+      "amenity=theatre",
+      "check_date=2024-05-09",
+      "contact:instagram=muzteatrrzn",
+      "contact:vk=muzteatrrzn",
+      "email=muzteatr.rzn@mail.ru",
+      "name=Рязанский музыкальный театр",
+      "official_name=ГАУК «Рязанский музыкальный театр»",
+      "phone=+7 491 245-81-13",
+      "ref:mkrf_theaters=12798",
+      "website=https://romust.ru/"
+    ]
+  },
+  {
+    "id": 96881608,
+    "name": "Рязанский театр драмы",
+    "latitude": 54.6210686,
+    "longitude": 39.7576647,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 5853.299598482989,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=7",
+      "addr:street=Театральная площадь",
+      "amenity=theatre",
+      "architect=Ирина Николаевна Чистосердова",
+      "building=yes",
+      "email=rzndrama@yandex.ru",
+      "name=Рязанский театр драмы",
+      "official_name=ГАУК «Рязанский государственный ордена «Знак Почета» областной театр драмы»",
+      "opening_hours=Mo-Fr 10:00-19:00; Sa-Su 10:00-18:00",
+      "ref:mkrf_theaters=12884",
+      "website=https://www.rzndrama.ru/"
+    ]
+  },
+  {
+    "id": 99466227,
+    "name": "Театр кукол",
+    "latitude": 54.6226728,
+    "longitude": 39.7591622,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 3856.530609962102,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=27",
+      "addr:street=улица Есенина",
+      "amenity=theatre",
+      "building=yes",
+      "email=rzpuppet-office@mail.ru",
+      "name=Театр кукол",
+      "opening_hours=Tu-Su 10:00-18:00",
+      "operator=ГАУК «Рязанский государственный областной театр кукол»",
+      "phone=+7 491 228-23-26",
+      "ref:mkrf_theaters=12354",
+      "website=https://rznpuppet.ru/"
+    ]
+  },
+  {
+    "id": 101155397,
+    "name": "Филармония",
+    "latitude": 54.6264246,
+    "longitude": 39.7503176,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 10398.2563236104,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=26",
+      "addr:street=улица Ленина",
+      "amenity=theatre",
+      "architect=Игорь Петрович Антипов",
+      "building=yes",
+      "contact:facebook=https://www.facebook.com/rznfilarmonia",
+      "contact:vk=https://vk.com/rznfilarmonia",
+      "name=Филармония",
+      "official_name=ГАУК «Рязанская областная филармония»",
+      "website=https://rznfilarmonia.ru/",
+      "wikidata=Q94791582"
+    ]
+  },
+  {
+    "id": 101850040,
+    "name": "Рязанский цирк",
+    "latitude": 54.631254,
+    "longitude": 39.74943974999999,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 12009.055705970623,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=34",
+      "addr:postcode=390000",
+      "addr:street=Лево-Лыбедская улица",
+      "amenity=theatre",
+      "building=yes",
+      "contact:phone=+7 (4912) 25-64-03",
+      "contact:vk=https://vk.com/ryazan.circus",
+      "name=Рязанский цирк",
+      "theatre:genre=circus",
+      "tourism=attraction",
+      "website=https://www.circus-ryazan.ru/",
+      "wikidata=Q96473308"
+    ]
+  },
+  {
+    "id": 101851275,
+    "name": "Рязанский театр юного зрителя",
+    "latitude": 54.6335296,
+    "longitude": 39.7426718,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 5428.451732857318,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=16",
+      "addr:street=Соборная улица",
+      "amenity=theatre",
+      "building=yes",
+      "building:levels=2",
+      "email=soborkatuz@list.ru",
+      "heritage=4",
+      "heritage:name=Здание театра, 1862-1870 гг.",
+      "heritage:website=https://culture62.ru/?object=%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d1%82%d0%b5%d0%b0%d1%82%d1%80%d0%b0-1862-1870-%d0%b3-%d0%b3",
+      "name=Рязанский театр юного зрителя",
+      "old_name=Театр Юного Зрителя",
+      "opening_hours=Tu-Sa 10:30-18:00; Su 10:30-16:00",
+      "operator=ГАУК «Рязанский областной ТЮЗ»",
+      "phone=+7 491 227-52-38",
+      "ref:mkrf_theaters=12355",
+      "website=https://www.rzn-tdm.ru/"
+    ]
+  },
+  {
+    "id": 173102169,
+    "name": "Зелёный театр",
+    "latitude": 54.61271515,
+    "longitude": 39.735843,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 3543.1956034792934,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "abandoned=yes",
+      "amenity=theatre",
+      "name=Зелёный театр",
+      "theatre:type=open_air"
+    ]
+  },
+  {
+    "id": 969579428,
+    "name": "Сцена",
+    "latitude": 54.6265492,
+    "longitude": 39.753026750000004,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 466.5512698035611,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "amenity=theatre",
+      "name=Сцена",
+      "theatre:type=amphi"
+    ]
+  },
+  {
+    "id": 2233275,
+    "name": "Танцевальная площадка",
+    "latitude": 54.61084595,
+    "longitude": 39.7334454,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 2291.388782569827,
+    "estimatedVisitMinutes": 180,
+    "osmType": "relation",
+    "tags": [
+      "amenity=theatre",
+      "name=Танцевальная площадка",
+      "type=multipolygon",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 472389569,
+    "name": "Люксор",
+    "latitude": 54.6332472,
+    "longitude": 39.7734024,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Люксор",
+      "official_name=Люксор в ТЦ \"Круиз\"",
+      "operator=Люксор",
+      "website=https://luxorfilm.ru/cinema/ryazan/"
+    ]
+  },
+  {
+    "id": 1176809955,
+    "name": "Малина",
+    "latitude": 54.630445,
+    "longitude": 39.7397255,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Малина",
+      "wheelchair=limited"
+    ]
+  },
+  {
+    "id": 1252762428,
+    "name": "КиноЛюкс",
+    "latitude": 54.6318092,
+    "longitude": 39.6974518,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=КиноЛюкс"
+    ]
+  },
+  {
+    "id": 1936894286,
+    "name": "Киномакс",
+    "latitude": 54.6336454,
+    "longitude": 39.689277,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Киномакс"
+    ]
+  },
+  {
+    "id": 3909301120,
+    "name": "Кронверк Синема",
+    "latitude": 54.6306924,
+    "longitude": 39.7094949,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Кронверк Синема"
+    ]
+  },
+  {
+    "id": 2040347635,
+    "name": "Храм в честь Покрова Пресвятой Богородици ",
+    "latitude": 54.6004289,
+    "longitude": 39.6482177,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Храм в честь Покрова Пресвятой Богородици ",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2056036370,
+    "name": "Николо-Царский храм",
+    "latitude": 54.6179989,
+    "longitude": 39.6904539,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=orthodox",
+      "name=Николо-Царский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2077493409,
+    "name": "Богоявленская церковь",
+    "latitude": 54.6683906,
+    "longitude": 39.7073936,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Богоявленская церковь",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2140354800,
+    "name": "Рязанская автономная церковь Евангельских Христиан-Баптистов",
+    "latitude": 54.6351708,
+    "longitude": 39.7180435,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Рязанская автономная церковь Евангельских Христиан-Баптистов",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2247870470,
+    "name": "Часовня в честь иконы Божьей Матери Неопалимая Купина",
+    "latitude": 54.6322386,
+    "longitude": 39.7373395,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Часовня в честь иконы Божьей Матери Неопалимая Купина",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2659976377,
+    "name": "Храм Николая Чудотворца",
+    "latitude": 54.6137929,
+    "longitude": 39.7431918,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=russian_orthodox",
+      "name=Храм Николая Чудотворца",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 7569539269,
+    "name": "Церковь Илии Пророка",
+    "latitude": 58.9050198,
+    "longitude": 49.9527801,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Церковь Илии Пророка",
+      "religion=christian",
+      "service_times=заброшена"
+    ]
+  },
+  {
+    "id": 96096388,
+    "name": "Храм Александра Невского",
+    "latitude": 54.60835435,
+    "longitude": 39.813393649999995,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 483.42786625389016,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=33В",
+      "addr:street=улица Новосёлов",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм Александра Невского",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 101973940,
+    "name": "Благовещенский храм",
+    "latitude": 54.632013400000005,
+    "longitude": 39.76339405,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1753.6001073129994,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=56",
+      "addr:street=улица Фурманова",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Благовещенский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109077043,
+    "name": "Ильин храм",
+    "latitude": 54.6345652,
+    "longitude": 39.746891,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1553.7862615943845,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=3",
+      "addr:street=Соборная площадь",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Ильин храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109077044,
+    "name": "Часовня \"К 900-летию Рязани\"",
+    "latitude": 54.6335554,
+    "longitude": 39.745594249999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 141.64342117070018,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Часовня \"К 900-летию Рязани\"",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109078990,
+    "name": "Вознесенский храм",
+    "latitude": 54.628541999999996,
+    "longitude": 39.760652,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1032.1613388709213,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=26А",
+      "addr:street=Вознесенская улица",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Вознесенский храм",
+      "religion=christian",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 109353154,
+    "name": "Николо-Ямской храм",
+    "latitude": 54.61755035,
+    "longitude": 39.757386749999995,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 3242.870011464564,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=8",
+      "addr:street=улица Циолковского",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:levels=4",
+      "check_date=2024-05-09",
+      "denomination=orthodox",
+      "name=Николо-Ямской храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109563319,
+    "name": "Церковь Спаса Преображения на Яру",
+    "latitude": 54.6354816,
+    "longitude": 39.7417916,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 537.6256417405933,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=14",
+      "addr:street=улица Петрова",
+      "alt_name=Церковь Спаса на Яру",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "name=Церковь Спаса Преображения на Яру",
+      "ref:sobory.ru=00867",
+      "ref:temples.ru=12910",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109731622,
+    "name": "Успенский собор",
+    "latitude": 54.636139400000005,
+    "longitude": 39.74892135,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 5120.266135118757,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=13",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Успенский собор",
+      "religion=christian",
+      "tourism=attraction",
+      "wikidata=Q2018776",
+      "wikipedia=ru:Успенский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731623,
+    "name": "Христорождественский собор",
+    "latitude": 54.63655715,
+    "longitude": 39.748542400000005,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1670.1421201213527,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=14",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Христорождественский собор",
+      "religion=christian",
+      "tourism=attraction",
+      "wikidata=Q4501497",
+      "wikipedia=ru:Христорождественский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731624,
+    "name": "Архангельский собор",
+    "latitude": 54.6365455,
+    "longitude": 39.74934965,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 580.4947952745276,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=12",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "building:colour=white",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Архангельский собор",
+      "religion=christian",
+      "roof:colour=green",
+      "roof:shape=pyramidal",
+      "tourism=attraction",
+      "wikidata=Q96850295",
+      "wikipedia=ru:Архангельский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731638,
+    "name": "Богоявленская церковь",
+    "latitude": 54.635883750000005,
+    "longitude": 39.74941845,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 836.648358654272,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=5",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Богоявленская церковь",
+      "religion=christian",
+      "tourism=attraction"
+    ]
+  },
+  {
+    "id": 109731639,
+    "name": "Преображенский собор",
+    "latitude": 54.6356727,
+    "longitude": 39.7500551,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 751.7980934173299,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=6",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Преображенский собор",
+      "religion=christian",
+      "tourism=attraction"
+    ]
+  },
+  {
+    "id": 110224799,
+    "name": "Церковь Сошествия Святого Духа",
+    "latitude": 54.6378052,
+    "longitude": 39.750249600000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 961.8602676635289,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=19",
+      "addr:street=улица Набережная кремля",
+      "building=church",
+      "historic=yes",
+      "name=Церковь Сошествия Святого Духа",
+      "tourism=attraction",
+      "wikidata=Q65172387"
+    ]
+  },
+  {
+    "id": 112795996,
+    "name": "Храм Благовещения Пресвятой Богородицы",
+    "latitude": 54.63423545,
+    "longitude": 39.7613992,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 804.1728533911498,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=58",
+      "addr:street=Затинная улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм Благовещения Пресвятой Богородицы",
+      "religion=christian",
+      "wikidata=Q2190386",
+      "wikipedia=ru:Церковь Благовещения (Рязань)"
+    ]
+  },
+  {
+    "id": 116105989,
+    "name": "Храм входа Господня в Иерусалим",
+    "latitude": 54.6349028,
+    "longitude": 39.75833365,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 845.4883453496014,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм входа Господня в Иерусалим",
+      "religion=christian",
+      "wikidata=Q1974979",
+      "wikipedia=ru:Входноиерусалимская церковь (Рязань)"
+    ]
+  },
+  {
+    "id": 116565138,
+    "name": "Солотчинский монастырь Рождества Богородицы",
+    "latitude": 54.79076405,
+    "longitude": 39.83281235,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 41210.65402676713,
+    "estimatedVisitMinutes": 19,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=russian_orthodox",
+      "name=Солотчинский монастырь Рождества Богородицы",
+      "religion=christian",
+      "wikidata=Q3320375",
+      "wikipedia=ru:Солотчинский монастырь"
+    ]
+  },
+  {
+    "id": 116565139,
+    "name": "Церковь сошествия Святого Духа",
+    "latitude": 54.790471,
+    "longitude": 39.833203600000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 2277.9990731308385,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Церковь сошествия Святого Духа",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116565140,
+    "name": "Собор Рождества Пресвятой Богородицы",
+    "latitude": 54.7908151,
+    "longitude": 39.8324032,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 761.9927359315112,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1А",
+      "addr:street=Монастырская площадь",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Собор Рождества Пресвятой Богородицы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116601599,
+    "name": "Храм в честь Казанской иконы Пресвятой Богородицы",
+    "latitude": 54.8012775,
+    "longitude": 39.83828645,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 786.506771145583,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм в честь Казанской иконы Пресвятой Богородицы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116920817,
+    "name": "Рязанская церковь Евангельских Христиан-баптистов союза ЕХВ России",
+    "latitude": 54.6264356,
+    "longitude": 39.76051165,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1048.3344833520123,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=10",
+      "addr:street=улица Щедрина",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=evangelical",
+      "name=Рязанская церковь Евангельских Христиан-баптистов союза ЕХВ России",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 126212745,
+    "name": "Церковь Бориса и Глеба",
+    "latitude": 54.6342644,
+    "longitude": 39.7335895,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1611.577634629804,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=32",
+      "addr:street=Сенная улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Церковь Бориса и Глеба",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 171747444,
+    "name": "Церковь Спаса Преображения",
+    "latitude": 54.6764681,
+    "longitude": 39.66390345,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1781.4829312255608,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=1А",
+      "addr:postcode=390039",
+      "addr:street=Колхозная улица (Канищево)",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:email=metarya@yandex.ru",
+      "contact:phone=+7 491 2362525",
+      "contact:website=http://metarya.ru",
+      "denomination=russian_orthodox",
+      "name=Церковь Спаса Преображения",
+      "name:en=Church of the Transfiguration",
+      "name:ru=Церковь Спаса Преображения",
+      "opening_hours=Mo-Su 07:00-19:00",
+      "ref:sobory.ru=11612",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 173102207,
+    "name": "Храм в честь иконы Божией Матери \"Всецарица\"",
+    "latitude": 54.61737085,
+    "longitude": 39.73275155,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 476.0741253486703,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=3 с2",
+      "addr:street=улица Семашко",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:phone=+7 952 1243914",
+      "denomination=orthodox",
+      "name=Храм в честь иконы Божией Матери \"Всецарица\"",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 173728956,
+    "name": "Церковь христиан Адвентистов Седьмого Дня",
+    "latitude": 54.66464445,
+    "longitude": 39.6672032,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1316.1811341268894,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "name=Церковь христиан Адвентистов Седьмого Дня"
+    ]
+  },
+  {
+    "id": 175852784,
+    "name": "Церковь Иоанна Кронштадтского",
+    "latitude": 54.610425750000005,
+    "longitude": 39.711944349999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 745.8976901051202,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=church",
+      "building:levels=5",
+      "denomination=russian_orthodox",
+      "name=Церковь Иоанна Кронштадтского",
+      "ref:temples.ru=18794",
+      "religion=christian",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 183615367,
+    "name": "Сергиевская церковь",
+    "latitude": 54.634511,
+    "longitude": 39.70077175,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1209.513782096574,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=10",
+      "addr:street=Московское шоссе",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Сергиевская церковь",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 192882369,
+    "name": "Николо-Дворянский храм",
+    "latitude": 54.630171399999995,
+    "longitude": 39.7486825,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1907.4719595150057,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=12А",
+      "addr:street=Николодворянская улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Николо-Дворянский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 197714622,
+    "name": "Церковь иконы Скорбящей Богоматери",
+    "latitude": 54.61196835,
+    "longitude": 39.74799695,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 922.912964070717,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:street=Скорбященский проезд",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Церковь иконы Скорбящей Богоматери",
+      "religion=christian",
+      "source=Bing",
+      "wheelchair=limited"
+    ]
+  },
+  {
+    "id": 197714675,
+    "name": "старообрядческая церковь Успения Пресвятыя Богородицы",
+    "latitude": 54.610769,
+    "longitude": 39.75065765,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 471.3557169656916,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=4",
+      "addr:postcode=390011",
+      "addr:street=Старообрядческий проезд",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=old_believers",
+      "name=старообрядческая церковь Успения Пресвятыя Богородицы",
+      "religion=christian",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 198382086,
+    "name": "Храм Покрова Божьей Матери",
+    "latitude": 54.6280851,
+    "longitude": 39.6585762,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1011.5503179283186,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=57А",
+      "addr:street=Советская улица",
+      "addr:suburb=Мервино",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм Покрова Божьей Матери",
+      "religion=christian",
+      "source=Bing",
+      "wikidata=Q17277345",
+      "wikipedia=ru:Церковь Покрова Пресвятой Богородицы (Мервино)"
+    ]
+  },
+  {
+    "id": 198833654,
+    "name": "христианская церковь",
+    "latitude": 54.62187705,
+    "longitude": 39.727559400000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 375.0110582855244,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=христианская церковь",
+      "religion=christian",
+      "source=Bing",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 199350483,
+    "name": "Церковь Царственных страстотерпцев",
+    "latitude": 54.653915,
+    "longitude": 39.632295150000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 332.4809505879578,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=65Б",
+      "addr:street=Московское шоссе",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "name=Церковь Царственных страстотерпцев",
+      "ref:temples.ru=13677",
+      "religion=christian",
+      "source=Bing",
+      "start_date=2000"
+    ]
+  },
+  {
+    "id": 209305604,
+    "name": "Храм в честь Сретения Господня",
+    "latitude": 54.6388726,
+    "longitude": 39.65341205,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1160.7949177759904,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1А",
+      "addr:street=площадь Новаторов",
+      "amenity=place_of_worship",
+      "building=church",
+      "name=Храм в честь Сретения Господня",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 210938644,
+    "name": "Часовня",
+    "latitude": 54.62838475,
+    "longitude": 39.7248257,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 49.318016672181784,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Часовня",
+      "religion=christian",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 211623254,
+    "name": "Храм во имя Архангела Михаила",
+    "latitude": 54.6615787,
+    "longitude": 39.6724838,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 114.8350314852048,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм во имя Архангела Михаила",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 215244442,
+    "name": "Храм Великомученицы Екатерины",
+    "latitude": 54.62476705,
+    "longitude": 39.738358950000006,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1823.5037614000307,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=48",
+      "addr:postcode=390000",
+      "addr:street=улица Маяковского",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:vk=https://vk.com/club104517728",
+      "name=Храм Великомученицы Екатерины",
+      "phone=+7 958 5694509",
+      "religion=christian",
+      "website=https://ekaterinarzn.ru/"
+    ]
+  },
+  {
+    "id": 215369584,
+    "name": "Храм в честь Покрова Пресвятой Богородицы и святой мученицы Татианы",
+    "latitude": 54.629265849999996,
+    "longitude": 39.75188405,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 118.99702607114413,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=46 к4",
+      "addr:street=улица Свободы",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм в честь Покрова Пресвятой Богородицы и святой мученицы Татианы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 331204006,
+    "name": "Храм пророка Божия Илии",
+    "latitude": 54.65799505,
+    "longitude": 39.572745749999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 135.92034103327944,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=25В",
+      "addr:street=Забайкальская улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "name=Храм пророка Божия Илии",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 335400295,
+    "name": "Иоанно-Богословский храм",
+    "latitude": 54.6353658,
+    "longitude": 39.74962625,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 3194.485503520209,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Иоанно-Богословский храм",
+      "religion=christian",
+      "roof:colour=green",
+      "roof:shape=hipped"
+    ]
+  },
+  {
+    "id": 426938918,
+    "name": "Воскресенский храм",
+    "latitude": 54.68787855,
+    "longitude": 39.620933199999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 420.60272309017495,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "name=Воскресенский храм"
+    ]
+  },
+  {
+    "id": 437932731,
+    "name": "Храм в честь Сергия Радонежского",
+    "latitude": 54.6214279,
+    "longitude": 39.726675400000005,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 880.6485617137555,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "building:levels=3",
+      "name=Храм в честь Сергия Радонежского"
+    ]
+  },
+  {
+    "id": 458342684,
+    "name": "Церковь Воздвижения креста Господня",
+    "latitude": 54.6026474,
+    "longitude": 39.8236511,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 19980.296514076595,
+    "estimatedVisitMinutes": 19,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "barrier=fence",
+      "denomination=orthodox",
+      "fence_type=wood",
+      "name=Церковь Воздвижения креста Господня",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 949609096,
+    "name": "Воздвижения Креста Господня, церковь",
+    "latitude": 54.5318848,
+    "longitude": 39.78449195,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 352.05436539144637,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Воздвижения Креста Господня, церковь",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 616228062,
+    "name": "Научная библиотека РГУ им. С.А. Есенина",
+    "latitude": 54.628985,
+    "longitude": 39.7530849,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Научная библиотека РГУ им. С.А. Есенина"
+    ]
+  },
+  {
+    "id": 1345088320,
+    "name": "Детская библиотека",
+    "latitude": 54.6193,
+    "longitude": 39.7465218,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека",
+      "opening_hours=Mo-Fr 10:00-18:00"
+    ]
+  },
+  {
+    "id": 1351831837,
+    "name": "Библиотека - филиал №14",
+    "latitude": 54.6626573,
+    "longitude": 39.6397435,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека - филиал №14",
+      "opening_hours=Mo-Fr 12:00-19:00; Sa 10:00-18:00"
+    ]
+  },
+  {
+    "id": 1351832069,
+    "name": "Библиотека - филиал №3",
+    "latitude": 54.6663087,
+    "longitude": 39.6409368,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека - филиал №3",
+      "opening_hours=Mo-Su 12:00-19:00; Fr off"
+    ]
+  },
+  {
+    "id": 2049323075,
+    "name": "Библиотека",
+    "latitude": 54.5343142,
+    "longitude": 39.7802007,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека"
+    ]
+  },
+  {
+    "id": 3791021389,
+    "name": "Детская библиотека",
+    "latitude": 54.6731673,
+    "longitude": 39.6542665,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 4471146063,
+    "name": "Детская библиотека",
+    "latitude": 54.6041193,
+    "longitude": 39.7646113,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 94690089,
+    "name": "Детская библиотека",
+    "latitude": 54.599428,
+    "longitude": 39.82067595,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 1079.5846736231872,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "amenity=library",
+      "building=yes",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 101155049,
+    "name": "Городская библиотека имени С.А.Есенина",
+    "latitude": 54.6306003,
+    "longitude": 39.708223950000004,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 3426.6708856769947,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=74",
+      "addr:street=Первомайский проспект",
+      "amenity=library",
+      "building=yes",
+      "name=Городская библиотека имени С.А.Есенина"
+    ]
+  },
+  {
+    "id": 104943951,
+    "name": "филиал библиотеки им. Горького научный отдел",
+    "latitude": 54.629067000000006,
+    "longitude": 39.7448846,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 2546.279417515682,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=24/42",
+      "addr:street=Николодворянская улица",
+      "amenity=library",
+      "building=yes",
+      "name=филиал библиотеки им. Горького научный отдел",
+      "wikidata=Q55652568"
+    ]
+  },
+  {
+    "id": 113691170,
+    "name": "Детская областная библиотека",
+    "latitude": 54.629083949999995,
+    "longitude": 39.7384405,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 543.282667080301,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=63",
+      "addr:street=Почтовая улица",
+      "amenity=library",
+      "building=yes",
+      "check_date=2024-05-11",
+      "name=Детская областная библиотека"
+    ]
+  },
+  {
+    "id": 134938466,
+    "name": "Библиотека РГМУ",
+    "latitude": 54.62111215,
+    "longitude": 39.7123878,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 2091.4094104087267,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=34 к2",
+      "addr:street=улица Шевченко",
+      "amenity=library",
+      "building=yes",
+      "name=Библиотека РГМУ"
+    ]
+  },
+  {
+    "id": 1602428,
+    "name": "Рязанская областная универсальная научная библиотека имени Горького",
+    "latitude": 54.6311419,
+    "longitude": 39.741678699999994,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 7709.671727192498,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "amenity=library",
+      "email=rounb@library.ryazan.su",
+      "name=Рязанская областная универсальная научная библиотека имени Горького",
+      "official_name=Госудасртвенное учреждение культуры \"Рязанская областная универсальная научная библиотека имени Горького\"",
+      "phone=(4912)256060",
+      "type=multipolygon",
+      "website=http://library.ryazan.su"
+    ]
+  },
+  {
+    "id": 1608246,
+    "name": "Библиотека им. К.Г.Паустовского",
+    "latitude": 54.63036115,
+    "longitude": 39.762864449999995,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 3832.3016461262564,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "amenity=library",
+      "building:part=yes",
+      "name=Библиотека им. К.Г.Паустовского",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1608339,
+    "name": "Библиотека художественного музея",
+    "latitude": 54.62750965,
+    "longitude": 39.751568500000005,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 536.4410615875261,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=55",
+      "addr:street=улица Свободы",
+      "alt_name=Научная библиотека Рязанского государственного областного художественного музея им. И.П. Пожалостина",
+      "amenity=library",
+      "building=yes",
+      "name=Библиотека художественного музея",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1255651516,
+    "name": "Чулан",
+    "latitude": 54.6292218,
+    "longitude": 39.7410017,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "addr:housenumber=8",
+      "addr:street=Мюнстерская улица",
+      "amenity=restaurant",
+      "check_date=2024-05-11",
+      "contact:instagram=https://www.instagram.com/chulan_bar/",
+      "contact:phone=+7 4912 777-307",
+      "contact:vk=https://vk.com/vhlamrzn",
+      "name=Чулан",
+      "name:en=Chulan",
+      "opening_hours=24/7",
+      "website=https://chulan-bar.ru/"
+    ]
+  },
+  {
+    "id": 1281447124,
+    "name": "Ёлки-палки",
+    "latitude": 54.6327726,
+    "longitude": 39.7625255,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "alt_name=Елки-Палки",
+      "amenity=restaurant",
+      "cuisine=russian",
+      "name=Ёлки-палки",
+      "website=http://www.elki-palki.ru/"
+    ]
+  },
+  {
+    "id": 2421558971,
+    "name": "Нихон",
+    "latitude": 54.6297603,
+    "longitude": 39.734396,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "cuisine=japanese",
+      "name=Нихон",
+      "opening_hours=Mo-Sa 12:00-02:00; Su 12:00-23:00",
+      "website=https://nihon-ryazan.ru/"
+    ]
+  },
+  {
+    "id": 4416937807,
+    "name": "Сушкоф и пицца",
+    "latitude": 54.6018639,
+    "longitude": 39.8248483,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=49",
+      "addr:postcode=390048",
+      "addr:street=улица Новосёлов",
+      "amenity=restaurant",
+      "cuisine=pizza;japanese;coffee_shop;sushi",
+      "delivery=yes",
+      "name=Сушкоф и пицца",
+      "opening_hours=Mo-Su 11:00-23:00",
+      "phone=8 (800) 500-55-30",
+      "takeaway=yes",
+      "website=https://eda1.ru/ryazan"
+    ]
+  },
+  {
+    "id": 7856240989,
+    "name": "Хорошие руки",
+    "latitude": 54.6291402,
+    "longitude": 39.739624,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "check_date=2024-05-11",
+      "contact:website=https://goodhands-rzn.ru/",
+      "name=Хорошие руки",
+      "opening_hours=Mo-Th 11:00-22:00; Fr-Su 11:00-23:00",
+      "phone=+7 491 2525238"
+    ]
+  },
+  {
+    "id": 8066867320,
+    "name": "ВьетКафе",
+    "latitude": 54.6234007,
+    "longitude": 39.7530745,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=9",
+      "addr:street=улица Ленина",
+      "amenity=restaurant",
+      "cuisine=vietnamese",
+      "indoor_seating=yes",
+      "name=ВьетКафе",
+      "opening_hours=Mo-Su 11:00-23:00",
+      "outdoor_seating=no",
+      "phone=+7 4912 95 24 10",
+      "website=https://ryazan.vietcafe.com/"
+    ]
+  },
+  {
+    "id": 8921840219,
+    "name": "Буфетъ",
+    "latitude": 54.627233,
+    "longitude": 39.7442216,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "cuisine=russian",
+      "name=Буфетъ",
+      "name:en=Bufet",
+      "opening_hours=Su-Th 09:00-22:00; Fr-Sa 09:00-23:00",
+      "phone=+74912779444",
+      "website=https://www.instagram.com/bufet_"
+    ]
+  },
+  {
+    "id": 9798289839,
+    "name": "Сушкоф и пицца",
+    "latitude": 54.6209525,
+    "longitude": 39.7238408,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=55",
+      "addr:postcode=390005",
+      "addr:street=улица Дзержинского",
+      "amenity=restaurant",
+      "brand=Сушкоф и пицца",
+      "capacity=20",
+      "cuisine=pizza;italian;japanese;sandwich;coffee_shop;sushi",
+      "delivery=yes",
+      "description=Сеть ресторанов и служба доставки благородной японской кухни и фирменной пиццы на тонком тесте.",
+      "diet:non-vegetarian=yes",
+      "diet:sugar_free=yes",
+      "diet:vegan=yes",
+      "diet:vegetarian=yes",
+      "internet_access=wlan",
+      "internet_access:fee=no",
+      "level=1",
+      "min_age=0",
+      "name=Сушкоф и пицца",
+      "opening_hours=Mo-Su 10:00-23:00",
+      "payment:cards=yes",
+      "payment:cash=yes",
+      "phone=+7 800 5005530",
+      "reservation=yes",
+      "takeaway=yes",
+      "website=https://www.eda1.ru/ryazan",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 11233041937,
+    "name": "Хорошие руки",
+    "latitude": 54.6313144,
+    "longitude": 39.7393291,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "contact:phone=+7 491 2525259",
+      "contact:website=https://goodhands-rzn.ru",
+      "name=Хорошие руки",
+      "opening_hours=Mo-Su 10:00-23:00"
+    ]
+  },
+  {
+    "id": 12106100897,
+    "name": "Хорошие руки",
+    "latitude": 54.6344436,
+    "longitude": 39.7422308,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "contact:phone=+7 491 2525203",
+      "contact:website=https://goodhands-rzn.ru/",
+      "name=Хорошие руки",
+      "opening_hours=Mo-Su 12:00-00:00"
+    ]
+  },
+  {
+    "id": 13263120424,
+    "name": "Сова",
+    "latitude": 54.6495295,
+    "longitude": 39.6659903,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "amenity=restaurant",
+      "cuisine=steak_house",
+      "diet:meat=yes",
+      "name=Сова",
+      "website=https://sova-rzn.ru/stejk-haus/"
+    ]
+  },
+  {
+    "id": 13357818701,
+    "name": "Хинкальный дом",
+    "latitude": 54.6276312,
+    "longitude": 39.7437396,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": null,
+    "estimatedVisitMinutes": 90,
+    "osmType": "node",
+    "tags": [
+      "addr:housenumber=27",
+      "addr:street=Право-Лыбедская улица",
+      "amenity=restaurant",
+      "cuisine=georgian",
+      "name=Хинкальный дом",
+      "opening_hours=Mo-Su 12:00-23:00",
+      "phone=+74912776896",
+      "website=https://hinkdom.ru"
+    ]
+  },
+  {
+    "id": 167411450,
+    "name": "Визит-Клуб",
+    "latitude": 54.61168685,
+    "longitude": 39.73219605,
+    "category": "Гастрономические объекты",
+    "subcategory": "Рестораны",
+    "square": 1469.571485110926,
+    "estimatedVisitMinutes": 90,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=2А",
+      "addr:street=улица Пушкина",
+      "amenity=restaurant",
+      "building=commercial",
+      "building:levels=1",
+      "name=Визит-Клуб",
+      "opening_hours=Mo-Su 12:00-22:00",
+      "phone=+7 4912 984191",
+      "website=https://vizit-live.ru/"
+    ]
+  },
+  {
+    "id": 1252202007,
+    "name": "Surf Coffee",
+    "latitude": 54.6326253,
+    "longitude": 39.7451801,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:email=fabrika@surfteam.ru",
+      "contact:phone=+7 915 6182121",
+      "contact:website=https://www.surfcoffee.ru/",
+      "cuisine=coffee_shop",
+      "name=Surf Coffee",
+      "opening_hours=Mo-Su 08:00-22:00"
+    ]
+  },
+  {
+    "id": 1282666198,
+    "name": "Золотой теленок",
+    "latitude": 54.6199678,
+    "longitude": 39.7435891,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=110",
+      "addr:street=Введенская улица",
+      "amenity=cafe",
+      "email=zol-telenok@yandex.ru",
+      "name=Золотой теленок",
+      "opening_hours=Mo-Fr 12:00-21:00, Sa,Su 14:00-01:00",
+      "phone=+7 4912 24 06 04",
+      "website=http://zt62.ru/"
+    ]
+  },
+  {
+    "id": 3770356927,
+    "name": "Бон Аппетит",
+    "latitude": 54.6138077,
+    "longitude": 39.7224083,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:phone=+7 491 2500661",
+      "contact:website=https://bonappetit-62.ru/",
+      "delivery=yes",
+      "name=Бон Аппетит",
+      "opening_hours=Mo-Su 11:00-23:00",
+      "phone=+7-4912-501-101",
+      "wheelchair=no"
+    ]
+  },
+  {
+    "id": 5350749821,
+    "name": "Coffee Like",
+    "latitude": 54.6237284,
+    "longitude": 39.7529045,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "brand=Coffee Like",
+      "brand:wikidata=Q55662627",
+      "contact:email=hotline@coffee-like.com",
+      "contact:phone=+7 341 2908292;+7 800 3334130",
+      "contact:website=https://coffee-like.com/",
+      "cuisine=coffee_shop",
+      "name=Coffee Like",
+      "name:en=Coffee like",
+      "opening_hours=Mo-Fr 08:00-21:00;Sa-Su 09:00-21:00",
+      "operator=Шичанин Павел Николаевич",
+      "takeaway=yes"
+    ]
+  },
+  {
+    "id": 5478869822,
+    "name": "Кофейня \"Капкейк\"",
+    "latitude": 54.623465,
+    "longitude": 39.7540296,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "name=Кофейня \"Капкейк\"",
+      "name:ru=Кофейня \"Капкейк\"",
+      "opening_hours=Mo-Fr 08:30-22:00; Sa-Su 09:00-21:00",
+      "website=https://www.instagram.com/cupcakerzn/"
+    ]
+  },
+  {
+    "id": 5685656087,
+    "name": "Зерно",
+    "latitude": 54.6298739,
+    "longitude": 39.7397254,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=pasta;breakfast;italian",
+      "name=Зерно",
+      "name:en=Zerno",
+      "opening_hours=Mo-Su 11:00-23:00",
+      "phone=52-52-34",
+      "website=https://vk.com/pasta_bar_zerno"
+    ]
+  },
+  {
+    "id": 5685713435,
+    "name": "Coffee Bean",
+    "latitude": 54.6227139,
+    "longitude": 39.7544135,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:vk=https://vk.com/coffeebeanofficial",
+      "cuisine=sandwich;cake;breakfast;coffee_shop",
+      "internet_access=wlan",
+      "name=Coffee Bean",
+      "opening_hours=Mo-Sa 08:00-23:00; Su 09:00-22:00",
+      "phone=+74912952765",
+      "website=https://www.coffeebean.ru/"
+    ]
+  },
+  {
+    "id": 5685722521,
+    "name": "Хинкальная Джотто",
+    "latitude": 54.6296664,
+    "longitude": 39.7467682,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=georgian",
+      "internet_access=wlan",
+      "name=Хинкальная Джотто",
+      "name:en=Dzhotto",
+      "opening_hours=Mo-Su 11:00-00:00",
+      "website=http://hinkalnaya-dzhoto.ru"
+    ]
+  },
+  {
+    "id": 6536736734,
+    "name": "Coffee Like",
+    "latitude": 54.629231,
+    "longitude": 39.712812,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "brand=Coffee Like",
+      "brand:wikidata=Q55662627",
+      "brand:wikipedia=ru:Coffee Like",
+      "contact:email=hotline@coffee-like.com",
+      "contact:phone=+7 341 2908292;+7 800 3334130",
+      "contact:website=https://coffee-like.com/",
+      "cuisine=coffee_shop",
+      "name=Coffee Like",
+      "opening_hours=Mo-Su 08:00-21:00",
+      "operator=Шичанин Павел Николаевич",
+      "takeaway=yes"
+    ]
+  },
+  {
+    "id": 6536736737,
+    "name": "Coffee Like",
+    "latitude": 54.6291365,
+    "longitude": 39.744662,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:email=hotline@coffee-like.com",
+      "contact:phone=+7 341 2908292;+7 800 3334130",
+      "contact:website=https://coffee-like.com/",
+      "name=Coffee Like",
+      "opening_hours=Mo-Su 08:00-20:00",
+      "operator=Шичанин Павел Николаевич"
+    ]
+  },
+  {
+    "id": 6536736738,
+    "name": "Coffee Like",
+    "latitude": 54.626141,
+    "longitude": 39.716845,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:email=hotline@coffee-like.com",
+      "contact:phone=+7 341 2908292;+7 800 3334130",
+      "contact:website=https://coffee-like.com/",
+      "name=Coffee Like",
+      "opening_hours=Mo-Su 08:00-20:00",
+      "operator=Шичанин Павел Николаевич"
+    ]
+  },
+  {
+    "id": 6536736739,
+    "name": "Coffee Like",
+    "latitude": 54.6339101,
+    "longitude": 39.6889873,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "brand=Coffee Like",
+      "brand:wikidata=Q55662627",
+      "brand:wikipedia=ru:Coffee Like",
+      "contact:email=hotline@coffee-like.com",
+      "contact:phone=+7 341 2908292;+7 800 3334130",
+      "contact:website=https://coffee-like.com/",
+      "cuisine=coffee_shop",
+      "name=Coffee Like",
+      "opening_hours=Mo-Su 10:00-22:00",
+      "operator=Шичанин Павел Николаевич",
+      "takeaway=yes"
+    ]
+  },
+  {
+    "id": 7099506637,
+    "name": "Rapido",
+    "latitude": 54.6295541,
+    "longitude": 39.7248102,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=pizza;burger;sushi",
+      "name=Rapido",
+      "opening_hours=Mo-Su 09:00-23:00",
+      "outdoor_seating=no",
+      "phone=+7 4912 997737",
+      "website=https://www.ryazan.rapido.ru",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 7236578026,
+    "name": "Пицца Лисица",
+    "latitude": 54.6183819,
+    "longitude": 39.7239524,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=pizza",
+      "name=Пицца Лисица",
+      "opening_hours=Mo-Su 11:00-23:00",
+      "phone=+7 4912 777727",
+      "website=https://pizzalisa.ru/",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 7503476006,
+    "name": "Фарфор",
+    "latitude": 54.632244,
+    "longitude": 39.715327,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:phone=+7 965 7100111",
+      "contact:vk=https://vk.com/dostavka_sushi_pizza_ryazan",
+      "contact:website=https://farfor.ru/",
+      "name=Фарфор",
+      "opening_hours=Fr 10:00 - 23:00;Mo-Th 10:00 - 22:00;Sa 11:00 - 23:00;Su 11:00 - 22:00",
+      "operator=ИП \"Елов АС\""
+    ]
+  },
+  {
+    "id": 7806519184,
+    "name": "Зерно",
+    "latitude": 54.6218034,
+    "longitude": 39.7490513,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "check_date=2024-05-01",
+      "contact:instagram=https://www.instagram.com/zernorzn",
+      "contact:phone=+7 491 2525219",
+      "contact:vk=https://vk.com/pasta_bar_zerno",
+      "cuisine=noodle;pasta",
+      "diet:vegan=yes",
+      "diet:vegetarian=yes",
+      "internet_access=no",
+      "name=Зерно",
+      "opening_hours=Mo-Su 11:00-22:00",
+      "operator=ИП Сомов",
+      "operator:ref:inn=623012029658",
+      "operator:ref:ogrn=320623400000335",
+      "outdoor_seating=no",
+      "payment:cash=yes",
+      "payment:credit_cards=yes",
+      "payment:debit_cards=yes",
+      "takeaway=yes",
+      "website=https://pasta-zerno.ru/",
+      "wheelchair=no"
+    ]
+  },
+  {
+    "id": 8048244425,
+    "name": "Roll Time",
+    "latitude": 54.6297432,
+    "longitude": 39.7351944,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=1",
+      "addr:street=улица Кольцова",
+      "amenity=cafe",
+      "contact:instagram=rolltime_rzn",
+      "contact:phone=+7 4912 777-087",
+      "contact:vk=https://vk.com/rolltime_rzn",
+      "cuisine=sushi",
+      "name=Roll Time",
+      "opening_hours=Mo-Th 10:30-22:30, Fr-Sa 10:00-23:30, Su 10:30-22:30",
+      "website=https://xn--80aseahhnt.xn--p1ai/"
+    ]
+  },
+  {
+    "id": 8066867319,
+    "name": "Томато",
+    "latitude": 54.6228765,
+    "longitude": 39.7539157,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=9",
+      "addr:street=улица Ленина",
+      "amenity=cafe",
+      "cuisine=italian;pizza;international",
+      "name=Томато",
+      "opening_hours=Mo-Su 11:00-22:00",
+      "outdoor_seating=no",
+      "phone=+7 4912 77 68 57",
+      "website=https://www.tomato-pizza.ru/"
+    ]
+  },
+  {
+    "id": 8069685049,
+    "name": "Tokyo Table",
+    "latitude": 54.619975,
+    "longitude": 39.7884238,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:mobile=+7 (930) 888-93-92",
+      "cuisine=sushi",
+      "name=Tokyo Table",
+      "opening_hours=Mo-Su 10:00-23:00",
+      "phone=+7 (4912) 77-93-92",
+      "website=https://ttroll.ru/"
+    ]
+  },
+  {
+    "id": 8071260792,
+    "name": "Гауранга",
+    "latitude": 54.6211976,
+    "longitude": 39.7479665,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:mobile=+7 920 955 44 88",
+      "contact:vk=https://vk.com/gauranga_62",
+      "cuisine=indian",
+      "name=Гауранга",
+      "name:en=Gauranga",
+      "opening_hours=Mo-Fr 12:00-20:00, Sa-Su on request",
+      "website=https://www.gauranga.club/"
+    ]
+  },
+  {
+    "id": 8120742017,
+    "name": "вэйкап кофе",
+    "latitude": 54.6225936,
+    "longitude": 39.755362,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=4",
+      "addr:street=улица Ленина",
+      "amenity=cafe",
+      "cuisine=breakfast;cake;coffee_shop;donut;ice_cream;sandwich;tea",
+      "email=wake-up.coffee@mail.ru",
+      "name=вэйкап кофе",
+      "name:en=Wake Up! Coffee",
+      "opening_hours=Mo-Su 09:00-22:00",
+      "website=https://instagram.com/wake.up.coffee.ryazan"
+    ]
+  },
+  {
+    "id": 8921838417,
+    "name": "The Moments",
+    "latitude": 54.6286599,
+    "longitude": 39.7485565,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=coffee_shop;sandwich",
+      "name=The Moments",
+      "opening_hours=Mo-Su 09:00-21:00",
+      "phone=+79009640424",
+      "website=https://www.instagram.com/the_moments_place/"
+    ]
+  },
+  {
+    "id": 12800617003,
+    "name": "СПОРЫ арт-пространство, сувениры, кофе",
+    "latitude": 54.6299927,
+    "longitude": 39.7367084,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:street=Соборная улица, 52",
+      "amenity=cafe",
+      "cuisine=калинник;ириски;кофе_bravos;иванчай",
+      "name=СПОРЫ арт-пространство, сувениры, кофе",
+      "opening_hours=Mo-Su 10:00-20:00",
+      "phone=+79209620103",
+      "start_date=2025-03-01",
+      "website=https://vk.com/gribniespory"
+    ]
+  },
+  {
+    "id": 13110757401,
+    "name": "Bravos",
+    "latitude": 54.6333488,
+    "longitude": 39.7653329,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=coffee_shop",
+      "name=Bravos",
+      "opening_hours=Tu-Fr 12:00-20:00; Sa-Su 10:30-20:30",
+      "outdoor_seating=yes",
+      "website=https://coffee-tea-bravos.ru"
+    ]
+  },
+  {
+    "id": 13263869283,
+    "name": "Чайная «СахароварЪ»",
+    "latitude": 54.6335516,
+    "longitude": 39.7434598,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "name=Чайная «СахароварЪ»",
+      "opening_hours=Su-Fr 10:00-19:00; Sa 10:00-20:00",
+      "website=https://mirledentsa.ru/cafe-menu"
+    ]
+  },
+  {
+    "id": 13435247349,
+    "name": "Plov 62",
+    "latitude": 54.6309443,
+    "longitude": 39.7090146,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:vk=plov62_ru",
+      "cuisine=uzbek",
+      "name=Plov 62",
+      "phone=+7 4912 99-51-77",
+      "website=https://plov62.ru/"
+    ]
+  },
+  {
+    "id": 13435247354,
+    "name": "Coffee Like",
+    "latitude": 54.6308636,
+    "longitude": 39.7089416,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "brand=Coffee Like",
+      "brand:wikidata=Q55662627",
+      "cuisine=coffee_shop",
+      "name=Coffee Like",
+      "takeaway=yes",
+      "website=https://coffee-like.com/"
+    ]
+  },
+  {
+    "id": 13435247355,
+    "name": "Phobo №1",
+    "latitude": 54.6308777,
+    "longitude": 39.7090677,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:instagram=phobo_rzn",
+      "contact:mobile=+7 910 561-49-27",
+      "contact:vk=public199688755",
+      "cuisine=vietnamese",
+      "name=Phobo №1",
+      "operator=ИП Фам Тхи Лан",
+      "operator:ref:inn=027884017820",
+      "website=https://phobocafe.com/"
+    ]
+  },
+  {
+    "id": 13435247357,
+    "name": "Зерно",
+    "latitude": 54.6308162,
+    "longitude": 39.7091231,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:instagram=zernorzn",
+      "contact:telegram=zernovrzn",
+      "contact:vk=pasta_bar_zerno",
+      "cuisine=pasta",
+      "name=Зерно",
+      "name:en=Zerno",
+      "phone=+7 4912 52-52-07",
+      "website=https://goodhands-rzn.ru/zerno"
+    ]
+  },
+  {
+    "id": 13506263705,
+    "name": "Мидийное место",
+    "latitude": 54.6291783,
+    "longitude": 39.740636,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": null,
+    "estimatedVisitMinutes": 45,
+    "osmType": "node",
+    "tags": [
+      "amenity=cafe",
+      "contact:email=Midiya.1@yandex.ru",
+      "contact:phone=+7 999 3739595",
+      "contact:website=https://www.midiynoe-mesto.ru",
+      "name=Мидийное место",
+      "opening_hours=Mo-Su 11:00-23:00"
+    ]
+  },
+  {
+    "id": 94750076,
+    "name": "Томато",
+    "latitude": 54.614287950000005,
+    "longitude": 39.7227989,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": 472.54335449071834,
+    "estimatedVisitMinutes": 45,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=74А",
+      "addr:street=улица Гагарина",
+      "amenity=cafe",
+      "building=retail",
+      "building:levels=2",
+      "cuisine=pizza;asian;pasta;regional",
+      "name=Томато",
+      "opening_hours=Su-Th 11:00-22:00; Fr,Sa 11:00-23:00",
+      "roof:shape=hipped",
+      "website=https://www.tomato-pizza.ru/",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 109508298,
+    "name": "Римские каникулы",
+    "latitude": 54.626807549999995,
+    "longitude": 39.749725350000006,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": 516.4142341712984,
+    "estimatedVisitMinutes": 45,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=56",
+      "addr:postcode=390000",
+      "addr:street=улица Свободы",
+      "amenity=cafe",
+      "building=yes",
+      "building:levels=2",
+      "cuisine=italian",
+      "email=restainfo@mail.ru",
+      "internet_access=wlan",
+      "name=Римские каникулы",
+      "opening_hours=Mo-Su 12:00-23:00",
+      "phone=+7 (4912) 25-50-70",
+      "website=http://rim-vacanze.ru"
+    ]
+  },
+  {
+    "id": 170280056,
+    "name": "Coffee Bean",
+    "latitude": 54.617546649999994,
+    "longitude": 39.7332965,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": 661.1543170695779,
+    "estimatedVisitMinutes": 45,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=3 с1",
+      "addr:postcode=390005",
+      "addr:street=улица Семашко",
+      "amenity=cafe",
+      "building=yes",
+      "building:levels=1",
+      "cuisine=coffee_shop",
+      "name=Coffee Bean",
+      "opening_hours=Mo-Fr 08:00-23:00; Sa,Su 09:00-22:00",
+      "phone=+7 (4912) 30‒66‒10",
+      "roof:levels=0",
+      "roof:shape=flat",
+      "website=https://coffeebean.ru/"
+    ]
+  },
+  {
+    "id": 923298462,
+    "name": "Гринвич",
+    "latitude": 54.78849285,
+    "longitude": 39.83410495,
+    "category": "Гастрономические объекты",
+    "subcategory": "Кафе и кофейни",
+    "square": 846.5570543544667,
+    "estimatedVisitMinutes": 45,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:street=Почтовая улица",
+      "addr:suburb=Солотча",
+      "amenity=cafe",
+      "building=yes",
+      "building:levels=2",
+      "delivery=yes",
+      "internet_access=wlan",
+      "name=Гринвич",
+      "name:en=Greenwich",
+      "name:ru=Гринвич",
+      "opening_hours=Mo 12:00-23:00; Tu-Su 10:00-23:00",
+      "phone=+74912559191",
+      "website=https://www.greenwich-cafe.ru"
+    ]
+  },
+  {
+    "id": 1495523788,
+    "name": "Рязань\u00A0— столица ВДВ",
+    "latitude": 54.642889,
+    "longitude": 39.6673698,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Рязань\u00A0— столица ВДВ",
+      "power=tower",
+      "start_date=2020",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1758753970,
+    "name": "Лоси",
+    "latitude": 54.6161768,
+    "longitude": 39.7345715,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Лоси",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4471136881,
+    "name": "Слоненок",
+    "latitude": 54.6053523,
+    "longitude": 39.7640952,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Слоненок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539421,
+    "name": "Гриб \"Грибы с глазами\"",
+    "latitude": 54.6261794,
+    "longitude": 39.751088,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибы с глазами\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539525,
+    "name": "Пятачок",
+    "latitude": 54.6203569,
+    "longitude": 39.7523951,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Пятачок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5478829922,
+    "name": "Памятник С.Есенину",
+    "latitude": 54.6247009,
+    "longitude": 39.7495977,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Памятник С.Есенину",
+      "name:ru=Памятник С.Есенину",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7655689313,
+    "name": "Мышь с сыром",
+    "latitude": 54.6273868,
+    "longitude": 39.7406126,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Мышь с сыром",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023625,
+    "name": "Гриб \"Мудрец\"",
+    "latitude": 54.6305079,
+    "longitude": 39.7078831,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мудрец\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023626,
+    "name": "Гриб \"Рязанский коробейник\"",
+    "latitude": 54.6295453,
+    "longitude": 39.7358612,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Рязанский коробейник\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023627,
+    "name": "Гриб \"Мужичок-боровичок\"",
+    "latitude": 54.6292686,
+    "longitude": 39.7397201,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мужичок-боровичок\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023628,
+    "name": "Гриб \"Грибная команда\"",
+    "latitude": 54.6273394,
+    "longitude": 39.7409285,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибная команда\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023629,
+    "name": "Гриб \"Влюбленная пара\"",
+    "latitude": 54.6217594,
+    "longitude": 39.756683,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Влюбленная пара\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9829205592,
+    "name": "Аист Бро",
+    "latitude": 54.6023129,
+    "longitude": 39.8280824,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=statue",
+      "name=Аист Бро",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236558,
+    "name": "Абориген",
+    "latitude": 54.7903535,
+    "longitude": 39.8447802,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Абориген",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236559,
+    "name": "Рыбак",
+    "latitude": 54.7901679,
+    "longitude": 39.83886,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Рыбак",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236560,
+    "name": "Квакша",
+    "latitude": 54.78984,
+    "longitude": 39.8399973,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Квакша",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236561,
+    "name": "Било",
+    "latitude": 54.7897971,
+    "longitude": 39.8419317,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Било",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236562,
+    "name": "Одиночка",
+    "latitude": 54.7891203,
+    "longitude": 39.8411522,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Одиночка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236563,
+    "name": "Дерево Паустовского",
+    "latitude": 54.7904769,
+    "longitude": 39.8374098,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Дерево Паустовского",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236564,
+    "name": "Кентавр Василий",
+    "latitude": 54.7895433,
+    "longitude": 39.8407775,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Кентавр Василий",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020928,
+    "name": "Рука",
+    "latitude": 54.7885975,
+    "longitude": 39.8416127,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Рука",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020929,
+    "name": "Муравейник",
+    "latitude": 54.7915198,
+    "longitude": 39.8374014,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Муравейник",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020930,
+    "name": "Спираль времени",
+    "latitude": 54.7928436,
+    "longitude": 39.8387716,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Спираль времени",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11133343241,
+    "name": "Мухоморы",
+    "latitude": 54.7899195,
+    "longitude": 39.8401282,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Мухоморы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12430134854,
+    "name": "Гриб \"Гриб Пионер\"",
+    "latitude": 54.6249423,
+    "longitude": 39.7601557,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Гриб \"Гриб Пионер\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13386829979,
+    "name": "Резные наличники",
+    "latitude": 54.6331076,
+    "longitude": 39.7383961,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Резные наличники",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13389054785,
+    "name": "Резные наличники",
+    "latitude": 54.6326708,
+    "longitude": 39.7505251,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Резные наличники",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 101850091,
+    "name": "Здание Дворянского собрания",
+    "latitude": 54.6299528,
+    "longitude": 39.7421327,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 3731.8201064333994,
+    "estimatedVisitMinutes": 20,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=50/57",
+      "addr:postcode=390000",
+      "addr:street=Почтовая улица",
+      "artwork_type=architecture",
+      "building=yes",
+      "building:levels=2",
+      "contact:vk=https://vk.com/@ioknrzngroup-zdanie-blagorodnogo-sobraniya",
+      "heritage=2",
+      "name=Здание Дворянского собрания",
+      "tourism=artwork",
+      "wikidata=Q124307931"
+    ]
+  },
+  {
+    "id": 113559815,
+    "name": "Дом Михаила Шарова",
+    "latitude": 54.629556449999995,
+    "longitude": 39.74102275,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 1531.4561956613907,
+    "estimatedVisitMinutes": 20,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=54",
+      "addr:street=Почтовая улица",
+      "artwork_type=architecture",
+      "building=yes",
+      "building:levels=2",
+      "name=Дом Михаила Шарова",
+      "start_date=1839",
+      "tourism=artwork"
+    ]
+  }
+]

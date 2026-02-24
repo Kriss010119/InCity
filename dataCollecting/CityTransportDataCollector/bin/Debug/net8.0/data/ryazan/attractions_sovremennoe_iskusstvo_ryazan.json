@@ -1,0 +1,531 @@
+﻿[
+  {
+    "id": 1495523788,
+    "name": "Рязань\u00A0— столица ВДВ",
+    "latitude": 54.642889,
+    "longitude": 39.6673698,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Рязань\u00A0— столица ВДВ",
+      "power=tower",
+      "start_date=2020",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1758753970,
+    "name": "Лоси",
+    "latitude": 54.6161768,
+    "longitude": 39.7345715,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Лоси",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4471136881,
+    "name": "Слоненок",
+    "latitude": 54.6053523,
+    "longitude": 39.7640952,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Слоненок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539421,
+    "name": "Гриб \"Грибы с глазами\"",
+    "latitude": 54.6261794,
+    "longitude": 39.751088,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибы с глазами\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539525,
+    "name": "Пятачок",
+    "latitude": 54.6203569,
+    "longitude": 39.7523951,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Пятачок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5478829922,
+    "name": "Памятник С.Есенину",
+    "latitude": 54.6247009,
+    "longitude": 39.7495977,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Памятник С.Есенину",
+      "name:ru=Памятник С.Есенину",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7655689313,
+    "name": "Мышь с сыром",
+    "latitude": 54.6273868,
+    "longitude": 39.7406126,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Мышь с сыром",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023625,
+    "name": "Гриб \"Мудрец\"",
+    "latitude": 54.6305079,
+    "longitude": 39.7078831,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мудрец\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023626,
+    "name": "Гриб \"Рязанский коробейник\"",
+    "latitude": 54.6295453,
+    "longitude": 39.7358612,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Рязанский коробейник\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023627,
+    "name": "Гриб \"Мужичок-боровичок\"",
+    "latitude": 54.6292686,
+    "longitude": 39.7397201,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мужичок-боровичок\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023628,
+    "name": "Гриб \"Грибная команда\"",
+    "latitude": 54.6273394,
+    "longitude": 39.7409285,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибная команда\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023629,
+    "name": "Гриб \"Влюбленная пара\"",
+    "latitude": 54.6217594,
+    "longitude": 39.756683,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Влюбленная пара\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9829205592,
+    "name": "Аист Бро",
+    "latitude": 54.6023129,
+    "longitude": 39.8280824,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=statue",
+      "name=Аист Бро",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236558,
+    "name": "Абориген",
+    "latitude": 54.7903535,
+    "longitude": 39.8447802,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Абориген",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236559,
+    "name": "Рыбак",
+    "latitude": 54.7901679,
+    "longitude": 39.83886,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Рыбак",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236560,
+    "name": "Квакша",
+    "latitude": 54.78984,
+    "longitude": 39.8399973,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Квакша",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236561,
+    "name": "Било",
+    "latitude": 54.7897971,
+    "longitude": 39.8419317,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Било",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236562,
+    "name": "Одиночка",
+    "latitude": 54.7891203,
+    "longitude": 39.8411522,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Одиночка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236563,
+    "name": "Дерево Паустовского",
+    "latitude": 54.7904769,
+    "longitude": 39.8374098,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Дерево Паустовского",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10990236564,
+    "name": "Кентавр Василий",
+    "latitude": 54.7895433,
+    "longitude": 39.8407775,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Кентавр Василий",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020928,
+    "name": "Рука",
+    "latitude": 54.7885975,
+    "longitude": 39.8416127,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Рука",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020929,
+    "name": "Муравейник",
+    "latitude": 54.7915198,
+    "longitude": 39.8374014,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Муравейник",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11107020930,
+    "name": "Спираль времени",
+    "latitude": 54.7928436,
+    "longitude": 39.8387716,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Спираль времени",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11133343241,
+    "name": "Мухоморы",
+    "latitude": 54.7899195,
+    "longitude": 39.8401282,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Мухоморы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12430134854,
+    "name": "Гриб \"Гриб Пионер\"",
+    "latitude": 54.6249423,
+    "longitude": 39.7601557,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Гриб \"Гриб Пионер\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13386829979,
+    "name": "Резные наличники",
+    "latitude": 54.6331076,
+    "longitude": 39.7383961,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Резные наличники",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13389054785,
+    "name": "Резные наличники",
+    "latitude": 54.6326708,
+    "longitude": 39.7505251,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 20,
+    "osmType": "node",
+    "tags": [
+      "name=Резные наличники",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 101850091,
+    "name": "Здание Дворянского собрания",
+    "latitude": 54.6299528,
+    "longitude": 39.7421327,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 3731.8201064333994,
+    "estimatedVisitMinutes": 20,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=50/57",
+      "addr:postcode=390000",
+      "addr:street=Почтовая улица",
+      "artwork_type=architecture",
+      "building=yes",
+      "building:levels=2",
+      "contact:vk=https://vk.com/@ioknrzngroup-zdanie-blagorodnogo-sobraniya",
+      "heritage=2",
+      "name=Здание Дворянского собрания",
+      "tourism=artwork",
+      "wikidata=Q124307931"
+    ]
+  },
+  {
+    "id": 113559815,
+    "name": "Дом Михаила Шарова",
+    "latitude": 54.629556449999995,
+    "longitude": 39.74102275,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 1531.4561956613907,
+    "estimatedVisitMinutes": 20,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=54",
+      "addr:street=Почтовая улица",
+      "artwork_type=architecture",
+      "building=yes",
+      "building:levels=2",
+      "name=Дом Михаила Шарова",
+      "start_date=1839",
+      "tourism=artwork"
+    ]
+  }
+]

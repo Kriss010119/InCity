@@ -1,0 +1,3358 @@
+﻿[
+  {
+    "color": "#A35539",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 300607,
+    "routeNumber": "5",
+    "name": "Кольцевая линия (внутреннее кольцо)",
+    "stops": [
+      {
+        "nodeId": 6937381514,
+        "name": "Белорусская",
+        "latitude": 55.776055,
+        "longitude": 37.5842083,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937381511,
+        "name": "Новослободская",
+        "latitude": 55.7797408,
+        "longitude": 37.6035173,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937381509,
+        "name": "Проспект Мира",
+        "latitude": 55.7795176,
+        "longitude": 37.6317515,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937381505,
+        "name": "Комсомольская",
+        "latitude": 55.7745873,
+        "longitude": 37.6543337,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 297148175,
+        "name": "Курская",
+        "latitude": 55.7572646,
+        "longitude": 37.659173,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937381501,
+        "name": "Таганская",
+        "latitude": 55.7417635,
+        "longitude": 37.6511971,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937381495,
+        "name": "Павелецкая",
+        "latitude": 55.7324091,
+        "longitude": 37.6380281,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937152874,
+        "name": "Добрынинская",
+        "latitude": 55.7292208,
+        "longitude": 37.6243963,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937381521,
+        "name": "Октябрьская",
+        "latitude": 55.7298759,
+        "longitude": 37.6094998,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937381519,
+        "name": "Парк Культуры",
+        "latitude": 55.7359102,
+        "longitude": 37.5914052,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937381517,
+        "name": "Киевская",
+        "latitude": 55.7447233,
+        "longitude": 37.5657082,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937381515,
+        "name": "Краснопресненская",
+        "latitude": 55.7611801,
+        "longitude": 37.5775083,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937381514,
+        "name": "Белорусская",
+        "latitude": 55.776055,
+        "longitude": 37.5842083,
+        "role": "stop",
+        "sequence": 12
+      }
+    ]
+  },
+  {
+    "color": "#A35539",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1462011,
+    "routeNumber": "5",
+    "name": "Кольцевая линия (внешнее кольцо)",
+    "stops": [
+      {
+        "nodeId": 6937381513,
+        "name": "Белорусская",
+        "latitude": 55.7762207,
+        "longitude": 37.5839267,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937381516,
+        "name": "Краснопресненская",
+        "latitude": 55.7611984,
+        "longitude": 37.5771167,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937381518,
+        "name": "Киевская",
+        "latitude": 55.7447303,
+        "longitude": 37.5653063,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937381520,
+        "name": "Парк Культуры",
+        "latitude": 55.7357183,
+        "longitude": 37.5911968,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6937381522,
+        "name": "Октябрьская",
+        "latitude": 55.7296804,
+        "longitude": 37.6092907,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937152875,
+        "name": "Добрынинская",
+        "latitude": 55.728994,
+        "longitude": 37.6244426,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937381496,
+        "name": "Павелецкая",
+        "latitude": 55.7322255,
+        "longitude": 37.6382698,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937381502,
+        "name": "Таганская",
+        "latitude": 55.7416251,
+        "longitude": 37.6515195,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1123660481,
+        "name": "Курская",
+        "latitude": 55.7572097,
+        "longitude": 37.6595224,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937381506,
+        "name": "Комсомольская",
+        "latitude": 55.7745765,
+        "longitude": 37.654645,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937381510,
+        "name": "Проспект Мира",
+        "latitude": 55.7797458,
+        "longitude": 37.6317472,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937381512,
+        "name": "Новослободская",
+        "latitude": 55.7799641,
+        "longitude": 37.6034318,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937381513,
+        "name": "Белорусская",
+        "latitude": 55.7762207,
+        "longitude": 37.5839267,
+        "role": "stop",
+        "sequence": 12
+      }
+    ]
+  },
+  {
+    "color": "#F07E23",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 300618,
+    "routeNumber": "6",
+    "name": "Калужско-Рижская линия: Медведково → Новоясеневская",
+    "stops": [
+      {
+        "nodeId": 6938090606,
+        "name": "Медведково",
+        "latitude": 55.8871831,
+        "longitude": 37.6614357,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 2584131693,
+        "name": "Бабушкинская",
+        "latitude": 55.8696505,
+        "longitude": 37.6640031,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6938090608,
+        "name": "Свиблово",
+        "latitude": 55.8552544,
+        "longitude": 37.6526352,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6938090610,
+        "name": "Ботанический сад",
+        "latitude": 55.8448682,
+        "longitude": 37.6381474,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 268521606,
+        "name": "ВДНХ",
+        "latitude": 55.8211181,
+        "longitude": 37.6412157,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 277499098,
+        "name": "Алексеевская",
+        "latitude": 55.8091011,
+        "longitude": 37.6388112,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6938090612,
+        "name": "Рижская",
+        "latitude": 55.7937201,
+        "longitude": 37.6363052,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937381507,
+        "name": "Проспект Мира",
+        "latitude": 55.7809069,
+        "longitude": 37.6318116,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1221424287,
+        "name": "Сухаревская",
+        "latitude": 55.7728891,
+        "longitude": 37.6310684,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937856032,
+        "name": "Тургеневская",
+        "latitude": 55.7664987,
+        "longitude": 37.6372815,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 252934401,
+        "name": "Китай-город",
+        "latitude": 55.7556055,
+        "longitude": 37.6331968,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937811155,
+        "name": "Третьяковская",
+        "latitude": 55.7411826,
+        "longitude": 37.6271318,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6938090620,
+        "name": "Октябрьская",
+        "latitude": 55.7305772,
+        "longitude": 37.6108154,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6938090622,
+        "name": "Шаболовская",
+        "latitude": 55.7199756,
+        "longitude": 37.6075077,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6938090624,
+        "name": "Ленинский проспект",
+        "latitude": 55.7076562,
+        "longitude": 37.5861185,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6938090626,
+        "name": "Академическая",
+        "latitude": 55.6878378,
+        "longitude": 37.5734271,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6938090628,
+        "name": "Профсоюзная",
+        "latitude": 55.6779563,
+        "longitude": 37.5628214,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6938090630,
+        "name": "Новые Черёмушки",
+        "latitude": 55.6703086,
+        "longitude": 37.5546029,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6938090632,
+        "name": "Калужская",
+        "latitude": 55.6572545,
+        "longitude": 37.5405703,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6938090634,
+        "name": "Беляево",
+        "latitude": 55.6427986,
+        "longitude": 37.5255848,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 582860692,
+        "name": "Коньково",
+        "latitude": 55.6331677,
+        "longitude": 37.518881,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6938090638,
+        "name": "Тёплый Стан",
+        "latitude": 55.6187972,
+        "longitude": 37.5081604,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6938090640,
+        "name": "Ясенево",
+        "latitude": 55.6062522,
+        "longitude": 37.5333698,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6938090641,
+        "name": "Новоясеневская",
+        "latitude": 55.60095,
+        "longitude": 37.5540709,
+        "role": "stop_exit_only",
+        "sequence": 23
+      }
+    ]
+  },
+  {
+    "color": "#F07E23",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1514369,
+    "routeNumber": "6",
+    "name": "Калужско-Рижская линия: Новоясеневская → Медведково",
+    "stops": [
+      {
+        "nodeId": 6938090642,
+        "name": "Новоясеневская",
+        "latitude": 55.6010342,
+        "longitude": 37.5542125,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1221881576,
+        "name": "Ясенево",
+        "latitude": 55.6063604,
+        "longitude": 37.5334429,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6938090639,
+        "name": "Тёплый Стан",
+        "latitude": 55.6188452,
+        "longitude": 37.50835,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 1221839172,
+        "name": "Коньково",
+        "latitude": 55.6331254,
+        "longitude": 37.5190722,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6938090635,
+        "name": "Беляево",
+        "latitude": 55.6427559,
+        "longitude": 37.5257759,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6938090633,
+        "name": "Калужская",
+        "latitude": 55.6571977,
+        "longitude": 37.5407497,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6938090631,
+        "name": "Новые Черёмушки",
+        "latitude": 55.6702486,
+        "longitude": 37.554793,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6938090629,
+        "name": "Профсоюзная",
+        "latitude": 55.6779046,
+        "longitude": 37.5629873,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6938090627,
+        "name": "Академическая",
+        "latitude": 55.6877776,
+        "longitude": 37.5736027,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6938090625,
+        "name": "Ленинский проспект",
+        "latitude": 55.7075855,
+        "longitude": 37.5862815,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6938090623,
+        "name": "Шаболовская",
+        "latitude": 55.719998,
+        "longitude": 37.6078837,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6938090621,
+        "name": "Октябрьская",
+        "latitude": 55.7304117,
+        "longitude": 37.6110074,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937811158,
+        "name": "Третьяковская",
+        "latitude": 55.7408133,
+        "longitude": 37.6271688,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 5176322723,
+        "name": "Китай-город",
+        "latitude": 55.755673,
+        "longitude": 37.6337015,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937856033,
+        "name": "Тургеневская",
+        "latitude": 55.7664853,
+        "longitude": 37.6376545,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6938090615,
+        "name": "Сухаревская",
+        "latitude": 55.7730214,
+        "longitude": 37.6313385,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1221407668,
+        "name": "Проспект Мира",
+        "latitude": 55.7807962,
+        "longitude": 37.6321497,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6938090613,
+        "name": "Рижская",
+        "latitude": 55.7936815,
+        "longitude": 37.6366929,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1111110423,
+        "name": "Алексеевская",
+        "latitude": 55.8090771,
+        "longitude": 37.6392,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 1067527110,
+        "name": "ВДНХ",
+        "latitude": 55.8210906,
+        "longitude": 37.6416015,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6938090611,
+        "name": "Ботанический сад",
+        "latitude": 55.8448262,
+        "longitude": 37.6383398,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6938090609,
+        "name": "Свиблово",
+        "latitude": 55.8551687,
+        "longitude": 37.6527736,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 2584131690,
+        "name": "Бабушкинская",
+        "latitude": 55.8696201,
+        "longitude": 37.6642023,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6938090607,
+        "name": "Медведково",
+        "latitude": 55.8871737,
+        "longitude": 37.6616422,
+        "role": "stop_exit_only",
+        "sequence": 23
+      }
+    ]
+  },
+  {
+    "color": "#ADACAC",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 301486,
+    "routeNumber": "9",
+    "name": "Серпуховско-Тимирязевская линия: Алтуфьево → Бульвар Дмитрия Донского",
+    "stops": [
+      {
+        "nodeId": 6937152846,
+        "name": "Алтуфьево",
+        "latitude": 55.8979232,
+        "longitude": 37.5872554,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937152848,
+        "name": "Бибирево",
+        "latitude": 55.8838284,
+        "longitude": 37.6034891,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937152850,
+        "name": "Отрадное",
+        "latitude": 55.8632165,
+        "longitude": 37.604566,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937152852,
+        "name": "Владыкино",
+        "latitude": 55.8471959,
+        "longitude": 37.5898182,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 312814742,
+        "name": "Петровско-Разумовская",
+        "latitude": 55.8350169,
+        "longitude": 37.5742794,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937152854,
+        "name": "Тимирязевская",
+        "latitude": 55.8171074,
+        "longitude": 37.5762821,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937152856,
+        "name": "Дмитровская",
+        "latitude": 55.8065401,
+        "longitude": 37.581719,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937152858,
+        "name": "Савёловская",
+        "latitude": 55.7924469,
+        "longitude": 37.5886625,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937152860,
+        "name": "Менделеевская",
+        "latitude": 55.7808733,
+        "longitude": 37.6019012,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937152862,
+        "name": "Цветной бульвар",
+        "latitude": 55.7709026,
+        "longitude": 37.6177439,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937152868,
+        "name": "Чеховская",
+        "latitude": 55.764884,
+        "longitude": 37.608944,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937152870,
+        "name": "Боровицкая",
+        "latitude": 55.7509611,
+        "longitude": 37.6068809,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937152872,
+        "name": "Полянка",
+        "latitude": 55.738104,
+        "longitude": 37.6170396,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6937152876,
+        "name": "Серпуховская",
+        "latitude": 55.7279251,
+        "longitude": 37.6246795,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937152878,
+        "name": "Тульская",
+        "latitude": 55.7086642,
+        "longitude": 37.6227144,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6937223800,
+        "name": "Нагатинская",
+        "latitude": 55.6829892,
+        "longitude": 37.622316,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6937223797,
+        "name": "Нагорная",
+        "latitude": 55.6719609,
+        "longitude": 37.6101763,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6937223795,
+        "name": "Нахимовский проспект",
+        "latitude": 55.6626792,
+        "longitude": 37.6055396,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6937223793,
+        "name": "Севастопольская",
+        "latitude": 55.6526737,
+        "longitude": 37.5983365,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6937223791,
+        "name": "Чертановская",
+        "latitude": 55.6404121,
+        "longitude": 37.6066186,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6937223789,
+        "name": "Южная",
+        "latitude": 55.6222705,
+        "longitude": 37.6091287,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6937223787,
+        "name": "Пражская",
+        "latitude": 55.6123917,
+        "longitude": 37.604426,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6937223785,
+        "name": "Улица Академика Янгеля",
+        "latitude": 55.5949963,
+        "longitude": 37.6003083,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6937152883,
+        "name": "Аннино",
+        "latitude": 55.5825379,
+        "longitude": 37.5963676,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6937152881,
+        "name": "Бульвар Дмитрия Донского",
+        "latitude": 55.5692699,
+        "longitude": 37.5767599,
+        "role": "stop_exit_only",
+        "sequence": 24
+      }
+    ]
+  },
+  {
+    "color": "#ADACAC",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1570093,
+    "routeNumber": "9",
+    "name": "Серпуховско-Тимирязевская линия: Бульвар Дмитрия Донского → Алтуфьево",
+    "stops": [
+      {
+        "nodeId": 6937152882,
+        "name": "Бульвар Дмитрия Донского",
+        "latitude": 55.5692176,
+        "longitude": 37.5769794,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937152884,
+        "name": "Аннино",
+        "latitude": 55.5825076,
+        "longitude": 37.5967047,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937223786,
+        "name": "Улица Академика Янгеля",
+        "latitude": 55.5949838,
+        "longitude": 37.6005635,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937223788,
+        "name": "Пражская",
+        "latitude": 55.6123662,
+        "longitude": 37.6046262,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6937223790,
+        "name": "Южная",
+        "latitude": 55.6222474,
+        "longitude": 37.60933,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937223792,
+        "name": "Чертановская",
+        "latitude": 55.6405009,
+        "longitude": 37.6067501,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937223794,
+        "name": "Севастопольская",
+        "latitude": 55.6526753,
+        "longitude": 37.5985367,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937223796,
+        "name": "Нахимовский проспект",
+        "latitude": 55.6626215,
+        "longitude": 37.6057194,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937223798,
+        "name": "Нагорная",
+        "latitude": 55.6719361,
+        "longitude": 37.6103772,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937223801,
+        "name": "Нагатинская",
+        "latitude": 55.6829569,
+        "longitude": 37.6225135,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937152879,
+        "name": "Тульская",
+        "latitude": 55.7086648,
+        "longitude": 37.6229201,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937152877,
+        "name": "Серпуховская",
+        "latitude": 55.7279702,
+        "longitude": 37.6249873,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937152873,
+        "name": "Полянка",
+        "latitude": 55.7382183,
+        "longitude": 37.617338,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6937152871,
+        "name": "Боровицкая",
+        "latitude": 55.7509817,
+        "longitude": 37.6072316,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937152869,
+        "name": "Чеховская",
+        "latitude": 55.7647628,
+        "longitude": 37.6091913,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6937152863,
+        "name": "Цветной бульвар",
+        "latitude": 55.7708466,
+        "longitude": 37.6180488,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6937152861,
+        "name": "Менделеевская",
+        "latitude": 55.7810494,
+        "longitude": 37.6020608,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6937152859,
+        "name": "Савёловская",
+        "latitude": 55.7925297,
+        "longitude": 37.5889811,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6937152857,
+        "name": "Дмитровская",
+        "latitude": 55.8065817,
+        "longitude": 37.5820628,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6937152855,
+        "name": "Тимирязевская",
+        "latitude": 55.8171438,
+        "longitude": 37.576495,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 5202080143,
+        "name": "Петровско-Разумовская",
+        "latitude": 55.8347074,
+        "longitude": 37.5746737,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1270512427,
+        "name": "Владыкино",
+        "latitude": 55.8471642,
+        "longitude": 37.5900167,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6937152851,
+        "name": "Отрадное",
+        "latitude": 55.8631559,
+        "longitude": 37.6047409,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6937152849,
+        "name": "Бибирево",
+        "latitude": 55.8839166,
+        "longitude": 37.6036241,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6937152847,
+        "name": "Алтуфьево",
+        "latitude": 55.8979152,
+        "longitude": 37.5874668,
+        "role": "stop",
+        "sequence": 24
+      }
+    ]
+  },
+  {
+    "color": "#1EBCEF",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 302147,
+    "routeNumber": "4А",
+    "name": "Филёвская линия: Александровский сад → Москва-Сити",
+    "stops": [
+      {
+        "nodeId": 6938823556,
+        "name": "Александровский сад",
+        "latitude": 55.7524242,
+        "longitude": 37.6086732,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939665027,
+        "name": "Арбатская",
+        "latitude": 55.7519104,
+        "longitude": 37.6006643,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939665025,
+        "name": "Смоленская",
+        "latitude": 55.7488633,
+        "longitude": 37.5826955,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939665020,
+        "name": "Киевская",
+        "latitude": 55.7436128,
+        "longitude": 37.5651566,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939665005,
+        "name": "Деловой Центр",
+        "latitude": 55.7501369,
+        "longitude": 37.5413162,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939665007,
+        "name": "Москва-Сити",
+        "latitude": 55.7483638,
+        "longitude": 37.534237,
+        "role": "stop_exit_only",
+        "sequence": 5
+      }
+    ]
+  },
+  {
+    "color": "#1EBCEF",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1463286,
+    "routeNumber": "4А",
+    "name": "Филёвская линия: Москва-Сити → Александровский сад",
+    "stops": [
+      {
+        "nodeId": 6939665008,
+        "name": "Москва-Сити",
+        "latitude": 55.7482325,
+        "longitude": 37.5342245,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939665006,
+        "name": "Деловой Центр",
+        "latitude": 55.7500267,
+        "longitude": 37.5414319,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939665021,
+        "name": "Киевская",
+        "latitude": 55.7437576,
+        "longitude": 37.5661463,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939665026,
+        "name": "Смоленская",
+        "latitude": 55.7487499,
+        "longitude": 37.5827359,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939665028,
+        "name": "Арбатская",
+        "latitude": 55.7517947,
+        "longitude": 37.6006494,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1135674408,
+        "name": "Александровский сад",
+        "latitude": 55.7523797,
+        "longitude": 37.6086632,
+        "role": "stop_exit_only",
+        "sequence": 5
+      }
+    ]
+  },
+  {
+    "color": "#1EBCEF",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 302148,
+    "routeNumber": "4",
+    "name": "Филёвская линия: Александровский сад → Кунцевская",
+    "stops": [
+      {
+        "nodeId": 6938823556,
+        "name": "Александровский сад",
+        "latitude": 55.7524242,
+        "longitude": 37.6086732,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939665027,
+        "name": "Арбатская",
+        "latitude": 55.7519104,
+        "longitude": 37.6006643,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939665025,
+        "name": "Смоленская",
+        "latitude": 55.7488633,
+        "longitude": 37.5826955,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939665020,
+        "name": "Киевская",
+        "latitude": 55.7436128,
+        "longitude": 37.5651566,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 9330588497,
+        "name": "Студенческая",
+        "latitude": 55.7388362,
+        "longitude": 37.5483675,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 9330588498,
+        "name": "Кутузовская",
+        "latitude": 55.7400336,
+        "longitude": 37.5343875,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 9330588499,
+        "name": "Фили",
+        "latitude": 55.7461511,
+        "longitude": 37.5148286,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 9961947342,
+        "name": "Багратионовская",
+        "latitude": 55.743779,
+        "longitude": 37.497706,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 9961947341,
+        "name": "Филёвский парк",
+        "latitude": 55.7395667,
+        "longitude": 37.4833259,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 9961947340,
+        "name": "Пионерская",
+        "latitude": 55.7360543,
+        "longitude": 37.4671407,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1191237441,
+        "name": "Кунцевская",
+        "latitude": 55.7308185,
+        "longitude": 37.4459574,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  },
+  {
+    "color": "#1EBCEF",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1463285,
+    "routeNumber": "4",
+    "name": "Филёвская линия: Кунцевская → Александровский сад",
+    "stops": [
+      {
+        "nodeId": 1191237441,
+        "name": "Кунцевская",
+        "latitude": 55.7308185,
+        "longitude": 37.4459574,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 9330588501,
+        "name": "Пионерская",
+        "latitude": 55.7359311,
+        "longitude": 37.4671952,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 9330588500,
+        "name": "Филёвский парк",
+        "latitude": 55.7394565,
+        "longitude": 37.4834225,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 9961947344,
+        "name": "Багратионовская",
+        "latitude": 55.7436822,
+        "longitude": 37.4977964,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 9961947343,
+        "name": "Фили",
+        "latitude": 55.7461382,
+        "longitude": 37.5147885,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1191041916,
+        "name": "Кутузовская",
+        "latitude": 55.7400187,
+        "longitude": 37.5343388,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1191041836,
+        "name": "Студенческая",
+        "latitude": 55.7388068,
+        "longitude": 37.5483954,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6939665021,
+        "name": "Киевская",
+        "latitude": 55.7437576,
+        "longitude": 37.5661463,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6939665026,
+        "name": "Смоленская",
+        "latitude": 55.7487499,
+        "longitude": 37.5827359,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6939665028,
+        "name": "Арбатская",
+        "latitude": 55.7517947,
+        "longitude": 37.6006494,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1135674408,
+        "name": "Александровский сад",
+        "latitude": 55.7523797,
+        "longitude": 37.6086632,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  },
+  {
+    "color": "#0072BA",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 302149,
+    "routeNumber": "3",
+    "name": "Арбатско-Покровская линия: Щёлковская → Пятницкое шоссе",
+    "stops": [
+      {
+        "nodeId": 6939665042,
+        "name": "Щёлковская",
+        "latitude": 55.8093353,
+        "longitude": 37.7984695,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939665040,
+        "name": "Первомайская",
+        "latitude": 55.7946965,
+        "longitude": 37.7992909,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939665038,
+        "name": "Измайловская",
+        "latitude": 55.7878146,
+        "longitude": 37.7816479,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939665035,
+        "name": "Партизанская",
+        "latitude": 55.7886142,
+        "longitude": 37.7509617,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6950639206,
+        "name": "Семёновская",
+        "latitude": 55.7834165,
+        "longitude": 37.7211967,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939665033,
+        "name": "Электрозаводская",
+        "latitude": 55.7818182,
+        "longitude": 37.703709,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6939665031,
+        "name": "Бауманская",
+        "latitude": 55.7731186,
+        "longitude": 37.6803999,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 242546357,
+        "name": "Курская",
+        "latitude": 55.7581156,
+        "longitude": 37.6583103,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937811151,
+        "name": "Площадь Революции",
+        "latitude": 55.7567652,
+        "longitude": 37.6217851,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6939665029,
+        "name": "Арбатская",
+        "latitude": 55.752187,
+        "longitude": 37.606969,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6939665023,
+        "name": "Смоленская",
+        "latitude": 55.7475903,
+        "longitude": 37.5823176,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6939665019,
+        "name": "Киевская",
+        "latitude": 55.7442702,
+        "longitude": 37.5648555,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6939665017,
+        "name": "Парк Победы",
+        "latitude": 55.7364421,
+        "longitude": 37.5181214,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6939665015,
+        "name": "Славянский бульвар",
+        "latitude": 55.7296548,
+        "longitude": 37.4707528,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 244036218,
+        "name": "Кунцевская",
+        "latitude": 55.7306986,
+        "longitude": 37.4460135,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6939665013,
+        "name": "Молодёжная",
+        "latitude": 55.740801,
+        "longitude": 37.4170028,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 253776238,
+        "name": "Крылатское",
+        "latitude": 55.7565916,
+        "longitude": 37.408242,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 296938973,
+        "name": "Строгино",
+        "latitude": 55.8037637,
+        "longitude": 37.4031277,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 596129789,
+        "name": "Мякинино",
+        "latitude": 55.8252012,
+        "longitude": 37.3853552,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 596129530,
+        "name": "Волоколамская",
+        "latitude": 55.8355451,
+        "longitude": 37.3823333,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6939665009,
+        "name": "Митино",
+        "latitude": 55.8461116,
+        "longitude": 37.3615145,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 2086260190,
+        "name": "Пятницкое шоссе",
+        "latitude": 55.856561,
+        "longitude": 37.3546819,
+        "role": "stop_exit_only",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "color": "#0072BA",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1472298,
+    "routeNumber": "3",
+    "name": "Арбатско-Покровская линия: Пятницкое шоссе → Щёлковская",
+    "stops": [
+      {
+        "nodeId": 2101832215,
+        "name": "Пятницкое шоссе",
+        "latitude": 55.8556903,
+        "longitude": 37.3537445,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939665010,
+        "name": "Митино",
+        "latitude": 55.8454065,
+        "longitude": 37.362908,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 5202107567,
+        "name": "Волоколамская",
+        "latitude": 55.8354831,
+        "longitude": 37.3821591,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 5202107565,
+        "name": "Мякинино",
+        "latitude": 55.8252031,
+        "longitude": 37.3852274,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 5202107563,
+        "name": "Строгино",
+        "latitude": 55.8036389,
+        "longitude": 37.4030419,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939665012,
+        "name": "Крылатское",
+        "latitude": 55.7565868,
+        "longitude": 37.408036,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6939665014,
+        "name": "Молодёжная",
+        "latitude": 55.7407126,
+        "longitude": 37.4168703,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 5176248500,
+        "name": "Кунцевская",
+        "latitude": 55.7306605,
+        "longitude": 37.4460313,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6939665016,
+        "name": "Славянский бульвар",
+        "latitude": 55.7295431,
+        "longitude": 37.4708087,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6939665018,
+        "name": "Парк Победы",
+        "latitude": 55.7362598,
+        "longitude": 37.5180197,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6939665022,
+        "name": "Киевская",
+        "latitude": 55.7443502,
+        "longitude": 37.565964,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6939665024,
+        "name": "Смоленская",
+        "latitude": 55.747383,
+        "longitude": 37.5824306,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6939665030,
+        "name": "Арбатская",
+        "latitude": 55.7520024,
+        "longitude": 37.6069813,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1257026800,
+        "name": "Площадь Революции",
+        "latitude": 55.7565371,
+        "longitude": 37.6217853,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 5202107569,
+        "name": "Курская",
+        "latitude": 55.7579205,
+        "longitude": 37.6585229,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6939665032,
+        "name": "Бауманская",
+        "latitude": 55.7729343,
+        "longitude": 37.6806409,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6939665034,
+        "name": "Электрозаводская",
+        "latitude": 55.7816069,
+        "longitude": 37.7038623,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6950639207,
+        "name": "Семёновская",
+        "latitude": 55.783192,
+        "longitude": 37.7212709,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6939665036,
+        "name": "Партизанская",
+        "latitude": 55.7883907,
+        "longitude": 37.7510003,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6939665039,
+        "name": "Измайловская",
+        "latitude": 55.7876881,
+        "longitude": 37.7816571,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6939665041,
+        "name": "Первомайская",
+        "latitude": 55.7946983,
+        "longitude": 37.799496,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6939665043,
+        "name": "Щёлковская",
+        "latitude": 55.8093383,
+        "longitude": 37.7986755,
+        "role": "stop_exit_only",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "color": "#E42313",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 305810,
+    "routeNumber": "1",
+    "name": "Сокольническая линия: Бульвар Рокоссовского → Потапово",
+    "stops": [
+      {
+        "nodeId": 6938823544,
+        "name": "Бульвар Рокоссовского",
+        "latitude": 55.8146309,
+        "longitude": 37.7342937,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6938823546,
+        "name": "Черкизовская",
+        "latitude": 55.8038799,
+        "longitude": 37.7449301,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6938823548,
+        "name": "Преображенская площадь",
+        "latitude": 55.7964285,
+        "longitude": 37.7153116,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6938823550,
+        "name": "Сокольники",
+        "latitude": 55.7888545,
+        "longitude": 37.6801752,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6938823552,
+        "name": "Красносельская",
+        "latitude": 55.7803907,
+        "longitude": 37.6675951,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937381503,
+        "name": "Комсомольская",
+        "latitude": 55.7752557,
+        "longitude": 37.6559741,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 267335318,
+        "name": "Красные Ворота",
+        "latitude": 55.7691111,
+        "longitude": 37.6488733,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937856034,
+        "name": "Чистые пруды",
+        "latitude": 55.7659443,
+        "longitude": 37.6388984,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6938090619,
+        "name": "Лубянка",
+        "latitude": 55.7599854,
+        "longitude": 37.6278511,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937811149,
+        "name": "Охотный Ряд",
+        "latitude": 55.7578477,
+        "longitude": 37.6163676,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6938823557,
+        "name": "Библиотека имени Ленина",
+        "latitude": 55.7515247,
+        "longitude": 37.6102524,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6938823559,
+        "name": "Кропоткинская",
+        "latitude": 55.7454796,
+        "longitude": 37.6036755,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 278692976,
+        "name": "Парк Культуры",
+        "latitude": 55.7352856,
+        "longitude": 37.5940414,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6938823561,
+        "name": "Фрунзенская",
+        "latitude": 55.726982,
+        "longitude": 37.5782658,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6938823563,
+        "name": "Спортивная",
+        "latitude": 55.7234798,
+        "longitude": 37.5641012,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6938823565,
+        "name": "Воробьёвы горы",
+        "latitude": 55.7103953,
+        "longitude": 37.5591397,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6938823567,
+        "name": "Университет",
+        "latitude": 55.692741,
+        "longitude": 37.5331503,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6938823569,
+        "name": "Проспект Вернадского",
+        "latitude": 55.6772643,
+        "longitude": 37.5059863,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6938823571,
+        "name": "Юго-Западная",
+        "latitude": 55.6636706,
+        "longitude": 37.4831199,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 3355867698,
+        "name": "Тропарёво",
+        "latitude": 55.6459095,
+        "longitude": 37.472448,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6938823575,
+        "name": "Румянцево",
+        "latitude": 55.6330195,
+        "longitude": 37.4415631,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6938823578,
+        "name": "Саларьево",
+        "latitude": 55.6219591,
+        "longitude": 37.4240887,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6938823579,
+        "name": "Филатов Луг",
+        "latitude": 55.601349,
+        "longitude": 37.4075865,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6938823581,
+        "name": "Прокшино",
+        "latitude": 55.5861703,
+        "longitude": 37.4337938,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6938823583,
+        "name": "Ольховая",
+        "latitude": 55.5687176,
+        "longitude": 37.4591681,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6938881285,
+        "name": "Новомосковская",
+        "latitude": 55.5605211,
+        "longitude": 37.4678995,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 12157560724,
+        "name": "Потапово",
+        "latitude": 55.5525824,
+        "longitude": 37.4926294,
+        "role": "stop_exit_only",
+        "sequence": 26
+      }
+    ]
+  },
+  {
+    "color": "#E42313",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1475755,
+    "routeNumber": "1",
+    "name": "Сокольническая линия: Потапово → Бульвар Рокоссовского",
+    "stops": [
+      {
+        "nodeId": 12157560725,
+        "name": "Потапово",
+        "latitude": 55.552697,
+        "longitude": 37.4926112,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6938881286,
+        "name": "Новомосковская",
+        "latitude": 55.5606148,
+        "longitude": 37.4681119,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6938823584,
+        "name": "Ольховая",
+        "latitude": 55.5687639,
+        "longitude": 37.459356,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6938823582,
+        "name": "Прокшино",
+        "latitude": 55.5862675,
+        "longitude": 37.4339056,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6938823580,
+        "name": "Филатов Луг",
+        "latitude": 55.601425,
+        "longitude": 37.4077408,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6938823577,
+        "name": "Саларьево",
+        "latitude": 55.6218771,
+        "longitude": 37.4242915,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6938823576,
+        "name": "Румянцево",
+        "latitude": 55.632888,
+        "longitude": 37.4416074,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 3114463783,
+        "name": "Тропарёво",
+        "latitude": 55.6458071,
+        "longitude": 37.4726006,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1202096548,
+        "name": "Юго-Западная",
+        "latitude": 55.6636376,
+        "longitude": 37.4833174,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6938823570,
+        "name": "Проспект Вернадского",
+        "latitude": 55.6771829,
+        "longitude": 37.5061323,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6938823568,
+        "name": "Университет",
+        "latitude": 55.6925853,
+        "longitude": 37.5334184,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6938823566,
+        "name": "Воробьёвы горы",
+        "latitude": 55.7102705,
+        "longitude": 37.5594418,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6938823564,
+        "name": "Спортивная",
+        "latitude": 55.7233019,
+        "longitude": 37.5643211,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6938823562,
+        "name": "Фрунзенская",
+        "latitude": 55.7267771,
+        "longitude": 37.5783942,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 5176445916,
+        "name": "Парк Культуры",
+        "latitude": 55.7358928,
+        "longitude": 37.5946018,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6938823560,
+        "name": "Кропоткинская",
+        "latitude": 55.7453931,
+        "longitude": 37.6039193,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6938823558,
+        "name": "Библиотека имени Ленина",
+        "latitude": 55.7510821,
+        "longitude": 37.6101565,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6937811150,
+        "name": "Охотный Ряд",
+        "latitude": 55.7576814,
+        "longitude": 37.6166291,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6938090618,
+        "name": "Лубянка",
+        "latitude": 55.759768,
+        "longitude": 37.6279292,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6937856035,
+        "name": "Чистые пруды",
+        "latitude": 55.7657918,
+        "longitude": 37.63915,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6938823555,
+        "name": "Красные Ворота",
+        "latitude": 55.7689296,
+        "longitude": 37.6490999,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6937381504,
+        "name": "Комсомольская",
+        "latitude": 55.775165,
+        "longitude": 37.6561002,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6938823553,
+        "name": "Красносельская",
+        "latitude": 55.780319,
+        "longitude": 37.6677138,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6938823551,
+        "name": "Сокольники",
+        "latitude": 55.788776,
+        "longitude": 37.6803269,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6938823549,
+        "name": "Преображенская площадь",
+        "latitude": 55.79632,
+        "longitude": 37.7153803,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6938823547,
+        "name": "Черкизовская",
+        "latitude": 55.8038796,
+        "longitude": 37.7451361,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6938823545,
+        "name": "Бульвар Рокоссовского",
+        "latitude": 55.8147348,
+        "longitude": 37.7343854,
+        "role": "stop_exit_only",
+        "sequence": 26
+      }
+    ]
+  },
+  {
+    "color": "#943E90",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 309620,
+    "routeNumber": "7",
+    "name": "Таганско-Краснопресненская линия: Планерная → Котельники",
+    "stops": [
+      {
+        "nodeId": 6939552998,
+        "name": "Планерная",
+        "latitude": 55.8606462,
+        "longitude": 37.43642,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939553000,
+        "name": "Сходненская",
+        "latitude": 55.8504814,
+        "longitude": 37.4396702,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939553002,
+        "name": "Тушинская",
+        "latitude": 55.8265404,
+        "longitude": 37.4368643,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 3046563958,
+        "name": "Спартак",
+        "latitude": 55.8182906,
+        "longitude": 37.4356624,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939553004,
+        "name": "Щукинская",
+        "latitude": 55.808428,
+        "longitude": 37.4646467,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939553006,
+        "name": "Октябрьское Поле",
+        "latitude": 55.793334,
+        "longitude": 37.4937642,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6939553007,
+        "name": "Полежаевская",
+        "latitude": 55.7775076,
+        "longitude": 37.5192904,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6939553010,
+        "name": "Беговая",
+        "latitude": 55.7736576,
+        "longitude": 37.5466477,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6939553012,
+        "name": "Улица 1905 года",
+        "latitude": 55.7648301,
+        "longitude": 37.5612541,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6939553014,
+        "name": "Баррикадная",
+        "latitude": 55.7610277,
+        "longitude": 37.5792463,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937152866,
+        "name": "Пушкинская",
+        "latitude": 55.765343,
+        "longitude": 37.6073946,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6938090616,
+        "name": "Кузнецкий Мост",
+        "latitude": 55.7606881,
+        "longitude": 37.6260336,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 5176322724,
+        "name": "Китай-город",
+        "latitude": 55.755569,
+        "longitude": 37.632921,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6937381499,
+        "name": "Таганская",
+        "latitude": 55.7404132,
+        "longitude": 37.6517247,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937856042,
+        "name": "Пролетарская",
+        "latitude": 55.7317992,
+        "longitude": 37.6658705,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6939553016,
+        "name": "Волгоградский проспект",
+        "latitude": 55.7251988,
+        "longitude": 37.6868418,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6939553018,
+        "name": "Текстильщики",
+        "latitude": 55.7087558,
+        "longitude": 37.731499,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6939553020,
+        "name": "Кузьминки",
+        "latitude": 55.7055591,
+        "longitude": 37.7657559,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6939553022,
+        "name": "Рязанский проспект",
+        "latitude": 55.7169313,
+        "longitude": 37.7933928,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6939553024,
+        "name": "Выхино",
+        "latitude": 55.7156309,
+        "longitude": 37.8179078,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6939553028,
+        "name": "Лермонтовский проспект",
+        "latitude": 55.7015795,
+        "longitude": 37.8518947,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6939553030,
+        "name": "Жулебино",
+        "latitude": 55.6854737,
+        "longitude": 37.8561935,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6939553032,
+        "name": "Котельники",
+        "latitude": 55.6741654,
+        "longitude": 37.8584381,
+        "role": "stop_exit_only",
+        "sequence": 22
+      }
+    ]
+  },
+  {
+    "color": "#943E90",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1516303,
+    "routeNumber": "7",
+    "name": "Таганско-Краснопресненская линия: Котельники → Планерная",
+    "stops": [
+      {
+        "nodeId": 6939553033,
+        "name": "Котельники",
+        "latitude": 55.6742695,
+        "longitude": 37.8585879,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939553031,
+        "name": "Жулебино",
+        "latitude": 55.6854024,
+        "longitude": 37.8563943,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939553029,
+        "name": "Лермонтовский проспект",
+        "latitude": 55.7016775,
+        "longitude": 37.8520575,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939553025,
+        "name": "Выхино",
+        "latitude": 55.7156579,
+        "longitude": 37.8179402,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939553023,
+        "name": "Рязанский проспект",
+        "latitude": 55.7169662,
+        "longitude": 37.7932365,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939553021,
+        "name": "Кузьминки",
+        "latitude": 55.7056605,
+        "longitude": 37.7658078,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6939553019,
+        "name": "Текстильщики",
+        "latitude": 55.7088715,
+        "longitude": 37.7315049,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6939553017,
+        "name": "Волгоградский проспект",
+        "latitude": 55.7252832,
+        "longitude": 37.6869238,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937856043,
+        "name": "Пролетарская",
+        "latitude": 55.7319149,
+        "longitude": 37.6658738,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937381500,
+        "name": "Таганская",
+        "latitude": 55.7405225,
+        "longitude": 37.6520806,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 493293874,
+        "name": "Китай-город",
+        "latitude": 55.7556364,
+        "longitude": 37.6334257,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6938090617,
+        "name": "Кузнецкий Мост",
+        "latitude": 55.7608125,
+        "longitude": 37.6262434,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937152867,
+        "name": "Пушкинская",
+        "latitude": 55.76551,
+        "longitude": 37.607462,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6939553015,
+        "name": "Баррикадная",
+        "latitude": 55.761237,
+        "longitude": 37.5793594,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6939553013,
+        "name": "Улица 1905 года",
+        "latitude": 55.7648919,
+        "longitude": 37.561429,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6939553011,
+        "name": "Беговая",
+        "latitude": 55.7737729,
+        "longitude": 37.5466664,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6939553008,
+        "name": "Полежаевская",
+        "latitude": 55.7776033,
+        "longitude": 37.5192547,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1223469070,
+        "name": "Октябрьское Поле",
+        "latitude": 55.7934031,
+        "longitude": 37.4938635,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6939553005,
+        "name": "Щукинская",
+        "latitude": 55.8085056,
+        "longitude": 37.4647692,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 5202107561,
+        "name": "Спартак",
+        "latitude": 55.8183028,
+        "longitude": 37.4358557,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6939553003,
+        "name": "Тушинская",
+        "latitude": 55.8265216,
+        "longitude": 37.4370858,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6939553001,
+        "name": "Сходненская",
+        "latitude": 55.8504892,
+        "longitude": 37.4398794,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6939552999,
+        "name": "Планерная",
+        "latitude": 55.8606642,
+        "longitude": 37.4366265,
+        "role": "stop_exit_only",
+        "sequence": 22
+      }
+    ]
+  },
+  {
+    "color": "#BED12C",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 309623,
+    "routeNumber": "10",
+    "name": "Люблинско-Дмитровская линия: Физтех → Зябликово",
+    "stops": [
+      {
+        "nodeId": 11174639394,
+        "name": "Физтех",
+        "latitude": 55.921672,
+        "longitude": 37.5464741,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 11174673552,
+        "name": "Лианозово",
+        "latitude": 55.8981258,
+        "longitude": 37.5445614,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 11174673549,
+        "name": "Яхромская",
+        "latitude": 55.87986,
+        "longitude": 37.5453408,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937856014,
+        "name": "Селигерская",
+        "latitude": 55.8662809,
+        "longitude": 37.5471398,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6937856016,
+        "name": "Верхние Лихоборы",
+        "latitude": 55.8558754,
+        "longitude": 37.5614598,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937856018,
+        "name": "Окружная",
+        "latitude": 55.8460137,
+        "longitude": 37.5736556,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 5202080144,
+        "name": "Петровско-Разумовская",
+        "latitude": 55.8349599,
+        "longitude": 37.5745662,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937856021,
+        "name": "Фонвизинская",
+        "latitude": 55.8228609,
+        "longitude": 37.5874996,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937856023,
+        "name": "Бутырская",
+        "latitude": 55.8133272,
+        "longitude": 37.6023373,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937856024,
+        "name": "Марьина Роща",
+        "latitude": 55.795521,
+        "longitude": 37.6161302,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937856026,
+        "name": "Достоевская",
+        "latitude": 55.7815285,
+        "longitude": 37.6149455,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937856028,
+        "name": "Трубная",
+        "latitude": 55.7690586,
+        "longitude": 37.6194364,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6937856030,
+        "name": "Сретенский бульвар",
+        "latitude": 55.7668902,
+        "longitude": 37.6400704,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 296944266,
+        "name": "Чкаловская",
+        "latitude": 55.7564813,
+        "longitude": 37.6571741,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937856038,
+        "name": "Римская",
+        "latitude": 55.7464136,
+        "longitude": 37.6830675,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6937856040,
+        "name": "Крестьянская Застава",
+        "latitude": 55.733322,
+        "longitude": 37.6675035,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6937856044,
+        "name": "Дубровка",
+        "latitude": 55.7191767,
+        "longitude": 37.6754021,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6937856046,
+        "name": "Кожуховская",
+        "latitude": 55.707392,
+        "longitude": 37.6846795,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6937856048,
+        "name": "Печатники",
+        "latitude": 55.6934411,
+        "longitude": 37.7269005,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6937856050,
+        "name": "Волжская",
+        "latitude": 55.6907728,
+        "longitude": 37.7530544,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6937856052,
+        "name": "Люблино",
+        "latitude": 55.6757425,
+        "longitude": 37.7618074,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6937856054,
+        "name": "Братиславская",
+        "latitude": 55.6597977,
+        "longitude": 37.7506026,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6937856056,
+        "name": "Марьино",
+        "latitude": 55.6500044,
+        "longitude": 37.7430454,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6937856058,
+        "name": "Борисово",
+        "latitude": 55.633326,
+        "longitude": 37.7436571,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6937856060,
+        "name": "Шипиловская",
+        "latitude": 55.6210223,
+        "longitude": 37.7435375,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6937811178,
+        "name": "Зябликово",
+        "latitude": 55.6122369,
+        "longitude": 37.7450758,
+        "role": "stop_exit_only",
+        "sequence": 25
+      }
+    ]
+  },
+  {
+    "color": "#BED12C",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1532874,
+    "routeNumber": "10",
+    "name": "Люблинско-Дмитровская линия: Зябликово → Физтех",
+    "stops": [
+      {
+        "nodeId": 6937811179,
+        "name": "Зябликово",
+        "latitude": 55.6122417,
+        "longitude": 37.7452807,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937856061,
+        "name": "Шипиловская",
+        "latitude": 55.6210329,
+        "longitude": 37.7437418,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937856059,
+        "name": "Борисово",
+        "latitude": 55.6332825,
+        "longitude": 37.7438454,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6937856057,
+        "name": "Марьино",
+        "latitude": 55.6500306,
+        "longitude": 37.7432478,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6937856055,
+        "name": "Братиславская",
+        "latitude": 55.6596942,
+        "longitude": 37.7507082,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937856053,
+        "name": "Люблино",
+        "latitude": 55.6757195,
+        "longitude": 37.7620096,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937856051,
+        "name": "Волжская",
+        "latitude": 55.6908796,
+        "longitude": 37.7531342,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937856049,
+        "name": "Печатники",
+        "latitude": 55.6935422,
+        "longitude": 37.7270014,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6937856047,
+        "name": "Кожуховская",
+        "latitude": 55.7074519,
+        "longitude": 37.6848565,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6937856045,
+        "name": "Дубровка",
+        "latitude": 55.7192492,
+        "longitude": 37.6756765,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6937856041,
+        "name": "Крестьянская Застава",
+        "latitude": 55.7332037,
+        "longitude": 37.6677576,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6937856039,
+        "name": "Римская",
+        "latitude": 55.7464275,
+        "longitude": 37.6834158,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 5202107571,
+        "name": "Чкаловская",
+        "latitude": 55.756964,
+        "longitude": 37.6567571,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6937856031,
+        "name": "Сретенский бульвар",
+        "latitude": 55.7670865,
+        "longitude": 37.6401147,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6937856029,
+        "name": "Трубная",
+        "latitude": 55.7691777,
+        "longitude": 37.6196582,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6937856027,
+        "name": "Достоевская",
+        "latitude": 55.7814905,
+        "longitude": 37.6152412,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6937856025,
+        "name": "Марьина Роща",
+        "latitude": 55.7955242,
+        "longitude": 37.6164839,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6937856022,
+        "name": "Бутырская",
+        "latitude": 55.8134624,
+        "longitude": 37.6026094,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6937856020,
+        "name": "Фонвизинская",
+        "latitude": 55.822978,
+        "longitude": 37.5877832,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 4404055537,
+        "name": "Петровско-Разумовская",
+        "latitude": 55.8346566,
+        "longitude": 37.5749619,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6937856019,
+        "name": "Окружная",
+        "latitude": 55.846039,
+        "longitude": 37.5740048,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6937856017,
+        "name": "Верхние Лихоборы",
+        "latitude": 55.8563826,
+        "longitude": 37.5611955,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6937856015,
+        "name": "Селигерская",
+        "latitude": 55.8668682,
+        "longitude": 37.5472415,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 11174673550,
+        "name": "Яхромская",
+        "latitude": 55.8798984,
+        "longitude": 37.5455508,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 11174673553,
+        "name": "Лианозово",
+        "latitude": 55.8981042,
+        "longitude": 37.5447646,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 11174639395,
+        "name": "Физтех",
+        "latitude": 55.9216504,
+        "longitude": 37.5466772,
+        "role": "stop_exit_only",
+        "sequence": 25
+      }
+    ]
+  },
+  {
+    "color": "#FFCD1C",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 326491,
+    "routeNumber": "8",
+    "name": "Калининская линия: Третьяковская → Новокосино",
+    "stops": [
+      {
+        "nodeId": 6937811157,
+        "name": "Третьяковская",
+        "latitude": 55.7410187,
+        "longitude": 37.6274935,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6937381497,
+        "name": "Марксистская",
+        "latitude": 55.7412421,
+        "longitude": 37.653495,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6937856036,
+        "name": "Площадь Ильича",
+        "latitude": 55.7470794,
+        "longitude": 37.6833797,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939601861,
+        "name": "Авиамоторная",
+        "latitude": 55.7524574,
+        "longitude": 37.7201138,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939601863,
+        "name": "Шоссе Энтузиастов",
+        "latitude": 55.7574706,
+        "longitude": 37.7495021,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6939601865,
+        "name": "Перово",
+        "latitude": 55.7511407,
+        "longitude": 37.7865341,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6939601867,
+        "name": "Новогиреево",
+        "latitude": 55.751714,
+        "longitude": 37.8167147,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6939601869,
+        "name": "Новокосино",
+        "latitude": 55.7450231,
+        "longitude": 37.8638087,
+        "role": "stop_exit_only",
+        "sequence": 7
+      }
+    ]
+  },
+  {
+    "color": "#FFCD1C",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 1526350,
+    "routeNumber": "8",
+    "name": "Калининская линия: Новокосино → Третьяковская",
+    "stops": [
+      {
+        "nodeId": 6939601870,
+        "name": "Новокосино",
+        "latitude": 55.7451496,
+        "longitude": 37.8637351,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6939601868,
+        "name": "Новогиреево",
+        "latitude": 55.751826,
+        "longitude": 37.816768,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6939601866,
+        "name": "Перово",
+        "latitude": 55.7512475,
+        "longitude": 37.7864468,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6939601864,
+        "name": "Шоссе Энтузиастов",
+        "latitude": 55.7576679,
+        "longitude": 37.7494713,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6939601862,
+        "name": "Авиамоторная",
+        "latitude": 55.7526159,
+        "longitude": 37.7200011,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6937856037,
+        "name": "Площадь Ильича",
+        "latitude": 55.7472897,
+        "longitude": 37.6833378,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6937381498,
+        "name": "Марксистская",
+        "latitude": 55.7414075,
+        "longitude": 37.6535707,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6937811156,
+        "name": "Третьяковская",
+        "latitude": 55.7413908,
+        "longitude": 37.6274396,
+        "role": "stop_exit_only",
+        "sequence": 7
+      }
+    ]
+  },
+  {
+    "color": "#007763",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 18020151,
+    "routeNumber": "16",
+    "name": "Троицкая линия: Новомосковская => ЗИЛ",
+    "stops": [
+      {
+        "nodeId": 12458764860,
+        "name": "Новомосковская",
+        "latitude": 55.5604716,
+        "longitude": 37.4652168,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 12458764841,
+        "name": "Коммунарка",
+        "latitude": 55.5745854,
+        "longitude": 37.4680929,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 12458764830,
+        "name": "Корниловская",
+        "latitude": 55.5983698,
+        "longitude": 37.4790981,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 12163102804,
+        "name": "Тютчевская",
+        "latitude": 55.6190927,
+        "longitude": 37.4811766,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 12163102809,
+        "name": "Генерала Тюленева",
+        "latitude": 55.6261325,
+        "longitude": 37.485809,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 12163102811,
+        "name": "Университет дружбы народов",
+        "latitude": 55.6478912,
+        "longitude": 37.5072508,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 12163102813,
+        "name": "Новаторская",
+        "latitude": 55.6715446,
+        "longitude": 37.5214792,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 13143504743,
+        "name": "Вавиловская",
+        "latitude": 55.6848519,
+        "longitude": 37.5409758,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 13141822044,
+        "name": "Академическая",
+        "latitude": 55.686888,
+        "longitude": 37.5758733,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 13141822041,
+        "name": "Крымская",
+        "latitude": 55.6896722,
+        "longitude": 37.6093891,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 13141233389,
+        "name": "ЗИЛ",
+        "latitude": 55.696897,
+        "longitude": 37.6453088,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  },
+  {
+    "color": "#007763",
+    "line": "Московский метрополитен",
+    "operator": "ГУП «Московский метрополитен»",
+    "id": 18020152,
+    "routeNumber": "16",
+    "name": "Троицкая линия: ЗИЛ => Новомосковская",
+    "stops": [
+      {
+        "nodeId": 13141325024,
+        "name": "ЗИЛ",
+        "latitude": 55.6969787,
+        "longitude": 37.6451517,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 13141822042,
+        "name": "Крымская",
+        "latitude": 55.689788,
+        "longitude": 37.6093983,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 13141822045,
+        "name": "Академическая",
+        "latitude": 55.6870161,
+        "longitude": 37.5760091,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 13143504744,
+        "name": "Вавиловская",
+        "latitude": 55.6849305,
+        "longitude": 37.5408124,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 12163102814,
+        "name": "Новаторская",
+        "latitude": 55.6716371,
+        "longitude": 37.5212822,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 12163102810,
+        "name": "Университет дружбы народов",
+        "latitude": 55.6479834,
+        "longitude": 37.5070342,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 12163102807,
+        "name": "Генерала Тюленева",
+        "latitude": 55.6262768,
+        "longitude": 37.4857339,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 12163102806,
+        "name": "Тютчевская",
+        "latitude": 55.6190072,
+        "longitude": 37.4809942,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 12458764829,
+        "name": "Корниловская",
+        "latitude": 55.5984213,
+        "longitude": 37.47888,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 12458764840,
+        "name": "Коммунарка",
+        "latitude": 55.5746175,
+        "longitude": 37.4678612,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 12458764861,
+        "name": "Новомосковская",
+        "latitude": 55.5605747,
+        "longitude": 37.4650197,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  }
+]

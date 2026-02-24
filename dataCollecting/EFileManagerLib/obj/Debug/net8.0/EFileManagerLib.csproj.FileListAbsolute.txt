@@ -1,0 +1,11 @@
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\bin\Debug\net8.0\EFileManagerLib.deps.json
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\bin\Debug\net8.0\EFileManagerLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\bin\Debug\net8.0\EFileManagerLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.AssemblyInfo.cs
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\refint\EFileManagerLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\EFileManagerLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\EFileManagerLib\obj\Debug\net8.0\ref\EFileManagerLib.dll

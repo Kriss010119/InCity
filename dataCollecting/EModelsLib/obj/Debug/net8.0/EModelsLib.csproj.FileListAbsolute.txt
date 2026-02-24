@@ -1,0 +1,11 @@
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\bin\Debug\net8.0\EModelsLib.deps.json
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\bin\Debug\net8.0\EModelsLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\bin\Debug\net8.0\EModelsLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.AssemblyInfo.cs
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\refint\EModelsLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\EModelsLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\EModelsLib\obj\Debug\net8.0\ref\EModelsLib.dll

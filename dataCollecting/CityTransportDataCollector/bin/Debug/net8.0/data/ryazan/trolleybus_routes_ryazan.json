@@ -1,0 +1,3904 @@
+﻿[
+  {
+    "from": "Комбайновый Завод",
+    "to": "Депо №3",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5658921,
+    "routeNumber": "8",
+    "name": "Троллейбус №8: Комбайновый Завод — Депо №3",
+    "stops": [
+      {
+        "nodeId": 3374804472,
+        "name": "Комбайновый Завод",
+        "latitude": 54.6826459,
+        "longitude": 39.6258918,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6376395299,
+        "name": "Дягилевская ТЭЦ",
+        "latitude": 54.6790934,
+        "longitude": 39.6313624,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6376395298,
+        "name": "Завод Тяжпрессмаш",
+        "latitude": 54.6759151,
+        "longitude": 39.6355991,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6383899253,
+        "name": "По требованию",
+        "latitude": 54.6716315,
+        "longitude": 39.6413142,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6383899252,
+        "name": "улица Космонавтов",
+        "latitude": 54.6675654,
+        "longitude": 39.6429554,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6383899251,
+        "name": "Станкозавод",
+        "latitude": 54.6656149,
+        "longitude": 39.6385976,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6383899250,
+        "name": "улица Карла Маркса",
+        "latitude": 54.662755,
+        "longitude": 39.6415117,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6383899248,
+        "name": "Клуб ТКПО",
+        "latitude": 54.6590644,
+        "longitude": 39.646432,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6383899260,
+        "name": "улица Бронная",
+        "latitude": 54.6546693,
+        "longitude": 39.6522774,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6383899247,
+        "name": "улица Пирогова",
+        "latitude": 54.6508707,
+        "longitude": 39.6572768,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1280994649,
+        "name": "Памятник Братству по оружию",
+        "latitude": 54.6489904,
+        "longitude": 39.6614839,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6370811770,
+        "name": "Рязанская таможня",
+        "latitude": 54.6436279,
+        "longitude": 39.6636544,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728637,
+        "name": "Автовокзал Центральный",
+        "latitude": 54.6391878,
+        "longitude": 39.6776384,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6362928362,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6358276,
+        "longitude": 39.6885714,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 3341616602,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6357146,
+        "longitude": 39.688435,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6362928361,
+        "name": "ТД \"Барс\"",
+        "latitude": 54.6325116,
+        "longitude": 39.6992069,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6362928360,
+        "name": "улица Вокзальная",
+        "latitude": 54.6303491,
+        "longitude": 39.7061556,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1330375133,
+        "name": "улица Вокзальная",
+        "latitude": 54.6302977,
+        "longitude": 39.70613,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1099861422,
+        "name": "Площадь Победы",
+        "latitude": 54.6289362,
+        "longitude": 39.7121041,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6366728631,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291104,
+        "longitude": 39.7196414,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6366728629,
+        "name": "Площадь Ленина",
+        "latitude": 54.6290993,
+        "longitude": 39.7350356,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1327363414,
+        "name": "Площадь Ленина",
+        "latitude": 54.6289932,
+        "longitude": 39.7350261,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6366728626,
+        "name": "Библиотека имени Горького",
+        "latitude": 54.6307081,
+        "longitude": 39.741483,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6366728623,
+        "name": "Педагогический сквер",
+        "latitude": 54.6277491,
+        "longitude": 39.7464234,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6366728618,
+        "name": "ТЦ \"Атрон-Сити\"",
+        "latitude": 54.6237998,
+        "longitude": 39.7530027,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6383899246,
+        "name": "Театральная площадь",
+        "latitude": 54.6225726,
+        "longitude": 39.7571589,
+        "role": "stop",
+        "sequence": 27
+      },
+      {
+        "nodeId": 6363999383,
+        "name": "Городская больница №4",
+        "latitude": 54.6247235,
+        "longitude": 39.7610654,
+        "role": "stop",
+        "sequence": 28
+      },
+      {
+        "nodeId": 1235866908,
+        "name": "улица Грибоедова",
+        "latitude": 54.6273874,
+        "longitude": 39.7660677,
+        "role": "stop",
+        "sequence": 29
+      },
+      {
+        "nodeId": 6373677589,
+        "name": "Мясокомбинат",
+        "latitude": 54.6257258,
+        "longitude": 39.7703817,
+        "role": "stop",
+        "sequence": 30
+      },
+      {
+        "nodeId": 6373677588,
+        "name": "Электросеть",
+        "latitude": 54.6231706,
+        "longitude": 39.7807202,
+        "role": "stop",
+        "sequence": 31
+      },
+      {
+        "nodeId": 6371892738,
+        "name": "Кальное",
+        "latitude": 54.621123,
+        "longitude": 39.7862997,
+        "role": "stop",
+        "sequence": 32
+      },
+      {
+        "nodeId": 1240139043,
+        "name": "Кальное",
+        "latitude": 54.6210149,
+        "longitude": 39.7860422,
+        "role": "platform",
+        "sequence": 33
+      },
+      {
+        "nodeId": 6371892736,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6193387,
+        "longitude": 39.7931571,
+        "role": "stop",
+        "sequence": 34
+      },
+      {
+        "nodeId": 1330373377,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6192431,
+        "longitude": 39.7931124,
+        "role": "platform",
+        "sequence": 35
+      },
+      {
+        "nodeId": 6371892735,
+        "name": "улица Советской Армии",
+        "latitude": 54.6154678,
+        "longitude": 39.7938684,
+        "role": "stop",
+        "sequence": 36
+      },
+      {
+        "nodeId": 6371892734,
+        "name": "Рязаньвест",
+        "latitude": 54.6110827,
+        "longitude": 39.7915813,
+        "role": "stop",
+        "sequence": 37
+      },
+      {
+        "nodeId": 6371892733,
+        "name": "улица Зубковой",
+        "latitude": 54.6085712,
+        "longitude": 39.7915083,
+        "role": "stop",
+        "sequence": 38
+      },
+      {
+        "nodeId": 6371892731,
+        "name": "Депо №3",
+        "latitude": 54.6077409,
+        "longitude": 39.7855638,
+        "role": "stop_exit_only",
+        "sequence": 39
+      }
+    ]
+  },
+  {
+    "from": "ЦПКиО",
+    "to": "Комбайновый Завод",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5658923,
+    "routeNumber": "9",
+    "name": "Троллейбус №9: ЦПКиО — Комбайновый Завод",
+    "stops": [
+      {
+        "nodeId": 6373677599,
+        "name": "ЦПКиО",
+        "latitude": 54.6090071,
+        "longitude": 39.7242334,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6373677597,
+        "name": "улица Братиславская",
+        "latitude": 54.611591,
+        "longitude": 39.7201164,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6362946221,
+        "name": "улица Гагарина",
+        "latitude": 54.6176099,
+        "longitude": 39.728738,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6362946220,
+        "name": "улица Стройкова",
+        "latitude": 54.6205337,
+        "longitude": 39.7239846,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6362946219,
+        "name": "Музыкальное училище",
+        "latitude": 54.623044,
+        "longitude": 39.7199171,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6362946215,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6255934,
+        "longitude": 39.7165549,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6362946205,
+        "name": "Площадь Победы",
+        "latitude": 54.6290393,
+        "longitude": 39.712501,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6362946195,
+        "name": "улица Вокзальная",
+        "latitude": 54.6299825,
+        "longitude": 39.7076839,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1330375132,
+        "name": "улица Вокзальная",
+        "latitude": 54.630078,
+        "longitude": 39.7077549,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6362946190,
+        "name": "ТД \"Барс\"",
+        "latitude": 54.6322869,
+        "longitude": 39.700214,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6362946189,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6360727,
+        "longitude": 39.688267,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 3341616601,
+        "name": "ТЦ Премьер",
+        "latitude": 54.6361275,
+        "longitude": 39.6887915,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6366728657,
+        "name": "Автовокзал Центральный",
+        "latitude": 54.6395679,
+        "longitude": 39.6769562,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6067341497,
+        "name": "Университет МВД России",
+        "latitude": 54.6423575,
+        "longitude": 39.6679106,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6370811900,
+        "name": "Рязанская таможня",
+        "latitude": 54.6438933,
+        "longitude": 39.6633757,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6383899264,
+        "name": "Памятник Братству по оружию",
+        "latitude": 54.6492831,
+        "longitude": 39.6606964,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6383899261,
+        "name": "улица Пирогова",
+        "latitude": 54.6522539,
+        "longitude": 39.6554277,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6383899259,
+        "name": "улица Бронная",
+        "latitude": 54.655886,
+        "longitude": 39.6506801,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6383899258,
+        "name": "Клуб ТКПО",
+        "latitude": 54.658519,
+        "longitude": 39.6471691,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6383899257,
+        "name": "улица Карла Маркса",
+        "latitude": 54.6639184,
+        "longitude": 39.6399618,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6383899256,
+        "name": "улица Космонавтов",
+        "latitude": 54.6673755,
+        "longitude": 39.6425385,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6383899254,
+        "name": "По требованию",
+        "latitude": 54.6714643,
+        "longitude": 39.6415388,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6376395303,
+        "name": "Завод Тяжпрессмаш",
+        "latitude": 54.6762744,
+        "longitude": 39.6351164,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6376395302,
+        "name": "Дягилевская ТЭЦ",
+        "latitude": 54.6787524,
+        "longitude": 39.6318175,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 3374804472,
+        "name": "Комбайновый Завод",
+        "latitude": 54.6826459,
+        "longitude": 39.6258918,
+        "role": "stop_exit_only",
+        "sequence": 25
+      }
+    ]
+  },
+  {
+    "from": "завод \"Рязцветмет\"",
+    "to": "Октябрьский городок",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659649,
+    "routeNumber": "12",
+    "name": "Троллейбус №12: завод \"Рязцветмет\" => Октябрьский городок",
+    "stops": [
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733955,
+        "name": "Автоцентр",
+        "latitude": 54.5956983,
+        "longitude": 39.7682111,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733960,
+        "name": "ДСК",
+        "latitude": 54.6003609,
+        "longitude": 39.766099,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6360733961,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6040947,
+        "longitude": 39.7651742,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6360733962,
+        "name": "Проезд Яблочкова",
+        "latitude": 54.6066787,
+        "longitude": 39.7651705,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1856449976,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6100616,
+        "longitude": 39.758085,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6360733963,
+        "name": "Улица Чайкиной",
+        "latitude": 54.60999,
+        "longitude": 39.7580156,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 445036670,
+        "name": "Рембыттехника",
+        "latitude": 54.6130099,
+        "longitude": 39.7518909,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6360733964,
+        "name": "Онкодеспонсер",
+        "latitude": 54.6144861,
+        "longitude": 39.7444005,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6360733967,
+        "name": "Спортивная",
+        "latitude": 54.6171069,
+        "longitude": 39.737625,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6360733968,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6180011,
+        "longitude": 39.7328229,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6360733969,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6138089,
+        "longitude": 39.72291,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6360733971,
+        "name": "Полетаевский рынок",
+        "latitude": 54.6099885,
+        "longitude": 39.7157196,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6360733972,
+        "name": "Дворец молодежи",
+        "latitude": 54.6097697,
+        "longitude": 39.7111353,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6360733973,
+        "name": "Кардиодиспансер",
+        "latitude": 54.6084039,
+        "longitude": 39.7049565,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6360733974,
+        "name": "улица Ленинского Комсомола",
+        "latitude": 54.6086288,
+        "longitude": 39.7004998,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 412638303,
+        "name": "Лицей №7",
+        "latitude": 54.6130952,
+        "longitude": 39.6958928,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6360733975,
+        "name": "улица Строителей",
+        "latitude": 54.6159794,
+        "longitude": 39.6936503,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6360733976,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6175303,
+        "longitude": 39.6869972,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733978,
+        "name": "Октябрьский городок",
+        "latitude": 54.6147478,
+        "longitude": 39.6790391,
+        "role": "stop_exit_only",
+        "sequence": 19
+      }
+    ]
+  },
+  {
+    "from": "Октябрьский городок",
+    "to": "завод \"Рязцветмет\"",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659650,
+    "routeNumber": "12",
+    "name": "Троллейбус №12: Октябрьский городок => завод \"Рязцветмет\"",
+    "stops": [
+      {
+        "nodeId": 6360733952,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6177576,
+        "longitude": 39.6893068,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733951,
+        "name": "улица Строителей",
+        "latitude": 54.6157502,
+        "longitude": 39.6936283,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733950,
+        "name": "Лицей №7",
+        "latitude": 54.6125539,
+        "longitude": 39.6963409,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6360733949,
+        "name": "улица Ленинского Комсомола",
+        "latitude": 54.6089931,
+        "longitude": 39.6998911,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6360733948,
+        "name": "Кардиодиспансер",
+        "latitude": 54.6087906,
+        "longitude": 39.7056592,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1884553969,
+        "name": "Дворец молодежи",
+        "latitude": 54.6099919,
+        "longitude": 39.7098607,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6360733947,
+        "name": "Полетаевский рынок",
+        "latitude": 54.6095192,
+        "longitude": 39.7139741,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6360733945,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6181383,
+        "longitude": 39.7338782,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6360733944,
+        "name": "Спортивная",
+        "latitude": 54.6152516,
+        "longitude": 39.7399551,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6360733942,
+        "name": "Онкодеспонсер",
+        "latitude": 54.6143318,
+        "longitude": 39.7446269,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6360733941,
+        "name": "Рембыттехника",
+        "latitude": 54.6134995,
+        "longitude": 39.7499529,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6360733940,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6097799,
+        "longitude": 39.7581482,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1856449975,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6097384,
+        "longitude": 39.7580693,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6360733939,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6035183,
+        "longitude": 39.7644943,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6360733938,
+        "name": "ДСК",
+        "latitude": 54.6005216,
+        "longitude": 39.765903,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6360733937,
+        "name": "Автоцентр",
+        "latitude": 54.594721,
+        "longitude": 39.7685152,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_exit_only",
+        "sequence": 17
+      }
+    ]
+  },
+  {
+    "from": "Шереметьево",
+    "to": "Памятник Ф.Полетаеву",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659651,
+    "routeNumber": "15",
+    "name": "Троллейбус №15: Шереметьево — Памятник Ф.Полетаеву",
+    "stops": [
+      {
+        "nodeId": 6400919773,
+        "name": "Шереметьево",
+        "latitude": 54.6074095,
+        "longitude": 39.8147723,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6400919769,
+        "name": "Стоматологическая поликлиника",
+        "latitude": 54.6089983,
+        "longitude": 39.808968,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6400919768,
+        "name": "Горбольница №11",
+        "latitude": 54.6099888,
+        "longitude": 39.8037471,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6373677598,
+        "name": "Кинотеатр \"Октябрь\"",
+        "latitude": 54.6111283,
+        "longitude": 39.797992,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6371892727,
+        "name": "улица Новосёлов",
+        "latitude": 54.6129728,
+        "longitude": 39.7922754,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1016912472,
+        "name": "улица Новоселов",
+        "latitude": 54.6129427,
+        "longitude": 39.7924745,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6371892726,
+        "name": "улица Советской Армии",
+        "latitude": 54.6163363,
+        "longitude": 39.7944267,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6371892725,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619405,
+        "longitude": 39.7928003,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1330373378,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619508,
+        "longitude": 39.7928557,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6371892724,
+        "name": "Кальное",
+        "latitude": 54.6210219,
+        "longitude": 39.7865863,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1276788076,
+        "name": "Кальное",
+        "latitude": 54.6210899,
+        "longitude": 39.7866886,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6371892723,
+        "name": "Гражданская улица",
+        "latitude": 54.620454,
+        "longitude": 39.7808868,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6371892722,
+        "name": "Автобусный парк",
+        "latitude": 54.6188909,
+        "longitude": 39.7706626,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6371892721,
+        "name": "Дом мебели \"Гермес\"",
+        "latitude": 54.6178792,
+        "longitude": 39.7639883,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6371892720,
+        "name": "Новая улица",
+        "latitude": 54.6172689,
+        "longitude": 39.7601249,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6371892719,
+        "name": "Николо-Ямской храм",
+        "latitude": 54.6168848,
+        "longitude": 39.7575092,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6371892744,
+        "name": "Дом печати",
+        "latitude": 54.6184101,
+        "longitude": 39.7549765,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6363999355,
+        "name": "Завод САМ",
+        "latitude": 54.616332,
+        "longitude": 39.7457672,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6360733967,
+        "name": "Спортивная",
+        "latitude": 54.6171069,
+        "longitude": 39.737625,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733968,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6180011,
+        "longitude": 39.7328229,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6360733969,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6138089,
+        "longitude": 39.72291,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6380075588,
+        "name": "улица Братиславская",
+        "latitude": 54.6113613,
+        "longitude": 39.7202465,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6380075587,
+        "name": "Памятник Ф.Полетаеву",
+        "latitude": 54.6099746,
+        "longitude": 39.7171922,
+        "role": "stop_exit_only",
+        "sequence": 22
+      }
+    ]
+  },
+  {
+    "from": "Памятник Ф.Полетаеву",
+    "to": "Шереметьево",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659652,
+    "routeNumber": "15",
+    "name": "Троллейбус №15: Памятник Ф.Полетаеву — Шереметьево",
+    "stops": [
+      {
+        "nodeId": 6380075587,
+        "name": "Памятник Ф.Полетаеву",
+        "latitude": 54.6099746,
+        "longitude": 39.7171922,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733945,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6181383,
+        "longitude": 39.7338782,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6360733944,
+        "name": "Спортивная",
+        "latitude": 54.6152516,
+        "longitude": 39.7399551,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6377287475,
+        "name": "Завод САМ",
+        "latitude": 54.6171443,
+        "longitude": 39.7478203,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6371892743,
+        "name": "Дом печати",
+        "latitude": 54.6182526,
+        "longitude": 39.755074,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6371892742,
+        "name": "Новая улица",
+        "latitude": 54.6171541,
+        "longitude": 39.7593979,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6371892741,
+        "name": "Дом мебели \"Гермес\"",
+        "latitude": 54.6184168,
+        "longitude": 39.7675712,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6371892737,
+        "name": "Автобусный парк",
+        "latitude": 54.6192872,
+        "longitude": 39.7732408,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6371892740,
+        "name": "Гражданская улица",
+        "latitude": 54.6204901,
+        "longitude": 39.7811301,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6371892738,
+        "name": "Кальное",
+        "latitude": 54.621123,
+        "longitude": 39.7862997,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1240139043,
+        "name": "Кальное",
+        "latitude": 54.6210149,
+        "longitude": 39.7860422,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6371892736,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6193387,
+        "longitude": 39.7931571,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1330373377,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6192431,
+        "longitude": 39.7931124,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6371892735,
+        "name": "улица Советской Армии",
+        "latitude": 54.6154678,
+        "longitude": 39.7938684,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6373677586,
+        "name": "улица Новосёлов",
+        "latitude": 54.6120796,
+        "longitude": 39.7925494,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1016912276,
+        "name": "улица Новоселов",
+        "latitude": 54.6119825,
+        "longitude": 39.7924741,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6373677585,
+        "name": "Кинотеатр \"Октябрь\"",
+        "latitude": 54.6110868,
+        "longitude": 39.797376,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6400921501,
+        "name": "Горбольница №11",
+        "latitude": 54.6099668,
+        "longitude": 39.8030873,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6400921487,
+        "name": "Стоматологическая поликлиника",
+        "latitude": 54.6085269,
+        "longitude": 39.8104696,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6400919774,
+        "name": "Шереметьево",
+        "latitude": 54.6071632,
+        "longitude": 39.8148355,
+        "role": "stop_exit_only",
+        "sequence": 20
+      }
+    ]
+  },
+  {
+    "from": "ЦПКиО",
+    "to": "Горбольница №11",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659654,
+    "routeNumber": "3",
+    "name": "Троллейбус №3: ЦПКиО — Горбольница №11",
+    "stops": [
+      {
+        "nodeId": 6373677599,
+        "name": "ЦПКиО",
+        "latitude": 54.6090071,
+        "longitude": 39.7242334,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6373677597,
+        "name": "улица Братиславская",
+        "latitude": 54.611591,
+        "longitude": 39.7201164,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6362946221,
+        "name": "улица Гагарина",
+        "latitude": 54.6176099,
+        "longitude": 39.728738,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6362946220,
+        "name": "улица Стройкова",
+        "latitude": 54.6205337,
+        "longitude": 39.7239846,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6362946219,
+        "name": "Музыкальное училище",
+        "latitude": 54.623044,
+        "longitude": 39.7199171,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6362946215,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6255934,
+        "longitude": 39.7165549,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6366728631,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291104,
+        "longitude": 39.7196414,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6366728629,
+        "name": "Площадь Ленина",
+        "latitude": 54.6290993,
+        "longitude": 39.7350356,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1327363414,
+        "name": "Площадь Ленина",
+        "latitude": 54.6289932,
+        "longitude": 39.7350261,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728626,
+        "name": "Библиотека имени Горького",
+        "latitude": 54.6307081,
+        "longitude": 39.741483,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6366728623,
+        "name": "Педагогический сквер",
+        "latitude": 54.6277491,
+        "longitude": 39.7464234,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6373677596,
+        "name": "Художественный музей",
+        "latitude": 54.6270027,
+        "longitude": 39.7503752,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6373677592,
+        "name": "РГУ им. С.А. Есенина",
+        "latitude": 54.6288088,
+        "longitude": 39.7534085,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6373677591,
+        "name": "площадь Свободы",
+        "latitude": 54.6313866,
+        "longitude": 39.7605495,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6373677590,
+        "name": "улица Грибоедова",
+        "latitude": 54.6284257,
+        "longitude": 39.7655815,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6373677589,
+        "name": "Мясокомбинат",
+        "latitude": 54.6257258,
+        "longitude": 39.7703817,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6373677588,
+        "name": "Электросеть",
+        "latitude": 54.6231706,
+        "longitude": 39.7807202,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6371892738,
+        "name": "Кальное",
+        "latitude": 54.621123,
+        "longitude": 39.7862997,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1240139043,
+        "name": "Кальное",
+        "latitude": 54.6210149,
+        "longitude": 39.7860422,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6371892736,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6193387,
+        "longitude": 39.7931571,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1330373377,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6192431,
+        "longitude": 39.7931124,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6371892735,
+        "name": "улица Советской Армии",
+        "latitude": 54.6154678,
+        "longitude": 39.7938684,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6373677586,
+        "name": "улица Новосёлов",
+        "latitude": 54.6120796,
+        "longitude": 39.7925494,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 1016912276,
+        "name": "улица Новоселов",
+        "latitude": 54.6119825,
+        "longitude": 39.7924741,
+        "role": "platform",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6373677585,
+        "name": "Кинотеатр \"Октябрь\"",
+        "latitude": 54.6110868,
+        "longitude": 39.797376,
+        "role": "stop",
+        "sequence": 27
+      },
+      {
+        "nodeId": 711686849,
+        "name": "Горбольница №11",
+        "latitude": 54.609521,
+        "longitude": 39.8029706,
+        "role": "stop_exit_only",
+        "sequence": 28
+      }
+    ]
+  },
+  {
+    "from": "Завод \"Рязцветмет\"",
+    "to": "Памятник Ф.Полетаеву",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659656,
+    "routeNumber": "6",
+    "name": "Троллейбус №6: Завод \"Рязцветмет\" — Памятник Ф.Полетаеву",
+    "stops": [
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733955,
+        "name": "Автоцентр",
+        "latitude": 54.5956983,
+        "longitude": 39.7682111,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733960,
+        "name": "ДСК",
+        "latitude": 54.6003609,
+        "longitude": 39.766099,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6364000590,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6044698,
+        "longitude": 39.7641965,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6364000589,
+        "name": "Строительный колледж",
+        "latitude": 54.6123878,
+        "longitude": 39.7605992,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6364000586,
+        "name": "Музыкальный театр",
+        "latitude": 54.6163299,
+        "longitude": 39.7588037,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6363999384,
+        "name": "Театральная площадь",
+        "latitude": 54.6211338,
+        "longitude": 39.7566357,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6366728664,
+        "name": "памятник Павлову",
+        "latitude": 54.6254023,
+        "longitude": 39.7504599,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6366728662,
+        "name": "Цирк",
+        "latitude": 54.6291011,
+        "longitude": 39.7443368,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6366728661,
+        "name": "Детский Мир",
+        "latitude": 54.6308715,
+        "longitude": 39.7388708,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6366728660,
+        "name": "Площадь Ленина",
+        "latitude": 54.6292341,
+        "longitude": 39.7348787,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1327363415,
+        "name": "Площадь Ленина",
+        "latitude": 54.6293511,
+        "longitude": 39.7348807,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728659,
+        "name": "Дом Художника",
+        "latitude": 54.6293174,
+        "longitude": 39.7258973,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1327363417,
+        "name": "Дом Художника",
+        "latitude": 54.6294033,
+        "longitude": 39.7258925,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6362928359,
+        "name": "Кинотеатр Дружба",
+        "latitude": 54.6276769,
+        "longitude": 39.7162629,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6362928358,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6245012,
+        "longitude": 39.7173776,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6362928357,
+        "name": "Музыкальное училище",
+        "latitude": 54.6228048,
+        "longitude": 39.7201359,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6362928348,
+        "name": "улица Стройкова",
+        "latitude": 54.6205475,
+        "longitude": 39.7237498,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6362928346,
+        "name": "улица Гагарина",
+        "latitude": 54.6178771,
+        "longitude": 39.7281111,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733969,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6138089,
+        "longitude": 39.72291,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6380075588,
+        "name": "улица Братиславская",
+        "latitude": 54.6113613,
+        "longitude": 39.7202465,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6380075587,
+        "name": "Памятник Ф.Полетаеву",
+        "latitude": 54.6099746,
+        "longitude": 39.7171922,
+        "role": "stop_exit_only",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "from": "Памятник Ф.Полетаеву",
+    "to": "Завод \"Рязцветмет\"",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659657,
+    "routeNumber": "6",
+    "name": "Троллейбус №6: Памятник Ф.Полетаеву — Завод \"Рязцветмет\"",
+    "stops": [
+      {
+        "nodeId": 6380075587,
+        "name": "Памятник Ф.Полетаеву",
+        "latitude": 54.6099746,
+        "longitude": 39.7171922,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6362946221,
+        "name": "улица Гагарина",
+        "latitude": 54.6176099,
+        "longitude": 39.728738,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6362946220,
+        "name": "улица Стройкова",
+        "latitude": 54.6205337,
+        "longitude": 39.7239846,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6362946219,
+        "name": "Музыкальное училище",
+        "latitude": 54.623044,
+        "longitude": 39.7199171,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6362946215,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6255934,
+        "longitude": 39.7165549,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6366728631,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291104,
+        "longitude": 39.7196414,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6366728629,
+        "name": "Площадь Ленина",
+        "latitude": 54.6290993,
+        "longitude": 39.7350356,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1327363414,
+        "name": "Площадь Ленина",
+        "latitude": 54.6289932,
+        "longitude": 39.7350261,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6366728626,
+        "name": "Библиотека имени Горького",
+        "latitude": 54.6307081,
+        "longitude": 39.741483,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728623,
+        "name": "Педагогический сквер",
+        "latitude": 54.6277491,
+        "longitude": 39.7464234,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6366728618,
+        "name": "ТЦ \"Атрон-Сити\"",
+        "latitude": 54.6237998,
+        "longitude": 39.7530027,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6366728617,
+        "name": "Театральная площадь",
+        "latitude": 54.6204168,
+        "longitude": 39.7568344,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6366728616,
+        "name": "Музыкальный театр",
+        "latitude": 54.6156479,
+        "longitude": 39.7589927,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6366728615,
+        "name": "Строительный колледж",
+        "latitude": 54.6117356,
+        "longitude": 39.7607736,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6360733939,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6035183,
+        "longitude": 39.7644943,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6360733938,
+        "name": "ДСК",
+        "latitude": 54.6005216,
+        "longitude": 39.765903,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733937,
+        "name": "Автоцентр",
+        "latitude": 54.594721,
+        "longitude": 39.7685152,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_exit_only",
+        "sequence": 20
+      }
+    ]
+  },
+  {
+    "from": "Шереметьево",
+    "to": "Завод \"Рязцветмет\"",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659836,
+    "routeNumber": "13",
+    "name": "Троллейбус №13: Шереметьево — завод \"Рязцветмет\"",
+    "stops": [
+      {
+        "nodeId": 6400919773,
+        "name": "Шереметьево",
+        "latitude": 54.6074095,
+        "longitude": 39.8147723,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6400919769,
+        "name": "Стоматологическая поликлиника",
+        "latitude": 54.6089983,
+        "longitude": 39.808968,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6400919768,
+        "name": "Горбольница №11",
+        "latitude": 54.6099888,
+        "longitude": 39.8037471,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6373677598,
+        "name": "Кинотеатр \"Октябрь\"",
+        "latitude": 54.6111283,
+        "longitude": 39.797992,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6371892727,
+        "name": "улица Новосёлов",
+        "latitude": 54.6129728,
+        "longitude": 39.7922754,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1016912472,
+        "name": "улица Новоселов",
+        "latitude": 54.6129427,
+        "longitude": 39.7924745,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6371892726,
+        "name": "улица Советской Армии",
+        "latitude": 54.6163363,
+        "longitude": 39.7944267,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6371892725,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619405,
+        "longitude": 39.7928003,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1330373378,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619508,
+        "longitude": 39.7928557,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6371892724,
+        "name": "Кальное",
+        "latitude": 54.6210219,
+        "longitude": 39.7865863,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1276788076,
+        "name": "Кальное",
+        "latitude": 54.6210899,
+        "longitude": 39.7866886,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6373677606,
+        "name": "Электросеть",
+        "latitude": 54.6235449,
+        "longitude": 39.7797514,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6373677605,
+        "name": "Мясокомбинат",
+        "latitude": 54.62634,
+        "longitude": 39.76935,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6363999382,
+        "name": "улица Грибоедова",
+        "latitude": 54.6274323,
+        "longitude": 39.7659521,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6363999362,
+        "name": "Городская больница №4",
+        "latitude": 54.6245072,
+        "longitude": 39.7606698,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6366728617,
+        "name": "Театральная площадь",
+        "latitude": 54.6204168,
+        "longitude": 39.7568344,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6366728616,
+        "name": "Музыкальный театр",
+        "latitude": 54.6156479,
+        "longitude": 39.7589927,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6366728615,
+        "name": "Строительный колледж",
+        "latitude": 54.6117356,
+        "longitude": 39.7607736,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6360733939,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6035183,
+        "longitude": 39.7644943,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733938,
+        "name": "ДСК",
+        "latitude": 54.6005216,
+        "longitude": 39.765903,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6360733937,
+        "name": "Автоцентр",
+        "latitude": 54.594721,
+        "longitude": 39.7685152,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_exit_only",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "from": "Завод \"Рязцветмет\"",
+    "to": "Шереметьево",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659837,
+    "routeNumber": "13",
+    "name": "Троллейбус №13: Завод \"Рязцветмет\" — Шереметьево",
+    "stops": [
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733955,
+        "name": "Автоцентр",
+        "latitude": 54.5956983,
+        "longitude": 39.7682111,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733960,
+        "name": "ДСК",
+        "latitude": 54.6003609,
+        "longitude": 39.766099,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6364000590,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6044698,
+        "longitude": 39.7641965,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6364000589,
+        "name": "Строительный колледж",
+        "latitude": 54.6123878,
+        "longitude": 39.7605992,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6364000586,
+        "name": "Музыкальный театр",
+        "latitude": 54.6163299,
+        "longitude": 39.7588037,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6383899246,
+        "name": "Театральная площадь",
+        "latitude": 54.6225726,
+        "longitude": 39.7571589,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6363999383,
+        "name": "Городская больница №4",
+        "latitude": 54.6247235,
+        "longitude": 39.7610654,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1235866908,
+        "name": "улица Грибоедова",
+        "latitude": 54.6273874,
+        "longitude": 39.7660677,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6373677589,
+        "name": "Мясокомбинат",
+        "latitude": 54.6257258,
+        "longitude": 39.7703817,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6373677588,
+        "name": "Электросеть",
+        "latitude": 54.6231706,
+        "longitude": 39.7807202,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6371892738,
+        "name": "Кальное",
+        "latitude": 54.621123,
+        "longitude": 39.7862997,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1240139043,
+        "name": "Кальное",
+        "latitude": 54.6210149,
+        "longitude": 39.7860422,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6371892736,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6193387,
+        "longitude": 39.7931571,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1330373377,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6192431,
+        "longitude": 39.7931124,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6371892735,
+        "name": "улица Советской Армии",
+        "latitude": 54.6154678,
+        "longitude": 39.7938684,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6373677586,
+        "name": "улица Новосёлов",
+        "latitude": 54.6120796,
+        "longitude": 39.7925494,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1016912276,
+        "name": "улица Новоселов",
+        "latitude": 54.6119825,
+        "longitude": 39.7924741,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6373677585,
+        "name": "Кинотеатр \"Октябрь\"",
+        "latitude": 54.6110868,
+        "longitude": 39.797376,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6400921501,
+        "name": "Горбольница №11",
+        "latitude": 54.6099668,
+        "longitude": 39.8030873,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6400921487,
+        "name": "Стоматологическая поликлиника",
+        "latitude": 54.6085269,
+        "longitude": 39.8104696,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6400919774,
+        "name": "Шереметьево",
+        "latitude": 54.6071632,
+        "longitude": 39.8148355,
+        "role": "stop_exit_only",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "from": "Завод \"Рязцветмет\"",
+    "to": "улица Крупской",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659838,
+    "routeNumber": "17",
+    "name": "Троллейбус №17: Завод \"Рязцветмет\" — улица Крупской",
+    "stops": [
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733955,
+        "name": "Автоцентр",
+        "latitude": 54.5956983,
+        "longitude": 39.7682111,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733960,
+        "name": "ДСК",
+        "latitude": 54.6003609,
+        "longitude": 39.766099,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6360733961,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6040947,
+        "longitude": 39.7651742,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6360733962,
+        "name": "Проезд Яблочкова",
+        "latitude": 54.6066787,
+        "longitude": 39.7651705,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6360733963,
+        "name": "Улица Чайкиной",
+        "latitude": 54.60999,
+        "longitude": 39.7580156,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1856449976,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6100616,
+        "longitude": 39.758085,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 445036670,
+        "name": "Рембыттехника",
+        "latitude": 54.6130099,
+        "longitude": 39.7518909,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6360733964,
+        "name": "Онкодеспонсер",
+        "latitude": 54.6144861,
+        "longitude": 39.7444005,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6360733967,
+        "name": "Спортивная",
+        "latitude": 54.6171069,
+        "longitude": 39.737625,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6360733968,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6180011,
+        "longitude": 39.7328229,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6362946221,
+        "name": "улица Гагарина",
+        "latitude": 54.6176099,
+        "longitude": 39.728738,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6362946220,
+        "name": "улица Стройкова",
+        "latitude": 54.6205337,
+        "longitude": 39.7239846,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6362946219,
+        "name": "Музыкальное училище",
+        "latitude": 54.623044,
+        "longitude": 39.7199171,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6362946215,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6255934,
+        "longitude": 39.7165549,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6362946205,
+        "name": "Площадь Победы",
+        "latitude": 54.6290393,
+        "longitude": 39.712501,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6362946195,
+        "name": "улица Вокзальная",
+        "latitude": 54.6299825,
+        "longitude": 39.7076839,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1330375132,
+        "name": "улица Вокзальная",
+        "latitude": 54.630078,
+        "longitude": 39.7077549,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6362946190,
+        "name": "ТД \"Барс\"",
+        "latitude": 54.6322869,
+        "longitude": 39.700214,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6362946189,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6360727,
+        "longitude": 39.688267,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 3341616601,
+        "name": "ТЦ Премьер",
+        "latitude": 54.6361275,
+        "longitude": 39.6887915,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6362946188,
+        "name": "Автовокзал Центральный",
+        "latitude": 54.6378652,
+        "longitude": 39.6776472,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6362946187,
+        "name": "Ростелеком",
+        "latitude": 54.633376,
+        "longitude": 39.6737416,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6362928384,
+        "name": "7-й Мервинский проезд",
+        "latitude": 54.6348313,
+        "longitude": 39.6680396,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6362928379,
+        "name": "Больница №10",
+        "latitude": 54.6366582,
+        "longitude": 39.6630719,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6362928373,
+        "name": "Сельхозакадемия",
+        "latitude": 54.638299,
+        "longitude": 39.6542825,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6362928372,
+        "name": "Площадь Новаторов",
+        "latitude": 54.6388913,
+        "longitude": 39.6502139,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 3401641502,
+        "name": "улица Крупской",
+        "latitude": 54.640572,
+        "longitude": 39.6410678,
+        "role": "stop_exit_only",
+        "sequence": 27
+      }
+    ]
+  },
+  {
+    "from": "улица Крупской",
+    "to": "Завод \"Рязцветмет\"",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659839,
+    "routeNumber": "17",
+    "name": "Троллейбус №17: улица Крупской — Завод \"Рязцветмет\"",
+    "stops": [
+      {
+        "nodeId": 3401641502,
+        "name": "улица Крупской",
+        "latitude": 54.640572,
+        "longitude": 39.6410678,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6362928369,
+        "name": "Школа (улица Крупской)",
+        "latitude": 54.6397333,
+        "longitude": 39.644372,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6362928368,
+        "name": "Площадь Новаторов",
+        "latitude": 54.638599,
+        "longitude": 39.6522387,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6362928367,
+        "name": "Сельхозакадемия",
+        "latitude": 54.6379029,
+        "longitude": 39.6566693,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6362928366,
+        "name": "Больница №10",
+        "latitude": 54.6369475,
+        "longitude": 39.6613231,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6362928365,
+        "name": "7-й Мервинский проезд",
+        "latitude": 54.6344,
+        "longitude": 39.6692395,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6362928364,
+        "name": "Ростелеком",
+        "latitude": 54.6335247,
+        "longitude": 39.674032,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6362928363,
+        "name": "Автовокзал Центральный",
+        "latitude": 54.6370552,
+        "longitude": 39.6770127,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6362928362,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6358276,
+        "longitude": 39.6885714,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 3341616602,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6357146,
+        "longitude": 39.688435,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6362928361,
+        "name": "ТД \"Барс\"",
+        "latitude": 54.6325116,
+        "longitude": 39.6992069,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6362928360,
+        "name": "улица Вокзальная",
+        "latitude": 54.6303491,
+        "longitude": 39.7061556,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1330375133,
+        "name": "улица Вокзальная",
+        "latitude": 54.6302977,
+        "longitude": 39.70613,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1099861422,
+        "name": "Площадь Победы",
+        "latitude": 54.6289362,
+        "longitude": 39.7121041,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6362928359,
+        "name": "Кинотеатр Дружба",
+        "latitude": 54.6276769,
+        "longitude": 39.7162629,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6362928358,
+        "name": "Управление Рязанского Троллейбуса",
+        "latitude": 54.6245012,
+        "longitude": 39.7173776,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6362928357,
+        "name": "Музыкальное училище",
+        "latitude": 54.6228048,
+        "longitude": 39.7201359,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6362928348,
+        "name": "улица Стройкова",
+        "latitude": 54.6205475,
+        "longitude": 39.7237498,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6362928346,
+        "name": "улица Гагарина",
+        "latitude": 54.6178771,
+        "longitude": 39.7281111,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733945,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6181383,
+        "longitude": 39.7338782,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6360733944,
+        "name": "Спортивная",
+        "latitude": 54.6152516,
+        "longitude": 39.7399551,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6360733942,
+        "name": "Онкодеспонсер",
+        "latitude": 54.6143318,
+        "longitude": 39.7446269,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6360733941,
+        "name": "Рембыттехника",
+        "latitude": 54.6134995,
+        "longitude": 39.7499529,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6360733940,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6097799,
+        "longitude": 39.7581482,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 1856449975,
+        "name": "Улица Чайкиной",
+        "latitude": 54.6097384,
+        "longitude": 39.7580693,
+        "role": "platform",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6360733939,
+        "name": "Завод \"Теплоприбор\"",
+        "latitude": 54.6035183,
+        "longitude": 39.7644943,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6360733938,
+        "name": "ДСК",
+        "latitude": 54.6005216,
+        "longitude": 39.765903,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6360733937,
+        "name": "Автоцентр",
+        "latitude": 54.594721,
+        "longitude": 39.7685152,
+        "role": "stop",
+        "sequence": 27
+      },
+      {
+        "nodeId": 711454931,
+        "name": "Завод \"Рязцветмет\"",
+        "latitude": 54.5918023,
+        "longitude": 39.7704086,
+        "role": "stop_exit_only",
+        "sequence": 28
+      }
+    ]
+  },
+  {
+    "from": "улица Строителей",
+    "to": "улица Строителей",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659840,
+    "routeNumber": "5",
+    "name": "Троллейбус №5: улица Строителей — улица Строителей",
+    "stops": [
+      {
+        "nodeId": 6360733975,
+        "name": "улица Строителей",
+        "latitude": 54.6159794,
+        "longitude": 39.6936503,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6371893099,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6183141,
+        "longitude": 39.6893423,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6371893098,
+        "name": "Кондитерская фабрика",
+        "latitude": 54.6211008,
+        "longitude": 39.6941437,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6371893097,
+        "name": "Чаеразвесочная фабрика",
+        "latitude": 54.6231781,
+        "longitude": 39.6977562,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6371893096,
+        "name": "улица Чкалова",
+        "latitude": 54.6272501,
+        "longitude": 39.7040623,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6371893094,
+        "name": "Вокзал \"Рязань-2\"",
+        "latitude": 54.6297337,
+        "longitude": 39.7029077,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6362928360,
+        "name": "улица Вокзальная",
+        "latitude": 54.6303491,
+        "longitude": 39.7061556,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1330375133,
+        "name": "улица Вокзальная",
+        "latitude": 54.6302977,
+        "longitude": 39.70613,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1099861422,
+        "name": "Площадь Победы",
+        "latitude": 54.6289362,
+        "longitude": 39.7121041,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6366728631,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291104,
+        "longitude": 39.7196414,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728629,
+        "name": "Площадь Ленина",
+        "latitude": 54.6290993,
+        "longitude": 39.7350356,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1327363414,
+        "name": "Площадь Ленина",
+        "latitude": 54.6289932,
+        "longitude": 39.7350261,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6366728626,
+        "name": "Библиотека имени Горького",
+        "latitude": 54.6307081,
+        "longitude": 39.741483,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6366728623,
+        "name": "Педагогический сквер",
+        "latitude": 54.6277491,
+        "longitude": 39.7464234,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6366728618,
+        "name": "ТЦ \"Атрон-Сити\"",
+        "latitude": 54.6237998,
+        "longitude": 39.7530027,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6363999363,
+        "name": "ПриоБанк",
+        "latitude": 54.6207382,
+        "longitude": 39.7537731,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6363999355,
+        "name": "Завод САМ",
+        "latitude": 54.616332,
+        "longitude": 39.7457672,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6360733967,
+        "name": "Спортивная",
+        "latitude": 54.6171069,
+        "longitude": 39.737625,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6360733968,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6180011,
+        "longitude": 39.7328229,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6360733969,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6138089,
+        "longitude": 39.72291,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6360733971,
+        "name": "Полетаевский рынок",
+        "latitude": 54.6099885,
+        "longitude": 39.7157196,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6360733972,
+        "name": "Дворец молодежи",
+        "latitude": 54.6097697,
+        "longitude": 39.7111353,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6360733973,
+        "name": "Кардиодиспансер",
+        "latitude": 54.6084039,
+        "longitude": 39.7049565,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6360733974,
+        "name": "улица Ленинского Комсомола",
+        "latitude": 54.6086288,
+        "longitude": 39.7004998,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 412638303,
+        "name": "Лицей №7",
+        "latitude": 54.6130952,
+        "longitude": 39.6958928,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6360733975,
+        "name": "улица Строителей",
+        "latitude": 54.6159794,
+        "longitude": 39.6936503,
+        "role": "stop_exit_only",
+        "sequence": 27
+      }
+    ]
+  },
+  {
+    "from": "улица Строителей",
+    "to": "улица Строителей",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5659841,
+    "routeNumber": "5",
+    "name": "Троллейбус №5: улица Строителей — улица Строителей",
+    "stops": [
+      {
+        "nodeId": 6360733951,
+        "name": "улица Строителей",
+        "latitude": 54.6157502,
+        "longitude": 39.6936283,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6360733950,
+        "name": "Лицей №7",
+        "latitude": 54.6125539,
+        "longitude": 39.6963409,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6360733949,
+        "name": "улица Ленинского Комсомола",
+        "latitude": 54.6089931,
+        "longitude": 39.6998911,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6360733948,
+        "name": "Кардиодиспансер",
+        "latitude": 54.6087906,
+        "longitude": 39.7056592,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1884553969,
+        "name": "Дворец молодежи",
+        "latitude": 54.6099919,
+        "longitude": 39.7098607,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6360733947,
+        "name": "Полетаевский рынок",
+        "latitude": 54.6095192,
+        "longitude": 39.7139741,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6360733946,
+        "name": "Радиоуниверситет",
+        "latitude": 54.6143914,
+        "longitude": 39.724189,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6360733945,
+        "name": "Больница имени Семашко",
+        "latitude": 54.6181383,
+        "longitude": 39.7338782,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6360733944,
+        "name": "Спортивная",
+        "latitude": 54.6152516,
+        "longitude": 39.7399551,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 6377287475,
+        "name": "Завод САМ",
+        "latitude": 54.6171443,
+        "longitude": 39.7478203,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6377287474,
+        "name": "ПриоБанк",
+        "latitude": 54.6199546,
+        "longitude": 39.752989,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6366728665,
+        "name": "Театральная площадь",
+        "latitude": 54.6222922,
+        "longitude": 39.7556665,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6366728664,
+        "name": "памятник Павлову",
+        "latitude": 54.6254023,
+        "longitude": 39.7504599,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6366728662,
+        "name": "Цирк",
+        "latitude": 54.6291011,
+        "longitude": 39.7443368,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6366728661,
+        "name": "Детский Мир",
+        "latitude": 54.6308715,
+        "longitude": 39.7388708,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6366728660,
+        "name": "Площадь Ленина",
+        "latitude": 54.6292341,
+        "longitude": 39.7348787,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1327363415,
+        "name": "Площадь Ленина",
+        "latitude": 54.6293511,
+        "longitude": 39.7348807,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6366728659,
+        "name": "Дом Художника",
+        "latitude": 54.6293174,
+        "longitude": 39.7258973,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1327363417,
+        "name": "Дом Художника",
+        "latitude": 54.6294033,
+        "longitude": 39.7258925,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6366728658,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291783,
+        "longitude": 39.7189533,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6362946205,
+        "name": "Площадь Победы",
+        "latitude": 54.6290393,
+        "longitude": 39.712501,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6362946195,
+        "name": "улица Вокзальная",
+        "latitude": 54.6299825,
+        "longitude": 39.7076839,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 1330375132,
+        "name": "улица Вокзальная",
+        "latitude": 54.630078,
+        "longitude": 39.7077549,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6371892710,
+        "name": "Вокзал \"Рязань-2\"",
+        "latitude": 54.6288534,
+        "longitude": 39.7027428,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6371892708,
+        "name": "улица Чкалова",
+        "latitude": 54.6258552,
+        "longitude": 39.7023938,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6371892707,
+        "name": "Чаеразвесочная фабрика",
+        "latitude": 54.6227243,
+        "longitude": 39.696963,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6371892706,
+        "name": "Кондитерская фабрика",
+        "latitude": 54.6202721,
+        "longitude": 39.6927118,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6360733952,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6177576,
+        "longitude": 39.6893068,
+        "role": "stop",
+        "sequence": 27
+      },
+      {
+        "nodeId": 6360733951,
+        "name": "улица Строителей",
+        "latitude": 54.6157502,
+        "longitude": 39.6936283,
+        "role": "stop_exit_only",
+        "sequence": 28
+      }
+    ]
+  },
+  {
+    "from": "Депо №3",
+    "to": "Октябрьский городок",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5660030,
+    "routeNumber": "2",
+    "name": "Троллейбус №2: Депо №3 — Октябрьский городок",
+    "stops": [
+      {
+        "nodeId": 6371892730,
+        "name": "Депо №3",
+        "latitude": 54.6075806,
+        "longitude": 39.7855205,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6371892729,
+        "name": "ДС Олимпийский",
+        "latitude": 54.6059482,
+        "longitude": 39.7910025,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6371892728,
+        "name": "Почта",
+        "latitude": 54.6085812,
+        "longitude": 39.7932529,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6371892727,
+        "name": "улица Новосёлов",
+        "latitude": 54.6129728,
+        "longitude": 39.7922754,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1016912472,
+        "name": "улица Новоселов",
+        "latitude": 54.6129427,
+        "longitude": 39.7924745,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6371892726,
+        "name": "улица Советской Армии",
+        "latitude": 54.6163363,
+        "longitude": 39.7944267,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6371892725,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619405,
+        "longitude": 39.7928003,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1330373378,
+        "name": "Касимовское шоссе",
+        "latitude": 54.619508,
+        "longitude": 39.7928557,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6371892724,
+        "name": "Кальное",
+        "latitude": 54.6210219,
+        "longitude": 39.7865863,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1276788076,
+        "name": "Кальное",
+        "latitude": 54.6210899,
+        "longitude": 39.7866886,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6371892723,
+        "name": "Гражданская улица",
+        "latitude": 54.620454,
+        "longitude": 39.7808868,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6371892722,
+        "name": "Автобусный парк",
+        "latitude": 54.6188909,
+        "longitude": 39.7706626,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6371892721,
+        "name": "Дом мебели \"Гермес\"",
+        "latitude": 54.6178792,
+        "longitude": 39.7639883,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 6371892720,
+        "name": "Новая улица",
+        "latitude": 54.6172689,
+        "longitude": 39.7601249,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6371892719,
+        "name": "Николо-Ямской храм",
+        "latitude": 54.6168848,
+        "longitude": 39.7575092,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6371892744,
+        "name": "Дом печати",
+        "latitude": 54.6184101,
+        "longitude": 39.7549765,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6371892718,
+        "name": "Улица Маяковского",
+        "latitude": 54.6186339,
+        "longitude": 39.747036,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6371892717,
+        "name": "Стадион \"Спартак\"",
+        "latitude": 54.6218676,
+        "longitude": 39.7412845,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6371892715,
+        "name": "Центральный рынок",
+        "latitude": 54.6245772,
+        "longitude": 39.7365165,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6371892714,
+        "name": "Медуниверситет",
+        "latitude": 54.626743,
+        "longitude": 39.7335437,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6366728659,
+        "name": "Дом Художника",
+        "latitude": 54.6293174,
+        "longitude": 39.7258973,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1327363417,
+        "name": "Дом Художника",
+        "latitude": 54.6294033,
+        "longitude": 39.7258925,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6371892713,
+        "name": "Первомайский рынок",
+        "latitude": 54.6312228,
+        "longitude": 39.7174425,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6371892712,
+        "name": "Вокзал \"Рязань-1\"",
+        "latitude": 54.6322859,
+        "longitude": 39.7140206,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6371892711,
+        "name": "Первомайский проспект",
+        "latitude": 54.6318806,
+        "longitude": 39.7059618,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6371892710,
+        "name": "Вокзал \"Рязань-2\"",
+        "latitude": 54.6288534,
+        "longitude": 39.7027428,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6371892708,
+        "name": "улица Чкалова",
+        "latitude": 54.6258552,
+        "longitude": 39.7023938,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6371892707,
+        "name": "Чаеразвесочная фабрика",
+        "latitude": 54.6227243,
+        "longitude": 39.696963,
+        "role": "stop",
+        "sequence": 27
+      },
+      {
+        "nodeId": 6371892706,
+        "name": "Кондитерская фабрика",
+        "latitude": 54.6202721,
+        "longitude": 39.6927118,
+        "role": "stop",
+        "sequence": 28
+      },
+      {
+        "nodeId": 6360733976,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6175303,
+        "longitude": 39.6869972,
+        "role": "stop",
+        "sequence": 29
+      },
+      {
+        "nodeId": 6360733978,
+        "name": "Октябрьский городок",
+        "latitude": 54.6147478,
+        "longitude": 39.6790391,
+        "role": "stop_exit_only",
+        "sequence": 30
+      }
+    ]
+  },
+  {
+    "from": "Октябрьский городок",
+    "to": "Депо №3",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5660031,
+    "routeNumber": "2",
+    "name": "Троллейбус №2: Октябрьский городок — Депо №3",
+    "stops": [
+      {
+        "nodeId": 6371893099,
+        "name": "Завод ЖБИ-2",
+        "latitude": 54.6183141,
+        "longitude": 39.6893423,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6371893098,
+        "name": "Кондитерская фабрика",
+        "latitude": 54.6211008,
+        "longitude": 39.6941437,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 6371893097,
+        "name": "Чаеразвесочная фабрика",
+        "latitude": 54.6231781,
+        "longitude": 39.6977562,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6371893096,
+        "name": "улица Чкалова",
+        "latitude": 54.6272501,
+        "longitude": 39.7040623,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6371893094,
+        "name": "Вокзал \"Рязань-2\"",
+        "latitude": 54.6297337,
+        "longitude": 39.7029077,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6371893093,
+        "name": "Первомайский проспект",
+        "latitude": 54.6316688,
+        "longitude": 39.7056834,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6371893092,
+        "name": "Вокзал \"Рязань-1\"",
+        "latitude": 54.6325531,
+        "longitude": 39.7130359,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6371893091,
+        "name": "Первомайский рынок",
+        "latitude": 54.6311106,
+        "longitude": 39.7177886,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6371893090,
+        "name": "Медуниверситет",
+        "latitude": 54.6273337,
+        "longitude": 39.7335282,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6371893088,
+        "name": "Центральный рынок",
+        "latitude": 54.6245143,
+        "longitude": 39.7366309,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 6371892746,
+        "name": "площадь Мичурина",
+        "latitude": 54.6193825,
+        "longitude": 39.7453018,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1330481562,
+        "name": "площадь Мичурина",
+        "latitude": 54.6193822,
+        "longitude": 39.7453812,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6371892745,
+        "name": "Завод САМ (школа)",
+        "latitude": 54.6186827,
+        "longitude": 39.7506651,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6371892743,
+        "name": "Дом печати",
+        "latitude": 54.6182526,
+        "longitude": 39.755074,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 6371892742,
+        "name": "Новая улица",
+        "latitude": 54.6171541,
+        "longitude": 39.7593979,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6371892741,
+        "name": "Дом мебели \"Гермес\"",
+        "latitude": 54.6184168,
+        "longitude": 39.7675712,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 6371892737,
+        "name": "Автобусный парк",
+        "latitude": 54.6192872,
+        "longitude": 39.7732408,
+        "role": "stop",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6371892740,
+        "name": "Гражданская улица",
+        "latitude": 54.6204901,
+        "longitude": 39.7811301,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6371892738,
+        "name": "Кальное",
+        "latitude": 54.621123,
+        "longitude": 39.7862997,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1240139043,
+        "name": "Кальное",
+        "latitude": 54.6210149,
+        "longitude": 39.7860422,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6371892736,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6193387,
+        "longitude": 39.7931571,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1330373377,
+        "name": "Касимовское шоссе",
+        "latitude": 54.6192431,
+        "longitude": 39.7931124,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6371892735,
+        "name": "улица Советской Армии",
+        "latitude": 54.6154678,
+        "longitude": 39.7938684,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6371892734,
+        "name": "Рязаньвест",
+        "latitude": 54.6110827,
+        "longitude": 39.7915813,
+        "role": "stop",
+        "sequence": 25
+      },
+      {
+        "nodeId": 6371892733,
+        "name": "улица Зубковой",
+        "latitude": 54.6085712,
+        "longitude": 39.7915083,
+        "role": "stop",
+        "sequence": 26
+      },
+      {
+        "nodeId": 6371892731,
+        "name": "Депо №3",
+        "latitude": 54.6077409,
+        "longitude": 39.7855638,
+        "role": "stop_exit_only",
+        "sequence": 27
+      }
+    ]
+  },
+  {
+    "from": "улица Крупской",
+    "to": "площадь Попова",
+    "operator": "МУП \"Управление рязанского троллейбуса\"",
+    "network": "",
+    "id": 5735094,
+    "routeNumber": "10",
+    "name": "Троллейбус №10: улица Крупской — площадь Попова",
+    "stops": [
+      {
+        "nodeId": 3401640391,
+        "name": "улица Крупской",
+        "latitude": 54.6408688,
+        "longitude": 39.6412776,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 6385802290,
+        "name": "улица Великанова",
+        "latitude": 54.6434366,
+        "longitude": 39.644259,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1154222930,
+        "name": "Детская школа искусств №4",
+        "latitude": 54.6424761,
+        "longitude": 39.6501988,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6376395323,
+        "name": "Народный бульвар",
+        "latitude": 54.6413465,
+        "longitude": 39.6552136,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 6376395322,
+        "name": "Бульвар Победы",
+        "latitude": 54.6438632,
+        "longitude": 39.6572716,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 6370811770,
+        "name": "Рязанская таможня",
+        "latitude": 54.6436279,
+        "longitude": 39.6636544,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 6370811769,
+        "name": "Университет МВД России",
+        "latitude": 54.6420629,
+        "longitude": 39.6683503,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 6366728637,
+        "name": "Автовокзал Центральный",
+        "latitude": 54.6391878,
+        "longitude": 39.6776384,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 6362928362,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6358276,
+        "longitude": 39.6885714,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 3341616602,
+        "name": "ТЦ \"Премьер\"",
+        "latitude": 54.6357146,
+        "longitude": 39.688435,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 6362928361,
+        "name": "ТД \"Барс\"",
+        "latitude": 54.6325116,
+        "longitude": 39.6992069,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6362928360,
+        "name": "улица Вокзальная",
+        "latitude": 54.6303491,
+        "longitude": 39.7061556,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1330375133,
+        "name": "улица Вокзальная",
+        "latitude": 54.6302977,
+        "longitude": 39.70613,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1099861422,
+        "name": "Площадь Победы",
+        "latitude": 54.6289362,
+        "longitude": 39.7121041,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 6366728631,
+        "name": "Гостиница Первомайская",
+        "latitude": 54.6291104,
+        "longitude": 39.7196414,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 6366728630,
+        "name": "Дом Художника",
+        "latitude": 54.6292018,
+        "longitude": 39.725743,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1327363416,
+        "name": "Дом Художника",
+        "latitude": 54.6291142,
+        "longitude": 39.7257475,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 6366728629,
+        "name": "Площадь Ленина",
+        "latitude": 54.6290993,
+        "longitude": 39.7350356,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1327363414,
+        "name": "Площадь Ленина",
+        "latitude": 54.6289932,
+        "longitude": 39.7350261,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 6366728626,
+        "name": "Библиотека имени Горького",
+        "latitude": 54.6307081,
+        "longitude": 39.741483,
+        "role": "stop",
+        "sequence": 19
+      },
+      {
+        "nodeId": 6373677596,
+        "name": "Художественный музей",
+        "latitude": 54.6270027,
+        "longitude": 39.7503752,
+        "role": "stop",
+        "sequence": 20
+      },
+      {
+        "nodeId": 6373677592,
+        "name": "РГУ им. С.А. Есенина",
+        "latitude": 54.6288088,
+        "longitude": 39.7534085,
+        "role": "stop",
+        "sequence": 21
+      },
+      {
+        "nodeId": 6373677591,
+        "name": "площадь Свободы",
+        "latitude": 54.6313866,
+        "longitude": 39.7605495,
+        "role": "stop",
+        "sequence": 22
+      },
+      {
+        "nodeId": 6373677590,
+        "name": "улица Грибоедова",
+        "latitude": 54.6284257,
+        "longitude": 39.7655815,
+        "role": "stop",
+        "sequence": 23
+      },
+      {
+        "nodeId": 6385802289,
+        "name": "Мясокомбинат",
+        "latitude": 54.6262856,
+        "longitude": 39.7684676,
+        "role": "stop",
+        "sequence": 24
+      },
+      {
+        "nodeId": 6385802296,
+        "name": "площадь Попова",
+        "latitude": 54.6237948,
+        "longitude": 39.7718876,
+        "role": "stop_exit_only",
+        "sequence": 25
+      }
+    ]
+  }
+]

@@ -1,0 +1,3780 @@
+﻿[
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 27
+      },
+      {
+        "routeNumber": "12",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Лицей №7",
+    "id": 412638303,
+    "latitude": 54.6130952,
+    "longitude": 39.6958928
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 8
+      },
+      {
+        "routeNumber": "17",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Рембыттехника",
+    "id": 445036670,
+    "latitude": 54.6130099,
+    "longitude": 39.7518909
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 1
+      },
+      {
+        "routeNumber": "6",
+        "order": 21
+      },
+      {
+        "routeNumber": "12",
+        "order": 1
+      },
+      {
+        "routeNumber": "12",
+        "order": 18
+      },
+      {
+        "routeNumber": "13",
+        "order": 1
+      },
+      {
+        "routeNumber": "13",
+        "order": 22
+      },
+      {
+        "routeNumber": "17",
+        "order": 1
+      },
+      {
+        "routeNumber": "17",
+        "order": 29
+      }
+    ],
+    "localName": "",
+    "name": "Завод \"Рязцветмет\"",
+    "id": 711454931,
+    "latitude": 54.5918023,
+    "longitude": 39.7704086
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 29
+      }
+    ],
+    "localName": "",
+    "name": "Горбольница №11",
+    "id": 711686849,
+    "latitude": 54.609521,
+    "longitude": 39.8029706
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 27
+      },
+      {
+        "routeNumber": "13",
+        "order": 18
+      },
+      {
+        "routeNumber": "15",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "улица Новоселов",
+    "id": 1016912276,
+    "latitude": 54.6119825,
+    "longitude": 39.7924741
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 5
+      },
+      {
+        "routeNumber": "13",
+        "order": 6
+      },
+      {
+        "routeNumber": "15",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "улица Новоселов",
+    "id": 1016912472,
+    "latitude": 54.6129427,
+    "longitude": 39.7924745
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 9
+      },
+      {
+        "routeNumber": "8",
+        "order": 19
+      },
+      {
+        "routeNumber": "10",
+        "order": 14
+      },
+      {
+        "routeNumber": "17",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Победы",
+    "id": 1099861422,
+    "latitude": 54.6289362,
+    "longitude": 39.7121041
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Детская школа искусств №4",
+    "id": 1154222930,
+    "latitude": 54.6424761,
+    "longitude": 39.6501988
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 30
+      },
+      {
+        "routeNumber": "13",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "улица Грибоедова",
+    "id": 1235866908,
+    "latitude": 54.6273874,
+    "longitude": 39.7660677
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 22
+      },
+      {
+        "routeNumber": "3",
+        "order": 22
+      },
+      {
+        "routeNumber": "8",
+        "order": 34
+      },
+      {
+        "routeNumber": "13",
+        "order": 13
+      },
+      {
+        "routeNumber": "15",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Кальное",
+    "id": 1240139043,
+    "latitude": 54.6210149,
+    "longitude": 39.7860422
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 10
+      },
+      {
+        "routeNumber": "13",
+        "order": 11
+      },
+      {
+        "routeNumber": "15",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Кальное",
+    "id": 1276788076,
+    "latitude": 54.6210899,
+    "longitude": 39.7866886
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Памятник Братству по оружию",
+    "id": 1280994649,
+    "latitude": 54.6489904,
+    "longitude": 39.6614839
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 12
+      },
+      {
+        "routeNumber": "5",
+        "order": 14
+      },
+      {
+        "routeNumber": "6",
+        "order": 11
+      },
+      {
+        "routeNumber": "8",
+        "order": 24
+      },
+      {
+        "routeNumber": "10",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Ленина",
+    "id": 1327363414,
+    "latitude": 54.6289932,
+    "longitude": 39.7350261
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 17
+      },
+      {
+        "routeNumber": "6",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Ленина",
+    "id": 1327363415,
+    "latitude": 54.6293511,
+    "longitude": 39.7348807
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 10
+      },
+      {
+        "routeNumber": "3",
+        "order": 10
+      },
+      {
+        "routeNumber": "5",
+        "order": 12
+      },
+      {
+        "routeNumber": "6",
+        "order": 9
+      },
+      {
+        "routeNumber": "8",
+        "order": 22
+      },
+      {
+        "routeNumber": "10",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Дом Художника",
+    "id": 1327363416,
+    "latitude": 54.6291142,
+    "longitude": 39.7257475
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 22
+      },
+      {
+        "routeNumber": "5",
+        "order": 19
+      },
+      {
+        "routeNumber": "6",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Дом Художника",
+    "id": 1327363417,
+    "latitude": 54.6294033,
+    "longitude": 39.7258925
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 24
+      },
+      {
+        "routeNumber": "3",
+        "order": 24
+      },
+      {
+        "routeNumber": "8",
+        "order": 36
+      },
+      {
+        "routeNumber": "13",
+        "order": 15
+      },
+      {
+        "routeNumber": "15",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Касимовское шоссе",
+    "id": 1330373377,
+    "latitude": 54.6192431,
+    "longitude": 39.7931124
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 8
+      },
+      {
+        "routeNumber": "13",
+        "order": 9
+      },
+      {
+        "routeNumber": "15",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "Касимовское шоссе",
+    "id": 1330373378,
+    "latitude": 54.619508,
+    "longitude": 39.7928557
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 23
+      },
+      {
+        "routeNumber": "9",
+        "order": 10
+      },
+      {
+        "routeNumber": "17",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "улица Вокзальная",
+    "id": 1330375132,
+    "latitude": 54.630078,
+    "longitude": 39.7077549
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 8
+      },
+      {
+        "routeNumber": "8",
+        "order": 18
+      },
+      {
+        "routeNumber": "10",
+        "order": 13
+      },
+      {
+        "routeNumber": "17",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "улица Вокзальная",
+    "id": 1330375133,
+    "latitude": 54.6302977,
+    "longitude": 39.70613
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "площадь Мичурина",
+    "id": 1330481562,
+    "latitude": 54.6193822,
+    "longitude": 39.7453812
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 14
+      },
+      {
+        "routeNumber": "17",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "Улица Чайкиной",
+    "id": 1856449975,
+    "latitude": 54.6097384,
+    "longitude": 39.7580693
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 6
+      },
+      {
+        "routeNumber": "17",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Улица Чайкиной",
+    "id": 1856449976,
+    "latitude": 54.6100616,
+    "longitude": 39.758085
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 5
+      },
+      {
+        "routeNumber": "12",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Дворец молодежи",
+    "id": 1884553969,
+    "latitude": 54.6099919,
+    "longitude": 39.7098607
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 13
+      },
+      {
+        "routeNumber": "17",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "ТЦ Премьер",
+    "id": 3341616601,
+    "latitude": 54.6361275,
+    "longitude": 39.6887915
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 15
+      },
+      {
+        "routeNumber": "10",
+        "order": 10
+      },
+      {
+        "routeNumber": "17",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "ТЦ \"Премьер\"",
+    "id": 3341616602,
+    "latitude": 54.6357146,
+    "longitude": 39.688435
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 1
+      },
+      {
+        "routeNumber": "9",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "Комбайновый Завод",
+    "id": 3374804472,
+    "latitude": 54.6826459,
+    "longitude": 39.6258918
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 1
+      }
+    ],
+    "localName": "",
+    "name": "улица Крупской",
+    "id": 3401640391,
+    "latitude": 54.6408688,
+    "longitude": 39.6412776
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 1
+      },
+      {
+        "routeNumber": "17",
+        "order": 28
+      }
+    ],
+    "localName": "",
+    "name": "улица Крупской",
+    "id": 3401641502,
+    "latitude": 54.640572,
+    "longitude": 39.6410678
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Университет МВД России",
+    "id": 6067341497,
+    "latitude": 54.6423575,
+    "longitude": 39.6679106
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 20
+      },
+      {
+        "routeNumber": "12",
+        "order": 17
+      },
+      {
+        "routeNumber": "13",
+        "order": 21
+      },
+      {
+        "routeNumber": "17",
+        "order": 28
+      }
+    ],
+    "localName": "",
+    "name": "Автоцентр",
+    "id": 6360733937,
+    "latitude": 54.594721,
+    "longitude": 39.7685152
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 19
+      },
+      {
+        "routeNumber": "12",
+        "order": 16
+      },
+      {
+        "routeNumber": "13",
+        "order": 20
+      },
+      {
+        "routeNumber": "17",
+        "order": 27
+      }
+    ],
+    "localName": "",
+    "name": "ДСК",
+    "id": 6360733938,
+    "latitude": 54.6005216,
+    "longitude": 39.765903
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 18
+      },
+      {
+        "routeNumber": "12",
+        "order": 15
+      },
+      {
+        "routeNumber": "13",
+        "order": 19
+      },
+      {
+        "routeNumber": "17",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "Завод \"Теплоприбор\"",
+    "id": 6360733939,
+    "latitude": 54.6035183,
+    "longitude": 39.7644943
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 13
+      },
+      {
+        "routeNumber": "17",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "Улица Чайкиной",
+    "id": 6360733940,
+    "latitude": 54.6097799,
+    "longitude": 39.7581482
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 12
+      },
+      {
+        "routeNumber": "17",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "Рембыттехника",
+    "id": 6360733941,
+    "latitude": 54.6134995,
+    "longitude": 39.7499529
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 11
+      },
+      {
+        "routeNumber": "17",
+        "order": 22
+      }
+    ],
+    "localName": "",
+    "name": "Онкодеспонсер",
+    "id": 6360733942,
+    "latitude": 54.6143318,
+    "longitude": 39.7446269
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 9
+      },
+      {
+        "routeNumber": "12",
+        "order": 10
+      },
+      {
+        "routeNumber": "15",
+        "order": 4
+      },
+      {
+        "routeNumber": "17",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "Спортивная",
+    "id": 6360733944,
+    "latitude": 54.6152516,
+    "longitude": 39.7399551
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 8
+      },
+      {
+        "routeNumber": "12",
+        "order": 9
+      },
+      {
+        "routeNumber": "15",
+        "order": 3
+      },
+      {
+        "routeNumber": "17",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Больница имени Семашко",
+    "id": 6360733945,
+    "latitude": 54.6181383,
+    "longitude": 39.7338782
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 3
+      },
+      {
+        "routeNumber": "5",
+        "order": 7
+      },
+      {
+        "routeNumber": "6",
+        "order": 2
+      },
+      {
+        "routeNumber": "9",
+        "order": 3
+      },
+      {
+        "routeNumber": "12",
+        "order": 8
+      },
+      {
+        "routeNumber": "15",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Радиоуниверситет",
+    "id": 6360733946,
+    "latitude": 54.6143914,
+    "longitude": 39.724189
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 6
+      },
+      {
+        "routeNumber": "12",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Полетаевский рынок",
+    "id": 6360733947,
+    "latitude": 54.6095192,
+    "longitude": 39.7139741
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 4
+      },
+      {
+        "routeNumber": "12",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Кардиодиспансер",
+    "id": 6360733948,
+    "latitude": 54.6087906,
+    "longitude": 39.7056592
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 3
+      },
+      {
+        "routeNumber": "12",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "улица Ленинского Комсомола",
+    "id": 6360733949,
+    "latitude": 54.6089931,
+    "longitude": 39.6998911
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 2
+      },
+      {
+        "routeNumber": "12",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Лицей №7",
+    "id": 6360733950,
+    "latitude": 54.6125539,
+    "longitude": 39.6963409
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 1
+      },
+      {
+        "routeNumber": "5",
+        "order": 29
+      },
+      {
+        "routeNumber": "12",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "улица Строителей",
+    "id": 6360733951,
+    "latitude": 54.6157502,
+    "longitude": 39.6936283
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 28
+      },
+      {
+        "routeNumber": "12",
+        "order": 1
+      }
+    ],
+    "localName": "",
+    "name": "Завод ЖБИ-2",
+    "id": 6360733952,
+    "latitude": 54.6177576,
+    "longitude": 39.6893068
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 2
+      },
+      {
+        "routeNumber": "12",
+        "order": 2
+      },
+      {
+        "routeNumber": "13",
+        "order": 2
+      },
+      {
+        "routeNumber": "17",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Автоцентр",
+    "id": 6360733955,
+    "latitude": 54.5956983,
+    "longitude": 39.7682111
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 3
+      },
+      {
+        "routeNumber": "12",
+        "order": 3
+      },
+      {
+        "routeNumber": "13",
+        "order": 3
+      },
+      {
+        "routeNumber": "17",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "ДСК",
+    "id": 6360733960,
+    "latitude": 54.6003609,
+    "longitude": 39.766099
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 4
+      },
+      {
+        "routeNumber": "17",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Завод \"Теплоприбор\"",
+    "id": 6360733961,
+    "latitude": 54.6040947,
+    "longitude": 39.7651742
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 5
+      },
+      {
+        "routeNumber": "17",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Проезд Яблочкова",
+    "id": 6360733962,
+    "latitude": 54.6066787,
+    "longitude": 39.7651705
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 7
+      },
+      {
+        "routeNumber": "17",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Улица Чайкиной",
+    "id": 6360733963,
+    "latitude": 54.60999,
+    "longitude": 39.7580156
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "12",
+        "order": 9
+      },
+      {
+        "routeNumber": "17",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "Онкодеспонсер",
+    "id": 6360733964,
+    "latitude": 54.6144861,
+    "longitude": 39.7444005
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 20
+      },
+      {
+        "routeNumber": "12",
+        "order": 10
+      },
+      {
+        "routeNumber": "15",
+        "order": 19
+      },
+      {
+        "routeNumber": "17",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "Спортивная",
+    "id": 6360733967,
+    "latitude": 54.6171069,
+    "longitude": 39.737625
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 21
+      },
+      {
+        "routeNumber": "12",
+        "order": 11
+      },
+      {
+        "routeNumber": "15",
+        "order": 20
+      },
+      {
+        "routeNumber": "17",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Больница имени Семашко",
+    "id": 6360733968,
+    "latitude": 54.6180011,
+    "longitude": 39.7328229
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 22
+      },
+      {
+        "routeNumber": "6",
+        "order": 20
+      },
+      {
+        "routeNumber": "12",
+        "order": 12
+      },
+      {
+        "routeNumber": "15",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "Радиоуниверситет",
+    "id": 6360733969,
+    "latitude": 54.6138089,
+    "longitude": 39.72291
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 23
+      },
+      {
+        "routeNumber": "12",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "Полетаевский рынок",
+    "id": 6360733971,
+    "latitude": 54.6099885,
+    "longitude": 39.7157196
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 24
+      },
+      {
+        "routeNumber": "12",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Дворец молодежи",
+    "id": 6360733972,
+    "latitude": 54.6097697,
+    "longitude": 39.7111353
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 25
+      },
+      {
+        "routeNumber": "12",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Кардиодиспансер",
+    "id": 6360733973,
+    "latitude": 54.6084039,
+    "longitude": 39.7049565
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 26
+      },
+      {
+        "routeNumber": "12",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "улица Ленинского Комсомола",
+    "id": 6360733974,
+    "latitude": 54.6086288,
+    "longitude": 39.7004998
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 1
+      },
+      {
+        "routeNumber": "5",
+        "order": 28
+      },
+      {
+        "routeNumber": "12",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "улица Строителей",
+    "id": 6360733975,
+    "latitude": 54.6159794,
+    "longitude": 39.6936503
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 30
+      },
+      {
+        "routeNumber": "12",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "Завод ЖБИ-2",
+    "id": 6360733976,
+    "latitude": 54.6175303,
+    "longitude": 39.6869972
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 31
+      },
+      {
+        "routeNumber": "12",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Октябрьский городок",
+    "id": 6360733978,
+    "latitude": 54.6147478,
+    "longitude": 39.6790391
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 19
+      },
+      {
+        "routeNumber": "17",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "улица Гагарина",
+    "id": 6362928346,
+    "latitude": 54.6178771,
+    "longitude": 39.7281111
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 18
+      },
+      {
+        "routeNumber": "17",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "улица Стройкова",
+    "id": 6362928348,
+    "latitude": 54.6205475,
+    "longitude": 39.7237498
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 17
+      },
+      {
+        "routeNumber": "17",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Музыкальное училище",
+    "id": 6362928357,
+    "latitude": 54.6228048,
+    "longitude": 39.7201359
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 16
+      },
+      {
+        "routeNumber": "17",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Управление Рязанского Троллейбуса",
+    "id": 6362928358,
+    "latitude": 54.6245012,
+    "longitude": 39.7173776
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 15
+      },
+      {
+        "routeNumber": "17",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Кинотеатр Дружба",
+    "id": 6362928359,
+    "latitude": 54.6276769,
+    "longitude": 39.7162629
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 7
+      },
+      {
+        "routeNumber": "8",
+        "order": 17
+      },
+      {
+        "routeNumber": "10",
+        "order": 12
+      },
+      {
+        "routeNumber": "17",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "улица Вокзальная",
+    "id": 6362928360,
+    "latitude": 54.6303491,
+    "longitude": 39.7061556
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 16
+      },
+      {
+        "routeNumber": "10",
+        "order": 11
+      },
+      {
+        "routeNumber": "17",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "ТД \"Барс\"",
+    "id": 6362928361,
+    "latitude": 54.6325116,
+    "longitude": 39.6992069
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 14
+      },
+      {
+        "routeNumber": "10",
+        "order": 9
+      },
+      {
+        "routeNumber": "17",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "ТЦ \"Премьер\"",
+    "id": 6362928362,
+    "latitude": 54.6358276,
+    "longitude": 39.6885714
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Автовокзал Центральный",
+    "id": 6362928363,
+    "latitude": 54.6370552,
+    "longitude": 39.6770127
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Ростелеком",
+    "id": 6362928364,
+    "latitude": 54.6335247,
+    "longitude": 39.674032
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "7-й Мервинский проезд",
+    "id": 6362928365,
+    "latitude": 54.6344,
+    "longitude": 39.6692395
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Больница №10",
+    "id": 6362928366,
+    "latitude": 54.6369475,
+    "longitude": 39.6613231
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Сельхозакадемия",
+    "id": 6362928367,
+    "latitude": 54.6379029,
+    "longitude": 39.6566693
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Новаторов",
+    "id": 6362928368,
+    "latitude": 54.638599,
+    "longitude": 39.6522387
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Школа (улица Крупской)",
+    "id": 6362928369,
+    "latitude": 54.6397333,
+    "longitude": 39.644372
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 27
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Новаторов",
+    "id": 6362928372,
+    "latitude": 54.6388913,
+    "longitude": 39.6502139
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "Сельхозакадемия",
+    "id": 6362928373,
+    "latitude": 54.638299,
+    "longitude": 39.6542825
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "Больница №10",
+    "id": 6362928379,
+    "latitude": 54.6366582,
+    "longitude": 39.6630719
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "7-й Мервинский проезд",
+    "id": 6362928384,
+    "latitude": 54.6348313,
+    "longitude": 39.6680396
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "Ростелеком",
+    "id": 6362946187,
+    "latitude": 54.633376,
+    "longitude": 39.6737416
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "17",
+        "order": 22
+      }
+    ],
+    "localName": "",
+    "name": "Автовокзал Центральный",
+    "id": 6362946188,
+    "latitude": 54.6378652,
+    "longitude": 39.6776472
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 12
+      },
+      {
+        "routeNumber": "17",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "ТЦ \"Премьер\"",
+    "id": 6362946189,
+    "latitude": 54.6360727,
+    "longitude": 39.688267
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 11
+      },
+      {
+        "routeNumber": "17",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "ТД \"Барс\"",
+    "id": 6362946190,
+    "latitude": 54.6322869,
+    "longitude": 39.700214
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 22
+      },
+      {
+        "routeNumber": "9",
+        "order": 9
+      },
+      {
+        "routeNumber": "17",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "улица Вокзальная",
+    "id": 6362946195,
+    "latitude": 54.6299825,
+    "longitude": 39.7076839
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 21
+      },
+      {
+        "routeNumber": "9",
+        "order": 8
+      },
+      {
+        "routeNumber": "17",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Победы",
+    "id": 6362946205,
+    "latitude": 54.6290393,
+    "longitude": 39.712501
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 7
+      },
+      {
+        "routeNumber": "6",
+        "order": 6
+      },
+      {
+        "routeNumber": "9",
+        "order": 7
+      },
+      {
+        "routeNumber": "17",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Управление Рязанского Троллейбуса",
+    "id": 6362946215,
+    "latitude": 54.6255934,
+    "longitude": 39.7165549
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 6
+      },
+      {
+        "routeNumber": "6",
+        "order": 5
+      },
+      {
+        "routeNumber": "9",
+        "order": 6
+      },
+      {
+        "routeNumber": "17",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Музыкальное училище",
+    "id": 6362946219,
+    "latitude": 54.623044,
+    "longitude": 39.7199171
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 5
+      },
+      {
+        "routeNumber": "6",
+        "order": 4
+      },
+      {
+        "routeNumber": "9",
+        "order": 5
+      },
+      {
+        "routeNumber": "17",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "улица Стройкова",
+    "id": 6362946220,
+    "latitude": 54.6205337,
+    "longitude": 39.7239846
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 4
+      },
+      {
+        "routeNumber": "6",
+        "order": 3
+      },
+      {
+        "routeNumber": "9",
+        "order": 4
+      },
+      {
+        "routeNumber": "17",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "улица Гагарина",
+    "id": 6362946221,
+    "latitude": 54.6176099,
+    "longitude": 39.728738
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 19
+      },
+      {
+        "routeNumber": "15",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "Завод САМ",
+    "id": 6363999355,
+    "latitude": 54.616332,
+    "longitude": 39.7457672
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Городская больница №4",
+    "id": 6363999362,
+    "latitude": 54.6245072,
+    "longitude": 39.7606698
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "ПриоБанк",
+    "id": 6363999363,
+    "latitude": 54.6207382,
+    "longitude": 39.7537731
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "улица Грибоедова",
+    "id": 6363999382,
+    "latitude": 54.6274323,
+    "longitude": 39.7659521
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 29
+      },
+      {
+        "routeNumber": "13",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Городская больница №4",
+    "id": 6363999383,
+    "latitude": 54.6247235,
+    "longitude": 39.7610654
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Театральная площадь",
+    "id": 6363999384,
+    "latitude": 54.6211338,
+    "longitude": 39.7566357
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 6
+      },
+      {
+        "routeNumber": "13",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Музыкальный театр",
+    "id": 6364000586,
+    "latitude": 54.6163299,
+    "longitude": 39.7588037
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 5
+      },
+      {
+        "routeNumber": "13",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Строительный колледж",
+    "id": 6364000589,
+    "latitude": 54.6123878,
+    "longitude": 39.7605992
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 4
+      },
+      {
+        "routeNumber": "13",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Завод \"Теплоприбор\"",
+    "id": 6364000590,
+    "latitude": 54.6044698,
+    "longitude": 39.7641965
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 17
+      },
+      {
+        "routeNumber": "13",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "Строительный колледж",
+    "id": 6366728615,
+    "latitude": 54.6117356,
+    "longitude": 39.7607736
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 16
+      },
+      {
+        "routeNumber": "13",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Музыкальный театр",
+    "id": 6366728616,
+    "latitude": 54.6156479,
+    "longitude": 39.7589927
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 15
+      },
+      {
+        "routeNumber": "13",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Театральная площадь",
+    "id": 6366728617,
+    "latitude": 54.6204168,
+    "longitude": 39.7568344
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 17
+      },
+      {
+        "routeNumber": "6",
+        "order": 14
+      },
+      {
+        "routeNumber": "8",
+        "order": 27
+      }
+    ],
+    "localName": "",
+    "name": "ТЦ \"Атрон-Сити\"",
+    "id": 6366728618,
+    "latitude": 54.6237998,
+    "longitude": 39.7530027
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 14
+      },
+      {
+        "routeNumber": "5",
+        "order": 16
+      },
+      {
+        "routeNumber": "6",
+        "order": 13
+      },
+      {
+        "routeNumber": "8",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "Педагогический сквер",
+    "id": 6366728623,
+    "latitude": 54.6277491,
+    "longitude": 39.7464234
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 13
+      },
+      {
+        "routeNumber": "5",
+        "order": 15
+      },
+      {
+        "routeNumber": "6",
+        "order": 12
+      },
+      {
+        "routeNumber": "8",
+        "order": 25
+      },
+      {
+        "routeNumber": "10",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Библиотека имени Горького",
+    "id": 6366728626,
+    "latitude": 54.6307081,
+    "longitude": 39.741483
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 11
+      },
+      {
+        "routeNumber": "5",
+        "order": 13
+      },
+      {
+        "routeNumber": "6",
+        "order": 10
+      },
+      {
+        "routeNumber": "8",
+        "order": 23
+      },
+      {
+        "routeNumber": "10",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Ленина",
+    "id": 6366728629,
+    "latitude": 54.6290993,
+    "longitude": 39.7350356
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 9
+      },
+      {
+        "routeNumber": "3",
+        "order": 9
+      },
+      {
+        "routeNumber": "5",
+        "order": 11
+      },
+      {
+        "routeNumber": "6",
+        "order": 8
+      },
+      {
+        "routeNumber": "8",
+        "order": 21
+      },
+      {
+        "routeNumber": "10",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Дом Художника",
+    "id": 6366728630,
+    "latitude": 54.6292018,
+    "longitude": 39.725743
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 8
+      },
+      {
+        "routeNumber": "5",
+        "order": 10
+      },
+      {
+        "routeNumber": "6",
+        "order": 7
+      },
+      {
+        "routeNumber": "8",
+        "order": 20
+      },
+      {
+        "routeNumber": "10",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Гостиница Первомайская",
+    "id": 6366728631,
+    "latitude": 54.6291104,
+    "longitude": 39.7196414
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 13
+      },
+      {
+        "routeNumber": "10",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Автовокзал Центральный",
+    "id": 6366728637,
+    "latitude": 54.6391878,
+    "longitude": 39.6776384
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Автовокзал Центральный",
+    "id": 6366728657,
+    "latitude": 54.6395679,
+    "longitude": 39.6769562
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Гостиница Первомайская",
+    "id": 6366728658,
+    "latitude": 54.6291783,
+    "longitude": 39.7189533
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 21
+      },
+      {
+        "routeNumber": "5",
+        "order": 18
+      },
+      {
+        "routeNumber": "6",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "Дом Художника",
+    "id": 6366728659,
+    "latitude": 54.6293174,
+    "longitude": 39.7258973
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 16
+      },
+      {
+        "routeNumber": "6",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Площадь Ленина",
+    "id": 6366728660,
+    "latitude": 54.6292341,
+    "longitude": 39.7348787
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 15
+      },
+      {
+        "routeNumber": "6",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "Детский Мир",
+    "id": 6366728661,
+    "latitude": 54.6308715,
+    "longitude": 39.7388708
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 14
+      },
+      {
+        "routeNumber": "6",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "Цирк",
+    "id": 6366728662,
+    "latitude": 54.6291011,
+    "longitude": 39.7443368
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 13
+      },
+      {
+        "routeNumber": "6",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "памятник Павлову",
+    "id": 6366728664,
+    "latitude": 54.6254023,
+    "longitude": 39.7504599
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Театральная площадь",
+    "id": 6366728665,
+    "latitude": 54.6222922,
+    "longitude": 39.7556665
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Университет МВД России",
+    "id": 6370811769,
+    "latitude": 54.6420629,
+    "longitude": 39.6683503
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 12
+      },
+      {
+        "routeNumber": "10",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Рязанская таможня",
+    "id": 6370811770,
+    "latitude": 54.6436279,
+    "longitude": 39.6636544
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Рязанская таможня",
+    "id": 6370811900,
+    "latitude": 54.6438933,
+    "longitude": 39.6633757
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 29
+      },
+      {
+        "routeNumber": "5",
+        "order": 27
+      }
+    ],
+    "localName": "",
+    "name": "Кондитерская фабрика",
+    "id": 6371892706,
+    "latitude": 54.6202721,
+    "longitude": 39.6927118
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 28
+      },
+      {
+        "routeNumber": "5",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "Чаеразвесочная фабрика",
+    "id": 6371892707,
+    "latitude": 54.6227243,
+    "longitude": 39.696963
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 27
+      },
+      {
+        "routeNumber": "5",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "улица Чкалова",
+    "id": 6371892708,
+    "latitude": 54.6258552,
+    "longitude": 39.7023938
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 26
+      },
+      {
+        "routeNumber": "5",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "Вокзал \"Рязань-2\"",
+    "id": 6371892710,
+    "latitude": 54.6288534,
+    "longitude": 39.7027428
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "Первомайский проспект",
+    "id": 6371892711,
+    "latitude": 54.6318806,
+    "longitude": 39.7059618
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "Вокзал \"Рязань-1\"",
+    "id": 6371892712,
+    "latitude": 54.6322859,
+    "longitude": 39.7140206
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "Первомайский рынок",
+    "id": 6371892713,
+    "latitude": 54.6312228,
+    "longitude": 39.7174425
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Медуниверситет",
+    "id": 6371892714,
+    "latitude": 54.626743,
+    "longitude": 39.7335437
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "Центральный рынок",
+    "id": 6371892715,
+    "latitude": 54.6245772,
+    "longitude": 39.7365165
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "Стадион \"Спартак\"",
+    "id": 6371892717,
+    "latitude": 54.6218676,
+    "longitude": 39.7412845
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Улица Маяковского",
+    "id": 6371892718,
+    "latitude": 54.6186339,
+    "longitude": 39.747036
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 15
+      },
+      {
+        "routeNumber": "15",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "Николо-Ямской храм",
+    "id": 6371892719,
+    "latitude": 54.6168848,
+    "longitude": 39.7575092
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 14
+      },
+      {
+        "routeNumber": "15",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Новая улица",
+    "id": 6371892720,
+    "latitude": 54.6172689,
+    "longitude": 39.7601249
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 13
+      },
+      {
+        "routeNumber": "15",
+        "order": 14
+      }
+    ],
+    "localName": "",
+    "name": "Дом мебели \"Гермес\"",
+    "id": 6371892721,
+    "latitude": 54.6178792,
+    "longitude": 39.7639883
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 12
+      },
+      {
+        "routeNumber": "15",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "Автобусный парк",
+    "id": 6371892722,
+    "latitude": 54.6188909,
+    "longitude": 39.7706626
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 11
+      },
+      {
+        "routeNumber": "15",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Гражданская улица",
+    "id": 6371892723,
+    "latitude": 54.620454,
+    "longitude": 39.7808868
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 9
+      },
+      {
+        "routeNumber": "13",
+        "order": 10
+      },
+      {
+        "routeNumber": "15",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "Кальное",
+    "id": 6371892724,
+    "latitude": 54.6210219,
+    "longitude": 39.7865863
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 7
+      },
+      {
+        "routeNumber": "13",
+        "order": 8
+      },
+      {
+        "routeNumber": "15",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Касимовское шоссе",
+    "id": 6371892725,
+    "latitude": 54.619405,
+    "longitude": 39.7928003
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 6
+      },
+      {
+        "routeNumber": "13",
+        "order": 7
+      },
+      {
+        "routeNumber": "15",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "улица Советской Армии",
+    "id": 6371892726,
+    "latitude": 54.6163363,
+    "longitude": 39.7944267
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 4
+      },
+      {
+        "routeNumber": "13",
+        "order": 5
+      },
+      {
+        "routeNumber": "15",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "улица Новосёлов",
+    "id": 6371892727,
+    "latitude": 54.6129728,
+    "longitude": 39.7922754
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Почта",
+    "id": 6371892728,
+    "latitude": 54.6085812,
+    "longitude": 39.7932529
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "ДС Олимпийский",
+    "id": 6371892729,
+    "latitude": 54.6059482,
+    "longitude": 39.7910025
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 1
+      }
+    ],
+    "localName": "",
+    "name": "Депо №3",
+    "id": 6371892730,
+    "latitude": 54.6075806,
+    "longitude": 39.7855205
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 28
+      },
+      {
+        "routeNumber": "8",
+        "order": 40
+      }
+    ],
+    "localName": "",
+    "name": "Депо №3",
+    "id": 6371892731,
+    "latitude": 54.6077409,
+    "longitude": 39.7855638
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 27
+      },
+      {
+        "routeNumber": "8",
+        "order": 39
+      }
+    ],
+    "localName": "",
+    "name": "улица Зубковой",
+    "id": 6371892733,
+    "latitude": 54.6085712,
+    "longitude": 39.7915083
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 26
+      },
+      {
+        "routeNumber": "8",
+        "order": 38
+      }
+    ],
+    "localName": "",
+    "name": "Рязаньвест",
+    "id": 6371892734,
+    "latitude": 54.6110827,
+    "longitude": 39.7915813
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 25
+      },
+      {
+        "routeNumber": "3",
+        "order": 25
+      },
+      {
+        "routeNumber": "8",
+        "order": 37
+      },
+      {
+        "routeNumber": "13",
+        "order": 16
+      },
+      {
+        "routeNumber": "15",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "улица Советской Армии",
+    "id": 6371892735,
+    "latitude": 54.6154678,
+    "longitude": 39.7938684
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 23
+      },
+      {
+        "routeNumber": "3",
+        "order": 23
+      },
+      {
+        "routeNumber": "8",
+        "order": 35
+      },
+      {
+        "routeNumber": "13",
+        "order": 14
+      },
+      {
+        "routeNumber": "15",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "Касимовское шоссе",
+    "id": 6371892736,
+    "latitude": 54.6193387,
+    "longitude": 39.7931571
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 19
+      },
+      {
+        "routeNumber": "15",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "Автобусный парк",
+    "id": 6371892737,
+    "latitude": 54.6192872,
+    "longitude": 39.7732408
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 21
+      },
+      {
+        "routeNumber": "3",
+        "order": 21
+      },
+      {
+        "routeNumber": "8",
+        "order": 33
+      },
+      {
+        "routeNumber": "13",
+        "order": 12
+      },
+      {
+        "routeNumber": "15",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Кальное",
+    "id": 6371892738,
+    "latitude": 54.621123,
+    "longitude": 39.7862997
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 20
+      },
+      {
+        "routeNumber": "15",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "Гражданская улица",
+    "id": 6371892740,
+    "latitude": 54.6204901,
+    "longitude": 39.7811301
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 18
+      },
+      {
+        "routeNumber": "15",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Дом мебели \"Гермес\"",
+    "id": 6371892741,
+    "latitude": 54.6184168,
+    "longitude": 39.7675712
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 17
+      },
+      {
+        "routeNumber": "15",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Новая улица",
+    "id": 6371892742,
+    "latitude": 54.6171541,
+    "longitude": 39.7593979
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 16
+      },
+      {
+        "routeNumber": "15",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Дом печати",
+    "id": 6371892743,
+    "latitude": 54.6182526,
+    "longitude": 39.755074
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 16
+      },
+      {
+        "routeNumber": "15",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Дом печати",
+    "id": 6371892744,
+    "latitude": 54.6184101,
+    "longitude": 39.7549765
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 15
+      }
+    ],
+    "localName": "",
+    "name": "Завод САМ (школа)",
+    "id": 6371892745,
+    "latitude": 54.6186827,
+    "longitude": 39.7506651
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "площадь Мичурина",
+    "id": 6371892746,
+    "latitude": 54.6193825,
+    "longitude": 39.7453018
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Центральный рынок",
+    "id": 6371893088,
+    "latitude": 54.6245143,
+    "longitude": 39.7366309
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Медуниверситет",
+    "id": 6371893090,
+    "latitude": 54.6273337,
+    "longitude": 39.7335282
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Первомайский рынок",
+    "id": 6371893091,
+    "latitude": 54.6311106,
+    "longitude": 39.7177886
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Вокзал \"Рязань-1\"",
+    "id": 6371893092,
+    "latitude": 54.6325531,
+    "longitude": 39.7130359
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Первомайский проспект",
+    "id": 6371893093,
+    "latitude": 54.6316688,
+    "longitude": 39.7056834
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 5
+      },
+      {
+        "routeNumber": "5",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Вокзал \"Рязань-2\"",
+    "id": 6371893094,
+    "latitude": 54.6297337,
+    "longitude": 39.7029077
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 4
+      },
+      {
+        "routeNumber": "5",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "улица Чкалова",
+    "id": 6371893096,
+    "latitude": 54.6272501,
+    "longitude": 39.7040623
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 3
+      },
+      {
+        "routeNumber": "5",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Чаеразвесочная фабрика",
+    "id": 6371893097,
+    "latitude": 54.6231781,
+    "longitude": 39.6977562
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 2
+      },
+      {
+        "routeNumber": "5",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Кондитерская фабрика",
+    "id": 6371893098,
+    "latitude": 54.6211008,
+    "longitude": 39.6941437
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "2",
+        "order": 1
+      },
+      {
+        "routeNumber": "5",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Завод ЖБИ-2",
+    "id": 6371893099,
+    "latitude": 54.6183141,
+    "longitude": 39.6893423
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 28
+      },
+      {
+        "routeNumber": "13",
+        "order": 19
+      },
+      {
+        "routeNumber": "15",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "Кинотеатр \"Октябрь\"",
+    "id": 6373677585,
+    "latitude": 54.6110868,
+    "longitude": 39.797376
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 26
+      },
+      {
+        "routeNumber": "13",
+        "order": 17
+      },
+      {
+        "routeNumber": "15",
+        "order": 16
+      }
+    ],
+    "localName": "",
+    "name": "улица Новосёлов",
+    "id": 6373677586,
+    "latitude": 54.6120796,
+    "longitude": 39.7925494
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 20
+      },
+      {
+        "routeNumber": "8",
+        "order": 32
+      },
+      {
+        "routeNumber": "13",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "Электросеть",
+    "id": 6373677588,
+    "latitude": 54.6231706,
+    "longitude": 39.7807202
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 19
+      },
+      {
+        "routeNumber": "8",
+        "order": 31
+      },
+      {
+        "routeNumber": "13",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "Мясокомбинат",
+    "id": 6373677589,
+    "latitude": 54.6257258,
+    "longitude": 39.7703817
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 18
+      },
+      {
+        "routeNumber": "10",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "улица Грибоедова",
+    "id": 6373677590,
+    "latitude": 54.6284257,
+    "longitude": 39.7655815
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 17
+      },
+      {
+        "routeNumber": "10",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "площадь Свободы",
+    "id": 6373677591,
+    "latitude": 54.6313866,
+    "longitude": 39.7605495
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 16
+      },
+      {
+        "routeNumber": "10",
+        "order": 22
+      }
+    ],
+    "localName": "",
+    "name": "РГУ им. С.А. Есенина",
+    "id": 6373677592,
+    "latitude": 54.6288088,
+    "longitude": 39.7534085
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 15
+      },
+      {
+        "routeNumber": "10",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "Художественный музей",
+    "id": 6373677596,
+    "latitude": 54.6270027,
+    "longitude": 39.7503752
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 2
+      },
+      {
+        "routeNumber": "9",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "улица Братиславская",
+    "id": 6373677597,
+    "latitude": 54.611591,
+    "longitude": 39.7201164
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 4
+      },
+      {
+        "routeNumber": "15",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Кинотеатр \"Октябрь\"",
+    "id": 6373677598,
+    "latitude": 54.6111283,
+    "longitude": 39.797992
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "3",
+        "order": 1
+      },
+      {
+        "routeNumber": "9",
+        "order": 1
+      }
+    ],
+    "localName": "",
+    "name": "ЦПКиО",
+    "id": 6373677599,
+    "latitude": 54.6090071,
+    "longitude": 39.7242334
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 13
+      }
+    ],
+    "localName": "",
+    "name": "Мясокомбинат",
+    "id": 6373677605,
+    "latitude": 54.62634,
+    "longitude": 39.76935
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 12
+      }
+    ],
+    "localName": "",
+    "name": "Электросеть",
+    "id": 6373677606,
+    "latitude": 54.6235449,
+    "longitude": 39.7797514
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Завод Тяжпрессмаш",
+    "id": 6376395298,
+    "latitude": 54.6759151,
+    "longitude": 39.6355991
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Дягилевская ТЭЦ",
+    "id": 6376395299,
+    "latitude": 54.6790934,
+    "longitude": 39.6313624
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "Дягилевская ТЭЦ",
+    "id": 6376395302,
+    "latitude": 54.6787524,
+    "longitude": 39.6318175
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 24
+      }
+    ],
+    "localName": "",
+    "name": "Завод Тяжпрессмаш",
+    "id": 6376395303,
+    "latitude": 54.6762744,
+    "longitude": 39.6351164
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Бульвар Победы",
+    "id": 6376395322,
+    "latitude": 54.6438632,
+    "longitude": 39.6572716
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "Народный бульвар",
+    "id": 6376395323,
+    "latitude": 54.6413465,
+    "longitude": 39.6552136
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 11
+      }
+    ],
+    "localName": "",
+    "name": "ПриоБанк",
+    "id": 6377287474,
+    "latitude": 54.6199546,
+    "longitude": 39.752989
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "5",
+        "order": 10
+      },
+      {
+        "routeNumber": "15",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "Завод САМ",
+    "id": 6377287475,
+    "latitude": 54.6171443,
+    "longitude": 39.7478203
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 1
+      },
+      {
+        "routeNumber": "6",
+        "order": 22
+      },
+      {
+        "routeNumber": "15",
+        "order": 1
+      },
+      {
+        "routeNumber": "15",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "Памятник Ф.Полетаеву",
+    "id": 6380075587,
+    "latitude": 54.6099746,
+    "longitude": 39.7171922
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "6",
+        "order": 21
+      },
+      {
+        "routeNumber": "15",
+        "order": 22
+      }
+    ],
+    "localName": "",
+    "name": "улица Братиславская",
+    "id": 6380075588,
+    "latitude": 54.6113613,
+    "longitude": 39.7202465
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 28
+      },
+      {
+        "routeNumber": "13",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "Театральная площадь",
+    "id": 6383899246,
+    "latitude": 54.6225726,
+    "longitude": 39.7571589
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 10
+      }
+    ],
+    "localName": "",
+    "name": "улица Пирогова",
+    "id": 6383899247,
+    "latitude": 54.6508707,
+    "longitude": 39.6572768
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 8
+      }
+    ],
+    "localName": "",
+    "name": "Клуб ТКПО",
+    "id": 6383899248,
+    "latitude": 54.6590644,
+    "longitude": 39.646432
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 7
+      }
+    ],
+    "localName": "",
+    "name": "улица Карла Маркса",
+    "id": 6383899250,
+    "latitude": 54.662755,
+    "longitude": 39.6415117
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 6
+      }
+    ],
+    "localName": "",
+    "name": "Станкозавод",
+    "id": 6383899251,
+    "latitude": 54.6656149,
+    "longitude": 39.6385976
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 5
+      }
+    ],
+    "localName": "",
+    "name": "улица Космонавтов",
+    "id": 6383899252,
+    "latitude": 54.6675654,
+    "longitude": 39.6429554
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 4
+      }
+    ],
+    "localName": "",
+    "name": "По требованию",
+    "id": 6383899253,
+    "latitude": 54.6716315,
+    "longitude": 39.6413142
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 23
+      }
+    ],
+    "localName": "",
+    "name": "По требованию",
+    "id": 6383899254,
+    "latitude": 54.6714643,
+    "longitude": 39.6415388
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 22
+      }
+    ],
+    "localName": "",
+    "name": "улица Космонавтов",
+    "id": 6383899256,
+    "latitude": 54.6673755,
+    "longitude": 39.6425385
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "улица Карла Маркса",
+    "id": 6383899257,
+    "latitude": 54.6639184,
+    "longitude": 39.6399618
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Клуб ТКПО",
+    "id": 6383899258,
+    "latitude": 54.658519,
+    "longitude": 39.6471691
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "улица Бронная",
+    "id": 6383899259,
+    "latitude": 54.655886,
+    "longitude": 39.6506801
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "8",
+        "order": 9
+      }
+    ],
+    "localName": "",
+    "name": "улица Бронная",
+    "id": 6383899260,
+    "latitude": 54.6546693,
+    "longitude": 39.6522774
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 18
+      }
+    ],
+    "localName": "",
+    "name": "улица Пирогова",
+    "id": 6383899261,
+    "latitude": 54.6522539,
+    "longitude": 39.6554277
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "9",
+        "order": 17
+      }
+    ],
+    "localName": "",
+    "name": "Памятник Братству по оружию",
+    "id": 6383899264,
+    "latitude": 54.6492831,
+    "longitude": 39.6606964
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 25
+      }
+    ],
+    "localName": "",
+    "name": "Мясокомбинат",
+    "id": 6385802289,
+    "latitude": 54.6262856,
+    "longitude": 39.7684676
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "улица Великанова",
+    "id": 6385802290,
+    "latitude": 54.6434366,
+    "longitude": 39.644259
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "10",
+        "order": 26
+      }
+    ],
+    "localName": "",
+    "name": "площадь Попова",
+    "id": 6385802296,
+    "latitude": 54.6237948,
+    "longitude": 39.7718876
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 3
+      },
+      {
+        "routeNumber": "15",
+        "order": 3
+      }
+    ],
+    "localName": "",
+    "name": "Горбольница №11",
+    "id": 6400919768,
+    "latitude": 54.6099888,
+    "longitude": 39.8037471
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 2
+      },
+      {
+        "routeNumber": "15",
+        "order": 2
+      }
+    ],
+    "localName": "",
+    "name": "Стоматологическая поликлиника",
+    "id": 6400919769,
+    "latitude": 54.6089983,
+    "longitude": 39.808968
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 1
+      },
+      {
+        "routeNumber": "15",
+        "order": 1
+      }
+    ],
+    "localName": "",
+    "name": "Шереметьево",
+    "id": 6400919773,
+    "latitude": 54.6074095,
+    "longitude": 39.8147723
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 22
+      },
+      {
+        "routeNumber": "15",
+        "order": 21
+      }
+    ],
+    "localName": "",
+    "name": "Шереметьево",
+    "id": 6400919774,
+    "latitude": 54.6071632,
+    "longitude": 39.8148355
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 21
+      },
+      {
+        "routeNumber": "15",
+        "order": 20
+      }
+    ],
+    "localName": "",
+    "name": "Стоматологическая поликлиника",
+    "id": 6400921487,
+    "latitude": 54.6085269,
+    "longitude": 39.8104696
+  },
+  {
+    "routes": [
+      {
+        "routeNumber": "13",
+        "order": 20
+      },
+      {
+        "routeNumber": "15",
+        "order": 19
+      }
+    ],
+    "localName": "",
+    "name": "Горбольница №11",
+    "id": 6400921501,
+    "latitude": 54.6099668,
+    "longitude": 39.8030873
+  }
+]

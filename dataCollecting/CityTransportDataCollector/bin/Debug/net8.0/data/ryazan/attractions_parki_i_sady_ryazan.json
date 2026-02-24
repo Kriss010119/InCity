@@ -1,0 +1,445 @@
+﻿[
+  {
+    "id": 11553378164,
+    "name": "Сквер имени Наташи Климовой",
+    "latitude": 54.6250189,
+    "longitude": 39.7491017,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": null,
+    "estimatedVisitMinutes": 9,
+    "osmType": "node",
+    "tags": [
+      "leisure=park",
+      "name=Сквер имени Наташи Климовой"
+    ]
+  },
+  {
+    "id": 27498560,
+    "name": "Лесопарк",
+    "latitude": 54.641710950000004,
+    "longitude": 39.77719195,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 4265407.089859046,
+    "estimatedVisitMinutes": 150,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "loc_name=парк Орешек",
+      "name=Лесопарк",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 61570067,
+    "name": "Новопавловская роща",
+    "latitude": 54.6168738,
+    "longitude": 39.709636,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 63983.461831569795,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "barrier=fence",
+      "fence_type=metal",
+      "height=2.5",
+      "leisure=park",
+      "name=Новопавловская роща"
+    ]
+  },
+  {
+    "id": 96098860,
+    "name": "Сквер имени М.Д. Скобелева",
+    "latitude": 54.609425349999995,
+    "longitude": 39.81262125,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 30122.526847386056,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Сквер имени М.Д. Скобелева"
+    ]
+  },
+  {
+    "id": 99470217,
+    "name": "Парк Уткина",
+    "latitude": 54.61337705,
+    "longitude": 39.76113065,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 35935.79142248221,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Уткина"
+    ]
+  },
+  {
+    "id": 101163378,
+    "name": "Верхний городской сад",
+    "latitude": 54.625030249999995,
+    "longitude": 39.7491353,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 39731.04056446722,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Верхний городской сад"
+    ]
+  },
+  {
+    "id": 102134869,
+    "name": "площадь 26 Бакинских Комиссаров",
+    "latitude": 54.6334544,
+    "longitude": 39.75632195,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 14512.818623236857,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=площадь 26 Бакинских Комиссаров"
+    ]
+  },
+  {
+    "id": 108461876,
+    "name": "Приолэнд (Парк железнорожников)",
+    "latitude": 54.6258692,
+    "longitude": 39.70961925,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 49555.034344954045,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Приолэнд (Парк железнорожников)"
+    ]
+  },
+  {
+    "id": 109077042,
+    "name": "Соборный парк",
+    "latitude": 54.633745000000005,
+    "longitude": 39.745559549999996,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 42816.859059667855,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Соборный парк",
+      "wikidata=Q127272272",
+      "wikipedia=ru:Соборный парк (Рязань)"
+    ]
+  },
+  {
+    "id": 111966878,
+    "name": "Парк Морской славы",
+    "latitude": 54.6623371,
+    "longitude": 39.6775802,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 105291.94624548452,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Морской славы"
+    ]
+  },
+  {
+    "id": 113691626,
+    "name": "Парк им. Маргелова",
+    "latitude": 54.63204235,
+    "longitude": 39.7333309,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 7573.873264172755,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк им. Маргелова"
+    ]
+  },
+  {
+    "id": 122552855,
+    "name": "Комсомольский парк",
+    "latitude": 54.63475955,
+    "longitude": 39.644515549999994,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 118330.94492642347,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Комсомольский парк"
+    ]
+  },
+  {
+    "id": 129346279,
+    "name": "парк Железнодорожников",
+    "latitude": 54.62764435,
+    "longitude": 39.7099887,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 19485.529184591847,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=парк Железнодорожников"
+    ]
+  },
+  {
+    "id": 284834442,
+    "name": "Парк Музыкального театра",
+    "latitude": 54.61549155,
+    "longitude": 39.75753985,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 14916.308816113453,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Парк Музыкального театра"
+    ]
+  },
+  {
+    "id": 476774328,
+    "name": "Заводской парк",
+    "latitude": 54.6075563,
+    "longitude": 39.669184099999995,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 11912.180202174888,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Заводской парк"
+    ]
+  },
+  {
+    "id": 558514846,
+    "name": "Сквер Белых Журавлей",
+    "latitude": 54.66894025,
+    "longitude": 39.66114815,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 9245.374496202421,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "description=Сквер Белых Журавлей",
+      "leisure=park",
+      "name=Сквер Белых Журавлей"
+    ]
+  },
+  {
+    "id": 613578067,
+    "name": "Мамин сквер",
+    "latitude": 54.6023888,
+    "longitude": 39.82834325,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 5621.290463981693,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Мамин сквер"
+    ]
+  },
+  {
+    "id": 641671250,
+    "name": "Сквер В.А. Молодцова",
+    "latitude": 54.662632200000004,
+    "longitude": 39.64074345,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 10034.425278348666,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "description=Небольшой аккуратный скверик, расположенный прям напротив парка Гагарина. В центре располагается памятник герою советского союза, Владимиру Молодцову. Прямо за сквером начинается зелёный бульвар Карла Маркса.",
+      "leisure=park",
+      "name=Сквер В.А. Молодцова"
+    ]
+  },
+  {
+    "id": 641689298,
+    "name": "Сквер с клумбой",
+    "latitude": 54.6615478,
+    "longitude": 39.64266215,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 1611.9564330745898,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Сквер с клумбой"
+    ]
+  },
+  {
+    "id": 787469828,
+    "name": "Аллея А. Белякова",
+    "latitude": 54.65671595,
+    "longitude": 39.59054465,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 38808.51524433359,
+    "estimatedVisitMinutes": 18,
+    "osmType": "way",
+    "tags": [
+      "leisure=park",
+      "name=Аллея А. Белякова"
+    ]
+  },
+  {
+    "id": 1607297,
+    "name": "Парк братству по оружию",
+    "latitude": 54.65094305,
+    "longitude": 39.66006605,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 152262.02174515466,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк братству по оружию",
+      "natural=wood",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1608348,
+    "name": "Нижний городской сад",
+    "latitude": 54.6266325,
+    "longitude": 39.751945899999996,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 71665.90534609176,
+    "estimatedVisitMinutes": 18,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Нижний городской сад",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1653398,
+    "name": "Парк Гагарина",
+    "latitude": 54.66409445,
+    "longitude": 39.6440053,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 276529.14581670496,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк Гагарина",
+      "official_name=Парк имени Ю.А. Гагарина",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 2388065,
+    "name": "ЦПКиО",
+    "latitude": 54.610949500000004,
+    "longitude": 39.7298272,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 1169386.5058121583,
+    "estimatedVisitMinutes": 90,
+    "osmType": "relation",
+    "tags": [
+      "addr:city=Рязань",
+      "leisure=park",
+      "name=ЦПКиО",
+      "opening_hours=24/7",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 2654603,
+    "name": "Мемориальный парк",
+    "latitude": 54.61252035,
+    "longitude": 39.74346905,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 278286.1601469909,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Мемориальный парк",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 7424392,
+    "name": "Сквер им.А.В. Александрова",
+    "latitude": 54.61505565,
+    "longitude": 39.79454885,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 67112.75580837009,
+    "estimatedVisitMinutes": 18,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Сквер им.А.В. Александрова",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 14733672,
+    "name": "Парк-дендрарий",
+    "latitude": 54.60324795,
+    "longitude": 39.81443735,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 152901.11602455654,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "leisure=park",
+      "name=Парк-дендрарий",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 17583674,
+    "name": "Рязанская ВДНХ",
+    "latitude": 54.63382425,
+    "longitude": 39.764675999999994,
+    "category": "Парки и сады",
+    "subcategory": "Городские парки",
+    "square": 85506.23453140323,
+    "estimatedVisitMinutes": 30,
+    "osmType": "relation",
+    "tags": [
+      "landuse=commercial",
+      "leisure=park",
+      "name=Рязанская ВДНХ",
+      "type=multipolygon",
+      "wikidata=Q113554351"
+    ]
+  }
+]

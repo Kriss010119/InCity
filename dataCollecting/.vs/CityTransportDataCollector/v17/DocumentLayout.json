@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\metrodatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\metrodatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\busdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\busdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88486E6F-CE04-4EFB-91DC-0480D0CF604D}|CityTransportDataCollector\\CityTransportDataCollector.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\citytransportdatacollector\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88486E6F-CE04-4EFB-91DC-0480D0CF604D}|CityTransportDataCollector\\CityTransportDataCollector.csproj|solutionrelative:citytransportdatacollector\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\trolleybusdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\trolleybusdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\tramdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\tramdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\attractionsdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\attractionsdatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\emodelslib\\interfaces\\idatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|solutionrelative:emodelslib\\interfaces\\idatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\datacollectors\\basedatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B5F2C6-A6CC-4984-B01B-92E15B997805}|DataCollectors\\DataCollectors.csproj|solutionrelative:datacollectors\\basedatacollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\emodelslib\\stops\\tramstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|solutionrelative:emodelslib\\stops\\tramstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\emodelslib\\routes\\tramroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|solutionrelative:emodelslib\\routes\\tramroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\emodelslib\\stops\\trolleybusstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|solutionrelative:emodelslib\\stops\\trolleybusstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|c:\\users\\georg\\source\\repos\\citytransportdatacollector\\emodelslib\\routes\\trolleybusroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC70AA21-B5F0-4AC0-ADD9-C8062175EC5B}|EModelsLib\\EModelsLib.csproj|solutionrelative:emodelslib\\routes\\trolleybusroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Interfaces\\IDataCollector.cs",
+              "RelativeDocumentMoniker": "EModelsLib\\Interfaces\\IDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Interfaces\\IDataCollector.cs",
+              "RelativeToolTip": "EModelsLib\\Interfaces\\IDataCollector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T12:34:42.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttractionsDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\AttractionsDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\AttractionsDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\AttractionsDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\AttractionsDataCollector.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T12:32:03.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MetroDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\MetroDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\MetroDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\MetroDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\MetroDataCollector.cs",
+              "ViewState": "AgIAABECAAAAAAAAAAAQwA0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T00:59:13.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\CityTransportDataCollector\\Program.cs",
+              "RelativeDocumentMoniker": "CityTransportDataCollector\\Program.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\CityTransportDataCollector\\Program.cs",
+              "RelativeToolTip": "CityTransportDataCollector\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T10:44:49.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BusDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\BusDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\BusDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\BusDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\BusDataCollector.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAEwF4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T15:00:59.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TramDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\TramDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\TramDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\TramDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\TramDataCollector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:07:07.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrolleybusDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\TrolleybusDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\TrolleybusDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\TrolleybusDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\TrolleybusDataCollector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T13:37:33.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseDataCollector.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\BaseDataCollector.cs",
+              "RelativeDocumentMoniker": "DataCollectors\\BaseDataCollector.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\DataCollectors\\BaseDataCollector.cs",
+              "RelativeToolTip": "DataCollectors\\BaseDataCollector.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T14:54:27.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TramRoute.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Routes\\TramRoute.cs",
+              "RelativeDocumentMoniker": "EModelsLib\\Routes\\TramRoute.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Routes\\TramRoute.cs",
+              "RelativeToolTip": "EModelsLib\\Routes\\TramRoute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:06:13.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TramStop.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Stops\\TramStop.cs",
+              "RelativeDocumentMoniker": "EModelsLib\\Stops\\TramStop.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Stops\\TramStop.cs",
+              "RelativeToolTip": "EModelsLib\\Stops\\TramStop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:06:47.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TrolleybusStop.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Stops\\TrolleybusStop.cs",
+              "RelativeDocumentMoniker": "EModelsLib\\Stops\\TrolleybusStop.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Stops\\TrolleybusStop.cs",
+              "RelativeToolTip": "EModelsLib\\Stops\\TrolleybusStop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T13:35:52.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TrolleybusRoute.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Routes\\TrolleybusRoute.cs",
+              "RelativeDocumentMoniker": "EModelsLib\\Routes\\TrolleybusRoute.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\CityTransportDataCollector\\EModelsLib\\Routes\\TrolleybusRoute.cs",
+              "RelativeToolTip": "EModelsLib\\Routes\\TrolleybusRoute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T13:34:17.266Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2119 @@
+﻿[
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 7
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 10
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Петроградская",
+    "name": "Петроградская",
+    "id": 88802787,
+    "latitude": 59.9649132,
+    "longitude": 30.3128397
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 8
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Горьковская",
+    "name": "Горьковская",
+    "id": 88803981,
+    "latitude": 59.9551564,
+    "longitude": 30.3194568
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 11
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 5
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Спортивная",
+    "name": "Спортивная",
+    "id": 88833360,
+    "latitude": 59.9501285,
+    "longitude": 30.2890649
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 12
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Чкаловская",
+    "name": "Чкаловская",
+    "id": 88833366,
+    "latitude": 59.9593342,
+    "longitude": 30.2924203
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 4
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 13
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Удельная",
+    "name": "Удельная",
+    "id": 90551453,
+    "latitude": 60.0179314,
+    "longitude": 30.3181589
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 13
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Крестовский остров",
+    "name": "Крестовский остров",
+    "id": 91264383,
+    "latitude": 59.9705962,
+    "longitude": 30.262192
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 14
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Старая Деревня",
+    "name": "Старая Деревня",
+    "id": 91264384,
+    "latitude": 59.987678,
+    "longitude": 30.2556348
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 9
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 7
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Сенная площадь",
+        "value": [
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 10
+          },
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 7
+          }
+        ]
+      },
+      {
+        "key": "Спасская",
+        "value": [
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 8
+          },
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 2
+          }
+        ]
+      }
+    ],
+    "localName": "Садовая",
+    "name": "Садовая",
+    "id": 92580819,
+    "latitude": 59.9276034,
+    "longitude": 30.3193825
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 10
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 7
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Садовая",
+        "value": [
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 9
+          },
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 7
+          }
+        ]
+      },
+      {
+        "key": "Спасская",
+        "value": [
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 8
+          },
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 2
+          }
+        ]
+      }
+    ],
+    "localName": "Сенная площадь",
+    "name": "Сенная площадь",
+    "id": 94857612,
+    "latitude": 59.925977,
+    "longitude": 30.3200522
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 7
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 3
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Владимирская",
+        "value": [
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 9
+          },
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 11
+          }
+        ]
+      }
+    ],
+    "localName": "Достоевская",
+    "name": "Достоевская",
+    "id": 94858991,
+    "latitude": 59.9268257,
+    "longitude": 30.3458483
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 6
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Лиговский проспект",
+    "name": "Лиговский проспект",
+    "id": 94877075,
+    "latitude": 59.9215885,
+    "longitude": 30.3592664
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 6
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 7
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Площадь Александра Невского 2",
+        "value": [
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 5
+          },
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 5
+          }
+        ]
+      }
+    ],
+    "localName": "Площадь Александра Невского 1",
+    "name": "Площадь Александра Невского 1",
+    "id": 94890886,
+    "latitude": 59.9233471,
+    "longitude": 30.3868338
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 4
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 6
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Новочеркасская",
+    "name": "Новочеркасская",
+    "id": 94891390,
+    "latitude": 59.9295952,
+    "longitude": 30.4152087
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 3
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 7
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Ладожская",
+    "name": "Ладожская",
+    "id": 94896142,
+    "latitude": 59.9315257,
+    "longitude": 30.4424369
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 6
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 11
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Чёрная речка",
+    "name": "Чёрная речка",
+    "id": 96449579,
+    "latitude": 59.9872268,
+    "longitude": 30.3009041
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 5
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 12
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Пионерская",
+    "name": "Пионерская",
+    "id": 96453108,
+    "latitude": 60.0043093,
+    "longitude": 30.2963479
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 3
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 14
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Озерки",
+    "name": "Озерки",
+    "id": 96459081,
+    "latitude": 60.0353185,
+    "longitude": 30.3210297
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 10
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 10
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Маяковская",
+        "value": [
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 7
+          },
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 6
+          }
+        ]
+      }
+    ],
+    "localName": "Площадь Восстания",
+    "name": "Площадь Восстания",
+    "id": 97036546,
+    "latitude": 59.9299928,
+    "longitude": 30.3590236
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 1
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Улица Дыбенко",
+    "name": "Улица Дыбенко",
+    "id": 211439601,
+    "latitude": 59.9090092,
+    "longitude": 30.481764
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 2
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 8
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Проспект Большевиков",
+    "name": "Проспект Большевиков",
+    "id": 211439603,
+    "latitude": 59.9210336,
+    "longitude": 30.4640063
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 1
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 12
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Рыбацкое",
+    "name": "Рыбацкое",
+    "id": 248088101,
+    "latitude": 59.8308399,
+    "longitude": 30.5002908
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 2
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 11
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Обухово",
+    "name": "Обухово",
+    "id": 248088210,
+    "latitude": 59.8497833,
+    "longitude": 30.4599251
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 4
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Ломоносовская",
+    "name": "Ломоносовская",
+    "id": 249302441,
+    "latitude": 59.8788258,
+    "longitude": 30.440148
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 3
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 10
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Пролетарская",
+    "name": "Пролетарская",
+    "id": 249304980,
+    "latitude": 59.8662645,
+    "longitude": 30.467311
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 8
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 5
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Невский проспект",
+        "value": [
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 9
+          },
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 8
+          }
+        ]
+      }
+    ],
+    "localName": "Гостиный двор",
+    "name": "Гостиный двор",
+    "id": 249307183,
+    "latitude": 59.9342435,
+    "longitude": 30.3302031
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 10
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Приморская",
+    "name": "Приморская",
+    "id": 249307184,
+    "latitude": 59.9487362,
+    "longitude": 30.2379397
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 12
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 5
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Московские ворота",
+    "name": "Московские ворота",
+    "id": 249898478,
+    "latitude": 59.8926493,
+    "longitude": 30.318071
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 13
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Электросила",
+    "name": "Электросила",
+    "id": 249904416,
+    "latitude": 59.8802598,
+    "longitude": 30.3190724
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 3
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 17
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Автово",
+    "name": "Автово",
+    "id": 258760945,
+    "latitude": 59.8664791,
+    "longitude": 30.2610038
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 9
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 8
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Гостиный двор",
+        "value": [
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 8
+          },
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 5
+          }
+        ]
+      }
+    ],
+    "localName": "Невский проспект",
+    "name": "Невский проспект",
+    "id": 291557399,
+    "latitude": 59.9339762,
+    "longitude": 30.3284017
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 16
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Купчино",
+    "name": "Купчино",
+    "id": 298969888,
+    "latitude": 59.8296814,
+    "longitude": 30.3754914
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 6
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 14
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Балтийская",
+    "name": "Балтийская",
+    "id": 312393508,
+    "latitude": 59.9076813,
+    "longitude": 30.3026769
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 5
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 15
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Нарвская",
+    "name": "Нарвская",
+    "id": 313475956,
+    "latitude": 59.8997076,
+    "longitude": 30.2740579
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 4
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 16
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Путиловская",
+        "value": [
+          {
+            "color": "brown",
+            "routeNumber": "6",
+            "order": 2
+          },
+          {
+            "color": "brown",
+            "routeNumber": "6",
+            "order": 1
+          }
+        ]
+      }
+    ],
+    "localName": "Кировский завод",
+    "name": "Кировский завод",
+    "id": 313476034,
+    "latitude": 59.8782316,
+    "longitude": 30.2605729
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 15
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Звёздная",
+    "name": "Звёздная",
+    "id": 315051539,
+    "latitude": 59.8328745,
+    "longitude": 30.3514655
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 2
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 18
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Ленинский проспект",
+    "name": "Ленинский проспект",
+    "id": 344890527,
+    "latitude": 59.850646,
+    "longitude": 30.2683879
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 1
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 19
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Проспект Ветеранов",
+    "name": "Проспект Ветеранов",
+    "id": 344890631,
+    "latitude": 59.8419498,
+    "longitude": 30.2520176
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 6
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 10
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Волковская",
+    "name": "Волковская",
+    "id": 359711515,
+    "latitude": 59.8965777,
+    "longitude": 30.3604013
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 7
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Обводный канал",
+    "name": "Обводный канал",
+    "id": 359711518,
+    "latitude": 59.9131687,
+    "longitude": 30.3508884
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 14
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Московская",
+    "name": "Московская",
+    "id": 648222978,
+    "latitude": 59.8514032,
+    "longitude": 30.3223819
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 4
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 12
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Международная",
+    "name": "Международная",
+    "id": 695134915,
+    "latitude": 59.868623,
+    "longitude": 30.3818778
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 5
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 11
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Бухарестская",
+    "name": "Бухарестская",
+    "id": 695134921,
+    "latitude": 59.8823279,
+    "longitude": 30.3703188
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 8
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 2
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Садовая",
+        "value": [
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 9
+          },
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 7
+          }
+        ]
+      },
+      {
+        "key": "Сенная площадь",
+        "value": [
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 10
+          },
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 7
+          }
+        ]
+      }
+    ],
+    "localName": "Спасская",
+    "name": "Спасская",
+    "id": 1109163153,
+    "latitude": 59.9262622,
+    "longitude": 30.3176937
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 10
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 6
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Адмиралтейская",
+    "name": "Адмиралтейская",
+    "id": 1440436739,
+    "latitude": 59.9361341,
+    "longitude": 30.3138978
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 11
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 6
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Технологический институт 2",
+        "value": [
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 7
+          },
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 13
+          }
+        ]
+      }
+    ],
+    "localName": "Технологический институт 1",
+    "name": "Технологический институт 1",
+    "id": 1669571976,
+    "latitude": 59.9151884,
+    "longitude": 30.317338
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 7
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 13
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Технологический институт 1",
+        "value": [
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 11
+          },
+          {
+            "color": "blue",
+            "routeNumber": "2",
+            "order": 6
+          }
+        ]
+      }
+    ],
+    "localName": "Технологический институт 2",
+    "name": "Технологический институт 2",
+    "id": 1669571977,
+    "latitude": 59.9153355,
+    "longitude": 30.318387
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 12
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 8
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Площадь Ленина",
+    "name": "Площадь Ленина",
+    "id": 2036827694,
+    "latitude": 59.9572163,
+    "longitude": 30.3553493
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 13
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 7
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Выборгская",
+    "name": "Выборгская",
+    "id": 2036840002,
+    "latitude": 59.9693707,
+    "longitude": 30.34951
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 15
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 5
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Площадь Мужества",
+    "name": "Площадь Мужества",
+    "id": 2036851507,
+    "latitude": 60.001492,
+    "longitude": 30.3673518
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 16
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Политехническая",
+    "name": "Политехническая",
+    "id": 2036864189,
+    "latitude": 60.0089587,
+    "longitude": 30.3707627
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 17
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Академическая",
+    "name": "Академическая",
+    "id": 2036865229,
+    "latitude": 60.012116,
+    "longitude": 30.392738
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 18
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Гражданский проспект",
+    "name": "Гражданский проспект",
+    "id": 2036899257,
+    "latitude": 60.0332407,
+    "longitude": 30.4168142
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 8
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 8
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Пушкинская",
+        "value": [
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 8
+          },
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 12
+          }
+        ]
+      }
+    ],
+    "localName": "Звенигородская",
+    "name": "Звенигородская",
+    "id": 2080777576,
+    "latitude": 59.9219058,
+    "longitude": 30.3327653
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 8
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 12
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Звенигородская",
+        "value": [
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 8
+          },
+          {
+            "color": "purple",
+            "routeNumber": "5",
+            "order": 8
+          }
+        ]
+      }
+    ],
+    "localName": "Пушкинская",
+    "name": "Пушкинская",
+    "id": 2194446558,
+    "latitude": 59.9212978,
+    "longitude": 30.332857
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 1
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 16
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Парнас",
+    "name": "Парнас",
+    "id": 2238315693,
+    "latitude": 60.0669038,
+    "longitude": 30.3340445
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 9
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Василеостровская",
+    "name": "Василеостровская",
+    "id": 2468455392,
+    "latitude": 59.9431765,
+    "longitude": 30.2753586
+  },
+  {
+    "lines": [
+      "Красносельско-Калининская линия: Юго-Западная — Путиловская",
+      "Красносельско-Калининская линия: Путиловская — Юго-Западная"
+    ],
+    "routes": [
+      {
+        "color": "brown",
+        "routeNumber": "6",
+        "order": 1
+      },
+      {
+        "color": "brown",
+        "routeNumber": "6",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "",
+    "name": "Юго-Западная",
+    "id": 3361808916,
+    "latitude": 59.8600303,
+    "longitude": 30.2313278
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 11
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Чернышевская",
+    "name": "Чернышевская",
+    "id": 4179047476,
+    "latitude": 59.9431101,
+    "longitude": 30.3607773
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 3
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 13
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Проспект Славы",
+    "name": "Проспект Славы",
+    "id": 4709806342,
+    "latitude": 59.8567134,
+    "longitude": 30.3953006
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 2
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 14
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Дунайская",
+    "name": "Дунайская",
+    "id": 4709806343,
+    "latitude": 59.8399929,
+    "longitude": 30.4108961
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 1
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 15
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Шушары",
+    "name": "Шушары",
+    "id": 4709806344,
+    "latitude": 59.8200697,
+    "longitude": 30.4328244
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 5
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 5
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Площадь Александра Невского 1",
+        "value": [
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 6
+          },
+          {
+            "color": "green",
+            "routeNumber": "3",
+            "order": 7
+          }
+        ]
+      }
+    ],
+    "localName": "Площадь Александра Невского 2",
+    "name": "Площадь Александра Невского 2",
+    "id": 4946155636,
+    "latitude": 59.9222225,
+    "longitude": 30.3848602
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 7
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 6
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Площадь Восстания",
+        "value": [
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 10
+          },
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 10
+          }
+        ]
+      }
+    ],
+    "localName": "Маяковская",
+    "name": "Маяковская",
+    "id": 5369186762,
+    "latitude": 59.9305422,
+    "longitude": 30.3576198
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 9
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 11
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Достоевская",
+        "value": [
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 7
+          },
+          {
+            "color": "orange",
+            "routeNumber": "4",
+            "order": 3
+          }
+        ]
+      }
+    ],
+    "localName": "Владимирская",
+    "name": "Владимирская",
+    "id": 5369186787,
+    "latitude": 59.9259851,
+    "longitude": 30.347344
+  },
+  {
+    "lines": [
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+      "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 14
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 6
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Лесная",
+    "name": "Лесная",
+    "id": 5385958164,
+    "latitude": 59.9865474,
+    "longitude": 30.3456603
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 11
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Зенит",
+    "name": "Зенит",
+    "id": 5614907439,
+    "latitude": 59.9719562,
+    "longitude": 30.2119155
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 5
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 8
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Елизаровская",
+    "name": "Елизаровская",
+    "id": 5628614983,
+    "latitude": 59.8980617,
+    "longitude": 30.4217006
+  },
+  {
+    "lines": [
+      "Невско-Василеостровская линия: Рыбацкое — Беговая",
+      "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 12
+      },
+      {
+        "color": "green",
+        "routeNumber": "3",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Беговая",
+    "name": "Беговая",
+    "id": 5644650789,
+    "latitude": 59.9872661,
+    "longitude": 30.2021936
+  },
+  {
+    "lines": [
+      "Московско-Петроградская линия: Парнас — Купчино",
+      "Московско-Петроградская линия: Парнас — Купчино (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 2
+      },
+      {
+        "color": "blue",
+        "routeNumber": "2",
+        "order": 15
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Проспект Просвещения",
+    "name": "Проспект Просвещения",
+    "id": 5898596228,
+    "latitude": 60.0494229,
+    "longitude": 30.3329039
+  },
+  {
+    "lines": [
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+      "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 15
+      },
+      {
+        "color": "purple",
+        "routeNumber": "5",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Комендантский проспект",
+    "name": "Комендантский проспект",
+    "id": 6242445475,
+    "latitude": 60.0103196,
+    "longitude": 30.2564847
+  },
+  {
+    "lines": [
+      "Правобережная линия: Улица Дыбенко — Горный институт",
+      "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)"
+    ],
+    "routes": [
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 9
+      },
+      {
+        "color": "orange",
+        "routeNumber": "4",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "",
+    "name": "Горный институт",
+    "id": 12452281516,
+    "latitude": 59.9311523,
+    "longitude": 30.263811
+  },
+  {
+    "lines": [
+      "Красносельско-Калининская линия: Юго-Западная — Путиловская",
+      "Красносельско-Калининская линия: Путиловская — Юго-Западная"
+    ],
+    "routes": [
+      {
+        "color": "brown",
+        "routeNumber": "6",
+        "order": 2
+      },
+      {
+        "color": "brown",
+        "routeNumber": "6",
+        "order": 1
+      }
+    ],
+    "isTransfer": true,
+    "transfers": [
+      {
+        "key": "Кировский завод",
+        "value": [
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 4
+          },
+          {
+            "color": "red",
+            "routeNumber": "1",
+            "order": 16
+          }
+        ]
+      }
+    ],
+    "localName": "",
+    "name": "Путиловская",
+    "id": 13408956405,
+    "latitude": 59.8777391,
+    "longitude": 30.262416
+  }
+]

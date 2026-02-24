@@ -1,0 +1,2324 @@
+﻿[
+  {
+    "from": "Знаменский собор",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819292,
+    "routeNumber": "1",
+    "name": "Маршрут троллейбуса №1: \"Знаменский собор - ККПФ\"",
+    "stops": [
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 690419337,
+        "name": "Аграрный университет",
+        "latitude": 51.766777,
+        "longitude": 36.183277,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 609212984,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.770899,
+        "longitude": 36.1810209,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 609212990,
+        "name": "Метеостанция",
+        "latitude": 51.7746118,
+        "longitude": 36.1789024,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1423289434,
+        "name": "Знаменская роща",
+        "latitude": 51.7782504,
+        "longitude": 36.1766938,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1342038844,
+        "name": "Улица Тропинка",
+        "latitude": 51.7832813,
+        "longitude": 36.1737953,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1451734873,
+        "name": "Остановка ГИБДД",
+        "latitude": 51.7917488,
+        "longitude": 36.1689581,
+        "role": "platform",
+        "sequence": 14
+      }
+    ]
+  },
+  {
+    "from": "ККПФ",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819293,
+    "routeNumber": "1",
+    "name": "Маршрут троллейбуса №1: \"ККПФ - Знаменский собор\"",
+    "stops": [
+      {
+        "nodeId": 1423284314,
+        "name": "Улица Тропинка",
+        "latitude": 51.7833839,
+        "longitude": 36.1723095,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1287989191,
+        "name": "Знаменская роща",
+        "latitude": 51.7768052,
+        "longitude": 36.1761807,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 609212994,
+        "name": "Метеостанция",
+        "latitude": 51.7742291,
+        "longitude": 36.1776679,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419338,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.7706668,
+        "longitude": 36.1807068,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 14
+      }
+    ]
+  },
+  {
+    "from": "Северо-западный район",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819399,
+    "routeNumber": "2",
+    "name": "Маршрут троллейбуса №2: \"Северо-западный район - улица Бочарова\"",
+    "stops": [
+      {
+        "nodeId": 1083291619,
+        "name": "Школа №54",
+        "latitude": 51.7391361,
+        "longitude": 36.1286984,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1091361341,
+        "name": "Веспремская улица",
+        "latitude": 51.7423683,
+        "longitude": 36.1383742,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1423240844,
+        "name": "Проспект Дружбы",
+        "latitude": 51.7449116,
+        "longitude": 36.1445793,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 3776215026,
+        "name": "Планерная улица",
+        "latitude": 51.7470858,
+        "longitude": 36.142857,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1319853849,
+        "name": "Автовокзал",
+        "latitude": 51.7500597,
+        "longitude": 36.1407724,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1400087707,
+        "name": "Хлебозавод",
+        "latitude": 51.7542943,
+        "longitude": 36.1377013,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1320391715,
+        "name": "Улица Пучковка",
+        "latitude": 51.7552257,
+        "longitude": 36.1404011,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1083590623,
+        "name": "Техникум",
+        "latitude": 51.7561444,
+        "longitude": 36.1461434,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1487932198,
+        "name": "Дом ребёнка",
+        "latitude": 51.7564322,
+        "longitude": 36.150212,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1400087600,
+        "name": "Школа №14",
+        "latitude": 51.7573989,
+        "longitude": 36.1545215,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1271719129,
+        "name": "Нижняя Казацкая улица",
+        "latitude": 51.7591083,
+        "longitude": 36.1595081,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1271730769,
+        "name": "Казачий лог",
+        "latitude": 51.7612762,
+        "longitude": 36.1641707,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1487932199,
+        "name": "Кавказская улица",
+        "latitude": 51.7622442,
+        "longitude": 36.1684798,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1487932201,
+        "name": "Троллейбусное депо",
+        "latitude": 51.763864,
+        "longitude": 36.1750335,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1284624192,
+        "name": "75 лет Курской области",
+        "latitude": 51.7643852,
+        "longitude": 36.1771843,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 24
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 25
+      },
+      {
+        "nodeId": 968563687,
+        "name": "Знаменский собор",
+        "latitude": 51.7281172,
+        "longitude": 36.1935326,
+        "role": "platform",
+        "sequence": 26
+      },
+      {
+        "nodeId": 968563217,
+        "name": "Улица Сонина",
+        "latitude": 51.7245182,
+        "longitude": 36.1905291,
+        "role": "platform",
+        "sequence": 27
+      },
+      {
+        "nodeId": 968563102,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7252254,
+        "longitude": 36.1872231,
+        "role": "platform",
+        "sequence": 28
+      },
+      {
+        "nodeId": 967700896,
+        "name": "Улица 50 лет Октября",
+        "latitude": 51.7205102,
+        "longitude": 36.1672589,
+        "role": "platform",
+        "sequence": 29
+      }
+    ]
+  },
+  {
+    "from": "улица Бочарова",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819400,
+    "routeNumber": "2",
+    "name": "Маршрут троллейбуса №2: \"Улица Бочарова - Северо-западный район\"",
+    "stops": [
+      {
+        "nodeId": 968563156,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7249024,
+        "longitude": 36.1870102,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 968563242,
+        "name": "Улица Сонина",
+        "latitude": 51.7244184,
+        "longitude": 36.1907917,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 608666382,
+        "name": "Аграрный университет",
+        "latitude": 51.7658266,
+        "longitude": 36.1825971,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1487932202,
+        "name": "Троллейбусное депо",
+        "latitude": 51.7641139,
+        "longitude": 36.1753992,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1333780636,
+        "name": "Кавказская улица",
+        "latitude": 51.7624902,
+        "longitude": 36.1683797,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1487932200,
+        "name": "Казачий лог",
+        "latitude": 51.761385,
+        "longitude": 36.1637515,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 1271720382,
+        "name": "Нижняя Казацкая улица",
+        "latitude": 51.7586879,
+        "longitude": 36.1577076,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1271721852,
+        "name": "Школа №14",
+        "latitude": 51.7577482,
+        "longitude": 36.1547196,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1400087619,
+        "name": "Дом ребёнка",
+        "latitude": 51.7570047,
+        "longitude": 36.151587,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1400087675,
+        "name": "Техникум",
+        "latitude": 51.75632,
+        "longitude": 36.1448725,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 1320391755,
+        "name": "Хлебозавод",
+        "latitude": 51.7538341,
+        "longitude": 36.1376798,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 1487932197,
+        "name": "Автовокзал",
+        "latitude": 51.74975,
+        "longitude": 36.1406143,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1487765502,
+        "name": "Проспект Дружбы",
+        "latitude": 51.7439481,
+        "longitude": 36.1421162,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 1484623126,
+        "name": "Кинотеатр \"Сказка\"",
+        "latitude": 51.7408794,
+        "longitude": 36.1328004,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1484623125,
+        "name": "Школа №54",
+        "latitude": 51.7389242,
+        "longitude": 36.1269296,
+        "role": "platform",
+        "sequence": 23
+      }
+    ]
+  },
+  {
+    "from": "Знаменский собор",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819425,
+    "routeNumber": "5",
+    "name": "Маршрут троллейбуса №5: \"Знаменский собор - Троллейбусное депо\"",
+    "stops": [
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 608666382,
+        "name": "Аграрный университет",
+        "latitude": 51.7658266,
+        "longitude": 36.1825971,
+        "role": "platform",
+        "sequence": 9
+      }
+    ]
+  },
+  {
+    "from": "Троллейбусное депо",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819426,
+    "routeNumber": "5",
+    "name": "Маршрут троллейбуса №5: \"Троллейбусное депо - Знаменский собор\"",
+    "stops": [
+      {
+        "nodeId": 1284624192,
+        "name": "75 лет Курской области",
+        "latitude": 51.7643852,
+        "longitude": 36.1771843,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 11
+      }
+    ]
+  },
+  {
+    "from": "Авиацентр",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819446,
+    "routeNumber": "7",
+    "name": "Маршрут троллейбуса №7: \"Авиацентр - Знаменский собор\"",
+    "stops": [
+      {
+        "nodeId": 2565560585,
+        "name": "Хутор Кислино",
+        "latitude": 51.6525067,
+        "longitude": 36.1627673,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1487939252,
+        "name": "Кинотеатр \"Спутник\"",
+        "latitude": 51.6489205,
+        "longitude": 36.1469335,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1487939240,
+        "name": "Школа №41",
+        "latitude": 51.6495195,
+        "longitude": 36.1393721,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 1487939234,
+        "name": "Льговский поворот",
+        "latitude": 51.6617953,
+        "longitude": 36.1370671,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1098251047,
+        "name": "Народная улица",
+        "latitude": 51.6677816,
+        "longitude": 36.1408524,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1098251077,
+        "name": "Площадь Рокоссовского",
+        "latitude": 51.671542,
+        "longitude": 36.1432579,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1100222067,
+        "name": "Улица Черняховского",
+        "latitude": 51.6753435,
+        "longitude": 36.1456979,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1484590428,
+        "name": "Река Сейм",
+        "latitude": 51.6822204,
+        "longitude": 36.1501161,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1317377722,
+        "name": "Соловьиная роща",
+        "latitude": 51.6936137,
+        "longitude": 36.1574556,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1167811236,
+        "name": "Налоговая инспекция",
+        "latitude": 51.7006505,
+        "longitude": 36.1619455,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 967756458,
+        "name": "Сумская улица",
+        "latitude": 51.7047995,
+        "longitude": 36.1646327,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1357972862,
+        "name": "Улица Пионеров",
+        "latitude": 51.71536,
+        "longitude": 36.1662721,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 968563156,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7249024,
+        "longitude": 36.1870102,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 968563242,
+        "name": "Улица Сонина",
+        "latitude": 51.7244184,
+        "longitude": 36.1907917,
+        "role": "platform",
+        "sequence": 13
+      }
+    ]
+  },
+  {
+    "from": "Знаменский собор",
+    "to": "",
+    "operator": "ГУП КО \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819447,
+    "routeNumber": "7",
+    "name": "Маршрут троллейбуса №7: \"Знаменский собор - Авиацентр\"",
+    "stops": [
+      {
+        "nodeId": 968563687,
+        "name": "Знаменский собор",
+        "latitude": 51.7281172,
+        "longitude": 36.1935326,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 968563217,
+        "name": "Улица Сонина",
+        "latitude": 51.7245182,
+        "longitude": 36.1905291,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 968563102,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7252254,
+        "longitude": 36.1872231,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 1487765576,
+        "name": "Дружининская улица",
+        "latitude": 51.722573,
+        "longitude": 36.1801504,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1487765442,
+        "name": "Чумаковская улица",
+        "latitude": 51.721269,
+        "longitude": 36.1767781,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1487765665,
+        "name": "Площадь Дзержинского",
+        "latitude": 51.7195156,
+        "longitude": 36.163349,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1370623010,
+        "name": "Улица Пионеров",
+        "latitude": 51.7154361,
+        "longitude": 36.165512,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 967756405,
+        "name": "Сумская улица",
+        "latitude": 51.7050657,
+        "longitude": 36.1640204,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1167811238,
+        "name": "Налоговая инспекция",
+        "latitude": 51.700914,
+        "longitude": 36.1613387,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1317377710,
+        "name": "Соловьиная роща",
+        "latitude": 51.6938401,
+        "longitude": 36.1568054,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1317459667,
+        "name": "Автоцентр \"Южный\"",
+        "latitude": 51.6879522,
+        "longitude": 36.1530267,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1484590429,
+        "name": "Река Сейм",
+        "latitude": 51.6823769,
+        "longitude": 36.149369,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1100222071,
+        "name": "Улица Черняховского",
+        "latitude": 51.675942,
+        "longitude": 36.1453258,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1100222089,
+        "name": "Народная улица",
+        "latitude": 51.6679296,
+        "longitude": 36.140257,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1487939237,
+        "name": "Льговский поворот",
+        "latitude": 51.6618162,
+        "longitude": 36.1365925,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 1487939246,
+        "name": "Магистральная улица",
+        "latitude": 51.6501923,
+        "longitude": 36.1305699,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1487939228,
+        "name": "Школа №41",
+        "latitude": 51.6492633,
+        "longitude": 36.1399383,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1487939235,
+        "name": "Центр досуга Спутник",
+        "latitude": 51.648862,
+        "longitude": 36.1458854,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 2631068606,
+        "name": "Хутор Кислино",
+        "latitude": 51.6524932,
+        "longitude": 36.1634357,
+        "role": "platform",
+        "sequence": 18
+      }
+    ]
+  },
+  {
+    "from": "ККПФ",
+    "to": "",
+    "operator": "ГУП КО \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819484,
+    "routeNumber": "8",
+    "name": "Маршрут троллейбуса №8: \"ККПФ - Льговский поворот\"",
+    "stops": [
+      {
+        "nodeId": 1423284314,
+        "name": "Улица Тропинка",
+        "latitude": 51.7833839,
+        "longitude": 36.1723095,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1287989191,
+        "name": "Знаменская роща",
+        "latitude": 51.7768052,
+        "longitude": 36.1761807,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 609212994,
+        "name": "Метеостанция",
+        "latitude": 51.7742291,
+        "longitude": 36.1776679,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419338,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.7706668,
+        "longitude": 36.1807068,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 968563687,
+        "name": "Знаменский собор",
+        "latitude": 51.7281172,
+        "longitude": 36.1935326,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 968563217,
+        "name": "Улица Сонина",
+        "latitude": 51.7245182,
+        "longitude": 36.1905291,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 968563102,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7252254,
+        "longitude": 36.1872231,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1487765665,
+        "name": "Площадь Дзержинского",
+        "latitude": 51.7195156,
+        "longitude": 36.163349,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 1370623010,
+        "name": "Улица Пионеров",
+        "latitude": 51.7154361,
+        "longitude": 36.165512,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 967756405,
+        "name": "Сумская улица",
+        "latitude": 51.7050657,
+        "longitude": 36.1640204,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1167811238,
+        "name": "Налоговая инспекция",
+        "latitude": 51.700914,
+        "longitude": 36.1613387,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 1317377710,
+        "name": "Соловьиная роща",
+        "latitude": 51.6938401,
+        "longitude": 36.1568054,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1317459667,
+        "name": "Автоцентр \"Южный\"",
+        "latitude": 51.6879522,
+        "longitude": 36.1530267,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 1484590429,
+        "name": "Река Сейм",
+        "latitude": 51.6823769,
+        "longitude": 36.149369,
+        "role": "platform",
+        "sequence": 24
+      },
+      {
+        "nodeId": 1100222071,
+        "name": "Улица Черняховского",
+        "latitude": 51.675942,
+        "longitude": 36.1453258,
+        "role": "platform",
+        "sequence": 25
+      },
+      {
+        "nodeId": 1098251052,
+        "name": "Площадь Рокоссовского",
+        "latitude": 51.6722607,
+        "longitude": 36.1419511,
+        "role": "platform",
+        "sequence": 26
+      }
+    ]
+  },
+  {
+    "from": "Льговский поворот",
+    "to": "",
+    "operator": "ГУП КО \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819485,
+    "routeNumber": "8",
+    "name": "Маршрут троллейбуса №8: \"Льговский поворот - ККПФ\"",
+    "stops": [
+      {
+        "nodeId": 1098251047,
+        "name": "Народная улица",
+        "latitude": 51.6677816,
+        "longitude": 36.1408524,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1098251077,
+        "name": "Площадь Рокоссовского",
+        "latitude": 51.671542,
+        "longitude": 36.1432579,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1100222067,
+        "name": "Улица Черняховского",
+        "latitude": 51.6753435,
+        "longitude": 36.1456979,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 1484590428,
+        "name": "Река Сейм",
+        "latitude": 51.6822204,
+        "longitude": 36.1501161,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1317377722,
+        "name": "Соловьиная роща",
+        "latitude": 51.6936137,
+        "longitude": 36.1574556,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1167811236,
+        "name": "Налоговая инспекция",
+        "latitude": 51.7006505,
+        "longitude": 36.1619455,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 967756458,
+        "name": "Сумская улица",
+        "latitude": 51.7047995,
+        "longitude": 36.1646327,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1357972862,
+        "name": "Улица Пионеров",
+        "latitude": 51.71536,
+        "longitude": 36.1662721,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 967700896,
+        "name": "Улица 50 лет Октября",
+        "latitude": 51.7205102,
+        "longitude": 36.1672589,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 968563156,
+        "name": "Улица Красной Армии",
+        "latitude": 51.7249024,
+        "longitude": 36.1870102,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 968563242,
+        "name": "Улица Сонина",
+        "latitude": 51.7244184,
+        "longitude": 36.1907917,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 690419337,
+        "name": "Аграрный университет",
+        "latitude": 51.766777,
+        "longitude": 36.183277,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 609212984,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.770899,
+        "longitude": 36.1810209,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 609212990,
+        "name": "Метеостанция",
+        "latitude": 51.7746118,
+        "longitude": 36.1789024,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 1423289434,
+        "name": "Знаменская роща",
+        "latitude": 51.7782504,
+        "longitude": 36.1766938,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 1342038844,
+        "name": "Улица Тропинка",
+        "latitude": 51.7832813,
+        "longitude": 36.1737953,
+        "role": "platform",
+        "sequence": 24
+      },
+      {
+        "nodeId": 1451734873,
+        "name": "Остановка ГИБДД",
+        "latitude": 51.7917488,
+        "longitude": 36.1689581,
+        "role": "platform",
+        "sequence": 25
+      }
+    ]
+  },
+  {
+    "from": "Знаменский собор",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819489,
+    "routeNumber": "9",
+    "name": "Маршрут троллейбуса №9: \"Знаменский собор - Северо-западный район\"",
+    "stops": [
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 608666382,
+        "name": "Аграрный университет",
+        "latitude": 51.7658266,
+        "longitude": 36.1825971,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1487932202,
+        "name": "Троллейбусное депо",
+        "latitude": 51.7641139,
+        "longitude": 36.1753992,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1333780636,
+        "name": "Кавказская улица",
+        "latitude": 51.7624902,
+        "longitude": 36.1683797,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1487932200,
+        "name": "Казачий лог",
+        "latitude": 51.761385,
+        "longitude": 36.1637515,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1271720382,
+        "name": "Нижняя Казацкая улица",
+        "latitude": 51.7586879,
+        "longitude": 36.1577076,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1271721852,
+        "name": "Школа №14",
+        "latitude": 51.7577482,
+        "longitude": 36.1547196,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 1400087619,
+        "name": "Дом ребёнка",
+        "latitude": 51.7570047,
+        "longitude": 36.151587,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 1400087675,
+        "name": "Техникум",
+        "latitude": 51.75632,
+        "longitude": 36.1448725,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 1320391755,
+        "name": "Хлебозавод",
+        "latitude": 51.7538341,
+        "longitude": 36.1376798,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 1487932197,
+        "name": "Автовокзал",
+        "latitude": 51.74975,
+        "longitude": 36.1406143,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 1487765502,
+        "name": "Проспект Дружбы",
+        "latitude": 51.7439481,
+        "longitude": 36.1421162,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 1484623126,
+        "name": "Кинотеатр \"Сказка\"",
+        "latitude": 51.7408794,
+        "longitude": 36.1328004,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 1484623125,
+        "name": "Школа №54",
+        "latitude": 51.7389242,
+        "longitude": 36.1269296,
+        "role": "platform",
+        "sequence": 21
+      }
+    ]
+  },
+  {
+    "from": "Северо-западный район",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 1819490,
+    "routeNumber": "9",
+    "name": "Маршрут троллейбуса №9: \"Северо-западный район - Знаменский собор\"",
+    "stops": [
+      {
+        "nodeId": 1083291619,
+        "name": "Школа №54",
+        "latitude": 51.7391361,
+        "longitude": 36.1286984,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1091361341,
+        "name": "Веспремская улица",
+        "latitude": 51.7423683,
+        "longitude": 36.1383742,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1423240844,
+        "name": "Проспект Дружбы",
+        "latitude": 51.7449116,
+        "longitude": 36.1445793,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 3776215026,
+        "name": "Планерная улица",
+        "latitude": 51.7470858,
+        "longitude": 36.142857,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 1319853849,
+        "name": "Автовокзал",
+        "latitude": 51.7500597,
+        "longitude": 36.1407724,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 1400087707,
+        "name": "Хлебозавод",
+        "latitude": 51.7542943,
+        "longitude": 36.1377013,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1320391715,
+        "name": "Улица Пучковка",
+        "latitude": 51.7552257,
+        "longitude": 36.1404011,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 1083590623,
+        "name": "Техникум",
+        "latitude": 51.7561444,
+        "longitude": 36.1461434,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 1487932198,
+        "name": "Дом ребёнка",
+        "latitude": 51.7564322,
+        "longitude": 36.150212,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 1400087600,
+        "name": "Школа №14",
+        "latitude": 51.7573989,
+        "longitude": 36.1545215,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 1271719129,
+        "name": "Нижняя Казацкая улица",
+        "latitude": 51.7591083,
+        "longitude": 36.1595081,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 1271730769,
+        "name": "Казачий лог",
+        "latitude": 51.7612762,
+        "longitude": 36.1641707,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1487932199,
+        "name": "Кавказская улица",
+        "latitude": 51.7622442,
+        "longitude": 36.1684798,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1487932201,
+        "name": "Троллейбусное депо",
+        "latitude": 51.763864,
+        "longitude": 36.1750335,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1284624192,
+        "name": "75 лет Курской области",
+        "latitude": 51.7643852,
+        "longitude": 36.1771843,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 15
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 16
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 17
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 18
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 19
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 20
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 21
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 22
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 23
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 24
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 25
+      }
+    ]
+  },
+  {
+    "from": "Знаменский собор",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 14083780,
+    "routeNumber": "11",
+    "name": "Троллейбус 11: Знаменский собор - посёлок Северный",
+    "stops": [
+      {
+        "nodeId": 968563792,
+        "name": "Красная площадь",
+        "latitude": 51.7286404,
+        "longitude": 36.1927811,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 690419488,
+        "name": "Красная площадь",
+        "latitude": 51.7304446,
+        "longitude": 36.1912264,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 690419493,
+        "name": "Курский государственный университет",
+        "latitude": 51.7357546,
+        "longitude": 36.1903642,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 690419502,
+        "name": "Улица Ватутина",
+        "latitude": 51.7390812,
+        "longitude": 36.1902949,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419359,
+        "name": "Садовая улица",
+        "latitude": 51.7423182,
+        "longitude": 36.1903321,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 690419364,
+        "name": "Улица Гоголя",
+        "latitude": 51.7464027,
+        "longitude": 36.1902756,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 690419371,
+        "name": "Северный рынок",
+        "latitude": 51.7505478,
+        "longitude": 36.1903155,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 967694503,
+        "name": "Никитская улица",
+        "latitude": 51.7551617,
+        "longitude": 36.1893456,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 608666381,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7615841,
+        "longitude": 36.1860016,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 690419337,
+        "name": "Аграрный университет",
+        "latitude": 51.766777,
+        "longitude": 36.183277,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 609212984,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.770899,
+        "longitude": 36.1810209,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 609212990,
+        "name": "Метеостанция",
+        "latitude": 51.7746118,
+        "longitude": 36.1789024,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1423289434,
+        "name": "Знаменская роща",
+        "latitude": 51.7782504,
+        "longitude": 36.1766938,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 1342038844,
+        "name": "Улица Тропинка",
+        "latitude": 51.7832813,
+        "longitude": 36.1737953,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 1451734873,
+        "name": "Остановка ГИБДД",
+        "latitude": 51.7917488,
+        "longitude": 36.1689581,
+        "role": "platform",
+        "sequence": 14
+      }
+    ]
+  },
+  {
+    "from": "посёлок Северный",
+    "to": "",
+    "operator": "МУП \"Курскэлектротранс\"",
+    "network": "",
+    "id": 14083785,
+    "routeNumber": "11",
+    "name": "Троллейбус 11: посёлок Северный - Знаменский собор",
+    "stops": [
+      {
+        "nodeId": 1250852478,
+        "name": "ТК «СтройГигант»",
+        "latitude": 51.7955494,
+        "longitude": 36.1671592,
+        "role": "platform",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1423284314,
+        "name": "Улица Тропинка",
+        "latitude": 51.7833839,
+        "longitude": 36.1723095,
+        "role": "platform",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1287989191,
+        "name": "Знаменская роща",
+        "latitude": 51.7768052,
+        "longitude": 36.1761807,
+        "role": "platform",
+        "sequence": 2
+      },
+      {
+        "nodeId": 609212994,
+        "name": "Метеостанция",
+        "latitude": 51.7742291,
+        "longitude": 36.1776679,
+        "role": "platform",
+        "sequence": 3
+      },
+      {
+        "nodeId": 690419338,
+        "name": "Улица Дальние Парки",
+        "latitude": 51.7706668,
+        "longitude": 36.1807068,
+        "role": "platform",
+        "sequence": 4
+      },
+      {
+        "nodeId": 967841346,
+        "name": "Аграрный университет",
+        "latitude": 51.7650249,
+        "longitude": 36.1835891,
+        "role": "platform",
+        "sequence": 5
+      },
+      {
+        "nodeId": 452043583,
+        "name": "ТРК \"МегаГриНН\"",
+        "latitude": 51.7617206,
+        "longitude": 36.1855128,
+        "role": "platform",
+        "sequence": 6
+      },
+      {
+        "nodeId": 452043581,
+        "name": "Площадь Героев Курской битвы",
+        "latitude": 51.7587408,
+        "longitude": 36.1870848,
+        "role": "platform",
+        "sequence": 7
+      },
+      {
+        "nodeId": 452043579,
+        "name": "Никитская улица",
+        "latitude": 51.754463,
+        "longitude": 36.1894332,
+        "role": "platform",
+        "sequence": 8
+      },
+      {
+        "nodeId": 690419374,
+        "name": "Северный рынок",
+        "latitude": 51.750528,
+        "longitude": 36.1900785,
+        "role": "platform",
+        "sequence": 9
+      },
+      {
+        "nodeId": 690419367,
+        "name": "Улица Павлова",
+        "latitude": 51.7479171,
+        "longitude": 36.1900224,
+        "role": "platform",
+        "sequence": 10
+      },
+      {
+        "nodeId": 452043570,
+        "name": "Парк героев гражданской войны",
+        "latitude": 51.74384,
+        "longitude": 36.190009,
+        "role": "platform",
+        "sequence": 11
+      },
+      {
+        "nodeId": 452043566,
+        "name": "Садовая улица",
+        "latitude": 51.7416667,
+        "longitude": 36.1900759,
+        "role": "platform",
+        "sequence": 12
+      },
+      {
+        "nodeId": 452043564,
+        "name": "Кондитерский комбинат",
+        "latitude": 51.7376009,
+        "longitude": 36.1901069,
+        "role": "platform",
+        "sequence": 13
+      },
+      {
+        "nodeId": 690419497,
+        "name": "Улица Кирова",
+        "latitude": 51.7342053,
+        "longitude": 36.190073,
+        "role": "platform",
+        "sequence": 14
+      },
+      {
+        "nodeId": 690419482,
+        "name": "Красная площадь",
+        "latitude": 51.7302504,
+        "longitude": 36.1919415,
+        "role": "platform",
+        "sequence": 15
+      }
+    ]
+  }
+]

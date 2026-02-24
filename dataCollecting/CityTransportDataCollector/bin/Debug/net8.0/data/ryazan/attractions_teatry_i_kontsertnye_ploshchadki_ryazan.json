@@ -1,0 +1,294 @@
+﻿[
+  {
+    "id": 7112753932,
+    "name": "Рязанский музыкальный театр",
+    "latitude": 54.6155236,
+    "longitude": 39.7583038,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": null,
+    "estimatedVisitMinutes": 180,
+    "osmType": "node",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=12",
+      "addr:street=улица Циолковского",
+      "alt_name=Рязанский областной музыкальный театр",
+      "amenity=theatre",
+      "check_date=2024-05-09",
+      "contact:instagram=muzteatrrzn",
+      "contact:vk=muzteatrrzn",
+      "email=muzteatr.rzn@mail.ru",
+      "name=Рязанский музыкальный театр",
+      "official_name=ГАУК «Рязанский музыкальный театр»",
+      "phone=+7 491 245-81-13",
+      "ref:mkrf_theaters=12798",
+      "website=https://romust.ru/"
+    ]
+  },
+  {
+    "id": 96881608,
+    "name": "Рязанский театр драмы",
+    "latitude": 54.6210686,
+    "longitude": 39.7576647,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 5853.299598482989,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=7",
+      "addr:street=Театральная площадь",
+      "amenity=theatre",
+      "architect=Ирина Николаевна Чистосердова",
+      "building=yes",
+      "email=rzndrama@yandex.ru",
+      "name=Рязанский театр драмы",
+      "official_name=ГАУК «Рязанский государственный ордена «Знак Почета» областной театр драмы»",
+      "opening_hours=Mo-Fr 10:00-19:00; Sa-Su 10:00-18:00",
+      "ref:mkrf_theaters=12884",
+      "website=https://www.rzndrama.ru/"
+    ]
+  },
+  {
+    "id": 99466227,
+    "name": "Театр кукол",
+    "latitude": 54.6226728,
+    "longitude": 39.7591622,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 3856.530609962102,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=27",
+      "addr:street=улица Есенина",
+      "amenity=theatre",
+      "building=yes",
+      "email=rzpuppet-office@mail.ru",
+      "name=Театр кукол",
+      "opening_hours=Tu-Su 10:00-18:00",
+      "operator=ГАУК «Рязанский государственный областной театр кукол»",
+      "phone=+7 491 228-23-26",
+      "ref:mkrf_theaters=12354",
+      "website=https://rznpuppet.ru/"
+    ]
+  },
+  {
+    "id": 101155397,
+    "name": "Филармония",
+    "latitude": 54.6264246,
+    "longitude": 39.7503176,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 10398.2563236104,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=26",
+      "addr:street=улица Ленина",
+      "amenity=theatre",
+      "architect=Игорь Петрович Антипов",
+      "building=yes",
+      "contact:facebook=https://www.facebook.com/rznfilarmonia",
+      "contact:vk=https://vk.com/rznfilarmonia",
+      "name=Филармония",
+      "official_name=ГАУК «Рязанская областная филармония»",
+      "website=https://rznfilarmonia.ru/",
+      "wikidata=Q94791582"
+    ]
+  },
+  {
+    "id": 101850040,
+    "name": "Рязанский цирк",
+    "latitude": 54.631254,
+    "longitude": 39.74943974999999,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 12009.055705970623,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=34",
+      "addr:postcode=390000",
+      "addr:street=Лево-Лыбедская улица",
+      "amenity=theatre",
+      "building=yes",
+      "contact:phone=+7 (4912) 25-64-03",
+      "contact:vk=https://vk.com/ryazan.circus",
+      "name=Рязанский цирк",
+      "theatre:genre=circus",
+      "tourism=attraction",
+      "website=https://www.circus-ryazan.ru/",
+      "wikidata=Q96473308"
+    ]
+  },
+  {
+    "id": 101851275,
+    "name": "Рязанский театр юного зрителя",
+    "latitude": 54.6335296,
+    "longitude": 39.7426718,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 5428.451732857318,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=16",
+      "addr:street=Соборная улица",
+      "amenity=theatre",
+      "building=yes",
+      "building:levels=2",
+      "email=soborkatuz@list.ru",
+      "heritage=4",
+      "heritage:name=Здание театра, 1862-1870 гг.",
+      "heritage:website=https://culture62.ru/?object=%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d1%82%d0%b5%d0%b0%d1%82%d1%80%d0%b0-1862-1870-%d0%b3-%d0%b3",
+      "name=Рязанский театр юного зрителя",
+      "old_name=Театр Юного Зрителя",
+      "opening_hours=Tu-Sa 10:30-18:00; Su 10:30-16:00",
+      "operator=ГАУК «Рязанский областной ТЮЗ»",
+      "phone=+7 491 227-52-38",
+      "ref:mkrf_theaters=12355",
+      "website=https://www.rzn-tdm.ru/"
+    ]
+  },
+  {
+    "id": 173102169,
+    "name": "Зелёный театр",
+    "latitude": 54.61271515,
+    "longitude": 39.735843,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 3543.1956034792934,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "abandoned=yes",
+      "amenity=theatre",
+      "name=Зелёный театр",
+      "theatre:type=open_air"
+    ]
+  },
+  {
+    "id": 969579428,
+    "name": "Сцена",
+    "latitude": 54.6265492,
+    "longitude": 39.753026750000004,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 466.5512698035611,
+    "estimatedVisitMinutes": 180,
+    "osmType": "way",
+    "tags": [
+      "amenity=theatre",
+      "name=Сцена",
+      "theatre:type=amphi"
+    ]
+  },
+  {
+    "id": 2233275,
+    "name": "Танцевальная площадка",
+    "latitude": 54.61084595,
+    "longitude": 39.7334454,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Академические театры",
+    "square": 2291.388782569827,
+    "estimatedVisitMinutes": 180,
+    "osmType": "relation",
+    "tags": [
+      "amenity=theatre",
+      "name=Танцевальная площадка",
+      "type=multipolygon",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 472389569,
+    "name": "Люксор",
+    "latitude": 54.6332472,
+    "longitude": 39.7734024,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Люксор",
+      "official_name=Люксор в ТЦ \"Круиз\"",
+      "operator=Люксор",
+      "website=https://luxorfilm.ru/cinema/ryazan/"
+    ]
+  },
+  {
+    "id": 1176809955,
+    "name": "Малина",
+    "latitude": 54.630445,
+    "longitude": 39.7397255,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Малина",
+      "wheelchair=limited"
+    ]
+  },
+  {
+    "id": 1252762428,
+    "name": "КиноЛюкс",
+    "latitude": 54.6318092,
+    "longitude": 39.6974518,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=КиноЛюкс"
+    ]
+  },
+  {
+    "id": 1936894286,
+    "name": "Киномакс",
+    "latitude": 54.6336454,
+    "longitude": 39.689277,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Киномакс"
+    ]
+  },
+  {
+    "id": 3909301120,
+    "name": "Кронверк Синема",
+    "latitude": 54.6306924,
+    "longitude": 39.7094949,
+    "category": "Театры и концертные площадки",
+    "subcategory": "Кинозалы",
+    "square": null,
+    "estimatedVisitMinutes": 120,
+    "osmType": "node",
+    "tags": [
+      "amenity=cinema",
+      "name=Кронверк Синема"
+    ]
+  }
+]

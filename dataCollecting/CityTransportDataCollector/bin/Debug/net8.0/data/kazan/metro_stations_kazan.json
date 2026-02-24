@@ -1,0 +1,244 @@
+﻿[
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 11
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "",
+    "name": "Дубравная",
+    "id": 5868304044,
+    "latitude": 55.7437416,
+    "longitude": 49.2190008
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 3
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Яшьлек",
+    "name": "Яшьлек",
+    "id": 9017835957,
+    "latitude": 55.8281421,
+    "longitude": 49.0825977
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 9
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Горки",
+    "name": "Горки",
+    "id": 9017835958,
+    "latitude": 55.7601813,
+    "longitude": 49.1909651
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 10
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Проспект Победы",
+    "name": "Проспект Победы",
+    "id": 9022338986,
+    "latitude": 55.7499583,
+    "longitude": 49.2085934
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 8
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Аметьево",
+    "name": "Аметьево",
+    "id": 9022338987,
+    "latitude": 55.7651213,
+    "longitude": 49.1665282
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 7
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 5
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Суконная слобода",
+    "name": "Суконная слобода",
+    "id": 9022338988,
+    "latitude": 55.7769771,
+    "longitude": 49.1425761
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 6
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 6
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Площадь Габдуллы Тукая",
+    "name": "Площадь Габдуллы Тукая",
+    "id": 9022338989,
+    "latitude": 55.785591,
+    "longitude": 49.12496
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 5
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 7
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Кремлёвская",
+    "name": "Кремлёвская",
+    "id": 9022338990,
+    "latitude": 55.7951768,
+    "longitude": 49.1070089
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 2
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 10
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Северный вокзал",
+    "name": "Северный вокзал",
+    "id": 9022338995,
+    "latitude": 55.8419884,
+    "longitude": 49.0822239
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 1
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 11
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Авиастроительная",
+    "name": "Авиастроительная",
+    "id": 9022339000,
+    "latitude": 55.8556288,
+    "longitude": 49.0846045
+  },
+  {
+    "line": "Метро 1: Дубравная → Авиастроительная",
+    "routes": [
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 4
+      },
+      {
+        "color": "red",
+        "routeNumber": "1",
+        "order": 8
+      }
+    ],
+    "isTransfer": false,
+    "transferLines": [],
+    "localName": "Козья слобода",
+    "name": "Козья слобода",
+    "id": 9022339007,
+    "latitude": 55.8165526,
+    "longitude": 49.0984168
+  }
+]

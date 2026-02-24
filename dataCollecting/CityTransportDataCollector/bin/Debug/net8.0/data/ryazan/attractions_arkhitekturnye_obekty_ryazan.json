@@ -1,0 +1,23 @@
+﻿[
+  {
+    "id": 835142220,
+    "name": "Рязанский кремль",
+    "latitude": 54.636150549999996,
+    "longitude": 39.7501901,
+    "category": "Архитектурные объекты",
+    "subcategory": "Историческая архитектура",
+    "square": 197332.35568822353,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "castle_type=kremlin",
+      "fee=no",
+      "historic=castle",
+      "name=Рязанский кремль",
+      "ruins=yes",
+      "tourism=museum",
+      "wikidata=Q4402653",
+      "wikipedia=ru:Рязанский кремль"
+    ]
+  }
+]

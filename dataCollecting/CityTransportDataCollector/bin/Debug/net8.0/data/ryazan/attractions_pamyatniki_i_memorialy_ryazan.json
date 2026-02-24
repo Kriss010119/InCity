@@ -1,0 +1,1338 @@
+﻿[
+  {
+    "id": 613106575,
+    "name": "Памятник Победы",
+    "latitude": 54.6287362,
+    "longitude": 39.71063,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник Победы"
+    ]
+  },
+  {
+    "id": 736442710,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6292426,
+    "longitude": 39.7369437,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич",
+      "wikidata=Q116669130"
+    ]
+  },
+  {
+    "id": 778540134,
+    "name": "Евпатий Коловрат",
+    "latitude": 54.6296449,
+    "longitude": 39.7427616,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Евпатий Коловрат",
+      "subject:wikidata=Q4173042",
+      "subject:wikipedia=ru:Евпатий Коловрат",
+      "wikidata=Q125917940"
+    ]
+  },
+  {
+    "id": 1245049149,
+    "name": "Олег Рязанский",
+    "latitude": 54.6330862,
+    "longitude": 39.743383,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Олег Рязанский",
+      "wikidata=Q4333471",
+      "wikipedia=ru:Олег Иванович"
+    ]
+  },
+  {
+    "id": 1254311608,
+    "name": "Памятник И.П.Павлову",
+    "latitude": 54.6260852,
+    "longitude": 39.7501486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник И.П.Павлову",
+      "subject:wikidata=Q42985",
+      "subject:wikipedia=ru:Павлов, Иван Петрович",
+      "wikidata=Q116455454"
+    ]
+  },
+  {
+    "id": 1292887310,
+    "name": "Г. К. Петрову",
+    "latitude": 54.6296668,
+    "longitude": 39.7259275,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "memorial=statue",
+      "memorial:subject=Григорий Константинович Петров",
+      "name=Г. К. Петрову",
+      "subject:wikidata=Q62209",
+      "subject:wikipedia=ru:Петров, Григорий Константинович"
+    ]
+  },
+  {
+    "id": 1307597878,
+    "name": "Михаил Евграфович Салтыков-Щедрин",
+    "latitude": 54.6290278,
+    "longitude": 39.7452596,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Михаил Евграфович Салтыков-Щедрин"
+    ]
+  },
+  {
+    "id": 1428189373,
+    "name": "Памятник Ф.Полетаеву",
+    "latitude": 54.6103581,
+    "longitude": 39.7175025,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Памятник Ф.Полетаеву",
+      "wikidata=Q3755452",
+      "wikipedia=ru:Полетаев, Фёдор Андрианович"
+    ]
+  },
+  {
+    "id": 2016251210,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6272948,
+    "longitude": 39.7105243,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич"
+    ]
+  },
+  {
+    "id": 2073602802,
+    "name": "САУ Нона",
+    "latitude": 54.6188546,
+    "longitude": 39.6716319,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=САУ Нона"
+    ]
+  },
+  {
+    "id": 2139432877,
+    "name": "Памятник В.И. Ленину",
+    "latitude": 54.6018023,
+    "longitude": 39.7393806,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "monument=statue",
+      "name=Памятник В.И. Ленину",
+      "subject:wikidata=Q1394",
+      "subject:wikipedia=ru:Ленин, Владимир Ильич"
+    ]
+  },
+  {
+    "id": 2721308549,
+    "name": "Надежде Чумаковой",
+    "latitude": 54.6301967,
+    "longitude": 39.7078311,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Надежде Чумаковой"
+    ]
+  },
+  {
+    "id": 3097489118,
+    "name": "Рязань",
+    "latitude": 54.5301711,
+    "longitude": 39.7855273,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Рязань"
+    ]
+  },
+  {
+    "id": 5129539325,
+    "name": "Ульянова и Ленин",
+    "latitude": 54.6251069,
+    "longitude": 39.7486318,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Ульянова и Ленин"
+    ]
+  },
+  {
+    "id": 5129539523,
+    "name": "Военная техника",
+    "latitude": 54.6329127,
+    "longitude": 39.7353309,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "historic=monument",
+      "name=Военная техника"
+    ]
+  },
+  {
+    "id": 12430635040,
+    "name": "Памятник сотрудникам и военнослужащим Росгвардии, погибшим при исполнении служебного долга",
+    "latitude": 54.6278615,
+    "longitude": 39.7095974,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "description=открыт 9 ноября 2019 г",
+      "historic=monument",
+      "name=Памятник сотрудникам и военнослужащим Росгвардии, погибшим при исполнении служебного долга"
+    ]
+  },
+  {
+    "id": 197714586,
+    "name": "Вечный огонь",
+    "latitude": 54.6112458,
+    "longitude": 39.74721175,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": 42.0108178536656,
+    "estimatedVisitMinutes": 3,
+    "osmType": "way",
+    "tags": [
+      "historic=monument",
+      "name=Вечный огонь"
+    ]
+  },
+  {
+    "id": 1165785693,
+    "name": "памятник К.Э. Циолковскому",
+    "latitude": 54.6208056,
+    "longitude": 39.757137,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=памятник К.Э. Циолковскому",
+      "wikidata=Q113415303"
+    ]
+  },
+  {
+    "id": 1248146889,
+    "name": "Памятник Молодцову",
+    "latitude": 54.6626644,
+    "longitude": 39.6408375,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник Молодцову"
+    ]
+  },
+  {
+    "id": 1252145172,
+    "name": "Георгий Победоносец",
+    "latitude": 54.6446972,
+    "longitude": 39.6586521,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "man_made=tower",
+      "memorial=statue",
+      "name=Георгий Победоносец",
+      "subject:wikidata=Q48438",
+      "subject:wikipedia=ru:Георгий Победоносец"
+    ]
+  },
+  {
+    "id": 1252145182,
+    "name": "Памятник Советско-Польскому Братству по оружию",
+    "latitude": 54.6509344,
+    "longitude": 39.6601362,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник Советско-Польскому Братству по оружию"
+    ]
+  },
+  {
+    "id": 1252222263,
+    "name": "Памятник героям гражданской войны",
+    "latitude": 54.6348766,
+    "longitude": 39.7458635,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=obelisk",
+      "name=Памятник героям гражданской войны",
+      "wikidata=Q28125495"
+    ]
+  },
+  {
+    "id": 1253913335,
+    "name": "С. А. Есенину",
+    "latitude": 54.6352421,
+    "longitude": 39.7421997,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "memorial:subject=Сергей Александрович Есенин",
+      "name=С. А. Есенину",
+      "subject:wikidata=Q31628",
+      "subject:wikipedia=ru:Есенин, Сергей Александрович"
+    ]
+  },
+  {
+    "id": 1300659569,
+    "name": "Мемориальный комплекс Площадь Победы",
+    "latitude": 54.6288551,
+    "longitude": 39.7104566,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Мемориальный комплекс Площадь Победы"
+    ]
+  },
+  {
+    "id": 1313853472,
+    "name": "В. И. Ленину",
+    "latitude": 54.7911978,
+    "longitude": 39.8347597,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В. И. Ленину"
+    ]
+  },
+  {
+    "id": 1317023885,
+    "name": "А.С. Пушкин",
+    "latitude": 54.6250701,
+    "longitude": 39.7609796,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=А.С. Пушкин"
+    ]
+  },
+  {
+    "id": 1345588313,
+    "name": "памятник М.Д. Скобелеву",
+    "latitude": 54.6087067,
+    "longitude": 39.8123137,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=памятник М.Д. Скобелеву",
+      "subject:wikidata=Q57173",
+      "subject:wikipedia=ru:Скобелев, Михаил Дмитриевич"
+    ]
+  },
+  {
+    "id": 1351832265,
+    "name": "В честь 50 летия образования СССР",
+    "latitude": 54.6633157,
+    "longitude": 39.6412848,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В честь 50 летия образования СССР"
+    ]
+  },
+  {
+    "id": 1390694487,
+    "name": "Аксенов Владимир Викторович",
+    "latitude": 54.6136658,
+    "longitude": 39.7604128,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=Аксенов Владимир Викторович",
+      "subject:wikipedia=ru:Аксёнов, Владимир Викторович"
+    ]
+  },
+  {
+    "id": 1390694488,
+    "name": "Уткин Владимир Федорович",
+    "latitude": 54.6134021,
+    "longitude": 39.7606244,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=Уткин Владимир Федорович",
+      "subject:wikidata=Q4478872",
+      "subject:wikipedia=ru:Уткин, Алексей Фёдорович"
+    ]
+  },
+  {
+    "id": 1528760361,
+    "name": "Ту-16",
+    "latitude": 54.6596707,
+    "longitude": 39.5931701,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-16"
+    ]
+  },
+  {
+    "id": 1788009798,
+    "name": "аллея Ветеранов",
+    "latitude": 54.6126768,
+    "longitude": 39.7276339,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=stone",
+      "name=аллея Ветеранов"
+    ]
+  },
+  {
+    "id": 1839307124,
+    "name": "Ильина Дубрава",
+    "latitude": 54.6076211,
+    "longitude": 39.7350052,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ильина Дубрава"
+    ]
+  },
+  {
+    "id": 1839322572,
+    "name": "А. С. Попов",
+    "latitude": 54.6138286,
+    "longitude": 39.7235901,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=bust",
+      "name=А. С. Попов",
+      "subject:wikidata=Q191799",
+      "subject:wikipedia=ru:Попов, Александр Степанович"
+    ]
+  },
+  {
+    "id": 2002843223,
+    "name": "Указатель в \"Сказку\"",
+    "latitude": 54.7702954,
+    "longitude": 39.8259856,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Указатель в \"Сказку\""
+    ]
+  },
+  {
+    "id": 2671299635,
+    "name": "Героям Великой Отечественной войны",
+    "latitude": 54.7916552,
+    "longitude": 39.8349714,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=war_memorial",
+      "name=Героям Великой Отечественной войны"
+    ]
+  },
+  {
+    "id": 2671309014,
+    "name": "Николай Чудотворец",
+    "latitude": 54.8009706,
+    "longitude": 39.8383428,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Николай Чудотворец"
+    ]
+  },
+  {
+    "id": 3799066085,
+    "name": "Памятник «Слава авиации»",
+    "latitude": 54.6590134,
+    "longitude": 39.5915454,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник «Слава авиации»"
+    ]
+  },
+  {
+    "id": 3923326182,
+    "name": "Братство русского и армянского народов",
+    "latitude": 54.6423292,
+    "longitude": 39.6642681,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Братство русского и армянского народов"
+    ]
+  },
+  {
+    "id": 4197182012,
+    "name": "Установка залпового огня",
+    "latitude": 54.6116846,
+    "longitude": 39.6754871,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Установка залпового огня"
+    ]
+  },
+  {
+    "id": 4197182013,
+    "name": "БМД",
+    "latitude": 54.6120472,
+    "longitude": 39.6757067,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=БМД"
+    ]
+  },
+  {
+    "id": 4758485771,
+    "name": "Павлов И. П.",
+    "latitude": 54.6318524,
+    "longitude": 39.727026,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Павлов И. П."
+    ]
+  },
+  {
+    "id": 4964925630,
+    "name": "В.И.Ленин",
+    "latitude": 54.6330138,
+    "longitude": 39.7267944,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=В.И.Ленин"
+    ]
+  },
+  {
+    "id": 5010286311,
+    "name": "БМД-1",
+    "latitude": 54.6092487,
+    "longitude": 39.6797189,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=БМД-1"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5685662139,
+    "name": "В. И. Ленину",
+    "latitude": 54.6270981,
+    "longitude": 39.7515205,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=statue",
+      "name=В. И. Ленину",
+      "subject:wikidata=Q1394"
+    ]
+  },
+  {
+    "id": 5758625325,
+    "name": "А.С. Пушкину",
+    "latitude": 54.7891405,
+    "longitude": 39.8331411,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=А.С. Пушкину"
+    ]
+  },
+  {
+    "id": 6512526556,
+    "name": "Н.Г. Чернышевскому",
+    "latitude": 54.7892654,
+    "longitude": 39.833419,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Н.Г. Чернышевскому"
+    ]
+  },
+  {
+    "id": 7362590847,
+    "name": "Самолёт Ту-22М2",
+    "latitude": 54.6515915,
+    "longitude": 39.5861837,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Самолёт Ту-22М2",
+      "name:ru=Самолёт Ту-22М2"
+    ]
+  },
+  {
+    "id": 7362590848,
+    "name": "Самолёт Ту-22ПД",
+    "latitude": 54.6513354,
+    "longitude": 39.5859048,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Самолёт Ту-22ПД",
+      "name:ru=Самолёт Ту-22ПД"
+    ]
+  },
+  {
+    "id": 7362590849,
+    "name": "Ту-16",
+    "latitude": 54.6509731,
+    "longitude": 39.5856057,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-16"
+    ]
+  },
+  {
+    "id": 7362590850,
+    "name": "Ту-22М4",
+    "latitude": 54.6509676,
+    "longitude": 39.5849821,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-22М4"
+    ]
+  },
+  {
+    "id": 7362590851,
+    "name": "Ту-95К",
+    "latitude": 54.6513502,
+    "longitude": 39.5853429,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Ту-95К"
+    ]
+  },
+  {
+    "id": 7362590852,
+    "name": "М-4-2",
+    "latitude": 54.6517516,
+    "longitude": 39.5855809,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=М-4-2"
+    ]
+  },
+  {
+    "id": 7362643710,
+    "name": "ВМ-Т Атлант (RA-01402)",
+    "latitude": 54.6496416,
+    "longitude": 39.5855024,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ВМ-Т Атлант (RA-01402)",
+      "name:en=VM-T Atlant (RA-01402)"
+    ]
+  },
+  {
+    "id": 7537464985,
+    "name": "В. И. Ленину",
+    "latitude": 54.6217966,
+    "longitude": 39.7639298,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=В. И. Ленину"
+    ]
+  },
+  {
+    "id": 8137260994,
+    "name": "А. Полин",
+    "latitude": 54.6381921,
+    "longitude": 39.6804468,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "inscription=Камень заложен в\u00A0начале улицы, названной в\u00A0честь пожарного, Героя Советского Союза Полина Александра Семеновича.",
+      "material=stone",
+      "memorial=stone",
+      "name=А. Полин",
+      "start_date=2017-12-27"
+    ]
+  },
+  {
+    "id": 8289292868,
+    "name": "ФАБ-9000 М-54",
+    "latitude": 54.6510094,
+    "longitude": 39.5854406,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-9000 М-54"
+    ]
+  },
+  {
+    "id": 8289292869,
+    "name": "ФАБ-5000 М-54",
+    "latitude": 54.6510336,
+    "longitude": 39.5854578,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-5000 М-54"
+    ]
+  },
+  {
+    "id": 8289292870,
+    "name": "ФАБ-3000 М-54",
+    "latitude": 54.6513766,
+    "longitude": 39.5857018,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=ФАБ-3000 М-54"
+    ]
+  },
+  {
+    "id": 8289292871,
+    "name": "Aero L-39 Albatros",
+    "latitude": 54.6511275,
+    "longitude": 39.5857157,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Aero L-39 Albatros"
+    ]
+  },
+  {
+    "id": 8536914918,
+    "name": "Черный кот",
+    "latitude": 54.6113548,
+    "longitude": 39.711881,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Черный кот"
+    ]
+  },
+  {
+    "id": 9668546421,
+    "name": "МАЗ на постаменте",
+    "latitude": 54.5691783,
+    "longitude": 39.8055316,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=МАЗ на постаменте"
+    ]
+  },
+  {
+    "id": 11015793520,
+    "name": "Памятник экипажу Ил-76",
+    "latitude": 54.6225812,
+    "longitude": 39.6562797,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "name=Памятник экипажу Ил-76",
+      "start_date=2023-06-24",
+      "wikidata=Q113412198",
+      "wikipedia=ru:Катастрофа Ил-76 в Рязани"
+    ]
+  },
+  {
+    "id": 11134878050,
+    "name": "ГАЗ-66, пожарный",
+    "latitude": 54.7837804,
+    "longitude": 39.8357346,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=obelisk",
+      "name=ГАЗ-66, пожарный"
+    ]
+  },
+  {
+    "id": 13263869286,
+    "name": "Памятный знак о заложении града Переславля Рязанского",
+    "latitude": 54.6346453,
+    "longitude": 39.7462154,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "historic=memorial",
+      "memorial=stone",
+      "name=Памятный знак о заложении града Переславля Рязанского"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": null,
+    "estimatedVisitMinutes": 1,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 114107385,
+    "name": "Погибшим в локальных войнах",
+    "latitude": 54.6315897,
+    "longitude": 39.733270399999995,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Мемориалы",
+    "square": 193.49071627423973,
+    "estimatedVisitMinutes": 1,
+    "osmType": "way",
+    "tags": [
+      "historic=memorial",
+      "memorial=war_memorial",
+      "name=Погибшим в локальных войнах",
+      "wikidata=Q119625443"
+    ]
+  },
+  {
+    "id": 1758753970,
+    "name": "Лоси",
+    "latitude": 54.6161768,
+    "longitude": 39.7345715,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Лоси",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4471136881,
+    "name": "Слоненок",
+    "latitude": 54.6053523,
+    "longitude": 39.7640952,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Слоненок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539321,
+    "name": "Шурик и Лида",
+    "latitude": 54.6285898,
+    "longitude": 39.7524577,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "amenity=bench",
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Шурик и Лида",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5129539421,
+    "name": "Гриб \"Грибы с глазами\"",
+    "latitude": 54.6261794,
+    "longitude": 39.751088,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибы с глазами\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023625,
+    "name": "Гриб \"Мудрец\"",
+    "latitude": 54.6305079,
+    "longitude": 39.7078831,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мудрец\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023626,
+    "name": "Гриб \"Рязанский коробейник\"",
+    "latitude": 54.6295453,
+    "longitude": 39.7358612,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Рязанский коробейник\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023627,
+    "name": "Гриб \"Мужичок-боровичок\"",
+    "latitude": 54.6292686,
+    "longitude": 39.7397201,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Мужичок-боровичок\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023628,
+    "name": "Гриб \"Грибная команда\"",
+    "latitude": 54.6273394,
+    "longitude": 39.7409285,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Грибная команда\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9141023629,
+    "name": "Гриб \"Влюбленная пара\"",
+    "latitude": 54.6217594,
+    "longitude": 39.756683,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "name=Гриб \"Влюбленная пара\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9829205592,
+    "name": "Аист Бро",
+    "latitude": 54.6023129,
+    "longitude": 39.8280824,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=statue",
+      "name=Аист Бро",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870147,
+    "name": "Учëный кот",
+    "latitude": 54.6288481,
+    "longitude": 39.7529486,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=Учëный кот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13263870152,
+    "name": "В Рязани грибы с глазами",
+    "latitude": 54.6262044,
+    "longitude": 39.7517435,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Монументальная скульптура",
+    "square": null,
+    "estimatedVisitMinutes": 3,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=sculpture",
+      "historic=memorial",
+      "name=В Рязани грибы с глазами",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 2421550584,
+    "name": "Маски",
+    "latitude": 54.6215795,
+    "longitude": 39.7567951,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Фонтаны",
+    "square": null,
+    "estimatedVisitMinutes": 5,
+    "osmType": "node",
+    "tags": [
+      "amenity=fountain",
+      "name=Маски"
+    ]
+  },
+  {
+    "id": 112570238,
+    "name": "Лоси",
+    "latitude": 54.629989800000004,
+    "longitude": 39.74559120000001,
+    "category": "Памятники и мемориалы",
+    "subcategory": "Фонтаны",
+    "square": 114.07470646652924,
+    "estimatedVisitMinutes": 5,
+    "osmType": "way",
+    "tags": [
+      "amenity=fountain",
+      "name=Лоси"
+    ]
+  }
+]

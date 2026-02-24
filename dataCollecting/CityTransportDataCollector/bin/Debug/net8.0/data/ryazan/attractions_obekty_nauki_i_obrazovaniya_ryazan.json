@@ -1,0 +1,265 @@
+﻿[
+  {
+    "id": 616228062,
+    "name": "Научная библиотека РГУ им. С.А. Есенина",
+    "latitude": 54.628985,
+    "longitude": 39.7530849,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Научная библиотека РГУ им. С.А. Есенина"
+    ]
+  },
+  {
+    "id": 1345088320,
+    "name": "Детская библиотека",
+    "latitude": 54.6193,
+    "longitude": 39.7465218,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека",
+      "opening_hours=Mo-Fr 10:00-18:00"
+    ]
+  },
+  {
+    "id": 1351831837,
+    "name": "Библиотека - филиал №14",
+    "latitude": 54.6626573,
+    "longitude": 39.6397435,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека - филиал №14",
+      "opening_hours=Mo-Fr 12:00-19:00; Sa 10:00-18:00"
+    ]
+  },
+  {
+    "id": 1351832069,
+    "name": "Библиотека - филиал №3",
+    "latitude": 54.6663087,
+    "longitude": 39.6409368,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека - филиал №3",
+      "opening_hours=Mo-Su 12:00-19:00; Fr off"
+    ]
+  },
+  {
+    "id": 2049323075,
+    "name": "Библиотека",
+    "latitude": 54.5343142,
+    "longitude": 39.7802007,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Библиотека"
+    ]
+  },
+  {
+    "id": 3791021389,
+    "name": "Детская библиотека",
+    "latitude": 54.6731673,
+    "longitude": 39.6542665,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 4471146063,
+    "name": "Детская библиотека",
+    "latitude": 54.6041193,
+    "longitude": 39.7646113,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "amenity=library",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 94690089,
+    "name": "Детская библиотека",
+    "latitude": 54.599428,
+    "longitude": 39.82067595,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 1079.5846736231872,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "amenity=library",
+      "building=yes",
+      "name=Детская библиотека"
+    ]
+  },
+  {
+    "id": 101155049,
+    "name": "Городская библиотека имени С.А.Есенина",
+    "latitude": 54.6306003,
+    "longitude": 39.708223950000004,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 3426.6708856769947,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=74",
+      "addr:street=Первомайский проспект",
+      "amenity=library",
+      "building=yes",
+      "name=Городская библиотека имени С.А.Есенина"
+    ]
+  },
+  {
+    "id": 104943951,
+    "name": "филиал библиотеки им. Горького научный отдел",
+    "latitude": 54.629067000000006,
+    "longitude": 39.7448846,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 2546.279417515682,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=24/42",
+      "addr:street=Николодворянская улица",
+      "amenity=library",
+      "building=yes",
+      "name=филиал библиотеки им. Горького научный отдел",
+      "wikidata=Q55652568"
+    ]
+  },
+  {
+    "id": 113691170,
+    "name": "Детская областная библиотека",
+    "latitude": 54.629083949999995,
+    "longitude": 39.7384405,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 543.282667080301,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=63",
+      "addr:street=Почтовая улица",
+      "amenity=library",
+      "building=yes",
+      "check_date=2024-05-11",
+      "name=Детская областная библиотека"
+    ]
+  },
+  {
+    "id": 134938466,
+    "name": "Библиотека РГМУ",
+    "latitude": 54.62111215,
+    "longitude": 39.7123878,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 2091.4094104087267,
+    "estimatedVisitMinutes": 40,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=34 к2",
+      "addr:street=улица Шевченко",
+      "amenity=library",
+      "building=yes",
+      "name=Библиотека РГМУ"
+    ]
+  },
+  {
+    "id": 1602428,
+    "name": "Рязанская областная универсальная научная библиотека имени Горького",
+    "latitude": 54.6311419,
+    "longitude": 39.741678699999994,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 7709.671727192498,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "amenity=library",
+      "email=rounb@library.ryazan.su",
+      "name=Рязанская областная универсальная научная библиотека имени Горького",
+      "official_name=Госудасртвенное учреждение культуры \"Рязанская областная универсальная научная библиотека имени Горького\"",
+      "phone=(4912)256060",
+      "type=multipolygon",
+      "website=http://library.ryazan.su"
+    ]
+  },
+  {
+    "id": 1608246,
+    "name": "Библиотека им. К.Г.Паустовского",
+    "latitude": 54.63036115,
+    "longitude": 39.762864449999995,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 3832.3016461262564,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "amenity=library",
+      "building:part=yes",
+      "name=Библиотека им. К.Г.Паустовского",
+      "type=multipolygon"
+    ]
+  },
+  {
+    "id": 1608339,
+    "name": "Библиотека художественного музея",
+    "latitude": 54.62750965,
+    "longitude": 39.751568500000005,
+    "category": "Объекты науки и образования",
+    "subcategory": "Библиотеки",
+    "square": 536.4410615875261,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=55",
+      "addr:street=улица Свободы",
+      "alt_name=Научная библиотека Рязанского государственного областного художественного музея им. И.П. Пожалостина",
+      "amenity=library",
+      "building=yes",
+      "name=Библиотека художественного музея",
+      "type=multipolygon"
+    ]
+  }
+]

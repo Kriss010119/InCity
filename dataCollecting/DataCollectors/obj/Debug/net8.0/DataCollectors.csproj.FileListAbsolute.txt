@@ -1,0 +1,17 @@
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\DataCollectors.deps.json
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\DataCollectors.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\DataCollectors.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\EFileManagerLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\EModelsLib.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\EFileManagerLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\bin\Debug\net8.0\EModelsLib.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.AssemblyInfo.cs
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataColl.AF38EF9D.Up2Date
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\refint\DataCollectors.dll
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\DataCollectors.pdb
+C:\Users\georg\source\repos\CityTransportDataCollector\DataCollectors\obj\Debug\net8.0\ref\DataCollectors.dll

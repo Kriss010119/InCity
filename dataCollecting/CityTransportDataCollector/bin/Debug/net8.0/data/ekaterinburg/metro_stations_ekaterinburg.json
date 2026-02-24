@@ -1,0 +1,227 @@
+﻿[
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 1
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 9
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Проспект Космонавтов",
+    "name": "Проспект Космонавтов",
+    "id": 297004188,
+    "latitude": 56.9013921,
+    "longitude": 60.6139981
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 2
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 8
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "",
+    "name": "Уралмаш",
+    "id": 10601237275,
+    "latitude": 56.8882559,
+    "longitude": 60.6134976
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 3
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 7
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Машиностроителей",
+    "name": "Машиностроителей",
+    "id": 10601237298,
+    "latitude": 56.8770107,
+    "longitude": 60.6116604
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 4
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 6
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Уральская",
+    "name": "Уральская",
+    "id": 10601241511,
+    "latitude": 56.857471,
+    "longitude": 60.6003811
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 5
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 5
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Динамо",
+    "name": "Динамо",
+    "id": 10601241519,
+    "latitude": 56.8476124,
+    "longitude": 60.5993098
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 7
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 3
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Геологическая",
+    "name": "Геологическая",
+    "id": 10601241537,
+    "latitude": 56.827831,
+    "longitude": 60.6022393
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 8
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 2
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Чкаловская",
+    "name": "Чкаловская",
+    "id": 10601241558,
+    "latitude": 56.8076989,
+    "longitude": 60.6102992
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 9
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 1
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "Ботаническая",
+    "name": "Ботаническая",
+    "id": 10601241572,
+    "latitude": 56.7974414,
+    "longitude": 60.6315432
+  },
+  {
+    "lines": [
+      "1: Проспект Космонавтов → Ботаническая",
+      "1: Ботаническая → Проспект Космонавтов"
+    ],
+    "routes": [
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 6
+      },
+      {
+        "color": "#1c8c3a",
+        "routeNumber": "1",
+        "order": 4
+      }
+    ],
+    "isTransfer": false,
+    "transfers": [],
+    "localName": "",
+    "name": "Площадь 1905 года",
+    "id": 10606433480,
+    "latitude": 56.8368678,
+    "longitude": 60.5991644
+  }
+]

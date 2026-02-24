@@ -1,0 +1,198 @@
+﻿[
+  {
+    "color": "red",
+    "line": "Казанский метрополитен",
+    "operator": "",
+    "id": 1180910,
+    "routeNumber": "1",
+    "name": "Метро 1: Авиастроительная → Дубравная",
+    "stops": [
+      {
+        "nodeId": 1420931656,
+        "name": "Авиастроительная",
+        "latitude": 55.8556912,
+        "longitude": 49.0844133,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1420931658,
+        "name": "Северный вокзал",
+        "latitude": 55.8419153,
+        "longitude": 49.0818329,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 1420931684,
+        "name": "Яшьлек",
+        "latitude": 55.8281025,
+        "longitude": 49.082451,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 819347415,
+        "name": "Козья слобода",
+        "latitude": 55.8165097,
+        "longitude": 49.0983054,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 441886281,
+        "name": "Кремлёвская",
+        "latitude": 55.7950882,
+        "longitude": 49.1072063,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 441886280,
+        "name": "Площадь Габдуллы Тукая",
+        "latitude": 55.7855712,
+        "longitude": 49.124919,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 441886279,
+        "name": "Суконная слобода",
+        "latitude": 55.7770999,
+        "longitude": 49.1425983,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 913287042,
+        "name": "Аметьево",
+        "latitude": 55.7650736,
+        "longitude": 49.1665098,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 441886277,
+        "name": "Горки",
+        "latitude": 55.760152,
+        "longitude": 49.1908904,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 441886276,
+        "name": "Проспект Победы",
+        "latitude": 55.7497977,
+        "longitude": 49.2083215,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 9017835959,
+        "name": "Дубравная",
+        "latitude": 55.7438224,
+        "longitude": 49.2188813,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  },
+  {
+    "color": "red",
+    "line": "Казанский метрополитен",
+    "operator": "",
+    "id": 7733916,
+    "routeNumber": "1",
+    "name": "Метро 1: Дубравная → Авиастроительная",
+    "stops": [
+      {
+        "nodeId": 9040785338,
+        "name": "Дубравная",
+        "latitude": 55.7438915,
+        "longitude": 49.2190117,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 9040785330,
+        "name": "Проспект Победы",
+        "latitude": 55.7498783,
+        "longitude": 49.2084762,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 9040785331,
+        "name": "Горки",
+        "latitude": 55.7602231,
+        "longitude": 49.1910266,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 9040785321,
+        "name": "Аметьево",
+        "latitude": 55.7651833,
+        "longitude": 49.1665503,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 9040764507,
+        "name": "Суконная слобода",
+        "latitude": 55.7771866,
+        "longitude": 49.142727,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 9040764497,
+        "name": "Площадь Габдуллы Тукая",
+        "latitude": 55.7856218,
+        "longitude": 49.1250078,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 9040764452,
+        "name": "Кремлёвская",
+        "latitude": 55.7951417,
+        "longitude": 49.1072614,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 9040764453,
+        "name": "Козья слобода",
+        "latitude": 55.8165486,
+        "longitude": 49.0985091,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 9040764454,
+        "name": "Яшьлек",
+        "latitude": 55.8281742,
+        "longitude": 49.0826797,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 9040764455,
+        "name": "Северный вокзал",
+        "latitude": 55.8418706,
+        "longitude": 49.0820673,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 9040764457,
+        "name": "Авиастроительная",
+        "latitude": 55.8556858,
+        "longitude": 49.0846655,
+        "role": "stop_exit_only",
+        "sequence": 10
+      }
+    ]
+  }
+]

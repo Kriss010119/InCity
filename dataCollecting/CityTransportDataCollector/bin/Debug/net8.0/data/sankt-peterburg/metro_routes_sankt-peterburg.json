@@ -1,0 +1,1290 @@
+﻿[
+  {
+    "color": "green",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 252536,
+    "routeNumber": "3",
+    "name": "Невско-Василеостровская линия: Рыбацкое — Беговая",
+    "stops": [
+      {
+        "nodeId": 8504823754,
+        "name": "Рыбацкое",
+        "latitude": 59.8312273,
+        "longitude": 30.4993188,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8504823755,
+        "name": "Обухово",
+        "latitude": 59.8497377,
+        "longitude": 30.4600069,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 2035435020,
+        "name": "Пролетарская",
+        "latitude": 59.866365,
+        "longitude": 30.4674468,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 8504823757,
+        "name": "Ломоносовская",
+        "latitude": 59.8788561,
+        "longitude": 30.4403201,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8504823759,
+        "name": "Елизаровская",
+        "latitude": 59.8981054,
+        "longitude": 30.4218376,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 8504823762,
+        "name": "Площадь Александра Невского 1",
+        "latitude": 59.9233834,
+        "longitude": 30.386918,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 2035435071,
+        "name": "Маяковская",
+        "latitude": 59.9306269,
+        "longitude": 30.3577159,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8504823763,
+        "name": "Гостиный двор",
+        "latitude": 59.9343126,
+        "longitude": 30.3302368,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 2045866989,
+        "name": "Василеостровская",
+        "latitude": 59.9432602,
+        "longitude": 30.2754246,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 8504823766,
+        "name": "Приморская",
+        "latitude": 59.948797,
+        "longitude": 30.2380167,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 5644519215,
+        "name": "Зенит",
+        "latitude": 59.9722202,
+        "longitude": 30.2119566,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 2982994575,
+        "name": "Беговая",
+        "latitude": 59.9878687,
+        "longitude": 30.2025392,
+        "role": "stop_exit_only",
+        "sequence": 11
+      }
+    ]
+  },
+  {
+    "color": "green",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": -252536,
+    "routeNumber": "3",
+    "name": "Невско-Василеостровская линия: Рыбацкое — Беговая (обратное направление)",
+    "stops": [
+      {
+        "nodeId": 2982994575,
+        "name": "Беговая",
+        "latitude": 59.9878687,
+        "longitude": 30.2025392,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 5644519215,
+        "name": "Зенит",
+        "latitude": 59.9722202,
+        "longitude": 30.2119566,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8504823766,
+        "name": "Приморская",
+        "latitude": 59.948797,
+        "longitude": 30.2380167,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 2045866989,
+        "name": "Василеостровская",
+        "latitude": 59.9432602,
+        "longitude": 30.2754246,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8504823763,
+        "name": "Гостиный двор",
+        "latitude": 59.9343126,
+        "longitude": 30.3302368,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2035435071,
+        "name": "Маяковская",
+        "latitude": 59.9306269,
+        "longitude": 30.3577159,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 8504823762,
+        "name": "Площадь Александра Невского 1",
+        "latitude": 59.9233834,
+        "longitude": 30.386918,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8504823759,
+        "name": "Елизаровская",
+        "latitude": 59.8981054,
+        "longitude": 30.4218376,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 8504823757,
+        "name": "Ломоносовская",
+        "latitude": 59.8788561,
+        "longitude": 30.4403201,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2035435020,
+        "name": "Пролетарская",
+        "latitude": 59.866365,
+        "longitude": 30.4674468,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 8504823755,
+        "name": "Обухово",
+        "latitude": 59.8497377,
+        "longitude": 30.4600069,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 8504823754,
+        "name": "Рыбацкое",
+        "latitude": 59.8312273,
+        "longitude": 30.4993188,
+        "role": "stop_entry_only",
+        "sequence": 11
+      }
+    ]
+  },
+  {
+    "color": "orange",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 252537,
+    "routeNumber": "4",
+    "name": "Правобережная линия: Улица Дыбенко — Горный институт",
+    "stops": [
+      {
+        "nodeId": 8512025927,
+        "name": "Улица Дыбенко",
+        "latitude": 59.9095177,
+        "longitude": 30.4813412,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8512025930,
+        "name": "Проспект Большевиков",
+        "latitude": 59.921077,
+        "longitude": 30.4641024,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8512025931,
+        "name": "Ладожская",
+        "latitude": 59.931565,
+        "longitude": 30.4424603,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 2302967364,
+        "name": "Новочеркасская",
+        "latitude": 59.929641,
+        "longitude": 30.4151752,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8512025934,
+        "name": "Площадь Александра Невского 2",
+        "latitude": 59.922271,
+        "longitude": 30.3848523,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 8512025937,
+        "name": "Лиговский проспект",
+        "latitude": 59.9216378,
+        "longitude": 30.3593559,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 8512025938,
+        "name": "Достоевская",
+        "latitude": 59.9269321,
+        "longitude": 30.345849,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 2056804604,
+        "name": "Спасская",
+        "latitude": 59.9269597,
+        "longitude": 30.3168867,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 12456153995,
+        "name": "Горный институт",
+        "latitude": 59.9318479,
+        "longitude": 30.2627512,
+        "role": "stop_exit_only",
+        "sequence": 8
+      }
+    ]
+  },
+  {
+    "color": "orange",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": -252537,
+    "routeNumber": "4",
+    "name": "Правобережная линия: Улица Дыбенко — Горный институт (обратное направление)",
+    "stops": [
+      {
+        "nodeId": 12456153995,
+        "name": "Горный институт",
+        "latitude": 59.9318479,
+        "longitude": 30.2627512,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 2056804604,
+        "name": "Спасская",
+        "latitude": 59.9269597,
+        "longitude": 30.3168867,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8512025938,
+        "name": "Достоевская",
+        "latitude": 59.9269321,
+        "longitude": 30.345849,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 8512025937,
+        "name": "Лиговский проспект",
+        "latitude": 59.9216378,
+        "longitude": 30.3593559,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8512025934,
+        "name": "Площадь Александра Невского 2",
+        "latitude": 59.922271,
+        "longitude": 30.3848523,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2302967364,
+        "name": "Новочеркасская",
+        "latitude": 59.929641,
+        "longitude": 30.4151752,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 8512025931,
+        "name": "Ладожская",
+        "latitude": 59.931565,
+        "longitude": 30.4424603,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8512025930,
+        "name": "Проспект Большевиков",
+        "latitude": 59.921077,
+        "longitude": 30.4641024,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 8512025927,
+        "name": "Улица Дыбенко",
+        "latitude": 59.9095177,
+        "longitude": 30.4813412,
+        "role": "stop_entry_only",
+        "sequence": 8
+      }
+    ]
+  },
+  {
+    "color": "red",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 252539,
+    "routeNumber": "1",
+    "name": "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино",
+    "stops": [
+      {
+        "nodeId": 2035112368,
+        "name": "Проспект Ветеранов",
+        "latitude": 59.8418306,
+        "longitude": 30.253494,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 2303004130,
+        "name": "Ленинский проспект",
+        "latitude": 59.8506473,
+        "longitude": 30.268558,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8518165869,
+        "name": "Автово",
+        "latitude": 59.8664998,
+        "longitude": 30.2611933,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 2035112401,
+        "name": "Кировский завод",
+        "latitude": 59.8781975,
+        "longitude": 30.2607277,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8518165873,
+        "name": "Нарвская",
+        "latitude": 59.8996832,
+        "longitude": 30.2742393,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2035073232,
+        "name": "Балтийская",
+        "latitude": 59.9075743,
+        "longitude": 30.3027438,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 1669571980,
+        "name": "Технологический институт 2",
+        "latitude": 59.9153644,
+        "longitude": 30.3182455,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 2080774911,
+        "name": "Пушкинская",
+        "latitude": 59.921178,
+        "longitude": 30.3329644,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 2035477552,
+        "name": "Владимирская",
+        "latitude": 59.925902,
+        "longitude": 30.3474021,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2532392165,
+        "name": "Площадь Восстания",
+        "latitude": 59.9299053,
+        "longitude": 30.3592137,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 8518165884,
+        "name": "Чернышевская",
+        "latitude": 59.9431449,
+        "longitude": 30.3609965,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 8518165887,
+        "name": "Площадь Ленина",
+        "latitude": 59.9572339,
+        "longitude": 30.3555148,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 8518165888,
+        "name": "Выборгская",
+        "latitude": 59.9693644,
+        "longitude": 30.3497322,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 8518165890,
+        "name": "Лесная",
+        "latitude": 59.9865231,
+        "longitude": 30.3457982,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 8518165892,
+        "name": "Площадь Мужества",
+        "latitude": 60.0014812,
+        "longitude": 30.367489,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 8518165894,
+        "name": "Политехническая",
+        "latitude": 60.0097799,
+        "longitude": 30.3743605,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 8518165896,
+        "name": "Академическая",
+        "latitude": 60.0120311,
+        "longitude": 30.392802,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 8518165898,
+        "name": "Гражданский проспект",
+        "latitude": 60.033215,
+        "longitude": 30.417004,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 3516091354,
+        "name": "Девяткино",
+        "latitude": 60.0509529,
+        "longitude": 30.4431604,
+        "role": "stop_exit_only",
+        "sequence": 18
+      }
+    ]
+  },
+  {
+    "color": "red",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": -252539,
+    "routeNumber": "1",
+    "name": "Кировско-Выборгская линия: Проспект Ветеранов — Девяткино (обратное направление)",
+    "stops": [
+      {
+        "nodeId": 3516091354,
+        "name": "Девяткино",
+        "latitude": 60.0509529,
+        "longitude": 30.4431604,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8518165898,
+        "name": "Гражданский проспект",
+        "latitude": 60.033215,
+        "longitude": 30.417004,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8518165896,
+        "name": "Академическая",
+        "latitude": 60.0120311,
+        "longitude": 30.392802,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 8518165894,
+        "name": "Политехническая",
+        "latitude": 60.0097799,
+        "longitude": 30.3743605,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8518165892,
+        "name": "Площадь Мужества",
+        "latitude": 60.0014812,
+        "longitude": 30.367489,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 8518165890,
+        "name": "Лесная",
+        "latitude": 59.9865231,
+        "longitude": 30.3457982,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 8518165888,
+        "name": "Выборгская",
+        "latitude": 59.9693644,
+        "longitude": 30.3497322,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8518165887,
+        "name": "Площадь Ленина",
+        "latitude": 59.9572339,
+        "longitude": 30.3555148,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 8518165884,
+        "name": "Чернышевская",
+        "latitude": 59.9431449,
+        "longitude": 30.3609965,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2532392165,
+        "name": "Площадь Восстания",
+        "latitude": 59.9299053,
+        "longitude": 30.3592137,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 2035477552,
+        "name": "Владимирская",
+        "latitude": 59.925902,
+        "longitude": 30.3474021,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 2080774911,
+        "name": "Пушкинская",
+        "latitude": 59.921178,
+        "longitude": 30.3329644,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 1669571980,
+        "name": "Технологический институт 2",
+        "latitude": 59.9153644,
+        "longitude": 30.3182455,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 2035073232,
+        "name": "Балтийская",
+        "latitude": 59.9075743,
+        "longitude": 30.3027438,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 8518165873,
+        "name": "Нарвская",
+        "latitude": 59.8996832,
+        "longitude": 30.2742393,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 2035112401,
+        "name": "Кировский завод",
+        "latitude": 59.8781975,
+        "longitude": 30.2607277,
+        "role": "stop",
+        "sequence": 15
+      },
+      {
+        "nodeId": 8518165869,
+        "name": "Автово",
+        "latitude": 59.8664998,
+        "longitude": 30.2611933,
+        "role": "stop",
+        "sequence": 16
+      },
+      {
+        "nodeId": 2303004130,
+        "name": "Ленинский проспект",
+        "latitude": 59.8506473,
+        "longitude": 30.268558,
+        "role": "stop",
+        "sequence": 17
+      },
+      {
+        "nodeId": 2035112368,
+        "name": "Проспект Ветеранов",
+        "latitude": 59.8418306,
+        "longitude": 30.253494,
+        "role": "stop_entry_only",
+        "sequence": 18
+      }
+    ]
+  },
+  {
+    "color": "blue",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 252540,
+    "routeNumber": "2",
+    "name": "Московско-Петроградская линия: Парнас — Купчино",
+    "stops": [
+      {
+        "nodeId": 1941204769,
+        "name": "Парнас",
+        "latitude": 60.0666955,
+        "longitude": 30.3349666,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8511707887,
+        "name": "Проспект Просвещения",
+        "latitude": 60.049443,
+        "longitude": 30.3327871,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8511707885,
+        "name": "Озерки",
+        "latitude": 60.0353277,
+        "longitude": 30.3208594,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 8511707883,
+        "name": "Удельная",
+        "latitude": 60.0179742,
+        "longitude": 30.3180541,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 8511707881,
+        "name": "Пионерская",
+        "latitude": 60.0042832,
+        "longitude": 30.2961949,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 8511707879,
+        "name": "Чёрная речка",
+        "latitude": 59.987224,
+        "longitude": 30.3007392,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 8511707876,
+        "name": "Петроградская",
+        "latitude": 59.9648929,
+        "longitude": 30.3127204,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8511707875,
+        "name": "Горьковская",
+        "latitude": 59.9551252,
+        "longitude": 30.3192785,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 8511707873,
+        "name": "Невский проспект",
+        "latitude": 59.9339823,
+        "longitude": 30.3281882,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2056804601,
+        "name": "Сенная площадь",
+        "latitude": 59.9261352,
+        "longitude": 30.3199134,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 2031423600,
+        "name": "Технологический институт 1",
+        "latitude": 59.9151857,
+        "longitude": 30.3174801,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 2035297582,
+        "name": "Московские ворота",
+        "latitude": 59.8926611,
+        "longitude": 30.3178656,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 8511707867,
+        "name": "Электросила",
+        "latitude": 59.8802786,
+        "longitude": 30.3188996,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 2035297551,
+        "name": "Московская",
+        "latitude": 59.8513976,
+        "longitude": 30.3221334,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 8511707863,
+        "name": "Звёздная",
+        "latitude": 59.8328177,
+        "longitude": 30.3514235,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 2035297520,
+        "name": "Купчино",
+        "latitude": 59.8291158,
+        "longitude": 30.3757191,
+        "role": "stop_exit_only",
+        "sequence": 15
+      }
+    ]
+  },
+  {
+    "color": "blue",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": -252540,
+    "routeNumber": "2",
+    "name": "Московско-Петроградская линия: Парнас — Купчино (обратное направление)",
+    "stops": [
+      {
+        "nodeId": 2035297520,
+        "name": "Купчино",
+        "latitude": 59.8291158,
+        "longitude": 30.3757191,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8511707863,
+        "name": "Звёздная",
+        "latitude": 59.8328177,
+        "longitude": 30.3514235,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 2035297551,
+        "name": "Московская",
+        "latitude": 59.8513976,
+        "longitude": 30.3221334,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 8511707867,
+        "name": "Электросила",
+        "latitude": 59.8802786,
+        "longitude": 30.3188996,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 2035297582,
+        "name": "Московские ворота",
+        "latitude": 59.8926611,
+        "longitude": 30.3178656,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2031423600,
+        "name": "Технологический институт 1",
+        "latitude": 59.9151857,
+        "longitude": 30.3174801,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 2056804601,
+        "name": "Сенная площадь",
+        "latitude": 59.9261352,
+        "longitude": 30.3199134,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 8511707873,
+        "name": "Невский проспект",
+        "latitude": 59.9339823,
+        "longitude": 30.3281882,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 8511707875,
+        "name": "Горьковская",
+        "latitude": 59.9551252,
+        "longitude": 30.3192785,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 8511707876,
+        "name": "Петроградская",
+        "latitude": 59.9648929,
+        "longitude": 30.3127204,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 8511707879,
+        "name": "Чёрная речка",
+        "latitude": 59.987224,
+        "longitude": 30.3007392,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 8511707881,
+        "name": "Пионерская",
+        "latitude": 60.0042832,
+        "longitude": 30.2961949,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 8511707883,
+        "name": "Удельная",
+        "latitude": 60.0179742,
+        "longitude": 30.3180541,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 8511707885,
+        "name": "Озерки",
+        "latitude": 60.0353277,
+        "longitude": 30.3208594,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 8511707887,
+        "name": "Проспект Просвещения",
+        "latitude": 60.049443,
+        "longitude": 30.3327871,
+        "role": "stop",
+        "sequence": 14
+      },
+      {
+        "nodeId": 1941204769,
+        "name": "Парнас",
+        "latitude": 60.0666955,
+        "longitude": 30.3349666,
+        "role": "stop_entry_only",
+        "sequence": 15
+      }
+    ]
+  },
+  {
+    "color": "purple",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 252541,
+    "routeNumber": "5",
+    "name": "Фрунзенско-Приморская линия: Шушары — Комендантский проспект",
+    "stops": [
+      {
+        "nodeId": 4709806345,
+        "name": "Шушары",
+        "latitude": 59.8206936,
+        "longitude": 30.4322461,
+        "role": "stop_entry_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 8508603344,
+        "name": "Дунайская",
+        "latitude": 59.8399976,
+        "longitude": 30.4109131,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 8508603347,
+        "name": "Проспект Славы",
+        "latitude": 59.8567294,
+        "longitude": 30.3955198,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 2035003042,
+        "name": "Международная",
+        "latitude": 59.868654,
+        "longitude": 30.3819625,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 2035003043,
+        "name": "Бухарестская",
+        "latitude": 59.8823515,
+        "longitude": 30.3704776,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2470718784,
+        "name": "Волковская",
+        "latitude": 59.8966155,
+        "longitude": 30.360642,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 2035003070,
+        "name": "Обводный канал",
+        "latitude": 59.9131443,
+        "longitude": 30.3510416,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 2035864703,
+        "name": "Звенигородская",
+        "latitude": 59.9220089,
+        "longitude": 30.332748,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 2056804600,
+        "name": "Садовая",
+        "latitude": 59.9275958,
+        "longitude": 30.3195495,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2470718782,
+        "name": "Адмиралтейская",
+        "latitude": 59.9361982,
+        "longitude": 30.3139449,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 5040600576,
+        "name": "Спортивная",
+        "latitude": 59.9500989,
+        "longitude": 30.2891949,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 6214545148,
+        "name": "Чкаловская",
+        "latitude": 59.9593437,
+        "longitude": 30.2926315,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 2470718786,
+        "name": "Крестовский остров",
+        "latitude": 59.9706746,
+        "longitude": 30.2623223,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 2470718790,
+        "name": "Старая Деревня",
+        "latitude": 59.9876856,
+        "longitude": 30.2557638,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 2035003146,
+        "name": "Комендантский проспект",
+        "latitude": 60.0109097,
+        "longitude": 30.2561608,
+        "role": "stop_exit_only",
+        "sequence": 14
+      }
+    ]
+  },
+  {
+    "color": "purple",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": -252541,
+    "routeNumber": "5",
+    "name": "Фрунзенско-Приморская линия: Шушары — Комендантский проспект (обратное направление)",
+    "stops": [
+      {
+        "nodeId": 2035003146,
+        "name": "Комендантский проспект",
+        "latitude": 60.0109097,
+        "longitude": 30.2561608,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 2470718790,
+        "name": "Старая Деревня",
+        "latitude": 59.9876856,
+        "longitude": 30.2557638,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 2470718786,
+        "name": "Крестовский остров",
+        "latitude": 59.9706746,
+        "longitude": 30.2623223,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 6214545148,
+        "name": "Чкаловская",
+        "latitude": 59.9593437,
+        "longitude": 30.2926315,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 5040600576,
+        "name": "Спортивная",
+        "latitude": 59.9500989,
+        "longitude": 30.2891949,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 2470718782,
+        "name": "Адмиралтейская",
+        "latitude": 59.9361982,
+        "longitude": 30.3139449,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 2056804600,
+        "name": "Садовая",
+        "latitude": 59.9275958,
+        "longitude": 30.3195495,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 2035864703,
+        "name": "Звенигородская",
+        "latitude": 59.9220089,
+        "longitude": 30.332748,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 2035003070,
+        "name": "Обводный канал",
+        "latitude": 59.9131443,
+        "longitude": 30.3510416,
+        "role": "stop",
+        "sequence": 8
+      },
+      {
+        "nodeId": 2470718784,
+        "name": "Волковская",
+        "latitude": 59.8966155,
+        "longitude": 30.360642,
+        "role": "stop",
+        "sequence": 9
+      },
+      {
+        "nodeId": 2035003043,
+        "name": "Бухарестская",
+        "latitude": 59.8823515,
+        "longitude": 30.3704776,
+        "role": "stop",
+        "sequence": 10
+      },
+      {
+        "nodeId": 2035003042,
+        "name": "Международная",
+        "latitude": 59.868654,
+        "longitude": 30.3819625,
+        "role": "stop",
+        "sequence": 11
+      },
+      {
+        "nodeId": 8508603347,
+        "name": "Проспект Славы",
+        "latitude": 59.8567294,
+        "longitude": 30.3955198,
+        "role": "stop",
+        "sequence": 12
+      },
+      {
+        "nodeId": 8508603344,
+        "name": "Дунайская",
+        "latitude": 59.8399976,
+        "longitude": 30.4109131,
+        "role": "stop",
+        "sequence": 13
+      },
+      {
+        "nodeId": 4709806345,
+        "name": "Шушары",
+        "latitude": 59.8206936,
+        "longitude": 30.4322461,
+        "role": "stop_entry_only",
+        "sequence": 14
+      }
+    ]
+  },
+  {
+    "color": "brown",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 20008262,
+    "routeNumber": "6",
+    "name": "Красносельско-Калининская линия: Юго-Западная — Путиловская",
+    "stops": [
+      {
+        "nodeId": 13408956409,
+        "name": "Юго-Западная",
+        "latitude": 59.8600907,
+        "longitude": 30.2311538,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 13408956407,
+        "name": "Путиловская",
+        "latitude": 59.8778036,
+        "longitude": 30.2622957,
+        "role": "stop",
+        "sequence": 1
+      }
+    ]
+  },
+  {
+    "color": "brown",
+    "line": "Петербургский метрополитен",
+    "operator": "Петербургский метрополитен",
+    "id": 20008263,
+    "routeNumber": "6",
+    "name": "Красносельско-Калининская линия: Путиловская — Юго-Западная",
+    "stops": [
+      {
+        "nodeId": 13408956406,
+        "name": "Путиловская",
+        "latitude": 59.8776774,
+        "longitude": 30.2625312,
+        "role": "stop_exit_only",
+        "sequence": 0
+      },
+      {
+        "nodeId": 13408956408,
+        "name": "Юго-Западная",
+        "latitude": 59.8599646,
+        "longitude": 30.2315164,
+        "role": "stop_entry_only",
+        "sequence": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+﻿[
+  {
+    "color": "#1c8c3a",
+    "line": "Екатеринбургский метрополитен",
+    "operator": "ЕМУП «Екатеринбургский метрополитен»",
+    "id": 2820589,
+    "routeNumber": "1",
+    "name": "1: Проспект Космонавтов → Ботаническая",
+    "stops": [
+      {
+        "nodeId": 10601237247,
+        "name": "Проспект Космонавтов",
+        "latitude": 56.9013938,
+        "longitude": 60.6139317,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 10601237274,
+        "name": "Уралмаш",
+        "latitude": 56.8882623,
+        "longitude": 60.6133714,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 10601237297,
+        "name": "Машиностроителей",
+        "latitude": 56.8770343,
+        "longitude": 60.611531,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 10601241512,
+        "name": "Уральская",
+        "latitude": 56.8574834,
+        "longitude": 60.6002865,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 10601241518,
+        "name": "Динамо",
+        "latitude": 56.8476199,
+        "longitude": 60.5992233,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 10601241531,
+        "name": "Площадь 1905 года",
+        "latitude": 56.8368559,
+        "longitude": 60.5990671,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 10601241534,
+        "name": "Геологическая",
+        "latitude": 56.827797,
+        "longitude": 60.6021471,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 10601241556,
+        "name": "Чкаловская",
+        "latitude": 56.8077018,
+        "longitude": 60.6101258,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 10601241567,
+        "name": "Ботаническая",
+        "latitude": 56.7973089,
+        "longitude": 60.6320771,
+        "role": "stop",
+        "sequence": 8
+      }
+    ]
+  },
+  {
+    "color": "#1c8c3a",
+    "line": "Екатеринбургский метрополитен",
+    "operator": "ЕМУП «Екатеринбургский метрополитен»",
+    "id": 7733915,
+    "routeNumber": "1",
+    "name": "1: Ботаническая → Проспект Космонавтов",
+    "stops": [
+      {
+        "nodeId": 1521302664,
+        "name": "Ботаническая",
+        "latitude": 56.797586,
+        "longitude": 60.6309705,
+        "role": "stop",
+        "sequence": 0
+      },
+      {
+        "nodeId": 1843452826,
+        "name": "Чкаловская",
+        "latitude": 56.8077315,
+        "longitude": 60.6104566,
+        "role": "stop",
+        "sequence": 1
+      },
+      {
+        "nodeId": 297003665,
+        "name": "Геологическая",
+        "latitude": 56.8277976,
+        "longitude": 60.6023917,
+        "role": "stop",
+        "sequence": 2
+      },
+      {
+        "nodeId": 297003728,
+        "name": "Площадь 1905 года",
+        "latitude": 56.8368759,
+        "longitude": 60.5992742,
+        "role": "stop",
+        "sequence": 3
+      },
+      {
+        "nodeId": 297003658,
+        "name": "Динамо",
+        "latitude": 56.8476103,
+        "longitude": 60.599374,
+        "role": "stop",
+        "sequence": 4
+      },
+      {
+        "nodeId": 297003656,
+        "name": "Уральская",
+        "latitude": 56.8574855,
+        "longitude": 60.6004725,
+        "role": "stop",
+        "sequence": 5
+      },
+      {
+        "nodeId": 297003727,
+        "name": "Машиностроителей",
+        "latitude": 56.8770332,
+        "longitude": 60.6118115,
+        "role": "stop",
+        "sequence": 6
+      },
+      {
+        "nodeId": 297004189,
+        "name": "Уралмаш",
+        "latitude": 56.8882576,
+        "longitude": 60.6135728,
+        "role": "stop",
+        "sequence": 7
+      },
+      {
+        "nodeId": 10601237257,
+        "name": "Проспект Космонавтов",
+        "latitude": 56.9013946,
+        "longitude": 60.6140851,
+        "role": "stop",
+        "sequence": 8
+      }
+    ]
+  }
+]

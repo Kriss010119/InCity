@@ -1,0 +1,1013 @@
+﻿[
+  {
+    "id": 2040347635,
+    "name": "Храм в честь Покрова Пресвятой Богородици ",
+    "latitude": 54.6004289,
+    "longitude": 39.6482177,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Храм в честь Покрова Пресвятой Богородици ",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2056036370,
+    "name": "Николо-Царский храм",
+    "latitude": 54.6179989,
+    "longitude": 39.6904539,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=orthodox",
+      "name=Николо-Царский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2077493409,
+    "name": "Богоявленская церковь",
+    "latitude": 54.6683906,
+    "longitude": 39.7073936,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Богоявленская церковь",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2140354800,
+    "name": "Рязанская автономная церковь Евангельских Христиан-Баптистов",
+    "latitude": 54.6351708,
+    "longitude": 39.7180435,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Рязанская автономная церковь Евангельских Христиан-Баптистов",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2247870470,
+    "name": "Часовня в честь иконы Божьей Матери Неопалимая Купина",
+    "latitude": 54.6322386,
+    "longitude": 39.7373395,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Часовня в честь иконы Божьей Матери Неопалимая Купина",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 2659976377,
+    "name": "Храм Николая Чудотворца",
+    "latitude": 54.6137929,
+    "longitude": 39.7431918,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=russian_orthodox",
+      "name=Храм Николая Чудотворца",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 7569539269,
+    "name": "Церковь Илии Пророка",
+    "latitude": 58.9050198,
+    "longitude": 49.9527801,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": null,
+    "estimatedVisitMinutes": 15,
+    "osmType": "node",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Церковь Илии Пророка",
+      "religion=christian",
+      "service_times=заброшена"
+    ]
+  },
+  {
+    "id": 96096388,
+    "name": "Храм Александра Невского",
+    "latitude": 54.60835435,
+    "longitude": 39.813393649999995,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 483.42786625389016,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=33В",
+      "addr:street=улица Новосёлов",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм Александра Невского",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 101973940,
+    "name": "Благовещенский храм",
+    "latitude": 54.632013400000005,
+    "longitude": 39.76339405,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1753.6001073129994,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=56",
+      "addr:street=улица Фурманова",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Благовещенский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109077043,
+    "name": "Ильин храм",
+    "latitude": 54.6345652,
+    "longitude": 39.746891,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1553.7862615943845,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=3",
+      "addr:street=Соборная площадь",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Ильин храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109077044,
+    "name": "Часовня \"К 900-летию Рязани\"",
+    "latitude": 54.6335554,
+    "longitude": 39.745594249999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 141.64342117070018,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Часовня \"К 900-летию Рязани\"",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109078990,
+    "name": "Вознесенский храм",
+    "latitude": 54.628541999999996,
+    "longitude": 39.760652,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1032.1613388709213,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=26А",
+      "addr:street=Вознесенская улица",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Вознесенский храм",
+      "religion=christian",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 109353154,
+    "name": "Николо-Ямской храм",
+    "latitude": 54.61755035,
+    "longitude": 39.757386749999995,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 3242.870011464564,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=8",
+      "addr:street=улица Циолковского",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:levels=4",
+      "check_date=2024-05-09",
+      "denomination=orthodox",
+      "name=Николо-Ямской храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109563319,
+    "name": "Церковь Спаса Преображения на Яру",
+    "latitude": 54.6354816,
+    "longitude": 39.7417916,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 537.6256417405933,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=14",
+      "addr:street=улица Петрова",
+      "alt_name=Церковь Спаса на Яру",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "name=Церковь Спаса Преображения на Яру",
+      "ref:sobory.ru=00867",
+      "ref:temples.ru=12910",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 109731622,
+    "name": "Успенский собор",
+    "latitude": 54.636139400000005,
+    "longitude": 39.74892135,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 5120.266135118757,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=13",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Успенский собор",
+      "religion=christian",
+      "tourism=attraction",
+      "wikidata=Q2018776",
+      "wikipedia=ru:Успенский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731623,
+    "name": "Христорождественский собор",
+    "latitude": 54.63655715,
+    "longitude": 39.748542400000005,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1670.1421201213527,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=14",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Христорождественский собор",
+      "religion=christian",
+      "tourism=attraction",
+      "wikidata=Q4501497",
+      "wikipedia=ru:Христорождественский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731624,
+    "name": "Архангельский собор",
+    "latitude": 54.6365455,
+    "longitude": 39.74934965,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 580.4947952745276,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=12",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=cathedral",
+      "building:colour=white",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Архангельский собор",
+      "religion=christian",
+      "roof:colour=green",
+      "roof:shape=pyramidal",
+      "tourism=attraction",
+      "wikidata=Q96850295",
+      "wikipedia=ru:Архангельский собор (Рязань)"
+    ]
+  },
+  {
+    "id": 109731638,
+    "name": "Богоявленская церковь",
+    "latitude": 54.635883750000005,
+    "longitude": 39.74941845,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 836.648358654272,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=5",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Богоявленская церковь",
+      "religion=christian",
+      "tourism=attraction"
+    ]
+  },
+  {
+    "id": 109731639,
+    "name": "Преображенский собор",
+    "latitude": 54.6356727,
+    "longitude": 39.7500551,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 751.7980934173299,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=6",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Преображенский собор",
+      "religion=christian",
+      "tourism=attraction"
+    ]
+  },
+  {
+    "id": 110224799,
+    "name": "Церковь Сошествия Святого Духа",
+    "latitude": 54.6378052,
+    "longitude": 39.750249600000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 961.8602676635289,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=19",
+      "addr:street=улица Набережная кремля",
+      "building=church",
+      "historic=yes",
+      "name=Церковь Сошествия Святого Духа",
+      "tourism=attraction",
+      "wikidata=Q65172387"
+    ]
+  },
+  {
+    "id": 112795996,
+    "name": "Храм Благовещения Пресвятой Богородицы",
+    "latitude": 54.63423545,
+    "longitude": 39.7613992,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 804.1728533911498,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=58",
+      "addr:street=Затинная улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм Благовещения Пресвятой Богородицы",
+      "religion=christian",
+      "wikidata=Q2190386",
+      "wikipedia=ru:Церковь Благовещения (Рязань)"
+    ]
+  },
+  {
+    "id": 116105989,
+    "name": "Храм входа Господня в Иерусалим",
+    "latitude": 54.6349028,
+    "longitude": 39.75833365,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 845.4883453496014,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "denomination=orthodox",
+      "name=Храм входа Господня в Иерусалим",
+      "religion=christian",
+      "wikidata=Q1974979",
+      "wikipedia=ru:Входноиерусалимская церковь (Рязань)"
+    ]
+  },
+  {
+    "id": 116565138,
+    "name": "Солотчинский монастырь Рождества Богородицы",
+    "latitude": 54.79076405,
+    "longitude": 39.83281235,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 41210.65402676713,
+    "estimatedVisitMinutes": 19,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "denomination=russian_orthodox",
+      "name=Солотчинский монастырь Рождества Богородицы",
+      "religion=christian",
+      "wikidata=Q3320375",
+      "wikipedia=ru:Солотчинский монастырь"
+    ]
+  },
+  {
+    "id": 116565139,
+    "name": "Церковь сошествия Святого Духа",
+    "latitude": 54.790471,
+    "longitude": 39.833203600000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 2277.9990731308385,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Церковь сошествия Святого Духа",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116565140,
+    "name": "Собор Рождества Пресвятой Богородицы",
+    "latitude": 54.7908151,
+    "longitude": 39.8324032,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 761.9927359315112,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1А",
+      "addr:street=Монастырская площадь",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Собор Рождества Пресвятой Богородицы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116601599,
+    "name": "Храм в честь Казанской иконы Пресвятой Богородицы",
+    "latitude": 54.8012775,
+    "longitude": 39.83828645,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 786.506771145583,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм в честь Казанской иконы Пресвятой Богородицы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 116920817,
+    "name": "Рязанская церковь Евангельских Христиан-баптистов союза ЕХВ России",
+    "latitude": 54.6264356,
+    "longitude": 39.76051165,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1048.3344833520123,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=10",
+      "addr:street=улица Щедрина",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=evangelical",
+      "name=Рязанская церковь Евангельских Христиан-баптистов союза ЕХВ России",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 126212745,
+    "name": "Церковь Бориса и Глеба",
+    "latitude": 54.6342644,
+    "longitude": 39.7335895,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1611.577634629804,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=32",
+      "addr:street=Сенная улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Церковь Бориса и Глеба",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 171747444,
+    "name": "Церковь Спаса Преображения",
+    "latitude": 54.6764681,
+    "longitude": 39.66390345,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1781.4829312255608,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=1А",
+      "addr:postcode=390039",
+      "addr:street=Колхозная улица (Канищево)",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:email=metarya@yandex.ru",
+      "contact:phone=+7 491 2362525",
+      "contact:website=http://metarya.ru",
+      "denomination=russian_orthodox",
+      "name=Церковь Спаса Преображения",
+      "name:en=Church of the Transfiguration",
+      "name:ru=Церковь Спаса Преображения",
+      "opening_hours=Mo-Su 07:00-19:00",
+      "ref:sobory.ru=11612",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 173102207,
+    "name": "Храм в честь иконы Божией Матери \"Всецарица\"",
+    "latitude": 54.61737085,
+    "longitude": 39.73275155,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 476.0741253486703,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=3 с2",
+      "addr:street=улица Семашко",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:phone=+7 952 1243914",
+      "denomination=orthodox",
+      "name=Храм в честь иконы Божией Матери \"Всецарица\"",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 173728956,
+    "name": "Церковь христиан Адвентистов Седьмого Дня",
+    "latitude": 54.66464445,
+    "longitude": 39.6672032,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1316.1811341268894,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "name=Церковь христиан Адвентистов Седьмого Дня"
+    ]
+  },
+  {
+    "id": 175852784,
+    "name": "Церковь Иоанна Кронштадтского",
+    "latitude": 54.610425750000005,
+    "longitude": 39.711944349999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 745.8976901051202,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=church",
+      "building:levels=5",
+      "denomination=russian_orthodox",
+      "name=Церковь Иоанна Кронштадтского",
+      "ref:temples.ru=18794",
+      "religion=christian",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 183615367,
+    "name": "Сергиевская церковь",
+    "latitude": 54.634511,
+    "longitude": 39.70077175,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1209.513782096574,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=10",
+      "addr:street=Московское шоссе",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Сергиевская церковь",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 192882369,
+    "name": "Николо-Дворянский храм",
+    "latitude": 54.630171399999995,
+    "longitude": 39.7486825,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1907.4719595150057,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=12А",
+      "addr:street=Николодворянская улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Николо-Дворянский храм",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 197714622,
+    "name": "Церковь иконы Скорбящей Богоматери",
+    "latitude": 54.61196835,
+    "longitude": 39.74799695,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 922.912964070717,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:street=Скорбященский проезд",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=Церковь иконы Скорбящей Богоматери",
+      "religion=christian",
+      "source=Bing",
+      "wheelchair=limited"
+    ]
+  },
+  {
+    "id": 197714675,
+    "name": "старообрядческая церковь Успения Пресвятыя Богородицы",
+    "latitude": 54.610769,
+    "longitude": 39.75065765,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 471.3557169656916,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=4",
+      "addr:postcode=390011",
+      "addr:street=Старообрядческий проезд",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=old_believers",
+      "name=старообрядческая церковь Успения Пресвятыя Богородицы",
+      "religion=christian",
+      "source=Bing"
+    ]
+  },
+  {
+    "id": 198382086,
+    "name": "Храм Покрова Божьей Матери",
+    "latitude": 54.6280851,
+    "longitude": 39.6585762,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1011.5503179283186,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=57А",
+      "addr:street=Советская улица",
+      "addr:suburb=Мервино",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм Покрова Божьей Матери",
+      "religion=christian",
+      "source=Bing",
+      "wikidata=Q17277345",
+      "wikipedia=ru:Церковь Покрова Пресвятой Богородицы (Мервино)"
+    ]
+  },
+  {
+    "id": 198833654,
+    "name": "христианская церковь",
+    "latitude": 54.62187705,
+    "longitude": 39.727559400000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 375.0110582855244,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=orthodox",
+      "name=христианская церковь",
+      "religion=christian",
+      "source=Bing",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 199350483,
+    "name": "Церковь Царственных страстотерпцев",
+    "latitude": 54.653915,
+    "longitude": 39.632295150000004,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 332.4809505879578,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=65Б",
+      "addr:street=Московское шоссе",
+      "amenity=place_of_worship",
+      "building=church",
+      "denomination=russian_orthodox",
+      "name=Церковь Царственных страстотерпцев",
+      "ref:temples.ru=13677",
+      "religion=christian",
+      "source=Bing",
+      "start_date=2000"
+    ]
+  },
+  {
+    "id": 209305604,
+    "name": "Храм в честь Сретения Господня",
+    "latitude": 54.6388726,
+    "longitude": 39.65341205,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1160.7949177759904,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1А",
+      "addr:street=площадь Новаторов",
+      "amenity=place_of_worship",
+      "building=church",
+      "name=Храм в честь Сретения Господня",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 210938644,
+    "name": "Часовня",
+    "latitude": 54.62838475,
+    "longitude": 39.7248257,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 49.318016672181784,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "name=Часовня",
+      "religion=christian",
+      "wheelchair=yes"
+    ]
+  },
+  {
+    "id": 211623254,
+    "name": "Храм во имя Архангела Михаила",
+    "latitude": 54.6615787,
+    "longitude": 39.6724838,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 114.8350314852048,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм во имя Архангела Михаила",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 215244442,
+    "name": "Храм Великомученицы Екатерины",
+    "latitude": 54.62476705,
+    "longitude": 39.738358950000006,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 1823.5037614000307,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=48",
+      "addr:postcode=390000",
+      "addr:street=улица Маяковского",
+      "amenity=place_of_worship",
+      "building=church",
+      "contact:vk=https://vk.com/club104517728",
+      "name=Храм Великомученицы Екатерины",
+      "phone=+7 958 5694509",
+      "religion=christian",
+      "website=https://ekaterinarzn.ru/"
+    ]
+  },
+  {
+    "id": 215369584,
+    "name": "Храм в честь Покрова Пресвятой Богородицы и святой мученицы Татианы",
+    "latitude": 54.629265849999996,
+    "longitude": 39.75188405,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 118.99702607114413,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=46 к4",
+      "addr:street=улица Свободы",
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Храм в честь Покрова Пресвятой Богородицы и святой мученицы Татианы",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 331204006,
+    "name": "Храм пророка Божия Илии",
+    "latitude": 54.65799505,
+    "longitude": 39.572745749999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 135.92034103327944,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=25В",
+      "addr:street=Забайкальская улица",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "name=Храм пророка Божия Илии",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 335400295,
+    "name": "Иоанно-Богословский храм",
+    "latitude": 54.6353658,
+    "longitude": 39.74962625,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 3194.485503520209,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:street=улица Кремль",
+      "amenity=place_of_worship",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=2",
+      "denomination=russian_orthodox",
+      "historic=yes",
+      "name=Иоанно-Богословский храм",
+      "religion=christian",
+      "roof:colour=green",
+      "roof:shape=hipped"
+    ]
+  },
+  {
+    "id": 426938918,
+    "name": "Воскресенский храм",
+    "latitude": 54.68787855,
+    "longitude": 39.620933199999996,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 420.60272309017495,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "name=Воскресенский храм"
+    ]
+  },
+  {
+    "id": 437932731,
+    "name": "Храм в честь Сергия Радонежского",
+    "latitude": 54.6214279,
+    "longitude": 39.726675400000005,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 880.6485617137555,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "building=church",
+      "building:levels=3",
+      "name=Храм в честь Сергия Радонежского"
+    ]
+  },
+  {
+    "id": 458342684,
+    "name": "Церковь Воздвижения креста Господня",
+    "latitude": 54.6026474,
+    "longitude": 39.8236511,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 19980.296514076595,
+    "estimatedVisitMinutes": 19,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "barrier=fence",
+      "denomination=orthodox",
+      "fence_type=wood",
+      "name=Церковь Воздвижения креста Господня",
+      "religion=christian"
+    ]
+  },
+  {
+    "id": 949609096,
+    "name": "Воздвижения Креста Господня, церковь",
+    "latitude": 54.5318848,
+    "longitude": 39.78449195,
+    "category": "Религиозные объекты",
+    "subcategory": "Христианские храмы",
+    "square": 352.05436539144637,
+    "estimatedVisitMinutes": 15,
+    "osmType": "way",
+    "tags": [
+      "amenity=place_of_worship",
+      "building=yes",
+      "name=Воздвижения Креста Господня, церковь",
+      "religion=christian"
+    ]
+  }
+]

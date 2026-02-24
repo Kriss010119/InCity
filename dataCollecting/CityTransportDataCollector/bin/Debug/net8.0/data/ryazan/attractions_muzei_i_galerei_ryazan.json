@@ -1,0 +1,542 @@
+﻿[
+  {
+    "id": 11893450987,
+    "name": "Интерактивный музей кофе",
+    "latitude": 54.6334694,
+    "longitude": 39.7650437,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "contact:vk=coffee.museum",
+      "museum=history",
+      "name=Интерактивный музей кофе",
+      "name:en=Coffee museum",
+      "opening_hours=Tu-Fr 12:00-20:00; Sa-Su 10:30-20:30",
+      "phone=+7 (903) 834-50-00",
+      "tourism=museum",
+      "website=https://museum.bravos.coffee/"
+    ]
+  },
+  {
+    "id": 11896661869,
+    "name": "Пахнет хлебом",
+    "latitude": 54.6291791,
+    "longitude": 39.7404106,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "contact:vk=pahnet_hlebom_rzn",
+      "museum=history",
+      "name=Пахнет хлебом",
+      "opening_hours=Mo-Su 10:00-19:00",
+      "phone=+7 (903) 839-29-49",
+      "tourism=museum",
+      "website=http://pahnethlebom.tilda.ws"
+    ]
+  },
+  {
+    "id": 11896701167,
+    "name": "Музей истории Рязанского шоколада",
+    "latitude": 54.6295413,
+    "longitude": 39.7412443,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "museum=history",
+      "name=Музей истории Рязанского шоколада",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 109731626,
+    "name": "Дворец Олега",
+    "latitude": 54.63704455,
+    "longitude": 39.74961845,
+    "category": "Музеи и галереи",
+    "subcategory": "Исторические музеи",
+    "square": 6014.687255499173,
+    "estimatedVisitMinutes": 81,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=15",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=3",
+      "museum=history",
+      "name=Дворец Олега",
+      "opening_hours=Tu-Su 10:00-18:00; Mo off",
+      "roof:colour=green",
+      "roof:shape=gabled",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450989,
+    "name": "Резиденция традиций",
+    "latitude": 54.6335787,
+    "longitude": 39.7639906,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи искусств",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "museum=art",
+      "name=Резиденция традиций",
+      "name:en=Residence of traditions",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 12857522671,
+    "name": "Фотодом имени Е.Н. Каширина",
+    "latitude": 54.6294485,
+    "longitude": 39.7397563,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи искусств",
+    "square": null,
+    "estimatedVisitMinutes": 40,
+    "osmType": "node",
+    "tags": [
+      "contact:phone=+7 4912 274404",
+      "contact:vk=https://vk.com/fotodom62",
+      "museum=art",
+      "name=Фотодом имени Е.Н. Каширина",
+      "opening_hours=Mo-Sa 10:00-19:00",
+      "operator=Рязанский государственный художественный музей",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 1345064648,
+    "name": "Галерея Иванова",
+    "latitude": 54.6294663,
+    "longitude": 39.7309409,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "fee=yes",
+      "name=Галерея Иванова",
+      "opening_hours=Tu-Su 11:00-19:00",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 2028382362,
+    "name": "Дом-музей И. П. Пожалостина",
+    "latitude": 54.7984554,
+    "longitude": 39.8383835,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "name=Дом-музей И. П. Пожалостина",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 4652905176,
+    "name": "Галерея пряников",
+    "latitude": 54.6336781,
+    "longitude": 39.760794,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "name=Галерея пряников",
+      "tourism=museum",
+      "website=http://galereya-pryanikov.ru/"
+    ]
+  },
+  {
+    "id": 6447723185,
+    "name": "Музей истории рязанского леденца",
+    "latitude": 54.6336635,
+    "longitude": 39.7437253,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-09-17",
+      "name=Музей истории рязанского леденца",
+      "opening_hours=Mo-Su 10:00-18:00",
+      "payment:cash=yes",
+      "payment:credit_cards=yes",
+      "payment:debit_cards=yes",
+      "phone=+7 491 299-77-21",
+      "tourism=museum",
+      "website=https://mirledentsa.ru/"
+    ]
+  },
+  {
+    "id": 7576857034,
+    "name": "Музей вооружения и военной техники",
+    "latitude": 54.6143053,
+    "longitude": 39.6659507,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "museum=military",
+      "name=Музей вооружения и военной техники",
+      "opening_hours:covid19=off",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450987,
+    "name": "Интерактивный музей кофе",
+    "latitude": 54.6334694,
+    "longitude": 39.7650437,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "contact:vk=coffee.museum",
+      "museum=history",
+      "name=Интерактивный музей кофе",
+      "name:en=Coffee museum",
+      "opening_hours=Tu-Fr 12:00-20:00; Sa-Su 10:30-20:30",
+      "phone=+7 (903) 834-50-00",
+      "tourism=museum",
+      "website=https://museum.bravos.coffee/"
+    ]
+  },
+  {
+    "id": 11893450988,
+    "name": "Музей истории молодёжного движения",
+    "latitude": 54.6337261,
+    "longitude": 39.7655033,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "name=Музей истории молодёжного движения",
+      "name:en=Youth movement history museum",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11893450989,
+    "name": "Резиденция традиций",
+    "latitude": 54.6335787,
+    "longitude": 39.7639906,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-10",
+      "museum=art",
+      "name=Резиденция традиций",
+      "name:en=Residence of traditions",
+      "operator:type=government",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 11896661869,
+    "name": "Пахнет хлебом",
+    "latitude": 54.6291791,
+    "longitude": 39.7404106,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "contact:vk=pahnet_hlebom_rzn",
+      "museum=history",
+      "name=Пахнет хлебом",
+      "opening_hours=Mo-Su 10:00-19:00",
+      "phone=+7 (903) 839-29-49",
+      "tourism=museum",
+      "website=http://pahnethlebom.tilda.ws"
+    ]
+  },
+  {
+    "id": 11896701167,
+    "name": "Музей истории Рязанского шоколада",
+    "latitude": 54.6295413,
+    "longitude": 39.7412443,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "check_date=2024-05-11",
+      "museum=history",
+      "name=Музей истории Рязанского шоколада",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 12857522671,
+    "name": "Фотодом имени Е.Н. Каширина",
+    "latitude": 54.6294485,
+    "longitude": 39.7397563,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "contact:phone=+7 4912 274404",
+      "contact:vk=https://vk.com/fotodom62",
+      "museum=art",
+      "name=Фотодом имени Е.Н. Каширина",
+      "opening_hours=Mo-Sa 10:00-19:00",
+      "operator=Рязанский государственный художественный музей",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 13123027701,
+    "name": "Рязанский музей путешественников",
+    "latitude": 54.6262118,
+    "longitude": 39.7486905,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": null,
+    "estimatedVisitMinutes": 30,
+    "osmType": "node",
+    "tags": [
+      "addr:housenumber=35",
+      "addr:postcode=390000",
+      "addr:street=улица Ленина",
+      "level=2",
+      "name=Рязанский музей путешественников",
+      "opening_hours=Mo-Fr 09:00-18:00; Sa 12:00-18:00",
+      "phone=+74912255636; +74912252522",
+      "tourism=museum",
+      "website=http://travelers-rzn.ru"
+    ]
+  },
+  {
+    "id": 102840708,
+    "name": "Музей дальней авиации",
+    "latitude": 54.6537733,
+    "longitude": 39.588537099999996,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 3565.934939070403,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=11",
+      "addr:street=улица Белякова",
+      "building=yes",
+      "name=Музей дальней авиации",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 105571167,
+    "name": "Музей истории молодёжного движения",
+    "latitude": 54.622496350000006,
+    "longitude": 39.74329625,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 1675.0205242659151,
+    "estimatedVisitMinutes": 30,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=79",
+      "addr:street=улица Свободы",
+      "building=mansion",
+      "building:levels=1",
+      "check_date:opening_hours=2023-03-01",
+      "fee=yes",
+      "name=Музей истории молодёжного движения",
+      "opening_hours=Mo,We,Fr,Sa 10:00-18:00; Tu,Th 13:00-21:00",
+      "start_date=1876",
+      "tourism=museum",
+      "wikidata=Q122988172"
+    ]
+  },
+  {
+    "id": 108524098,
+    "name": "Дом-музей И.П.Павлова",
+    "latitude": 54.631919350000004,
+    "longitude": 39.727228,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 248.90271843803737,
+    "estimatedVisitMinutes": 48,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:country=RU",
+      "addr:housenumber=27",
+      "addr:street=улица Павлова",
+      "building=civic",
+      "building:levels=2",
+      "fee=yes",
+      "name=Дом-музей И.П.Павлова",
+      "opening_hours=Tu-Su 10:00-18:00",
+      "tourism=museum",
+      "website=http://www.pavlovmuseum.ru/",
+      "wheelchair=no"
+    ]
+  },
+  {
+    "id": 109731626,
+    "name": "Дворец Олега",
+    "latitude": 54.63704455,
+    "longitude": 39.74961845,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 6014.687255499173,
+    "estimatedVisitMinutes": 81,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=15",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=3",
+      "museum=history",
+      "name=Дворец Олега",
+      "opening_hours=Tu-Su 10:00-18:00; Mo off",
+      "roof:colour=green",
+      "roof:shape=gabled",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 109731627,
+    "name": "Певческий корпус",
+    "latitude": 54.636984850000005,
+    "longitude": 39.75029515,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 763.629673655347,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "addr:housenumber=18",
+      "addr:street=улица Кремль",
+      "building=yes",
+      "building:colour=white",
+      "building:levels=2",
+      "name=Певческий корпус",
+      "roof:colour=#333333",
+      "roof:levels=1",
+      "roof:material=wood",
+      "roof:shape=hipped",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 110224798,
+    "name": "Дом для причта",
+    "latitude": 54.637828150000004,
+    "longitude": 39.749785149999994,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 306.3405115753304,
+    "estimatedVisitMinutes": 24,
+    "osmType": "way",
+    "tags": [
+      "addr:city=Рязань",
+      "addr:housenumber=17",
+      "addr:street=Трубежная набережная",
+      "building=yes",
+      "name=Дом для причта",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 376529128,
+    "name": "Открытый музей дальней авиации",
+    "latitude": 54.65126545,
+    "longitude": 39.585645299999996,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 28974.77358016516,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "area=yes",
+      "name=Открытый музей дальней авиации",
+      "tourism=museum"
+    ]
+  },
+  {
+    "id": 835142220,
+    "name": "Рязанский кремль",
+    "latitude": 54.636150549999996,
+    "longitude": 39.7501901,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 197332.35568822353,
+    "estimatedVisitMinutes": 60,
+    "osmType": "way",
+    "tags": [
+      "castle_type=kremlin",
+      "fee=no",
+      "historic=castle",
+      "name=Рязанский кремль",
+      "ruins=yes",
+      "tourism=museum",
+      "wikidata=Q4402653",
+      "wikipedia=ru:Рязанский кремль"
+    ]
+  },
+  {
+    "id": 1608340,
+    "name": "Художественный музей им. Пожалостина",
+    "latitude": 54.627148000000005,
+    "longitude": 39.7516077,
+    "category": "Музеи и галереи",
+    "subcategory": "Музеи",
+    "square": 9309.841983934093,
+    "estimatedVisitMinutes": 40,
+    "osmType": "relation",
+    "tags": [
+      "name=Художественный музей им. Пожалостина",
+      "official_name=Рязанский государственный областной художественный музей им. И.П. Пожалостина",
+      "tourism=museum",
+      "type=multipolygon",
+      "wikidata=Q16693441"
+    ]
+  }
+]
