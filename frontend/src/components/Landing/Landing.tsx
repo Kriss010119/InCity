@@ -1,18 +1,20 @@
-import { TransportIcon } from '../';
+import { TicketInput } from '../ticket-input/TicketInput';
 import styles from './Landing.module.css';
-import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { useTicket } from '../../context/TicketContext';
+import { TransportIcon } from '../transport-icon/TransportIcon';
+import { useLocale } from '../../hooks/useLocale';
 
 export const Landing = () => {
     const borderFrameRef = useRef<HTMLDivElement>(null);
+    const { ticketData } = useTicket();
+    const [, setIsTicketApplied] = useState(!!ticketData);
+    const { t } = useLocale();
     
     return (
         <section className={styles.landing}>
             <div className={styles["transport-container"]}>
-                <TransportIcon 
-                    key="car" 
-                    type="car" 
-                />
+                <TransportIcon key="car" type="car" />
                 <TransportIcon key="plane" type="plane" />
                 <TransportIcon key="train" type="train" />
             </div>
@@ -25,19 +27,21 @@ export const Landing = () => {
                     ></div>
                     
                     <h1 className={styles["main-title"]}>
-                        Исследуй маршруты и открывай новое вместе с InCity
+                        {t('landing.title')}
                     </h1>
                     
                     <p className={styles["subtitle"]}>
-                        Путешествия, события и достопримечательности — 
-                        всё в одном месте благодаря интеллектуальному планировщику
+                        {t('landing.subtitle')}
                     </p>
                 </div>
                 
-                <Link to="/map" className={styles["cta-button"]}>
-                    Начать планировать
-                </Link>
+                <div className={styles["ticket-section"]}>
+                    <TicketInput 
+                        onSuccess={() => setIsTicketApplied(true)}
+                        autoFillForm={true}
+                    />
+                </div>
             </div>
         </section>
     );
-}
+};
