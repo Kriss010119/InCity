@@ -16,17 +16,6 @@
   backdrop-filter: blur(10px);
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .notification svg {
   color: var(--tbank-yellow);
   flex-shrink: 0;
@@ -56,7 +45,7 @@
   flex: 1;
   padding: 8px 12px;
   background: var(--tbank-yellow);
-  color: var(--text-main);
+  color: #000;
   border: none;
   border-radius: 6px;
   font-size: 13px;
@@ -67,7 +56,6 @@
 
 .updateButton:hover {
   background: var(--tbank-yellow-dark);
-  transform: translateY(-1px);
 }
 
 .dismissButton {
@@ -87,30 +75,7 @@
   color: var(--text-main);
 }
 
-@media (max-width: 768px) {
-  .notification {
-    top: auto;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    max-width: none;
-    animation: slideUp 0.3s ease-out;
-  }
-
-  @keyframes slideUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-}
-
 :root[data-theme="dark"] .notification {
   background: var(--bg-secondary);
   border-color: var(--tbank-yellow);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
