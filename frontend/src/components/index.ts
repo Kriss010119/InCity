@@ -1,9 +1,9 @@
-export { Header } from './Header/Header';
-export { Footer } from './Footer/Footer';
-export { Landing } from './Landing/Landing';
-export { HomeInfo } from './HomeInfo/HomeInfo';
-export { SimpleMap } from './Panels/SimpleMap';
-export { InputPanel } from './Panels/InputPanel';
-export { InfoPanel } from './Panels/InfoPanel';
-export { TransportIcon } from './TransportIcon/TransportIcon';
-export {RouteUpdateNotification} from './Panels/RouteUpdateNotification'
+export { Header } from './header/Header';
+export { Footer } from './footer/Footer';
+export { Landing } from './landing/Landing';
+export { HomeInfo } from './home-info/HomeInfo';
+export { MapPanel } from './panels/map-panel/MapPanel';
+export { InputPanel } from './panels/input-panel/InputPanel';
+export { InfoPanel } from './panels/info-panel/InfoPanel';
+export { TransportIcon } from './transport-icon/TransportIcon';
+export {RouteUpdateNotification} from './notification/RouteUpdateNotification'
