@@ -3,6 +3,102 @@
   "WorkspaceRootPath": "C:\\Users\\georg\\source\\repos\\InCity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u04301{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|C:\\Users\\georg\\source\\repos\\InCity\\02_seed.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u04301{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|solutionrelative:02_seed.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u04301{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|C:\\Users\\georg\\source\\repos\\InCity\\01_shema.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u04301{ED4A0875-1505-4B60-B6AE-E2D8595F039C}|solutionrelative:01_shema.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF822189-1883-4782-8EF3-24EB7CC5527C}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{EF822189-1883-4782-8EF3-24EB7CC5527C}|C:\\Users\\georg\\source\\repos\\InCity\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{EF822189-1883-4782-8EF3-24EB7CC5527C}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{EF822189-1883-4782-8EF3-24EB7CC5527C}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF822189-1883-4782-8EF3-24EB7CC5527C}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{EF822189-1883-4782-8EF3-24EB7CC5527C}|C:\\Users\\georg\\source\\repos\\InCity\\Dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{EF822189-1883-4782-8EF3-24EB7CC5527C}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{EF822189-1883-4782-8EF3-24EB7CC5527C}|solutionrelative:Dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\busrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\busrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\metrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\metrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\trolleybusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\trolleybusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\tramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\tramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\attractionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\attractionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\surfaceparsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\surfaceparsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\repositories\\arrivalpointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\repositories\\arrivalpointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|c:\\users\\georg\\source\\repos\\incity\\toplayer\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AFDACD-1217-4906-B702-DF3F80BB1510}|TopLayer\\Toplayer.csproj|solutionrelative:toplayer\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|c:\\users\\georg\\source\\repos\\incity\\routeplanning\\service\\attractionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|solutionrelative:routeplanning\\service\\attractionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\contracts\\routerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\contracts\\routerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\parsers\\responsebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\parsers\\responsebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\parsers\\requestparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\parsers\\requestparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\dataaccess\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\dataaccess\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\mapping\\frontendkeymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\mapping\\frontendkeymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\dataaccess\\irepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\dataaccess\\irepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|c:\\users\\georg\\source\\repos\\incity\\midlayer\\contracts\\routeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CCB9F1-AA63-49BA-8281-9CC7BB4DA372}|Midlayer\\Midlayer.csproj|solutionrelative:midlayer\\contracts\\routeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|c:\\users\\georg\\source\\repos\\incity\\routeplanning\\routeplanning.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|solutionrelative:routeplanning\\routeplanning.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|c:\\users\\georg\\source\\repos\\incity\\domainlib\\attractions\\attractioncategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|solutionrelative:domainlib\\attractions\\attractioncategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|c:\\users\\georg\\source\\repos\\incity\\routeplanning\\attractioncollecting\\attractioncollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|solutionrelative:routeplanning\\attractioncollecting\\attractioncollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,10 +143,6 @@
       "RelativeMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|solutionrelative:routeplanning\\service\\transportfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|c:\\users\\georg\\source\\repos\\incity\\domainlib\\attractions\\attractioncategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|solutionrelative:domainlib\\attractions\\attractioncategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|c:\\users\\georg\\source\\repos\\incity\\domainlib\\stations\\busstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|solutionrelative:domainlib\\stations\\busstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +169,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|c:\\users\\georg\\source\\repos\\incity\\domainlib\\attractions\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D1D2CF-B8B9-40B3-8739-C685EEEFD5E1}|DomainLib\\DomainLib.csproj|solutionrelative:domainlib\\attractions\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|c:\\users\\georg\\source\\repos\\incity\\routeplanning\\routeplanning.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{C7C60489-4143-4DF0-8917-C93E2AD1CE8C}|RoutePlanning\\RoutePlanning.csproj|solutionrelative:routeplanning\\routeplanning.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\CityData\\AttractionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,7 +238,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -158,43 +246,293 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "02_seed.sql",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\02_seed.sql",
+              "RelativeDocumentMoniker": "02_seed.sql",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\02_seed.sql",
+              "RelativeToolTip": "02_seed.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUDAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-15T19:26:37.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RoutePlanner.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
-              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
-              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
-              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T17:17:19.036Z"
+              "Title": "01_shema.sql",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\01_shema.sql",
+              "RelativeDocumentMoniker": "01_shema.sql",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\01_shema.sql",
+              "RelativeToolTip": "01_shema.sql",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-15T19:24:00.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-15T19:22:16.414Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Section.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Section.cs",
-              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\Section.cs",
-              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Section.cs",
-              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\Section.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T17:14:58.002Z"
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-03-15T19:21:09.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Gap.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Gap.cs",
-              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\Gap.cs",
-              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Gap.cs",
-              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\Gap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "TrolleybusRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\TrolleybusRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\TrolleybusRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\TrolleybusRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\TrolleybusRepository.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAkwHMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T17:15:41.677Z"
+              "WhenOpened": "2026-03-15T19:03:41.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TramRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\TramRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\TramRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\TramRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\TramRepository.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAkwHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:03:19.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BusRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\BusRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\BusRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\BusRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\BusRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:02:26.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AttractionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\AttractionRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\AttractionRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\AttractionRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\AttractionRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwDEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:01:52.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SurfaceParseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\SurfaceParseHelper.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\SurfaceParseHelper.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\SurfaceParseHelper.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\SurfaceParseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:01:31.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "MetroRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\MetroRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\MetroRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\MetroRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\MetroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:00:33.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Program.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Program.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Program.cs",
+              "RelativeToolTip": "TopLayer\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:07:39.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DbHelper.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\DbHelper.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\DbHelper.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\DbHelper.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\DbHelper.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:00:57.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ArrivalPointRepository.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\ArrivalPointRepository.cs",
+              "RelativeDocumentMoniker": "TopLayer\\Repositories\\ArrivalPointRepository.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\Repositories\\ArrivalPointRepository.cs",
+              "RelativeToolTip": "TopLayer\\Repositories\\ArrivalPointRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T19:00:01.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RouteService.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\RouteService.cs",
+              "RelativeDocumentMoniker": "TopLayer\\RouteService.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\TopLayer\\RouteService.cs",
+              "RelativeToolTip": "TopLayer\\RouteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:35:34.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AttractionFilter.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\Service\\AttractionFilter.cs",
+              "RelativeDocumentMoniker": "RoutePlanning\\Service\\AttractionFilter.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\Service\\AttractionFilter.cs",
+              "RelativeToolTip": "RoutePlanning\\Service\\AttractionFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:30:55.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DataLoader.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\DataAccess\\DataLoader.cs",
+              "RelativeDocumentMoniker": "Midlayer\\DataAccess\\DataLoader.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\DataAccess\\DataLoader.cs",
+              "RelativeToolTip": "Midlayer\\DataAccess\\DataLoader.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA5wE4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:28:01.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IRepositories.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\DataAccess\\IRepositories.cs",
+              "RelativeDocumentMoniker": "Midlayer\\DataAccess\\IRepositories.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\DataAccess\\IRepositories.cs",
+              "RelativeToolTip": "Midlayer\\DataAccess\\IRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:27:52.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ResponseBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Parsers\\ResponseBuilder.cs",
+              "RelativeDocumentMoniker": "Midlayer\\Parsers\\ResponseBuilder.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Parsers\\ResponseBuilder.cs",
+              "RelativeToolTip": "Midlayer\\Parsers\\ResponseBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:27:42.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RequestParser.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Parsers\\RequestParser.cs",
+              "RelativeDocumentMoniker": "Midlayer\\Parsers\\RequestParser.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Parsers\\RequestParser.cs",
+              "RelativeToolTip": "Midlayer\\Parsers\\RequestParser.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwFcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:27:33.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrontendKeyMap.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Mapping\\FrontendKeyMap.cs",
+              "RelativeDocumentMoniker": "Midlayer\\Mapping\\FrontendKeyMap.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Mapping\\FrontendKeyMap.cs",
+              "RelativeToolTip": "Midlayer\\Mapping\\FrontendKeyMap.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:27:22.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RouteResponse.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Contracts\\RouteResponse.cs",
+              "RelativeDocumentMoniker": "Midlayer\\Contracts\\RouteResponse.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Contracts\\RouteResponse.cs",
+              "RelativeToolTip": "Midlayer\\Contracts\\RouteResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:27:09.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RouteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Contracts\\RouteRequest.cs",
+              "RelativeDocumentMoniker": "Midlayer\\Contracts\\RouteRequest.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\Midlayer\\Contracts\\RouteRequest.cs",
+              "RelativeToolTip": "Midlayer\\Contracts\\RouteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:26:57.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "MetroRoute.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\MetroRoute.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\MetroRoute.cs",
@@ -202,11 +540,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\MetroRoute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:34:39.9Z"
+              "WhenOpened": "2026-03-04T15:34:39.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 29,
               "Title": "MetroStation.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Stations\\MetroStation.cs",
               "RelativeDocumentMoniker": "DomainLib\\Stations\\MetroStation.cs",
@@ -214,11 +553,12 @@
               "RelativeToolTip": "DomainLib\\Stations\\MetroStation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:06:03.477Z"
+              "WhenOpened": "2026-03-04T15:06:03.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 28,
               "Title": "TransportManager.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\CityData\\TransportManager.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\CityData\\TransportManager.cs",
@@ -226,11 +566,12 @@
               "RelativeToolTip": "RoutePlanning\\CityData\\TransportManager.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAkwGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T15:48:28.822Z"
+              "WhenOpened": "2026-03-12T15:48:28.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 27,
               "Title": "MetroManager.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\CityData\\MetroManager.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\CityData\\MetroManager.cs",
@@ -238,11 +579,12 @@
               "RelativeToolTip": "RoutePlanning\\CityData\\MetroManager.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAkwFoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T07:56:29.07Z"
+              "WhenOpened": "2026-03-13T07:56:29.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 24,
               "Title": "AttractionCollector.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionCollecting\\AttractionCollector.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\AttractionCollecting\\AttractionCollector.cs",
@@ -255,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 32,
               "Title": "MetroGap.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\MetroGap.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\MetroGap.cs",
@@ -263,11 +605,77 @@
               "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\MetroGap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T17:16:22.603Z"
+              "WhenOpened": "2026-03-14T17:16:22.603Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
+              "Title": "RoutePlanning.csproj",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\RoutePlanning.csproj",
+              "RelativeDocumentMoniker": "RoutePlanning\\RoutePlanning.csproj",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\RoutePlanning.csproj",
+              "RelativeToolTip": "RoutePlanning\\RoutePlanning.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-14T17:14:57.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Gap.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Gap.cs",
+              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\Gap.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Gap.cs",
+              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\Gap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T17:15:41.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AttractionCategory.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\AttractionCategory.cs",
+              "RelativeDocumentMoniker": "DomainLib\\Attractions\\AttractionCategory.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\AttractionCategory.cs",
+              "RelativeToolTip": "DomainLib\\Attractions\\AttractionCategory.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T20:27:37.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Section.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Section.cs",
+              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\Section.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\Section.cs",
+              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\Section.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T17:14:58.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RoutePlanner.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
+              "RelativeDocumentMoniker": "RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
+              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
+              "RelativeToolTip": "RoutePlanning\\AttractionConnecting\\RoutePlanner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T17:17:19.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "CityTransportFacade.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\CityData\\CityTransportFacade.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\CityData\\CityTransportFacade.cs",
@@ -275,11 +683,12 @@
               "RelativeToolTip": "RoutePlanning\\CityData\\CityTransportFacade.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAiwJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T15:22:31.854Z"
+              "WhenOpened": "2026-03-12T15:22:31.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 34,
               "Title": "TransportFilter.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\Service\\TransportFilter.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\Service\\TransportFilter.cs",
@@ -287,23 +696,12 @@
               "RelativeToolTip": "RoutePlanning\\Service\\TransportFilter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T10:58:58.034Z"
+              "WhenOpened": "2026-03-13T10:58:58.034Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AttractionCategory.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\AttractionCategory.cs",
-              "RelativeDocumentMoniker": "DomainLib\\Attractions\\AttractionCategory.cs",
-              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\AttractionCategory.cs",
-              "RelativeToolTip": "DomainLib\\Attractions\\AttractionCategory.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwA0AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:27:37.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 35,
               "Title": "BusStop.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Stations\\BusStop.cs",
               "RelativeDocumentMoniker": "DomainLib\\Stations\\BusStop.cs",
@@ -311,11 +709,12 @@
               "RelativeToolTip": "DomainLib\\Stations\\BusStop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T14:37:50.011Z"
+              "WhenOpened": "2026-03-04T14:37:50.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 36,
               "Title": "Station.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Stations\\Station.cs",
               "RelativeDocumentMoniker": "DomainLib\\Stations\\Station.cs",
@@ -323,11 +722,12 @@
               "RelativeToolTip": "DomainLib\\Stations\\Station.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:32:05.673Z"
+              "WhenOpened": "2026-03-12T17:32:05.673Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 37,
               "Title": "MetroRouteInfo.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\MetroRouteInfo.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\MetroRouteInfo.cs",
@@ -335,11 +735,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\MetroRouteInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:07:32.308Z"
+              "WhenOpened": "2026-03-04T15:07:32.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 38,
               "Title": "IStation.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Interfaces\\IStation.cs",
               "RelativeDocumentMoniker": "DomainLib\\Interfaces\\IStation.cs",
@@ -347,23 +748,25 @@
               "RelativeToolTip": "DomainLib\\Interfaces\\IStation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:40:58.991Z"
+              "WhenOpened": "2026-03-12T17:40:58.991Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 39,
               "Title": "Cluster.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\Cluster.cs",
               "RelativeDocumentMoniker": "DomainLib\\Attractions\\Cluster.cs",
               "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\Cluster.cs",
               "RelativeToolTip": "DomainLib\\Attractions\\Cluster.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAACzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBgAAACzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T16:09:49.312Z"
+              "WhenOpened": "2026-03-04T16:09:49.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 40,
               "Title": "ClusterCollector.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\ClusterCollector.cs",
               "RelativeDocumentMoniker": "DomainLib\\Attractions\\ClusterCollector.cs",
@@ -371,11 +774,12 @@
               "RelativeToolTip": "DomainLib\\Attractions\\ClusterCollector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAwwOAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T19:54:05.105Z"
+              "WhenOpened": "2026-03-04T19:54:05.105Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 41,
               "Title": "Attraction.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\Attraction.cs",
               "RelativeDocumentMoniker": "DomainLib\\Attractions\\Attraction.cs",
@@ -383,11 +787,12 @@
               "RelativeToolTip": "DomainLib\\Attractions\\Attraction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:56:47.141Z"
+              "WhenOpened": "2026-03-04T15:56:47.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 42,
               "Title": "AttractionManager.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\CityData\\AttractionManager.cs",
               "RelativeDocumentMoniker": "RoutePlanning\\CityData\\AttractionManager.cs",
@@ -398,19 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RoutePlanning.csproj",
-              "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\RoutePlanning.csproj",
-              "RelativeDocumentMoniker": "RoutePlanning\\RoutePlanning.csproj",
-              "ToolTip": "C:\\Users\\georg\\source\\repos\\InCity\\RoutePlanning\\RoutePlanning.csproj",
-              "RelativeToolTip": "RoutePlanning\\RoutePlanning.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-14T17:14:57.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 44,
               "Title": "IAttraction.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Interfaces\\IAttraction.cs",
               "RelativeDocumentMoniker": "DomainLib\\Interfaces\\IAttraction.cs",
@@ -418,11 +811,12 @@
               "RelativeToolTip": "DomainLib\\Interfaces\\IAttraction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:04:44.835Z"
+              "WhenOpened": "2026-03-04T20:04:44.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 43,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\Event.cs",
               "RelativeDocumentMoniker": "DomainLib\\Attractions\\Event.cs",
@@ -430,11 +824,12 @@
               "RelativeToolTip": "DomainLib\\Attractions\\Event.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:21:37.196Z"
+              "WhenOpened": "2026-03-04T20:21:37.196Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 46,
               "Title": "IRoute.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Interfaces\\IRoute.cs",
               "RelativeDocumentMoniker": "DomainLib\\Interfaces\\IRoute.cs",
@@ -442,11 +837,12 @@
               "RelativeToolTip": "DomainLib\\Interfaces\\IRoute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:41:11.441Z"
+              "WhenOpened": "2026-03-12T17:41:11.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 47,
               "Title": "RouteInfo.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\RouteInfo.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\RouteInfo.cs",
@@ -454,11 +850,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\RouteInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T21:51:31.132Z"
+              "WhenOpened": "2026-03-12T21:51:31.132Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 45,
               "Title": "SpatialMath.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\SpatialMath.cs",
               "RelativeDocumentMoniker": "DomainLib\\SpatialMath.cs",
@@ -466,11 +863,12 @@
               "RelativeToolTip": "DomainLib\\SpatialMath.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwDQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T08:14:32.766Z"
+              "WhenOpened": "2026-03-13T08:14:32.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 51,
               "Title": "Route.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\Route.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\Route.cs",
@@ -478,11 +876,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\Route.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:42:00.906Z"
+              "WhenOpened": "2026-03-12T17:42:00.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 48,
               "Title": "BusRoute.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\BusRoute.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\BusRoute.cs",
@@ -490,11 +889,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\BusRoute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:34:03.933Z"
+              "WhenOpened": "2026-03-04T15:34:03.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 49,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Node.cs",
               "RelativeDocumentMoniker": "DomainLib\\Node.cs",
@@ -502,11 +902,12 @@
               "RelativeToolTip": "DomainLib\\Node.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T14:36:11.399Z"
+              "WhenOpened": "2026-03-04T14:36:11.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 52,
               "Title": "TrolleybusStop.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Stations\\TrolleybusStop.cs",
               "RelativeDocumentMoniker": "DomainLib\\Stations\\TrolleybusStop.cs",
@@ -514,11 +915,12 @@
               "RelativeToolTip": "DomainLib\\Stations\\TrolleybusStop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T14:59:02.349Z"
+              "WhenOpened": "2026-03-04T14:59:02.349Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 53,
               "Title": "TramStop.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Stations\\TramStop.cs",
               "RelativeDocumentMoniker": "DomainLib\\Stations\\TramStop.cs",
@@ -526,11 +928,12 @@
               "RelativeToolTip": "DomainLib\\Stations\\TramStop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T14:41:33.043Z"
+              "WhenOpened": "2026-03-04T14:41:33.043Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 50,
               "Title": "TramRoute.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\TramRoute.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\TramRoute.cs",
@@ -538,11 +941,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\TramRoute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:43:11.674Z"
+              "WhenOpened": "2026-03-12T17:43:11.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 54,
               "Title": "TrolleyBusRoute.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Routes\\TrolleyBusRoute.cs",
               "RelativeDocumentMoniker": "DomainLib\\Routes\\TrolleyBusRoute.cs",
@@ -550,11 +954,12 @@
               "RelativeToolTip": "DomainLib\\Routes\\TrolleyBusRoute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:35:49.263Z"
+              "WhenOpened": "2026-03-04T15:35:49.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 55,
               "Title": "EventCategory.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Attractions\\EventCategory.cs",
               "RelativeDocumentMoniker": "DomainLib\\Attractions\\EventCategory.cs",
@@ -562,11 +967,12 @@
               "RelativeToolTip": "DomainLib\\Attractions\\EventCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:16:25.921Z"
+              "WhenOpened": "2026-03-04T20:16:25.921Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 56,
               "Title": "Pair.cs",
               "DocumentMoniker": "C:\\Users\\georg\\source\\repos\\InCity\\DomainLib\\Service\\Pair.cs",
               "RelativeDocumentMoniker": "DomainLib\\Service\\Pair.cs",
@@ -574,7 +980,8 @@
               "RelativeToolTip": "DomainLib\\Service\\Pair.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:57:02.603Z"
+              "WhenOpened": "2026-03-04T20:57:02.603Z",
+              "EditorCaption": ""
             }
           ]
         }

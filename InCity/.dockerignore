@@ -1,0 +1,28 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.idea/
+**/node_modules/
+**/*.user
+**/*.suo
+**/Thumbs.db
+**/.DS_Store
+
+# SQL seed file is large, not needed in backend container
+sql/
+db/
+
+# Git
+.git/
+.gitignore
+
+# Docker files themselves
+docker-compose.yml
+Dockerfile
+.dockerignore
+README.md
+
+# JSON data files
+*.json
+!**/appsettings.json
+!**/appsettings.*.json
