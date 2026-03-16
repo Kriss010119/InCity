@@ -26,7 +26,8 @@ namespace TopLayer.Repositories
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
             string sql = $@"
-                SELECT id, name, local_name, latitude, longitude, route_info
+                SELECT id, name, local_name, latitude, longitude,
+                       ARRAY(SELECT row_to_json(ri)::text FROM unnest(route_info) ri) AS route_info_json
                 FROM bus_stops
                 WHERE {DbHelper.BoundingBoxSql}
                 AND {DbHelper.HaversineSql}";
@@ -48,7 +49,7 @@ namespace TopLayer.Repositories
 
             foreach (var row in rows)
             {
-                List<RouteInfo> routes = ParseRouteInfoArray(row.route_info);
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info_json);
 
                 result.Add(new BusStop(
                     (ulong)(long)row.id,
@@ -73,7 +74,7 @@ namespace TopLayer.Repositories
             }
 
             string sql = @"
-                SELECT DISTINCT r.id, r.route_number, r.name, r.from_name, r.to_name, 
+                SELECT DISTINCT r.id, r.route_number, r.name, r.from_name, r.to_name,
                        r.operator, r.network, r.stop_ids
                 FROM bus_routes r
                 WHERE r.stop_ids && @stopIds";
@@ -82,7 +83,6 @@ namespace TopLayer.Repositories
 
             var rows = await connection.QueryAsync(sql, new { stopIds = ids });
 
-            // Загружаем все остановки, на которые ссылаются маршруты
             HashSet<long> allStopIds = new HashSet<long>();
             var rowList = rows.ToList();
 
@@ -141,7 +141,8 @@ namespace TopLayer.Repositories
             }
 
             string sql = @"
-                SELECT id, name, local_name, latitude, longitude, route_info
+                SELECT id, name, local_name, latitude, longitude,
+                       ARRAY(SELECT row_to_json(ri)::text FROM unnest(route_info) ri) AS route_info_json
                 FROM bus_stops
                 WHERE id = ANY(@ids)";
 
@@ -152,7 +153,7 @@ namespace TopLayer.Repositories
             foreach (var row in rows)
             {
                 long id = (long)row.id;
-                List<RouteInfo> routes = ParseRouteInfoArray(row.route_info);
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info_json);
 
                 dict[id] = new BusStop(
                     (ulong)id,
@@ -165,24 +166,6 @@ namespace TopLayer.Repositories
             }
 
             return dict;
-        }
-
-        private static List<RouteInfo> ParseRouteInfoArray(object? routeInfoRaw)
-        {
-            List<RouteInfo> routes = new List<RouteInfo>();
-
-            if (routeInfoRaw is object[] arr)
-            {
-                foreach (var item in arr)
-                {
-                    if (item is (int routeId, string routeNumber, int seqNum))
-                    {
-                        routes.Add(new RouteInfo((ulong)routeId, routeNumber, seqNum));
-                    }
-                }
-            }
-
-            return routes;
         }
     }
 }

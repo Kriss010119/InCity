@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Dapper;
 using Npgsql;
@@ -25,7 +26,9 @@ namespace TopLayer.Repositories
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
             string sql = $@"
-                SELECT id, name, local_name, latitude, longitude, is_transfer, line_info, transfers
+                SELECT id, name, local_name, latitude, longitude, is_transfer,
+                       ARRAY(SELECT row_to_json(li)::text FROM unnest(line_info) li) AS line_info_json,
+                       ARRAY(SELECT row_to_json(tr)::text FROM unnest(transfers) tr) AS transfers_json
                 FROM metro_stations
                 WHERE {DbHelper.BoundingBoxSql}
                 AND {DbHelper.HaversineSql}";
@@ -57,13 +60,14 @@ namespace TopLayer.Repositories
         {
             using var connection = new NpgsqlConnection(_connectionString);
 
-            // Загружаем все линии метро
             var lines = await connection.QueryAsync(
                 "SELECT id, name, route_number, operator, color_code, station_ids_forward, station_ids_backward FROM metro_lines");
 
-            // Загружаем все станции метро для сборки маршрутов
             var allStations = await connection.QueryAsync(
-                "SELECT id, name, local_name, latitude, longitude, is_transfer, line_info, transfers FROM metro_stations");
+                @"SELECT id, name, local_name, latitude, longitude, is_transfer,
+                         ARRAY(SELECT row_to_json(li)::text FROM unnest(line_info) li) AS line_info_json,
+                         ARRAY(SELECT row_to_json(tr)::text FROM unnest(transfers) tr) AS transfers_json
+                  FROM metro_stations");
 
             Dictionary<long, MetroStation> stationsDict = new Dictionary<long, MetroStation>();
             foreach (var row in allStations)
@@ -85,7 +89,6 @@ namespace TopLayer.Repositories
                 long[]? forwardIds = line.station_ids_forward as long[];
                 long[]? backwardIds = line.station_ids_backward as long[];
 
-                // Прямое направление
                 if (forwardIds != null && forwardIds.Length > 0)
                 {
                     List<MetroStation> forwardStations = new List<MetroStation>();
@@ -97,12 +100,10 @@ namespace TopLayer.Repositories
                         }
                     }
 
-                    // ID маршрута: lineId * 10 + 1 для прямого направления
                     ulong forwardRouteId = (ulong)(lineId * 10 + 1);
-                    result.Add(new MetroRoute(forwardRouteId, routeNumber, lineName + " (прямое)", forwardStations, color, lineName, op));
+                    result.Add(new MetroRoute(forwardRouteId, routeNumber, lineName + " (forward)", forwardStations, color, lineName, op));
                 }
 
-                // Обратное направление
                 if (backwardIds != null && backwardIds.Length > 0)
                 {
                     List<MetroStation> backwardStations = new List<MetroStation>();
@@ -114,9 +115,8 @@ namespace TopLayer.Repositories
                         }
                     }
 
-                    // ID маршрута: lineId * 10 + 2 для обратного направления
                     ulong backwardRouteId = (ulong)(lineId * 10 + 2);
-                    result.Add(new MetroRoute(backwardRouteId, routeNumber, lineName + " (обратное)", backwardStations, color, lineName, op));
+                    result.Add(new MetroRoute(backwardRouteId, routeNumber, lineName + " (backward)", backwardStations, color, lineName, op));
                 }
             }
 
@@ -128,55 +128,52 @@ namespace TopLayer.Repositories
             long id = (long)row.id;
             bool isTransfer = (bool)row.is_transfer;
 
-            // Парсинг line_info -> Lines + Routes
             List<string> lines = new List<string>();
             List<MetroRouteInfo> routes = new List<MetroRouteInfo>();
 
-            if (row.line_info is object[] lineInfoArr)
+            if (row.line_info_json is string[] lineInfoArr)
             {
-                foreach (var item in lineInfoArr)
+                foreach (string item in lineInfoArr)
                 {
-                    if (item is ValueTuple<int, string?, string?, int> tuple)
+                    MetroLineInfoDto? dto = Deserialize<MetroLineInfoDto>(item);
+                    if (dto == null)
                     {
-                        int lineId = tuple.Item1;
-                        string? routeNumber = tuple.Item2;
-                        string? color = tuple.Item3;
-                        int seqNum = tuple.Item4;
-
-                        // Генерируем route ID аналогично GetRoutesAsync
-                        // Здесь мы не знаем направление, поэтому используем lineId * 10 + 1 как базовый
-                        ulong routeId = (ulong)(lineId * 10 + 1);
-                        routes.Add(new MetroRouteInfo(routeId, routeNumber, seqNum, color));
+                        continue;
                     }
+
+                    ulong routeId = (ulong)(dto.line_id * 10 + 1);
+                    if (!string.IsNullOrWhiteSpace(dto.route_number) && !lines.Contains(dto.route_number))
+                    {
+                        lines.Add(dto.route_number);
+                    }
+
+                    routes.Add(new MetroRouteInfo(routeId, dto.route_number, dto.sequence_num, dto.color));
                 }
             }
 
-            // Парсинг transfers -> List<KeyValuePair<string, List<MetroRouteInfo>>>
             List<KeyValuePair<string, List<MetroRouteInfo>>>? transfers = null;
 
-            if (isTransfer && row.transfers is object[] transferArr && transferArr.Length > 0)
+            if (isTransfer && row.transfers_json is string[] transferArr && transferArr.Length > 0)
             {
                 Dictionary<string, List<MetroRouteInfo>> transferDict = new Dictionary<string, List<MetroRouteInfo>>();
 
-                foreach (var item in transferArr)
+                foreach (string item in transferArr)
                 {
-                    if (item is ValueTuple<string?, int, string?, string?, int> tt)
+                    MetroTransferInfoDto? dto = Deserialize<MetroTransferInfoDto>(item);
+                    if (dto == null)
                     {
-                        string stationName = tt.Item1 ?? "";
-                        int lineId = tt.Item2;
-                        string? routeNumber = tt.Item3;
-                        string? color = tt.Item4;
-                        int seqNum = tt.Item5;
-
-                        ulong routeId = (ulong)(lineId * 10 + 1);
-                        MetroRouteInfo mri = new MetroRouteInfo(routeId, routeNumber, seqNum, color);
-
-                        if (!transferDict.ContainsKey(stationName))
-                        {
-                            transferDict[stationName] = new List<MetroRouteInfo>();
-                        }
-                        transferDict[stationName].Add(mri);
+                        continue;
                     }
+
+                    string stationName = dto.station_name ?? "";
+                    ulong routeId = (ulong)(dto.line_id * 10 + 1);
+                    MetroRouteInfo mri = new MetroRouteInfo(routeId, dto.route_number, dto.sequence_num, dto.color);
+
+                    if (!transferDict.ContainsKey(stationName))
+                    {
+                        transferDict[stationName] = new List<MetroRouteInfo>();
+                    }
+                    transferDict[stationName].Add(mri);
                 }
 
                 transfers = transferDict.Select(kvp => new KeyValuePair<string, List<MetroRouteInfo>>(kvp.Key, kvp.Value)).ToList();
@@ -193,6 +190,35 @@ namespace TopLayer.Repositories
                 transfers,
                 (string?)row.local_name
             );
+        }
+
+        private static T? Deserialize<T>(string json)
+        {
+            try
+            {
+                return JsonSerializer.Deserialize<T>(json);
+            }
+            catch
+            {
+                return default;
+            }
+        }
+
+        private sealed class MetroLineInfoDto
+        {
+            public int line_id { get; set; }
+            public string? route_number { get; set; }
+            public string? color { get; set; }
+            public int sequence_num { get; set; }
+        }
+
+        private sealed class MetroTransferInfoDto
+        {
+            public string? station_name { get; set; }
+            public int line_id { get; set; }
+            public string? route_number { get; set; }
+            public string? color { get; set; }
+            public int sequence_num { get; set; }
         }
     }
 }

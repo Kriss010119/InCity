@@ -1,12 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using MidLayer.Contracts;
 using MidLayer.DataAccess;
-using TopLayer.Services;
 using TopLayer.Repositories;
+using TopLayer.Services;
 
 namespace TopLayer
 {
@@ -30,8 +29,8 @@ namespace TopLayer
                 options.AddPolicy("AllowFrontend", policy =>
                 {
                     policy.WithOrigins("http://localhost:5173")
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
                 });
             });
 

@@ -1,0 +1,16 @@
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/bin/Debug/net8.0/RoutePlanning.deps.json
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/bin/Debug/net8.0/RoutePlanning.dll
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/bin/Debug/net8.0/RoutePlanning.pdb
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/bin/Debug/net8.0/DomainLib.dll
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/bin/Debug/net8.0/DomainLib.pdb
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.csproj.AssemblyReference.cache
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.AssemblyInfoInputs.cache
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.AssemblyInfo.cs
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.csproj.CoreCompileInputs.cache
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.sourcelink.json
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePla.E98FEE0D.Up2Date
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.dll
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/refint/RoutePlanning.dll
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/RoutePlanning.pdb
+/Users/kriss/Documents/Git_Курсач/InCity/backend/RoutePlanning/obj/Debug/net8.0/ref/RoutePlanning.dll

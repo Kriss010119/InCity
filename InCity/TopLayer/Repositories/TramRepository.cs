@@ -26,7 +26,8 @@ namespace TopLayer.Repositories
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
             string sql = $@"
-                SELECT id, name, local_name, latitude, longitude, route_info
+                SELECT id, name, local_name, latitude, longitude,
+                       ARRAY(SELECT row_to_json(ri)::text FROM unnest(route_info) ri) AS route_info_json
                 FROM tram_stops
                 WHERE {DbHelper.BoundingBoxSql}
                 AND {DbHelper.HaversineSql}";
@@ -48,7 +49,7 @@ namespace TopLayer.Repositories
 
             foreach (var row in rows)
             {
-                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info);
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info_json);
                 result.Add(new TramStop(
                     (ulong)(long)row.id, (double)(decimal)row.latitude, (double)(decimal)row.longitude,
                     (string?)row.name, routes, (string?)row.local_name));
@@ -99,14 +100,16 @@ namespace TopLayer.Repositories
             if (stopIds.Count == 0) return new Dictionary<long, TramStop>();
 
             var rows = await connection.QueryAsync(
-                "SELECT id, name, local_name, latitude, longitude, route_info FROM tram_stops WHERE id = ANY(@ids)",
+                @"SELECT id, name, local_name, latitude, longitude,
+                         ARRAY(SELECT row_to_json(ri)::text FROM unnest(route_info) ri) AS route_info_json
+                  FROM tram_stops WHERE id = ANY(@ids)",
                 new { ids = stopIds.ToArray() });
 
             Dictionary<long, TramStop> dict = new Dictionary<long, TramStop>();
             foreach (var row in rows)
             {
                 long id = (long)row.id;
-                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info);
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info_json);
                 dict[id] = new TramStop((ulong)id, (double)(decimal)row.latitude, (double)(decimal)row.longitude,
                     (string?)row.name, routes, (string?)row.local_name);
             }
