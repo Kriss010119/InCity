@@ -1,6 +1,6 @@
 export type Theme = 'light' | 'dark';
 
-export type TransportType = 'metro' | 'bus' | 'train' | 'electric_train' | 'plane' | 'ship';
+export type TransportType = 'metro' | 'bus' | 'train';
 
 export type ThemeContextType = {
   theme: Theme;
@@ -8,14 +8,51 @@ export type ThemeContextType = {
   themeIcon: string;
 }
 
+export type OrderType = 'train' | 'hotel';
+
+export type TrainTicketDetails = {
+  orderType: 'train';
+  orderId: string;
+  createdAt: string;
+  details: {
+    departureStationCode: string;
+    arrivalStationCode: string;
+    departureDate: string;
+    arrivalDate: string;
+    departureTime: string;
+    arrivalTime: string;
+    passengers: number;
+  };
+};
+
+export type HotelTicketDetails = {
+  orderType: 'hotel';
+  orderId: string;
+  createdAt: string;
+  details: {
+    hotelName: string;
+    coordinates: {
+      latitude: number;
+      longitude: number;
+    };
+    checkIn: string;
+    checkOut: string;
+  };
+};
+
+export type TicketDetails = TrainTicketDetails | HotelTicketDetails;
+
 export type FormData = {
-  from: string;
   to: string;
   date: string;
   transport: string[];
   attractions: string[];
   events: string[];
-}
+  destinationLat?: number;
+  destinationLng?: number;
+  destinationName?: string;
+  useTicket?: boolean;
+};
 
 export type RoutePointType = {
   id: string;
@@ -96,3 +133,80 @@ export type MapMarker = {
     description: string;
   };
 }
+
+export type TicketData = {
+  ticketNumber: string;
+  ticketDetails: TicketDetails;
+}
+
+export type LocationState = {
+  from?: string;
+  to?: string;
+  date?: string;
+  autoFill?: boolean;
+  ticketNumber?: string;
+}
+
+export type RouteNode = {
+  nodeId: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  role: string;
+  sequence: number;
+};
+
+export type RouteGap = {
+  startNode: RouteNode;
+  transport: string;
+  routeNumber: string;
+  endNode: RouteNode;
+  nodesVisited: RouteNode[];
+};
+
+export type RouteSection = {
+  gaps: RouteGap[];
+  estimatedTimeInMinutes: number;
+  numberOfTransfers: number;
+};
+
+export type VisitPoint = {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  category: string;
+  subcategory: string;
+  square: number;
+  estimatedVisitMinutes: number;
+  osmType: string;
+  tags: string[];
+};
+
+export type Node = {
+  nodeId: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  role: string;
+  sequence: number;
+};
+
+export type Gap = {
+  startNode: Node;
+  transport: string;
+  routeNumber: string;
+  endNode: Node;
+  nodesVisited: Node[];
+};
+
+export type Section = {
+  gaps: Gap[];
+  estimatedTimeInMinutes: number;
+  numberOfTransfers: number;
+};
+
+export type RouteResponse = {
+  visitPoints: VisitPoint[];
+  sections: Section[];
+};

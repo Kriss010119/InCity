@@ -1,10 +1,18 @@
 .mapPage {
   margin-top: var(--header-height);
   display: grid;
-  grid-template-columns: 350px 1fr 350px;
   height: calc(100vh - var(--header-height));
   background: var(--bg-main);
   gap: 1px;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.mapPage.infoVisible {
+  grid-template-columns: 350px 1fr 350px;
+}
+
+.mapPage.infoHidden {
+  grid-template-columns: 350px 1fr 40px;
 }
 
 .mapContainer {
@@ -13,15 +21,48 @@
   overflow: hidden;
 }
 
-@media (max-width: 1200px) {
-  .mapPage {
-    grid-template-columns: 300px 1fr 300px;
-  }
+.errorMessage {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e30611;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(227, 6, 17, 0.3);
 }
 
-@media (max-width: 992px) {
-  .mapPage {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-  }
+.openPanelButton {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition-normal);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.openPanelButton:hover {
+  background: var(--tbank-yellow);
+  color: var(--text-black);
+  border-color: var(--tbank-yellow);
+  width: 44px;
+}
+
+.openPanelButton svg {
+  width: 24px;
+  height: 24px;
 }
