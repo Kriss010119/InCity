@@ -39,7 +39,6 @@ namespace TopLayer
 
             app.UseCors("AllowFrontend");
 
-            // GET /route-from-point — маршрут от координат (точка на карте или координаты отеля от фронтенда)
             app.MapGet("/route-from-point", async (double? lat, double? lng, string? duration, string? transport,
                 string? attractions, string? subattractions, string? events, RouteService routeService) =>
             {
@@ -70,7 +69,6 @@ namespace TopLayer
                 }
             });
 
-            // GET /route-from-order — маршрут от ж/д станции или аэропорта по коду прибытия
             app.MapGet("/route-from-order", async (string? arrivalCode, string? duration, string? transport,
                 string? attractions, string? subattractions, string? events, RouteService routeService) =>
             {

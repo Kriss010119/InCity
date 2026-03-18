@@ -24,17 +24,12 @@ namespace TopLayer.Repositories
         {
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
-            string categorySql = categories.Length > 0
-                ? "AND category = ANY(@categories)"
-                : "";
-
-            string subcategorySql = subcategories.Length > 0
-                ? "AND subcategory = ANY(@subcategories)"
-                : "";
+            string categorySql = categories.Length > 0 ? "AND category = ANY(@categories)" : "";
+            string subcategorySql = subcategories.Length > 0 ? "AND subcategory = ANY(@subcategories)" : "";
 
             string sql = $@"
                 SELECT id, name, latitude, longitude, category, subcategory, 
-                       square, estimated_visit_minutes, tags
+                       square, estimated_visit_minutes, tags::text as tags_text
                 FROM attractions
                 WHERE {DbHelper.BoundingBoxSql}
                 AND {DbHelper.HaversineSql}
@@ -60,8 +55,7 @@ namespace TopLayer.Repositories
 
             foreach (var row in rows)
             {
-                string[]? tags = row.tags as string[];
-                List<string> tagList = tags != null ? new List<string>(tags) : new List<string>();
+                List<string> tagList = ParseTextArray((string?)row.tags_text);
 
                 result.Add(new Attraction(
                     (ulong)(long)row.id,
@@ -74,6 +68,34 @@ namespace TopLayer.Repositories
                     (int)(row.estimated_visit_minutes ?? 30),
                     tagList
                 ));
+            }
+
+            return result;
+        }
+
+        private static List<string> ParseTextArray(string? text)
+        {
+            List<string> result = new List<string>();
+            if (string.IsNullOrEmpty(text) || text == "{}") return result;
+
+            string inner = text.TrimStart('{').TrimEnd('}');
+            if (string.IsNullOrEmpty(inner)) return result;
+
+            bool inQuotes = false;
+            int start = 0;
+
+            for (int i = 0; i <= inner.Length; i++)
+            {
+                if (i == inner.Length || (inner[i] == ',' && !inQuotes))
+                {
+                    string item = inner[start..i].Trim().Trim('"');
+                    if (item.Length > 0) result.Add(item);
+                    start = i + 1;
+                }
+                else if (inner[i] == '"')
+                {
+                    inQuotes = !inQuotes;
+                }
             }
 
             return result;

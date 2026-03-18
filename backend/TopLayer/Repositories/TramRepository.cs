@@ -26,13 +26,12 @@ namespace TopLayer.Repositories
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
             string sql = $@"
-                SELECT id, name, local_name, latitude, longitude, route_info
+                SELECT id, name, local_name, latitude, longitude, route_info::text as route_info_text
                 FROM tram_stops
                 WHERE {DbHelper.BoundingBoxSql}
                 AND {DbHelper.HaversineSql}";
 
             using var connection = new NpgsqlConnection(_connectionString);
-
             var rows = await connection.QueryAsync(sql, new
             {
                 lat = latitude,
@@ -45,15 +44,12 @@ namespace TopLayer.Repositories
             });
 
             List<TramStop> result = new List<TramStop>();
-
             foreach (var row in rows)
             {
-                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info);
-                result.Add(new TramStop(
-                    (ulong)(long)row.id, (double)(decimal)row.latitude, (double)(decimal)row.longitude,
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoText((string?)row.route_info_text);
+                result.Add(new TramStop((ulong)(long)row.id, (double)(decimal)row.latitude, (double)(decimal)row.longitude,
                     (string?)row.name, routes, (string?)row.local_name));
             }
-
             return result;
         }
 
@@ -62,23 +58,19 @@ namespace TopLayer.Repositories
             long[] ids = stopIds.Select(id => (long)id).ToArray();
             if (ids.Length == 0) return [];
 
-            string sql = @"
-                SELECT DISTINCT r.id, r.route_number, r.name, r.from_name, r.to_name, r.operator, r.network, r.stop_ids
-                FROM tram_routes r WHERE r.stop_ids && @stopIds";
-
             using var connection = new NpgsqlConnection(_connectionString);
-            var rows = await connection.QueryAsync(sql, new { stopIds = ids });
+            var rows = await connection.QueryAsync(
+                @"SELECT DISTINCT r.id, r.route_number, r.name, r.from_name, r.to_name, r.operator, r.network, r.stop_ids
+                  FROM tram_routes r WHERE r.stop_ids && @stopIds", new { stopIds = ids });
             var rowList = rows.ToList();
 
             HashSet<long> allStopIds = new HashSet<long>();
             foreach (var row in rowList)
-            {
                 if (row.stop_ids is long[] sids) foreach (long sid in sids) allStopIds.Add(sid);
-            }
 
-            Dictionary<long, TramStop> stopsById = await LoadStopsByIds(connection, allStopIds);
-
+            var stopsById = await LoadStopsByIds(connection, allStopIds);
             List<TramRoute> result = new List<TramRoute>();
+
             foreach (var row in rowList)
             {
                 List<IStation> stops = new List<IStation>();
@@ -90,23 +82,21 @@ namespace TopLayer.Repositories
                     stops, (string?)row.from_name ?? "", (string?)row.to_name ?? "",
                     (string?)row.@operator ?? "", (string?)row.network ?? ""));
             }
-
             return result;
         }
 
         private async Task<Dictionary<long, TramStop>> LoadStopsByIds(NpgsqlConnection connection, HashSet<long> stopIds)
         {
             if (stopIds.Count == 0) return new Dictionary<long, TramStop>();
-
             var rows = await connection.QueryAsync(
-                "SELECT id, name, local_name, latitude, longitude, route_info FROM tram_stops WHERE id = ANY(@ids)",
+                "SELECT id, name, local_name, latitude, longitude, route_info::text as route_info_text FROM tram_stops WHERE id = ANY(@ids)",
                 new { ids = stopIds.ToArray() });
 
             Dictionary<long, TramStop> dict = new Dictionary<long, TramStop>();
             foreach (var row in rows)
             {
                 long id = (long)row.id;
-                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoArray(row.route_info);
+                List<RouteInfo> routes = SurfaceParseHelper.ParseRouteInfoText((string?)row.route_info_text);
                 dict[id] = new TramStop((ulong)id, (double)(decimal)row.latitude, (double)(decimal)row.longitude,
                     (string?)row.name, routes, (string?)row.local_name);
             }
