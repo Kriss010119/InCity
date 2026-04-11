@@ -1,0 +1,4761 @@
+﻿[
+  {
+    "id": 813972298,
+    "name": "Тверская",
+    "latitude": 55.7650163,
+    "longitude": 37.6054919,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Тверская",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 813972369,
+    "name": "Страстная площадь",
+    "latitude": 55.7653642,
+    "longitude": 37.6039044,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Страстная площадь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 813972466,
+    "name": "Страстная площадь",
+    "latitude": 55.7656155,
+    "longitude": 37.6041871,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Страстная площадь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 813972491,
+    "name": "Тверской бульваръ",
+    "latitude": 55.7653655,
+    "longitude": 37.604915,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Тверской бульваръ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 813972663,
+    "name": "Тверская",
+    "latitude": 55.7654258,
+    "longitude": 37.6037896,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Тверская",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1359123449,
+    "name": "Возрождение",
+    "latitude": 55.7359732,
+    "longitude": 37.6246985,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Эрнст Неизвестный",
+      "name=Возрождение",
+      "tourism=artwork",
+      "wikidata=Q21026854",
+      "wikipedia=ru:Возрождение (памятник)"
+    ]
+  },
+  {
+    "id": 1692912697,
+    "name": "Фонтан-стела",
+    "latitude": 55.9000224,
+    "longitude": 37.5708197,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Фонтан-стела",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1914007987,
+    "name": "С. П. Боткину",
+    "latitude": 55.7817618,
+    "longitude": 37.5541367,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "memorial=bust",
+      "name=С. П. Боткину",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3063610366,
+    "name": "Бабочка",
+    "latitude": 55.8607343,
+    "longitude": 37.4507008,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Бабочка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3079043280,
+    "name": "Тверской бульваръ",
+    "latitude": 55.7648191,
+    "longitude": 37.606193,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Тверской бульваръ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3516348883,
+    "name": "Аналемматические солнечные часы",
+    "latitude": 55.7201155,
+    "longitude": 37.5077719,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "amenity=clock",
+      "display=sundial",
+      "name=Аналемматические солнечные часы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3567067250,
+    "name": "Лиса",
+    "latitude": 55.7027615,
+    "longitude": 37.5562918,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Лиса",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3610984360,
+    "name": "Богатырь",
+    "latitude": 55.9007803,
+    "longitude": 37.5731044,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Богатырь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3610984361,
+    "name": "Богатырь",
+    "latitude": 55.900974,
+    "longitude": 37.5730528,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Богатырь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3610984362,
+    "name": "Избушка на курьих ножках",
+    "latitude": 55.9012187,
+    "longitude": 37.5728964,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Избушка на курьих ножках",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3612123709,
+    "name": "Сова",
+    "latitude": 55.9014324,
+    "longitude": 37.5726558,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Сова",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3613394025,
+    "name": "Шахматная доска",
+    "latitude": 55.9001834,
+    "longitude": 37.570074,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "access=yes",
+      "name=Шахматная доска",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3615075293,
+    "name": "Песня",
+    "latitude": 55.7691205,
+    "longitude": 37.622057,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Песня",
+      "tourism=artwork",
+      "wikidata=Q21026884"
+    ]
+  },
+  {
+    "id": 3617817289,
+    "name": "Лось",
+    "latitude": 55.7642723,
+    "longitude": 37.413135,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Лось",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3652974047,
+    "name": "Лента Мёбиуса",
+    "latitude": 55.7279849,
+    "longitude": 37.584193,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Лента Мёбиуса",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3932963120,
+    "name": "Памятный камень «Аллея имени Алисы Селезнёвой»",
+    "latitude": 55.8538286,
+    "longitude": 37.4852443,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=На камне табличка, посвященная художественному фильму «Гостья из будущего» (1984).",
+      "name=Памятный камень «Аллея имени Алисы Селезнёвой»",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4003981218,
+    "name": "ежи",
+    "latitude": 55.5914553,
+    "longitude": 37.6770171,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=concrete",
+      "name=ежи",
+      "start_date=2013-09..2013-10",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4003981219,
+    "name": "Дом ежей",
+    "latitude": 55.5913977,
+    "longitude": 37.6770493,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=concrete",
+      "name=Дом ежей",
+      "start_date=2013-09..2013-10",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4124125491,
+    "name": "Константин Рокоссовский",
+    "latitude": 55.8147241,
+    "longitude": 37.7179588,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Zeaner и Max 13",
+      "artwork_type=mural",
+      "name=Константин Рокоссовский",
+      "tourism=artwork",
+      "website=https://bogorodskoe.mos.ru/presscenter/news/detail/2172389.html"
+    ]
+  },
+  {
+    "id": 4125975607,
+    "name": "Joument ",
+    "latitude": 55.8268964,
+    "longitude": 37.4443462,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Joument ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4142875423,
+    "name": "Эрьзя",
+    "latitude": 55.7364424,
+    "longitude": 37.6095527,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Эрьзя",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4187371776,
+    "name": "Камень Harley-Davidson",
+    "latitude": 55.7293696,
+    "longitude": 37.6028635,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Камень Harley-Davidson",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4189298594,
+    "name": "Кусок троллейбуса ТролЗа-5275.05 7458",
+    "latitude": 55.8046972,
+    "longitude": 37.5856025,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Кусок троллейбуса ТролЗа-5275.05 7458",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4194852724,
+    "name": "Мойдодыр",
+    "latitude": 55.7949961,
+    "longitude": 37.6661104,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Ванная - самое важное место в доме",
+      "name=Мойдодыр",
+      "start_date=2012",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4194857322,
+    "name": "А. С. Пушкину",
+    "latitude": 55.7941414,
+    "longitude": 37.6702921,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=А. С. Пушкину",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4200414786,
+    "name": "Пионеры-герои",
+    "latitude": 55.8286017,
+    "longitude": 37.6276096,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Пионеры-герои",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4370198903,
+    "name": "Голова \"Родины-Матери\"",
+    "latitude": 55.8167614,
+    "longitude": 37.5606531,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Голова \"Родины-Матери\"",
+      "name:ru=Голова \"Родины-Матери\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4485555757,
+    "name": "Лошади",
+    "latitude": 55.6614887,
+    "longitude": 37.6461626,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Гарри Зух",
+      "artwork_type=graffiti",
+      "name=Лошади",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4518744795,
+    "name": "Облепиха",
+    "latitude": 55.7470229,
+    "longitude": 37.5395219,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Андрей Бартенев",
+      "description=Инсталляция из лампочек. Обычно выключена.",
+      "level=1",
+      "name=Облепиха",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4518777691,
+    "name": "Поэтическая Экономика",
+    "latitude": 55.7475896,
+    "longitude": 37.5387512,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Автор Аристарх Чернышев. Светодиодный дисплей с бегущей строкой. На дисплее строки из стихотворения превращаются в рыночные котировки.",
+      "level=1",
+      "name=Поэтическая Экономика",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4518802689,
+    "name": "Selective Mirror",
+    "latitude": 55.7474815,
+    "longitude": 37.5384408,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Группа Recycle. Множество Dvd двигателей вращают зеркальные лепестки. Вращение на всех двигателях асинхронно то запускается, то останавливается.",
+      "level=1",
+      "name=Selective Mirror",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4565654396,
+    "name": "Конь",
+    "latitude": 55.6932407,
+    "longitude": 37.6604658,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Конь",
+      "name:ru=Конь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4590866054,
+    "name": "Мать и дитя",
+    "latitude": 55.6612679,
+    "longitude": 37.6467153,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Мать и дитя",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4595636713,
+    "name": "Деревья любви",
+    "latitude": 55.7443504,
+    "longitude": 37.6186114,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "love_locks=yes",
+      "mimics=tree",
+      "name=Деревья любви",
+      "start_date=2007-04",
+      "tourism=artwork",
+      "wikidata=Q4158815",
+      "wikimedia_commons=Category:Love padlocks on Luzhkov Bridge",
+      "wikipedia=ru:Дерево любви"
+    ]
+  },
+  {
+    "id": 4604279417,
+    "name": "Мартышка и очки;Осёл;Волк и ягнёнок",
+    "latitude": 55.7642592,
+    "longitude": 37.5912969,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Четыре бронзовые скульптуры в виде раскрытых книг. Персонажи 12 самых знаменитых басен Ивана Крылова: Квартет, Зеркало и Обезьяна, Слон и Моська, Осел и Соловей, Кукушка и Петух, Мартышка и Очки, Волк и Ягненок, Свинья под Дубом, Ворона и Лисица и др.",
+      "material=bronze",
+      "name=Мартышка и очки;Осёл;Волк и ягнёнок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4604279418,
+    "name": "Слон и Моська;Ворона в павлиньих перьях;Две собаки",
+    "latitude": 55.7641933,
+    "longitude": 37.591144,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Четыре бронзовые скульптуры в виде раскрытых книг. Персонажи 12 самых знаменитых басен Ивана Крылова: Квартет, Зеркало и Обезьяна, Слон и Моська, Осел и Соловей, Кукушка и Петух, Мартышка и Очки, Волк и Ягненок, Свинья под Дубом, Ворона и Лисица и др.",
+      "material=bronze",
+      "name=Слон и Моська;Ворона в павлиньих перьях;Две собаки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4604279419,
+    "name": "Квартет; Дуб и свинья; Петух и кукушка",
+    "latitude": 55.7641274,
+    "longitude": 37.5909911,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Четыре бронзовые скульптуры в виде раскрытых книг. Персонажи 12 самых знаменитых басен Ивана Крылова: Квартет, Зеркало и Обезьяна, Слон и Моська, Осел и Соловей, Кукушка и Петух, Мартышка и Очки, Волк и Ягненок, Свинья под Дубом, Ворона и Лисица и др.",
+      "material=bronze",
+      "name=Квартет; Дуб и свинья; Петух и кукушка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4604279420,
+    "name": "Зеркало и обезъяна; Ворона и лисица; Волк и журавль",
+    "latitude": 55.7643251,
+    "longitude": 37.5914498,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "description=Четыре бронзовые скульптуры в виде раскрытых книг. Персонажи 12 самых знаменитых басен Ивана Крылова: Квартет, Зеркало и Обезьяна, Слон и Моська, Осел и Соловей, Кукушка и Петух, Мартышка и Очки, Волк и Ягненок, Свинья под Дубом, Ворона и Лисица и др.",
+      "material=bronze",
+      "name=Зеркало и обезъяна; Ворона и лисица; Волк и журавль",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4714015270,
+    "name": "Электростатическая машина Ван де Граафа",
+    "latitude": 55.7847416,
+    "longitude": 37.7019731,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Электростатическая машина Ван де Граафа",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4721825507,
+    "name": "Беларусь",
+    "latitude": 56.0032486,
+    "longitude": 37.206536,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Беларусь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4774406424,
+    "name": "Похищение Европы",
+    "latitude": 55.6929353,
+    "longitude": 37.6612002,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Фернандо Ботеро",
+      "name=Похищение Европы",
+      "name:ru=Похищение Европы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 4818624874,
+    "name": "Майя Плисецкая",
+    "latitude": 55.7618934,
+    "longitude": 37.6143218,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Майя Плисецкая",
+      "name:ru=Майя Плисецкая",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5058253821,
+    "name": "Младшему научному сотруднику",
+    "latitude": 55.470327,
+    "longitude": 37.2967277,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Сергей Михеев, Галина Булатова и Наталья Мартовицкая",
+      "artwork_type=installation",
+      "name=Младшему научному сотруднику",
+      "source=https://rg.ru/2007/04/06/pamyatnik.html",
+      "start_date=2007",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5088974637,
+    "name": "академику Л. Ф. Верещагину",
+    "latitude": 55.47524,
+    "longitude": 37.3075,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=академику Л. Ф. Верещагину",
+      "name:ru=академику Л. Ф. Верещагину",
+      "subject:wikidata=Q4107765",
+      "subject:wikipedia=ru:Верещагин, Леонид Фёдорович",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5126195126,
+    "name": "Я люблю Москву",
+    "latitude": 55.7836259,
+    "longitude": 37.6192578,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Я люблю Москву",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5138122844,
+    "name": "Мальчик с белкой",
+    "latitude": 55.6536897,
+    "longitude": 37.4826302,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Мальчик с белкой",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5651438459,
+    "name": "Варламу Шаламову",
+    "latitude": 55.7789534,
+    "longitude": 37.6129447,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Варламу Шаламову",
+      "subject:wikidata=Q220816",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5774798919,
+    "name": "Пожарные",
+    "latitude": 55.7784323,
+    "longitude": 37.6298225,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Пожарные",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5782013453,
+    "name": "Двенадцать слонов",
+    "latitude": 55.7749178,
+    "longitude": 37.821277,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Двенадцать слонов",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5800870053,
+    "name": "Крым: Балаклава",
+    "latitude": 55.7630085,
+    "longitude": 37.6542418,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Крым: Балаклава",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5800870353,
+    "name": "Крым: Гаспра",
+    "latitude": 55.7631987,
+    "longitude": 37.6546369,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Крым: Гаспра",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5858104687,
+    "name": "Колоннада",
+    "latitude": 55.8660021,
+    "longitude": 37.5064206,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Колоннада",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5866482337,
+    "name": "Немецкая слобода 16 век",
+    "latitude": 55.7720545,
+    "longitude": 37.6789621,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Немецкая слобода 16 век",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5904563752,
+    "name": "Щербинка",
+    "latitude": 55.5169167,
+    "longitude": 37.5762249,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Щербинка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5909691269,
+    "name": "На Страже Родины",
+    "latitude": 55.7848826,
+    "longitude": 37.6172411,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist:wikidata=Q4233899",
+      "artist:wikipedia=ru:Королёв, Юрий Константинович",
+      "artist_name=Королёв Юрий Константинович",
+      "artist_name:de=Juri Konstantinowitsch Koroljow",
+      "artwork_type=mosaic",
+      "name=На Страже Родины",
+      "name:de=Beim Wächter des Mutterlandes",
+      "start_date=1965",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 5929374353,
+    "name": "ЩЛЗ",
+    "latitude": 55.4999658,
+    "longitude": 37.56716,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=ЩЛЗ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6010536205,
+    "name": "Футболист",
+    "latitude": 55.8453586,
+    "longitude": 37.5673252,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Футболист",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6030606008,
+    "name": "Помнит мир спасённый. Симонов Константин",
+    "latitude": 55.7379128,
+    "longitude": 37.6625146,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Помнит мир спасённый. Симонов Константин",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6065364756,
+    "name": "Макрокосмос-микромир",
+    "latitude": 55.8233514,
+    "longitude": 37.6455973,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Казарянц Евгений Георгиевич",
+      "artwork_type=mosaic",
+      "name=Макрокосмос-микромир",
+      "start_date=1971..1974",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6170316636,
+    "name": "Женщина и мода",
+    "latitude": 55.7793251,
+    "longitude": 37.7215727,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Романова Елена Борисовна",
+      "artwork_type=mosaic",
+      "name=Женщина и мода",
+      "start_date=1982",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6178121639,
+    "name": "Трёхгорка",
+    "latitude": 55.7566659,
+    "longitude": 37.566548,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Трёхгорка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6297084086,
+    "name": "Грот",
+    "latitude": 55.8583747,
+    "longitude": 37.3653758,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Грот",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6341363877,
+    "name": "Осьминог на асфальте",
+    "latitude": 55.6835361,
+    "longitude": 37.6989673,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Осьминог на асфальте",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6444165233,
+    "name": "Зеркальный лабиринт",
+    "latitude": 55.7861812,
+    "longitude": 37.5287272,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Зеркальный лабиринт",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6521449030,
+    "name": "Кентавр",
+    "latitude": 55.4694061,
+    "longitude": 37.2967684,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Кентавр",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6578867847,
+    "name": "Я люблю Коммунарку",
+    "latitude": 55.5649331,
+    "longitude": 37.4726526,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=metal",
+      "name=Я люблю Коммунарку",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6626988326,
+    "name": "Ленин и рабочие",
+    "latitude": 55.7752012,
+    "longitude": 37.5749288,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Ленин и рабочие",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6681174685,
+    "name": "Уюдинение",
+    "latitude": 55.7525094,
+    "longitude": 37.6680787,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Уюдинение",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6690507916,
+    "name": "Нигде, кроме как в Моссельпроме",
+    "latitude": 55.7539756,
+    "longitude": 37.6027214,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Нигде, кроме как в Моссельпроме",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 6763838465,
+    "name": "Дракон",
+    "latitude": 55.8616511,
+    "longitude": 37.4520405,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Дракон",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7079895053,
+    "name": "Деревянный шар",
+    "latitude": 55.587806,
+    "longitude": 37.6794161,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=wood",
+      "name=Деревянный шар",
+      "start_date=12.2019",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7121889185,
+    "name": "Мать и Дитя",
+    "latitude": 55.7950598,
+    "longitude": 37.6665548,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Мать и Дитя",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7207917544,
+    "name": "Сейф желаний",
+    "latitude": 55.8009338,
+    "longitude": 37.5285048,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Сейф желаний",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7331167379,
+    "name": "Макет \"Родины-Матери\"",
+    "latitude": 55.8166401,
+    "longitude": 37.5609335,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Макет \"Родины-Матери\"",
+      "name:ru=Макет \"Родины-Матери\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7358205666,
+    "name": "Московские кольца",
+    "latitude": 55.7318292,
+    "longitude": 37.7298416,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Московские кольца",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7475590229,
+    "name": "Валуны",
+    "latitude": 55.7906839,
+    "longitude": 37.5241317,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=stone",
+      "name=Валуны",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7476471173,
+    "name": "Валуны",
+    "latitude": 55.7906078,
+    "longitude": 37.5247107,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=stone",
+      "name=Валуны",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7476471181,
+    "name": "Валуны",
+    "latitude": 55.7909102,
+    "longitude": 37.5247676,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=stone",
+      "name=Валуны",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7514052871,
+    "name": "Дачники",
+    "latitude": 55.8193556,
+    "longitude": 37.4824749,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=metal",
+      "name=Дачники",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7572190388,
+    "name": "Носорог",
+    "latitude": 55.6495694,
+    "longitude": 37.7534114,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Носорог",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7734856863,
+    "name": "Колхозник и колхозница",
+    "latitude": 55.7730421,
+    "longitude": 37.6326117,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Колхозник и колхозница",
+      "start_date=1954",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7742969019,
+    "name": "Связь СССР",
+    "latitude": 55.7933447,
+    "longitude": 37.7018984,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Связь СССР",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7851370221,
+    "name": "Стена радости",
+    "latitude": 55.72888,
+    "longitude": 37.5749545,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "description=Барельеф из плиток, собранных и расписанных детьми при местном кружке",
+      "name=Стена радости",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7853544152,
+    "name": "Mountain",
+    "latitude": 55.8607213,
+    "longitude": 37.4812097,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Mountain",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7868577041,
+    "name": "Спорт",
+    "latitude": 55.7657843,
+    "longitude": 37.8211845,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "access=yes",
+      "barrier=entrance",
+      "material=wood",
+      "name=Спорт",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7913065876,
+    "name": "П36",
+    "latitude": 55.7857433,
+    "longitude": 37.6519241,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "historic=no",
+      "name=П36",
+      "note=Макет паровоза",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7925150085,
+    "name": "Дядюшка Поджер",
+    "latitude": 55.8191966,
+    "longitude": 37.4821687,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Дядюшка Поджер",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7991512785,
+    "name": "Рыбак",
+    "latitude": 55.8205096,
+    "longitude": 37.4830344,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Рыбак",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 7997159185,
+    "name": "Художник",
+    "latitude": 55.8190709,
+    "longitude": 37.4832785,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Художник",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8069721875,
+    "name": "Оставшимся без погребения",
+    "latitude": 55.7513663,
+    "longitude": 37.7936156,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Оставшимся без погребения",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8069791185,
+    "name": "Доска почета района Перово",
+    "latitude": 55.7500083,
+    "longitude": 37.7792436,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Доска почета района Перово",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8069791186,
+    "name": "Я люблю Перово",
+    "latitude": 55.7500306,
+    "longitude": 37.7793513,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Я люблю Перово",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8241185739,
+    "name": "Мирный атом",
+    "latitude": 55.9823001,
+    "longitude": 37.2110471,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=stele",
+      "description=Стела «Мирный атом»",
+      "name=Мирный атом",
+      "start_date=2019-08",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8270161410,
+    "name": "Связь СССР",
+    "latitude": 55.7795803,
+    "longitude": 37.6693739,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "colour=blue",
+      "name=Связь СССР",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8598672727,
+    "name": "Анонимному рецензенту",
+    "latitude": 55.7594527,
+    "longitude": 37.6409572,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Анонимному рецензенту",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8676301129,
+    "name": "Памяти жертв сталинских репрессий",
+    "latitude": 55.7358656,
+    "longitude": 37.6087457,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Памяти жертв сталинских репрессий",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8715324670,
+    "name": "Эстафета",
+    "latitude": 55.8010579,
+    "longitude": 37.7595105,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=К.А. Тутеволь",
+      "artwork_type=mosaic",
+      "name=Эстафета",
+      "start_date=1973",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8724555346,
+    "name": "Водоприбор",
+    "latitude": 55.810027,
+    "longitude": 37.6498233,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Водоприбор",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8734776228,
+    "name": "Избушка-кормушка",
+    "latitude": 55.5931154,
+    "longitude": 37.6820091,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=wood",
+      "name=Избушка-кормушка",
+      "start_date=2020-03",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8758277931,
+    "name": "Василий Семёнович Лановой",
+    "latitude": 55.7422351,
+    "longitude": 37.6551915,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Василий Семёнович Лановой",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8821897960,
+    "name": "Дом хоббита",
+    "latitude": 55.5933937,
+    "longitude": 37.676932,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "description=Псевдотопиар",
+      "name=Дом хоббита",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8849289628,
+    "name": "Ключ счастья",
+    "latitude": 55.7487271,
+    "longitude": 37.5983582,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "location=wall",
+      "material=metal",
+      "name=Ключ счастья",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 8977382013,
+    "name": "Башня-колонна Эль Лисицкого",
+    "latitude": 55.8394003,
+    "longitude": 37.6204258,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Эль Лисицкий",
+      "name=Башня-колонна Эль Лисицкого",
+      "note=Название на табличке указано имеено так",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9022308419,
+    "name": "Огненная скульптура",
+    "latitude": 55.6173076,
+    "longitude": 37.6795758,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Огненная скульптура",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9415476917,
+    "name": "Архитека",
+    "latitude": 55.6727536,
+    "longitude": 37.584158,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Архитека",
+      "name:en=Architeka",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9624431619,
+    "name": "кормушка",
+    "latitude": 55.5874876,
+    "longitude": 37.6810575,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "height=1.5",
+      "material=wood",
+      "name=кормушка",
+      "start_date=2019..2020",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9624431620,
+    "name": "Стул",
+    "latitude": 55.5873642,
+    "longitude": 37.6809992,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=wood",
+      "name=Стул",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9671025105,
+    "name": "Герой нашего времени",
+    "latitude": 55.8090231,
+    "longitude": 37.4664386,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Герой нашего времени",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9687623234,
+    "name": "Структура № 2",
+    "latitude": 55.7050208,
+    "longitude": 37.5509277,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "architect=Сидур Вадим Абрамович",
+      "artwork_type=installation",
+      "name=Структура № 2",
+      "start_date=1980",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9738508243,
+    "name": "Домик хоббита",
+    "latitude": 55.6403339,
+    "longitude": 37.5264655,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Домик хоббита",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9738508257,
+    "name": "Теремок",
+    "latitude": 55.6405011,
+    "longitude": 37.5258448,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Теремок",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9791082844,
+    "name": "Табуретка",
+    "latitude": 55.8376506,
+    "longitude": 37.6254394,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=wood",
+      "name=Табуретка",
+      "start_date=2021",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9795175665,
+    "name": "Армадилло",
+    "latitude": 55.8394699,
+    "longitude": 37.6209079,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Э. Хоу",
+      "name=Армадилло",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9852461452,
+    "name": "Стабильная композиция",
+    "latitude": 55.7856243,
+    "longitude": 37.5310376,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Роман Ермаков",
+      "artwork_type=installation",
+      "name=Стабильная композиция",
+      "start_date=2020",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9868432136,
+    "name": "Владимир Высоцкий",
+    "latitude": 55.743768,
+    "longitude": 37.653642,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_subject=В. С. Высоцкий",
+      "artwork_type=mural",
+      "name=Владимир Высоцкий",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9898052473,
+    "name": "Молодожены",
+    "latitude": 55.8593929,
+    "longitude": 37.4519722,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Молодожены",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9947898217,
+    "name": "Лев",
+    "latitude": 55.8048472,
+    "longitude": 37.5858446,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Лев",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9954459798,
+    "name": "АЯ",
+    "latitude": 55.6438668,
+    "longitude": 37.5251741,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Дмитрий Пригов",
+      "artwork_subject=Стихограмма Дмитрия Александровича Пригова",
+      "artwork_type=mural",
+      "name=АЯ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 9966401695,
+    "name": "Котловка",
+    "latitude": 55.6787418,
+    "longitude": 37.5954667,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Котловка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10023271692,
+    "name": "пейзаж на пне",
+    "latitude": 55.598425,
+    "longitude": 37.68211,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "material=wood",
+      "name=пейзаж на пне",
+      "start_date=2022-05",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10090238941,
+    "name": "Бобры",
+    "latitude": 55.7857623,
+    "longitude": 37.6822269,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Бобры",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10110009647,
+    "name": "ГАЗ-АА 'Полуторка'",
+    "latitude": 55.8020874,
+    "longitude": 37.5294166,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "historic=vehicle",
+      "name=ГАЗ-АА 'Полуторка'",
+      "tourism=artwork",
+      "type=cargo_auto"
+    ]
+  },
+  {
+    "id": 10155534005,
+    "name": "Зеркальный портал",
+    "latitude": 55.6172977,
+    "longitude": 37.5926005,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=glass",
+      "name=Зеркальный портал",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10156365017,
+    "name": "Ворона и лисица",
+    "latitude": 55.8135924,
+    "longitude": 37.6016563,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Ворона и лисица",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10209504909,
+    "name": "Яблоко",
+    "latitude": 55.5865358,
+    "longitude": 37.6939362,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Яблоко",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10792197405,
+    "name": "Фредди Меркьюри",
+    "latitude": 55.6953551,
+    "longitude": 37.3543564,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Фредди Меркьюри",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10792229205,
+    "name": "АрхитекТРОН",
+    "latitude": 55.6958923,
+    "longitude": 37.3588743,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=АрхитекТРОН",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10792518107,
+    "name": "Шифр Малевича",
+    "latitude": 55.6905091,
+    "longitude": 37.3477186,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Шифр Малевича",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10792525809,
+    "name": "Улица Нобеля",
+    "latitude": 55.6833667,
+    "longitude": 37.3429862,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Улица Нобеля",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10858696792,
+    "name": "Советская мозаика",
+    "latitude": 55.7545941,
+    "longitude": 37.7515642,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Советская мозаика",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10878083807,
+    "name": "Страстной бульваръ",
+    "latitude": 55.7647864,
+    "longitude": 37.6061184,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Страстной бульваръ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10956732031,
+    "name": "Ладья",
+    "latitude": 55.6349936,
+    "longitude": 37.5599223,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Ладья",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 10956732053,
+    "name": "Идол",
+    "latitude": 55.6342449,
+    "longitude": 37.5596917,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Идол",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11226875785,
+    "name": "Медведь",
+    "latitude": 55.6430539,
+    "longitude": 37.5276989,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Фарид Руэда",
+      "artwork_type=mural",
+      "name=Медведь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11226875786,
+    "name": "Тетрис",
+    "latitude": 55.6492912,
+    "longitude": 37.5339929,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Дмитрий Лёвочкин",
+      "artwork_type=mural",
+      "name=Тетрис",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11228812896,
+    "name": "Маленький трубач",
+    "latitude": 55.6960886,
+    "longitude": 37.5429085,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=bronze",
+      "name=Маленький трубач",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11242251520,
+    "name": "Лента Мёбиуса",
+    "latitude": 55.6750122,
+    "longitude": 37.5677138,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Лента Мёбиуса",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11503408633,
+    "name": "Микки-Маус",
+    "latitude": 55.6416294,
+    "longitude": 37.5331776,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Микки-Маус",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11503408651,
+    "name": "Том и Джерри",
+    "latitude": 55.6422204,
+    "longitude": 37.5300019,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Том и Джерри",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11533301088,
+    "name": "Чебурашка",
+    "latitude": 55.6349817,
+    "longitude": 37.5250695,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Чебурашка",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11635671417,
+    "name": "А.Д.Очкин",
+    "latitude": 55.781453,
+    "longitude": 37.5524366,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=А.Д.Очкин",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11635671421,
+    "name": "К. Т. Солдатенкова",
+    "latitude": 55.7809268,
+    "longitude": 37.5555449,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=К. Т. Солдатенкова",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11635717760,
+    "name": "Ф.А. Гетье",
+    "latitude": 55.7809091,
+    "longitude": 37.5555064,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Ф.А. Гетье",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11646007682,
+    "name": "Ю.Г. Богатырёв",
+    "latitude": 55.756043,
+    "longitude": 37.6769761,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Zoom",
+      "artwork_type=graffiti",
+      "name=Ю.Г. Богатырёв",
+      "subject:wikidata=Q4089118",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11646007719,
+    "name": "Идентичность",
+    "latitude": 55.7568231,
+    "longitude": 37.6745376,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Идентичность",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11646007720,
+    "name": "Keep it surfy",
+    "latitude": 55.7565155,
+    "longitude": 37.6746067,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Keep it surfy",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11669053946,
+    "name": "Дельфины",
+    "latitude": 55.6428114,
+    "longitude": 37.5211242,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Дельфины",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11673335634,
+    "name": "Боксёры",
+    "latitude": 55.7743909,
+    "longitude": 37.6284298,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Боксёры",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11687716404,
+    "name": "Паровоз",
+    "latitude": 55.7056489,
+    "longitude": 37.4668102,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Паровоз",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11687906065,
+    "name": "Jordan",
+    "latitude": 55.6454255,
+    "longitude": 37.5307199,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Jordan",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11690611388,
+    "name": "Тропические рыбы",
+    "latitude": 55.6316493,
+    "longitude": 37.5217589,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Тропические рыбы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11727049317,
+    "name": "Кардиограмма",
+    "latitude": 55.725249,
+    "longitude": 37.6185102,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Кардиограмма",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755636949,
+    "name": "Alpine Skiing",
+    "latitude": 55.7073953,
+    "longitude": 37.5482097,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Alpine Skiing",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755636950,
+    "name": "Freestyle Skiing",
+    "latitude": 55.7073824,
+    "longitude": 37.5483393,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Freestyle Skiing",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755658876,
+    "name": "Скелетон",
+    "latitude": 55.7071263,
+    "longitude": 37.550604,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Скелетон",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755672930,
+    "name": "Кёрлинг",
+    "latitude": 55.7072107,
+    "longitude": 37.5495337,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Кёрлинг",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755695481,
+    "name": "Санный Спорт",
+    "latitude": 55.7075247,
+    "longitude": 37.5477942,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Санный Спорт",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11755695483,
+    "name": "Сноуборд",
+    "latitude": 55.7075652,
+    "longitude": 37.5472176,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Сноуборд",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11760471160,
+    "name": "Стена поэтов",
+    "latitude": 55.7819317,
+    "longitude": 37.6088673,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Стена поэтов",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11778010454,
+    "name": "Метеорит",
+    "latitude": 55.7243811,
+    "longitude": 37.5611562,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Метеорит",
+      "name:ru=Метеорит",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11801922463,
+    "name": "Лошади",
+    "latitude": 55.6383402,
+    "longitude": 37.535494,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Лошади",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813736779,
+    "name": "Муми-тролли",
+    "latitude": 55.5639949,
+    "longitude": 37.498767,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Муми-тролли",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813736780,
+    "name": "Муравьиный лев",
+    "latitude": 55.5637879,
+    "longitude": 37.4992315,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Муравьиный лев",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813738771,
+    "name": "Крошка Мю с крокодилом",
+    "latitude": 55.5638783,
+    "longitude": 37.4997654,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Крошка Мю с крокодилом",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813743470,
+    "name": "Муми-тролль с лампой",
+    "latitude": 55.5633213,
+    "longitude": 37.5004858,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Муми-тролль с лампой",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813774775,
+    "name": "Семейство муми-троллей",
+    "latitude": 55.5630772,
+    "longitude": 37.501977,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Семейство муми-троллей",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11813774776,
+    "name": "Муми-тролль на лыжах",
+    "latitude": 55.5629221,
+    "longitude": 37.50193,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Муми-тролль на лыжах",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11833312639,
+    "name": "Помнит мир спасённый!",
+    "latitude": 55.8023094,
+    "longitude": 37.5828,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Помнит мир спасённый!",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11835034881,
+    "name": "Биатлон",
+    "latitude": 55.7069595,
+    "longitude": 37.5516744,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Биатлон",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11835034882,
+    "name": "Лыжные гонки",
+    "latitude": 55.7069615,
+    "longitude": 37.5516262,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Лыжные гонки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11837687812,
+    "name": "Ведьмина служба доставки",
+    "latitude": 55.7475946,
+    "longitude": 37.4761645,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=painting",
+      "material=wood",
+      "name=Ведьмина служба доставки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11847958717,
+    "name": "Флорентийский колодец",
+    "latitude": 55.7778216,
+    "longitude": 37.6361598,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Флорентийский колодец",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11867936234,
+    "name": "Мэри Поппинс",
+    "latitude": 55.7503083,
+    "longitude": 37.4781997,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=painting",
+      "name=Мэри Поппинс",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11899266024,
+    "name": "Николай Чудотворец",
+    "latitude": 55.7570271,
+    "longitude": 37.5967504,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Нина Кибрик",
+      "artwork_type=mosaic",
+      "description=Про объект:\nhttps://www.youtube.com/watch?v=jjuZ4ajXziM",
+      "name=Николай Чудотворец",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11908080494,
+    "name": "Н.П. Старостин",
+    "latitude": 55.7311133,
+    "longitude": 37.8619281,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "description=Старостин",
+      "name=Н.П. Старостин",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 11970550079,
+    "name": "Краснопахорское",
+    "latitude": 55.4248698,
+    "longitude": 37.2958473,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Краснопахорское",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12017554891,
+    "name": "Блокчейн",
+    "latitude": 55.6849838,
+    "longitude": 37.3499856,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Максим Ксут",
+      "artwork_type=installation",
+      "name=Блокчейн",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12110593998,
+    "name": "Ходынское поле",
+    "latitude": 55.7854837,
+    "longitude": 37.5344645,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Ходынское поле",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12110621033,
+    "name": "Москва",
+    "latitude": 55.7853087,
+    "longitude": 37.5312695,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "colour=red",
+      "name=Москва",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12115221401,
+    "name": "Девушка с ППШ",
+    "latitude": 55.7271343,
+    "longitude": 37.5989724,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Девушка с ППШ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12115340978,
+    "name": "М. И. Кутузов",
+    "latitude": 55.748087,
+    "longitude": 37.6095807,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=М. И. Кутузов",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12135700501,
+    "name": "Пчёлка Нозя",
+    "latitude": 55.7028352,
+    "longitude": 37.7368031,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Пчёлка Нозя",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12140955568,
+    "name": "Шишки",
+    "latitude": 55.8832692,
+    "longitude": 37.6741032,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Шишки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12163614855,
+    "name": "Квантовая суперпозиция",
+    "latitude": 55.6991792,
+    "longitude": 37.3600223,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Анастасия Рыжикова",
+      "artwork_type=installation",
+      "name=Квантовая суперпозиция",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12285641732,
+    "name": "Московский Спорт",
+    "latitude": 55.7061994,
+    "longitude": 37.7323872,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Московский Спорт",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12290349417,
+    "name": "Космонавт",
+    "latitude": 55.6972221,
+    "longitude": 37.6200676,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Космонавт",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12290681777,
+    "name": "С Днём Победы",
+    "latitude": 55.6318576,
+    "longitude": 37.525409,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=С Днём Победы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12374498665,
+    "name": "Карта Российской Федерации",
+    "latitude": 55.7636625,
+    "longitude": 37.6618025,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Карта Российской Федерации",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12385785272,
+    "name": "Дракон",
+    "latitude": 55.7913938,
+    "longitude": 37.5276804,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "material=mirror",
+      "name=Дракон",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12420206222,
+    "name": "Ретроградный анализ",
+    "latitude": 55.6940243,
+    "longitude": 37.3474599,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Елена Извольская",
+      "description=Шахматное поле в форме ленты Мёбиуса",
+      "name=Ретроградный анализ",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12449719178,
+    "name": "На одной волне",
+    "latitude": 55.6964011,
+    "longitude": 37.3560825,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Марина Звягинцева",
+      "description=Звуковая волна-скамья",
+      "name=На одной волне",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12449741774,
+    "name": "Калейдоскоп",
+    "latitude": 55.6960781,
+    "longitude": 37.3573999,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Илья Блинов",
+      "artwork_type=mural",
+      "name=Калейдоскоп",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12449741775,
+    "name": "По ту сторону экрана",
+    "latitude": 55.6960889,
+    "longitude": 37.3563956,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Иван Найнти",
+      "artwork_type=mural",
+      "description=Взаимодействие человека и техники",
+      "name=По ту сторону экрана",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12518113019,
+    "name": "Иосиф Бродский",
+    "latitude": 55.7696152,
+    "longitude": 37.6284233,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Иосиф Бродский",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12534385512,
+    "name": "Очки",
+    "latitude": 55.6751834,
+    "longitude": 37.503851,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Очки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12553721899,
+    "name": "Исцеление человека",
+    "latitude": 55.6458972,
+    "longitude": 37.4902818,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Исцеление человека",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12554208311,
+    "name": "Книги - память человечества",
+    "latitude": 55.717682,
+    "longitude": 37.6048154,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Екатерина Сергеевна Зернова",
+      "artwork_type=mosaic",
+      "name=Книги - память человечества",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12573968945,
+    "name": "Марк Захаров",
+    "latitude": 55.7674742,
+    "longitude": 37.6047561,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "memorial:subject=Марк Анатольевич Захаров",
+      "name=Марк Захаров",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12581950021,
+    "name": "Геодезический знак",
+    "latitude": 55.7808808,
+    "longitude": 37.574352,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Геодезический знак",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12588253672,
+    "name": "Живая природа",
+    "latitude": 55.7697468,
+    "longitude": 37.6194653,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Лев Зюков",
+      "artwork_type=mosaic",
+      "name=Живая природа",
+      "start_date=2011",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12633511148,
+    "name": "Бородино",
+    "latitude": 55.6830771,
+    "longitude": 37.5695711,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Бородино",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12633511151,
+    "name": "Парус",
+    "latitude": 55.6830355,
+    "longitude": 37.5698762,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Парус",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12643778465,
+    "name": "Валаам",
+    "latitude": 55.8647082,
+    "longitude": 37.4744022,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=М.С. Козлов",
+      "artwork_type=mosaic",
+      "location=underground",
+      "name=Валаам",
+      "start_date=2018",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12643778466,
+    "name": "Соловки",
+    "latitude": 55.8647287,
+    "longitude": 37.4743738,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=М.С. Козлов",
+      "artwork_type=mosaic",
+      "location=underground",
+      "name=Соловки",
+      "start_date=2018",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12643778467,
+    "name": "Кижи",
+    "latitude": 55.8648755,
+    "longitude": 37.4747729,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=М.С. Козлов",
+      "artwork_type=mosaic",
+      "location=underground",
+      "name=Кижи",
+      "start_date=2018",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12643778468,
+    "name": "Северное сияние",
+    "latitude": 55.8649036,
+    "longitude": 37.4747301,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=М.С. Козлов",
+      "artwork_type=mosaic",
+      "location=underground",
+      "name=Северное сияние",
+      "start_date=2018",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12762588273,
+    "name": "1+1=3",
+    "latitude": 55.6959718,
+    "longitude": 37.3535715,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Владислав Дакес",
+      "artwork_type=mural",
+      "name=1+1=3",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12762588274,
+    "name": "Навигатор",
+    "latitude": 55.6957579,
+    "longitude": 37.3557862,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Антон Чумак",
+      "artwork_type=installation",
+      "name=Навигатор",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12762588277,
+    "name": "Машина в лесу 1991/2024",
+    "latitude": 55.6967463,
+    "longitude": 37.3583946,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Франциско Инфанте-Арана; Нонна Горюнова",
+      "artwork_type=installation",
+      "name=Машина в лесу 1991/2024",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12776635602,
+    "name": "Woooo",
+    "latitude": 55.6982416,
+    "longitude": 37.3622186,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Тарас Желтычев",
+      "artwork_type=installation",
+      "name=Woooo",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12778921026,
+    "name": "Воспоминание",
+    "latitude": 55.6939391,
+    "longitude": 37.3551884,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Евгений Малышев Jön",
+      "artwork_type=mural",
+      "name=Воспоминание",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12778921030,
+    "name": "Без названия",
+    "latitude": 55.6944507,
+    "longitude": 37.3547176,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Оля Iney Чикина",
+      "artwork_type=mural",
+      "name=Без названия",
+      "note=«Без названия» это название",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12778921036,
+    "name": "Change",
+    "latitude": 55.6940616,
+    "longitude": 37.354146,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Анатолий Akue",
+      "artwork_type=mural",
+      "name=Change",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12791654829,
+    "name": "Верстовой столб",
+    "latitude": 55.4304946,
+    "longitude": 37.2759289,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "inscription=Красная Пахра",
+      "name=Верстовой столб",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12818593951,
+    "name": "Адмирал Павел Степанович Нахимов",
+    "latitude": 55.6765516,
+    "longitude": 37.5931126,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "inscription=Адмирал Павел Степанович Нахимов 1802-1855",
+      "material=concrete",
+      "name=Адмирал Павел Степанович Нахимов",
+      "name:ru=Адмирал Павел Степанович Нахимов",
+      "source=survey",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12855637220,
+    "name": "Известия",
+    "latitude": 55.765837,
+    "longitude": 37.6049336,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Известия",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12861310278,
+    "name": "1905",
+    "latitude": 55.7639619,
+    "longitude": 37.5617411,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=1905",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12900414805,
+    "name": "летчик М.С. Бабушкин",
+    "latitude": 55.8712829,
+    "longitude": 37.6791991,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=летчик М.С. Бабушкин",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12911994369,
+    "name": "Парижский вход в метро",
+    "latitude": 55.7438701,
+    "longitude": 37.5673525,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Парижский вход в метро",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 12919644270,
+    "name": "Кунцево Плаза",
+    "latitude": 55.7389051,
+    "longitude": 37.4122868,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Кунцево Плаза",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13044816537,
+    "name": "Барсук",
+    "latitude": 55.8216849,
+    "longitude": 37.8343235,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Барсук",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13044816539,
+    "name": "Тетерев",
+    "latitude": 55.8212051,
+    "longitude": 37.8344935,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Тетерев",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13044816541,
+    "name": "Соболь",
+    "latitude": 55.8207584,
+    "longitude": 37.8345459,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Соболь",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13044816543,
+    "name": "Сорока",
+    "latitude": 55.8221554,
+    "longitude": 37.8340685,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "name=Сорока",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13045561302,
+    "name": "Медведи",
+    "latitude": 55.882616,
+    "longitude": 37.6451702,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Медведи",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13082054909,
+    "name": "Кролик и Иа-Иа",
+    "latitude": 55.5972288,
+    "longitude": 37.5478017,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=painting",
+      "name=Кролик и Иа-Иа",
+      "support=tree",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13082054910,
+    "name": "Пятачок",
+    "latitude": 55.5972389,
+    "longitude": 37.5476936,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=painting",
+      "name=Пятачок",
+      "support=tree",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240718,
+    "name": "Чарлз Диккенс",
+    "latitude": 55.748619,
+    "longitude": 37.6482435,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Чарлз Диккенс",
+      "subject:wikidata=Q5686",
+      "subject:wikipedia=en:Charles Dickens",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240719,
+    "name": "Антонио Агостиньо Нето",
+    "latitude": 55.7486469,
+    "longitude": 37.6482445,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Антонио Агостиньо Нето",
+      "subject:wikidata=Q181665",
+      "subject:wikipedia=en:Agostinho Neto",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240720,
+    "name": "Александр Мень",
+    "latitude": 55.7486628,
+    "longitude": 37.6481997,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Александр Мень",
+      "subject:wikidata=Q712471",
+      "subject:wikipedia=en:Alexander Men",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240721,
+    "name": "Имадеддин Насими",
+    "latitude": 55.7486529,
+    "longitude": 37.648162,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Имадеддин Насими",
+      "subject:wikidata=Q982506",
+      "subject:wikipedia=en:Imadaddin Nasimi",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240737,
+    "name": "Мохандас Карамчанд Ганди",
+    "latitude": 55.7485472,
+    "longitude": 37.6478089,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Мохандас Карамчанд Ганди",
+      "subject:wikidata=Q1001",
+      "subject:wikipedia=en:Mahatma Gandhi",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240738,
+    "name": "Rubén Dario",
+    "latitude": 55.7485382,
+    "longitude": 37.647872,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Rubén Dario",
+      "subject:wikidata=Q173767",
+      "subject:wikipedia=en:Rubén Darío",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240740,
+    "name": "Рауль Валленберг",
+    "latitude": 55.7485216,
+    "longitude": 37.6478881,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Рауль Валленберг",
+      "subject:wikidata=Q152850",
+      "subject:wikipedia=en:Raoul Wallenberg",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240741,
+    "name": "Чингиз Айтматов",
+    "latitude": 55.748491,
+    "longitude": 37.6479244,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Чингиз Айтматов",
+      "subject:wikidata=Q484292",
+      "subject:wikipedia=en:Chinghiz Aitmatov",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240742,
+    "name": "Ибн Хальдун",
+    "latitude": 55.7484845,
+    "longitude": 37.6479967,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Ибн Хальдун",
+      "subject:wikidata=Q9294",
+      "subject:wikipedia=en:Ibn Khaldun",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240743,
+    "name": "Машаду Де Ассиз",
+    "latitude": 55.7485214,
+    "longitude": 37.6479462,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Машаду Де Ассиз",
+      "subject:wikidata=Q311145",
+      "subject:wikipedia=en:Machado de Assis",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240745,
+    "name": "Октавио Пас",
+    "latitude": 55.7484937,
+    "longitude": 37.6480963,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Октавио Пас",
+      "subject:wikidata=Q46739",
+      "subject:wikipedia=en:Octavio Paz",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240746,
+    "name": "Габриэла Мистраль",
+    "latitude": 55.7484716,
+    "longitude": 37.6481387,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Габриэла Мистраль",
+      "subject:wikidata=Q80871",
+      "subject:wikipedia=en:Gabriela Mistral",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240747,
+    "name": "Юрий Лотман",
+    "latitude": 55.7484924,
+    "longitude": 37.6482004,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Юрий Лотман",
+      "subject:wikidata=Q360084",
+      "subject:wikipedia=en:Juri Lotman",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240748,
+    "name": "Simon Bolivar",
+    "latitude": 55.7485408,
+    "longitude": 37.6480072,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Simon Bolivar",
+      "subject:wikidata=Q8605",
+      "subject:wikipedia=en:Simón Bolívar",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240749,
+    "name": "Сигизмунд Герберштейн",
+    "latitude": 55.7485321,
+    "longitude": 37.6480754,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Сигизмунд Герберштейн",
+      "subject:wikidata=Q700720",
+      "subject:wikipedia=en:Sigismund von Herberstein",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240750,
+    "name": "Эразм Роттердамский",
+    "latitude": 55.7485222,
+    "longitude": 37.6481514,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Эразм Роттердамский",
+      "subject:wikidata=Q43499",
+      "subject:wikipedia=en:Erasmus",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240751,
+    "name": "Авраам Линкольн",
+    "latitude": 55.7485106,
+    "longitude": 37.648204,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Авраам Линкольн",
+      "subject:wikidata=Q91",
+      "subject:wikipedia=en:Abraham Lincoln",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240752,
+    "name": "Хуан Пабло Дуарте",
+    "latitude": 55.7485306,
+    "longitude": 37.6482072,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Хуан Пабло Дуарте",
+      "subject:wikidata=Q188122",
+      "subject:wikipedia=en:Juan Pablo Duarte",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240759,
+    "name": "Иван Вазов",
+    "latitude": 55.7486105,
+    "longitude": 37.6481898,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Иван Вазов",
+      "subject:wikidata=Q310630",
+      "subject:wikipedia=en:Ivan Vazov",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240760,
+    "name": "Махтумкули Фраги",
+    "latitude": 55.7486127,
+    "longitude": 37.6481553,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Махтумкули Фраги",
+      "subject:wikidata=Q2355095",
+      "subject:wikipedia=en:Magtymguly Pyragy",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240761,
+    "name": "Абулькасим Фирдоуси",
+    "latitude": 55.7486149,
+    "longitude": 37.6481207,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Абулькасим Фирдоуси",
+      "subject:wikidata=Q43459",
+      "subject:wikipedia=en:Ferdowsi",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240771,
+    "name": "Новиков Николай Иванович",
+    "latitude": 55.7486518,
+    "longitude": 37.6478237,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Новиков Николай Иванович",
+      "subject:wikidata=Q747538",
+      "subject:wikipedia=en:Nikolay Novikov",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240772,
+    "name": "Аттила Йожеф",
+    "latitude": 55.7486605,
+    "longitude": 37.6477788,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Аттила Йожеф",
+      "subject:wikidata=Q313359",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240773,
+    "name": "Бенедикт XV",
+    "latitude": 55.7486824,
+    "longitude": 37.6477705,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "inscription=Benedictus PP. XV / Бенедикт XV / Голос Мира",
+      "name=Бенедикт XV",
+      "subject:wikidata=Q4448",
+      "subject:wikipedia=en:Pope Benedict XV",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240774,
+    "name": "José Asunción Flores",
+    "latitude": 55.7486804,
+    "longitude": 37.6478094,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=José Asunción Flores",
+      "subject:wikidata=Q1395857",
+      "subject:wikipedia=en:José Asunción Flores",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240775,
+    "name": "Ярослав Гашек",
+    "latitude": 55.7486783,
+    "longitude": 37.6478482,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Ярослав Гашек",
+      "subject:wikidata=Q2754",
+      "subject:wikipedia=en:Jaroslav Hašek",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240776,
+    "name": "Милорад Павич",
+    "latitude": 55.7486762,
+    "longitude": 37.647887,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Милорад Павич",
+      "subject:wikidata=Q157204",
+      "subject:wikipedia=en:Milorad Pavić",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240777,
+    "name": "Никколо Макиавелли",
+    "latitude": 55.7486742,
+    "longitude": 37.6479259,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Никколо Макиавелли",
+      "subject:wikidata=Q1399",
+      "subject:wikipedia=en:Niccolò Machiavelli",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240778,
+    "name": "Морис Метерлинк",
+    "latitude": 55.7486721,
+    "longitude": 37.6479647,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Морис Метерлинк",
+      "subject:wikidata=Q49747",
+      "subject:wikipedia=en:Maurice Maeterlinck",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240779,
+    "name": "Тукаран Бхаурао Сатхеу",
+    "latitude": 55.748505,
+    "longitude": 37.6477238,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Тукаран Бхаурао Сатхеу",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240780,
+    "name": "Лихачёв",
+    "latitude": 55.7486001,
+    "longitude": 37.647709,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Лихачёв",
+      "subject:wikidata=Q712412",
+      "subject:wikipedia=en:Dmitry Likhachev",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13141240781,
+    "name": "Егор Гайдар",
+    "latitude": 55.7485461,
+    "longitude": 37.6476976,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Егор Гайдар",
+      "subject:wikidata=Q82695",
+      "subject:wikipedia=en:Yegor Gaidar",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13155858373,
+    "name": "Heinrich Heine",
+    "latitude": 55.7484937,
+    "longitude": 37.6479605,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=bust",
+      "name=Heinrich Heine",
+      "subject:wikidata=Q44403",
+      "subject:wikipedia=en:Heinrich Heine",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13190291926,
+    "name": "Садовая лопатка",
+    "latitude": 55.7420652,
+    "longitude": 37.6131561,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artist_name=Клас Олденбург;Кошье ван Брюгген",
+      "artwork_type=installation",
+      "name=Садовая лопатка",
+      "start_date=2025-10-03",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13246112838,
+    "name": "Башня",
+    "latitude": 55.7663775,
+    "longitude": 37.6473376,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "image=https://commons.wikimedia.org/wiki/File:%D0%91%D0%B0%D1%80%D0%B5%D0%BB%D1%8C%D0%B5%D1%84_%D0%91%D0%B0%D1%88%D0%BD%D1%8F.jpg",
+      "name=Башня",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13258938671,
+    "name": "Пожарский и Минин",
+    "latitude": 55.7486544,
+    "longitude": 37.6087411,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "fixme=Please merge me into a nearby wall",
+      "name=Пожарский и Минин",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13281247000,
+    "name": "Шишки",
+    "latitude": 55.6187093,
+    "longitude": 37.4749021,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=metal",
+      "name=Шишки",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13281432001,
+    "name": "Велосипедист",
+    "latitude": 55.7802778,
+    "longitude": 37.6334987,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "image=https://commons.wikimedia.org/wiki/File:мозаика_Велосипедист,_в_переходе_на_проспекте_Мира.jpg",
+      "indoor=yes",
+      "location=underground",
+      "name=Велосипедист",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13289191723,
+    "name": "Есть такая профессия — родину защищать",
+    "latitude": 55.7698728,
+    "longitude": 37.6676576,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "name=Есть такая профессия — родину защищать",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13305990967,
+    "name": "Николай Чудотворец",
+    "latitude": 55.7438206,
+    "longitude": 37.5903286,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mosaic",
+      "memorial:subject=Николай Чудотворец",
+      "name=Николай Чудотворец",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13358796641,
+    "name": "Флаг России",
+    "latitude": 55.773229,
+    "longitude": 37.7495318,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "name=Флаг России",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13416609219,
+    "name": "Исход Куликовской битвы",
+    "latitude": 55.5683285,
+    "longitude": 37.5744533,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Исход Куликовской битвы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13416609220,
+    "name": "Поединок Пересвета с Челубеем",
+    "latitude": 55.5683441,
+    "longitude": 37.5745632,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "name=Поединок Пересвета с Челубеем",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13416609221,
+    "name": "Благословение Сергием Радонежским",
+    "latitude": 55.5683519,
+    "longitude": 37.5746411,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=relief",
+      "memorial:subject=Сергий Радонежский",
+      "name=Благословение Сергием Радонежским",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13428601265,
+    "name": "Картина \"Снегири\"",
+    "latitude": 55.8607477,
+    "longitude": 37.7213692,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=painting",
+      "name=Картина \"Снегири\"",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13440219823,
+    "name": "Бабочка Набокова",
+    "latitude": 55.6975162,
+    "longitude": 37.6391485,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=installation",
+      "material=stone",
+      "name=Бабочка Набокова",
+      "name:en=Nabokov's butterfly",
+      "name:ru=Бабочка Набокова",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13448220271,
+    "name": "Галерея смыслов",
+    "latitude": 55.7350567,
+    "longitude": 37.6222571,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "name=Галерея смыслов",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13564447439,
+    "name": "Рояль",
+    "latitude": 55.9041143,
+    "longitude": 37.5711761,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "material=iron",
+      "name=Рояль",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 13650059048,
+    "name": "Помнит мир спасённый!",
+    "latitude": 55.7631725,
+    "longitude": 37.658946,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": null,
+    "estimatedVisitMinutes": 0,
+    "osmType": "node",
+    "tags": [
+      "artwork_type=mural",
+      "fixme=Please merge me into a nearby wall",
+      "name=Помнит мир спасённый!",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 265092063,
+    "name": "Год семьи",
+    "latitude": 55.6813195,
+    "longitude": 37.50374675,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 175.24108799624798,
+    "estimatedVisitMinutes": 0,
+    "osmType": "way",
+    "tags": [
+      "height=4",
+      "name=Год семьи",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 969819518,
+    "name": "Спот на 4-м Сыромятническом переулке",
+    "latitude": 55.755147949999994,
+    "longitude": 37.66492715,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 3153.538582152158,
+    "estimatedVisitMinutes": 0,
+    "osmType": "way",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Спот на 4-м Сыромятническом переулке",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 969828759,
+    "name": "Лайн напротив Англо-Американской школы",
+    "latitude": 55.8262883,
+    "longitude": 37.46029445,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 7872.502346518081,
+    "estimatedVisitMinutes": 0,
+    "osmType": "way",
+    "tags": [
+      "artwork_type=graffiti",
+      "name=Лайн напротив Англо-Американской школы",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1041635426,
+    "name": "Монумент Звезда",
+    "latitude": 55.703796350000005,
+    "longitude": 37.55601285,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 283.5142793135731,
+    "estimatedVisitMinutes": 0,
+    "osmType": "way",
+    "tags": [
+      "artwork_subject=Пионерский костёр",
+      "artwork_type=mosaic",
+      "material=glass",
+      "name=Монумент Звезда",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 1064100914,
+    "name": "Лайн у Курского вокзала",
+    "latitude": 55.75533925,
+    "longitude": 37.6621677,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 22668.19076466711,
+    "estimatedVisitMinutes": 0,
+    "osmType": "way",
+    "tags": [
+      "artwork_type=graffiti",
+      "barrier=wall",
+      "name=Лайн у Курского вокзала",
+      "tourism=artwork"
+    ]
+  },
+  {
+    "id": 3433571,
+    "name": "Главное здание МГУ",
+    "latitude": 55.70291295,
+    "longitude": 37.53081745,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 196063.1702054254,
+    "estimatedVisitMinutes": 0,
+    "osmType": "relation",
+    "tags": [
+      "addr:housenumber=1",
+      "addr:place=Ленинские горы",
+      "artist_name=Л. В. Руднев;С. Е. Чернышёв;П. В. Абросимов;А. Ф. Хряков;В. Н. Насонов",
+      "artwork_type=architecture",
+      "building:architecture=stalinist_neoclassicism",
+      "loc_name=ГЗ",
+      "name=Главное здание МГУ",
+      "name:de=Hauptgebäude der Staatlichen Universität Moskau",
+      "name:en=Main Building of Moscow State University",
+      "name:ru=Главное здание МГУ",
+      "name:zh=莫斯科国立大学主楼",
+      "start_date=1953-09-01",
+      "tourism=artwork",
+      "type=multipolygon",
+      "wikipedia=ru:Главное здание МГУ"
+    ]
+  },
+  {
+    "id": 13330677,
+    "name": "ХоФ Огородная слобода",
+    "latitude": 55.76519695,
+    "longitude": 37.64310715,
+    "category": "Современное искусство",
+    "subcategory": "Инсталляции и паблик-арт",
+    "square": 1917.7429504044069,
+    "estimatedVisitMinutes": 0,
+    "osmType": "relation",
+    "tags": [
+      "artwork_type=graffiti",
+      "loc_name=ХоФ Огородная слобода",
+      "name=ХоФ Огородная слобода",
+      "tourism=artwork",
+      "type=site"
+    ]
+  }
+]
