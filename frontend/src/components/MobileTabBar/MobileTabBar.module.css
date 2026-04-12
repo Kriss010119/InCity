@@ -1,0 +1,62 @@
+.mobileTabBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--mobile-tabbar-z-index);
+  display: none;
+  padding: var(--mobile-tabbar-padding);
+  background: var(--bg-secondary);
+  border-top: var(--border-width-default) solid var(--border-light);
+  justify-content: space-around;
+}
+
+.tabButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--tab-button-gap);
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--tab-button-border-radius);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--tab-button-font-size);
+  font-weight: var(--tab-button-font-weight);
+  max-width: var(--tab-button-max-width);
+  transition: var(--tab-button-transition);
+}
+
+.tabButton svg {
+  transition: var(--transition-fast);
+}
+
+.tabButton:active {
+  transform: scale(var(--tab-button-transform-scale));
+}
+
+.tabButton.active {
+  color: var(--tbank-yellow);
+  background: var(--tbank-yellow-light);
+}
+
+.tabButton.active svg {
+  transform: var(--tab-button-active-transform);
+}
+
+.tabButton.disabled {
+  opacity: var(--tab-button-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.tabButton.disabled:active {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .mobileTabBar {
+    display: flex;
+    padding: var(--mobile-tabbar-padding-mobile);
+  }
+}
