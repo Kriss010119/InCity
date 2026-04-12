@@ -1,6 +1,6 @@
 import { usePlaceDetails } from '../../../../../hooks/usePlaceDetails';
 import type { AttractionCardProps } from '../types';
-import styles from '../../InfoPanel.module.css';
+import styles from './AttractionCard.module.css';
 import { getCategoryColor } from '../../../../../utils/categoryUtils';
 import { useState } from 'react';
 

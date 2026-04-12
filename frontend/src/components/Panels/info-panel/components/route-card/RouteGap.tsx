@@ -1,6 +1,6 @@
 import { Bus, Train } from 'lucide-react';
 import type { RouteGapProps } from '../types';
-import styles from '../../InfoPanel.module.css';
+import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
 
 export const RouteGap = ({ gap }: RouteGapProps) => {

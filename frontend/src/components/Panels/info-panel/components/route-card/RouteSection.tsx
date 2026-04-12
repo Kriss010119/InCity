@@ -1,6 +1,6 @@
 import { RouteGap } from './RouteGap';
 import type { RouteSectionProps } from '../types';
-import styles from '../../InfoPanel.module.css';
+import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
 
 export const RouteSection = ({ section, index }: RouteSectionProps) => {

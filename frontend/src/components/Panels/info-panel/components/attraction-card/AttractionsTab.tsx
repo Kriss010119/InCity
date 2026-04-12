@@ -1,7 +1,7 @@
 import { useLocale } from '../../../../../hooks';
 import { AttractionCard } from './AttractionCard';
 import type { VisitPoint } from '../../../../../types/types';
-import styles from '../../InfoPanel.module.css';
+import styles from './AttractionCard.module.css';
 
 interface AttractionsTabProps {
   visitPoints: VisitPoint[];

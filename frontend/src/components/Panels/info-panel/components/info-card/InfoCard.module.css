@@ -1,0 +1,81 @@
+.panelHeader {
+  padding: var(--spacing-xxl) var(--spacing-5xl) var(--spacing-base) var(--spacing-5xl);
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: var(--border-width-default) solid var(--border-light);
+  flex-shrink: 1;
+}
+
+.collapseButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-xxl);
+  background: var(--bg-main);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  color: var(--text-main);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-normal);
+  position: relative;
+  z-index: var(--z-index-toast);
+}
+
+.collapseButton:hover {
+  background: var(--tbank-yellow);
+  border-color: var(--tbank-yellow);
+  color: var(--text-black);
+}
+
+.collapseButton svg {
+  width: var(--size-lg);
+  height: var(--size-lg);
+  transition: transform var(--transition-duration-normal) ease;
+}
+
+.tabs {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-xxl) var(--spacing-5xl);
+  background: var(--bg-main);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-base);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: var(--spacing-md) var(--spacing-base);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  letter-spacing: 0.3px;
+}
+
+.tab:hover {
+  color: var(--text-main);
+  background: var(--tbank-yellow-light);
+}
+
+.activeTab {
+  background: var(--tbank-yellow) !important;
+  color: var(--text-black) !important;
+}
+
+.fixedButton {
+  position: fixed;
+  right: var(--spacing-5xl);
+  margin: var(--spacing-5xl) 0;
+  z-index: var(--z-index-toast);
+  border-radius: var(--radius-pill);
+  background: var(--tbank-yellow);
+  border-color: var(--tbank-yellow);
+  color: var(--text-black);
+}

@@ -1,6 +1,6 @@
 import { Clock, MapPin, Navigation, Repeat } from 'lucide-react';
 import { RouteSection } from './RouteSection';
-import styles from '../../InfoPanel.module.css';
+import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
 import type { RouteResponse } from '../../../../../types/types';
 
@@ -28,7 +28,6 @@ export const RouteTab = ({ routeResponse }: RouteTabProps) => {
   return (
     <>
       <h3 className={styles.title}>{t('infoPanel.routeInfo')}</h3>
-
       <div className={styles.stats}>
         <div className={styles.stat}>
           <Clock size={18} />

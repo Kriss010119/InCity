@@ -1,5 +1,5 @@
 import { useLocale } from '../../../../../hooks';
-import styles from '../../InfoPanel.module.css';
+import styles from './InfoCard.module.css';
 
 interface InfoPanelTabsProps {
   activeTab: 'route' | 'attractions';
