@@ -16,13 +16,13 @@
 .marker {
   background: none !important;
   border: none !important;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(var(--shadow-sm));
   cursor: pointer;
-  transition: filter 0.2s ease;
+  transition: filter var(--transition-duration-fast) ease;
 }
 
 .marker:hover {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(var(--shadow-md));
 }
 
 .modalOverlay {
@@ -31,45 +31,45 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(var(--spacing-sm));
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
-  padding: 20px;
-  animation: fadeIn 0.2s ease;
+  z-index: var(--z-index-modal);
+  padding: var(--spacing-xxxl);
+  animation: fadeIn var(--transition-duration-fast) ease;
 }
 
 .modal {
   background: var(--bg-secondary);
-  border-radius: 16px;
+  border-radius: var(--radius-xxl);
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  animation: slideUp 0.2s ease;
+  border: var(--border-width-default) solid var(--border-light);
+  box-shadow: var(--shadow-xl);
+  animation: slideUp var(--transition-duration-fast) ease;
 }
 
 .modalClose {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  top: var(--spacing-xxl);
+  right: var(--spacing-xxl);
+  width: var(--size-xxxl);
+  height: var(--size-xxxl);
+  border-radius: var(--radius-base);
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--border-light);
+  border: var(--border-width-default) solid var(--border-light);
   color: var(--text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 10;
+  transition: var(--transition-normal);
+  z-index: var(--z-index-sticky);
 }
 
 .modalClose:hover {
@@ -83,7 +83,7 @@
   width: 100%;
   height: 240px;
   overflow: hidden;
-  border-radius: 16px 16px 0 0;
+  border-radius: var(--radius-xxl) var(--radius-xxl) 0 0;
 }
 
 .modalImage {
@@ -94,70 +94,70 @@
 
 .modalBadge {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
+  bottom: var(--spacing-xxl);
+  left: var(--spacing-xxl);
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
+  border: var(--border-width-default) solid var(--border-light);
   color: var(--text-secondary);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--badge-border-radius);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.3px;
 }
 
 .modalContent {
-  padding: 24px;
+  padding: var(--spacing-4xl);
 }
 
 .modalHeader {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-xxxl);
 }
 
 .modalTitle {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: var(--font-size-8xl);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-main);
   margin: 0;
-  line-height: 1.3;
+  line-height: var(--line-height-tight);
 }
 
 .modalRating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-md);
 }
 
 .modalStars {
-  color: #ffdd2d;
-  font-size: 16px;
-  letter-spacing: 2px;
+  color: var(--tbank-yellow);
+  font-size: var(--font-size-xxl);
+  letter-spacing: var(--spacing-xs);
 }
 
 .modalRatingValue {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-main);
 }
 
 .modalInfo {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xxl);
   background: var(--bg-main);
-  border-radius: 12px;
-  margin-bottom: 20px;
-  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-xxxl);
+  border: var(--border-width-default) solid var(--border-light);
 }
 
 .modalInfoRow {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--spacing-xl);
 }
 
 .modalInfoIcon {
@@ -166,16 +166,16 @@
 }
 
 .modalInfoText {
-  font-size: 14px;
+  font-size: var(--font-size-lg);
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: var(--line-height-base);
 }
 
 .modalInfoLink {
-  font-size: 14px;
+  font-size: var(--font-size-lg);
   color: var(--text-main);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-duration-fast) ease;
 }
 
 .modalInfoLink:hover {
@@ -183,25 +183,25 @@
 }
 
 .modalDescription {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
   color: var(--text-secondary);
-  margin: 0 0 24px 0;
+  margin: 0 0 var(--spacing-4xl) 0;
 }
 
 .modalLink {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: var(--spacing-base);
+  padding: var(--spacing-lg) var(--spacing-xxl);
   background: var(--bg-main);
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-base);
   color: var(--text-main);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: var(--transition-normal);
 }
 
 .modalLink:hover {
@@ -209,27 +209,24 @@
   background: rgba(255, 221, 45, 0.05);
 }
 
-
-
-
 .mapHint {
   position: absolute;
-  top: 20px;
+  top: var(--spacing-xxxl);
   left: 50%;
   transform: translateX(-50%);
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  padding: 8px 16px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-base) var(--spacing-xxl);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-base);
   color: var(--text-secondary);
-  font-size: 13px;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: var(--font-size-md);
+  z-index: var(--z-index-sticky);
+  box-shadow: var(--shadow-base);
   pointer-events: none;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(var(--spacing-sm));
 }
 
 .mapHint svg {
@@ -238,76 +235,76 @@
 
 .clearSelection {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: var(--spacing-xxxl);
+  right: var(--spacing-xxxl);
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  padding: 8px 16px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-base) var(--spacing-xxl);
   color: var(--text-main);
-  font-size: 13px;
+  font-size: var(--font-size-md);
   cursor: pointer;
-  z-index: 10;
+  z-index: var(--z-index-sticky);
   transition: var(--transition-normal);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-base);
 }
 
 .clearSelection:hover {
-  background: #e30611;
-  border-color: #e30611;
+  background: var(--tbank-red);
+  border-color: var(--tbank-red);
   color: white;
 }
 
 .legend {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: var(--spacing-xxxl);
+  left: var(--spacing-xxxl);
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 12px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  z-index: 10;
-  font-size: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
+  gap: var(--spacing-base);
+  z-index: var(--z-index-sticky);
+  font-size: var(--font-size-base);
+  box-shadow: var(--shadow-base);
+  backdrop-filter: blur(var(--spacing-sm));
 }
 
 .legendItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-base);
 }
 
 .legendDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  width: var(--size-xl);
+  height: var(--size-xl);
+  border-radius: var(--radius-full);
 }
 
 .legendLine {
-  width: 20px;
-  height: 3px;
-  background: #ffdd2d;
-  border-radius: 2px;
+  width: var(--spacing-xxxl);
+  height: var(--spacing-xs);
+  background: var(--tbank-yellow);
+  border-radius: var(--radius-xs);
 }
 
 .resetView {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: var(--spacing-xxxl);
+  right: var(--spacing-xxxl);
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  padding: 8px 16px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-base) var(--spacing-xxl);
   color: var(--text-main);
-  font-size: 13px;
+  font-size: var(--font-size-md);
   cursor: pointer;
-  z-index: 10;
+  z-index: var(--z-index-sticky);
   transition: var(--transition-normal);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-base);
 }
 
 .resetView:hover {
@@ -318,20 +315,20 @@
 
 .mapSelectingHint {
   position: absolute;
-  top: 20px;
+  top: var(--spacing-xxxl);
   left: 50%;
   transform: translateX(-50%);
   background: var(--tbank-yellow);
   color: var(--text-black);
-  border-radius: 20px;
-  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-base) var(--spacing-xxl);
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(255, 221, 45, 0.3);
+  gap: var(--spacing-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-index-popover);
+  box-shadow: var(--shadow-glow);
   animation: pulse 2s infinite;
   white-space: nowrap;
 }
@@ -345,7 +342,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateY(calc(var(--spacing-xs) * -1));
   }
 }
 
@@ -357,7 +354,7 @@
 @keyframes slideUp {
   from { 
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(var(--spacing-xxxl));
   }
   to { 
     opacity: 1;
@@ -365,34 +362,33 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .mapHint,
   .mapSelectingHint {
-    top: 12px;
-    font-size: 11px;
-    padding: 6px 12px;
+    top: var(--spacing-xl);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
     white-space: nowrap;
   }
   
   .legend {
-    bottom: 12px;
-    left: 12px;
-    padding: 8px;
-    gap: 6px;
+    bottom: var(--spacing-xl);
+    left: var(--spacing-xl);
+    padding: var(--spacing-base);
+    gap: var(--spacing-md);
   }
   
   .legendItem {
-    gap: 6px;
-    font-size: 10px;
+    gap: var(--spacing-md);
+    font-size: var(--font-size-sm);
   }
   
   .clearSelection,
   .resetView {
-    bottom: 12px;
-    right: 12px;
-    padding: 6px 12px;
-    font-size: 11px;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-sm);
   }
   
   .modal {
@@ -401,61 +397,60 @@
   }
   
   .modalContent {
-    padding: 20px;
+    padding: var(--spacing-xxxl);
   }
   
   .modalTitle {
-    font-size: 20px;
+    font-size: var(--font-size-7xl);
   }
 }
 
 @media (max-width: 768px) {
   .mapHint,
   .mapSelectingHint {
-    top: 10px;
-    font-size: 10px;
-    padding: 5px 10px;
+    top: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-lg);
     white-space: nowrap;
   }
   
   .legend {
     bottom: 70px;
-    left: 10px;
-    padding: 6px 10px;
+    left: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
   }
   
   .legendItem {
-    gap: 4px;
-    font-size: 9px;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
   }
   
   .legendDot {
-    width: 8px;
-    height: 8px;
+    width: var(--size-base);
+    height: var(--size-base);
   }
   
   .legendLine {
-    width: 16px;
-    height: 2px;
+    width: var(--spacing-xxl);
+    height: var(--spacing-xs);
   }
   
   .clearSelection,
   .resetView {
-    bottom: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    font-size: 10px;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-lg);
+    font-size: var(--font-size-sm);
   }
   
-  /* Адаптация модального окна */
   .modalOverlay {
-    padding: 12px;
+    padding: var(--spacing-xl);
   }
   
   .modal {
     max-width: 100%;
     max-height: 90vh;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
   }
   
   .modalImageContainer {
@@ -463,70 +458,70 @@
   }
   
   .modalContent {
-    padding: 16px;
+    padding: var(--spacing-xxl);
   }
   
   .modalTitle {
-    font-size: 18px;
+    font-size: var(--font-size-xxxl);
   }
   
   .modalBadge {
-    bottom: 12px;
-    left: 12px;
-    font-size: 10px;
-    padding: 4px 8px;
+    bottom: var(--spacing-xl);
+    left: var(--spacing-xl);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-base);
   }
   
   .modalInfo {
-    padding: 12px;
-    gap: 8px;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-base);
   }
   
   .modalInfoRow {
-    gap: 8px;
+    gap: var(--spacing-base);
   }
   
   .modalInfoText,
   .modalInfoLink {
-    font-size: 12px;
+    font-size: var(--font-size-base);
   }
   
   .modalDescription {
-    font-size: 13px;
-    margin-bottom: 16px;
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-xxl);
   }
   
   .modalLink {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: var(--spacing-base) var(--spacing-xl);
+    font-size: var(--font-size-base);
   }
 }
 
 @media (max-width: 480px) {
   .mapHint,
   .mapSelectingHint {
-    top: 8px;
-    font-size: 9px;
-    padding: 4px 8px;
+    top: var(--spacing-base);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-base);
   }
   
   .legend {
     bottom: 60px;
-    left: 8px;
-    padding: 4px 8px;
+    left: var(--spacing-base);
+    padding: var(--spacing-sm) var(--spacing-base);
   }
   
   .legendItem {
-    gap: 4px;
-    font-size: 8px;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
   }
   
   .clearSelection,
   .resetView {
-    bottom: 8px;
-    right: 8px;
-    padding: 4px 8px;
-    font-size: 9px;
+    bottom: var(--spacing-base);
+    right: var(--spacing-base);
+    padding: var(--spacing-sm) var(--spacing-base);
+    font-size: var(--font-size-sm);
   }
   
   .modalImageContainer {
@@ -534,23 +529,23 @@
   }
   
   .modalTitle {
-    font-size: 16px;
+    font-size: var(--font-size-xxl);
   }
   
   .modalStars {
-    font-size: 12px;
+    font-size: var(--font-size-base);
   }
   
   .modalRatingValue {
-    font-size: 12px;
+    font-size: var(--font-size-base);
   }
   
   .modalInfoText,
   .modalInfoLink {
-    font-size: 11px;
+    font-size: var(--font-size-sm);
   }
   
   .modalDescription {
-    font-size: 12px;
+    font-size: var(--font-size-base);
   }
 }
