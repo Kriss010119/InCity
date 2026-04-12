@@ -41,6 +41,7 @@ export const MapPanel = ({
   });
 
   const routePoints = useMemo(() => extractRoutePoints(routeResponse), [routeResponse]);
+  
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
