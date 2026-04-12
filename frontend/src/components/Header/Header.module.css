@@ -19,23 +19,23 @@
 }
 
 :root[data-theme="dark"] .nav-link.active {
-    color: var( --text-black);
+    color: var(--text-black);
 }
 
 .logo-container {
   display: flex;
-  align-items:center;
-  gap: 10px;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 
 .logo-container a {
   display: flex;
-  align-items:center;
-  transition: transform 0.5s ease;
+  align-items: center;
+  transition: transform var(--transition-duration-slow) ease;
 }
 
 .logo-container a:hover {
-  transform: scale(1.15);
+  transform: scale(var(--scale-hover));
 }
 
 .tbank-icon {
@@ -51,7 +51,7 @@
 
 .nav {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-xl);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -62,13 +62,13 @@
   font-weight: var(--font-weight-nav);
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 8px 16px;
+  padding: var(--nav-link-padding);
   border-radius: var(--radius-pill);
-  transition: color, background-color 0.3s ease;
+  transition: color, background-color var(--transition-duration-normal) ease;
 }
 
 .nav-link:hover {
-  color:  var(--text-main);
+  color: var(--text-main);
   background-color: var(--tbank-yellow-light);
 }
 
@@ -80,7 +80,7 @@
 .theme-toggle {
   width: var(--theme-toggle-size);
   height: var(--theme-toggle-size);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: transparent;
   border: 1px solid var(--border-light);
   cursor: pointer;
@@ -94,42 +94,42 @@
 }
 
 .theme-icon {
-  width: 22px;
-  height: 22px;
+  width: var(--size-22);
+  height: var(--size-22);
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 0 24px;
-    height: 64px;
+    padding: var(--header-padding-mobile);
+    height: var(--header-height-mobile);
   }
   
   .nav {
-    gap: 16px;
+    gap: var(--nav-gap-mobile);
   }
   
   .nav-link {
-    padding: 6px 12px;
-    font-size: 15px;
+    padding: var(--nav-link-padding-mobile);
+    font-size: var(--font-size-lg);
   }
   
   .logo {
-    font-size: 20px;
+    font-size: var(--font-size-xxl);
   }
 }
 
 @media (max-width: 480px) {
   .nav {
-    gap: 8px;
+    gap: var(--nav-gap-small);
   }
   
   .nav-link {
-    padding: 6px 10px;
-    font-size: 14px;
+    padding: var(--nav-link-padding-small);
+    font-size: var(--font-size-base);
   }
   
   .logo {
-    font-size: 18px;
+    font-size: var(--font-size-lg);
   }
   
   .logo span {
