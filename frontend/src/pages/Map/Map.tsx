@@ -6,7 +6,7 @@ import { buildRouteFromOrder, buildRouteFromPoint } from '../../api/routeApi';
 import { MobileTabBar, type MobileTab } from '../../components/MobileTabBar/MobileTabBar';
 
 import { useTicket } from '../../context/TicketContext';
-import type { FormData } from './components/Panels/input-panel/helpers/types';
+import type { FormData } from '../../components/Panels/input-panel/helpers/types';
 import type { RouteResponse, VisitPoint } from '../../types/types';
 import styles from './Map.module.css';
 
