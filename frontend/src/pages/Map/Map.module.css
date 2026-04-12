@@ -2,67 +2,132 @@
   margin-top: var(--header-height);
   display: grid;
   height: calc(100vh - var(--header-height));
-  background: var(--bg-main);
-  gap: 1px;
-  transition: grid-template-columns 0.3s ease;
+  background: var(--bg-secondary);
+  transition: grid-template-columns var(--transition-duration-normal) ease;
+  z-index: var(--z-index-base);
+  overflow-x: hidden;
 }
 
 .mapPage.infoVisible {
-  grid-template-columns: 350px 1fr 350px;
+  grid-template-columns: var(--map-panel-width-expanded) 1fr var(--map-panel-width-expanded);
 }
 
 .mapPage.infoHidden {
-  grid-template-columns: 350px 1fr 40px;
+  grid-template-columns: var(--map-panel-width-expanded) 1fr 0;
 }
 
 .mapContainer {
-  background: var(--bg-secondary);
+  background: var(--bg-main);
   position: relative;
-  overflow: hidden;
 }
 
 .errorMessage {
   position: absolute;
-  top: 20px;
+  top: var(--spacing-xxxl);
   left: 50%;
   transform: translateX(-50%);
-  background: #e30611;
+  background: var(--tbank-red);
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  z-index: 1000;
-  font-size: 14px;
+  padding: var(--spacing-lg) var(--spacing-xxxl);
+  border-radius: var(--radius-base);
+  z-index: var(--z-index-popover);
+  font-size: var(--font-size-lg);
   box-shadow: 0 2px 8px rgba(227, 6, 17, 0.3);
 }
 
-.openPanelButton {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 80px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--text-secondary);
-  transition: var(--transition-normal);
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.infoPanelWrapper {
+  position: relative;
+  z-index: var(--z-index-sticky); 
 }
 
-.openPanelButton:hover {
-  background: var(--tbank-yellow);
-  color: var(--text-black);
-  border-color: var(--tbank-yellow);
-  width: 44px;
+@media (max-width: 768px) {
+  .mapPage {
+    margin-top: calc(var(--header-height) * 0.8);
+    height: calc(100vh - var(--header-height) * 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mapPage.mobileLayout {
+    grid-template-columns: none !important;
+    display: flex;
+  }
+
+  .inputPanelWrapper,
+  .infoPanelWrapper {
+    position: fixed;
+    top: calc(var(--header-height) * 0.8);
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-modal);
+    background: var(--bg-secondary);
+    overflow-y: auto;
+    transition: transform var(--transition-duration-normal) ease, opacity var(--transition-duration-normal) ease;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .inputPanelWrapper.active,
+  .infoPanelWrapper.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .inputPanelWrapper.hidden,
+  .infoPanelWrapper.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .inputPanelWrapper > .panel {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .mapContainer {
+    flex: 1;
+    height: calc(100vh - var(--header-height) * 0.8 - 70px);
+    transition: height var(--transition-duration-normal) ease;
+  }
+
+  .mapContainer.mapFullscreen {
+    height: calc(100vh - var(--header-height) * 0.8);
+  }
+
+  .errorMessage {
+    top: var(--spacing-lg);
+    left: var(--spacing-xxl);
+    right: var(--spacing-xxl);
+    transform: none;
+    font-size: var(--font-size-base);
+    padding: var(--spacing-base) var(--spacing-xl);
+    white-space: normal;
+    text-align: center;
+    z-index: var(--z-index-toast);
+  }
 }
 
-.openPanelButton svg {
-  width: 24px;
-  height: 24px;
+@media (max-width: 768px) {
+  .mapPage {
+    margin-top: calc(var(--header-height) * 0.7);
+    height: calc(100vh - var(--header-height) * 0.7);
+  }
+
+  .inputPanelWrapper,
+  .infoPanelWrapper {
+    top: calc(var(--header-height) * 0.7);
+    bottom: 65px;
+  }
+
+  .mapContainer {
+    height: calc(100vh - var(--header-height) * 0.7 - 65px);
+  }
+
+  .mapContainer.mapFullscreen {
+    height: calc(100vh - var(--header-height) * 0.7);
+  }
 }

@@ -1,15 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
-import { Footer, Header, InfoPanel, RouteUpdateNotification, MapPanel } from '../../components';
+
+import { Header, InfoPanel, RouteUpdateNotification, MapPanel, InputPanel } from '../../components';
 import { buildRouteFromOrder, buildRouteFromPoint } from '../../api/routeApi';
-import { InputPanel } from '../../components/panels/input-panel';
+import { MobileTabBar, type MobileTab } from '../../components/MobileTabBar/MobileTabBar';
+
 import { useTicket } from '../../context/TicketContext';
-import type { FormData } from '../../components/panels/input-panel/helpers/types';
+import type { FormData } from './components/Panels/input-panel/helpers/types';
 import type { RouteResponse, VisitPoint } from '../../types/types';
 import styles from './Map.module.css';
-
-
 
 export const Map = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -21,9 +20,33 @@ export const Map = () => {
   const [error, setError] = useState<string | null>(null);
   const [isInfoPanelCollapsed, setIsInfoPanelCollapsed] = useState(false);
   const [isSelectingOnMap, setIsSelectingOnMap] = useState(false);
+  const [mobileActiveTab, setMobileActiveTab] = useState<MobileTab>('input');
+  const [isMobile, setIsMobile] = useState(false);
   
   const location = useLocation();
   const { ticketData, clearTicketData } = useTicket();
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      console.log('📱 Is mobile:', mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (routeResponse && isMobile) {
+      console.log('🗺️ Route received, switching to map tab');
+      setMobileActiveTab('map');
+    }
+  }, [routeResponse, isMobile]);
+
+  useEffect(() => {
+    console.log('📱 Mobile active tab changed to:', mobileActiveTab);
+  }, [mobileActiveTab]);
 
   const handleResetLock = () => {
     setRouteData(null);
@@ -34,6 +57,9 @@ export const Map = () => {
     setShowNotification(false);
     setIsSelectingOnMap(false);
     clearTicketData();
+    if (isMobile) {
+      setMobileActiveTab('input');
+    }
   };
 
   const handleDestinationSelect = async (lat: number, lng: number, address?: string) => {
@@ -71,53 +97,52 @@ export const Map = () => {
     }
   };
 
-
-const handleRouteUpdate = useCallback(async (data: FormData) => {
-  console.log('🎯 handleRouteUpdate received data:', data);
-  
-  setRouteData(data);
-  setLastRouteData(data);
-  setShowNotification(false);
-  setError(null);
-  
-  if (data.to && data.date) {
-    if (!data.destinationLat || !data.destinationLng) {
-      console.error('❌ Missing coordinates for destination');
-      setError('Не указаны координаты точки назначения. Используйте выбор на карте или введите адрес через автодополнение.');
-      return;
-    }
+  const handleRouteUpdate = useCallback(async (data: FormData) => {
+    console.log('🎯 handleRouteUpdate received data:', data);
     
-    console.log('📡 Sending request to buildRoute');
-    setIsLoading(true);
-    try {
-      let response;
-      
-      if (data.useTicket && ticketData?.ticketDetails?.orderType === 'train') {
-        const arrivalCode = ticketData.ticketDetails.details.arrivalStationCode;
-        response = await buildRouteFromOrder(
-          arrivalCode,
-          data.date,
-          data.duration || 'medium',
-          data.transport,
-          data.attractions,
-          data.events
-        );
-      } else {
-        response = await buildRouteFromPoint(data);
+    setRouteData(data);
+    setLastRouteData(data);
+    setShowNotification(false);
+    setError(null);
+    
+    if (data.to && data.date) {
+      if (!data.destinationLat || !data.destinationLng) {
+        console.error('❌ Missing coordinates for destination');
+        setError('Не указаны координаты точки назначения. Используйте выбор на карте или введите адрес через автодополнение.');
+        return;
       }
       
-      console.log('✅ Route response received:', response);
-      setRouteResponse(response);
-    } catch (err) {
-      console.error('❌ Error building route:', err);
-      setError(err instanceof Error ? err.message : 'Ошибка при построении маршрута');
-    } finally {
-      setIsLoading(false);
+      console.log('📡 Sending request to buildRoute');
+      setIsLoading(true);
+      try {
+        let response;
+        
+        if (data.useTicket && ticketData?.ticketDetails?.orderType === 'train') {
+          const arrivalCode = ticketData.ticketDetails.details.arrivalStationCode;
+          response = await buildRouteFromOrder(
+            arrivalCode,
+            data.date,
+            data.duration || 'medium',
+            data.transport,
+            data.attractions,
+            data.events
+          );
+        } else {
+          response = await buildRouteFromPoint(data);
+        }
+        
+        console.log('✅ Route response received:', response);
+        setRouteResponse(response);
+      } catch (err) {
+        console.error('❌ Error building route:', err);
+        setError(err instanceof Error ? err.message : 'Ошибка при построении маршрута');
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      console.log('⚠️ Missing to or date', { to: data.to, date: data.date });
     }
-  } else {
-    console.log('⚠️ Missing to or date', { to: data.to, date: data.date });
-  }
-}, [ticketData]);
+  }, [ticketData]);
 
   useEffect(() => {
     if (location.state?.autoFill && ticketData?.ticketDetails) {
@@ -176,10 +201,6 @@ const handleRouteUpdate = useCallback(async (data: FormData) => {
     setIsInfoPanelCollapsed(collapsed);
   };
 
-  const handleOpenPanel = () => {
-    setIsInfoPanelCollapsed(false);
-  };
-
   const handleInputPanelUpdate = (data: FormData) => {
     setRouteData(data);
     setLastRouteData(data);
@@ -192,22 +213,50 @@ const handleRouteUpdate = useCallback(async (data: FormData) => {
     setIsSelectingOnMap(isSelecting);
   };
 
+  const handleMobileTabChange = (tab: MobileTab) => {
+    console.log('🔄 Mobile tab changing to:', tab);
+    setMobileActiveTab(tab);
+  };
+
+  const getInputPanelClass = () => {
+    if (!isMobile) return '';
+    console.log('📱 Getting input panel class, activeTab:', mobileActiveTab);
+    return mobileActiveTab === 'input' ? styles.active : styles.hidden;
+  };
+
+  const getInfoPanelClass = () => {
+    if (!isMobile) return '';
+    console.log('📱 Getting info panel class, activeTab:', mobileActiveTab);
+    return mobileActiveTab === 'info' ? styles.active : styles.hidden;
+  };
+
+  const showMapFullscreen = isMobile && mobileActiveTab === 'map';
+
+   useEffect(() => {
+    if (isMobile) {
+      setMobileActiveTab('input');
+    }
+  }, [isMobile]);
+
   return (
     <>
       <Header />
-      <div className={`${styles.mapPage} ${isInfoPanelCollapsed ? styles.infoHidden : styles.infoVisible}`}>
-        <InputPanel 
-          onRouteUpdate={handleInputPanelUpdate}
-          onSearch={handleRouteUpdate}  
-          onFormChange={handleFormChange}
-          onReset={handleResetLock}
-          initialData={routeData}
-          isDestinationLocked={isDestinationLocked}
-          setIsDestinationLocked={setIsDestinationLocked}
-          onMapSelectModeChange={handleMapSelectModeChange}
-        />
+      <div className={`${styles.mapPage} ${isInfoPanelCollapsed && !isMobile ? styles.infoHidden : styles.infoVisible} ${isMobile ? styles.mobileLayout : ''}`}>
         
-        <div className={styles.mapContainer}>
+        <div className={`${styles.inputPanelWrapper} ${getInputPanelClass()}`}>
+          <InputPanel 
+            onRouteUpdate={handleInputPanelUpdate}
+            onSearch={handleRouteUpdate}  
+            onFormChange={handleFormChange}
+            onReset={handleResetLock}
+            initialData={routeData}
+            isDestinationLocked={isDestinationLocked}
+            setIsDestinationLocked={setIsDestinationLocked}
+            onMapSelectModeChange={handleMapSelectModeChange}
+          />
+        </div>
+        
+        <div className={`${styles.mapContainer} ${showMapFullscreen ? styles.mapFullscreen : ''}`}>
           {error && (
             <div className={styles.errorMessage}>
               {error}
@@ -231,26 +280,26 @@ const handleRouteUpdate = useCallback(async (data: FormData) => {
             onUpdate={handleUpdateRoute}
             onDismiss={handleDismissNotification}
           />
-
-          {isInfoPanelCollapsed && (
-            <button 
-              className={styles.openPanelButton}
-              onClick={handleOpenPanel}
-              aria-label="Открыть панель"
-            >
-              <ChevronLeft />
-            </button>
-          )}
         </div>
         
-        <InfoPanel 
-          routeResponse={routeResponse}
-          isLoading={isLoading}
-          onAttractionClick={handleAttractionClick}
-          onCollapseChange={handleInfoPanelCollapse}
-        />
+        <div className={`${styles.infoPanelWrapper} ${getInfoPanelClass()}`}>
+          <InfoPanel 
+            routeResponse={routeResponse}
+            isLoading={isLoading}
+            onAttractionClick={handleAttractionClick}
+            onCollapseChange={handleInfoPanelCollapse}
+          />
+        </div>
+
+        {isMobile && (
+          <MobileTabBar 
+            activeTab={mobileActiveTab}
+            onTabChange={handleMobileTabChange}
+            hasRouteData={!!routeResponse}
+          />
+        )}
       </div>
-      <Footer />
+      
     </>
   );
 };
