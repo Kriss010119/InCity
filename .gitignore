@@ -1,0 +1,103 @@
+# Logs
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# Dependencies
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+frontend/*.local
+
+# Editor
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+frontend/.idea
+frontend/.DS_Store
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+
+# Build output
+backend/bin/
+backend/obj/
+backend/out/
+backend/build/
+backend/publish/
+
+# User files
+backend/*.rsuser
+backend/*.user
+backend/*.userosscache
+backend/*.sln.docstates
+
+# Visual Studio
+backend/.vs/
+backend/*.vsp
+backend/*.vspx
+backend/*.sln
+backend/*.suo
+backend/*.userprefs
+backend/*.pidb
+backend/*.dbproj.schemaview
+backend/*.pdb
+backend/*.cache
+backend/*.csproj.user
+
+# Build results
+backend/[Dd]ebug/
+backend/[Rr]elease/
+backend/x64/
+backend/x86/
+backend/[Aa]rm/
+backend/[Aa]rm64/
+backend/bld/
+backend/[Bb]in/
+backend/[Oo]bj/
+backend/[Bb]uild/
+
+# NuGet
+backend/*.nupkg
+backend/*.snupkg
+backend/packages/
+backend/*.nuget.targets
+backend/*.nuget.props
+backend/NuGet.config
+
+# .NET Core
+backend/project.lock.json
+backend/project.fragment.lock.json
+backend/artifacts/
+
+# Test results
+backend/TestResults/
+backend/*.trx
+backend/*.coverage
+
+# Database files
+backend/*.mdf
+backend/*.ldf
+backend/*.mdb
+backend/*.sdf
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.temp
+*.cache
+*.log
+logs/
