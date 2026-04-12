@@ -1,7 +1,7 @@
 .transport-icon {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: var(--transport-icon-size);
+  height: var(--transport-icon-size);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
@@ -9,8 +9,8 @@
 }
 
 .transport-icon-car {
-  animation: car-border-move 25s linear infinite;
-  z-index: 50;
+  animation: car-border-move var(--transport-animation-duration-car) var(--transport-animation-easing) infinite;
+  z-index: var(--z-index-transport-car);
   left: var(--frame-x, 0);
   top: var(--frame-y, 0);
   width: var(--car-size, 70px);
@@ -19,15 +19,15 @@
 }
 
 .transport-icon-plane {
-  top: 60px;
-  animation: plane-snake-move-combined 20s linear infinite;
+  top: var(--transport-plane-top);
+  animation: plane-snake-move-combined var(--transport-animation-duration-plane) var(--transport-animation-easing) infinite;
 }
 
 .transport-icon-train {
-  bottom: 70px;
-  left: -100px;
-  animation: train-move 15s linear infinite;
-  z-index: 20;
+  bottom: var(--transport-train-bottom);
+  left: var(--transport-train-start-left);
+  animation: train-move var(--transport-animation-duration-train) var(--transport-animation-easing) infinite;
+  z-index: var(--z-index-transport-train);
 }
 
 @keyframes car-border-move {
@@ -36,8 +36,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(18deg);
+      ) rotate(var(--car-rotate-angle-1));
   }
   
   18% {
@@ -45,8 +44,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(18deg);
+      ) rotate(var(--car-rotate-angle-1));
   }
   
   22% {
@@ -54,8 +52,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(108deg);
+      ) rotate(var(--car-rotate-angle-2));
   }
   
   25% {
@@ -63,8 +60,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(108deg);
+      ) rotate(var(--car-rotate-angle-2));
   }
   
   43% {
@@ -72,8 +68,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(108deg);
+      ) rotate(var(--car-rotate-angle-2));
   }
   
   47% {
@@ -81,8 +76,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(198deg);
+      ) rotate(var(--car-rotate-angle-3));
   }
   
   50% {
@@ -90,8 +84,7 @@
       translate(
         calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(198deg);
+      ) rotate(var(--car-rotate-angle-3));
   }
   
   68% {
@@ -99,8 +92,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(198deg);
+      ) rotate(var(--car-rotate-angle-3));
   }
   
   72% {
@@ -108,8 +100,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(288deg);
+      ) rotate(var(--car-rotate-angle-4));
   }
   
   75% {
@@ -117,8 +108,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      )
-      rotate(288deg);
+      ) rotate(var(--car-rotate-angle-4));
   }
   
   93% {
@@ -126,8 +116,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(288deg);
+      ) rotate(var(--car-rotate-angle-4));
   }
   
   97% {
@@ -135,8 +124,7 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(378deg);
+      ) rotate(var(--car-rotate-angle-5));
   }
   
   100% {
@@ -144,50 +132,49 @@
       translate(
         calc(0px - var(--car-size, 70px) / 2), 
         calc(0px - var(--car-size, 70px) / 2)
-      )
-      rotate(378deg);
+      ) rotate(var(--car-rotate-angle-5));
   }
 }
 
 @keyframes plane-snake-move-combined {
   0% {
-    transform: translateX(calc(100vw + 100px)) translateY(20px);
+    transform: translateX(calc(100vw + var(--plane-start-offset-x))) translateY(var(--plane-wave-offset-y));
   }
   10% {
-    transform: translateX(90vw) translateY(80px);
+    transform: translateX(90vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   20% {
-    transform: translateX(80vw) translateY(20px);
+    transform: translateX(80vw) translateY(var(--plane-wave-offset-y));
   }
   30% {
-    transform: translateX(70vw) translateY(80px);
+    transform: translateX(70vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   40% {
-    transform: translateX(60vw) translateY(20px);
+    transform: translateX(60vw) translateY(var(--plane-wave-offset-y));
   }
   50% {
-    transform: translateX(50vw) translateY(80px);
+    transform: translateX(50vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   60% {
-    transform: translateX(40vw) translateY(20px);
+    transform: translateX(40vw) translateY(var(--plane-wave-offset-y));
   }
   70% {
-    transform: translateX(30vw) translateY(80px);
+    transform: translateX(30vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   80% {
-    transform: translateX(20vw) translateY(20px);
+    transform: translateX(20vw) translateY(var(--plane-wave-offset-y));
   }
   90% {
-    transform: translateX(10vw) translateY(80px);
+    transform: translateX(10vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   100% {
-    transform: translateX(-100px) translateY(20px);
+    transform: translateX(calc(-1 * var(--plane-start-offset-x))) translateY(var(--plane-wave-offset-y));
   }
 }
 
 @keyframes train-move {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(var(--transport-train-start-left));
   }
   100% {
     transform: translateX(calc(100vw + 100px));
@@ -196,42 +183,20 @@
 
 @media (max-width: 768px) {
   .transport-icon {
-    width: 36px;
-    height: 36px;
+    width: var(--transport-icon-size-mobile);
+    height: var(--transport-icon-size-mobile);
   }
-  
+
   .transport-icon-car {
-    width: 36px;
-    height: 36px;
-    animation: car-border-move-mobile 15s linear infinite;
+    width: var(--transport-icon-size-mobile);
+    height: var(--transport-icon-size-mobile);
   }
   
   .transport-icon-plane {
-    top: -30px;
+    top: var(--transport-plane-top-mobile);
   }
   
   .transport-icon-train {
-    bottom: -300px;
-  }
-  
-  @keyframes car-border-move-mobile {
-    0% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(calc(var(--border-width, 400px) - 36px), 0);
-    }
-    50% {
-      transform: translate(
-        calc(var(--border-width, 400px) - 36px), 
-        calc(var(--border-height, 200px) - 36px)
-      );
-    }
-    75% {
-      transform: translate(0, calc(var(--border-height, 200px) - 36px));
-    }
-    100% {
-      transform: translate(0, 0);
-    }
+    bottom: var(--transport-train-bottom-mobile);
   }
 }
