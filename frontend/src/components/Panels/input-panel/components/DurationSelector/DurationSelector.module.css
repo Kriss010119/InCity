@@ -1,0 +1,49 @@
+.durationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-base);
+}
+
+.durationButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-base);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.durationButton:hover {
+  border-color: var(--tbank-yellow);
+  color: var(--text-main);
+}
+
+.durationButton.active {
+  border-color: var(--tbank-yellow);
+  background: rgba(255, 221, 45, 0.1);
+  color: var(--text-main);
+}
+
+.durationButton svg {
+  color: var(--text-secondary);
+}
+
+.durationButton.active svg {
+  color: var(--tbank-yellow);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}

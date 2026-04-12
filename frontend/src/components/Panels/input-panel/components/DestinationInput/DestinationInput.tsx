@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { MapPin, Loader } from 'lucide-react';
-import { Portal } from '../../../portal/Portal';
-import styles from '../InputPanel.module.css';
+import { Portal } from '../../../../portal/Portal';
+import styles from './DestinationInput.module.css';
 
 type Suggestion = {
   display_name: string;
@@ -42,11 +42,21 @@ export const DestinationInput = ({
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [suggestionsPosition, setSuggestionsPosition] = useState<{ top: number; left: number } | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
   const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const cleanCache = useCallback(() => {
     const now = Date.now();
@@ -138,7 +148,7 @@ export const DestinationInput = ({
       }
     };
     const handleResize = () => {
-      if (showSuggestions) {
+      if (showSuggestions && !isMobile) {
         const pos = calculatePosition();
         setSuggestionsPosition(pos);
       }
@@ -149,7 +159,7 @@ export const DestinationInput = ({
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('resize', handleResize);
     };
-  }, [showSuggestions]);
+  }, [showSuggestions, isMobile]);
 
   useEffect(() => {
     return () => {
@@ -176,8 +186,10 @@ export const DestinationInput = ({
 
   const handleFocus = () => {
     if (!isLocked) {
-      const pos = calculatePosition();
-      setSuggestionsPosition(pos);
+      if (!isMobile) {
+        const pos = calculatePosition();
+        setSuggestionsPosition(pos);
+      }
       setShowSuggestions(true);
     }
   };
@@ -249,6 +261,37 @@ export const DestinationInput = ({
     return parts.length > 3 ? `${parts[0]}, ${parts[1]}, ${parts[2]}...` : displayName;
   };
 
+  const suggestionsContent = suggestions.length > 0 && (
+    <div
+      ref={suggestionsRef}
+      className={styles.suggestionsDropdown}
+    >
+      {suggestions.map((suggestion, index) => (
+        <div
+          key={suggestion.place_id}
+          className={`${styles.suggestion} ${index === activeIndex ? styles.active : ''}`}
+          onClick={() => handleSuggestionClick(suggestion)}
+          onMouseEnter={() => setActiveIndex(index)}
+        >
+          <MapPin size={14} className={styles.suggestionIcon} />
+          <div className={styles.suggestionText}>
+            {highlightMatch(formatAddress(suggestion.display_name), query)}
+            {suggestion.type && (
+              <span className={styles.suggestionType}>
+                {suggestion.type === 'city' ? 'Город' :
+                suggestion.type === 'town' ? 'Город' :
+                suggestion.type === 'village' ? 'Деревня' :
+                suggestion.type === 'street' ? 'Улица' :
+                suggestion.type === 'building' ? 'Здание' :
+                suggestion.type === 'amenity' ? 'Место' : ''}
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <div className={styles.inputGroup}>
       <label className={styles.label}>
@@ -276,15 +319,19 @@ export const DestinationInput = ({
               </div>
             )}
           </div>
-          {!isLocked && showSuggestions && suggestions.length > 0 && suggestionsPosition && (
+          
+          {!isLocked && showSuggestions && suggestions.length > 0 && !isMobile && suggestionsPosition && (
             <Portal>
               <div className={styles.suggestionsOverlay} onClick={() => setShowSuggestions(false)} />
               <div
-                ref={suggestionsRef}
                 className={styles.suggestionsDropdown}
                 style={{
+                  position: 'fixed',
                   top: suggestionsPosition.top,
                   left: suggestionsPosition.left,
+                  width: '400px',
+                  margin: 0,
+                  zIndex: 10000
                 }}
               >
                 {suggestions.map((suggestion, index) => (
@@ -300,11 +347,11 @@ export const DestinationInput = ({
                       {suggestion.type && (
                         <span className={styles.suggestionType}>
                           {suggestion.type === 'city' ? 'Город' :
-                           suggestion.type === 'town' ? 'Город' :
-                           suggestion.type === 'village' ? 'Деревня' :
-                           suggestion.type === 'street' ? 'Улица' :
-                           suggestion.type === 'building' ? 'Здание' :
-                           suggestion.type === 'amenity' ? 'Место' : ''}
+                          suggestion.type === 'town' ? 'Город' :
+                          suggestion.type === 'village' ? 'Деревня' :
+                          suggestion.type === 'street' ? 'Улица' :
+                          suggestion.type === 'building' ? 'Здание' :
+                          suggestion.type === 'amenity' ? 'Место' : ''}
                         </span>
                       )}
                     </div>
@@ -313,7 +360,9 @@ export const DestinationInput = ({
               </div>
             </Portal>
           )}
+          {!isLocked && showSuggestions && suggestions.length > 0 && isMobile && suggestionsContent}
         </div>
+        
         {!isLocked && (
           <button
             type="button"

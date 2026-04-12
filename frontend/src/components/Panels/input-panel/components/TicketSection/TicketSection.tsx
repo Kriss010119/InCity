@@ -1,7 +1,7 @@
 // components/InputPanel/TicketSection.tsx
 import { Ticket, X } from 'lucide-react';
-import { useTicket } from '../../../../context/TicketContext';
-import styles from '../InputPanel.module.css';
+import { useTicket } from '../../../../../context/TicketContext';
+import styles from './TicketSection.module.css';
 
 type TicketSectionProps = {
   ticketNumber: string;

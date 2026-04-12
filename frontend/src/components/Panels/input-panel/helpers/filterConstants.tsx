@@ -157,15 +157,15 @@ export const EVENT_TYPES: FilterCategory = {
 
 export const DURATION_OPTIONS = [
   { id: 'very-short', name: 'Очень короткий', description: 'до 2 часов' },
-  { id: 'short', name: 'Короткий', description: '2-3 часа' },
-  { id: 'medium', name: 'Средний', description: '3-6 часов' },
-  { id: 'long', name: 'Длинный', description: '6-9 часов' },
+  { id: 'short',      name: 'Короткий',       description: '2-3 часа' },
+  { id: 'medium',     name: 'Средний',        description: '3-6 часов' },
+  { id: 'long',       name: 'Длинный',        description: 'от 6 часов' },
 ];
 
 export const TRANSPORT_OPTIONS = [
-  { id: 'metro', name: 'Метро' },
-  { id: 'bus', name: 'Автобус' },
-  { id: 'tram', name: 'Трамвай' },
+  { id: 'metro',      name: 'Метро' },
+  { id: 'bus',        name: 'Автобус' },
+  { id: 'tram',       name: 'Трамвай' },
   { id: 'trolleybus', name: 'Троллейбус' },
 ];
 

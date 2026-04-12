@@ -1,0 +1,296 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.destinationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  width: 100%;
+  position: relative;
+}
+
+.autocompleteWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--input-border-radius);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-size: var(--font-size-lg);
+  transition: var(--transition-normal);
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--tbank-yellow);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--tbank-yellow);
+}
+
+.inputLocked {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+  border-color: var(--border-light);
+}
+
+.inputIcons {
+  position: absolute;
+  right: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.suggestionsDropdown {
+  position: absolute;
+  top: calc(100% + var(--spacing-sm));
+  right: 0;
+  width: 400px;
+  background: var(--bg-secondary);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-xxl);
+  padding: var(--spacing-xl) 0;
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-index-dropdown);
+  max-height: 400px;
+  overflow-y: auto;
+  animation: slideIn var(--transition-duration-normal) ease;
+}
+
+.suggestionsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: calc(var(--z-index-dropdown) - 1);
+}
+
+.suggestion {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border-bottom: var(--border-width-default) solid var(--border-light);
+}
+
+.suggestion:last-child {
+  border-bottom: none;
+}
+
+.suggestion:hover,
+.suggestion.active {
+  background: rgba(255, 221, 45, 0.1);
+}
+
+.suggestionIcon {
+  flex-shrink: 0;
+  margin-top: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+.suggestionText {
+  flex: 1;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.suggestionType {
+  display: inline-block;
+  margin-left: var(--spacing-base);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--bg-main);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.highlight {
+  background: rgba(255, 221, 45, 0.3);
+  font-weight: var(--font-weight-medium);
+  padding: 0 var(--spacing-xs);
+  border-radius: var(--radius-xs);
+}
+
+.mapSelectButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  background: var(--bg-main);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-base);
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  width: 100%;
+}
+
+.mapSelectButton:hover {
+  border-color: var(--tbank-yellow);
+  color: var(--tbank-yellow);
+  background: rgba(255, 221, 45, 0.05);
+}
+
+.mapSelectButton.active {
+  background: var(--tbank-yellow);
+  border-color: var(--tbank-yellow);
+  color: var(--text-black);
+}
+
+.mapSelectButton svg {
+  transition: transform var(--transition-duration-fast) ease;
+}
+
+.mapSelectButton:hover svg {
+  transform: scale(var(--scale-hover));
+}
+
+.inputHint {
+  position: absolute;
+  right: var(--spacing-xxxl);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  background: var(--bg-main);
+  padding: var(--spacing-xs) var(--spacing-base);
+  border-radius: var(--radius-xl);
+  pointer-events: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(var(--spacing-lg-negative, -10px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  animation: var(--animation-spin);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .autocompleteWrapper {
+    position: static;
+  }
+
+  .suggestionsDropdown {
+    position: static;
+    width: 100%;
+    margin-top: var(--spacing-base);
+    max-height: 50vh;
+    box-shadow: var(--shadow-base);
+    border-radius: var(--radius-xl);
+    animation: slideUp var(--transition-duration-fast) ease;
+  }
+
+  .suggestionsOverlay {
+    display: none;
+  }
+
+  .suggestion {
+    padding: var(--spacing-lg) var(--spacing-xxl);
+    gap: var(--spacing-xl);
+  }
+
+  .suggestionIcon {
+    margin-top: var(--spacing-xs);
+  }
+
+  .suggestionText {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-base);
+  }
+
+  .suggestionType {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-base);
+    margin-left: var(--spacing-base);
+  }
+
+  .inputIcons {
+    gap: var(--spacing-base);
+  }
+
+  .mapSelectButton {
+    padding: var(--spacing-xl) var(--spacing-xxl);
+    font-size: var(--font-size-xl);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(var(--spacing-lg));
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .suggestion {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    gap: var(--spacing-lg);
+  }
+
+  .suggestionText {
+    font-size: var(--font-size-lg);
+  }
+
+  .suggestionType {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  .mapSelectButton {
+    padding: var(--spacing-lg) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+  }
+}

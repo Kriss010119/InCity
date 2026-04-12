@@ -10,12 +10,35 @@ type Suggestion = {
   place_id: string;
   type?: string;
   importance?: number;
+  address?: {
+    city?: string;
+    town?: string;
+    village?: string;
+    street?: string;
+    house_number?: string;
+    country?: string;
+    postcode?: string;
+  };
+};
+
+type SelectedLocation = {
+  lat: number;
+  lng: number;
+  address: string;
+  placeId: string;
+  details?: {
+    city?: string;
+    street?: string;
+    house?: string;
+    postcode?: string;
+    country?: string;
+  };
 };
 
 type AddressAutocompleteProps = {
   value: string;
   onChange: (value: string) => void;
-  onSelect: (lat: number, lng: number, address: string) => void;
+  onSelect: (location: SelectedLocation) => void;
   isLocked?: boolean;
   placeholder?: string;
 };
@@ -37,6 +60,7 @@ export const AddressAutocomplete = ({
   const [isLoading, setIsLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [, setLastSelected] = useState<SelectedLocation | null>(null);
   
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
@@ -52,6 +76,26 @@ export const AddressAutocomplete = ({
       }
     }
   }, []);
+
+  const parseAddressDetails = (suggestion: any): SelectedLocation['details'] => {
+    const address = suggestion.address || {};
+    const city = address.city || address.town || address.village;
+    let houseNumber = address.house_number;
+    if (!houseNumber && suggestion.display_name) {
+      const houseMatch = suggestion.display_name.match(/,?\s*(\d+[A-Za-z]?)(?:\s|,|$)/);
+      if (houseMatch) {
+        houseNumber = houseMatch[1];
+      }
+    }
+
+    return {
+      city: city,
+      street: address.street || address.road,
+      house: houseNumber,
+      postcode: address.postcode,
+      country: address.country
+    };
+  };
 
   const fetchSuggestions = useCallback(async (searchQuery: string): Promise<Suggestion[]> => {
     if (suggestionsCache.has(searchQuery)) {
@@ -69,7 +113,8 @@ export const AddressAutocomplete = ({
         `https://nominatim.openstreetmap.org/search?` +
         `format=json&q=${encodeURIComponent(searchQuery)}&` +
         `limit=7&countrycodes=ru&addressdetails=1&` +
-        `dedupe=1&extratags=1`,
+        `extratags=1&namedetails=1&` +
+        `accept-language=ru`,
         {
           signal: abortControllerRef.current.signal,
           headers: {
@@ -80,10 +125,11 @@ export const AddressAutocomplete = ({
       );
       
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error(`Network response was not ok: ${response.status}`);
       }
       
       const data = await response.json();
+      
       const processed = data
         .map((item: any) => ({
           display_name: item.display_name,
@@ -91,7 +137,8 @@ export const AddressAutocomplete = ({
           lon: parseFloat(item.lon),
           place_id: item.place_id,
           type: item.type,
-          importance: item.importance || 0
+          importance: item.importance || 0,
+          address: item.address
         }))
         .sort((a: Suggestion, b: Suggestion) => 
           (b.importance || 0) - (a.importance || 0)
@@ -127,6 +174,7 @@ export const AddressAutocomplete = ({
 
     if (searchQuery.length < 3) {
       setSuggestions([]);
+      setShowSuggestions(false);
       return;
     }
 
@@ -135,8 +183,10 @@ export const AddressAutocomplete = ({
       try {
         const results = await fetchSuggestions(searchQuery);
         setSuggestions(results);
+        setShowSuggestions(results.length > 0);
       } catch (error) {
         console.error('Search error:', error);
+        setSuggestions([]);
       } finally {
         setIsLoading(false);
       }
@@ -148,9 +198,11 @@ export const AddressAutocomplete = ({
   }, [value]);
 
   useEffect(() => {
-    cleanCache();
-    debouncedSearch(query);
-  }, [query, debouncedSearch, cleanCache]);
+    if (!isLocked) {
+      cleanCache();
+      debouncedSearch(query);
+    }
+  }, [query, debouncedSearch, cleanCache, isLocked]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -190,11 +242,27 @@ export const AddressAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion: Suggestion) => {
+    const details = parseAddressDetails(suggestion);
+    const selectedLocation: SelectedLocation = {
+      lat: suggestion.lat,
+      lng: suggestion.lon,
+      address: suggestion.display_name,
+      placeId: suggestion.place_id,
+      details
+    };
+
     setQuery(suggestion.display_name);
     onChange(suggestion.display_name);
-    onSelect(suggestion.lat, suggestion.lon, suggestion.display_name);
+    onSelect(selectedLocation);
     setShowSuggestions(false);
     setActiveIndex(-1);
+    setLastSelected(selectedLocation);
+    
+    console.log('Selected location for backend:', {
+      coordinates: { lat: suggestion.lat, lng: suggestion.lon },
+      placeId: suggestion.place_id,
+      details
+    });
   };
 
   const handleClear = () => {
@@ -204,6 +272,7 @@ export const AddressAutocomplete = ({
     onChange('');
     setShowSuggestions(false);
     setActiveIndex(-1);
+    setLastSelected(null);
     inputRef.current?.focus();
   };
 
@@ -223,14 +292,22 @@ export const AddressAutocomplete = ({
         setActiveIndex(prev => 
           prev < suggestions.length - 1 ? prev + 1 : prev
         );
+        if (suggestionsRef.current) {
+          const activeElement = suggestionsRef.current.children[activeIndex + 1] as HTMLElement;
+          activeElement?.scrollIntoView({ block: 'nearest' });
+        }
         break;
       case 'ArrowUp':
         e.preventDefault();
         setActiveIndex(prev => prev > 0 ? prev - 1 : -1);
+        if (suggestionsRef.current && activeIndex > 0) {
+          const activeElement = suggestionsRef.current.children[activeIndex - 1] as HTMLElement;
+          activeElement?.scrollIntoView({ block: 'nearest' });
+        }
         break;
       case 'Enter':
         e.preventDefault();
-        if (activeIndex >= 0) {
+        if (activeIndex >= 0 && suggestions[activeIndex]) {
           handleSuggestionClick(suggestions[activeIndex]);
         } else if (suggestions.length > 0) {
           handleSuggestionClick(suggestions[0]);
@@ -243,28 +320,6 @@ export const AddressAutocomplete = ({
     }
   };
 
-  const highlightMatch = (text: string, searchQuery: string) => {
-    if (!searchQuery) return text;
-    
-    const escapedQuery = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escapedQuery})`, 'gi');
-    const parts = text.split(regex);
-    
-    return parts.map((part, i) => 
-      regex.test(part) ? 
-        <span key={i} className={styles.highlight}>{part}</span> : 
-        <span key={i}>{part}</span>
-    );
-  };
-
-  const formatAddress = (displayName: string) => {
-    const parts = displayName.split(', ');
-    if (parts.length > 3) {
-      return `${parts[0]}, ${parts[1]}, ${parts[2]}...`;
-    }
-    return displayName;
-  };
-
   return (
     <div className={styles.autocompleteWrapper}>
       <div className={styles.inputContainer}>
@@ -273,12 +328,15 @@ export const AddressAutocomplete = ({
           type="text"
           value={query}
           onChange={handleInputChange}
-          onFocus={() => !isLocked && setShowSuggestions(true)}
+          onFocus={() => !isLocked && query.length >= 3 && setShowSuggestions(true)}
           onKeyDown={handleKeyDown}
           placeholder={isLocked ? "Точка определена билетом" : placeholder}
           disabled={isLocked}
           className={`${styles.input} ${isLocked ? styles.inputLocked : ''}`}
           autoComplete="off"
+          aria-label="Поиск адреса"
+          aria-expanded={showSuggestions}
+          aria-autocomplete="list"
         />
         
         <div className={styles.inputIcons}>
@@ -289,6 +347,7 @@ export const AddressAutocomplete = ({
               onClick={handleClear}
               className={styles.clearButton}
               title="Очистить"
+              aria-label="Очистить"
             >
               <X size={16} />
             </button>
@@ -298,36 +357,23 @@ export const AddressAutocomplete = ({
       </div>
 
       {!isLocked && showSuggestions && suggestions.length > 0 && (
-        <div ref={suggestionsRef} className={styles.suggestions}>
+        <div 
+          ref={suggestionsRef} 
+          className={styles.suggestions}
+          role="listbox"
+          aria-label="Предложения адресов"
+        >
           {suggestions.map((suggestion, index) => (
             <div
               key={suggestion.place_id}
               className={`${styles.suggestion} ${index === activeIndex ? styles.active : ''}`}
               onClick={() => handleSuggestionClick(suggestion)}
               onMouseEnter={() => setActiveIndex(index)}
+              role="option"
+              aria-selected={index === activeIndex}
             >
-              <MapPin size={14} className={styles.suggestionIcon} />
-              <div className={styles.suggestionText}>
-                {highlightMatch(formatAddress(suggestion.display_name), query)}
-                {suggestion.type && (
-                  <span className={styles.suggestionType}>
-                    {suggestion.type === 'city' ? 'Город' :
-                     suggestion.type === 'town' ? 'Город' :
-                     suggestion.type === 'village' ? 'Деревня' :
-                     suggestion.type === 'street' ? 'Улица' :
-                     suggestion.type === 'building' ? 'Здание' :
-                     suggestion.type === 'amenity' ? 'Место' : ''}
-                  </span>
-                )}
-              </div>
             </div>
           ))}
-        </div>
-      )}
-
-      {isLocked && (
-        <div className={styles.inputHint}>
-          Заблокировано по билету
         </div>
       )}
     </div>

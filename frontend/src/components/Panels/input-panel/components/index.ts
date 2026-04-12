@@ -1,9 +1,10 @@
-export { ActionButtons } from './ActionButtons';
-export { DatePicker } from './DatePicker';
-export { DestinationInput } from './DestinationInput';
-export { TicketSection } from './TicketSection';
-export { TransportSelector } from './TransportSelector';
-export { DurationSelector } from './DurationSelector';
-export { ObjectFilterMenu } from './ObjectFilterMenu';
-export { EventFilterMenu } from './EventFilterMenu';
+export { ActionButtons } from './ActionButtons/ActionButtons';
+export { DatePicker } from './DatePicker/DatePicker';
+export { DestinationInput } from './DestinationInput/DestinationInput';
+export { TicketSection } from './TicketSection/TicketSection';
+export { TransportSelector } from './TransportSelector/TransportSelector';
+export { DurationSelector } from './DurationSelector/DurationSelector';
+export { ObjectFilterMenu} from './FilterMenu/ObjectFilterMenu';
+export { EventFilterMenu} from './FilterMenu/EventFilterMenu';
+export { CheckboxGroup } from './CheckboxGroup/CheckboxGroup';
 export type { FormData, InputPanelProps } from '../helpers/types';

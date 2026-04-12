@@ -1,5 +1,5 @@
 import { Search } from 'lucide-react';
-import styles from '../InputPanel.module.css';
+import styles from './ActionButtons.module.css';
 
 type ActionButtonsProps = {
   onSearch: () => void;

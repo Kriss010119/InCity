@@ -1,0 +1,39 @@
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-base);
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: var(--size-lg);
+  height: var(--size-lg);
+  accent-color: var(--tbank-yellow);
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  font-size: var(--font-size-md);
+  color: var(--text-main);
+}
+
+.inputGroup {
+  position: relative;
+  margin: var(--spacing-xxxl);
+  box-sizing: border-box;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}

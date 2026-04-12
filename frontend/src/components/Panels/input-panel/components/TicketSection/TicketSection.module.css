@@ -1,0 +1,113 @@
+.ticketSection {
+  margin-bottom: var(--spacing-4xl);
+  padding-bottom: var(--spacing-xxl);
+  border-bottom: var(--border-width-default) solid var(--border-light);
+}
+
+.ticketInputWrapper {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-base);
+  align-items: center;
+}
+
+.ticketInput {
+  flex: 1;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--input-border-radius);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-size: var(--font-size-lg);
+  transition: var(--transition-normal);
+  box-sizing: border-box;
+}
+
+.ticketInput:focus {
+  outline: none;
+  border-color: var(--tbank-yellow);
+}
+
+.ticketInput:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+  background: var(--bg-secondary);
+}
+
+.ticketApplyButton {
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  background: var(--tbank-yellow);
+  color: var(--text-black);
+  border: none;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-normal);
+}
+
+.ticketApplyButton:hover:not(:disabled) {
+  background: #ffae00;
+}
+
+.ticketApplyButton:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.ticketActive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: rgba(255, 221, 45, 0.1);
+  border: var(--border-width-default) solid var(--tbank-yellow);
+  border-radius: var(--radius-base);
+}
+
+.ticketInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+}
+
+.ticketNumber {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-main);
+}
+
+.ticketRemoveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm);
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-normal);
+}
+
+.ticketRemoveButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
+}
+
+.ticketError {
+  position: absolute;
+  bottom: calc(var(--spacing-xxxl-negative, -20px));
+  left: 0;
+  font-size: var(--font-size-base);
+  color: var(--text-error);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}

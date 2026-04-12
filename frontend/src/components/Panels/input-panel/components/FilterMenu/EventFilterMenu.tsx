@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Calendar, ChevronDown, X } from 'lucide-react';
-import { Portal } from '../../../portal/Portal';
-import { EVENT_TYPES } from '../helpers/filterConstants';
-import styles from '../InputPanel.module.css';
+import { Portal } from '../../../../portal/Portal';
+import { EVENT_TYPES } from '../../helpers/filterConstants';
+import styles from './FilterMenu.module.css';
 
 type EventFilterMenuProps = {
   selectedEvents: string[];

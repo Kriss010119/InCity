@@ -241,7 +241,7 @@ export const InputPanel = ({
 
       <DestinationInput
         value={formData.to}
-        onChange={(value) => updateField('to', value)}
+        onChange={(value: string) => updateField('to', value)}
         isLocked={isDestinationLocked}
         placeholder={ticketData ? "Можно изменить вручную" : "Введите конечную точку"}
         onMapSelect={handleMapSelectClick}
@@ -257,7 +257,7 @@ export const InputPanel = ({
 
       <DurationSelector
         selected={formData.duration || ''}
-        onChange={(duration) => updateField('duration', duration as FormData['duration'])}
+        onChange={(duration: string | undefined) => updateField('duration', duration as FormData['duration'])}
       />
 
       <TransportSelector
@@ -267,12 +267,12 @@ export const InputPanel = ({
 
       <ObjectFilterMenu 
         selectedFilters={formData.attractions}
-        onFilterChange={(filters) => updateField('attractions', filters)}
+        onFilterChange={(filters: string[]) => updateField('attractions', filters)}
       />
       
       <EventFilterMenu 
         selectedEvents={formData.events}
-        onEventChange={(events) => updateField('events', events)}
+        onEventChange={(events: string[]) => updateField('events', events)}
       />
 
       <ActionButtons

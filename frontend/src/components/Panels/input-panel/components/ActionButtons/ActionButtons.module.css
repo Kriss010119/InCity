@@ -1,0 +1,46 @@
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xxxl);
+}
+
+.searchButton,
+.resetButton {
+  flex: 1;
+  padding: var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-base);
+  transition: var(--transition-normal);
+}
+
+.searchButton {
+  background: var(--tbank-yellow);
+  color: var(--text-black);
+}
+
+.searchButton:hover:not(:disabled) {
+  background: #ffae00;
+}
+
+.searchButton:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.resetButton {
+  background: var(--border-light);
+  color: var(--text-main);
+}
+
+.resetButton:hover {
+  background: #5e5e5e;
+  color: white;
+}

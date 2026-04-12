@@ -1,6 +1,6 @@
 import { Clock } from 'lucide-react';
-import { DURATION_OPTIONS } from '../helpers/filterConstants';
-import styles from '../InputPanel.module.css';
+import { DURATION_OPTIONS } from '../../helpers/filterConstants';
+import styles from './DurationSelector.module.css';
 
 type DurationSelectorProps = {
   selected: string;
@@ -25,8 +25,8 @@ export const DurationSelector = ({ selected, onChange }: DurationSelectorProps) 
             onClick={() => onChange(option.id)}
             title={option.description}
           >
-            <Clock size={14} />
             <span>{option.name}</span>
+            <span>{option.description}</span>
           </button>
         ))}
       </div>

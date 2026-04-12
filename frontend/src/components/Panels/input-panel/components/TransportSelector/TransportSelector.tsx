@@ -1,6 +1,6 @@
 import { Navigation } from 'lucide-react';
-import { TRANSPORT_OPTIONS } from '../helpers/constants';
-import styles from '../InputPanel.module.css';
+import { TRANSPORT_OPTIONS } from '../../helpers/constants';
+import styles from './TransportSelector.module.css';
 
 type TransportSelectorProps = {
   selected: string[];

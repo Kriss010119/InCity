@@ -1,6 +1,6 @@
 import { Star, CalendarDays } from 'lucide-react';
-import type { CheckboxOption } from '../helpers/types';
-import styles from '../InputPanel.module.css';
+import styles from './CheckboxGroup.module.css';
+import type { CheckboxOption } from '../../helpers/types';
 
 type CheckboxGroupProps = {
   title: string;

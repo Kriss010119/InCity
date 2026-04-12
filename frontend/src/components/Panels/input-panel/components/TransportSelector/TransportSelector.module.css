@@ -1,0 +1,55 @@
+.transportGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-base);
+}
+
+.transportButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-base);
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.transportButton:hover {
+  border-color: var(--tbank-yellow);
+  color: var(--text-main);
+}
+
+.transportButton.active {
+  border-color: var(--tbank-yellow);
+  background: rgba(255, 221, 45, 0.1);
+  color: var(--text-main);
+}
+
+.transportButton svg {
+  color: var(--text-secondary);
+}
+
+.transportButton.active svg {
+  color: var(--tbank-yellow);
+}
+
+.inputGroup {
+  position: relative;
+  box-sizing: border-box;
+  margin: var(--spacing-xxxl) 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}

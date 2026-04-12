@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Building2, ChevronDown, X } from 'lucide-react';
-import { Portal } from '../../../portal/Portal';
-import { OBJECT_CATEGORIES } from '../helpers/filterConstants';
-import styles from '../InputPanel.module.css';
+import { Portal } from '../../../../portal/Portal';
+import { OBJECT_CATEGORIES } from '../../helpers/filterConstants';
+import styles from './FilterMenu.module.css';
 
 type ObjectFilterMenuProps = {
   selectedFilters: string[];
