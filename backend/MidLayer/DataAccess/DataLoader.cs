@@ -19,6 +19,7 @@ namespace MidLayer.DataAccess
         private readonly ITramRepository _tramRepo;
         private readonly ITrolleybusRepository _trolleybusRepo;
         private readonly IMetroRepository _metroRepo;
+        private readonly ICityRepository _cityRepo;
 
         private const int DefaultSearchRadiusMeters = 15000;
 
@@ -27,13 +28,23 @@ namespace MidLayer.DataAccess
             IBusRepository busRepo,
             ITramRepository tramRepo,
             ITrolleybusRepository trolleybusRepo,
-            IMetroRepository metroRepo)
+            IMetroRepository metroRepo,
+            ICityRepository cityRepo)
         {
             _attractionRepo = attractionRepo;
             _busRepo = busRepo;
             _tramRepo = tramRepo;
             _trolleybusRepo = trolleybusRepo;
             _metroRepo = metroRepo;
+            _cityRepo = cityRepo;
+        }
+
+        /// <summary>
+        /// Определяет название города по координатам. Используется для запросов к KudaGo API.
+        /// </summary>
+        public async Task<string?> GetCityNameAsync(double latitude, double longitude)
+        {
+            return await _cityRepo.GetCityNameByCoordinatesAsync(latitude, longitude);
         }
 
         public async Task<CityData> LoadCityDataAsync(double latitude, double longitude,

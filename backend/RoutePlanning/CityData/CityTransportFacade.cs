@@ -56,10 +56,22 @@ namespace RoutePlanning.CityData
             List<IStation> ansSt = new List<IStation>();
             List<MetroStation> ansM = new List<MetroStation>();
 
-            ansSt.AddRange(GetClosestBusStops(latitude, longitude, 16, searchRad));
-            ansSt.AddRange(GetClosestTramStops(latitude, longitude, 5, searchRad));
-            ansSt.AddRange(GetClosestTrolleybusStops(latitude, longitude, 10, searchRad));
-            ansM.AddRange(GetClosestMetroStations(latitude, longitude, amount, searchRad));
+            if (filter.BusesIncluded)
+            {
+                ansSt.AddRange(GetClosestBusStops(latitude, longitude, 16, searchRad));
+            }
+            if (filter.TramsIncluded)
+            {
+                ansSt.AddRange(GetClosestTramStops(latitude, longitude, 5, searchRad));
+            }
+            if (filter.TrolleybusesIncluded)
+            {
+                ansSt.AddRange(GetClosestTrolleybusStops(latitude, longitude, 10, searchRad));
+            }
+            if (filter.MetroIncluded)
+            {
+                ansM.AddRange(GetClosestMetroStations(latitude, longitude, amount, searchRad));
+            }
 
             ansSt.Sort((el1, el2) =>
                 SpatialMath.Distance(latitude, longitude, el1.Latitude, el1.Longitude).CompareTo(SpatialMath.Distance(latitude, longitude, el2.Latitude, el2.Longitude)));

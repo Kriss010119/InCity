@@ -9,19 +9,20 @@ namespace RoutePlanning.AttractionCollecting
 {
     internal class AttractionCollector
     {
-        //private IAttraction[] _attractions;
+        private IAttraction[] _attractions;
         private List<Cluster> _clusters;
 
-        private const double MinTimeFactor = 0.65;
-        private const double MaxTimeFactor = 0.90;
+        private const double MinTimeFactor = 0.60;
+        private const double MaxTimeFactor = 0.80;
         private const int LongRouteDurationThreshold = 300;
         private const double DistanceNormalizationMeters = 3000.0;
         private const int ReplacementCandidatesCount = 5;
+        private const int MaxGastroClusters = 3;
 
         public AttractionCollector(IEnumerable<IAttraction> attractions)
         {
-            //_attractions = [.. attractions];
-            ClusterCollector clusterCollector = new(attractions);
+            _attractions = [.. attractions];
+            ClusterCollector clusterCollector = new(_attractions);
             _clusters = clusterCollector.CreateClusters();
         }
 
@@ -219,7 +220,8 @@ namespace RoutePlanning.AttractionCollecting
             List<Cluster> selected = new List<Cluster>();
             int currentTime = 0;
 
-            FillFromSortedReferencingCount(gastroClusters, selected, ref currentTime, maxTime, requiredGastro);
+            int gastroToSelect = Math.Min(requiredGastro, MaxGastroClusters);
+            FillFromSortedReferencingCount(gastroClusters, selected, ref currentTime, maxTime, gastroToSelect);
 
             FillFromSortedReferencingTime(otherClusters, selected, ref currentTime, minTime, maxTime);
 

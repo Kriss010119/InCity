@@ -9,20 +9,17 @@ using RoutePlanning.AttractionConnecting;
 namespace MidLayer.Parsers
 {
     /// <summary>
-    /// Строитель ответов: преобразует доменные объекты в DTO для фронтенда.
+    /// Построитель ответов: преобразует доменные объекты в DTO для фронтенда.
     /// </summary>
     public static class ResponseBuilder
     {
         public static RouteResponse BuildRouteResponse(Cluster[] clusters, Section[] sections)
         {
-            List<VisitPointDto> visitPoints = new List<VisitPointDto>();
+            List<ClusterDto> visitPoints = new List<ClusterDto>();
 
             foreach (Cluster cluster in clusters)
             {
-                foreach (IAttraction attraction in cluster.Attractions)
-                {
-                    visitPoints.Add(MapAttraction(attraction));
-                }
+                visitPoints.Add(MapCluster(cluster));
             }
 
             List<SectionDto> sectionDtos = new List<SectionDto>();
@@ -36,6 +33,47 @@ namespace MidLayer.Parsers
             {
                 VisitPoints = [.. visitPoints],
                 Sections = [.. sectionDtos]
+            };
+        }
+
+        private static ClusterDto MapCluster(Cluster cluster)
+        {
+            // Определяем главную достопримечательность (максимальный InterestRate = EstimatedVisitMinutes * Tags.Count)
+            int mainIndex = 0;
+            int bestScore = 0;
+
+            for (int i = 0; i < cluster.Attractions.Length; i++)
+            {
+                IAttraction curr = cluster.Attractions[i];
+                int score = 0;
+
+                if (curr is Attraction atr)
+                {
+                    score = atr.EstimatedVisitMinutes * atr.Tags.Count;
+                }
+
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                    mainIndex = i;
+                }
+            }
+
+            VisitPointDto main = MapAttraction(cluster.Attractions[mainIndex]);
+
+            List<VisitPointDto> others = new List<VisitPointDto>();
+            for (int i = 0; i < cluster.Attractions.Length; i++)
+            {
+                if (i != mainIndex)
+                {
+                    others.Add(MapAttraction(cluster.Attractions[i]));
+                }
+            }
+
+            return new ClusterDto
+            {
+                MainAttraction = main,
+                OtherAttractions = [.. others]
             };
         }
 

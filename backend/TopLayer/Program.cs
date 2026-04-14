@@ -22,6 +22,7 @@ namespace TopLayer
             builder.Services.AddScoped<ITrolleybusRepository, TrolleybusRepository>();
             builder.Services.AddScoped<IMetroRepository, MetroRepository>();
             builder.Services.AddScoped<IArrivalPointRepository, ArrivalPointRepository>();
+            builder.Services.AddScoped<ICityRepository, CityRepository>();
             builder.Services.AddScoped<DataLoader>();
             builder.Services.AddScoped<RouteService>();
 

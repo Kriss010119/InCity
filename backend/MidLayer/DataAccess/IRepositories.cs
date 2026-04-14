@@ -50,6 +50,15 @@ namespace MidLayer.DataAccess
         Task<ArrivalPoint?> GetByCodeAsync(string code);
     }
 
+    /// <summary>
+    /// Репозиторий городов.
+    /// Определяет город по координатам — ищет ближайший город к заданной точке.
+    /// </summary>
+    public interface ICityRepository
+    {
+        Task<string?> GetCityNameByCoordinatesAsync(double latitude, double longitude);
+    }
+
     public class ArrivalPoint
     {
         public string Code { get; set; } = "";

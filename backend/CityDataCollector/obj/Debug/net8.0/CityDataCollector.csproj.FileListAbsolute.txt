@@ -16,3 +16,6 @@ C:\Users\georg\source\repos\InCity\CityDataCollector\obj\Debug\net8.0\refint\Cit
 C:\Users\georg\source\repos\InCity\CityDataCollector\obj\Debug\net8.0\CityDataCollector.pdb
 C:\Users\georg\source\repos\InCity\CityDataCollector\obj\Debug\net8.0\CityDataCollector.genruntimeconfig.cache
 C:\Users\georg\source\repos\InCity\CityDataCollector\obj\Debug\net8.0\ref\CityDataCollector.dll
+C:\Users\georg\source\repos\InCity\CityDataCollector\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\georg\source\repos\InCity\CityDataCollector\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\georg\source\repos\InCity\CityDataCollector\bin\Debug\net8.0\Npgsql.dll

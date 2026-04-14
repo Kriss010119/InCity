@@ -190,7 +190,7 @@ namespace CityDataCollector.Collectors
 
                         if (lat == 0 && lon == 0) continue;
 
-                        list.Add(new AttractionData
+                        var attraction = new AttractionData
                         {
                             Id = el.GetProperty("id").GetInt64(),
                             Name = name,
@@ -199,10 +199,13 @@ namespace CityDataCollector.Collectors
                             Category = category,
                             Subcategory = subcategory,
                             Square = square,
-                            EstimatedVisitMinutes = 0, // рассчитывается основным алгоритмом
+                            EstimatedVisitMinutes = 0,
                             OsmType = type,
                             Tags = OsmParser.CollectAllTags(tags)
-                        });
+                        };
+
+                        attraction.EstimatedVisitMinutes = VisitTimeEstimator.EstimateVisitTime(attraction);
+                        list.Add(attraction);
                     }
                     catch { continue; }
                 }

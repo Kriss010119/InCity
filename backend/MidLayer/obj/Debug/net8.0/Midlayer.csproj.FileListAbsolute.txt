@@ -1,0 +1,17 @@
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\Midlayer.deps.json
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\Midlayer.dll
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\Midlayer.pdb
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\DomainLib.dll
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\RoutePlanning.dll
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\RoutePlanning.pdb
+C:\Users\georg\source\repos\InCity\Midlayer\bin\Debug\net8.0\DomainLib.pdb
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.AssemblyInfo.cs
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.csproj.Up2Date
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.dll
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\refint\Midlayer.dll
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\Midlayer.pdb
+C:\Users\georg\source\repos\InCity\Midlayer\obj\Debug\net8.0\ref\Midlayer.dll

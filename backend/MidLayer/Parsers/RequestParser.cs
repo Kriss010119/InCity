@@ -53,6 +53,11 @@ namespace MidLayer.Parsers
                 }
             }
 
+            if (!buses && !trams && !trolleybuses && !metro)
+            {
+                return new TransportFilter(true, true, true, true);
+            }
+
             return new TransportFilter(buses, trams, trolleybuses, metro);
         }
 
@@ -73,6 +78,12 @@ namespace MidLayer.Parsers
                 }
             }
 
+            // Если фильтры не указаны — все категории включены
+            if (categories.Count == 0)
+            {
+                categories.AddRange(FrontendKeyMap.CategoryMap.Values);
+            }
+
             if (!string.IsNullOrWhiteSpace(subattractionsCsv))
             {
                 string[] keys = subattractionsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
@@ -85,6 +96,12 @@ namespace MidLayer.Parsers
                 }
             }
 
+            if (subcategories.Count == 0)
+            {
+                categories.AddRange(FrontendKeyMap.SubcategoryMap.Values);
+            }
+
+            File.WriteAllText("C:\\Users\\georg\\debug.txt", $"{categories.Count}, {subcategories.Count}");
             return new AttractionFilter([.. categories], [.. subcategories]);
         }
 

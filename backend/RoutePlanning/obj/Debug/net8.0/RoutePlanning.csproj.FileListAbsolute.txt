@@ -1,0 +1,15 @@
+C:\Users\georg\source\repos\InCity\RoutePlanning\bin\Debug\net8.0\RoutePlanning.deps.json
+C:\Users\georg\source\repos\InCity\RoutePlanning\bin\Debug\net8.0\RoutePlanning.dll
+C:\Users\georg\source\repos\InCity\RoutePlanning\bin\Debug\net8.0\RoutePlanning.pdb
+C:\Users\georg\source\repos\InCity\RoutePlanning\bin\Debug\net8.0\DomainLib.dll
+C:\Users\georg\source\repos\InCity\RoutePlanning\bin\Debug\net8.0\DomainLib.pdb
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.AssemblyInfo.cs
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePla.E98FEE0D.Up2Date
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.dll
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\refint\RoutePlanning.dll
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\RoutePlanning.pdb
+C:\Users\georg\source\repos\InCity\RoutePlanning\obj\Debug\net8.0\ref\RoutePlanning.dll

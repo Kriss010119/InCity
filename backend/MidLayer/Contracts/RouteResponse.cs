@@ -6,10 +6,22 @@ namespace MidLayer.Contracts
     public class RouteResponse
     {
         [JsonPropertyName("visitPoints")]
-        public VisitPointDto[] VisitPoints { get; set; } = [];
+        public ClusterDto[] VisitPoints { get; set; } = [];
 
         [JsonPropertyName("sections")]
         public SectionDto[] Sections { get; set; } = [];
+    }
+
+    /// <summary>
+    /// Составной объект: главная достопримечательность кластера + остальные.
+    /// </summary>
+    public class ClusterDto
+    {
+        [JsonPropertyName("mainAttraction")]
+        public VisitPointDto MainAttraction { get; set; } = null!;
+
+        [JsonPropertyName("otherAttractions")]
+        public VisitPointDto[] OtherAttractions { get; set; } = [];
     }
 
     public class VisitPointDto

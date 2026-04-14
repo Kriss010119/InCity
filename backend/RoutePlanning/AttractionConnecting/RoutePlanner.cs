@@ -90,7 +90,7 @@ namespace RoutePlanning.AttractionConnecting
 
                 double dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
 
-                if (dist <= 450)
+                if (dist <= 500)
                 {
                     ans[i] = new Section([], [], (int)(dist / 66), 0);
                     continue;
@@ -201,23 +201,27 @@ namespace RoutePlanning.AttractionConnecting
         /// <summary>
         /// Пытается найти маршрут между двумя точками, пробуя методы в порядке приоритета:
         /// прямой маршрут → маршрут с пересадкой внутри одного вида → маршрут с пересадкой между видами транспорта.
+        /// Дополнительная фильтрация пар остановок (попарная):
+        /// Для каждой пары (stopA из множества у старта, stopB из множества у цели):
+        /// 1. stopB должна быть ближе к цели (lat2,lon2) чем stopA.
+        /// Проверка выполняется внутри TryToFindDirectRoute/IntersectionRoute/TransferRoute.
         /// </summary>
         private bool TryToFindRouteBetweenPoints(double lat1, double lon1, double lat2, double lon2, double dist, TransportFilter filter, out Section sect)
         {
-            Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter);
-            Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter);
+            Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter, searchRad: 350);
+            Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter, searchRad: 350);
 
-            if (TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, out sect))
+            if (TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
             {
                 return true;
             }
 
-            if (TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, out sect))
+            if (TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
             {
                 return true;
             }
 
-            if (TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, out sect))
+            if (TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out sect))
             {
                 return true;
             }
@@ -226,11 +230,30 @@ namespace RoutePlanning.AttractionConnecting
             return false;
         }
 
+        // ==================== ПРЯМОЙ МАРШРУТ (БЕЗ ПЕРЕСАДОК) ====================
+
+        /// <summary>
+        /// Проверяет два условия:
+        /// 1. stopB (у цели) ближе к цели чем текущее местоположение (startLat, startLon).
+        /// 2. stopB ближе к цели чем stopA (у старта).
+        /// </summary>
+        private static bool IsValidStopPair(double stopALat, double stopALon, double stopBLat, double stopBLon,
+            double targetLat, double targetLon, double startLat, double startLon)
+        {
+            double distBToTarget = SpatialMath.Distance(stopBLat, stopBLon, targetLat, targetLon);
+            double distAToTarget = SpatialMath.Distance(stopALat, stopALon, targetLat, targetLon);
+            double distStartToTarget = SpatialMath.Distance(startLat, startLon, targetLat, targetLon);
+            double distStartToA = SpatialMath.Distance(startLat, startLon, stopALat, stopALon);
+
+            return distBToTarget + distStartToA < distStartToTarget && distBToTarget < distAToTarget;
+        }
+
         /// <summary>
         /// Ищет прямой маршрут (без пересадок) между наборами станций у двух точек.
         /// Перебирает все пары наземных остановок и станций метро, выбирает вариант с минимальным временем.
+        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
         /// </summary>
-        private bool TryToFindDirectRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, out Section sect)
+        private bool TryToFindDirectRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
             sect = null!;
             int bestTime = int.MaxValue;
@@ -241,6 +264,11 @@ namespace RoutePlanning.AttractionConnecting
                 foreach (IStation stop2 in st2.First)
                 {
                     if (stop1 is Station s1 && stop2 is Station s2 && s1.Type != s2.Type)
+                    {
+                        continue;
+                    }
+
+                    if (!IsValidStopPair(stop1.Latitude, stop1.Longitude, stop2.Latitude, stop2.Longitude, targetLat, targetLon, startLat, startLon))
                     {
                         continue;
                     }
@@ -262,6 +290,11 @@ namespace RoutePlanning.AttractionConnecting
                 {
                     foreach (MetroStation ms2 in st2.Second)
                     {
+                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
+                        {
+                            continue;
+                        }
+
                         Section? candidate = TryBuildDirectMetroGap(ms1, ms2);
 
                         if (candidate != null && candidate.EstimatedTimeInMinutes < bestTime)
@@ -276,11 +309,14 @@ namespace RoutePlanning.AttractionConnecting
             return sect != null;
         }
 
+        // ==================== МАРШРУТ С ПЕРЕСАДКОЙ ВНУТРИ ОДНОГО ВИДА ====================
+
         /// <summary>
         /// Ищет маршрут с одной пересадкой внутри одного вида наземного транспорта
         /// или с пересадками внутри метро (через MetroManager.GetRoutesIntersection).
+        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
         /// </summary>
-        private bool TryToFindIntersectionRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, out Section sect)
+        private bool TryToFindIntersectionRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
             sect = null!;
             int bestTime = int.MaxValue;
@@ -291,6 +327,11 @@ namespace RoutePlanning.AttractionConnecting
                 foreach (IStation stop2 in st2.First)
                 {
                     if (stop1 is Station s1 && stop2 is Station s2 && s1.Type != s2.Type)
+                    {
+                        continue;
+                    }
+
+                    if (!IsValidStopPair(stop1.Latitude, stop1.Longitude, stop2.Latitude, stop2.Longitude, targetLat, targetLon, startLat, startLon))
                     {
                         continue;
                     }
@@ -312,6 +353,11 @@ namespace RoutePlanning.AttractionConnecting
                 {
                     foreach (MetroStation ms2 in st2.Second)
                     {
+                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
+                        {
+                            continue;
+                        }
+
                         Section? candidate = TryBuildMetroWithTransfers(ms1, ms2);
 
                         if (candidate != null && candidate.EstimatedTimeInMinutes < bestTime)
@@ -326,12 +372,15 @@ namespace RoutePlanning.AttractionConnecting
             return sect != null;
         }
 
+        // ==================== МАРШРУТ С ПЕРЕСАДКОЙ МЕЖДУ ВИДАМИ ТРАНСПОРТА ====================
+
         /// <summary>
         /// Ищет маршрут с пересадкой между различными видами транспорта:
         /// наземный одного типа → наземный другого типа, наземный → метро, метро → наземный.
         /// Допускается не более одной пересадки на наземный транспорт.
+        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
         /// </summary>
-        private bool TryToFindTransferRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double dist, TransportFilter filter, out Section sect)
+        private bool TryToFindTransferRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double dist, TransportFilter filter, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
             sect = null!;
             int bestTime = int.MaxValue;
@@ -342,6 +391,11 @@ namespace RoutePlanning.AttractionConnecting
                 foreach (IStation stop2 in st2.First)
                 {
                     if (stop1 is Station s1 && stop2 is Station s2 && s1.Type == s2.Type)
+                    {
+                        continue;
+                    }
+
+                    if (!IsValidStopPair(stop1.Latitude, stop1.Longitude, stop2.Latitude, stop2.Longitude, targetLat, targetLon, startLat, startLon))
                     {
                         continue;
                     }
@@ -403,6 +457,8 @@ namespace RoutePlanning.AttractionConnecting
 
             return sect != null;
         }
+
+        // ==================== ПОСТРОЕНИЕ GAP-ОВ ДЛЯ НАЗЕМНОГО ТРАНСПОРТА ====================
 
         /// <summary>
         /// Пытается построить прямой Gap для наземного транспорта между двумя остановками.
@@ -590,6 +646,8 @@ namespace RoutePlanning.AttractionConnecting
             return bestSection;
         }
 
+        // ==================== ПОСТРОЕНИЕ GAP-ОВ ДЛЯ МЕТРО ====================
+
         /// <summary>
         /// Пытается построить прямой MetroGap (обе станции на одной линии, без пересадок).
         /// </summary>
@@ -697,6 +755,8 @@ namespace RoutePlanning.AttractionConnecting
 
             return bestSection;
         }
+
+        // ==================== КОМБИНИРОВАННЫЕ МАРШРУТЫ (НАЗЕМНЫЙ + МЕТРО) ====================
 
         /// <summary>
         /// Строит маршрут: наземный транспорт до станции метро, затем метро до точки назначения.
@@ -836,6 +896,8 @@ namespace RoutePlanning.AttractionConnecting
 
             return null;
         }
+
+        // ==================== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ====================
 
         /// <summary>
         /// Ищет прямой маршрут наземного транспорта между двумя остановками одного типа.
@@ -1124,5 +1186,6 @@ namespace RoutePlanning.AttractionConnecting
 
             return ans;
         }
+
     }
 }
