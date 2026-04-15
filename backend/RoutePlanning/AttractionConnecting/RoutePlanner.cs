@@ -10,6 +10,7 @@ using DomainLib.Enumerators;
 using DomainLib.Service;
 using RoutePlanning.Service;
 using DomainLib;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace RoutePlanning.AttractionConnecting
 {
@@ -23,10 +24,10 @@ namespace RoutePlanning.AttractionConnecting
         private const double TramMinutesPerStop = 3.0;
         private const double MetroMinutesPerStop = 2.0;
 
-        private const int BusTransferMinutes = 15;
-        private const int TramTransferMinutes = 15;
-        private const int TrolleybusTransferMinutes = 15;
-        private const int MetroTransferMinutes = 10;
+        private const int BusTransferMinutes = 10;
+        private const int TramTransferMinutes = 10;
+        private const int TrolleybusTransferMinutes = 10;
+        private const int MetroTransferMinutes = 5;
 
         public RoutePlanner(IEnumerable<BusStop>? busStops, IEnumerable<BusRoute>? busRoutes,
             IEnumerable<TramStop>? tramstops, IEnumerable<TramRoute>? tramRoutes,
@@ -91,7 +92,7 @@ namespace RoutePlanning.AttractionConnecting
 
                 double dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
 
-                if (dist <= 500)
+                if (dist <= 600)
                 {
                     ans[i] = new Section([], [], (int)(dist / 66), 0);
                     continue;
@@ -165,6 +166,7 @@ namespace RoutePlanning.AttractionConnecting
                         IAttraction target = GetMainAttraction(replacement);
                         lat2 = target.Latitude;
                         lon2 = target.Longitude;
+
                         if (TryToFindRouteBetweenPoints(lat1, lon1, lat2, lon2, dist, filter, out Section sect))
                         {
                             ans[i] = sect;
@@ -207,6 +209,14 @@ namespace RoutePlanning.AttractionConnecting
         /// </summary>
         private bool TryToFindRouteBetweenPoints(double lat1, double lon1, double lat2, double lon2, double dist, TransportFilter filter, out Section sect)
         {
+            dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
+
+            if (dist <= 600)
+            {
+                sect = new Section([], [], (int)(dist / 66), 0);
+                return true;
+            }
+
             Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter, searchRad: 350);
             Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter, searchRad: 350);
 
