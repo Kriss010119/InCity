@@ -20,8 +20,17 @@ namespace DomainLib.Attractions
             AttractionCategories.TheatersAndConcertHalls,
             AttractionCategories.ChildrenObjects,
             AttractionCategories.FamousPeoplePlaces,
-            AttractionCategories.ScienceAndEducation
-        };
+            AttractionCategories.ScienceAndEducation,
+
+            EventCategory.Film,
+            EventCategory.Exhibition,
+            EventCategory.Concert,
+            EventCategory.Festival,
+            EventCategory.Fair,
+            EventCategory.BusinessEvent,
+            EventCategory.ChildrenEvent,
+            EventCategory.CharityEvent
+    };
 
         /// <summary>
         /// Словарь правил совместимости: для каждой кластеризуемой категории перечислены категории,
@@ -132,7 +141,7 @@ namespace DomainLib.Attractions
                         continue;
                     }
 
-                    if (clust.Any(el => InRadius(el, candidate, 100)))
+                    if (clust.Any(el => InRadius(el, candidate, 200)))
                     {
                         clust.Add(candidate);
                         categories.Add(candidate.Category!);

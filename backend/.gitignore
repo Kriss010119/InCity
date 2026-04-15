@@ -1,0 +1,32 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+
+## Visual Studio
+.vs/
+*.rsuser
+launchSettings.json
+
+## Rider
+.idea/
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Docker
+**/docker-compose.override.yml
+
+## Данные сборщика
+data/
+backups/
+logs/
+
+## Файлы окружения
+appsettings.Development.json

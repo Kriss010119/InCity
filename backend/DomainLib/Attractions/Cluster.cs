@@ -22,7 +22,14 @@ namespace DomainLib.Attractions
             foreach (var attraction in attractions)
             {
                 time += attraction.EstimatedVisitMinutes;
-                interestRateUnnormilized += GetTagCount(attraction) * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                if (attraction is Attraction)
+                {
+                    interestRateUnnormilized += GetTagCount(attraction) * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                }
+                else
+                {
+                    interestRateUnnormilized += 8 * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                }
             }
             EstimatedTime = (int)(time / Math.Sqrt(attractions.Length));
             InterestRate = interestRateUnnormilized / (double)EstimatedTime;
