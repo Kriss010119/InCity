@@ -16,13 +16,20 @@ export const RouteTab = ({ routeResponse }: RouteTabProps) => {
   );
   
   const visitTime = routeResponse.visitPoints.reduce(
-    (acc, point) => acc + (point.estimatedVisitMinutes || 0), 0
+    (acc, group) => 
+      acc + 
+      (group.mainAttraction.estimatedVisitMinutes || 0) +
+      group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0),
+    0
   );
   
   const totalTime = (travelTime + visitTime) / 60;
-
   const totalTransfers = routeResponse.sections.reduce(
     (acc, s) => acc + s.numberOfTransfers, 0
+  );
+  
+  const totalPoints = routeResponse.visitPoints.reduce(
+    (acc, group) => acc + 1 + group.otherAttractions.length, 0
   );
 
   return (
@@ -36,7 +43,7 @@ export const RouteTab = ({ routeResponse }: RouteTabProps) => {
         </div>
         <div className={styles.stat}>
           <MapPin size={18} />
-          <span className={styles.value}>{routeResponse.visitPoints.length}</span>
+          <span className={styles.value}>{totalPoints}</span>
           <span className={styles.label}>{t('infoPanel.places')}</span>
         </div>
         <div className={styles.stat}>

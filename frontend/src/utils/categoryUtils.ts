@@ -1,24 +1,24 @@
+export const extractTagValue = (tags: string[] | undefined, key: string): string | undefined => {
+  if (!tags) return undefined;
+  const tag = tags.find(t => t.startsWith(key + '='));
+  return tag?.split('=')[1];
+};
+
 export const getWikimediaDirectUrl = (url: string): string | null => {
   try {
-    if (url.includes('Special:FilePath')) {
-      return url;
-    }
-    
+    if (url.includes('Special:FilePath')) return url;
     if (url.includes('wikimedia.org')) {
-      const fileNameMatch = url.match(/\/wiki\/(?:File:|Special:FilePath\/)?(.+?)(?:\?|$)/) || url.match(/\/([^\/]+\.(?:jpg|jpeg|png|gif|svg))(?:\?|$)/i);
-      
+      const fileNameMatch = url.match(/\/wiki\/(?:File:|Special:FilePath\/)?(.+?)(?:\?|$)/) || url.match(/\/([^/]+\.(?:jpg|jpeg|png|gif|svg))(?:\?|$)/i);
       if (fileNameMatch) {
         let fileName = fileNameMatch[1];
         fileName = decodeURIComponent(fileName).replace(/File:/g, '').trim();
         return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=1200`;
       }
     }
-    
     if (!url.startsWith('http')) {
       const fileName = url.replace(/File:/g, '').trim();
       return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=1200`;
     }
-    
     return url;
   } catch (e) {
     console.warn('Failed to parse Wikimedia URL:', url, e);
@@ -26,26 +26,17 @@ export const getWikimediaDirectUrl = (url: string): string | null => {
   }
 };
 
-export const extractTagValue = (tags: string[], key: string): string | undefined => {
-  const tag = tags.find(t => t.startsWith(key + '='));
-  return tag?.split('=')[1];
-};
-
 export const formatOpeningHours = (hours?: string): string => {
   if (!hours) return 'Не указано';
-  
   const days: Record<string, string> = {
     'Mo': 'Пн', 'Tu': 'Вт', 'We': 'Ср', 'Th': 'Чт', 
     'Fr': 'Пт', 'Sa': 'Сб', 'Su': 'Вс'
   };
-
   let formatted = hours;
   Object.entries(days).forEach(([eng, rus]) => {
     formatted = formatted.replace(new RegExp(eng, 'g'), rus);
   });
-
   formatted = formatted.replace(/(\d{2}:\d{2})-(\d{2}:\d{2})/g, '$1 - $2');
-  
   return formatted;
 };
 
@@ -84,12 +75,7 @@ export const normalizeTicketNumber = (value: string): string => {
 };
 
 export const createRouteDataFromTicket = (ticketDetails: any) => {
-  const routeData: any = {
-    transport: [],
-    attractions: [],
-    events: []
-  };
-
+  const routeData: any = { transport: [], attractions: [], events: [] };
   if (ticketDetails.orderType === 'train') {
     routeData.from = ticketDetails.details.departureStationCode === '2004000' ? 'Санкт-Петербург' : 'Москва';
     routeData.to = ticketDetails.details.arrivalStationCode === '2000000' ? 'Москва' : 'Санкт-Петербург';
@@ -102,6 +88,5 @@ export const createRouteDataFromTicket = (ticketDetails: any) => {
     routeData.destinationLng = ticketDetails.details.coordinates.longitude;
     routeData.destinationName = ticketDetails.details.hotelName;
   }
-
   return routeData;
 };

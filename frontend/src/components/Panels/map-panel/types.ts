@@ -46,6 +46,13 @@ export type MapMarkersProps = {
   onMarkerClick: (marker: MapMarker) => void;
 };
 
-export type RoutePolylineProps = {
+export type TransportType = 'walk' | 'bus' | 'tram' | 'trolleybus' | 'metro'; 
+
+export type RouteSegment = {
+  id: string;
   points: [number, number][];
+  type: TransportType;
+  routeNumber?: string;
+  estimatedTime?: number;
+  intermediateStops?: string[];
 };

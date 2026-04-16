@@ -4,7 +4,6 @@ import { useLocale } from '../../../hooks/useLocale';
 import { PlaceDetailsModal } from '../../place-details-modal/PlaceDetailsModal';
 import styles from './InfoPanel.module.css';
 import type { VisitPoint } from '../../../types/types';
-
 import type { InfoPanelProps, TabType } from './components/types';
 import { AttractionsTab } from './components/attraction-card/AttractionsTab';
 import { InfoPanelHeader } from './components/info-card/InfoPanelHeader';
@@ -39,12 +38,11 @@ export const InfoPanel = ({
           {showContent ? (
             <>
               <InfoPanelTabs activeTab={activeTab} onTabChange={setActiveTab} />
-
               {activeTab === 'route' ? (
                 <RouteTab routeResponse={routeResponse} />
               ) : (
                 <AttractionsTab 
-                  visitPoints={routeResponse.visitPoints}
+                  visitPointGroups={routeResponse.visitPoints}
                   onAttractionClick={onAttractionClick || (() => {})}
                   onPlaceSelect={setSelectedPlace}
                 />
@@ -58,19 +56,14 @@ export const InfoPanel = ({
           ) : (
             <>
               <h3 className={styles.title}>{t('infoPanel.routeInfo')}</h3>
-              <p className={styles.emptyState}>
-                {t('infoPanel.emptyState')}
-              </p>
+              <p className={styles.emptyState}>{t('infoPanel.emptyState')}</p>
             </>
           )}
         </>
       )}
 
       {selectedPlace && (
-        <PlaceDetailsModal 
-          place={selectedPlace}
-          onClose={() => setSelectedPlace(null)}
-        />
+        <PlaceDetailsModal place={selectedPlace} onClose={() => setSelectedPlace(null)} />
       )}
     </div>
   );

@@ -51,6 +51,11 @@ export const usePlaceDetails = (place: VisitPoint | null) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { getCachedData, setCachedData } = usePlaceCache();
+  const getTagValue = (tags: string[] | undefined, key: string): string | undefined => {
+    if (!tags) return undefined;
+    const tag = tags.find((t) => t.startsWith(key + '='));
+    return tag?.split('=')[1];
+  };
 
   useEffect(() => {
     if (!place) return;
@@ -72,21 +77,23 @@ export const usePlaceDetails = (place: VisitPoint | null) => {
       setError(null);
 
       try {
+        const tags = place.tags || [];
+
         const parsedDetails: PlaceDetails = {
           address:
-            getTagValue(place.tags, 'addr:full') ||
-            `${getTagValue(place.tags, 'addr:street') || ''} ${getTagValue(place.tags, 'addr:housenumber') || ''}`.trim() ||
-            getTagValue(place.tags, 'address'),
-          phone: getTagValue(place.tags, 'phone') || getTagValue(place.tags, 'contact:phone'),
-          website: getTagValue(place.tags, 'website') || getTagValue(place.tags, 'contact:website'),
-          openingHours: getTagValue(place.tags, 'opening_hours'),
-          wikidata: getTagValue(place.tags, 'wikidata'),
-          wikipedia: getTagValue(place.tags, 'wikipedia'),
+            getTagValue(tags, 'addr:full') ||
+            `${getTagValue(tags, 'addr:street') || ''} ${getTagValue(tags, 'addr:housenumber') || ''}`.trim() ||
+            getTagValue(tags, 'address'),
+          phone: getTagValue(tags, 'phone') || getTagValue(tags, 'contact:phone'),
+          website: getTagValue(tags, 'website') || getTagValue(tags, 'contact:website'),
+          openingHours: getTagValue(tags, 'opening_hours'),
+          wikidata: getTagValue(tags, 'wikidata'),
+          wikipedia: getTagValue(tags, 'wikipedia'),
           source: 'osm',
         };
 
         const images: string[] = [];
-        place.tags.forEach((tag) => {
+        tags.forEach((tag) => {
           if (tag.startsWith('image=') || tag.startsWith('image:')) {
             const value = tag.split('=')[1];
             if (value) {
@@ -125,11 +132,6 @@ export const usePlaceDetails = (place: VisitPoint | null) => {
       abortController.abort();
     };
   }, [place, getCachedData, setCachedData]);
-
-  const getTagValue = (tags: string[], key: string): string | undefined => {
-    const tag = tags.find((t) => t.startsWith(key + '='));
-    return tag?.split('=')[1];
-  };
 
   const fetchWikipediaData = async (parsedDetails: PlaceDetails, images: string[], signal: AbortSignal) => {
     if (!parsedDetails.wikipedia) return;

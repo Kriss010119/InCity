@@ -86,9 +86,11 @@
   font-weight: var(--font-weight-semibold);
   color: var(--text-main);
   margin-bottom: var(--spacing-sm);
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .attractionMeta {
@@ -104,20 +106,19 @@
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--badge-border-radius-tiny);
-  white-space: nowrap;
 }
 
 .attractionTime {
   font-size: var(--font-size-xs);
   color: var(--text-secondary);
-  white-space: nowrap;
 }
 
 .attractionAddress {
   font-size: var(--font-size-xs);
   color: var(--text-secondary);
   margin-bottom: var(--spacing-sm);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -141,4 +142,10 @@
   padding-bottom: var(--spacing-base);
   border-bottom: calc(var(--border-width-default) * 2) solid var(--tbank-yellow);
   flex-shrink: 0;
+}
+
+.attractionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }

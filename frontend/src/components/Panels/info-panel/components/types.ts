@@ -1,5 +1,4 @@
-import type { RouteResponse } from "../../../../types/backend.types";
-import type { VisitPoint } from "../../../../types/types";
+import type { RouteResponse, VisitPoint } from "../../../../types/types";
 
 export type TabType = 'route' | 'attractions';
 

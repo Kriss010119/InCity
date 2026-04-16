@@ -31,10 +31,7 @@ export type HotelTicketDetails = {
   createdAt: string;
   details: {
     hotelName: string;
-    coordinates: {
-      latitude: number;
-      longitude: number;
-    };
+    coordinates: { latitude: number; longitude: number };
     checkIn: string;
     checkOut: string;
   };
@@ -54,29 +51,10 @@ export type FormData = {
   useTicket?: boolean;
 };
 
-export type RoutePointType = {
-  id: string;
-  name: string;
-  lat: number;
-  lng: number;
-}
-
-export type PlaceType = {
-  id: string;
-  title: string;
-  type: 'event' | 'sight';
-}
-
-export type RouteStateType = {
-  from: RoutePointType | null;
-  to: RoutePointType | null;
-  places: PlaceType[];
-}
-
-export type Coordinates = {
-  lat: number;
-  lng: number;
-}
+export type RoutePointType = { id: string; name: string; lat: number; lng: number };
+export type PlaceType = { id: string; title: string; type: 'event' | 'sight' };
+export type RouteStateType = { from: RoutePointType | null; to: RoutePointType | null; places: PlaceType[] };
+export type Coordinates = { lat: number; lng: number };
 
 export type Event = {
   id: string;
@@ -85,14 +63,14 @@ export type Event = {
   description: string;
   date: string;
   tags: string[];
-}
+};
 
 export type RoutePoint = {
   id: string;
   address: string;
   coordinates: Coordinates;
   type: 'start' | 'intermediate' | 'end';
-}
+};
 
 export interface RouteStep {
   id: number;
@@ -107,7 +85,7 @@ export type Route = {
   distance: number;
   duration: number;
   transport: TransportType[];
-}
+};
 
 export type Attraction = {
   id: number;
@@ -121,31 +99,18 @@ export type Attraction = {
   weather?: 'sunny' | 'cloudy' | 'rainy';
   image?: string;
   distance: string;
-}
+};
 
 export type MapMarker = {
   id: string;
   coordinates: Coordinates;
   type: 'route' | 'attraction';
   color: 'red' | 'green' | 'yellow' | 'blue' | 'purple';
-  popup?: {
-    title: string;
-    description: string;
-  };
-}
+  popup?: { title: string; description: string };
+};
 
-export type TicketData = {
-  ticketNumber: string;
-  ticketDetails: TicketDetails;
-}
-
-export type LocationState = {
-  from?: string;
-  to?: string;
-  date?: string;
-  autoFill?: boolean;
-  ticketNumber?: string;
-}
+export type TicketData = { ticketNumber: string; ticketDetails: TicketDetails };
+export type LocationState = { from?: string; to?: string; date?: string; autoFill?: boolean; ticketNumber?: string };
 
 export type RouteNode = {
   nodeId: number;
@@ -177,36 +142,22 @@ export type VisitPoint = {
   longitude: number;
   category: string;
   subcategory: string;
-  square: number;
+  square: number | null;
   estimatedVisitMinutes: number;
-  osmType: string;
+  osmType: string | null;
   tags: string[];
 };
 
-export type Node = {
-  nodeId: number;
-  name: string;
-  latitude: number;
-  longitude: number;
-  role: string;
-  sequence: number;
+export type VisitPointGroup = {
+  mainAttraction: VisitPoint;
+  otherAttractions: VisitPoint[];
 };
 
-export type Gap = {
-  startNode: Node;
-  transport: string;
-  routeNumber: string;
-  endNode: Node;
-  nodesVisited: Node[];
-};
-
-export type Section = {
-  gaps: Gap[];
-  estimatedTimeInMinutes: number;
-  numberOfTransfers: number;
-};
+export type Node = RouteNode;
+export type Gap = RouteGap;
+export type Section = RouteSection;
 
 export type RouteResponse = {
-  visitPoints: VisitPoint[];
+  visitPoints: VisitPointGroup[];
   sections: Section[];
 };

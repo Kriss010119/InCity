@@ -4,11 +4,16 @@ import styles from './AttractionCard.module.css';
 import { getCategoryColor } from '../../../../../utils/categoryUtils';
 import { useState } from 'react';
 
-export const AttractionCard = ({ place, onClick }: AttractionCardProps) => {
+interface ExtendedAttractionCardProps extends AttractionCardProps {
+  isMain?: boolean;
+}
+
+export const AttractionCard = ({ place, onClick, isMain = false }: ExtendedAttractionCardProps) => {
   const { details, isLoading } = usePlaceDetails(place);
   const [imageError, setImageError] = useState(false);
   
   const getImageUrl = (): string | null => {
+    if (!place.tags) return null;
     if (!imageError && details.images && details.images.length > 0) {
       return details.images[0];
     }
@@ -20,18 +25,12 @@ export const AttractionCard = ({ place, onClick }: AttractionCardProps) => {
   };
 
   const getAddress = (): string => {
-    if (details.address) {
-      return details.address;
-    }
+    if (details.address) return details.address;
+    if (!place.tags) return '';
     const street = place.tags.find(tag => tag.startsWith('addr:street='))?.split('=')[1];
     const house = place.tags.find(tag => tag.startsWith('addr:housenumber='))?.split('=')[1];
-    if (street && house) {
-      return `${street}, ${house}`;
-    }
-    if (street) {
-      return street;
-    }
-    return '';
+    if (street && house) return `${street}, ${house}`;
+    return street || '';
   };
 
   const imageUrl = getImageUrl();
@@ -40,7 +39,7 @@ export const AttractionCard = ({ place, onClick }: AttractionCardProps) => {
 
   return (
     <div 
-      className={styles.attractionCard} 
+      className={`${styles.attractionCard} ${isMain ? styles.mainAttraction : ''}`}
       onClick={() => onClick(place)}
     >
       <div className={styles.attractionImageContainer}>
@@ -60,7 +59,9 @@ export const AttractionCard = ({ place, onClick }: AttractionCardProps) => {
       </div>
       
       <div className={styles.attractionInfo}>
-        <h4 className={styles.attractionName}>{place.name}</h4>
+        <h4 className={styles.attractionName}>
+          {place.name}
+        </h4>
         
         <div className={styles.attractionMeta}>
           <span 
@@ -69,17 +70,12 @@ export const AttractionCard = ({ place, onClick }: AttractionCardProps) => {
           >
             {place.subcategory || place.category}
           </span>
-          
           <span className={styles.attractionTime}>
             {place.estimatedVisitMinutes} мин
           </span>
         </div>
         
-        {address && (
-          <div className={styles.attractionAddress}>
-            {address}
-          </div>
-        )}
+        {address && <div className={styles.attractionAddress}>{address}</div>}
         
         {details.wikipediaExtract && (
           <p className={styles.attractionExcerpt}>
