@@ -29,6 +29,7 @@
 .input {
   width: 100%;
   padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  padding-right: var(--spacing-7xl);
   border: var(--border-width-default) solid var(--border-light);
   border-radius: var(--input-border-radius);
   background: var(--bg-main);
@@ -188,6 +189,28 @@
   padding: var(--spacing-xs) var(--spacing-base);
   border-radius: var(--radius-xl);
   pointer-events: none;
+}
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-full);
+  transition: var(--transition-normal);
+}
+
+.clearButton:hover {
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.clearButton:active {
+  transform: scale(0.95);
 }
 
 @keyframes slideIn {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { MapPin, Loader } from 'lucide-react';
+import { MapPin, Loader, X } from 'lucide-react';
 import { Portal } from '../../../../portal/Portal';
 import styles from './DestinationInput.module.css';
 
@@ -20,6 +20,8 @@ type DestinationInputProps = {
   onMapSelect?: () => void;
   isSelectingOnMap?: boolean;
   onAddressSelect?: (lat: number, lng: number, address: string) => void;
+  id?: string;
+  name?: string;
 };
 
 const suggestionsCache = new Map<string, Suggestion[]>();
@@ -35,6 +37,8 @@ export const DestinationInput = ({
   onMapSelect,
   isSelectingOnMap = false,
   onAddressSelect,
+  id = "destination-input",
+  name = "destination",
 }: DestinationInputProps) => {
   const [query, setQuery] = useState(value);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -205,14 +209,6 @@ export const DestinationInput = ({
     setActiveIndex(-1);
   };
 
-  const handleSuggestionClick = (suggestion: Suggestion) => {
-    setQuery(suggestion.display_name);
-    onChange(suggestion.display_name);
-    if (onAddressSelect) onAddressSelect(suggestion.lat, suggestion.lon, suggestion.display_name);
-    setShowSuggestions(false);
-    setActiveIndex(-1);
-  };
-
   const handleClear = () => {
     if (isLocked) return;
     setQuery('');
@@ -222,7 +218,15 @@ export const DestinationInput = ({
     inputRef.current?.focus();
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleSuggestionClick = (suggestion: Suggestion) => {
+    setQuery(suggestion.display_name);
+    onChange(suggestion.display_name);
+    if (onAddressSelect) onAddressSelect(suggestion.lat, suggestion.lon, suggestion.display_name);
+    setShowSuggestions(false);
+    setActiveIndex(-1);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (isLocked) return;
     if (!showSuggestions || suggestions.length === 0) {
       if (e.key === 'Escape' && query) handleClear();
@@ -267,6 +271,8 @@ export const DestinationInput = ({
     <div
       ref={suggestionsRef}
       className={styles.suggestionsDropdown}
+      role="listbox"
+      id={`${id}-suggestions`}
     >
       {suggestions.map((suggestion, index) => (
         <div
@@ -274,6 +280,8 @@ export const DestinationInput = ({
           className={`${styles.suggestion} ${index === activeIndex ? styles.active : ''}`}
           onClick={() => handleSuggestionClick(suggestion)}
           onMouseEnter={() => setActiveIndex(index)}
+          role="option"
+          aria-selected={index === activeIndex}
         >
           <MapPin size={14} className={styles.suggestionIcon} />
           <div className={styles.suggestionText}>
@@ -296,7 +304,7 @@ export const DestinationInput = ({
 
   return (
     <div className={styles.inputGroup}>
-      <label className={styles.label}>
+      <label htmlFor={id} className={styles.label}>
         <MapPin size={16} />
         <span>КУДА</span>
       </label>
@@ -305,6 +313,8 @@ export const DestinationInput = ({
           <div className={styles.inputContainer}>
             <input
               ref={inputRef}
+              id={id}
+              name={name}
               type="text"
               value={query}
               onChange={handleInputChange}
@@ -314,10 +324,25 @@ export const DestinationInput = ({
               placeholder={isLocked ? "Точка определена билетом" : placeholder}
               className={`${styles.input} ${isLocked ? styles.inputLocked : ''}`}
               autoComplete="off"
+              aria-label="Пункт назначения"
+              aria-autocomplete="list"
+              aria-expanded={showSuggestions}
+              aria-controls={`${id}-suggestions`}
             />
             {!isLocked && (
               <div className={styles.inputIcons}>
-                {isLoading && <Loader size={18} className={styles.spinner} />}
+                {isLoading && <Loader size={18} className={styles.spinner} aria-label="Загрузка" />}
+                {!isLoading && query && (
+                  <button
+                    type="button"
+                    onClick={handleClear}
+                    className={styles.clearButton}
+                    title="Очистить"
+                    aria-label="Очистить поле ввода"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -371,13 +396,14 @@ export const DestinationInput = ({
             onClick={onMapSelect}
             className={`${styles.mapSelectButton} ${isSelectingOnMap ? styles.active : ''}`}
             title="Выбрать на карте"
+            aria-label={isSelectingOnMap ? "Отменить выбор на карте" : "Выбрать точку на карте"}
           >
             <MapPin size={18} />
             <span>{isSelectingOnMap ? 'Отмена' : 'Выбрать на карте'}</span>
           </button>
         )}
       </div>
-      {isLocked && <div className={styles.inputHint}>Заблокировано по билету</div>}
+      {isLocked && <div className={styles.inputHint} id={`${id}-hint`}>Заблокировано по билету</div>}
     </div>
   );
 };
