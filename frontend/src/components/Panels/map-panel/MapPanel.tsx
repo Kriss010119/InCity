@@ -39,7 +39,7 @@ export const MapPanel = ({
 
   const { reverseGeocode } = useReverseGeocode();
 
-  const { markers, addSelectedMarker } = useMapMarkers({
+  const { markers, addSelectedMarker, clearSelectedMarker } = useMapMarkers({
     routeResponse,
     isHotelTicket,
     destinationLat,
@@ -53,6 +53,12 @@ export const MapPanel = ({
     () => buildFullRouteSegments(routeResponse, visitPoints, destinationLat, destinationLng),
     [routeResponse, visitPoints, destinationLat, destinationLng]
   );
+
+  useEffect(() => {
+    if (!destinationLat || !destinationLng) {
+      clearSelectedMarker();
+    }
+  }, [destinationLat, destinationLng, clearSelectedMarker]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
