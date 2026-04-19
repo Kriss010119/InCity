@@ -22,6 +22,13 @@
   position: relative;
 }
 
+.title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-main);
+  margin: var(--spacing-5xl) auto;
+}
+
 .panelHidden .tabs,
 .panelHidden .title,
 .panelHidden .stats,

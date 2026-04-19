@@ -6,6 +6,7 @@
   padding-bottom: var(--spacing-base);
   border-bottom: calc(var(--border-width-default) * 2) solid var(--tbank-yellow);
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .stats {
