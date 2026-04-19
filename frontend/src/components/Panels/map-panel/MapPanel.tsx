@@ -20,6 +20,7 @@ import styles from './MapPanel.module.css';
 import type { VisitPoint } from '../../../types/types';
 import { useReverseGeocode } from '../../../hooks';
 import { useMapMarkers } from '../../../hooks/useMapMarkers';
+import { RouteArrows } from './components/RouteArrows';
 
 export const MapPanel = ({
   destinationLat,
@@ -96,6 +97,7 @@ export const MapPanel = ({
           <MapClickHandler onMapClick={handleMapClick} isSelectingMode={isSelectingMode} />
           <TileLayer attribution={TILE_LAYER_ATTRIBUTION} url={TILE_LAYER_URL} />
           <CurvedRouteSegments segments={routeSegments} />
+          <RouteArrows segments={routeSegments} />
           <TransportStops routeResponse={routeResponse} />
           <MapMarkers markers={markers} onMarkerClick={handleMarkerClick} />
         </MapContainer>

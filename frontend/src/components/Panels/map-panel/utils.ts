@@ -271,3 +271,29 @@ export const buildFullRouteSegments = (
   }
   return segments;
 };
+
+export const getSegmentCurvedPoints = (segment: RouteSegment): [number, number][] => {
+  const validPoints = segment.points.filter(
+    (p): p is [number, number] => 
+      p && p.length === 2 && typeof p[0] === 'number' && !isNaN(p[0]) && typeof p[1] === 'number' && !isNaN(p[1])
+  );
+
+  if (validPoints.length < 2) {
+    return [];
+  }
+
+  if (segment.type === 'walk') {
+    return validPoints;
+  }
+
+  const curvedPoints: [number, number][] = [];
+
+  for (let i = 0; i < validPoints.length - 1; i++) {
+    const from = validPoints[i];
+    const to = validPoints[i + 1];
+    const curve = getCurvedPath(from, to, 0.3, 15);
+    curvedPoints.push(...curve);
+  }
+  
+  return curvedPoints;
+};
