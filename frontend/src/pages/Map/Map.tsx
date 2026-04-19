@@ -91,6 +91,7 @@ export const Map = () => {
     setLastRouteData(updatedRouteData);
     setIsDestinationLocked(false);
     setIsSelectingOnMap(false);
+    handleMapSelectModeChange(false); 
     
     if (updatedRouteData.date) {
       await handleRouteUpdate(updatedRouteData);
@@ -251,6 +252,7 @@ export const Map = () => {
             onReset={handleResetLock}
             initialData={routeData}
             isDestinationLocked={isDestinationLocked}
+            isSelectingOnMap={isSelectingOnMap}
             setIsDestinationLocked={setIsDestinationLocked}
             onMapSelectModeChange={handleMapSelectModeChange}
             onDestinationSelect={handleDestinationSelect}

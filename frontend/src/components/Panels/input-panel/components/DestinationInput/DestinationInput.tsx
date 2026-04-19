@@ -34,7 +34,7 @@ export const DestinationInput = ({
   placeholder = "Введите конечную точку",
   onMapSelect,
   isSelectingOnMap = false,
-  onAddressSelect
+  onAddressSelect,
 }: DestinationInputProps) => {
   const [query, setQuery] = useState(value);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -195,7 +195,9 @@ export const DestinationInput = ({
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (isLocked) return;
+    if (isLocked) {
+      return;
+    }
     const newValue = e.target.value;
     setQuery(newValue);
     onChange(newValue);

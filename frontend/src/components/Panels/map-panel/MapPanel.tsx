@@ -39,7 +39,7 @@ export const MapPanel = ({
 
   const { reverseGeocode } = useReverseGeocode();
 
-  const { markers, addSelectedMarker, clearSelectedMarker } = useMapMarkers({
+  const { markers, clearSelectedMarker } = useMapMarkers({
     routeResponse,
     isHotelTicket,
     destinationLat,
@@ -55,7 +55,7 @@ export const MapPanel = ({
   );
 
   useEffect(() => {
-    if (!destinationLat || !destinationLng) {
+    if (destinationLat && destinationLng) {
       clearSelectedMarker();
     }
   }, [destinationLat, destinationLng, clearSelectedMarker]);
@@ -70,12 +70,13 @@ export const MapPanel = ({
   const handleMapClick = useCallback(
     async (lat: number, lng: number) => {
       const address = await reverseGeocode(lat, lng);
-      await addSelectedMarker(lat, lng, address);
-      if (onDestinationSelect) onDestinationSelect(lat, lng, address);
+      if (onDestinationSelect) {
+        onDestinationSelect(lat, lng, address);
+      }
       setMapCenter([lat, lng]);
       setMapZoom(16);
     },
-    [reverseGeocode, addSelectedMarker, onDestinationSelect]
+    [reverseGeocode, onDestinationSelect]
   );
 
   const handleMarkerClick = useCallback((marker: MapMarker) => {

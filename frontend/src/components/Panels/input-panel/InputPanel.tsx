@@ -15,6 +15,7 @@ export const InputPanel = ({
   onReset,
   initialData,
   isDestinationLocked = false,
+  isSelectingOnMap = false,
   setIsDestinationLocked,
   onMapSelectModeChange,
   onDestinationSelect,
@@ -22,7 +23,6 @@ export const InputPanel = ({
   const { ticketData, setTicketData, clearTicketData } = useTicket();
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticketError, setTicketError] = useState('');
-  const [isSelectingOnMap, setIsSelectingOnMap] = useState(false);
 
   const [formData, setFormData] = useState<FormData>({
     to: initialData?.to || '',
@@ -91,7 +91,6 @@ export const InputPanel = ({
 
   const handleSearch = () => {
     onSearch(formData);
-    setIsSelectingOnMap(false);
     onMapSelectModeChange?.(false);
   };
 
@@ -116,7 +115,6 @@ export const InputPanel = ({
     clearTicketData();
     setTicketNumber('');
     setTicketError('');
-    setIsSelectingOnMap(false);
     onMapSelectModeChange?.(false);
   };
 
@@ -220,7 +218,6 @@ export const InputPanel = ({
 
   const handleMapSelectClick = () => {
     const newState = !isSelectingOnMap;
-    setIsSelectingOnMap(newState);
     onMapSelectModeChange?.(newState);
     
     if (newState) {
