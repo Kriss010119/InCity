@@ -262,11 +262,6 @@ export const DestinationInput = ({
     );
   };
 
-  const formatAddress = (displayName: string) => {
-    const parts = displayName.split(', ');
-    return parts.length > 3 ? `${parts[0]}, ${parts[1]}, ${parts[2]}...` : displayName;
-  };
-
   const suggestionsContent = suggestions.length > 0 && (
     <div
       ref={suggestionsRef}
@@ -285,7 +280,7 @@ export const DestinationInput = ({
         >
           <MapPin size={14} className={styles.suggestionIcon} />
           <div className={styles.suggestionText}>
-            {highlightMatch(formatAddress(suggestion.display_name), query)}
+            {highlightMatch(suggestion.display_name, query)}
             {suggestion.type && (
               <span className={styles.suggestionType}>
                 {suggestion.type === 'city' ? 'Город' :
@@ -370,7 +365,7 @@ export const DestinationInput = ({
                   >
                     <MapPin size={14} className={styles.suggestionIcon} />
                     <div className={styles.suggestionText}>
-                      {highlightMatch(formatAddress(suggestion.display_name), query)}
+                      {highlightMatch(suggestion.display_name, query)}
                       {suggestion.type && (
                         <span className={styles.suggestionType}>
                           {suggestion.type === 'city' ? 'Город' :
