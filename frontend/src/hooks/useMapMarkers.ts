@@ -36,16 +36,32 @@ export const useMapMarkers = ({
   }, [routeResponse]);
 
   const hotelMarker = useMemo(() => {
-    if (!isHotelTicket || !destinationLat || !destinationLng || !destinationName) return null;
+    if (!isHotelTicket || !destinationLat || !destinationLng || !destinationName) {
+      return null;
+    }
     return createHotelMarker(destinationLat, destinationLng, destinationName);
   }, [isHotelTicket, destinationLat, destinationLng, destinationName]);
 
+  const destinationMarker = useMemo(() => {
+    if (destinationLat && destinationLng && destinationName) {
+      return createSelectedMarker(destinationLat, destinationLng, destinationName);
+    }
+    return null;
+  }, [destinationLat, destinationLng, destinationName]);
+
   const markers = useMemo(() => {
     const allMarkers: MapMarker[] = [...routeMarkers];
-    if (hotelMarker) allMarkers.push(hotelMarker);
-    if (selectedMarker) allMarkers.push(selectedMarker);
+    if (hotelMarker) {
+      allMarkers.push(hotelMarker);
+    }
+    if (selectedMarker) {
+      allMarkers.push(selectedMarker);
+    }
+    if (destinationMarker) {
+      allMarkers.push(destinationMarker);
+    }
     return allMarkers;
-  }, [routeMarkers, hotelMarker, selectedMarker]);
+  }, [routeMarkers, hotelMarker, selectedMarker, destinationMarker]);
 
   const addSelectedMarker = useCallback(async (lat: number, lng: number, address: string) => {
     const newMarker = createSelectedMarker(lat, lng, address);

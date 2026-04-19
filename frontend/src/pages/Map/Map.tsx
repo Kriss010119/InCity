@@ -253,6 +253,7 @@ export const Map = () => {
             isDestinationLocked={isDestinationLocked}
             setIsDestinationLocked={setIsDestinationLocked}
             onMapSelectModeChange={handleMapSelectModeChange}
+            onDestinationSelect={handleDestinationSelect}
           />
         </div>
         

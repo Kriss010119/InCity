@@ -21,7 +21,9 @@ export type InputPanelProps = {
   initialData?: FormData | null;
   isDestinationLocked?: boolean;
   setIsDestinationLocked?: (locked: boolean) => void;
-}
+  onMapSelectModeChange?: (isSelecting: boolean) => void;
+  onDestinationSelect?: (lat: number, lng: number, address?: string) => void;
+};
 
 export type TransportOption = {
   id: string;

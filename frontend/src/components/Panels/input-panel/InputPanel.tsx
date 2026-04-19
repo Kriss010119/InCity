@@ -16,8 +16,9 @@ export const InputPanel = ({
   initialData,
   isDestinationLocked = false,
   setIsDestinationLocked,
-  onMapSelectModeChange
-}: InputPanelProps & { onMapSelectModeChange?: (isSelecting: boolean) => void }) => {
+  onMapSelectModeChange,
+  onDestinationSelect,
+}: InputPanelProps) => {
   const { ticketData, setTicketData, clearTicketData } = useTicket();
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticketError, setTicketError] = useState('');
@@ -76,6 +77,9 @@ export const InputPanel = ({
       return nextFormData;
     });
     onFormChange();
+    if (onDestinationSelect) {
+      onDestinationSelect(lat, lng, address);
+    }
   };
 
   const handleTransportToggle = (transportId: string) => {
