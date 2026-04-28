@@ -28,7 +28,7 @@ namespace DomainLib.Attractions
                 }
                 else
                 {
-                    interestRateUnnormilized += 8 * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                    interestRateUnnormilized += 18 * attraction.EstimatedVisitMinutes;
                 }
             }
             EstimatedTime = (int)(time / Math.Sqrt(attractions.Length));

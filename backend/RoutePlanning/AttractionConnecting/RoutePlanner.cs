@@ -42,8 +42,7 @@ namespace RoutePlanning.AttractionConnecting
 
         public Pair<Cluster[], Section[]> Execute(double rootLat, double rootLon, TransportFilter filter, int time)
         {
-            Cluster[] selected = AT.SelectClusters(rootLat, rootLon, time);
-            List<Cluster> visitPoints = new List<Cluster>(selected);
+            List<Cluster> visitPoints = new List<Cluster>(AT.SelectClusters(rootLat, rootLon, time));
             Section[] sections = BuildRoute(rootLat, rootLon, rootLat, rootLon, filter, visitPoints, time);
             return new Pair<Cluster[], Section[]>([.. visitPoints], sections);
         }
@@ -198,6 +197,157 @@ namespace RoutePlanning.AttractionConnecting
 
             return ans;
         }
+
+        //private Section[] BuildRoute(double rootLat, double rootLon, double endLat, double endLon, TransportFilter filter, ref List<Cluster> visitPoints, int startIndex, int time)
+        //{
+        //    if (visitPoints.Count == 0)
+        //    {
+        //        return [];
+        //    }
+
+        //    Section[] ans = new Section[visitPoints.Count + 1];
+
+        //    for (int i = startIndex; i < visitPoints.Count + 1; i++)
+        //    {
+        //        double lat1, lon1;
+        //        double lat2, lon2;
+
+        //        if (i == 0)
+        //        {
+        //            lat1 = rootLat;
+        //            lon1 = rootLon;
+        //            IAttraction target = GetMainAttraction(visitPoints[i]);
+        //            lat2 = target.Latitude;
+        //            lon2 = target.Longitude;
+        //        }
+        //        else if (i == visitPoints.Count)
+        //        {
+        //            IAttraction start = GetMainAttraction(visitPoints[i - 1]);
+        //            lat1 = start.Latitude;
+        //            lon1 = start.Longitude;
+
+        //            lat2 = endLat;
+        //            lon2 = endLon;
+        //        }
+        //        else
+        //        {
+        //            IAttraction start = GetMainAttraction(visitPoints[i - 1]);
+        //            IAttraction target = GetMainAttraction(visitPoints[i]);
+
+        //            lat1 = start.Latitude;
+        //            lon1 = start.Longitude;
+        //            lat2 = target.Latitude;
+        //            lon2 = target.Longitude;
+        //        }
+
+        //        double dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
+
+        //        if (dist <= 600)
+        //        {
+        //            ans[i] = new Section([], [], (int)(dist / 66), 0);
+        //            continue;
+        //        }
+
+        //        if (TryToFindRouteBetweenPoints(lat1, lon1, lat2, lon2, dist, filter, out Section sec))
+        //        {
+        //            ans[i] = sec;
+        //            continue;
+        //        }
+
+        //        // Работа с неподошедшими кластерами.
+        //        if (i == visitPoints.Count)
+        //        {
+        //            // Последний участок — пытаемся заменить последний кластер
+        //            Cluster[] replacements = AT.GetReplacements([.. visitPoints], i - 1, rootLat, rootLon, time);
+        //            bool found = false;
+
+        //            foreach (Cluster replacement in replacements)
+        //            {
+        //                IAttraction repMain = GetMainAttraction(replacement);
+
+        //                if (TryToFindRouteBetweenPoints(repMain.Latitude, repMain.Longitude, endLat, endLon, dist, filter, out Section secToEnd))
+        //                {
+        //                    if (i - 1 == 0)
+        //                    {
+        //                        lat1 = rootLat;
+        //                        lon1 = rootLon;
+        //                    }
+        //                    else
+        //                    {
+        //                        IAttraction prev = GetMainAttraction(visitPoints[i - 2]);
+        //                        lat1 = prev.Latitude;
+        //                        lon1 = prev.Longitude;
+        //                    }
+
+        //                    if (TryToFindRouteBetweenPoints(lat1, lon1, repMain.Latitude, repMain.Longitude, dist, filter, out Section secToRep))
+        //                    {
+        //                        ans[i - 1] = secToRep;
+        //                        ans[i] = secToEnd;
+        //                        visitPoints[i - 1] = replacement;
+        //                        found = true;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+
+        //            if (found)
+        //            {
+        //                continue;
+        //            }
+
+        //            // Замена не удалась — удаляем последний кластер и перестраиваем
+        //            visitPoints.RemoveAt(visitPoints.Count - 1);
+
+        //            if (visitPoints.Count == 0)
+        //            {
+        //                return [];
+        //            }
+
+        //            return BuildRoute(rootLat, rootLon, endLat, endLon, filter, visitPoints, time);
+        //        }
+        //        else
+        //        {
+        //            // Промежуточный участок — пытаемся заменить целевой кластер
+        //            Cluster[] replacements = AT.GetReplacements([.. visitPoints], i, rootLat, rootLon, time);
+        //            bool found = false;
+
+        //            foreach (Cluster replacement in replacements)
+        //            {
+        //                IAttraction target = GetMainAttraction(replacement);
+        //                lat2 = target.Latitude;
+        //                lon2 = target.Longitude;
+
+        //                if (TryToFindRouteBetweenPoints(lat1, lon1, lat2, lon2, dist, filter, out Section sect))
+        //                {
+        //                    ans[i] = sect;
+        //                    visitPoints[i] = replacement;
+        //                    found = true;
+        //                    break;
+        //                }
+        //            }
+
+        //            if (found)
+        //            {
+        //                continue;
+        //            }
+
+        //            // Замена не удалась — удаляем этот кластер и перестраиваем оставшуюся часть
+        //            visitPoints.RemoveAt(i);
+
+        //            if (i == 0)
+        //            {
+        //                return BuildRoute(rootLat, rootLon, endLat, endLon, filter, visitPoints, time);
+        //            }
+        //            else
+        //            {
+        //                IAttraction atr = GetMainAttraction(visitPoints[i - 1]);
+        //                return Merge(ans[0..i], BuildRoute(atr.Latitude, atr.Longitude, endLat, endLon, filter, visitPoints[i..], time));
+        //            }
+        //        }
+        //    }
+
+        //    return ans;
+        //}
 
         /// <summary>
         /// Пытается найти маршрут между двумя точками, пробуя методы в порядке приоритета:

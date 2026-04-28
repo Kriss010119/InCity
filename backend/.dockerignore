@@ -10,7 +10,12 @@
 
 # SQL seed file is large, not needed in backend container
 sql/
-db/
+
+db/*
+!db/load-seed.sh
+!db/init/
+db/init/*
+!db/init/02_seed.sql
 
 # Git
 .git/

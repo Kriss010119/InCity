@@ -85,7 +85,7 @@ namespace CityDataCollector.Collectors
         private readonly string _osmRouteTag;
         private readonly string _osmStopTags;
         private readonly string _typeName;
-        private readonly int _batchSize = 30;
+        private readonly int _batchSize = 40;
 
         public SurfaceTransportCollector(OverpassClient client, SurfaceTransportType type)
         {

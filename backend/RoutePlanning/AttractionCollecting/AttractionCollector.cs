@@ -12,8 +12,8 @@ namespace RoutePlanning.AttractionCollecting
         private IAttraction[] _attractions;
         private List<Cluster> _clusters;
 
-        private const double MinTimeFactor = 0.60;
-        private const double MaxTimeFactor = 0.80;
+        private const double MinTimeFactor = 0.75;
+        private const double MaxTimeFactor = 0.95;
         private const int LongRouteDurationThreshold = 300;
         private const double DistanceNormalizationMeters = 3000.0;
         private const int ReplacementCandidatesCount = 5;
@@ -39,7 +39,7 @@ namespace RoutePlanning.AttractionCollecting
 
             int minTime = (int)(time * MinTimeFactor);
             int maxTime = (int)(time * MaxTimeFactor);
-            int requiredGastro = time >= LongRouteDurationThreshold ? 2 : 1;
+            int requiredGastro = time > LongRouteDurationThreshold ? 2 : 1;
 
             List<Cluster> selected = SelectByRating(_clusters, latitude, longitude, minTime, maxTime, requiredGastro);
 
@@ -61,7 +61,7 @@ namespace RoutePlanning.AttractionCollecting
             }
 
             Cluster targetCluster = route[targetIndex];
-            int requiredGastro = time >= LongRouteDurationThreshold ? 2 : 1;
+            int requiredGastro = time > LongRouteDurationThreshold ? 2 : 1;
 
             bool targetIsGastro = IsGastronomyCluster(targetCluster);
             int gastroInRoute = CountGastronomyClusters(route);

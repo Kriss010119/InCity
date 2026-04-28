@@ -52,7 +52,7 @@ namespace MidLayer.KudaGo
             { EventCategory.Exhibition, "exhibition" },
             { EventCategory.Concert, "concert" },
             { EventCategory.Festival, "festival" },
-            { EventCategory.Fair, "yarmarki" },
+            { EventCategory.Fair, "yarmarki-razvlecheniya-yarmarki" },
             { EventCategory.BusinessEvent, "business-events" },
             { EventCategory.ChildrenEvent, "kids" },
             { EventCategory.CharityEvent, "social-activity" },
@@ -124,7 +124,6 @@ namespace MidLayer.KudaGo
             long actualSince = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             string categoriesParam = string.Join(",", kudaGoCategories);
 
-            // expand=place раскрывает place в полный объект с coords {lat, lon}
             string url = $"{BaseUrl}/events/?location={slug}" +
                          $"&actual_since={actualSince}" +
                          $"&categories={categoriesParam}" +
@@ -140,7 +139,6 @@ namespace MidLayer.KudaGo
             }
             catch (Exception)
             {
-                // KudaGo недоступен — продолжаем без событий
                 return new List<Event>();
             }
         }
@@ -234,7 +232,7 @@ namespace MidLayer.KudaGo
             }
             catch
             {
-                // Ошибка парсинга — возвращаем что удалось
+                // Ошибка парсинга - возвращаем что удалось
             }
 
             return events;

@@ -98,28 +98,26 @@ namespace MidLayer.Parsers
 
             if (subcategories.Count == 0)
             {
-                categories.AddRange(FrontendKeyMap.SubcategoryMap.Values);
+                subcategories.AddRange(FrontendKeyMap.SubcategoryMap.Values);
             }
 
-            File.WriteAllText("C:\\Users\\georg\\debug.txt", $"{categories.Count}, {subcategories.Count}");
             return new AttractionFilter([.. categories], [.. subcategories]);
         }
 
         public static string[] ParseEventCategories(string eventsCsv)
         {
-            if (string.IsNullOrWhiteSpace(eventsCsv))
-            {
-                return [];
-            }
-
             List<string> result = new List<string>();
-            string[] keys = eventsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
-            foreach (string key in keys)
+            if (!string.IsNullOrWhiteSpace(eventsCsv))
             {
-                if (FrontendKeyMap.EventCategoryMap.TryGetValue(key, out string? category))
+                string[] keys = eventsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+                foreach (string key in keys)
                 {
-                    result.Add(category);
+                    if (FrontendKeyMap.EventCategoryMap.TryGetValue(key, out string? category))
+                    {
+                        result.Add(category);
+                    }
                 }
             }
 

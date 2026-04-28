@@ -124,9 +124,9 @@ namespace TopLayer.Services
                 using var client = new KudaGoClient();
                 return await client.FetchEventsAsync(cityName, eventCategories);
             }
-            catch
+            catch (Exception ex)
             {
-                // KudaGo недоступен Ч маршрут строитс€ без событий
+                Console.WriteLine(ex.Message);
                 return new List<Event>();
             }
         }
