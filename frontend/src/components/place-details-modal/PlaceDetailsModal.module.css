@@ -110,7 +110,7 @@
 }
 
 .title {
-  font-size: var(--font-size-9xl);
+  font-size: var(--font-size-7xl);
   font-weight: var(--font-weight-bold);
   color: var(--text-main);
   margin: 0 0 var(--spacing-md) 0;
@@ -380,6 +380,10 @@
     font-size: var(--font-size-xxl);
   }
 
+  span {
+    font-size: var(--font-size-lg);
+  }
+
   .category, 
   .visitTime, 
   .description p, 
@@ -390,5 +394,9 @@
   .readMore, 
   .error {
     font-size: var(--font-size-base);
+  }
+
+  .category {
+      max-width: calc(100% - 70px);
   }
 }

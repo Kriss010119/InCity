@@ -1,15 +1,26 @@
-import { TicketInput } from '../ticket-input/TicketInput';
 import styles from './Landing.module.css';
-import { useRef, useState } from 'react';
-import { useTicket } from '../../context/TicketContext';
+import { useRef } from 'react';
 import { TransportIcon } from '../transport-icon/TransportIcon';
 import { useLocale } from '../../hooks/useLocale';
 
 export const Landing = () => {
     const borderFrameRef = useRef<HTMLDivElement>(null);
-    const { ticketData } = useTicket();
-    const [, setIsTicketApplied] = useState(!!ticketData);
     const { t } = useLocale();
+
+    const handleScrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const formElement = document.getElementById('form');
+        if (formElement) {
+            const offset = 70; 
+            const elementPosition = formElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
     
     return (
         <section className={styles.landing}>
@@ -33,13 +44,8 @@ export const Landing = () => {
                     <p className={styles["subtitle"]}>
                         {t('landing.subtitle')}
                     </p>
-                </div>
-                
-                <div className={styles["ticket-section"]}>
-                    <TicketInput 
-                        onSuccess={() => setIsTicketApplied(true)}
-                        autoFillForm={true}
-                    />
+
+                    <a href='#form' onClick={handleScrollToForm}>Построить маршрут</a>
                 </div>
             </div>
         </section>

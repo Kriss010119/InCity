@@ -10,15 +10,68 @@ import type { FormData } from '../../components/Panels/input-panel/helpers/types
 import type { RouteResponse, VisitPoint } from '../../types/types';
 import styles from './Map.module.css';
 
+import { ALL_FILTER_OPTIONS } from '../../components/Panels/input-panel/helpers/filterConstants';
+
+const STORAGE_KEYS = {
+  ROUTE_DATA: 'map_route_data',
+  ROUTE_RESPONSE: 'map_route_response',
+  IS_DESTINATION_LOCKED: 'map_is_destination_locked',
+  IS_INFO_PANEL_COLLAPSED: 'map_is_info_panel_collapsed',
+  LAST_ROUTE_DATA: 'map_last_route_data',
+};
+
+
+const saveToStorage = <T,>(key: string, data: T): void => {
+  try {
+    localStorage.setItem(key, JSON.stringify(data));
+  } catch (error) {
+    console.error('Error saving to localStorage:', error);
+  }
+};
+
+const loadFromStorage = <T,>(key: string): T | null => {
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved) {
+      return JSON.parse(saved);
+    }
+  } catch (error) {
+    console.error('Error loading from localStorage:', error);
+  }
+  return null;
+};
+
+const expandCategoriesToSubOptions = (categoryIds: string[]): string[] => {
+  if (!categoryIds.length) return [];
+  return ALL_FILTER_OPTIONS
+    .filter(opt => categoryIds.includes(opt.category!))
+    .map(opt => opt.id);
+};
+
 export const Map = () => {
   const [showNotification, setShowNotification] = useState(false);
-  const [routeData, setRouteData] = useState<FormData | null>(null);
-  const [lastRouteData, setLastRouteData] = useState<FormData | null>(null);
-  const [isDestinationLocked, setIsDestinationLocked] = useState(false);
-  const [routeResponse, setRouteResponse] = useState<RouteResponse | null>(null);
+  const [routeData, setRouteData] = useState<FormData | null>(() => {
+    const saved = loadFromStorage<FormData>(STORAGE_KEYS.ROUTE_DATA);
+    return saved || null;
+  });
+  const [lastRouteData, setLastRouteData] = useState<FormData | null>(() => {
+    const saved = loadFromStorage<FormData>(STORAGE_KEYS.LAST_ROUTE_DATA);
+    return saved || null;
+  });
+  const [isDestinationLocked, setIsDestinationLocked] = useState(() => {
+    const saved = loadFromStorage<boolean>(STORAGE_KEYS.IS_DESTINATION_LOCKED);
+    return saved || false;
+  });
+  const [routeResponse, setRouteResponse] = useState<RouteResponse | null>(() => {
+    const saved = loadFromStorage<RouteResponse>(STORAGE_KEYS.ROUTE_RESPONSE);
+    return saved || null;
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isInfoPanelCollapsed, setIsInfoPanelCollapsed] = useState(false);
+  const [isInfoPanelCollapsed, setIsInfoPanelCollapsed] = useState(() => {
+    const saved = loadFromStorage<boolean>(STORAGE_KEYS.IS_INFO_PANEL_COLLAPSED);
+    return saved || false;
+  });
   const [isSelectingOnMap, setIsSelectingOnMap] = useState(false);
   const [mobileActiveTab, setMobileActiveTab] = useState<MobileTab>('input');
   const [isMobile, setIsMobile] = useState(false);
@@ -27,10 +80,48 @@ export const Map = () => {
   const { ticketData, clearTicketData } = useTicket();
 
   useEffect(() => {
+    if (routeData) {
+      saveToStorage(STORAGE_KEYS.ROUTE_DATA, routeData);
+    } else {
+      localStorage.removeItem(STORAGE_KEYS.ROUTE_DATA);
+    }
+  }, [routeData]);
+
+  useEffect(() => {
+    if (lastRouteData) {
+      saveToStorage(STORAGE_KEYS.LAST_ROUTE_DATA, lastRouteData);
+    } else {
+      localStorage.removeItem(STORAGE_KEYS.LAST_ROUTE_DATA);
+    }
+  }, [lastRouteData]);
+
+  useEffect(() => {
+    saveToStorage(STORAGE_KEYS.IS_DESTINATION_LOCKED, isDestinationLocked);
+  }, [isDestinationLocked]);
+
+  useEffect(() => {
+    if (routeResponse) {
+      saveToStorage(STORAGE_KEYS.ROUTE_RESPONSE, routeResponse);
+    } else {
+      localStorage.removeItem(STORAGE_KEYS.ROUTE_RESPONSE);
+    }
+  }, [routeResponse]);
+
+  useEffect(() => {
+    saveToStorage(STORAGE_KEYS.IS_INFO_PANEL_COLLAPSED, isInfoPanelCollapsed);
+  }, [isInfoPanelCollapsed]);
+
+  const clearSavedData = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEYS.ROUTE_DATA);
+    localStorage.removeItem(STORAGE_KEYS.ROUTE_RESPONSE);
+    localStorage.removeItem(STORAGE_KEYS.IS_DESTINATION_LOCKED);
+    localStorage.removeItem(STORAGE_KEYS.LAST_ROUTE_DATA);
+  }, []);
+
+  useEffect(() => {
     const checkMobile = () => {
       const mobile = window.innerWidth <= 768;
       setIsMobile(mobile);
-      console.log('📱 Is mobile:', mobile);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -39,14 +130,9 @@ export const Map = () => {
 
   useEffect(() => {
     if (routeResponse && isMobile) {
-      console.log('🗺️ Route received, switching to map tab');
       setMobileActiveTab('map');
     }
   }, [routeResponse, isMobile]);
-
-  useEffect(() => {
-    console.log('📱 Mobile active tab changed to:', mobileActiveTab);
-  }, [mobileActiveTab]);
 
   const handleResetLock = () => {
     setRouteData(null);
@@ -57,6 +143,7 @@ export const Map = () => {
     setShowNotification(false);
     setIsSelectingOnMap(false);
     clearTicketData();
+    clearSavedData();
     if (isMobile) {
       setMobileActiveTab('input');
     }
@@ -91,6 +178,7 @@ export const Map = () => {
     setLastRouteData(updatedRouteData);
     setIsDestinationLocked(false);
     setIsSelectingOnMap(false);
+    handleMapSelectModeChange(false); 
     
     if (updatedRouteData.date) {
       await handleRouteUpdate(updatedRouteData);
@@ -136,6 +224,8 @@ export const Map = () => {
       } catch (err) {
         console.error('❌ Error building route:', err);
         setError(err instanceof Error ? err.message : 'Ошибка при построении маршрута');
+        // При ошибке очищаем сохраненный маршрут
+        localStorage.removeItem(STORAGE_KEYS.ROUTE_RESPONSE);
       } finally {
         setIsLoading(false);
       }
@@ -169,6 +259,31 @@ export const Map = () => {
           ? ticketDetails.details.hotelName
           : undefined,
         useTicket: true
+      };
+
+      setRouteData(initialFormData);
+      setLastRouteData(initialFormData);
+      setIsDestinationLocked(true);
+      
+      handleRouteUpdate(initialFormData);
+      
+      window.history.replaceState({}, document.title);
+    }
+
+    if (location.state?.customRoute && location.state?.autoFill) {
+      const { customRoute } = location.state;
+      
+      const initialFormData: FormData = {
+        to: customRoute.to,
+        date: customRoute.date,
+        transport: customRoute.transport,
+        attractions: customRoute.attractions,
+        events: customRoute.events || [],
+        duration: customRoute.duration,
+        destinationLat: customRoute.destinationLat,
+        destinationLng: customRoute.destinationLng,
+        destinationName: customRoute.destinationName,
+        useTicket: customRoute.useTicket
       };
 
       setRouteData(initialFormData);
@@ -214,29 +329,43 @@ export const Map = () => {
   };
 
   const handleMobileTabChange = (tab: MobileTab) => {
-    console.log('🔄 Mobile tab changing to:', tab);
     setMobileActiveTab(tab);
   };
 
   const getInputPanelClass = () => {
     if (!isMobile) return '';
-    console.log('📱 Getting input panel class, activeTab:', mobileActiveTab);
     return mobileActiveTab === 'input' ? styles.active : styles.hidden;
   };
 
   const getInfoPanelClass = () => {
     if (!isMobile) return '';
-    console.log('📱 Getting info panel class, activeTab:', mobileActiveTab);
     return mobileActiveTab === 'info' ? styles.active : styles.hidden;
   };
 
   const showMapFullscreen = isMobile && mobileActiveTab === 'map';
 
-   useEffect(() => {
+  useEffect(() => {
     if (isMobile) {
       setMobileActiveTab('input');
     }
   }, [isMobile]);
+
+  
+
+  useEffect(() => {
+    const builderData = location.state?.builderFormData as FormData | undefined;
+    if (builderData) {
+      const expandedAttractions = expandCategoriesToSubOptions(builderData.attractions || []);
+      const finalData = {
+        ...builderData,
+        attractions: expandedAttractions,
+      };
+      setRouteData(finalData);
+      setLastRouteData(finalData);
+      handleRouteUpdate(finalData);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state, handleRouteUpdate]);
 
   return (
     <>
@@ -251,8 +380,10 @@ export const Map = () => {
             onReset={handleResetLock}
             initialData={routeData}
             isDestinationLocked={isDestinationLocked}
+            isSelectingOnMap={isSelectingOnMap}
             setIsDestinationLocked={setIsDestinationLocked}
             onMapSelectModeChange={handleMapSelectModeChange}
+            onDestinationSelect={handleDestinationSelect}
           />
         </div>
         

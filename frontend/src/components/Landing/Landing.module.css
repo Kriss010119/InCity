@@ -85,13 +85,24 @@
 }
 
 .subtitle {
-  margin-top: var(--subtitle-margin-top);
+  margin: var(--subtitle-margin-top);
   font-size: var(--subtitle-size);
   color: var(--text-secondary);
   max-width: var(--subtitle-max-width);
   margin-left: auto;
   margin-right: auto;
   line-height: var(--subtitle-line-height);
+}
+
+.landing-container a {
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: var(--text-black);
+  background-color: var(--tbank-yellow);
+}
+
+.landing-container a:hover {
+  background-color: var(--tbank-yellow-dark);
 }
 
 @media (max-width: 768px) {

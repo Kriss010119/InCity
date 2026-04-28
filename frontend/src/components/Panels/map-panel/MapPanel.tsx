@@ -8,6 +8,7 @@ import { MapHint } from './components/MapHint';
 import { LoadingState } from './components/LoadingState';
 import { CurvedRouteSegments } from './components/CurvedRouteSegments';
 import { TransportStops } from './components/TransportStops';
+import { MapController } from './components/MapController';
 import {
   TILE_LAYER_URL,
   TILE_LAYER_ATTRIBUTION,
@@ -20,6 +21,8 @@ import styles from './MapPanel.module.css';
 import type { VisitPoint } from '../../../types/types';
 import { useReverseGeocode } from '../../../hooks';
 import { useMapMarkers } from '../../../hooks/useMapMarkers';
+import { RouteArrows } from './components/RouteArrows';
+import { ZoomHandler } from './components/ZoomHandler';
 
 export const MapPanel = ({
   destinationLat,
@@ -36,15 +39,35 @@ export const MapPanel = ({
   const [mapCenter, setMapCenter] = useState<[number, number]>(DEFAULT_CENTER);
   const [mapZoom, setMapZoom] = useState(DEFAULT_ZOOM);
   const [mapKey, setMapKey] = useState(0);
-
+  const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
+  const [shouldFlyTo, setShouldFlyTo] = useState(false);
+  const [targetCenter, setTargetCenter] = useState<[number, number] | null>(null);
+  const [targetZoom, setTargetZoom] = useState<number | null>(null);
   const { reverseGeocode } = useReverseGeocode();
 
-  const { markers, addSelectedMarker } = useMapMarkers({
+  const handleClusterClick = useCallback((lat: number, lng: number, _groupIndex: number, groupName: string) => {
+    const ZOOM_TO_SHOW_DETAILS = 16;
+
+    setTargetCenter([lat, lng]);
+    setTargetZoom(ZOOM_TO_SHOW_DETAILS);
+    setShouldFlyTo(true);
+    setMapCenter([lat, lng]);
+    setMapZoom(ZOOM_TO_SHOW_DETAILS);
+    
+    setTimeout(() => {
+      setShouldFlyTo(false);
+    }, 1000);
+  }, []);
+
+  const { markers, clearSelectedMarker, handleClusterClick: clusterClickHandler } = useMapMarkers({
     routeResponse,
     isHotelTicket,
     destinationLat,
     destinationLng,
     destinationName,
+    currentZoom,
+    clusterThreshold: 15,
+    onClusterClick: handleClusterClick,
   });
 
   const visitPoints = useMemo(() => routeResponse?.visitPoints || [], [routeResponse]);
@@ -53,6 +76,12 @@ export const MapPanel = ({
     () => buildFullRouteSegments(routeResponse, visitPoints, destinationLat, destinationLng),
     [routeResponse, visitPoints, destinationLat, destinationLng]
   );
+
+  useEffect(() => {
+    if (destinationLat && destinationLng) {
+      clearSelectedMarker();
+    }
+  }, [destinationLat, destinationLng, clearSelectedMarker]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -64,18 +93,30 @@ export const MapPanel = ({
   const handleMapClick = useCallback(
     async (lat: number, lng: number) => {
       const address = await reverseGeocode(lat, lng);
-      await addSelectedMarker(lat, lng, address);
-      if (onDestinationSelect) onDestinationSelect(lat, lng, address);
+      if (onDestinationSelect) {
+        onDestinationSelect(lat, lng, address);
+      }
+      setTargetCenter([lat, lng]);
+      setTargetZoom(16);
+      setShouldFlyTo(true);
       setMapCenter([lat, lng]);
       setMapZoom(16);
+      setTimeout(() => {
+        setShouldFlyTo(false);
+      }, 2000);
     },
-    [reverseGeocode, addSelectedMarker, onDestinationSelect]
+    [reverseGeocode, onDestinationSelect]
   );
 
   const handleMarkerClick = useCallback((marker: MapMarker) => {
-    const place = createPlaceFromMarker(marker);
-    setSelectedPlace(place);
-  }, []);
+    const clusterData = (marker as any).clusterData;
+    if (clusterData?.isCluster) {
+      clusterClickHandler(marker);
+    } else {
+      const place = createPlaceFromMarker(marker);
+      setSelectedPlace(place);
+    }
+  }, [clusterClickHandler]);
 
   if (isLoading) {
     return <LoadingState />;
@@ -85,10 +126,17 @@ export const MapPanel = ({
     <>
       <div className={styles.wrapper}>
         <MapContainer key={mapKey} center={mapCenter} zoom={mapZoom}>
+          <MapController 
+            center={targetCenter || mapCenter} 
+            zoom={targetZoom || mapZoom} 
+            shouldUpdate={shouldFlyTo}
+          />
+          <ZoomHandler onZoomChange={setCurrentZoom} />
           <MapResizeHandler isInfoPanelCollapsed={isInfoPanelCollapsed} />
           <MapClickHandler onMapClick={handleMapClick} isSelectingMode={isSelectingMode} />
           <TileLayer attribution={TILE_LAYER_ATTRIBUTION} url={TILE_LAYER_URL} />
           <CurvedRouteSegments segments={routeSegments} />
+          <RouteArrows segments={routeSegments} />
           <TransportStops routeResponse={routeResponse} />
           <MapMarkers markers={markers} onMarkerClick={handleMarkerClick} />
         </MapContainer>
