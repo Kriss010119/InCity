@@ -398,7 +398,6 @@ export const DestinationInput = ({
           </button>
         )}
       </div>
-      {isLocked && <div className={styles.inputHint} id={`${id}-hint`}>Заблокировано по билету</div>}
     </div>
   );
 };

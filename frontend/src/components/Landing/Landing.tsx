@@ -1,9 +1,8 @@
-import { TicketInput } from '../ticket-input/TicketInput';
 import styles from './Landing.module.css';
 import { useRef, useState } from 'react';
-import { useTicket } from '../../context/TicketContext';
 import { TransportIcon } from '../transport-icon/TransportIcon';
 import { useLocale } from '../../hooks/useLocale';
+import { useTicket } from '../../context/TicketContext';
 
 export const Landing = () => {
     const borderFrameRef = useRef<HTMLDivElement>(null);
@@ -33,13 +32,6 @@ export const Landing = () => {
                     <p className={styles["subtitle"]}>
                         {t('landing.subtitle')}
                     </p>
-                </div>
-                
-                <div className={styles["ticket-section"]}>
-                    <TicketInput 
-                        onSuccess={() => setIsTicketApplied(true)}
-                        autoFillForm={true}
-                    />
                 </div>
             </div>
         </section>
