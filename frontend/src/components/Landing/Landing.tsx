@@ -1,14 +1,26 @@
 import styles from './Landing.module.css';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { TransportIcon } from '../transport-icon/TransportIcon';
 import { useLocale } from '../../hooks/useLocale';
-import { useTicket } from '../../context/TicketContext';
 
 export const Landing = () => {
     const borderFrameRef = useRef<HTMLDivElement>(null);
-    const { ticketData } = useTicket();
-    const [, setIsTicketApplied] = useState(!!ticketData);
     const { t } = useLocale();
+
+    const handleScrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const formElement = document.getElementById('form');
+        if (formElement) {
+            const offset = 70; 
+            const elementPosition = formElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
     
     return (
         <section className={styles.landing}>
@@ -32,6 +44,8 @@ export const Landing = () => {
                     <p className={styles["subtitle"]}>
                         {t('landing.subtitle')}
                     </p>
+
+                    <a href='#form' onClick={handleScrollToForm}>Построить маршрут</a>
                 </div>
             </div>
         </section>

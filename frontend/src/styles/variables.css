@@ -3,6 +3,8 @@
   --tbank-yellow-light: rgba(255, 221, 45, 0.1);
   --tbank-yellow-dark: #ffbb00;
   --tbank-red: #e30611;
+
+  --error-color: #ff3a3a;
   
   --yellow-main: var(--tbank-yellow);
   --yellow-soft: var(--tbank-yellow-light);
@@ -14,8 +16,6 @@
   --bg-header-dark: rgba(18, 18, 18, 0.98);
   --bg-overlay: rgba(0, 0, 0, 0.5);
   --bg-overlay-dark: rgba(0, 0, 0, 0.75);
-
-  
   
   --text-black: #000;
   --text-main: #1f1f1f;
@@ -214,8 +214,8 @@
   --border-frame-glow-radius: 22px;
   --border-frame-glow-border-width: 1px;
   
-  --main-title-size: 52px;
-  --main-title-size-tablet: 36px;
+  --main-title-size: 42px;
+  --main-title-size-tablet: 34px;
   --main-title-size-mobile: 28px;
   --main-title-weight: 600;
   --main-title-line-height: 1.2;

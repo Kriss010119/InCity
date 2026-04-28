@@ -10,6 +10,8 @@ import type { FormData } from '../../components/Panels/input-panel/helpers/types
 import type { RouteResponse, VisitPoint } from '../../types/types';
 import styles from './Map.module.css';
 
+import { ALL_FILTER_OPTIONS } from '../../components/Panels/input-panel/helpers/filterConstants';
+
 const STORAGE_KEYS = {
   ROUTE_DATA: 'map_route_data',
   ROUTE_RESPONSE: 'map_route_response',
@@ -17,6 +19,7 @@ const STORAGE_KEYS = {
   IS_INFO_PANEL_COLLAPSED: 'map_is_info_panel_collapsed',
   LAST_ROUTE_DATA: 'map_last_route_data',
 };
+
 
 const saveToStorage = <T,>(key: string, data: T): void => {
   try {
@@ -36,6 +39,13 @@ const loadFromStorage = <T,>(key: string): T | null => {
     console.error('Error loading from localStorage:', error);
   }
   return null;
+};
+
+const expandCategoriesToSubOptions = (categoryIds: string[]): string[] => {
+  if (!categoryIds.length) return [];
+  return ALL_FILTER_OPTIONS
+    .filter(opt => categoryIds.includes(opt.category!))
+    .map(opt => opt.id);
 };
 
 export const Map = () => {
@@ -339,6 +349,23 @@ export const Map = () => {
       setMobileActiveTab('input');
     }
   }, [isMobile]);
+
+  
+
+  useEffect(() => {
+    const builderData = location.state?.builderFormData as FormData | undefined;
+    if (builderData) {
+      const expandedAttractions = expandCategoriesToSubOptions(builderData.attractions || []);
+      const finalData = {
+        ...builderData,
+        attractions: expandedAttractions,
+      };
+      setRouteData(finalData);
+      setLastRouteData(finalData);
+      handleRouteUpdate(finalData);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state, handleRouteUpdate]);
 
   return (
     <>

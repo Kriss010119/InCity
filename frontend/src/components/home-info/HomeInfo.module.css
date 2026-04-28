@@ -60,7 +60,7 @@
     grid-template-columns: 1fr;
     gap: calc(var(--info-section-gap) * var(--scale-mobile-gap));
     padding: calc(var(--info-section-padding) * var(--scale-mobile-padding));
-    margin: var(--spacing-xxxl) 0px;
+    margin: var(--spacing-xxxl) 0px calc(var(--spacing-xxxl)/2);
     box-sizing: border-box;
   }
 
