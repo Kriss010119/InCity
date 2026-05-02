@@ -1,12 +1,16 @@
 import { usePlaceDetails } from '../../../../../hooks/usePlaceDetails';
-import type { AttractionCardProps } from '../types';
+
 import styles from './AttractionCard.module.css';
 import { getCategoryColor } from '../../../../../utils/categoryUtils';
 import { useState } from 'react';
+import type { AttractionCardProps } from '../../../../../types';
+
+
 
 interface ExtendedAttractionCardProps extends AttractionCardProps {
   isMain?: boolean;
 }
+
 
 export const AttractionCard = ({ place, onClick, isMain = false }: ExtendedAttractionCardProps) => {
   const { details, isLoading } = usePlaceDetails(place);

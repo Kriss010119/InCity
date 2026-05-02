@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { CircleMarker, Popup } from 'react-leaflet';
-import type { RouteResponse } from '../../../../types/types';
+import type { RouteResponse } from '../../../../types';
 
 type TransportStopsProps = {
   routeResponse?: RouteResponse | null;

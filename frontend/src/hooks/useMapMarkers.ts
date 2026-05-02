@@ -1,6 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import type { MapMarker } from '../components/Panels/map-panel/types';
-import type { RouteResponse, VisitPoint } from '../types/types';
+import type { MapMarker, RouteResponse, VisitPoint } from '../types';
 import { createHotelMarker, createMarkerFromPoint, createSelectedMarker } from '../components/Panels/map-panel/utils';
 
 interface UseMapMarkersProps {

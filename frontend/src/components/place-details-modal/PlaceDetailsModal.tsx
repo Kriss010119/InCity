@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, startTransition } from 'react';
 import { usePlaceDetails } from '../../hooks/usePlaceDetails';
-import type { VisitPoint } from '../../types/types';
+import type { VisitPoint } from '../../types';
 import { 
   ModalOverlay, ModalContainer, ImageGallery,
   CategoryBadge, PlaceHeader, LoadingState,

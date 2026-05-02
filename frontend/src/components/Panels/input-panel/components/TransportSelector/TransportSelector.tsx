@@ -1,5 +1,5 @@
 import { Navigation } from 'lucide-react';
-import { TRANSPORT_OPTIONS } from '../../helpers/constants';
+import { TRANSPORT_OPTIONS } from '../../../../../constants/transportOptionConstants';
 import styles from './TransportSelector.module.css';
 
 type TransportSelectorProps = {

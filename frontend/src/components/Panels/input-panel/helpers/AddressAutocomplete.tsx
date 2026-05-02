@@ -1,52 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { MapPin, Loader, X } from 'lucide-react';
 import styles from '../InputPanel.module.css';
+import type { AddressAutocompleteProps, SelectedLocation, Suggestion } from '../../../../types';
 
-type Suggestion = {
-  display_name: string;
-  lat: number;
-  lon: number;
-  place_id: string;
-  type?: string;
-  importance?: number;
-  address?: {
-    city?: string;
-    town?: string;
-    village?: string;
-    street?: string;
-    house_number?: string;
-    country?: string;
-    postcode?: string;
-  };
-};
-
-type SelectedLocation = {
-  lat: number;
-  lng: number;
-  address: string;
-  placeId: string;
-  details?: {
-    city?: string;
-    street?: string;
-    house?: string;
-    postcode?: string;
-    country?: string;
-  };
-};
-
-type AddressAutocompleteProps = {
-  value: string;
-  onChange: (value: string) => void;
-  onSelect: (location: SelectedLocation) => void;
-  isLocked?: boolean;
-  placeholder?: string;
-};
-
-const suggestionsCache = new Map<string, Suggestion[]>();
 const CACHE_SIZE_LIMIT = 100;
 const CACHE_TTL = 1000 * 60 * 60;
-const cacheTimestamps = new Map<string, number>();
+const CHACHE_TIMESTAMPS = new Map<string, number>();
+const SUGGESTIONS_CHACHE = new Map<string, Suggestion[]>();
 
 export const AddressAutocomplete = ({ 
   value, 
@@ -69,15 +29,15 @@ export const AddressAutocomplete = ({
 
   const cleanCache = useCallback(() => {
     const now = Date.now();
-    for (const [key, timestamp] of cacheTimestamps.entries()) {
+    for (const [key, timestamp] of CHACHE_TIMESTAMPS.entries()) {
       if (now - timestamp > CACHE_TTL) {
-        suggestionsCache.delete(key);
-        cacheTimestamps.delete(key);
+        SUGGESTIONS_CHACHE.delete(key);
+        CHACHE_TIMESTAMPS.delete(key);
       }
     }
   }, []);
 
-  const parseAddressDetails = (suggestion: any): SelectedLocation['details'] => {
+  const parseAddressDetails = (suggestion: Suggestion): SelectedLocation['details'] => {
     const address = suggestion.address || {};
     const city = address.city || address.town || address.village;
     let houseNumber = address.house_number;
@@ -90,7 +50,7 @@ export const AddressAutocomplete = ({
 
     return {
       city: city,
-      street: address.street || address.road,
+      street: address.street || address.town || address.village || '',
       house: houseNumber,
       postcode: address.postcode,
       country: address.country
@@ -98,8 +58,8 @@ export const AddressAutocomplete = ({
   };
 
   const fetchSuggestions = useCallback(async (searchQuery: string): Promise<Suggestion[]> => {
-    if (suggestionsCache.has(searchQuery)) {
-      return suggestionsCache.get(searchQuery) || [];
+    if (SUGGESTIONS_CHACHE.has(searchQuery)) {
+      return SUGGESTIONS_CHACHE.get(searchQuery) || [];
     }
 
     if (abortControllerRef.current) {
@@ -145,17 +105,17 @@ export const AddressAutocomplete = ({
         );
 
       if (processed.length > 0) {
-        if (suggestionsCache.size >= CACHE_SIZE_LIMIT) {
-          const oldestKey = Array.from(cacheTimestamps.entries())
+        if (SUGGESTIONS_CHACHE.size >= CACHE_SIZE_LIMIT) {
+          const oldestKey = Array.from(CHACHE_TIMESTAMPS.entries())
             .sort(([, a], [, b]) => a - b)[0]?.[0];
           if (oldestKey) {
-            suggestionsCache.delete(oldestKey);
-            cacheTimestamps.delete(oldestKey);
+            SUGGESTIONS_CHACHE.delete(oldestKey);
+            CHACHE_TIMESTAMPS.delete(oldestKey);
           }
         }
         
-        suggestionsCache.set(searchQuery, processed);
-        cacheTimestamps.set(searchQuery, Date.now());
+        SUGGESTIONS_CHACHE.set(searchQuery, processed);
+        CHACHE_TIMESTAMPS.set(searchQuery, Date.now());
       }
       
       return processed;

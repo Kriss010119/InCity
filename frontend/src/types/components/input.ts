@@ -1,17 +1,15 @@
-import type { JSX } from "react";
-
 export type FormData = {
   to: string;
   date: string;
   transport: string[];
   attractions: string[];
   events: string[];
-  duration?: 'very-short' | 'short' | 'medium' | 'long';
+  duration?: 'very-short' | 'short' | 'medium' | 'long' | null;
   destinationLat?: number;
   destinationLng?: number;
   destinationName?: string;
   useTicket?: boolean;
-}
+};
 
 export type InputPanelProps = {
   onRouteUpdate: (data: FormData) => void;
@@ -29,10 +27,10 @@ export type InputPanelProps = {
 export type TransportOption = {
   id: string;
   name: string;
-  icon: JSX.Element;
-}
+  icon?: React.ReactNode;
+};
 
 export type CheckboxOption = {
   id: string;
   name: string;
-}
+};

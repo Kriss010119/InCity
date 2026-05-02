@@ -1,25 +1,24 @@
-import type { RouteResponse, VisitPoint } from "../../../../types/types";
+import type { RouteResponse, VisitPoint } from '../domain';
 
 export type TabType = 'route' | 'attractions';
 
-export interface InfoPanelProps {
-  routeData?: FormData | null;
+export type InfoPanelProps = {
   routeResponse?: RouteResponse | null;
   isLoading?: boolean;
   onAttractionClick?: (place: VisitPoint) => void;
   onCollapseChange?: (isCollapsed: boolean) => void;
-}
+};
 
-export interface AttractionCardProps {
+export type AttractionCardProps = {
   place: VisitPoint;
   onClick: (place: VisitPoint) => void;
-}
+};
 
-export interface RouteSectionProps {
+export type RouteSectionProps = {
   section: RouteResponse['sections'][0];
   index: number;
-}
+};
 
-export interface RouteGapProps {
+export type RouteGapProps = {
   gap: RouteResponse['sections'][0]['gaps'][0];
-}
+};

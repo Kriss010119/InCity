@@ -1,5 +1,5 @@
-import type { FormData } from '../components/Panels/input-panel/helpers/types';
-import type { TicketDetails } from '../types/types';
+import type { FormData } from '../types';
+import type { TicketDetails } from '../types';
 
 
 export const geocodeCity = async (city: string): Promise<{ lat: number; lng: number } | null> => {

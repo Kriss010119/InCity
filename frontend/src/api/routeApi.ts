@@ -1,7 +1,6 @@
 import axios from "axios";
-import { mapAttractionsToBackend } from "../components/Panels/input-panel/helpers/filterConstants";
-import type { FormData } from "../components/Panels/input-panel/helpers/types";
-import type { RouteResponse } from "../types/types";
+import { mapAttractionsToBackend } from "../constants/filterConstants.tsx";
+import type { FormData, RouteResponse } from '../types';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5001",

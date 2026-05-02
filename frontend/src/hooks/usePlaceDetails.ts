@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { usePlaceCache } from '../context/PlaceCacheContext';
-import type { VisitPoint } from '../types/types';
+import type { VisitPoint } from '../types';
 
 type PlaceDetails = {
   description?: string;

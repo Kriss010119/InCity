@@ -1,5 +1,5 @@
 import React, { createContext, useState, type ReactNode } from 'react';
-import { type RouteStateType } from '../types/types';
+import { type RouteStateType } from '../types';
 
 const initialState: RouteStateType = {
   from: null,

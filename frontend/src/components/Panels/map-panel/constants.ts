@@ -1,24 +1,20 @@
-import type { TransportType } from './types';
+import type { TransportType } from '../../../types';
+import { TRANSPORT_COLORS as BASE_TRANSPORT_COLORS } from '../../../constants/transportConstants';
+
+export const TRANSPORT_COLORS = BASE_TRANSPORT_COLORS;
 export const DEFAULT_CENTER: [number, number] = [55.7558, 37.6173];
 export const DEFAULT_ZOOM = 12;
 export const SELECTED_ZOOM = 16;
 export const HOTEL_ZOOM = 15;
 export const ROUTE_ZOOM = 13;
-export const TRANSPORT_COLORS: Record<TransportType, string> = {
-  walk: '#b8b8b8ff', 
-  bus: '#ff9f4a',  
-  tram: '#6fbf4c',   
-  trolleybus: '#bf5151ff', 
-  metro: '#8e44ad' 
-};
 
-export const getPolylineOptions = (type: TransportType) => ({
-  color: TRANSPORT_COLORS[type],
-  weight: 2,
-  opacity: 0.9,
+export const getPolylineOptions = (type: TransportType, isSelected = false) => ({
+  color: TRANSPORT_COLORS[type] || '#888',
+  weight: isSelected ? 6 : 2,
+  opacity: isSelected ? 1 : 0.5,
   lineCap: 'round' as const,
   lineJoin: 'round' as const,
-  dashArray: type !== 'walk' ? undefined : '8, 6', 
+  dashArray: type !== 'walk' ? undefined : '8, 6',
 });
 
 export const TILE_LAYER_URL = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';

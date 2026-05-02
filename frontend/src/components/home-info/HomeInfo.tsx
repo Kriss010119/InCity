@@ -1,8 +1,9 @@
 import { useLocale } from '../../hooks';
+import type { HomeInfoItem } from '../../types';
 import { CompactInputForm } from '../CompactInputForm/CompactInputForm';
 import styles from './HomeInfo.module.css';
 import { InfoCard } from './InfoCard';
-import type { HomeInfoItem } from './types';
+
 
 export const HomeInfo = () => {
   const { t } = useLocale();

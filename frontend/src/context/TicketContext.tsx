@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, type ReactNode } from 'react';
-import type { TicketData } from '../types/types';
+import type { TicketData } from '../types';
 
 type TicketContextType = {
   ticketData: TicketData | null;

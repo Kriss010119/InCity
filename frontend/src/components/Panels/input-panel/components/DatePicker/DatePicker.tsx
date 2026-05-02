@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Portal } from '../../../../portal/Portal';
-import { WEEKDAYS } from '../../helpers/constants';
 import styles from './DatePicker.module.css';
+import { WEEKDAYS } from '../../../../../constants/transportOptionConstants';
 
 type DatePickerProps = {
   value: string;

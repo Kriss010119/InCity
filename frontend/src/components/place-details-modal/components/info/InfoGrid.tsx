@@ -1,7 +1,7 @@
 import { MapPin, Phone, Calendar, DollarSign, Users } from 'lucide-react';
 import { useLocale } from '../../../../hooks/useLocale';
 import { InfoCard } from './InfoCard';
-import type { VisitPoint } from '../../../../types/types';
+import type { VisitPoint } from '../../../../types';
 import styles from '../../PlaceDetailsModal.module.css';
 import { extractTagValue, formatOpeningHours } from '../../../../utils/categoryUtils';
 

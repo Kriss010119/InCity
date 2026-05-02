@@ -1,6 +1,6 @@
 import { useLocale } from '../../../../../hooks';
 import { AttractionCard } from './AttractionCard';
-import type { VisitPointGroup, VisitPoint } from '../../../../../types/types';
+import type { VisitPointGroup, VisitPoint } from '../../../../../types';
 import styles from './AttractionCard.module.css';
 
 interface AttractionsTabProps {
