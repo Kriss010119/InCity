@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
+import type L from 'leaflet';
 
 type MapControllerProps = {
   center?: [number, number];
   zoom?: number;
   shouldUpdate: boolean;
+  targetBounds?: L.LatLngBoundsExpression | null;
 };
 
-export const MapController = ({ center, zoom, shouldUpdate }: MapControllerProps) => {
+export const MapController = ({ center, zoom, shouldUpdate, targetBounds }: MapControllerProps) => {
   const map = useMap();
 
   useEffect(() => {
@@ -18,6 +20,12 @@ export const MapController = ({ center, zoom, shouldUpdate }: MapControllerProps
       });
     }
   }, [map, center, zoom, shouldUpdate]);
+
+  useEffect(() => {
+    if (targetBounds) {
+      map.fitBounds(targetBounds, { padding: [50, 50], maxZoom: 16 });
+    }
+  }, [map, targetBounds]);
 
   return null;
 };

@@ -6,11 +6,11 @@ import { buildRouteFromOrder, buildRouteFromPoint } from '../../api/routeApi';
 import { MobileTabBar, type MobileTab } from '../../components/MobileTabBar/MobileTabBar';
 
 import { useTicket } from '../../context/TicketContext';
-import type { FormData } from '../../components/Panels/input-panel/helpers/types';
-import type { RouteResponse, VisitPoint } from '../../types/types';
+import type { RouteResponse, VisitPoint, WalkingSegment, FormData, TabType } from '../../types';
 import styles from './Map.module.css';
 
-import { ALL_FILTER_OPTIONS } from '../../components/Panels/input-panel/helpers/filterConstants';
+import { ALL_FILTER_OPTIONS } from '../../constants/filterConstants.tsx';
+import { extractWalkingSegmentsForInfoPanel } from '../../components/Panels/map-panel/utils';
 
 const STORAGE_KEYS = {
   ROUTE_DATA: 'map_route_data',
@@ -19,7 +19,6 @@ const STORAGE_KEYS = {
   IS_INFO_PANEL_COLLAPSED: 'map_is_info_panel_collapsed',
   LAST_ROUTE_DATA: 'map_last_route_data',
 };
-
 
 const saveToStorage = <T,>(key: string, data: T): void => {
   try {
@@ -75,9 +74,14 @@ export const Map = () => {
   const [isSelectingOnMap, setIsSelectingOnMap] = useState(false);
   const [mobileActiveTab, setMobileActiveTab] = useState<MobileTab>('input');
   const [isMobile, setIsMobile] = useState(false);
-  
+
   const location = useLocation();
   const { ticketData, clearTicketData } = useTicket();
+
+  const [walkingSegments, setWalkingSegments] = useState<WalkingSegment[]>([]);
+  const [selectedGapId, setSelectedGapId] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<TabType>('route');
+
 
   useEffect(() => {
     if (routeData) {
@@ -102,10 +106,22 @@ export const Map = () => {
   useEffect(() => {
     if (routeResponse) {
       saveToStorage(STORAGE_KEYS.ROUTE_RESPONSE, routeResponse);
+      setSelectedGapId(null);
     } else {
       localStorage.removeItem(STORAGE_KEYS.ROUTE_RESPONSE);
     }
   }, [routeResponse]);
+
+  useEffect(() => {
+    if (routeResponse && routeData?.destinationLat && routeData?.destinationLng) {
+      const walks = extractWalkingSegmentsForInfoPanel(
+        routeResponse,
+        routeData.destinationLat,
+        routeData.destinationLng
+      );
+      setWalkingSegments(walks);
+    }
+  }, [routeResponse, routeData?.destinationLat, routeData?.destinationLng]);
 
   useEffect(() => {
     saveToStorage(STORAGE_KEYS.IS_INFO_PANEL_COLLAPSED, isInfoPanelCollapsed);
@@ -173,38 +189,35 @@ export const Map = () => {
       destinationName: address || `Точка на карте`,
       useTicket: false
     };
-    
+
     setRouteData(updatedRouteData);
     setLastRouteData(updatedRouteData);
     setIsDestinationLocked(false);
     setIsSelectingOnMap(false);
-    handleMapSelectModeChange(false); 
-    
+    handleMapSelectModeChange(false);
+
     if (updatedRouteData.date) {
       await handleRouteUpdate(updatedRouteData);
     }
   };
 
   const handleRouteUpdate = useCallback(async (data: FormData) => {
-    console.log('🎯 handleRouteUpdate received data:', data);
-    
+    console.log('📡 handleRouteUpdate received data:', data);
+
     setRouteData(data);
     setLastRouteData(data);
     setShowNotification(false);
     setError(null);
-    
+
     if (data.to && data.date) {
       if (!data.destinationLat || !data.destinationLng) {
-        console.error('❌ Missing coordinates for destination');
         setError('Не указаны координаты точки назначения. Используйте выбор на карте или введите адрес через автодополнение.');
         return;
       }
-      
-      console.log('📡 Sending request to buildRoute');
       setIsLoading(true);
       try {
         let response;
-        
+
         if (data.useTicket && ticketData?.ticketDetails?.orderType === 'train') {
           const arrivalCode = ticketData.ticketDetails.details.arrivalStationCode;
           response = await buildRouteFromOrder(
@@ -218,13 +231,12 @@ export const Map = () => {
         } else {
           response = await buildRouteFromPoint(data);
         }
-        
-        console.log('✅ Route response received:', response);
+
+        console.log('📡 Route response received:', response);
         setRouteResponse(response);
       } catch (err) {
         console.error('❌ Error building route:', err);
         setError(err instanceof Error ? err.message : 'Ошибка при построении маршрута');
-        // При ошибке очищаем сохраненный маршрут
         localStorage.removeItem(STORAGE_KEYS.ROUTE_RESPONSE);
       } finally {
         setIsLoading(false);
@@ -237,7 +249,7 @@ export const Map = () => {
   useEffect(() => {
     if (location.state?.autoFill && ticketData?.ticketDetails) {
       const { ticketDetails } = ticketData;
-      
+
       const initialFormData: FormData = {
         to: ticketDetails.orderType === 'train'
           ? (ticketDetails.details.arrivalStationCode === '2000000' ? 'Москва' : 'Санкт-Петербург')
@@ -249,8 +261,8 @@ export const Map = () => {
         attractions: [],
         events: [],
         duration: 'medium',
-        destinationLat: ticketDetails.orderType === 'hotel' 
-          ? ticketDetails.details.coordinates.latitude 
+        destinationLat: ticketDetails.orderType === 'hotel'
+          ? ticketDetails.details.coordinates.latitude
           : undefined,
         destinationLng: ticketDetails.orderType === 'hotel'
           ? ticketDetails.details.coordinates.longitude
@@ -264,15 +276,15 @@ export const Map = () => {
       setRouteData(initialFormData);
       setLastRouteData(initialFormData);
       setIsDestinationLocked(true);
-      
+
       handleRouteUpdate(initialFormData);
-      
+
       window.history.replaceState({}, document.title);
     }
 
     if (location.state?.customRoute && location.state?.autoFill) {
       const { customRoute } = location.state;
-      
+
       const initialFormData: FormData = {
         to: customRoute.to,
         date: customRoute.date,
@@ -289,12 +301,20 @@ export const Map = () => {
       setRouteData(initialFormData);
       setLastRouteData(initialFormData);
       setIsDestinationLocked(true);
-      
+
       handleRouteUpdate(initialFormData);
-      
+
       window.history.replaceState({}, document.title);
     }
   }, [location.state, ticketData, handleRouteUpdate]);
+
+  const handleSelectGap = useCallback((gapId: string | null) => {
+    setSelectedGapId(gapId);
+    if (gapId) {
+      if (isInfoPanelCollapsed) setIsInfoPanelCollapsed(false);
+      if (activeTab !== 'route') setActiveTab('route');
+    }
+  }, [isInfoPanelCollapsed, activeTab]);
 
   const handleFormChange = () => {
     if (lastRouteData) setShowNotification(true);
@@ -350,8 +370,6 @@ export const Map = () => {
     }
   }, [isMobile]);
 
-  
-
   useEffect(() => {
     const builderData = location.state?.builderFormData as FormData | undefined;
     if (builderData) {
@@ -404,6 +422,8 @@ export const Map = () => {
             isInfoPanelCollapsed={isInfoPanelCollapsed}
             isSelectingMode={isSelectingOnMap}
             onDestinationSelect={handleDestinationSelect}
+            selectedGapId={selectedGapId}
+            onSelectGap={handleSelectGap}
           />
           
           <RouteUpdateNotification
@@ -419,6 +439,11 @@ export const Map = () => {
             isLoading={isLoading}
             onAttractionClick={handleAttractionClick}
             onCollapseChange={handleInfoPanelCollapse}
+            selectedGapId={selectedGapId}
+            onSelectGap={handleSelectGap}
+            walkingSegments={walkingSegments}
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
           />
         </div>
 

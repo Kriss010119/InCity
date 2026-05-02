@@ -1,14 +1,24 @@
+// RouteTab.tsx
 import { Clock, MapPin, Navigation, Repeat } from 'lucide-react';
 import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
-import type { RouteResponse } from '../../../../../types/types';
+import type { RouteResponse, WalkingSegment } from '../../../../../types';
+import { useEffect, useMemo } from 'react';
 
 type RouteTabProps = {
   routeResponse: RouteResponse;
+  walkingSegments?: WalkingSegment[];
+  selectedGapId?: string | null;
+  onSelectGap?: (gapId: string | null) => void;
 };
 
-export const RouteTab = ({ routeResponse }: RouteTabProps) => {
+export const RouteTab = ({ 
+  routeResponse, 
+  walkingSegments = [], 
+  selectedGapId, 
+  onSelectGap 
+}: RouteTabProps) => {
   const { t } = useLocale();
   
   const travelTime = routeResponse.sections.reduce(
@@ -31,6 +41,42 @@ export const RouteTab = ({ routeResponse }: RouteTabProps) => {
   const totalPoints = routeResponse.visitPoints.reduce(
     (acc, group) => acc + 1 + group.otherAttractions.length, 0
   );
+
+  const walkingSegmentsBySection = useMemo(() => {
+    const grouped: Record<number, WalkingSegment[]> = {};
+    walkingSegments.forEach(segment => {
+      const idx = segment.sectionIndex;
+      if (!grouped[idx]) grouped[idx] = [];
+      grouped[idx].push(segment);
+    });
+
+    // Переносим финальный возврат (sectionIndex = -1) в последнюю секцию
+    const lastSectionIndex = routeResponse.sections.length - 1;
+    if (lastSectionIndex >= 0 && grouped[-1]) {
+      if (!grouped[lastSectionIndex]) {
+        grouped[lastSectionIndex] = [];
+      }
+      grouped[lastSectionIndex].push(...grouped[-1]);
+      delete grouped[-1];
+    }
+
+    return grouped;
+  }, [walkingSegments, routeResponse.sections.length]);
+
+  useEffect(() => {
+    if (selectedGapId) {
+      // Небольшая задержка, чтобы DOM успел обновиться после переключения вкладок
+      const timer = setTimeout(() => {
+        const element = document.getElementById(selectedGapId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          element.classList.add('highlight-flash');
+          setTimeout(() => element.classList.remove('highlight-flash'), 500);
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedGapId]);
 
   return (
     <>
@@ -63,7 +109,14 @@ export const RouteTab = ({ routeResponse }: RouteTabProps) => {
           <h4 className={styles.sectionTitle}>{t('infoPanel.detailedRoute')}</h4>
           <div className={styles.sections}>
             {routeResponse.sections.map((section, index) => (
-              <RouteSection key={index} section={section} index={index} />
+              <RouteSection 
+                key={index} 
+                section={section} 
+                sectionIndex={index}
+                selectedGapId={selectedGapId}
+                onSelectGap={onSelectGap}
+                walkingSegments={walkingSegmentsBySection[index] || []}
+              />
             ))}
           </div>
         </div>

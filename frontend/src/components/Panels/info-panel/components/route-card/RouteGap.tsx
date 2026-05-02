@@ -1,31 +1,39 @@
-import { Bus, Train } from 'lucide-react';
-import type { RouteGapProps } from '../types';
+import { getTransportIcon, getTransportColor, getTransportLabel } from '../../../../../constants/transportConstants';
+import type { RouteGapProps } from '../../../../../types';
 import styles from './RouteCard.module.css';
-import { useLocale } from '../../../../../hooks';
 
-export const RouteGap = ({ gap }: RouteGapProps) => {
-  const { t } = useLocale();
-  
-  const getTransportIcon = (transport: string) => {
-    return transport === 'metro' ? 
-      <Train size={14} className={styles.transportIcon} /> : 
-      <Bus size={14} className={styles.transportIcon} />;
-  };
+interface ExtendedRouteGapProps extends RouteGapProps {
+  gapId: string;
+  isSelected: boolean;
+  onSelect: () => void;
+}
+
+export const RouteGap = ({ gap, gapId, isSelected, onSelect }: ExtendedRouteGapProps) => {
+  const Icon = getTransportIcon(gap.transport);
+  const iconColor = getTransportColor(gap.transport);
+  const transportLabel = getTransportLabel(gap.transport);
 
   return (
-    <div className={styles.gap}>
+    <div 
+      id={gapId}
+      className={`${styles.gap} ${isSelected ? styles.active : ''}`}
+      onClick={onSelect}
+      data-gap-id={gapId}
+    >
       <div className={styles.gapHeader}>
         <div className={styles.gapTransport}>
-          {getTransportIcon(gap.transport)}
+          <Icon size={16} style={{ color: iconColor }} className={styles.transportIcon} />
           <span className={styles.gapRouteNumber}>
-            {gap.transport === 'metro' ? t('transport.metro') : t('transport.bus')} {gap.routeNumber}
+            {gap.transport === 'walk' 
+              ? transportLabel 
+              : `${transportLabel} №${gap.routeNumber || ''}`.trim()}
           </span>
         </div>
       </div>
       
       <div className={styles.gapStops}>
         <div className={styles.stop}>
-          <div className={styles.stopDot} />
+          <div className={styles.stopDot} style={{ backgroundColor: iconColor }} />
           <span className={styles.stopName}>{gap.startNode.name}</span>
         </div>
         
@@ -37,7 +45,7 @@ export const RouteGap = ({ gap }: RouteGapProps) => {
         ))}
         
         <div className={styles.stop}>
-          <div className={styles.stopDotEnd} />
+          <div className={styles.stopDotEnd} style={{ backgroundColor: iconColor }} />
           <span className={styles.stopName}>{gap.endNode.name}</span>
         </div>
       </div>

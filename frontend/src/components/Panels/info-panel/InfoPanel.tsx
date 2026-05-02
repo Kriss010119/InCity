@@ -3,20 +3,33 @@ import { Loader } from 'lucide-react';
 import { useLocale } from '../../../hooks/useLocale';
 import { PlaceDetailsModal } from '../../place-details-modal/PlaceDetailsModal';
 import styles from './InfoPanel.module.css';
-import type { VisitPoint } from '../../../types/types';
-import type { InfoPanelProps, TabType } from './components/types';
+import type { InfoPanelProps, TabType, VisitPoint } from '../../../types';
+
+import type { WalkingSegment } from '../../../types';
 import { AttractionsTab } from './components/attraction-card/AttractionsTab';
 import { InfoPanelHeader } from './components/info-card/InfoPanelHeader';
 import { InfoPanelTabs } from './components/info-card/InfoPanelTabs';
 import { RouteTab } from './components/route-card/RouteTab';
 
+interface ExtendedInfoPanelProps extends InfoPanelProps {
+  walkingSegments?: WalkingSegment[];
+  activeTab: TabType;
+  onTabChange: (tab: TabType) => void;
+  selectedGapId?: string | null;
+  onSelectGap?: (gapId: string | null) => void;
+}
+
 export const InfoPanel = ({ 
   routeResponse, 
+  walkingSegments = [],
   isLoading, 
   onAttractionClick,
-  onCollapseChange 
-}: InfoPanelProps) => {
-  const [activeTab, setActiveTab] = useState<TabType>('route');
+  onCollapseChange,
+  selectedGapId,
+  onSelectGap,
+  activeTab,
+  onTabChange,
+}: ExtendedInfoPanelProps) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState<VisitPoint | null>(null);
   const { t } = useLocale();
@@ -37,9 +50,14 @@ export const InfoPanel = ({
         <>
           {showContent ? (
             <>
-              <InfoPanelTabs activeTab={activeTab} onTabChange={setActiveTab} />
+              <InfoPanelTabs activeTab={activeTab} onTabChange={onTabChange} />
               {activeTab === 'route' ? (
-                <RouteTab routeResponse={routeResponse} />
+                <RouteTab 
+                  routeResponse={routeResponse} 
+                  walkingSegments={walkingSegments}
+                  selectedGapId={selectedGapId}
+                  onSelectGap={onSelectGap}
+                />
               ) : (
                 <AttractionsTab 
                   visitPointGroups={routeResponse.visitPoints}

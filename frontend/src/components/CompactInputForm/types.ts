@@ -3,9 +3,9 @@ export type FormData = {
   destinationCity: string;
   travelDate: string;
   transport: string[];          
-  duration: string | null;
   attractions: string[];     
   events: string[];
+  duration?: 'very-short' | 'short' | 'medium' | 'long' | null;
 };
 
 export const initialState: FormData = {
@@ -13,7 +13,7 @@ export const initialState: FormData = {
   destinationCity: '',
   travelDate: '',
   transport: [],
-  duration: null,
+  duration: 'medium',
   attractions: [],
   events: [],
 };
