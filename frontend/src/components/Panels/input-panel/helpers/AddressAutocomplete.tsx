@@ -217,12 +217,6 @@ export const AddressAutocomplete = ({
     setShowSuggestions(false);
     setActiveIndex(-1);
     setLastSelected(selectedLocation);
-    
-    console.log('Selected location for backend:', {
-      coordinates: { lat: suggestion.lat, lng: suggestion.lon },
-      placeId: suggestion.place_id,
-      details
-    });
   };
 
   const handleClear = () => {

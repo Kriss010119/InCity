@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { RouteGap } from './RouteGap';
 import { RouteWalk } from './RouteWalk';
 import type { RouteSectionProps } from '../../../../../types';
@@ -11,6 +12,7 @@ interface ExtendedRouteSectionProps {
   selectedGapId?: string | null;
   onSelectGap?: (gapId: string | null) => void;
   walkingSegments?: WalkingSegment[];
+  visitTime?: number;
 }
 
 export const RouteSection = ({ 
@@ -18,7 +20,8 @@ export const RouteSection = ({
   sectionIndex, 
   selectedGapId, 
   onSelectGap,
-  walkingSegments = [] 
+  walkingSegments = [],
+  visitTime = 0,
 }: ExtendedRouteSectionProps) => {
   const { t } = useLocale();
 
@@ -31,7 +34,6 @@ export const RouteSection = ({
   };
 
   const getWalkOrder = (walkId: string, numGaps: number): number => {
-    // Финальный возврат всегда в конце
     if (walkId === 'walk-final-return') {
       return numGaps * 2 + 1000;
     }
@@ -55,6 +57,12 @@ export const RouteSection = ({
   };
 
   const numGaps = section.gaps.length;
+  const totalWalkTime = useMemo(() => {
+    return walkingSegments.reduce((sum, walk) => sum + (walk.estimatedTime || 0), 0);
+  }, [walkingSegments]);
+
+
+  const totalSectionTime = section.estimatedTimeInMinutes + totalWalkTime + visitTime;
 
   const items: Array<
     | { type: 'gap'; gap: any; gapIndex: number; order: number; gapId: string }
@@ -89,7 +97,7 @@ export const RouteSection = ({
           {t('infoPanel.section')} {sectionIndex + 1}
         </span>
         <span className={styles.sectionTime}>
-          {section.estimatedTimeInMinutes} {t('infoPanel.min')}
+          {totalSectionTime} {t('infoPanel.min')}
         </span>
       </div>
 
@@ -97,6 +105,7 @@ export const RouteSection = ({
         <div className={styles.transferInfo}>
           {t('infoPanel.transfers')}: {section.numberOfTransfers}
         </div>
+        
       )}
 
       <div className={styles.sectionGaps}>

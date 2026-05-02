@@ -1,3 +1,4 @@
+// RouteTab.tsx
 import { Clock, MapPin, Navigation, Repeat } from 'lucide-react';
 import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';
@@ -19,7 +20,7 @@ export const RouteTab = ({
   onSelectGap 
 }: RouteTabProps) => {
   const { t } = useLocale();
-  
+
   const travelTime = routeResponse.sections.reduce(
     (acc, s) => acc + s.estimatedTimeInMinutes, 0
   );
@@ -31,8 +32,13 @@ export const RouteTab = ({
       group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0),
     0
   );
+
+  const totalWalkTime = walkingSegments.reduce(
+    (acc, walk) => acc + (walk.estimatedTime || 0), 0
+  );
   
-  const totalTime = (travelTime + visitTime) / 60;
+  const totalTime = (travelTime + visitTime + totalWalkTime) / 60;
+  
   const totalTransfers = routeResponse.sections.reduce(
     (acc, s) => acc + s.numberOfTransfers, 0
   );
@@ -43,7 +49,6 @@ export const RouteTab = ({
 
   const walkingSegmentsBySection = useMemo(() => {
     const grouped: Record<number, WalkingSegment[]> = {};
-    
     walkingSegments.forEach(segment => {
       const idx = segment.sectionIndex;
       if (!grouped[idx]) grouped[idx] = [];
@@ -61,6 +66,17 @@ export const RouteTab = ({
 
     return grouped;
   }, [walkingSegments, routeResponse.sections.length]);
+
+  const getVisitTimeForSection = (sectionIndex: number): number => {
+    const visitPoints = routeResponse.visitPoints;
+    if (sectionIndex >= visitPoints.length) return 0;
+    
+    const group = visitPoints[sectionIndex];
+    if (!group) return 0;
+    
+    return (group.mainAttraction.estimatedVisitMinutes || 0) +
+      group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0);
+  };
 
   useEffect(() => {
     if (selectedGapId) {
@@ -114,6 +130,7 @@ export const RouteTab = ({
                 selectedGapId={selectedGapId}
                 onSelectGap={onSelectGap}
                 walkingSegments={walkingSegmentsBySection[index] || []}
+                visitTime={getVisitTimeForSection(index)}
               />
             ))}
           </div>
