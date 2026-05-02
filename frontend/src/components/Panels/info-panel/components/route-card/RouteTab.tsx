@@ -1,4 +1,3 @@
-// RouteTab.tsx
 import { Clock, MapPin, Navigation, Repeat } from 'lucide-react';
 import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';
@@ -44,13 +43,13 @@ export const RouteTab = ({
 
   const walkingSegmentsBySection = useMemo(() => {
     const grouped: Record<number, WalkingSegment[]> = {};
+    
     walkingSegments.forEach(segment => {
       const idx = segment.sectionIndex;
       if (!grouped[idx]) grouped[idx] = [];
       grouped[idx].push(segment);
     });
 
-    // Переносим финальный возврат (sectionIndex = -1) в последнюю секцию
     const lastSectionIndex = routeResponse.sections.length - 1;
     if (lastSectionIndex >= 0 && grouped[-1]) {
       if (!grouped[lastSectionIndex]) {
@@ -65,7 +64,6 @@ export const RouteTab = ({
 
   useEffect(() => {
     if (selectedGapId) {
-      // Небольшая задержка, чтобы DOM успел обновиться после переключения вкладок
       const timer = setTimeout(() => {
         const element = document.getElementById(selectedGapId);
         if (element) {
@@ -84,7 +82,7 @@ export const RouteTab = ({
       <div className={styles.stats}>
         <div className={styles.stat}>
           <Clock size={18} />
-          <span className={styles.value}>{totalTime.toFixed(1)} {t('infoPanel.hours')}</span>
+          <span className={styles.value}>{totalTime.toFixed(0)} {t('infoPanel.hours')}</span>
           <span className={styles.label}>{t('infoPanel.totalTime')}</span>
         </div>
         <div className={styles.stat}>
