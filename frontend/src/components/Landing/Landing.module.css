@@ -99,6 +99,8 @@
   border-radius: 8px;
   color: var(--text-black);
   background-color: var(--tbank-yellow);
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 .landing-container a:hover {
@@ -134,9 +136,13 @@
     margin-bottom: calc(var(--main-title-margin, 1rem) * var(--scale-mobile-title-margin));
   }
 
-  .subtitle {
+  .subtitle{
     font-size: calc(var(--subtitle-size, 1.2rem) * var(--scale-mobile-subtitle));
     margin-top: calc(var(--subtitle-margin-top, 1rem) * var(--scale-mobile-subtitle));
     padding: 0 var(--spacing-xxl);
+  }
+
+  .landing-container a {
+    font-size: calc(var(--info-text-size) * var(--scale-mobile-text))
   }
 }
