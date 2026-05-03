@@ -1,9 +1,8 @@
 import { useLocale } from '../../hooks';
-import type { HomeInfoItem } from '../../types';
 import { CompactInputForm } from '../CompactInputForm/CompactInputForm';
 import styles from './HomeInfo.module.css';
 import { InfoCard } from './InfoCard';
-
+import type { HomeInfoItem } from './types';
 
 export const HomeInfo = () => {
   const { t } = useLocale();
@@ -12,12 +11,11 @@ export const HomeInfo = () => {
   return (
     <div>
       <section className={styles['info-section']}>
-        {Array.isArray(items) && items.map((item: HomeInfoItem, i: number) => <InfoCard key={i} item={item} i={i} />)}      
+        {Array.isArray(items) && items.map((item: HomeInfoItem, i: number) => <InfoCard key={i} item={item} i={i} />)}
       </section>
 
-     <section className={styles['info-section']} id='form'>
-          <CompactInputForm />
-          <img src='' alt='Пример построенного маршрута на карте'></img>
+      <section className={styles['form-section']} id="form">
+        <CompactInputForm />
       </section>
     </div>
   );

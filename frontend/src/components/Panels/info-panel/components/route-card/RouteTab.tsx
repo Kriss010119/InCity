@@ -1,4 +1,3 @@
-// RouteTab.tsx
 import { Clock, MapPin, Navigation, Repeat } from 'lucide-react';
 import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';

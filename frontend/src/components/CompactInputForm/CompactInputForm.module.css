@@ -1,16 +1,14 @@
-
-
 .formContainer {
   width: 100%;
-  max-width: 560px;
+  max-width: var(--breakpoint-tablet);
   margin: 0 auto;
   background: var(--bg-secondary);
-  border-radius: 24px;
+  border-radius: var(--modal-border-radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 630px;
-  border: 2px solid var(--tbank-yellow);
+  border: var(--border-width-focus) solid var(--tbank-yellow);
   box-sizing: border-box;
 }
 
@@ -18,7 +16,7 @@
   flex: 1;
   overflow: hidden;
   position: relative;
-  background: var(--bg-main);
+  background: var(--bg-secondary);
 }
 
 .slidesTrack {
@@ -31,23 +29,23 @@
   flex-shrink: 0;
   width: 100%;
   overflow-y: auto;
-  padding: 28px 32px;
+  padding: var(--spacing-7xl) var(--spacing-8xl);
   box-sizing: border-box;
 }
 
 .slide {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: var(--spacing-6xl);
 }
 
 
 .stepTitle {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: var(--size-22);
+  font-weight: var(--font-weight-medium);
   color: var(--text-main);
   letter-spacing: -0.3px;
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--spacing-base) 0;
   text-align: left;
 }
 
@@ -55,12 +53,12 @@
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-base);
 }
 
 .formGroup label {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   color: var(--text-secondary);
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -69,12 +67,12 @@
 
 .input {
   width: 100%;
-  padding: 14px 16px;
+  padding: var(--size-md) var(--spacing-xxl);
   background: var(--bg-main);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-xl);
   color: var(--text-main);
-  font-size: 16px;
+  font-size: var(--size-lg);
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
@@ -91,17 +89,17 @@
 .chipGroup {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 4px;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
 }
 
 .chip {
-  padding: 10px 20px;
+  padding: var(--spacing-lg) var(--spacing-xxxl);
   background: var(--bg-main);
-  border: 1px solid var(--border-light);
-  border-radius: 40px;
-  font-size: 14px;
-  font-weight: 450;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--badge-border-radius);
+  font-size: var(--size-base);
+  font-weight: var(--font-weight-normal);
   color: var(--text-main);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -109,29 +107,29 @@
 
 .chip:hover {
   border-color: var(--tbank-yellow);
-  background: rgba(255, 221, 45, 0.04);
+  background: var(--yellow-soft);
 }
 
 .chip.selected {
   background: var(--tbank-yellow);
   border-color: var(--tbank-yellow);
-  color: #1a1a1a;
-  font-weight: 500;
+  color: var(--text-black);
+  font-weight: var(--font-weight-medium);
 }
 
 .multiselectGroup {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 4px;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
 }
 
 .multiselectItem {
-  padding: 12px 16px;
+  padding: var(--spacing-xl) var(--spacing-xxl);
   background: var(--bg-main);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  font-size: 14px;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-xl);
+  font-size: var(--size-base);
   color: var(--text-main);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -140,13 +138,13 @@
 
 .multiselectItem:hover {
   border-color: var(--tbank-yellow);
-  background: rgba(255, 221, 45, 0.04);
+  background: var(--yellow-soft);
 }
 
 .multiselectItem.selected {
-  background: rgba(255, 221, 45, 0.08);
+  background: var(--yellow-soft);
   border-color: var(--tbank-yellow);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .itemIcon {
@@ -154,40 +152,40 @@
 }
 
 .helperNote {
-  font-size: 12px;
+  font-size: var(--font-size-base);
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: var(--spacing-sm);
   padding: 0;
   border: none;
   background: transparent;
   text-align: left;
 }
 
- .errorInfo {
-  font-size: 12px;
+.errorInfo {
+  font-size: var(--font-size-base);
   margin: 0;
   text-align: left;
-  color: var(--error-color)
- }
+  color: var(--error-color);
+}
 
 
 .navFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 20px 32px;
-  background: var(--bg-secondary);
+  gap: var(--spacing-xxl);
+  padding: var(--spacing-xxxl) var(--spacing-8xl);
+  background: var(--bg-main);
   border: none;
 }
 
 .navBtn {
-  padding: 10px 24px;
+  padding: var(--spacing-lg) var(--spacing-4xl);
   background: transparent;
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  border: var(--border-width-default) solid var(--border-light);
+  border-radius: var(--radius-lg);
+  font-size: var(--size-base);
+  font-weight: var(--font-weight-medium);
   color: var(--text-main);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -195,13 +193,13 @@
 
 .navBtn:hover:not(:disabled) {
   border-color: var(--tbank-yellow);
-  background: rgba(255, 221, 45, 0.04);
+  background: var(--yellow-soft);
 }
 
 .navBtnPrimary {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
-  color: white;
+  background: var(--text-black);
+  border-color: var(--text-black);
+  color: var(--text-main-dark);
 }
 
 .navBtnPrimary:hover:not(:disabled) {
@@ -210,32 +208,32 @@
 }
 
 .navBtn:disabled {
-  opacity: 0.4;
+  opacity: var(--opacity-disabled);
   cursor: not-allowed;
 }
 
 .stepIndicator {
-  font-size: 13px;
+  font-size: var(--font-size-md);
   color: var(--text-secondary);
   background: transparent;
   padding: 0;
   border: none;
-  font-weight: 450;
+  font-weight: var(--font-weight-normal);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .formContainer {
     max-width: 100%;
-    border-radius: 0;
-    height: 100vh;
+    margin: 0;
+    width: 100%;
   }
 
   .slideWrapper {
-    padding: 20px 20px;
+    padding: var(--spacing-xxxl) var(--spacing-xxxl);
   }
 
   .stepTitle {
-    font-size: 20px;
+    font-size: var(--size-xxl);
   }
 
   .multiselectGroup {
@@ -243,30 +241,34 @@
   }
 
   .chip, .multiselectItem {
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: var(--spacing-lg) var(--spacing-xxl);
+    font-size: var(--font-size-md);
   }
 
   .navFooter {
-    padding: 16px 20px;
+    padding: var(--spacing-xxl) var(--spacing-xxxl);
   }
 
   .navBtn {
-    padding: 8px 20px;
-    font-size: 13px;
+    padding: var(--spacing-base) var(--spacing-xxxl);
+    font-size: var(--font-size-md);
+  }
+
+  .input {
+    font-size: var(--font-size-md);
   }
 }
 
 :root[data-theme="dark"] .formContainer {
-  background: var(--bg-secondary);
+  background: var(--bg-main);
 }
 
 :root[data-theme="dark"] .navBtnPrimary {
   background: var(--tbank-yellow);
   border-color: var(--tbank-yellow);
-  color: #1a1a1a;
+  color: var(--text-black);
 }
 
 :root[data-theme="dark"] .navBtnPrimary:hover {
-  background: #e6c200;
+  background: var(--tbank-yellow-dark);
 }

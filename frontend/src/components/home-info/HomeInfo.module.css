@@ -55,6 +55,41 @@
   opacity: var(--opacity-90);
 }
 
+.form-section {
+  position: relative;
+  width: 100%;
+  background-image: url('/map.png');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-3xl) var(--spacing-4xl);
+  box-sizing: border-box;
+}
+
+.form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-main);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.form-section > * {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  background-color: var(--bg-main);
+  border-radius: var(--border-radius, 12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: var(--spacing-3xl);
+  margin: 80px auto;
+}
+
 @media (max-width: 768px) {
   .info-section {
     grid-template-columns: 1fr;
@@ -77,5 +112,14 @@
     font-size: calc(var(--info-text-size) * var(--scale-mobile-text));
     line-height: var(--info-line-height);
     padding-bottom: var(--spacing-lg);
+  }
+
+  .form-section {
+    margin: var(--spacing-xxxl) 0;
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .form-section > * {
+    max-width: 95%;
   }
 }

@@ -223,7 +223,7 @@ export const CompactInputForm = () => {
                 <div
                   key={opt.id}
                   className={`${styles.chip} ${formData.duration === opt.id ? styles.selected : ''}`}
-                  onClick={() => updateField('duration', opt.id)}
+                  onClick={() => updateField('duration', opt.id as FormData["duration"])}
                 >
                   {opt.name}
                 </div>
