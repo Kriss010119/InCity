@@ -5,12 +5,12 @@ const createIconSvg = (color: string, type: string = 'default'): string => {
   const icons = {
     start: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="16" cy="16" r="14" fill="${color}" stroke="white" stroke-width="2"/>
-      <text x="16" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">A</text>
+      <circle cx="16" cy="16" r="6" fill="white"/>
     </svg>`,
     
     end: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="16" cy="16" r="14" fill="${color}" stroke="white" stroke-width="2"/>
-      <text x="16" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">B</text>
+      <circle cx="16" cy="16" r="6" fill="white"/>
     </svg>`,
     
     event: `<svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
