@@ -332,9 +332,9 @@
   --transport-icon-size-small: 30px;
   --car-size: 70px;
   --car-size-mobile: 36px;
-  --border-width: 800px;
+  --border-width: 0;
   --border-width-mobile: 400px;
-  --border-height: 400px;
+  --border-height: 0;
   --border-height-mobile: 200px;
   
   --transport-animation-duration-car: 25s;

@@ -15,8 +15,7 @@ export const TransportIcon = ({ type }: Props) => {
         }
 
         if (type === 'car') {
-            let borderFrame: HTMLElement | null = null;
-            borderFrame = document.querySelector('.border-frame') as HTMLElement;
+            let borderFrame = document.querySelector('.border-frame') as HTMLElement;
             
             if (!borderFrame) {
                 const allDivs = document.querySelectorAll('div');

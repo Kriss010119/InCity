@@ -1,4 +1,5 @@
 .landing {
+  margin: 0;
   position: relative;
   height: var(--landing-height);
   padding-top: var(--landing-padding-top);
@@ -40,7 +41,6 @@
 .title-border {
   position: relative;
   padding: var(--title-border-padding);
-  margin-bottom: var(--title-border-margin);
   max-width: var(--container-max-width);
   background-color: var(--title-border-bg-light);
   border-radius: var(--title-border-radius);
