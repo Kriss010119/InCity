@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-refresh/only-export-components */
-import React, { createContext, useContext, useRef } from 'react';
+import React, { createContext, useContext, useRef, useCallback } from 'react';
+import type { VisitPoint } from '../types';
+import { buildFullPlaceDetails } from '../api/wikipediaService';
 
 type CachedPlaceData = {
   details: any;
@@ -8,27 +10,21 @@ type CachedPlaceData = {
   images?: string[];
 };
 
-export const usePlaceCache = () => {
-  const context = useContext(PlaceCacheContext);
-  if (!context) {
-    throw new Error('usePlaceCache must be used within PlaceCacheProvider');
-  }
-  return context;
-};
-
 type PlaceCacheContextType = {
   getCachedData: (placeId: number) => CachedPlaceData | undefined;
   setCachedData: (placeId: number, data: any, images?: string[]) => void;
   clearCache: () => void;
+  preloadPlace: (place: VisitPoint) => Promise<void>;
 };
 
-const PlaceCacheContext = createContext<PlaceCacheContextType | undefined>(undefined);
+export const PlaceCacheContext = createContext<PlaceCacheContextType | undefined>(undefined);
 
 const CACHE_DURATION = 12000 * 60 * 60;
 const MAX_CACHE_SIZE = 100;
 
 export const PlaceCacheProvider = ({ children }: { children: React.ReactNode }) => {
   const cacheRef = useRef<Map<number, CachedPlaceData>>(new Map());
+  const pendingRequests = useRef<Map<number, Promise<void>>>(new Map());
 
   const getCachedData = (placeId: number) => {
     const cached = cacheRef.current.get(placeId);
@@ -62,12 +58,40 @@ export const PlaceCacheProvider = ({ children }: { children: React.ReactNode }) 
 
   const clearCache = () => {
     cacheRef.current.clear();
+    pendingRequests.current.clear();
   };
 
+  const preloadPlace = useCallback(async (place: VisitPoint) => {
+    if (cacheRef.current.has(place.id) || pendingRequests.current.has(place.id)) {
+      return;
+    }
+
+    const loadPromise = (async () => {
+      try {
+        const { details, images } = await buildFullPlaceDetails(place.tags || []);
+        setCachedData(place.id, details, images);
+      } catch (error) {
+        console.warn(`Preload failed for place ${place.id}`, error);
+        setCachedData(place.id, {}, []);
+      } finally {
+        pendingRequests.current.delete(place.id);
+      }
+    })();
+
+    pendingRequests.current.set(place.id, loadPromise);
+  }, [setCachedData]);
+
   return (
-    <PlaceCacheContext.Provider value={{ getCachedData, setCachedData, clearCache }}>
+    <PlaceCacheContext.Provider value={{ getCachedData, setCachedData, clearCache, preloadPlace }}>
       {children}
     </PlaceCacheContext.Provider>
   );
 };
 
+export const usePlaceCache = () => {
+  const context = useContext(PlaceCacheContext);
+  if (!context) {
+    throw new Error('usePlaceCache must be used within PlaceCacheProvider');
+  }
+  return context;
+};

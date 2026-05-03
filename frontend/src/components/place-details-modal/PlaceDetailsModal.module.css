@@ -22,6 +22,7 @@
   overflow-y: auto;
   position: relative;
   animation: slideUp var(--transition-duration-slow) ease;
+  border-radius: 10px;
 }
 
 .modal::-webkit-scrollbar {

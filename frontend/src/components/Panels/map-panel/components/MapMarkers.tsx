@@ -1,6 +1,7 @@
 import { Marker } from 'react-leaflet';
-import type { MapMarkersProps, MapMarker } from '../types';
+import type { MapMarkersProps, MapMarker } from '../../../../types';
 import { MARKER_ICONS } from '../MarkerIcons';
+import { MarkerTooltip } from './MarkerTooltip';
 
 export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
   const getMarkerIcon = (marker: MapMarker) => {
@@ -20,7 +21,9 @@ export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
           position={[marker.lat, marker.lng]}
           icon={getMarkerIcon(marker)}
           eventHandlers={{ click: () => onMarkerClick(marker) }}
-        />
+        >
+          <MarkerTooltip marker={marker} />
+        </Marker>
       ))}
     </>
   );

@@ -11,13 +11,13 @@ type AppProviderProps = {
 export default function AppProvider({ children }: AppProviderProps) {
   return (
     <ThemeProvider>
+      <PlaceCacheProvider>
       <TicketProvider>
-        <PlaceCacheProvider>
           <RouteProvider>
             {children}
           </RouteProvider>
-        </PlaceCacheProvider>
       </TicketProvider>
+      </PlaceCacheProvider>
     </ThemeProvider>
   );
 }

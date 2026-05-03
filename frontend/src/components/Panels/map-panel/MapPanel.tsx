@@ -23,6 +23,7 @@ import { useReverseGeocode } from '../../../hooks';
 import { useMapMarkers } from '../../../hooks/useMapMarkers';
 import { RouteArrows } from './components/RouteArrows';
 import { ZoomHandler } from './components/ZoomHandler';
+import { usePlaceCache } from '../../../context/PlaceCacheContext';
 
 export const MapPanel = ({
   destinationLat,
@@ -46,8 +47,18 @@ export const MapPanel = ({
   const [targetCenter, setTargetCenter] = useState<[number, number] | null>(null);
   const [targetZoom, setTargetZoom] = useState<number | null>(null);
   const { reverseGeocode } = useReverseGeocode();
+  const { preloadPlace } = usePlaceCache();
   
   const prevCollapsedRef = useRef(isInfoPanelCollapsed);
+
+  useEffect(() => {
+    if (!routeResponse?.visitPoints) return;
+
+    routeResponse.visitPoints.forEach(group => {
+      preloadPlace(group.mainAttraction);
+      group.otherAttractions.forEach(point => preloadPlace(point));
+    });
+  }, [routeResponse, preloadPlace]);
 
   const handleClusterClick = useCallback((lat: number, lng: number) => {
     const ZOOM_TO_SHOW_DETAILS = 16;

@@ -123,6 +123,9 @@
   color: var(--text-main);
   margin: 0;
   line-height: var(--line-height-tight);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .modalRating {
@@ -169,6 +172,9 @@
   font-size: var(--font-size-lg);
   color: var(--text-main);
   line-height: var(--line-height-base);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .modalInfoLink {
@@ -176,6 +182,9 @@
   color: var(--text-main);
   text-decoration: none;
   transition: color var(--transition-duration-fast) ease;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .modalInfoLink:hover {
@@ -187,6 +196,9 @@
   line-height: var(--line-height-relaxed);
   color: var(--text-secondary);
   margin: 0 0 var(--spacing-4xl) 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .modalLink {
@@ -337,6 +349,163 @@
   animation: bounce 1s infinite;
 }
 
+.markerTooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tooltipCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  min-width: 240px;
+  max-width: 280px;
+  border: var(--border-width-default) solid var(--border-light);
+  animation: tooltipFadeIn var(--transition-duration-fast) ease;
+}
+
+.tooltipImage {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: var(--bg-main);
+}
+
+.tooltipImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tooltipImagePlaceholder {
+  width: 100%;
+  height: 120px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+}
+
+.tooltipBody {
+  padding: var(--spacing-lg);
+}
+
+.tooltipTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-main);
+  margin: 0 0 var(--spacing-sm) 0;
+  line-height: var(--line-height-tight);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltipBadge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-base);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-black);
+  margin-bottom: var(--spacing-sm);
+  background: var(--tbank-yellow);
+  border: 1px solid var(--tbank-yellow);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.tooltipAddress,
+.tooltipTime {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tooltipAddress span,
+.tooltipTime span {
+  color: var(--text-secondary);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  flex: 1;
+}
+
+.tooltipDescription {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin: var(--spacing-sm) 0 0 0;
+  line-height: var(--line-height-base);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltipHint {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin: var(--spacing-sm) 0 0 0;
+  font-style: italic;
+}
+
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(var(--spacing-sm));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  z-index: var(--z-index-modal);
+  color: white;
+}
+
+.loadingContainer p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  background: var(--bg-secondary);
+  padding: var(--spacing-base) var(--spacing-xl);
+  border-radius: var(--radius-pill);
+  color: var(--text-main);
+  box-shadow: var(--shadow-base);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  text-align: center;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--tbank-yellow);
+}
+
+.customMarker {
+  background: none !important;
+  border: none !important;
+}
+
+.icon {
+  color: var(--text-secondary);
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -362,47 +531,42 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .mapHint,
-  .mapSelectingHint {
-    top: var(--spacing-xl);
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-md) var(--spacing-xl);
-    white-space: nowrap;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .legend {
-    bottom: var(--spacing-xl);
-    left: var(--spacing-xl);
-    padding: var(--spacing-base);
-    gap: var(--spacing-md);
+  to {
+    transform: rotate(360deg);
   }
-  
-  .legendItem {
-    gap: var(--spacing-md);
-    font-size: var(--font-size-sm);
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(var(--spacing-sm));
   }
-  
-  .clearSelection,
-  .resetView {
-    bottom: var(--spacing-xl);
-    right: var(--spacing-xl);
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: var(--font-size-sm);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .modal {
-    max-width: 500px;
-    max-height: 85vh;
-  }
-  
-  .modalContent {
-    padding: var(--spacing-xxxl);
-  }
-  
-  .modalTitle {
-    font-size: var(--font-size-7xl);
-  }
+}
+
+.routeSegment {
+  transition: stroke-width var(--transition-duration-fast) ease, opacity var(--transition-duration-fast) ease;
+}
+
+.routeSegment:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px var(--tbank-yellow));
+}
+
+.transportStopMarker {
+  transition: transform var(--transition-duration-fast) ease;
+}
+
+.transportStopMarker:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -495,57 +659,27 @@
     padding: var(--spacing-base) var(--spacing-xl);
     font-size: var(--font-size-base);
   }
-}
 
-@media (max-width: 480px) {
-  .mapHint,
-  .mapSelectingHint {
-    top: var(--spacing-base);
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-sm) var(--spacing-base);
+  .tooltipCard {
+    min-width: 200px;
+    max-width: 240px;
   }
-  
-  .legend {
-    bottom: 60px;
-    left: var(--spacing-base);
-    padding: var(--spacing-sm) var(--spacing-base);
+
+  .tooltipImage,
+  .tooltipImagePlaceholder {
+    height: 100px;
   }
-  
-  .legendItem {
-    gap: var(--spacing-sm);
-    font-size: var(--font-size-sm);
+
+  .tooltipBody {
+    padding: var(--spacing-base);
   }
-  
-  .clearSelection,
-  .resetView {
-    bottom: var(--spacing-base);
-    right: var(--spacing-base);
-    padding: var(--spacing-sm) var(--spacing-base);
+
+  .tooltipTitle {
     font-size: var(--font-size-sm);
   }
-  
-  .modalImageContainer {
-    height: 150px;
-  }
-  
-  .modalTitle {
-    font-size: var(--font-size-xxl);
-  }
-  
-  .modalStars {
-    font-size: var(--font-size-base);
-  }
-  
-  .modalRatingValue {
-    font-size: var(--font-size-base);
-  }
-  
-  .modalInfoText,
-  .modalInfoLink {
-    font-size: var(--font-size-sm);
-  }
-  
-  .modalDescription {
-    font-size: var(--font-size-base);
+
+  .tooltipBadge {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 }
