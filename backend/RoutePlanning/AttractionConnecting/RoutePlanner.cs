@@ -189,23 +189,42 @@ namespace RoutePlanning.AttractionConnecting
             Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter, searchRad: 600);
             Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter, searchRad: 600);
 
-            if (TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
-            {
-                return true;
-            }
+            //if (TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
+            //{
+            //    return true;
+            //}
 
-            if (TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
-            {
-                return true;
-            }
+            //if (TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
+            //{
+            //    return true;
+            //}
 
-            if (TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out sect))
-            {
-                return true;
-            }
+            //if (TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out sect))
+            //{
+            //    return true;
+            //}
+
+            bool hasDirectRoute = TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out var sect1);
+            bool hasIntersectionRoute = TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out var sect2);
+            bool hasTransferRoute = TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out var sect3);
 
             sect = null!;
-            return false;
+            if (hasDirectRoute)
+            {
+                sect = sect1;
+            }
+
+            if (hasIntersectionRoute && BetterTiming(sect2, sect))
+            {
+                sect = sect2;
+            }
+
+            if (hasTransferRoute && BetterTiming(sect3, sect))
+            {
+                sect = sect3;
+            }
+
+            return hasDirectRoute || hasIntersectionRoute || hasTransferRoute;
         }
 
         // ==================== ПРЯМОЙ МАРШРУТ (БЕЗ ПЕРЕСАДОК) ====================
@@ -257,7 +276,7 @@ namespace RoutePlanning.AttractionConnecting
                         double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
                                         + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
 
-                        if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                        if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                         {
                             bestWalkDistance = walkDist;
                             sect = candidate;
@@ -284,7 +303,7 @@ namespace RoutePlanning.AttractionConnecting
                             double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
                                             + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
 
-                            if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                             {
                                 bestWalkDistance = walkDist;
                                 sect = candidate;
@@ -330,7 +349,7 @@ namespace RoutePlanning.AttractionConnecting
                         double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
                                         + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
 
-                        if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                        if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                         {
                             bestWalkDistance = walkDist;
                             sect = candidate;
@@ -357,7 +376,7 @@ namespace RoutePlanning.AttractionConnecting
                             double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
                                             + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
 
-                            if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                             {
                                 bestWalkDistance = walkDist;
                                 sect = candidate;
@@ -405,7 +424,7 @@ namespace RoutePlanning.AttractionConnecting
                         double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
                                         + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
 
-                        if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                        if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                         {
                             bestWalkDistance = walkDist;
                             sect = candidate;
@@ -435,7 +454,7 @@ namespace RoutePlanning.AttractionConnecting
                             double walkDist = SpatialMath.Distance(startLat, startLon, surfaceStop1.Latitude, surfaceStop1.Longitude)
                                             + SpatialMath.Distance(metroExit.Latitude, metroExit.Longitude, targetLat, targetLon);
 
-                            if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                             {
                                 bestWalkDistance = walkDist;
                                 sect = candidate;
@@ -461,7 +480,7 @@ namespace RoutePlanning.AttractionConnecting
                             double walkDist = SpatialMath.Distance(startLat, startLon, metroEntry.Latitude, metroEntry.Longitude)
                                             + SpatialMath.Distance(surfaceStop2.Latitude, surfaceStop2.Longitude, targetLat, targetLon);
 
-                            if (BetterTiming(walkDist, bestWalkDistance, candidate, sect))
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                             {
                                 bestWalkDistance = walkDist;
                                 sect = candidate;
@@ -938,7 +957,7 @@ namespace RoutePlanning.AttractionConnecting
             return null;
         }
 
-        private bool BetterTiming(double walkDist, double bestWalkDistance, Section candidate, Section? sect)
+        private bool BetterTiming(Section candidate, Section? sect, double walkDist = 0, double bestWalkDistance = 0)
         {
             if (sect == null)
             {

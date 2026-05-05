@@ -184,9 +184,7 @@ namespace TopLayer.Repositories
                 (double)(decimal)row.latitude,
                 (double)(decimal)row.longitude,
                 (string?)row.name,
-                null,
-                routes.Count > 0 ? routes : null,
-                isTransfer,
+                routes,
                 transfers,
                 (string?)row.local_name
             );

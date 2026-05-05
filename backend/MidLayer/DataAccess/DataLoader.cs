@@ -17,7 +17,7 @@ namespace MidLayer.DataAccess
         private readonly IMetroRepository _metroRepo;
         private readonly ICityRepository _cityRepo;
 
-        private const int DefaultSearchRadiusMeters = 15000;
+        private const int DefaultSearchRadiusMeters = 50000;
 
         public DataLoader(
             IAttractionRepository attractionRepo,

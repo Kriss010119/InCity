@@ -21,7 +21,7 @@ namespace MidLayer.KudaGo
     {
         private readonly HttpClient _http;
         private const string BaseUrl = "https://kudago.com/public-api/v1.4";
-        private const int PageSize = 50;
+        private const int PageSize = 300;
 
         /// <summary>
         /// Маппинг названий городов (как в нашей БД) в slug-и KudaGo.

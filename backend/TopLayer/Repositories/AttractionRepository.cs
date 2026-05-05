@@ -22,6 +22,11 @@ namespace TopLayer.Repositories
         public async Task<IEnumerable<IAttraction>> GetAttractionsAsync(double latitude, double longitude, int radiusMeters,
             string[] categories, string[] subcategories)
         {
+            if (categories.Length == 0 && subcategories.Length == 0)
+            {
+                return [];
+            }
+
             var box = DbHelper.GetBoundingBox(latitude, longitude, radiusMeters);
 
             string categorySql = categories.Length > 0 ? "AND category = ANY(@categories)" : "";
