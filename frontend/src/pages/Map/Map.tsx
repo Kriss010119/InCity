@@ -20,6 +20,7 @@ const STORAGE_KEYS = {
   LAST_ROUTE_DATA: 'map_last_route_data',
 };
 
+
 const saveToStorage = <T,>(key: string, data: T): void => {
   try {
     localStorage.setItem(key, JSON.stringify(data));

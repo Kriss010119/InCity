@@ -5,10 +5,28 @@ import { MarkerTooltip } from './MarkerTooltip';
 
 export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
   const getMarkerIcon = (marker: MapMarker) => {
-    switch(marker.type) {
-      case 'selected': return MARKER_ICONS.selected;
-      default: return MARKER_ICONS.point;
+    const category = marker.category || '';
+    const categoryLower = category.toLowerCase();
+    
+    const eventKeywords = [
+      'концерт', 'concert',
+      'фестивал', 'festival',
+      'выставк', 'exhibition',
+      'кино', 'cinema',
+      'ярмарк', 'fair',
+      'ивент', 'event',
+      'детск', 'kids',
+      'благотворительн', 'charity',
+      'business', 'бизнес'
+    ];
+    
+    const isEvent = eventKeywords.some(keyword => categoryLower.includes(keyword));
+    
+    if (isEvent) {
+      return MARKER_ICONS.event;
     }
+    
+    return MARKER_ICONS.point;
   };
 
   return (

@@ -1,6 +1,6 @@
 import type { VisitPoint } from '../domain';
 
-export type MapMarkerType = 'start' | 'end' | 'point' | 'selected';
+export type MapMarkerType = 'start' | 'end' | 'point' | 'event' | 'selected';
 
 export type MapMarker = {
   id: string;
