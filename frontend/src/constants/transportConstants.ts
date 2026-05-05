@@ -1,5 +1,6 @@
 import { Bus, TrainFront, TramFront, PersonStanding } from 'lucide-react';
 import type { ComponentType, SVGProps } from 'react';
+import { getMetroLineColor, getMetroLineName, detectMetroCity } from './metroConstants';
 
 export const TRANSPORT_COLORS: Record<string, string> = {
   walk: '#b8b8b8ff',
@@ -25,6 +26,27 @@ export const TRANSPORT_LABELS: Record<string, string> = {
   walk: 'Пешком',
 };
 
-export const getTransportIcon = (transport: string) => TRANSPORT_ICONS[transport] || Bus;
-export const getTransportColor = (transport: string) => TRANSPORT_COLORS[transport] || '#888';
-export const getTransportLabel = (transport: string) => TRANSPORT_LABELS[transport] || transport;
+export const getTransportColor = (
+  transport: string, 
+  routeNumber?: string, 
+  stationName?: string
+): string => {
+  if (transport === 'metro' && routeNumber) {
+    const city = stationName ? detectMetroCity(stationName) : 'moscow';
+    return getMetroLineColor(routeNumber, city);
+  }
+  return TRANSPORT_COLORS[transport] || '#888888';
+};
+
+export const getTransportIcon = (transport: string) => {
+  return TRANSPORT_ICONS[transport] || Bus;
+};
+
+export const getTransportLabel = (transport: string, routeNumber?: string, stationName?: string): string => {
+  if (transport === 'metro' && routeNumber) {
+    const city = stationName ? detectMetroCity(stationName) : 'moscow';
+    const lineName = getMetroLineName(routeNumber, city);
+    return `${lineName}, линия`;
+  }
+  return TRANSPORT_LABELS[transport] || transport;
+};

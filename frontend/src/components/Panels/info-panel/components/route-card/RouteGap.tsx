@@ -10,8 +10,8 @@ interface ExtendedRouteGapProps extends RouteGapProps {
 
 export const RouteGap = ({ gap, gapId, isSelected, onSelect }: ExtendedRouteGapProps) => {
   const Icon = getTransportIcon(gap.transport);
-  const iconColor = getTransportColor(gap.transport);
-  const transportLabel = getTransportLabel(gap.transport);
+  const iconColor = getTransportColor(gap.transport, gap.routeNumber, gap.startNode.name);
+  const transportLabel = getTransportLabel(gap.transport, gap.routeNumber, gap.startNode.name);
 
   return (
     <div 

@@ -3,6 +3,7 @@ export type {
   RouteNode, RouteGap, RouteSection, RouteResponse,
   WalkingSegment,
   TicketData, TicketDetails, TrainTicketDetails, HotelTicketDetails,
+  MetroLine,
 } from './domain';
 
 export type {

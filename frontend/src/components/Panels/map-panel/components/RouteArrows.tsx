@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet-polylinedecorator';
 import { getSegmentCurvedPoints } from '../utils';
 import { getPolylineOptions } from '../constants';
-import type { RouteSegment } from '../types';
+import type { RouteSegment } from '../../../../types';
 
 type RouteArrowsProps = {
   segments: RouteSegment[];

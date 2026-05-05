@@ -5,6 +5,10 @@ import { MarkerTooltip } from './MarkerTooltip';
 
 export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
   const getMarkerIcon = (marker: MapMarker) => {
+    if (marker.type != 'event' && marker.type != 'point') {
+      return  MARKER_ICONS.selected;
+    }
+
     const category = marker.category || '';
     const categoryLower = category.toLowerCase();
     
@@ -15,7 +19,7 @@ export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
       'кино', 'cinema',
       'ярмарк', 'fair',
       'ивент', 'event',
-      'детск', 'kids',
+      "детские мероприятия", 'kids',
       'благотворительн', 'charity',
       'business', 'бизнес'
     ];
