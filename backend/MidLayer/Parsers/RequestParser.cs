@@ -61,7 +61,7 @@ namespace MidLayer.Parsers
             return new TransportFilter(buses, trams, trolleybuses, metro);
         }
 
-        public static AttractionFilter ParseAttractionFilter(string attractionsCsv, string subattractionsCsv)
+        public static AttractionFilter ParseAttractionFilter(string attractionsCsv, string subattractionsCsv, bool eventsSelected)
         {
             List<string> categories = new List<string>();
             List<string> subcategories = new List<string>();
@@ -79,7 +79,7 @@ namespace MidLayer.Parsers
             }
 
             // Если фильтры не указаны — все категории включены
-            if (categories.Count == 0)
+            if (categories.Count == 0 && !eventsSelected)
             {
                 categories.AddRange(FrontendKeyMap.CategoryMap.Values);
             }
@@ -96,7 +96,7 @@ namespace MidLayer.Parsers
                 }
             }
 
-            if (subcategories.Count == 0)
+            if (subcategories.Count == 0 && !eventsSelected)
             {
                 subcategories.AddRange(FrontendKeyMap.SubcategoryMap.Values);
             }

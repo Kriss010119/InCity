@@ -8,10 +8,6 @@ using DomainLib.Routes;
 
 namespace MidLayer.DataAccess
 {
-    /// <summary>
-    /// Сервис загрузки данных: собирает данные из всех репозиториев параллельно
-    /// и возвращает их в формате, пригодном для создания RoutePlanner.
-    /// </summary>
     public class DataLoader
     {
         private readonly IAttractionRepository _attractionRepo;
@@ -39,9 +35,6 @@ namespace MidLayer.DataAccess
             _cityRepo = cityRepo;
         }
 
-        /// <summary>
-        /// Определяет название города по координатам. Используется для запросов к KudaGo API.
-        /// </summary>
         public async Task<string?> GetCityNameAsync(double latitude, double longitude)
         {
             return await _cityRepo.GetCityNameByCoordinatesAsync(latitude, longitude);
@@ -50,7 +43,7 @@ namespace MidLayer.DataAccess
         public async Task<CityData> LoadCityDataAsync(double latitude, double longitude,
             string[] categories, string[] subcategories, int searchRadius = DefaultSearchRadiusMeters)
         {
-            // Первая волна: остановки, достопримечательности и метро-маршруты
+            // Первая волна: остановки и достопримечательности
             Task<IEnumerable<IAttraction>> attractionsTask = _attractionRepo.GetAttractionsAsync(
                 latitude, longitude, searchRadius, categories, subcategories);
 
@@ -58,25 +51,27 @@ namespace MidLayer.DataAccess
             Task<IEnumerable<TramStop>> tramStopsTask = _tramRepo.GetStopsAsync(latitude, longitude, searchRadius);
             Task<IEnumerable<TrolleybusStop>> trolleybusStopsTask = _trolleybusRepo.GetStopsAsync(latitude, longitude, searchRadius);
             Task<IEnumerable<MetroStation>> metroStationsTask = _metroRepo.GetStationsAsync(latitude, longitude, searchRadius);
-            Task<IEnumerable<MetroRoute>> metroRoutesTask = _metroRepo.GetRoutesAsync();
 
             await Task.WhenAll(attractionsTask, busStopsTask, tramStopsTask,
-                trolleybusStopsTask, metroStationsTask, metroRoutesTask);
+                trolleybusStopsTask, metroStationsTask);
 
             IEnumerable<BusStop> busStops = busStopsTask.Result;
             IEnumerable<TramStop> tramStops = tramStopsTask.Result;
             IEnumerable<TrolleybusStop> trolleybusStops = trolleybusStopsTask.Result;
+            IEnumerable<MetroStation> metroStations = metroStationsTask.Result;
 
-            // Вторая волна: маршруты наземного транспорта по ID найденных остановок
+            // Вторая волна: маршруты по ID найденных остановок/станций
             ulong[] busStopIds = busStops.Select(s => s.ID).ToArray();
             ulong[] tramStopIds = tramStops.Select(s => s.ID).ToArray();
             ulong[] trolleybusStopIds = trolleybusStops.Select(s => s.ID).ToArray();
+            ulong[] metroStationIds = metroStations.Select(s => s.ID).ToArray();
 
             Task<IEnumerable<BusRoute>> busRoutesTask = _busRepo.GetRoutesForStopsAsync(busStopIds);
             Task<IEnumerable<TramRoute>> tramRoutesTask = _tramRepo.GetRoutesForStopsAsync(tramStopIds);
             Task<IEnumerable<TrolleybusRoute>> trolleybusRoutesTask = _trolleybusRepo.GetRoutesForStopsAsync(trolleybusStopIds);
+            Task<IEnumerable<MetroRoute>> metroRoutesTask = _metroRepo.GetRoutesForStationsAsync(metroStationIds);
 
-            await Task.WhenAll(busRoutesTask, tramRoutesTask, trolleybusRoutesTask);
+            await Task.WhenAll(busRoutesTask, tramRoutesTask, trolleybusRoutesTask, metroRoutesTask);
 
             return new CityData
             {
@@ -87,7 +82,7 @@ namespace MidLayer.DataAccess
                 TramRoutes = tramRoutesTask.Result,
                 TrolleybusStops = trolleybusStops,
                 TrolleybusRoutes = trolleybusRoutesTask.Result,
-                MetroStations = metroStationsTask.Result,
+                MetroStations = metroStations,
                 MetroRoutes = metroRoutesTask.Result
             };
         }

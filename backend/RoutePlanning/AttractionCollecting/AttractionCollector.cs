@@ -53,7 +53,7 @@ namespace RoutePlanning.AttractionCollecting
         /// Фактор расстояния учитывает позицию целевого кластера: высчитывается относительно соседей в маршруте.
         /// Замена не должна нарушать требование по количеству гастрономических кластеров.
         /// </summary>
-        public Cluster[] GetReplacements(Cluster[] route, int targetIndex, double startLat, double startLon, int time)
+        public Cluster[] GetReplacements(Cluster[] route, Cluster[] confirmed, int targetIndex, double startLat, double startLon, int time)
         {
             if (targetIndex < 0 || targetIndex >= route.Length)
             {
@@ -68,6 +68,7 @@ namespace RoutePlanning.AttractionCollecting
             int gastroAfterRemoval = targetIsGastro ? gastroInRoute - 1 : gastroInRoute;
 
             HashSet<ulong> routeAttractionIds = CollectAttractionIds(route, targetIndex);
+            routeAttractionIds = routeAttractionIds.Concat(CollectAttractionIds(confirmed)).ToHashSet();
 
             double prevLat, prevLon;
             double nextLat, nextLon;
@@ -418,7 +419,7 @@ namespace RoutePlanning.AttractionCollecting
         /// <summary>
         /// Собирает ID всех достопримечательностей из маршрута, исключая целевой кластер.
         /// </summary>
-        private static HashSet<ulong> CollectAttractionIds(Cluster[] route, int excludeIndex)
+        private static HashSet<ulong> CollectAttractionIds(Cluster[] route, int excludeIndex = -1)
         {
             HashSet<ulong> ids = new HashSet<ulong>();
 

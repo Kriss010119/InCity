@@ -7,10 +7,6 @@ using DomainLib.Routes;
 
 namespace MidLayer.DataAccess
 {
-    /// <summary>
-    /// Интерфейс репозитория достопримечательностей.
-    /// Фильтрация по радиусу — через формулу гаверсинусов в SQL, без PostGIS.
-    /// </summary>
     public interface IAttractionRepository
     {
         Task<IEnumerable<IAttraction>> GetAttractionsAsync(double latitude, double longitude, int radiusMeters,
@@ -38,22 +34,14 @@ namespace MidLayer.DataAccess
     public interface IMetroRepository
     {
         Task<IEnumerable<MetroStation>> GetStationsAsync(double latitude, double longitude, int radiusMeters);
-        Task<IEnumerable<MetroRoute>> GetRoutesAsync();
+        Task<IEnumerable<MetroRoute>> GetRoutesForStationsAsync(IEnumerable<ulong> stationIds);
     }
 
-    /// <summary>
-    /// Репозиторий точек прибытия (ж/д станции, аэропорты).
-    /// Таблица в БД: код, название, координаты.
-    /// </summary>
     public interface IArrivalPointRepository
     {
         Task<ArrivalPoint?> GetByCodeAsync(string code);
     }
 
-    /// <summary>
-    /// Репозиторий городов.
-    /// Определяет город по координатам — ищет ближайший город к заданной точке.
-    /// </summary>
     public interface ICityRepository
     {
         Task<string?> GetCityNameByCoordinatesAsync(double latitude, double longitude);

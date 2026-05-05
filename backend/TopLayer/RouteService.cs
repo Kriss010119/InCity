@@ -35,8 +35,8 @@ namespace TopLayer.Services
         {
             int durationMinutes = RequestParser.ParseDuration(query.Duration);
             TransportFilter transportFilter = RequestParser.ParseTransportFilter(query.Transport);
-            AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions);
             string[] eventCategories = RequestParser.ParseEventCategories(query.Events);
+            AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions, eventCategories.Length > 0);
 
             return await BuildRouteAsync(query.Lat, query.Lng, durationMinutes, transportFilter, attractionFilter, eventCategories);
         }
@@ -52,8 +52,8 @@ namespace TopLayer.Services
 
             int durationMinutes = RequestParser.ParseDuration(query.Duration);
             TransportFilter transportFilter = RequestParser.ParseTransportFilter(query.Transport);
-            AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions);
             string[] eventCategories = RequestParser.ParseEventCategories(query.Events);
+            AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions, eventCategories.Length > 0);
 
             return await BuildRouteAsync(point.Latitude, point.Longitude, durationMinutes, transportFilter, attractionFilter, eventCategories);
         }

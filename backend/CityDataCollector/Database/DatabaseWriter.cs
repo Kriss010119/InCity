@@ -168,14 +168,19 @@ namespace CityDataCollector.Database
                     await delRoutes.ExecuteNonQueryAsync();
                 }
 
-                // Вставляем маршруты
-                foreach (var route in routes)
+                // Вставляем маршруты и запоминаем реальные ID из БД
+                var routeDbIds = new Dictionary<string, List<long>>(); // routeNumber → list of DB IDs (может быть несколько маршрутов с одним номером)
+                var routeIdByIndex = new Dictionary<int, long>(); // index in routes list → DB ID
+
+                for (int ri = 0; ri < routes.Count; ri++)
                 {
+                    var route = routes[ri];
                     long[] stopIds = route.Stops.Select(s => s.NodeId).ToArray();
 
                     string sql = $@"INSERT INTO {routeTable} 
                         (city_id, from_name, to_name, operator, network, route_number, name, stop_ids) 
-                        VALUES (@cityId, @from, @to, @op, @network, @routeNumber, @name, @stopIds)";
+                        VALUES (@cityId, @from, @to, @op, @network, @routeNumber, @name, @stopIds)
+                        RETURNING id";
 
                     using var cmd = new NpgsqlCommand(sql, conn, tx);
                     cmd.Parameters.AddWithValue("cityId", cityId);
@@ -186,14 +191,20 @@ namespace CityDataCollector.Database
                     cmd.Parameters.AddWithValue("routeNumber", route.RouteNumber);
                     cmd.Parameters.AddWithValue("name", route.Name);
                     cmd.Parameters.AddWithValue("stopIds", stopIds);
-                    await cmd.ExecuteNonQueryAsync();
+
+                    long dbId = Convert.ToInt64(await cmd.ExecuteScalarAsync());
+                    routeIdByIndex[ri] = dbId;
+
+                    if (!routeDbIds.ContainsKey(route.RouteNumber))
+                        routeDbIds[route.RouteNumber] = new List<long>();
+                    routeDbIds[route.RouteNumber].Add(dbId);
                 }
 
                 // Вставляем остановки (с route_info как composite type array)
                 foreach (var stop in stops)
                 {
-                    // Формируем route_info[] как строку PostgreSQL
-                    string routeInfoArray = BuildRouteInfoArray(stop.Routes, routes);
+                    // Формируем route_info[] используя реальные ID из БД
+                    string routeInfoArray = BuildRouteInfoArray(stop.Routes, routes, routeIdByIndex);
 
                     string sql = $@"INSERT INTO {stopTable} 
                         (id, city_id, name, local_name, latitude, longitude, route_info) 
@@ -227,11 +238,10 @@ namespace CityDataCollector.Database
         /// <summary>
         /// Строит строковое представление route_info[] для SQL.
         /// Формат: ARRAY[ROW(route_id, route_number, sequence_num)::route_info, ...]
-        /// route_id здесь — это serial из таблицы маршрутов, но на этапе вставки
-        /// мы его не знаем. Используем порядковый номер маршрута как временный ID.
+        /// route_id — реальный serial ID из таблицы маршрутов, полученный через RETURNING id.
         /// </summary>
         private string BuildRouteInfoArray(List<Collectors.StopRouteRef> stopRoutes,
-            List<Collectors.SurfaceRouteData> allRoutes)
+            List<Collectors.SurfaceRouteData> allRoutes, Dictionary<int, long> routeIdByIndex)
         {
             if (stopRoutes.Count == 0)
             {
@@ -241,12 +251,19 @@ namespace CityDataCollector.Database
             var parts = new List<string>();
             foreach (var sr in stopRoutes)
             {
-                // Находим индекс маршрута в общем списке — это будет route_id
-                int routeIndex = allRoutes.FindIndex(r => r.RouteNumber == sr.RouteNumber);
-                if (routeIndex < 0) routeIndex = 0;
+                // Используем RouteIndex — точный индекс маршрута (с учётом направления)
+                int routeIndex = sr.RouteIndex;
+
+                // Получаем реальный ID маршрута из БД
+                if (!routeIdByIndex.TryGetValue(routeIndex, out long dbRouteId)) continue;
 
                 string escaped = sr.RouteNumber.Replace("'", "''");
-                parts.Add($"ROW({routeIndex + 1}, '{escaped}', {sr.Order})::route_info");
+                parts.Add($"ROW({dbRouteId}, '{escaped}', {sr.Order})::route_info");
+            }
+
+            if (parts.Count == 0)
+            {
+                return "ARRAY[]";
             }
 
             return $"ARRAY[{string.Join(", ", parts)}]";
@@ -281,6 +298,7 @@ namespace CityDataCollector.Database
 
                 // Группируем маршруты по парам (прямой/обратный) для metro_lines
                 var lineGroups = routes.GroupBy(r => r.RouteNumber).ToList();
+                var lineDbIds = new Dictionary<string, long>(); // routeNumber → DB ID
 
                 foreach (var group in lineGroups)
                 {
@@ -294,7 +312,8 @@ namespace CityDataCollector.Database
 
                     string sql = @"INSERT INTO metro_lines 
                         (city_id, name, route_number, operator, color_code, station_ids_forward, station_ids_backward) 
-                        VALUES (@cityId, @name, @routeNumber, @op, @color, @forward, @backward)";
+                        VALUES (@cityId, @name, @routeNumber, @op, @color, @forward, @backward)
+                        RETURNING id";
 
                     using var cmd = new NpgsqlCommand(sql, conn, tx);
                     cmd.Parameters.AddWithValue("cityId", cityId);
@@ -304,14 +323,16 @@ namespace CityDataCollector.Database
                     cmd.Parameters.AddWithValue("color", first.Color);
                     cmd.Parameters.AddWithValue("forward", forwardIds);
                     cmd.Parameters.AddWithValue("backward", backwardIds);
-                    await cmd.ExecuteNonQueryAsync();
+
+                    long dbId = Convert.ToInt64(await cmd.ExecuteScalarAsync());
+                    lineDbIds[first.RouteNumber] = dbId;
                 }
 
                 // Вставляем станции
                 foreach (var station in stations)
                 {
-                    string lineInfoArray = BuildMetroLineInfoArray(station.Routes);
-                    string transfersArray = BuildMetroTransferArray(station.Transfers);
+                    string lineInfoArray = BuildMetroLineInfoArray(station.Routes, lineDbIds);
+                    string transfersArray = BuildMetroTransferArray(station.Transfers, lineDbIds);
 
                     string sql = $@"INSERT INTO metro_stations 
                         (id, city_id, name, local_name, latitude, longitude, is_transfer, line_info, transfers) 
@@ -345,21 +366,29 @@ namespace CityDataCollector.Database
             }
         }
 
-        private string BuildMetroLineInfoArray(List<Collectors.MetroRouteRef> routes)
+        private string BuildMetroLineInfoArray(List<Collectors.MetroRouteRef> routes, Dictionary<string, long> lineDbIds)
         {
             if (routes == null || routes.Count == 0) return "ARRAY[]";
 
-            var parts = routes.Select(r =>
+            var parts = new List<string>();
+            foreach (var r in routes)
             {
+                if (!lineDbIds.TryGetValue(r.RouteNumber, out long dbId))
+                {
+                    continue;
+                }
+
                 string rn = r.RouteNumber.Replace("'", "''");
                 string color = r.Color.Replace("'", "''");
-                return $"ROW(0, '{rn}', '{color}', {r.Order})::metro_line_info";
-            });
+                parts.Add($"ROW({dbId}, '{rn}', '{color}', {r.Order})::metro_line_info");
+            }
+
+            if (parts.Count == 0) return "ARRAY[]";
 
             return $"ARRAY[{string.Join(", ", parts)}]";
         }
 
-        private string BuildMetroTransferArray(List<Collectors.MetroTransferRef> transfers)
+        private string BuildMetroTransferArray(List<Collectors.MetroTransferRef> transfers, Dictionary<string, long> lineDbIds)
         {
             if (transfers == null || transfers.Count == 0) return "ARRAY[]";
 
@@ -369,9 +398,14 @@ namespace CityDataCollector.Database
                 string stationName = t.Key.Replace("'", "''");
                 foreach (var route in t.Value)
                 {
+                    if (!lineDbIds.TryGetValue(route.RouteNumber, out long dbId))
+                    {
+                        continue;
+                    }
+
                     string rn = route.RouteNumber.Replace("'", "''");
                     string color = route.Color.Replace("'", "''");
-                    parts.Add($"ROW('{stationName}', 0, '{rn}', '{color}', {route.Order})::metro_transfer_info");
+                    parts.Add($"ROW('{stationName}', {dbId}, '{rn}', '{color}', {route.Order})::metro_transfer_info");
                 }
             }
 

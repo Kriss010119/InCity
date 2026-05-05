@@ -10,9 +10,6 @@ using CityDataCollector.Infrastructure;
 
 namespace CityDataCollector.Collectors
 {
-    /// <summary>
-    /// Виды наземного транспорта для сбора данных.
-    /// </summary>
     public enum SurfaceTransportType
     {
         Bus,
@@ -20,19 +17,12 @@ namespace CityDataCollector.Collectors
         Trolleybus
     }
 
-    /// <summary>
-    /// Результат сбора данных наземного транспорта.
-    /// </summary>
     public class SurfaceTransportResult
     {
         public List<SurfaceRouteData> Routes { get; set; } = new();
         public List<SurfaceStopData> Stops { get; set; } = new();
     }
 
-    /// <summary>
-    /// Данные маршрута для сериализации в JSON.
-    /// Совместимы с форматом generate_seed.py.
-    /// </summary>
     public class SurfaceRouteData
     {
         public long Id { get; set; }
@@ -55,9 +45,6 @@ namespace CityDataCollector.Collectors
         public int Sequence { get; set; }
     }
 
-    /// <summary>
-    /// Данные остановки для сериализации в JSON.
-    /// </summary>
     public class SurfaceStopData
     {
         public long Id { get; set; }
@@ -70,14 +57,16 @@ namespace CityDataCollector.Collectors
 
     public class StopRouteRef
     {
+        public long StopId { get; set; }
         public string RouteNumber { get; set; } = "";
         public int Order { get; set; }
+
+        /// <summary>
+        /// Индекс маршрута в списке routes (для точной идентификации направления).
+        /// </summary>
+        public int RouteIndex { get; set; }
     }
 
-    /// <summary>
-    /// Сборщик данных наземного транспорта (автобусы, трамваи, троллейбусы).
-    /// Единый класс для всех трёх видов — отличаются только OSM-теги.
-    /// </summary>
     public class SurfaceTransportCollector
     {
         private readonly OverpassClient _client;
@@ -85,7 +74,7 @@ namespace CityDataCollector.Collectors
         private readonly string _osmRouteTag;
         private readonly string _osmStopTags;
         private readonly string _typeName;
-        private readonly int _batchSize = 40;
+        private readonly int _batchSize = 100;
 
         public SurfaceTransportCollector(OverpassClient client, SurfaceTransportType type)
         {
@@ -95,20 +84,20 @@ namespace CityDataCollector.Collectors
             (_osmRouteTag, _osmStopTags, _typeName) = type switch
             {
                 SurfaceTransportType.Bus => (
-                    "bus", 
-                    @"node[""highway""=""bus_stop""](area.searchArea); node[""public_transport""=""platform""][""bus""=""yes""](area.searchArea);", 
+                    "bus",
+                    @"node[""highway""=""bus_stop""](area.searchArea); node[""public_transport""=""platform""][""bus""=""yes""](area.searchArea);",
                     "автобусов"),
-                
+
                 SurfaceTransportType.Tram => (
-                    "tram", 
-                    @"node[""railway""=""tram_stop""](area.searchArea); node[""public_transport""=""platform""][""tram""=""yes""](area.searchArea); node[""tram""=""yes""](area.searchArea);", 
+                    "tram",
+                    @"node[""railway""=""tram_stop""](area.searchArea); node[""public_transport""=""platform""][""tram""=""yes""](area.searchArea); node[""tram""=""yes""](area.searchArea);",
                     "трамваев"),
-                
+
                 SurfaceTransportType.Trolleybus => (
-                    "trolleybus", 
-                    @"node[""highway""=""bus_stop""][""trolleybus""=""yes""](area.searchArea); node[""public_transport""=""platform""][""trolleybus""=""yes""](area.searchArea); node[""trolleybus""=""yes""](area.searchArea);", 
+                    "trolleybus",
+                    @"node[""highway""=""bus_stop""][""trolleybus""=""yes""](area.searchArea); node[""public_transport""=""platform""][""trolleybus""=""yes""](area.searchArea); node[""trolleybus""=""yes""](area.searchArea);",
                     "троллейбусов"),
-                
+
                 _ => throw new ArgumentException($"Unknown type: {type}")
             };
         }
@@ -130,33 +119,63 @@ namespace CityDataCollector.Collectors
 
             FileLogger.Instance.Log($"  {_typeName}: найдено {routeIds.Count} ID маршрутов");
 
-            // ШАГ 2: Загружаем маршруты пачками по 20
+            // ШАГ 2: Загружаем маршруты с их остановками (пачками)
             var routes = await LoadRoutesBatchAsync(routeIds, batchSize: _batchSize);
             FileLogger.Instance.Log($"  {_typeName}: загружено {routes.Count} маршрутов с остановками");
 
-            // ШАГ 3: Получаем все остановки
-            var stops = await GetAllStopsAsync(cityName);
-            FileLogger.Instance.Log($"  {_typeName}: получено {stops.Count} остановок");
+            // ШАГ 3: Строим остановки из маршрутов (новый подход)
+            // Словарь: stopId → SurfaceStopData (с координатами и RouteInfo из маршрутов)
+            var stopDict = new Dictionary<long, SurfaceStopData>();
 
-            // ШАГ 4: Обогащаем остановки информацией о маршрутах
-            EnrichStopsWithRouteInfo(stops, routes);
+            for (int routeIndex = 0; routeIndex < routes.Count; routeIndex++)
+            {
+                var route = routes[routeIndex];
 
-            // ШАГ 5: Удаляем остановки без маршрутов
-            stops = stops.Where(s => s.Routes.Count > 0).ToList();
+                for (int i = 0; i < route.Stops.Count; i++)
+                {
+                    var routeStop = route.Stops[i];
+                    int order = i + 1; // Order начинается с 1
+
+                    if (!stopDict.TryGetValue(routeStop.NodeId, out var stopData))
+                    {
+                        stopData = new SurfaceStopData
+                        {
+                            Id = routeStop.NodeId,
+                            Name = routeStop.Name,
+                            Latitude = routeStop.Latitude,
+                            Longitude = routeStop.Longitude
+                        };
+                        stopDict[routeStop.NodeId] = stopData;
+                    }
+
+                    stopData.Routes.Add(new StopRouteRef
+                    {
+                        StopId = routeStop.NodeId,
+                        RouteNumber = route.RouteNumber,
+                        Order = order,
+                        RouteIndex = routeIndex
+                    });
+                }
+            }
+
+            // ШАГ 4: Получаем названия остановок из OSM (отдельный запрос)
+            await EnrichStopNamesAsync(stopDict, cityName);
 
             result.Routes = routes;
-            result.Stops = stops;
+            result.Stops = stopDict.Values.ToList();
 
-            FileLogger.Instance.Log($"  {_typeName}: итого {routes.Count} маршрутов, {stops.Count} остановок");
+            FileLogger.Instance.Log($"  {_typeName}: итого {routes.Count} маршрутов, {result.Stops.Count} остановок");
             return result;
         }
+
+        // ==================== ЗАПРОСЫ К OSM ====================
 
         private async Task<List<long>> GetRouteIdsAsync(string cityName)
         {
             string query = $@"
                 [out:json][timeout:90];
                 area[name=""{cityName}""]->.searchArea;
-                relation[type=""route""][route=""{_osmRouteTag}""](area.searchArea);
+                relation[type=""route""][route=""{_osmRouteTag}""](area.searchArea)(newer:""2023-01-01T00:00:00Z"");
                 out ids;";
 
             var json = await _client.ExecuteQueryAsync(query);
@@ -203,7 +222,6 @@ namespace CityDataCollector.Collectors
                     allRoutes.AddRange(parsed);
                 }
 
-                // Пауза между пачками
                 if (i + batchSize < routeIds.Count)
                 {
                     await Task.Delay(500);
@@ -213,45 +231,57 @@ namespace CityDataCollector.Collectors
             return allRoutes;
         }
 
-        private async Task<List<SurfaceStopData>> GetAllStopsAsync(string cityName)
+        /// <summary>
+        /// Одним запросом получает все остановки данного вида транспорта в городе,
+        /// затем обогащает словарь названиями.
+        /// </summary>
+        private async Task EnrichStopNamesAsync(Dictionary<long, SurfaceStopData> stopDict, string cityName)
         {
+            if (stopDict.Count == 0) return;
+
             string query = $@"
                 [out:json][timeout:90];
                 area[name=""{cityName}""]->.searchArea;
                 ({_osmStopTags});
-                out body; >; out skel qt;";
+                out body;";
 
             var json = await _client.ExecuteQueryAsync(query);
-            if (json == null) return new List<SurfaceStopData>();
+            if (json == null) return;
 
-            return ParseStops(json);
-        }
-
-        private void EnrichStopsWithRouteInfo(List<SurfaceStopData> stops, List<SurfaceRouteData> routes)
-        {
-            var stopDict = stops.ToDictionary(s => s.Id, s => s);
-
-            foreach (var route in routes)
+            try
             {
-                foreach (var routeStop in route.Stops)
+                using var doc = JsonDocument.Parse(json);
+                foreach (var el in doc.RootElement.GetProperty("elements").EnumerateArray())
                 {
-                    if (stopDict.TryGetValue(routeStop.NodeId, out var stop))
-                    {
-                        stop.Routes.Add(new StopRouteRef
-                        {
-                            RouteNumber = route.RouteNumber,
-                            Order = routeStop.Sequence
-                        });
+                    if (el.GetProperty("type").GetString() != "node") continue;
 
-                        // Обогащаем имя остановки из маршрута если пусто
-                        if (string.IsNullOrEmpty(stop.Name) && !string.IsNullOrEmpty(routeStop.Name))
+                    long id = el.GetProperty("id").GetInt64();
+
+                    if (!stopDict.TryGetValue(id, out var stop)) continue;
+
+                    if (el.TryGetProperty("tags", out var tags))
+                    {
+                        string name = OsmParser.GetTag(tags, "name");
+                        if (!string.IsNullOrEmpty(name))
                         {
-                            stop.Name = routeStop.Name;
+                            stop.Name = name;
+                        }
+
+                        string localName = OsmParser.GetTag(tags, "name:ru");
+                        if (!string.IsNullOrEmpty(localName))
+                        {
+                            stop.LocalName = localName;
                         }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                FileLogger.Instance.LogError("  Ошибка обогащения названий остановок", ex);
+            }
         }
+
+        // ==================== ПАРСИНГ ====================
 
         private List<SurfaceRouteData> ParseRoutesWithStops(string json)
         {
@@ -299,13 +329,15 @@ namespace CityDataCollector.Collectors
 
                     if (el.TryGetProperty("members", out var members))
                     {
+                        int stopIndex = 0;
+
                         foreach (var member in members.EnumerateArray())
                         {
                             string role = member.GetProperty("role").GetString() ?? "";
                             string type = member.GetProperty("type").GetString() ?? "";
                             long refId = member.GetProperty("ref").GetInt64();
 
-                            if (type == "node" && (role.Contains("stop") || role == "platform"))
+                            if (type == "node" && role.Contains("platform") && !role.Contains("stop"))
                             {
                                 if (nodes.TryGetValue(refId, out var node))
                                 {
@@ -316,14 +348,15 @@ namespace CityDataCollector.Collectors
                                         Latitude = node.lat,
                                         Longitude = node.lon,
                                         Role = role,
-                                        Sequence = route.Stops.Count
+                                        Sequence = stopIndex + 1
                                     });
+                                    stopIndex++;
                                 }
                             }
                         }
                     }
 
-                    if (!string.IsNullOrEmpty(route.RouteNumber))
+                    if (!string.IsNullOrEmpty(route.RouteNumber) && route.Stops.Count > 0)
                     {
                         routes.Add(route);
                     }
@@ -335,36 +368,6 @@ namespace CityDataCollector.Collectors
             }
 
             return routes;
-        }
-
-        private List<SurfaceStopData> ParseStops(string json)
-        {
-            var stops = new List<SurfaceStopData>();
-
-            try
-            {
-                using var doc = JsonDocument.Parse(json);
-                foreach (var el in doc.RootElement.GetProperty("elements").EnumerateArray())
-                {
-                    if (el.GetProperty("type").GetString() != "node") continue;
-                    if (!el.TryGetProperty("tags", out var tags)) continue;
-
-                    stops.Add(new SurfaceStopData
-                    {
-                        Id = el.GetProperty("id").GetInt64(),
-                        Name = OsmParser.GetTag(tags, "name"),
-                        LocalName = OsmParser.GetTag(tags, "name:ru"),
-                        Latitude = el.GetProperty("lat").GetDouble(),
-                        Longitude = el.GetProperty("lon").GetDouble()
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                FileLogger.Instance.LogError("  Ошибка парсинга остановок", ex);
-            }
-
-            return stops;
         }
     }
 }

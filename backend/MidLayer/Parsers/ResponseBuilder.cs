@@ -4,6 +4,7 @@ using MidLayer.Contracts;
 using DomainLib.Interfaces;
 using DomainLib.Attractions;
 using DomainLib.Stations;
+using DomainLib.Routes;
 using RoutePlanning.AttractionConnecting;
 
 namespace MidLayer.Parsers
@@ -38,7 +39,6 @@ namespace MidLayer.Parsers
 
         private static ClusterDto MapCluster(Cluster cluster)
         {
-            // Определяем главную достопримечательность (максимальный InterestRate = EstimatedVisitMinutes * Tags.Count)
             int mainIndex = 0;
             int bestScore = 0;
 
@@ -113,8 +113,6 @@ namespace MidLayer.Parsers
                 gaps.Add(MapMetroGap(metroGap));
             }
 
-            gaps.Sort((a, b) => a.StartNode.Sequence.CompareTo(b.StartNode.Sequence));
-
             return new SectionDto
             {
                 Gaps = [.. gaps],
@@ -123,44 +121,132 @@ namespace MidLayer.Parsers
             };
         }
 
+        /// <summary>
+        /// Маппит Gap в DTO. Sequence каждой остановки = её Order в маршруте (из RouteInfo),
+        /// а не порядковый номер внутри gap-а.
+        /// </summary>
         private static GapDto MapGap(Gap<IStation> gap)
         {
+            // Находим RouteID маршрута этого gap-а по startNode
+            ulong routeId = FindRouteId(gap.StartNode, gap.EndNode);
+
+            // Sequence для startNode = его Order в маршруте
+            int startOrder = GetRouteOrder(gap.StartNode, routeId);
+            int endOrder = GetRouteOrder(gap.EndNode, routeId);
+
             List<NodeDto> visited = new List<NodeDto>();
-            int seq = gap.Order * 100 + 1;
 
             foreach (IStation node in gap.NodesVisited)
             {
-                visited.Add(MapStationNode(node, "platform", seq++));
+                int order = GetRouteOrder(node, routeId);
+                visited.Add(MapStationNode(node, "platform", order));
             }
 
             return new GapDto
             {
-                StartNode = MapStationNode(gap.StartNode, "platform", gap.Order * 100),
-                EndNode = MapStationNode(gap.EndNode, "platform", seq),
+                StartNode = MapStationNode(gap.StartNode, "platform", startOrder),
+                EndNode = MapStationNode(gap.EndNode, "platform", endOrder),
                 Transport = gap.Transport,
                 RouteNumber = gap.RouteNumber,
                 NodesVisited = [.. visited]
             };
         }
 
+        /// <summary>
+        /// Находит RouteID общего маршрута двух остановок.
+        /// Ищет маршрут где startNode.Order менее endNode.Order (правильное направление).
+        /// </summary>
+        private static ulong FindRouteId(IStation startNode, IStation endNode)
+        {
+            foreach (RouteInfo ri1 in startNode.Routes)
+            {
+                foreach (RouteInfo ri2 in endNode.Routes)
+                {
+                    if (ri1.RouteID == ri2.RouteID && ri1.Order < ri2.Order)
+                    {
+                        return ri1.RouteID;
+                    }
+                }
+            }
+
+            // Fallback: первый общий маршрут
+            foreach (RouteInfo ri1 in startNode.Routes)
+            {
+                foreach (RouteInfo ri2 in endNode.Routes)
+                {
+                    if (ri1.RouteID == ri2.RouteID)
+                    {
+                        return ri1.RouteID;
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Получает Order остановки на конкретном маршруте.
+        /// </summary>
+        private static int GetRouteOrder(IStation station, ulong routeId)
+        {
+            RouteInfo? ri = station.Routes.Find(r => r.RouteID == routeId);
+            return ri?.Order ?? 0;
+        }
+
         private static GapDto MapMetroGap(MetroGap gap)
         {
+            // Для метро используем MetroRouteInfo
+            ulong routeId = FindMetroRouteId(gap.StartNode, gap.EndNode);
+
+            int startOrder = GetMetroRouteOrder(gap.StartNode, routeId);
+            int endOrder = GetMetroRouteOrder(gap.EndNode, routeId);
+
             List<NodeDto> visited = new List<NodeDto>();
-            int seq = gap.Order * 100 + 1;
 
             foreach (MetroStation node in gap.NodesVisited)
             {
-                visited.Add(MapMetroNode(node, seq++));
+                int order = GetMetroRouteOrder(node, routeId);
+                visited.Add(MapMetroNode(node, order));
             }
 
             return new GapDto
             {
-                StartNode = MapMetroNode(gap.StartNode, gap.Order * 100),
-                EndNode = MapMetroNode(gap.EndNode, seq),
+                StartNode = MapMetroNode(gap.StartNode, startOrder),
+                EndNode = MapMetroNode(gap.EndNode, endOrder),
                 Transport = gap.Transport,
                 RouteNumber = gap.RouteNumber,
                 NodesVisited = [.. visited]
             };
+        }
+
+        private static ulong FindMetroRouteId(MetroStation start, MetroStation end)
+        {
+            if (start.Routes != null && end.Routes != null)
+            {
+                foreach (MetroRouteInfo ri1 in start.Routes)
+                {
+                    foreach (MetroRouteInfo ri2 in end.Routes)
+                    {
+                        if (ri1.RouteID == ri2.RouteID)
+                        {
+                            return ri1.RouteID;
+                        }
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+        private static int GetMetroRouteOrder(MetroStation station, ulong routeId)
+        {
+            if (station.Routes != null)
+            {
+                MetroRouteInfo? ri = station.Routes.Find(r => r.RouteID == routeId);
+                if (ri != null) return ri.Order;
+            }
+
+            return 0;
         }
 
         private static NodeDto MapStationNode(IStation station, string role, int sequence)

@@ -52,29 +52,54 @@ namespace TopLayer.Repositories
             return result;
         }
 
-        public async Task<IEnumerable<MetroRoute>> GetRoutesAsync()
+        /// <summary>
+        /// Загружает линии метро, содержащие указанные станции.
+        /// Аналогично GetRoutesForStopsAsync в наземном транспорте:
+        /// ищем линии где station_ids_forward или station_ids_backward пересекаются с переданными ID,
+        /// затем загружаем все станции этих линий и строим MetroRoute.
+        /// </summary>
+        public async Task<IEnumerable<MetroRoute>> GetRoutesForStationsAsync(IEnumerable<ulong> stationIds)
         {
+            long[] ids = stationIds.Select(id => (long)id).ToArray();
+            if (ids.Length == 0) return [];
+
+            //string sql = @"
+            //    SELECT id, name, route_number, operator, color_code, 
+            //           station_ids_forward, station_ids_backward
+            //    FROM metro_lines
+            //    WHERE station_ids_forward && @stationIds
+            //       OR station_ids_backward && @stationIds";
+
+            string sql = @"
+                SELECT id, name, route_number, operator, color_code, 
+                       station_ids_forward, station_ids_backward
+                FROM metro_lines";
+
             using var connection = new NpgsqlConnection(_connectionString);
+            var lines = await connection.QueryAsync(sql, new { stationIds = ids });
+            var lineList = lines.ToList();
 
-            var lines = await connection.QueryAsync(
-                "SELECT id, name, route_number, operator, color_code, station_ids_forward, station_ids_backward FROM metro_lines");
+            if (lineList.Count == 0) return [];
 
-            var allStations = await connection.QueryAsync(
-                @"SELECT id, name, local_name, latitude, longitude, is_transfer,
-                         line_info::text as line_info_text, 
-                         transfers::text as transfers_text
-                  FROM metro_stations");
-
-            Dictionary<long, MetroStation> stationsDict = new Dictionary<long, MetroStation>();
-            foreach (var row in allStations)
+            HashSet<long> allStationIds = new HashSet<long>();
+            foreach (var line in lineList)
             {
-                long id = (long)row.id;
-                stationsDict[id] = ParseMetroStation(row);
+                long[]? forwardIds = line.station_ids_forward as long[];
+                long[]? backwardIds = line.station_ids_backward as long[];
+
+                if (forwardIds != null)
+                    foreach (long sid in forwardIds) allStationIds.Add(sid);
+                if (backwardIds != null)
+                    foreach (long sid in backwardIds) allStationIds.Add(sid);
             }
 
+            // Загружаем все станции этих линий
+            Dictionary<long, MetroStation> stationsDict = await LoadStationsByIds(connection, allStationIds);
+
+            // Строим MetroRoute для каждого направления
             List<MetroRoute> result = new List<MetroRoute>();
 
-            foreach (var line in lines)
+            foreach (var line in lineList)
             {
                 int lineId = (int)line.id;
                 string routeNumber = (string)line.route_number;
@@ -91,8 +116,11 @@ namespace TopLayer.Repositories
                     foreach (long sid in forwardIds)
                         if (stationsDict.TryGetValue(sid, out MetroStation? st)) stations.Add(st);
 
-                    ulong forwardRouteId = (ulong)(lineId * 10 + 1);
-                    result.Add(new MetroRoute(forwardRouteId, routeNumber, lineName + " (прямое)", stations, color, lineName, op));
+                    if (stations.Count > 0)
+                    {
+                        ulong forwardRouteId = (ulong)(lineId * 10 + 1);
+                        result.Add(new MetroRoute(forwardRouteId, routeNumber, lineName + " (прямое)", stations, color, lineName, op));
+                    }
                 }
 
                 if (backwardIds != null && backwardIds.Length > 0)
@@ -101,12 +129,40 @@ namespace TopLayer.Repositories
                     foreach (long sid in backwardIds)
                         if (stationsDict.TryGetValue(sid, out MetroStation? st)) stations.Add(st);
 
-                    ulong backwardRouteId = (ulong)(lineId * 10 + 2);
-                    result.Add(new MetroRoute(backwardRouteId, routeNumber, lineName + " (обратное)", stations, color, lineName, op));
+                    if (stations.Count > 0)
+                    {
+                        ulong backwardRouteId = (ulong)(lineId * 10 + 2);
+                        result.Add(new MetroRoute(backwardRouteId, routeNumber, lineName + " (обратное)", stations, color, lineName, op));
+                    }
                 }
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Загружает станции метро по набору ID.
+        /// </summary>
+        private async Task<Dictionary<long, MetroStation>> LoadStationsByIds(NpgsqlConnection connection, HashSet<long> stationIds)
+        {
+            if (stationIds.Count == 0) return new Dictionary<long, MetroStation>();
+
+            var rows = await connection.QueryAsync(
+                @"SELECT id, name, local_name, latitude, longitude, is_transfer,
+                         line_info::text as line_info_text, 
+                         transfers::text as transfers_text
+                  FROM metro_stations WHERE id = ANY(@ids)",
+                new { ids = stationIds.ToArray() });
+
+            Dictionary<long, MetroStation> dict = new Dictionary<long, MetroStation>();
+
+            foreach (var row in rows)
+            {
+                long id = (long)row.id;
+                dict[id] = ParseMetroStation(row);
+            }
+
+            return dict;
         }
 
         private static MetroStation ParseMetroStation(dynamic row)

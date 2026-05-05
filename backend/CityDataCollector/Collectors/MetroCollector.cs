@@ -102,6 +102,16 @@ namespace CityDataCollector.Collectors
             FileLogger.Instance.Log($"  Метро ШАГ 3: Обработка...");
             EnrichRoutesWithStationNames(routes);
             EnrichStationsWithRouteInfo(stations, routes);
+
+            int beforeDedup = stations.Count;
+            stations = DeduplicateStations(stations);
+            if (stations.Count < beforeDedup)
+                FileLogger.Instance.Log($"  Метро: дедупликация станций {beforeDedup} → {stations.Count}");
+
+            // ШАГ 4: Замена Stops маршрутов на станции (с их ID вместо ID точек остановки)
+            FileLogger.Instance.Log($"  Метро ШАГ 4: Замена Stops маршрутов на станции...");
+            RebuildRouteStopsFromStations(routes, stations);
+
             ProcessTransfers(stations);
             stations = stations.Where(s => s.Routes.Count > 0).ToList();
 
@@ -283,6 +293,133 @@ namespace CityDataCollector.Collectors
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Объединяет станции-дубликаты в одну.
+        /// Дубликаты — станции с одинаковым набором Routes (RouteNumber + Order).
+        /// Это происходит когда пересадочные станции с одним именем (например "Октябрьская"
+        /// на кольцевой и на линии 6) после EnrichStationsWithRouteInfo получают
+        /// одинаковые Routes. Оставляем одну станцию — она будет принадлежать всем маршрутам.
+        /// </summary>
+        private List<MetroStationData> DeduplicateStations(List<MetroStationData> stations)
+        {
+            var seen = new HashSet<string>();
+            var result = new List<MetroStationData>();
+
+            foreach (var station in stations)
+            {
+                // Формируем ключ из отсортированных Routes
+                var routeKey = string.Join("|",
+                    station.Routes
+                        .OrderBy(r => r.RouteNumber)
+                        .ThenBy(r => r.Order)
+                        .Select(r => $"{r.RouteNumber}:{r.Order}:{r.Color}"));
+
+                // Добавляем имя в ключ, чтобы не слить разные станции с одинаковыми Routes
+                string key = $"{station.Name}|{routeKey}";
+
+                if (seen.Add(key))
+                {
+                    result.Add(station);
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Заменяет Stops каждого маршрута на данные из станций (с ID станций, а не ID точек остановки).
+        /// После EnrichStationsWithRouteInfo каждая станция знает свои Routes (маршруты и Order на них).
+        /// Проходимся по станциям, для каждого RouteRef находим соответствующий маршрут
+        /// и добавляем станцию в его Stops. В конце сортируем Stops по Sequence.
+        /// Конечным станциям (кроме кольцевых маршрутов) ставим специальные роли.
+        /// </summary>
+        private void RebuildRouteStopsFromStations(List<MetroRouteData> routes, List<MetroStationData> stations)
+        {
+            // Словарь маршрутов по (RouteNumber, Name) для быстрого поиска
+            // Name нужен чтобы различать направления одного маршрута
+            var routeByKey = new Dictionary<string, MetroRouteData>();
+            foreach (var route in routes)
+            {
+                string key = $"{route.RouteNumber}|{route.Name}";
+                routeByKey.TryAdd(key, route);
+            }
+
+            // Также строим индекс по RouteNumber → список маршрутов (для fallback)
+            var routesByNumber = new Dictionary<string, List<MetroRouteData>>();
+            foreach (var route in routes)
+            {
+                if (!routesByNumber.ContainsKey(route.RouteNumber))
+                    routesByNumber[route.RouteNumber] = new();
+                routesByNumber[route.RouteNumber].Add(route);
+            }
+
+            // Опустошаем Stops у всех маршрутов
+            foreach (var route in routes)
+            {
+                route.Stops.Clear();
+            }
+
+            // Проходимся по станциям, добавляем их в Stops маршрутов
+            foreach (var station in stations)
+            {
+                foreach (var routeRef in station.Routes)
+                {
+                    // Ищем маршрут по RouteNumber — станция может быть на нескольких направлениях
+                    if (!routesByNumber.TryGetValue(routeRef.RouteNumber, out var matchingRoutes))
+                        continue;
+
+                    foreach (var route in matchingRoutes)
+                    {
+                        // Проверяем что у станции есть RouteRef именно для этого маршрута
+                        // (по RouteNumber и Color, так как Color уникален для линии)
+                        bool belongsToThisRoute = station.Routes.Any(r =>
+                            r.RouteNumber == route.RouteNumber && r.Color == route.Color);
+
+                        if (!belongsToThisRoute)
+                            continue;
+
+                        // Проверяем что станция ещё не добавлена в этот маршрут
+                        if (route.Stops.Any(s => s.NodeId == station.Id))
+                            continue;
+
+                        route.Stops.Add(new RouteStopData
+                        {
+                            NodeId = station.Id,
+                            Name = !string.IsNullOrEmpty(station.LocalName) ? station.LocalName : station.Name,
+                            Latitude = station.Latitude,
+                            Longitude = station.Longitude,
+                            Role = "platform",
+                            Sequence = routeRef.Order
+                        });
+                    }
+                }
+            }
+
+            // Сортируем Stops по Sequence и расставляем роли конечных станций
+            foreach (var route in routes)
+            {
+                route.Stops = route.Stops.OrderBy(s => s.Sequence).ToList();
+
+                if (route.Stops.Count < 2) continue;
+
+                // Проверяем, кольцевой ли маршрут
+                string nameLower = (route.Name ?? "").ToLower();
+                bool isRing = nameLower.Contains("кольц") || nameLower.Contains("кольцо");
+
+                if (!isRing)
+                {
+                    route.Stops[0].Role = "platform_entry_only";
+                    route.Stops[^1].Role = "platform_exit_only";
+                }
+            }
+
+            // Убираем маршруты без станций
+            routes.RemoveAll(r => r.Stops.Count == 0);
+
+            int totalStops = routes.Sum(r => r.Stops.Count);
+            FileLogger.Instance.Log($"  Метро: после замены — {routes.Count} маршрутов, {totalStops} остановок (станций)");
         }
 
         private void ProcessTransfers(List<MetroStationData> stations)
