@@ -97,7 +97,7 @@ export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
           )}
 
           {description ? (
-            <p className={styles.tooltipDescription}>{description}</p>
+            <p className={styles.tooltipDescription}>{description.substring(0, 200)}...</p>
           ) : (
             marker.type === 'point' && (
               <p className={styles.tooltipHint}>Нажмите, чтобы узнать больше</p>
