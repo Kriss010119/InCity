@@ -13,6 +13,7 @@ namespace DomainLib.Routes
         public string Color { get; }
         public string Line { get; }
         public string Operator { get; }
+        public bool IsLoop { get => (Name ?? "").Contains("кольц", StringComparison.CurrentCultureIgnoreCase); }
 
         public MetroRoute(ulong id, string routeNumber, string name, List<MetroStation> stations, string color, string line, string op)
         {

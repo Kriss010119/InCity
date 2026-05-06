@@ -70,7 +70,7 @@ namespace RoutePlanning.CityData
             }
             if (filter.MetroIncluded)
             {
-                ansM.AddRange(GetClosestMetroStations(latitude, longitude, amount, searchRad));
+                ansM.AddRange(GetClosestMetroStations(latitude, longitude, 4, searchRad));
             }
 
             ansSt.Sort((el1, el2) =>

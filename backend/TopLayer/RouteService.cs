@@ -10,6 +10,7 @@ using RoutePlanning.Service;
 using DomainLib.Attractions;
 using DomainLib.Interfaces;
 using DomainLib.Service;
+using MidLayer.Mapping;
 
 namespace TopLayer.Services
 {
@@ -34,11 +35,12 @@ namespace TopLayer.Services
         public async Task<RouteResponse> BuildRouteFromPointAsync(RouteFromPointQuery query)
         {
             int durationMinutes = RequestParser.ParseDuration(query.Duration);
+            int minTimeForCluster = RequestParser.ParseMinimalTimesForClusters(query.Duration);
             TransportFilter transportFilter = RequestParser.ParseTransportFilter(query.Transport);
             string[] eventCategories = RequestParser.ParseEventCategories(query.Events);
             AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions, eventCategories.Length > 0);
 
-            return await BuildRouteAsync(query.Lat, query.Lng, durationMinutes, transportFilter, attractionFilter, eventCategories);
+            return await BuildRouteAsync(query.Lat, query.Lng, durationMinutes, minTimeForCluster, transportFilter, attractionFilter, eventCategories);
         }
 
         public async Task<RouteResponse> BuildRouteFromOrderAsync(RouteFromOrderQuery query)
@@ -51,14 +53,15 @@ namespace TopLayer.Services
             }
 
             int durationMinutes = RequestParser.ParseDuration(query.Duration);
+            int minTimeForCluster = RequestParser.ParseMinimalTimesForClusters(query.Duration);
             TransportFilter transportFilter = RequestParser.ParseTransportFilter(query.Transport);
             string[] eventCategories = RequestParser.ParseEventCategories(query.Events);
             AttractionFilter attractionFilter = RequestParser.ParseAttractionFilter(query.Attractions, query.Subattractions, eventCategories.Length > 0);
 
-            return await BuildRouteAsync(point.Latitude, point.Longitude, durationMinutes, transportFilter, attractionFilter, eventCategories);
+            return await BuildRouteAsync(point.Latitude, point.Longitude, durationMinutes, minTimeForCluster, transportFilter, attractionFilter, eventCategories);
         }
 
-        private async Task<RouteResponse> BuildRouteAsync(double lat, double lon, int durationMinutes,
+        private async Task<RouteResponse> BuildRouteAsync(double lat, double lon, int durationMinutes, int minTimeForCluster,
             TransportFilter transportFilter, AttractionFilter attractionFilter, string[] eventCategories)
         {
             // Запускаем загрузку данных из БД
@@ -96,7 +99,7 @@ namespace TopLayer.Services
                 allAttractions
             );
 
-            Pair<Cluster[], Section[]> result = planner.Execute(lat, lon, transportFilter, durationMinutes);
+            Pair<Cluster[], Section[]> result = planner.Execute(lat, lon, transportFilter, durationMinutes, minTimeForCluster);
 
             return ResponseBuilder.BuildRouteResponse(result.First, result.Second);
         }

@@ -12,10 +12,10 @@ namespace RoutePlanning.AttractionCollecting
         private IAttraction[] _attractions;
         private List<Cluster> _clusters;
 
-        private const double MinTimeFactor = 0.75;
-        private const double MaxTimeFactor = 0.95;
+        private const double MinTimeFactor = 0.6;
+        private const double MaxTimeFactor = 0.8;
         private const int LongRouteDurationThreshold = 300;
-        private const double DistanceNormalizationMeters = 3000.0;
+        private const double DistanceNormalizationMeters = 2000.0;
         private const int ReplacementCandidatesCount = 5;
         private const int MaxGastroClusters = 3;
 
@@ -30,7 +30,7 @@ namespace RoutePlanning.AttractionCollecting
         /// Отбирает кластеры достопримечательностей для маршрута на основании координат пользователя и желаемой длительности.
         /// Возвращает упорядоченный массив кластеров для посещения.
         /// </summary>
-        public Cluster[] SelectClusters(double latitude, double longitude, int time)
+        public Cluster[] SelectClusters(double latitude, double longitude, int time, int minTimeForCluster)
         {
             if (_clusters.Count == 0)
             {
@@ -41,7 +41,7 @@ namespace RoutePlanning.AttractionCollecting
             int maxTime = (int)(time * MaxTimeFactor);
             int requiredGastro = time > LongRouteDurationThreshold ? 2 : 1;
 
-            List<Cluster> selected = SelectByRating(_clusters, latitude, longitude, minTime, maxTime, requiredGastro);
+            List<Cluster> selected = SelectByRating(_clusters, latitude, longitude, minTime, maxTime, requiredGastro, minTimeForCluster);
 
             selected = OrderClusters(selected, latitude, longitude, time);
 
@@ -191,7 +191,7 @@ namespace RoutePlanning.AttractionCollecting
         /// затем набирает нужное количество из каждого, укладываясь в допустимый диапазон времени.
         /// </summary>
         private static List<Cluster> SelectByRating(List<Cluster> allClusters, double startLat, double startLon,
-            int minTime, int maxTime, int requiredGastro)
+            int minTime, int maxTime, int requiredGastro, int minTimeForCluster)
         {
             double maxInterestRate = GetMaxInterestRate(allClusters);
 
@@ -224,7 +224,7 @@ namespace RoutePlanning.AttractionCollecting
             int gastroToSelect = Math.Min(requiredGastro, MaxGastroClusters);
             FillFromSortedReferencingCount(gastroClusters, selected, ref currentTime, maxTime, gastroToSelect);
 
-            FillFromSortedReferencingTime(otherClusters, selected, ref currentTime, minTime, maxTime);
+            FillFromSortedReferencingTime(otherClusters, selected, ref currentTime, minTime, maxTime, minTimeForCluster);
 
             return selected;
         }
@@ -263,10 +263,15 @@ namespace RoutePlanning.AttractionCollecting
         /// не превышая maxTime.
         /// </summary>
         private static void FillFromSortedReferencingTime(List<Pair<Cluster, double>> sorted, List<Cluster> selected,
-            ref int currentTime, int minTime, int maxTime)
+            ref int currentTime, int minTime, int maxTime, int minTimeForCluster)
         {
             foreach (Pair<Cluster, double> entry in sorted)
             {
+                if (entry.First.EstimatedTime < minTimeForCluster)
+                {
+                    continue;
+                }
+
                 if (currentTime >= minTime)
                 {
                     break;

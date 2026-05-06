@@ -11,13 +11,15 @@ namespace RoutePlanning.AttractionConnecting
         public MetroGap[] MetroGaps { get; }
         public int EstimatedTimeInMinutes { get; }
         public int NumberOfTransfers { get; }
+        public bool MetrosFirst { get; }
 
-        public Section(Gap<IStation>[] gaps, MetroGap[] metroGaps, int estimatedTimeInMinutes, int numberOfTransfers)
+        public Section(Gap<IStation>[] gaps, MetroGap[] metroGaps, int estimatedTimeInMinutes, int numberOfTransfers, bool metrosFirst)
         {
             Gaps = gaps;
             MetroGaps = metroGaps;
             EstimatedTimeInMinutes = estimatedTimeInMinutes;
             NumberOfTransfers = numberOfTransfers;
+            MetrosFirst = metrosFirst;
         }
     }
 }

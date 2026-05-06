@@ -40,7 +40,7 @@ namespace CityDataCollector.Collectors
 
     public class MetroTransferRef
     {
-        public string Key { get; set; } = "";
+        public ulong Key { get; set; }
         public List<MetroRouteRef> Value { get; set; } = new();
     }
 
@@ -447,10 +447,10 @@ namespace CityDataCollector.Collectors
         {
             from.IsTransfer = true;
 
-            var existing = from.Transfers.FirstOrDefault(t => t.Key == to.Name);
+            var existing = from.Transfers.FirstOrDefault(t => t.Key == (ulong)to.Id);
             if (existing == null)
             {
-                existing = new MetroTransferRef { Key = to.Name };
+                existing = new MetroTransferRef { Key = (ulong)to.Id };
                 from.Transfers.Add(existing);
             }
 

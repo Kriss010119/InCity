@@ -56,7 +56,7 @@ namespace RoutePlanning.CityData
             return null;
         }
 
-        public Pair<MetroStation, MetroStation>? GetRoutesIntersection(MetroRoute mr1, MetroRoute mr2)
+        public Pair<MetroStation, MetroStation>? GetRoutesIntersections(MetroRoute mr1, MetroRoute mr2)
         {
             foreach (MetroStation st1 in mr1.Stations)
             {
@@ -67,7 +67,7 @@ namespace RoutePlanning.CityData
                         return new(st1, st2);
                     }
 
-                    if (st1.IsTransfer && st1.Transfers!.Any(el1 => el1.Value.Any(el2 => el2.RouteID == mr2.ID)))
+                    if (st1.IsTransfer && st1.Transfers!.Any(el1 => el1.Key == st2.ID))
                     {
                         return new(st1, st2);
                     }

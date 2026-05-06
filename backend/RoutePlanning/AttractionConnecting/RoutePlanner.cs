@@ -39,9 +39,9 @@ namespace RoutePlanning.AttractionConnecting
             AT = new AttractionCollector(attractions);
         }
 
-        public Pair<Cluster[], Section[]> Execute(double rootLat, double rootLon, TransportFilter filter, int time)
+        public Pair<Cluster[], Section[]> Execute(double rootLat, double rootLon, TransportFilter filter, int time, int minTimeForCluster)
         {
-            Cluster[] visitPoints = AT.SelectClusters(rootLat, rootLon, time);
+            Cluster[] visitPoints = AT.SelectClusters(rootLat, rootLon, time, minTimeForCluster);
             Pair<List<Cluster>, List<Section>> result = BuildRoute(rootLat, rootLon, filter, visitPoints, time);
             return new Pair<Cluster[], Section[]>([.. result.First], [.. result.Second]);
         }
@@ -182,7 +182,7 @@ namespace RoutePlanning.AttractionConnecting
         {
             if (dist <= 700)
             {
-                sect = new Section([], [], (int)(dist / 66), 0);
+                sect = new Section([], [], (int)(dist / 66), 0, false);
                 return true;
             }
 
@@ -524,7 +524,7 @@ namespace RoutePlanning.AttractionConnecting
 
             int timeMinutes = (int)((visited.Length + 1) * GetMinutesPerStop(type)) + GetTransferMinutes(type);
 
-            return new Section([gap], [], timeMinutes, 0);
+            return new Section([gap], [], timeMinutes, 0, false);
         }
 
         /// <summary>
@@ -588,7 +588,7 @@ namespace RoutePlanning.AttractionConnecting
                     if (totalTime < bestTime)
                     {
                         bestTime = totalTime;
-                        bestSection = new Section([gap1, gap2], [], totalTime, 1);
+                        bestSection = new Section([gap1, gap2], [], totalTime, 1, false);
                     }
                 }
             }
@@ -672,7 +672,7 @@ namespace RoutePlanning.AttractionConnecting
                         if (totalTime < bestTime)
                         {
                             bestTime = totalTime;
-                            bestSection = new Section([gap1, gap2], [], totalTime, 1);
+                            bestSection = new Section([gap1, gap2], [], totalTime, 1, false);
                         }
                     }
                 }
@@ -714,7 +714,7 @@ namespace RoutePlanning.AttractionConnecting
 
             int timeMinutes = (int)((visited.Length + 1) * MetroMinutesPerStop) + MetroTransferMinutes;
 
-            return new Section([], [gap], timeMinutes, 0);
+            return new Section([], [gap], timeMinutes, 0, true);
         }
 
         /// <summary>
@@ -744,15 +744,15 @@ namespace RoutePlanning.AttractionConnecting
                         continue;
                     }
 
-                    Pair<MetroStation, MetroStation>? intersection = CTF.MetroManager!.GetRoutesIntersection(mr1, mr2);
+                    Pair<MetroStation, MetroStation>? intersections = CTF.MetroManager!.GetRoutesIntersections(mr1, mr2);
 
-                    if (intersection == null)
+                    if (intersections == null)
                     {
                         continue;
                     }
 
-                    MetroStation transferOut = intersection.First;  // станция на mr1
-                    MetroStation transferIn = intersection.Second;  // станция на mr2
+                    MetroStation transferOut = intersections.First;  // станция на mr1
+                    MetroStation transferIn = intersections.Second;  // станция на mr2
 
                     int idx1Start = mr1.Stations.FindIndex(s => s.ID == ms1.ID);
                     int idx1End = mr1.Stations.FindIndex(s => s.ID == transferOut.ID);
@@ -783,7 +783,7 @@ namespace RoutePlanning.AttractionConnecting
                     if (totalTime < bestTime)
                     {
                         bestTime = totalTime;
-                        bestSection = new Section([], [gap1, gap2], totalTime, 1);
+                        bestSection = new Section([], [gap1, gap2], totalTime, 1, true);
                     }
                 }
             }
@@ -822,7 +822,7 @@ namespace RoutePlanning.AttractionConnecting
                 int totalTime = surfaceTime + transferTime + metroSection.EstimatedTimeInMinutes;
                 int totalTransfers = 1 + metroSection.NumberOfTransfers;
 
-                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers);
+                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, false);
             }
             else
             {
@@ -858,7 +858,7 @@ namespace RoutePlanning.AttractionConnecting
                 int totalTime = metroSection.EstimatedTimeInMinutes + transferTime + surfaceTime;
                 int totalTransfers = metroSection.NumberOfTransfers + 1;
 
-                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers);
+                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, true);
             }
             else
             {

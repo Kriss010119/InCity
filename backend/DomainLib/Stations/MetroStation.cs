@@ -10,11 +10,11 @@ namespace DomainLib.Stations
     {
         public List<MetroRouteInfo>? Routes { get; }
         public bool IsTransfer => Transfers != null && Transfers.Count > 0;
-        public List<KeyValuePair<string, List<MetroRouteInfo>>>? Transfers { get; }
+        public List<KeyValuePair<ulong, List<MetroRouteInfo>>>? Transfers { get; }
         public string? LocalName { get; }
 
         public MetroStation(ulong id, double latitude, double longitude, string? name,
-            List<MetroRouteInfo>? routes, List<KeyValuePair<string, List<MetroRouteInfo>>>? transfers, string? localName) 
+            List<MetroRouteInfo>? routes, List<KeyValuePair<ulong, List<MetroRouteInfo>>>? transfers, string? localName) 
             : base(id, latitude, longitude, name, TransportType.Metro)
         {
             Routes = routes;

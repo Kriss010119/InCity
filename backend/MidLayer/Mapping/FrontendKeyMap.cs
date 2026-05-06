@@ -17,6 +17,14 @@ namespace MidLayer.Mapping
             { "long", 450 }
         };
 
+        public static readonly Dictionary<string, int> MinTimeForClustersAccordingToDuration = new Dictionary<string, int>
+        {
+            { "very-short", 15 },
+            { "short", 25 },
+            { "medium", 50 },
+            { "long", 70 }
+        };
+
         public static readonly Dictionary<string, string> CategoryMap = new Dictionary<string, string>
         {
             { "museum", AttractionCategories.MuseumsAndGalleries },

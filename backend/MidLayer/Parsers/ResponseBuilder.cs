@@ -104,14 +104,29 @@ namespace MidLayer.Parsers
         {
             List<GapDto> gaps = new List<GapDto>();
 
-            foreach (var gap in section.Gaps)
+            if (section.MetrosFirst)
             {
-                gaps.Add(MapGap(gap));
-            }
+                foreach (MetroGap metroGap in section.MetroGaps)
+                {
+                    gaps.Add(MapMetroGap(metroGap));
+                }
 
-            foreach (MetroGap metroGap in section.MetroGaps)
+                foreach (var gap in section.Gaps)
+                {
+                    gaps.Add(MapGap(gap));
+                }
+            }
+            else
             {
-                gaps.Add(MapMetroGap(metroGap));
+                foreach (var gap in section.Gaps)
+                {
+                    gaps.Add(MapGap(gap));
+                }
+
+                foreach (MetroGap metroGap in section.MetroGaps)
+                {
+                    gaps.Add(MapMetroGap(metroGap));
+                }
             }
 
             return new SectionDto

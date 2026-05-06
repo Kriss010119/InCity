@@ -20,6 +20,16 @@ namespace MidLayer.Parsers
             return 300;
         }
 
+        public static int ParseMinimalTimesForClusters(string duration)
+        {
+            if (FrontendKeyMap.MinTimeForClustersAccordingToDuration.TryGetValue(duration, out int minutes))
+            {
+                return minutes;
+            }
+
+            return 50;
+        }
+
         public static TransportFilter ParseTransportFilter(string transportCsv)
         {
             if (string.IsNullOrWhiteSpace(transportCsv))

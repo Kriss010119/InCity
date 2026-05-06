@@ -168,7 +168,7 @@ namespace CityDataCollector
             }
             catch (Exception ex) { FileLogger.Instance.LogError($"  Ошибка сбора метро", ex); }
 
-            // Достопримечательности
+            //Достопримечательности
             try
             {
                 var collector = new AttractionsCollector(client);

@@ -172,7 +172,7 @@ namespace TopLayer.Repositories
 
             List<MetroRouteInfo> routes = SurfaceParseHelper.ParseMetroLineInfoText((string?)row.line_info_text);
 
-            List<KeyValuePair<string, List<MetroRouteInfo>>>? transfers = null;
+            List<KeyValuePair<ulong, List<MetroRouteInfo>>>? transfers = null;
             if (isTransfer)
             {
                 var parsed = SurfaceParseHelper.ParseMetroTransfersText((string?)row.transfers_text);

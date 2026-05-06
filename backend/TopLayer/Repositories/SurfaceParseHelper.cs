@@ -75,34 +75,44 @@ namespace TopLayer.Repositories
             return routes;
         }
 
-        public static List<KeyValuePair<string, List<MetroRouteInfo>>> ParseMetroTransfersText(string? text)
+        public static List<KeyValuePair<ulong, List<MetroRouteInfo>>> ParseMetroTransfersText(string? text)
         {
-            var result = new Dictionary<string, List<MetroRouteInfo>>();
+            var result = new Dictionary<ulong, List<MetroRouteInfo>>();
 
             if (string.IsNullOrEmpty(text) || text == "{}")
             {
-                return new List<KeyValuePair<string, List<MetroRouteInfo>>>();
+                return new List<KeyValuePair<ulong, List<MetroRouteInfo>>>();
             }
 
+            HashSet<string> hs = new();
             foreach (Match match in MetroTransferPattern.Matches(text))
             {
-                string stationName = match.Groups[1].Value.Trim('"');
+                ulong stationId = ulong.Parse(match.Groups[1].Value);
                 int lineId = int.Parse(match.Groups[2].Value);
                 string routeNumber = match.Groups[3].Value.Trim('"');
                 string color = match.Groups[4].Value.Trim('"');
                 int sequence = int.Parse(match.Groups[5].Value);
 
-                ulong routeId = (ulong)(lineId * 10 + 1);
+                ulong routeId = (ulong)(lineId * 10);
+
+                if (hs.Add(routeNumber))
+                {
+                    routeId += 1;
+                }
+                else
+                {
+                    routeId += 2;
+                }
                 MetroRouteInfo mri = new MetroRouteInfo(routeId, routeNumber, sequence, color);
 
-                if (!result.ContainsKey(stationName))
+                if (!result.ContainsKey(stationId))
                 {
-                    result[stationName] = new List<MetroRouteInfo>();
+                    result[stationId] = new List<MetroRouteInfo>();
                 }
-                result[stationName].Add(mri);
+                result[stationId].Add(mri);
             }
 
-            return new List<KeyValuePair<string, List<MetroRouteInfo>>>(result);
+            return new List<KeyValuePair<ulong, List<MetroRouteInfo>>>(result);
         }
     }
 }

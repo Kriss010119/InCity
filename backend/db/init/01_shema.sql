@@ -1,11 +1,11 @@
--- Тип для информации о маршруте на остановке
+-- пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 CREATE TYPE route_info AS (
     route_id INTEGER,
     route_number VARCHAR(50),
     sequence_num INTEGER
 );
 
--- Тип для информации о линии метро на станции
+-- пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 CREATE TYPE metro_line_info AS (
     line_id INTEGER,
     route_number VARCHAR(50),
@@ -13,9 +13,9 @@ CREATE TYPE metro_line_info AS (
     sequence_num INTEGER
 );
 
--- Тип для информации о пересадке метро
+-- пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 CREATE TYPE metro_transfer_info AS (
-    station_name VARCHAR(500),
+    station_id BIGINT,
     line_id INTEGER,
     route_number VARCHAR(50),
     color VARCHAR(20),
@@ -138,7 +138,7 @@ CREATE TABLE arrival_points (
     point_type VARCHAR(50) NOT NULL
 );
 
--- Индексы
+-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 CREATE INDEX ind_bus_stops_latitude ON bus_stops (latitude);
 CREATE INDEX ind_bus_stops_longitude ON bus_stops (longitude);
 CREATE INDEX ind_tram_stops_latitude ON tram_stops (latitude);

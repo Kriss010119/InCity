@@ -396,7 +396,7 @@ namespace CityDataCollector.Database
             var parts = new List<string>();
             foreach (var t in transfers)
             {
-                string stationName = t.Key.Replace("'", "''");
+                ulong stationId = t.Key;
                 foreach (var route in t.Value)
                 {
                     if (!lineDbIds.TryGetValue(route.RouteNumber, out long dbId))
@@ -406,7 +406,7 @@ namespace CityDataCollector.Database
 
                     string rn = route.RouteNumber.Replace("'", "''");
                     string color = route.Color.Replace("'", "''");
-                    parts.Add($"ROW('{stationName}', {dbId}, '{rn}', '{color}', {route.Order})::metro_transfer_info");
+                    parts.Add($"ROW({stationId}, {dbId}, '{rn}', '{color}', {route.Order})::metro_transfer_info");
                 }
             }
 
