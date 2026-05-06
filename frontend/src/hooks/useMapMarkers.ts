@@ -54,7 +54,7 @@ export const useMapMarkers = ({
       marker.category = `Кластер (${totalPoints} мест)`;
       marker.type = 'point';
       
-      (marker as any).clusterData = {
+      marker.clusterData = {
         isCluster: true,
         groupIndex,
         totalPoints,

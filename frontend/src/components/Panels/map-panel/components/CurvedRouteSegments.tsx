@@ -1,7 +1,8 @@
 import { Polyline } from 'react-leaflet';
-import { getPolylineOptions } from '../constants';
+import { getPolylineOptions, getSecondaryPolylineOptions } from '../constants';
 import { getSegmentCurvedPoints } from '../utils';
 import type { RouteSegment } from '../../../../types';
+import React from 'react';
 
 type CurvedRouteSegmentsProps = {
   segments: RouteSegment[];
@@ -15,6 +16,7 @@ export const CurvedRouteSegments = ({ segments, selectedGapId, onSelectGap }: Cu
       onSelectGap(segment.gapId);
     }
   };
+  
   return (
     <>
       {segments.map(segment => {
@@ -23,16 +25,38 @@ export const CurvedRouteSegments = ({ segments, selectedGapId, onSelectGap }: Cu
           return null;
         }
         const isSelected = segment.gapId === selectedGapId;
-        const options = getPolylineOptions(segment.type, isSelected);
+
+        const options = getPolylineOptions(
+          segment.type, 
+          isSelected,
+          segment.routeNumber,
+          segment.startName
+        );
+        
+        const secondaryOptions = getSecondaryPolylineOptions(
+          segment.type,
+          isSelected,
+        );
+        
         return (
-          <Polyline
-            key={segment.id}
-            positions={points}
-            pathOptions={options}
-            eventHandlers={{
-              click: () => handleSegmentClick(segment),
-            }}
-          />
+          <React.Fragment key={segment.id}>
+            <Polyline
+              positions={points}
+              pathOptions={options}
+              eventHandlers={{
+                click: () => handleSegmentClick(segment),
+              }}
+            />
+            {secondaryOptions && (
+              <Polyline
+                positions={points}
+                pathOptions={secondaryOptions}
+                eventHandlers={{
+                  click: () => handleSegmentClick(segment),
+                }}
+              />
+            )}
+          </React.Fragment>
         );
       })}
     </>

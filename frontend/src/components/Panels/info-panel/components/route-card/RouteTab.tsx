@@ -3,7 +3,8 @@ import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
 import type { RouteResponse, WalkingSegment } from '../../../../../types';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { extractSectionIndexFromGapId } from './utils';
 
 type RouteTabProps = {
   routeResponse: RouteResponse;
@@ -19,6 +20,7 @@ export const RouteTab = ({
   onSelectGap 
 }: RouteTabProps) => {
   const { t } = useLocale();
+  const [selectedSection, setSelectedSection] = useState<number | null>(null);
 
   const travelTime = routeResponse.sections.reduce(
     (acc, s) => acc + s.estimatedTimeInMinutes, 0
@@ -77,6 +79,33 @@ export const RouteTab = ({
       group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0);
   };
 
+  const handleSectionClick = (sectionIndex: number) => {
+    if (selectedSection === sectionIndex) {
+      setSelectedSection(null);
+      onSelectGap?.(null);
+    } else {
+      setSelectedSection(sectionIndex);
+      onSelectGap?.(`section-${sectionIndex}`);
+    }
+  };
+
+  useEffect(() => {
+    if (!selectedGapId) {
+      setSelectedSection(null);
+      return;
+    }
+    
+    const sectionMatch = selectedGapId.match(/^section-(\d+)$/);
+    if (sectionMatch) {
+      setSelectedSection(parseInt(sectionMatch[1], 10));
+    } else {
+      const sectionIndex = extractSectionIndexFromGapId(selectedGapId);
+      if (sectionIndex !== -1) {
+        setSelectedSection(sectionIndex);
+      }
+    }
+  }, [selectedGapId]);
+
   useEffect(() => {
     if (selectedGapId) {
       const timer = setTimeout(() => {
@@ -130,6 +159,8 @@ export const RouteTab = ({
                 onSelectGap={onSelectGap}
                 walkingSegments={walkingSegmentsBySection[index] || []}
                 visitTime={getVisitTimeForSection(index)}
+                isSectionSelected={selectedSection === index}
+                onSectionClick={handleSectionClick}
               />
             ))}
           </div>

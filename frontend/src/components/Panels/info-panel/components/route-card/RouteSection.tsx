@@ -1,3 +1,4 @@
+// RouteSection.tsx
 import { useMemo } from 'react';
 import { RouteGap } from './RouteGap';
 import { RouteWalk } from './RouteWalk';
@@ -13,6 +14,9 @@ interface ExtendedRouteSectionProps {
   onSelectGap?: (gapId: string | null) => void;
   walkingSegments?: WalkingSegment[];
   visitTime?: number;
+  // Добавляем новые пропсы для выделения секции
+  isSectionSelected?: boolean;
+  onSectionClick?: (sectionIndex: number) => void;
 }
 
 export const RouteSection = ({ 
@@ -22,15 +26,29 @@ export const RouteSection = ({
   onSelectGap,
   walkingSegments = [],
   visitTime = 0,
+  isSectionSelected = false,
+  onSectionClick,
 }: ExtendedRouteSectionProps) => {
   const { t } = useLocale();
 
   const handleWalkClick = (walkId: string) => {
+    // При клике на отдельный переход останавливаем всплытие
     onSelectGap?.(walkId);
   };
 
   const handleGapClick = (gapId: string) => {
     onSelectGap?.(gapId);
+  };
+
+  const handleSectionClick = (e: React.MouseEvent) => {
+    // Проверяем, что клик был именно по sectionItem, а не по вложенным элементам
+    if (e.target === e.currentTarget || 
+        (e.target as HTMLElement).classList.contains(styles.sectionItem) ||
+        (e.target as HTMLElement).classList.contains(styles.sectionHeader) ||
+        (e.target as HTMLElement).classList.contains(styles.sectionNumber) ||
+        (e.target as HTMLElement).classList.contains(styles.sectionTime)) {
+      onSectionClick?.(sectionIndex);
+    }
   };
 
   const getWalkOrder = (walkId: string, numGaps: number): number => {
@@ -61,7 +79,6 @@ export const RouteSection = ({
     return walkingSegments.reduce((sum, walk) => sum + (walk.estimatedTime || 0), 0);
   }, [walkingSegments]);
 
-
   const totalSectionTime = section.estimatedTimeInMinutes + totalWalkTime + visitTime;
 
   const items: Array<
@@ -91,7 +108,17 @@ export const RouteSection = ({
   items.sort((a, b) => a.order - b.order);
 
   return (
-    <div className={styles.sectionItem}>
+    <div 
+      className={`${styles.sectionItem} ${isSectionSelected ? styles.sectionItemActive : ''}`}
+      onClick={handleSectionClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleSectionClick(e as any);
+        }
+      }}
+    >
       <div className={styles.sectionHeader}>
         <span className={styles.sectionNumber}>
           {t('infoPanel.section')} {sectionIndex + 1}
@@ -105,7 +132,6 @@ export const RouteSection = ({
         <div className={styles.transferInfo}>
           {t('infoPanel.transfers')}: {section.numberOfTransfers}
         </div>
-        
       )}
 
       <div className={styles.sectionGaps}>

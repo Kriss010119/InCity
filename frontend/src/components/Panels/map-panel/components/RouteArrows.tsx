@@ -3,7 +3,7 @@ import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet-polylinedecorator';
 import { getSegmentCurvedPoints } from '../utils';
-import { getPolylineOptions } from '../constants';
+import { getSegmentColor } from '../constants';
 import type { RouteSegment } from '../../../../types';
 
 type RouteArrowsProps = {
@@ -16,7 +16,7 @@ export const RouteArrows = ({ segments }: RouteArrowsProps) => {
 
   useEffect(() => {
     if (!map) {
-        return;
+      return;
     }
 
     decoratorRef.current.forEach(layer => map.removeLayer(layer));
@@ -30,26 +30,70 @@ export const RouteArrows = ({ segments }: RouteArrowsProps) => {
 
       const latlngs = points.map(p => L.latLng(p[0], p[1]));
       const polyline = L.polyline(latlngs, { interactive: false, weight: 0 });
-      const lineOptions = getPolylineOptions(segment.type);
-      const arrowColor = lineOptions.color;
-
-      const decorator = L.polylineDecorator(polyline, {
-        patterns: [
+      const arrowColor = getSegmentColor(
+        segment.type, 
+        segment.routeNumber,
+        segment.startName
+      );
+      
+      const getArrowPatterns = () => {
+        if (segment.type === 'walk') {
+          return [
+            {
+              offset: '50%',
+              repeat: 0,
+              symbol: L.Symbol.arrowHead({
+                pixelSize: 8,
+                polygon: false,
+                pathOptions: {
+                  color: arrowColor,
+                  weight: 2,
+                  opacity: 0.5,
+                },
+              }),
+            },
+          ];
+        }
+        
+        if (segment.type === 'metro') {
+          return [
+            {
+              offset: '15%',
+              repeat: '30%',
+              symbol: L.Symbol.arrowHead({
+                pixelSize: 12,
+                polygon: false,
+                pathOptions: {
+                  color: arrowColor,
+                  weight: 2,
+                  opacity: 0.5,
+                },
+              }),
+            },
+          ];
+        }
+        
+        return [
           {
-            offset: (segment.type === 'walk') ? '50%' : '25%',
-            repeat: (segment.type === 'walk') ? 0 : '25%',
+            offset: '10%',
+            repeat: '20%',
             symbol: L.Symbol.arrowHead({
               pixelSize: 12,
               polygon: false,
               pathOptions: {
                 color: arrowColor,
                 weight: 2,
-                opacity: 0.9,
+                opacity: 0.5,
               },
             }),
           },
-        ],
+        ];
+      };
+      
+      const decorator = L.polylineDecorator(polyline, {
+        patterns: getArrowPatterns(),
       });
+      
       decorator.addTo(map);
       decoratorRef.current.push(decorator);
     });

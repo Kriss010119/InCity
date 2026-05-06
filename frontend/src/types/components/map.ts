@@ -18,6 +18,15 @@ export type MapMarker = {
   category?: string;
   estimatedTime?: number;
   placeData?: VisitPoint;
+  clusterData?: {
+    isCluster: boolean;
+    groupIndex: number;
+    totalPoints: number;
+    points: VisitPoint[];
+    centerLat: number;
+    centerLng: number;
+    centerName: string;
+  };
 };
 
 export type TransportType = 'walk' | 'bus' | 'tram' | 'trolleybus' | 'metro';
@@ -45,12 +54,15 @@ export type MapPanelProps = {
   isSelectingMode?: boolean;
   onDestinationSelect?: (lat: number, lng: number, address?: string) => void;
   selectedGapId?: string | null;
+  selectedSectionIndex?: number | null;
   onSelectGap?: (gapId: string | null) => void;
+  onSelectSection?: (sectionIndex: number | null) => void;
 };
 
 export type MapHandlersProps = {
   onMapClick: (lat: number, lng: number) => void;
   isSelectingMode: boolean;
+  onClearSelection?: () => void;
 };
 
 export type MapResizeHandlerProps = {

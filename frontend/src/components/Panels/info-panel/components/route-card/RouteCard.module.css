@@ -349,6 +349,22 @@
   flex-shrink: 0;
 }
 
+.sectionItemActive {
+  border: 1px solid var(--tbank-yellow);
+  background: var(--tbank-yellow-light);
+  border-radius: var(--radius-base);
+  transition: all var(--transition-duration-normal) ease;
+}
+
+.sectionItem {
+  cursor: pointer;
+  transition: all var(--transition-duration-normal) ease;
+}
+
+.sectionGaps {
+  pointer-events: auto;
+}
+
 @media (max-width: 768px) {
   .walkRoute {
     flex-direction: column;

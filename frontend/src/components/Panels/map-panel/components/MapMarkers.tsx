@@ -13,15 +13,15 @@ export const MapMarkers = ({ markers, onMarkerClick }: MapMarkersProps) => {
     const categoryLower = category.toLowerCase();
     
     const eventKeywords = [
-      'концерт', 'concert',
-      'фестивал', 'festival',
-      'выставк', 'exhibition',
-      'кино', 'cinema',
-      'ярмарк', 'fair',
-      'ивент', 'event',
+      'концерты', 'concert',
+      'фестивали', 'festival',
+      'выставки', 'exhibition',
+      'кинопоказы', 'cinema',
+      'ярмарки', 'fair',
+      'ивенты', 'event',
       "детские мероприятия", 'kids',
-      'благотворительн', 'charity',
-      'business', 'бизнес'
+      'благотворительные акции', 'charity',
+      'business', 'бизнес ивенты'
     ];
     
     const isEvent = eventKeywords.some(keyword => categoryLower.includes(keyword));

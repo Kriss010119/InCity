@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { CircleMarker, Popup } from 'react-leaflet';
 import type { RouteResponse } from '../../../../types';
+import { getTransportColor } from '../../../../constants/transportConstants';
 
 type TransportStopsProps = {
   routeResponse?: RouteResponse | null;
@@ -76,15 +77,15 @@ export const TransportStops = ({ routeResponse }: TransportStopsProps) => {
   return (
     <>
       {stops.map(stop => (
-        <CircleMarker
+       <CircleMarker
           key={stop.id}
           center={[stop.lat, stop.lng]}
-          radius={6}
-          fillColor="#1a1a1a"
+          radius={stop.type === 'intermediate' ? 4 : 6}
+          fillColor={getTransportColor(stop.transportType || 'bus', stop.routeNumber, stop.name)}
           color="#ffffff"
-          weight={2}
-          fillOpacity={0.9}
-          opacity={1}
+          weight={stop.type === 'intermediate' ? 1.5 : 2}
+          fillOpacity={0.85}
+          opacity={0.9}
         >
           <Popup>
             <div style={{ fontSize: '0.85rem', maxWidth: '200px' }}>

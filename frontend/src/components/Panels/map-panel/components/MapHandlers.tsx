@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useMap, useMapEvents } from 'react-leaflet';
-import type { MapHandlersProps, MapResizeHandlerProps } from '../types';
+import type { MapHandlersProps, MapResizeHandlerProps } from '../../../../types';
 
 export const MapClickHandler = ({ onMapClick, isSelectingMode }: MapHandlersProps) => {
   useMapEvents({

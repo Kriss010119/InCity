@@ -24,6 +24,7 @@ import { useMapMarkers } from '../../../hooks/useMapMarkers';
 import { RouteArrows } from './components/RouteArrows';
 import { ZoomHandler } from './components/ZoomHandler';
 import { usePlaceCache } from '../../../context/PlaceCacheContext';
+import { extractSectionIndexFromGapId } from '../info-panel/components/route-card/utils';
 
 export const MapPanel = ({
   destinationLat,
@@ -46,10 +47,12 @@ export const MapPanel = ({
   const [shouldFlyTo, setShouldFlyTo] = useState(false);
   const [targetCenter, setTargetCenter] = useState<[number, number] | null>(null);
   const [targetZoom, setTargetZoom] = useState<number | null>(null);
+  const [targetBounds, setTargetBounds] = useState<L.LatLngBounds | null>(null);
   const { reverseGeocode } = useReverseGeocode();
   const { preloadPlace } = usePlaceCache();
   
   const prevCollapsedRef = useRef(isInfoPanelCollapsed);
+  const prevSelectedGapRef = useRef(selectedGapId);
 
   useEffect(() => {
     if (!routeResponse?.visitPoints) return;
@@ -83,21 +86,112 @@ export const MapPanel = ({
 
   const visitPoints = useMemo(() => routeResponse?.visitPoints || [], [routeResponse]);
 
-  const routeSegments = useMemo(
+  const allRouteSegments = useMemo(
     () => buildFullRouteSegments(routeResponse, visitPoints, destinationLat, destinationLng),
     [routeResponse, visitPoints, destinationLat, destinationLng]
   );
 
+  const displayedSegments = useMemo(() => {
+    if (!selectedGapId) {
+      return allRouteSegments;
+    }
+    
+    const sectionMatch = selectedGapId.match(/^section-(\d+)$/);
+    const sectionIndex = sectionMatch 
+      ? parseInt(sectionMatch[1], 10)
+      : extractSectionIndexFromGapId(selectedGapId);
+    
+    if (sectionIndex === -1) {
+      return allRouteSegments;
+    }
+    
+    return allRouteSegments.filter(segment => {
+      const segmentSectionIndex = extractSectionIndexFromGapId(segment.gapId || '');
+      
+      if (segmentSectionIndex === sectionIndex) {
+        return true;
+      }
+      
+      if (segment.id.includes(`transport-${sectionIndex}-`) || 
+          segment.id.includes(`walk-to-section-${sectionIndex}`) ||
+          segment.id.includes(`walk-section-${sectionIndex}`) ||
+          segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
+          segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
+          segment.id.includes(`walk-transfer-${sectionIndex}-`)) {
+        return true;
+      }
+      
+      return false;
+    });
+  }, [allRouteSegments, selectedGapId]);
+
+  useEffect(() => {
+    if (selectedGapId !== prevSelectedGapRef.current) {
+      prevSelectedGapRef.current = selectedGapId;
+      
+      if (selectedGapId) {
+        const sectionIndex = extractSectionIndexFromGapId(selectedGapId);
+        if (sectionIndex !== -1) {
+          const sectionPoints: [number, number][] = [];
+          allRouteSegments.forEach(segment => {
+            const segmentSectionIndex = extractSectionIndexFromGapId(segment.gapId || '');
+            if (segmentSectionIndex === sectionIndex || 
+                segment.id.includes(`transport-${sectionIndex}-`) ||
+                segment.id.includes(`walk-to-section-${sectionIndex}`) ||
+                segment.id.includes(`walk-section-${sectionIndex}`) ||
+                segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
+                segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
+                segment.id.includes(`walk-transfer-${sectionIndex}-`)) {
+              segment.points.forEach(point => {
+                if (point && point.length === 2 && !isNaN(point[0]) && !isNaN(point[1])) {
+                  sectionPoints.push([point[0], point[1]]);
+                }
+              });
+            }
+          });
+          
+          if (sectionPoints.length > 0) {
+            const bounds = L.latLngBounds(sectionPoints);
+            const frameId = requestAnimationFrame(() => {
+              setTargetBounds(bounds);
+            });
+            return () => cancelAnimationFrame(frameId);
+          }
+        }
+      } else {
+        const frameId = requestAnimationFrame(() => {
+          setTargetBounds(null);
+        });
+        return () => cancelAnimationFrame(frameId);
+      }
+    }
+  }, [selectedGapId, allRouteSegments]);
+
   const computedBounds = useMemo(() => {
-    if (!selectedGapId || routeSegments.length === 0) {
+    if (!selectedGapId || displayedSegments.length === 0) {
       return null;
     }
-    const segment = routeSegments.find(s => s.gapId === selectedGapId);
+    
+    const allPoints: [number, number][] = [];
+    displayedSegments.forEach(segment => {
+      segment.points.forEach(point => {
+        if (point && point.length === 2 && !isNaN(point[0]) && !isNaN(point[1])) {
+          allPoints.push([point[0], point[1]]);
+        }
+      });
+    });
+    
+    if (allPoints.length > 1) {
+      return L.latLngBounds(allPoints);
+    }
+    
+    const segment = displayedSegments.find(s => s.gapId === selectedGapId);
     if (segment && segment.points.length > 1) {
       return L.latLngBounds(segment.points.map(p => [p[0], p[1]]));
     }
+    
     return null;
-  }, [selectedGapId, routeSegments]);
+  }, [selectedGapId, displayedSegments]);
 
   useEffect(() => {
     if (destinationLat && destinationLng) {
@@ -134,8 +228,7 @@ export const MapPanel = ({
   );
 
   const handleMarkerClick = useCallback((marker: MapMarker) => {
-    const clusterData = (marker as any).clusterData;
-    if (clusterData?.isCluster) {
+    if (marker.clusterData?.isCluster) {
       clusterClickHandler(marker);
     } else {
       const place = createPlaceFromMarker(marker);
@@ -155,22 +248,39 @@ export const MapPanel = ({
             center={targetCenter || mapCenter}
             zoom={targetZoom || mapZoom}
             shouldUpdate={shouldFlyTo}
-            targetBounds={computedBounds}
+            targetBounds={targetBounds || computedBounds}
           />
           <ZoomHandler onZoomChange={setCurrentZoom} />
           <MapResizeHandler isInfoPanelCollapsed={isInfoPanelCollapsed} />
           <MapClickHandler onMapClick={handleMapClick} isSelectingMode={isSelectingMode} />
           <TileLayer attribution={TILE_LAYER_ATTRIBUTION} url={TILE_LAYER_URL} />
+          
           <CurvedRouteSegments
-            segments={routeSegments}
+            segments={displayedSegments}
             selectedGapId={selectedGapId}
             onSelectGap={onSelectGap}
           />
-          <RouteArrows segments={routeSegments} />
+          <RouteArrows segments={displayedSegments} />
           <TransportStops routeResponse={routeResponse} />
           <MapMarkers markers={markers} onMarkerClick={handleMarkerClick} />
         </MapContainer>
         <MapHint isSelectingMode={isSelectingMode} />
+        
+        {selectedGapId && (
+          <div className={styles.selectedGapInfo}>
+            <span>
+              {selectedGapId.startsWith('section-') 
+                ? `Участок ${parseInt(selectedGapId.split('-')[1]) + 1}` 
+                : 'Выбран транспортный сегмент'}
+            </span>
+            <button 
+              onClick={() => onSelectGap?.(null)}
+              className={styles.clearSelectionButton}
+            >
+              ✕
+            </button>
+          </div>
+        )}
       </div>
       {selectedPlace && (
         <PlaceDetailsModal place={selectedPlace} onClose={() => setSelectedPlace(null)} />

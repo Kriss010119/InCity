@@ -113,14 +113,14 @@ export const buildFullRouteSegments = (
 
   for (let i = 0; i < sections.length; i++) {
     const section = sections[i];
-    const isLastSection = i === sections.length - 1;
-    const places = !isLastSection ? visitPoints[i] : null;
+    const places = visitPoints[i] || null;
+
     const point: LatLng = places
       ? { lat: places.mainAttraction.latitude, lng: places.mainAttraction.longitude }
       : startPoint;
 
-    // пешком к началу секции — только для не‑последних секций
-    if (i < sections.length - 1) {
+    // пешком к началу секции
+    if (i < sections.length - 1 || (i === sections.length - 1 && section.gaps && section.gaps.length > 0)) {
       let sectionStart: LatLng;
       let sectionStartName = 'Остановка';
       if (section.gaps && section.gaps.length > 0) {
@@ -129,9 +129,11 @@ export const buildFullRouteSegments = (
           lng: section.gaps[0].startNode.longitude,
         };
         sectionStartName = section.gaps[0].startNode.name;
-      } else {
+      } else if (places) {
         sectionStart = point;
-        sectionStartName = places?.mainAttraction.name || 'Место';
+        sectionStartName = places.mainAttraction.name;
+      } else {
+        continue;
       }
 
       const walkD = Math.hypot(curPos.lat - sectionStart.lat, curPos.lng - sectionStart.lng);
@@ -170,7 +172,7 @@ export const buildFullRouteSegments = (
         curPos = gapPoints[gapPoints.length - 1];
         lastLocationName = gap.endNode.name;
 
-        // пеший переход между gap'ами
+        // пеший переход между gap-ами
         if (j < section.gaps.length - 1) {
           const nextGap = section.gaps[j + 1];
           const nextSt: LatLng = {
@@ -193,6 +195,7 @@ export const buildFullRouteSegments = (
         }
       }
 
+      // пешком от конечной остановки к кластеру
       if (places) {
         const mainPoint: LatLng = {
           lat: places.mainAttraction.latitude,
@@ -213,8 +216,8 @@ export const buildFullRouteSegments = (
         lastLocationName = places.mainAttraction.name;
       }
     } else {
-      // секция без транспорта (например, первая)
-      if (i === 0) {
+      // секция без транспорта (пешая)
+      if (places) {
         const dist = Math.hypot(curPos.lat - point.lat, curPos.lng - point.lng);
         if (dist > 0.0001) {
           segments.push({
@@ -224,16 +227,15 @@ export const buildFullRouteSegments = (
             estimatedTime: section.estimatedTimeInMinutes,
             gapId: `walk-section-${i}`,
             startName: lastLocationName,
-            endName: places?.mainAttraction.name || 'Место',
+            endName: places.mainAttraction.name,
           });
         }
         curPos = point;
-        lastLocationName = places?.mainAttraction.name || 'Место';
+        lastLocationName = places.mainAttraction.name;
       }
-      // для последней секции ничего не делаем, чтобы не сбить lastLocationName
     }
 
-    // пешие перемещения внутри кластера
+    // пешком внутри кластера
     if (places) {
       const attractions = [places.mainAttraction, ...(places.otherAttractions || [])];
       for (let u = 0; u < attractions.length - 1; u++) {
@@ -254,8 +256,7 @@ export const buildFullRouteSegments = (
     }
   }
 
-  // финальный возврат к старту (от последней известной точки к началу)
-  const finalDist = Math.hypot(curPos.lat - startPoint.lat, curPos.lng - startPoint.lng);
+  // возврат к старту
   segments.push({
     id: 'walk-final-return',
     type: 'walk',
@@ -264,9 +265,6 @@ export const buildFullRouteSegments = (
     startName: lastLocationName,
     endName: 'Начало маршрута',
   });
-  if (finalDist <= 0.0001) {
-    console.log('ℹ️ Final segment has near‑zero distance, added for UI consistency');
-  }
 
   return segments;
 };
@@ -276,8 +274,12 @@ export const getSegmentCurvedPoints = (segment: RouteSegment): [number, number][
     (p): p is [number, number] =>
       p && p.length === 2 && typeof p[0] === 'number' && !isNaN(p[0]) && typeof p[1] === 'number' && !isNaN(p[1])
   );
-  if (validPoints.length < 2) return [];
-  if (segment.type === 'walk') return validPoints;
+  if (validPoints.length < 2) {
+    return [];
+  }
+  if (segment.type === 'walk') {
+    return validPoints;
+  }
   const curvedPoints: [number, number][] = [];
   for (let i = 0; i < validPoints.length - 1; i++) {
     const from = validPoints[i];
@@ -316,27 +318,57 @@ export const extractWalkingSegmentsFromRouteSegments = (
     });
 };
 
-export const extractSectionIndexFromGapId = (gapId: string): number => {
-  if (gapId === 'walk-final-return') return -1;
-  const match = gapId.match(/walk-to-section-(\d+)/);
-  if (match) return parseInt(match[1], 10);
-  const matchCluster = gapId.match(/walk-cluster-(\d+)-/);
-  if (matchCluster) return parseInt(matchCluster[1], 10);
-  const matchTransfer = gapId.match(/walk-transfer-(\d+)-/);
-  if (matchTransfer) return parseInt(matchTransfer[1], 10);
-  const matchTransport = gapId.match(/walk-transport-to-cluster-(\d+)/);
-  if (matchTransport) return parseInt(matchTransport[1], 10);
-  const matchWalkSection = gapId.match(/walk-section-(\d+)/);
-  if (matchWalkSection) return parseInt(matchWalkSection[1], 10);
-  return -1;
-};
-
 export const extractWalkingSegmentsForInfoPanel = (
   routeResponse: RouteResponse | null | undefined,
   startLat?: number,
   startLng?: number
 ): WalkingSegment[] => {
-  if (!routeResponse || !startLat || !startLng) return [];
+  if (!routeResponse || !startLat || !startLng) {
+    return [];
+  }
   const segments = buildFullRouteSegments(routeResponse, routeResponse.visitPoints, startLat, startLng);
   return extractWalkingSegmentsFromRouteSegments(segments);
+};
+
+const extractSectionIndexFromGapId = (gapId: string): number => {
+  const sectionMatch = gapId.match(/^section-(\d+)$/);
+  if (sectionMatch) {
+    return parseInt(sectionMatch[1], 10);
+  }
+  
+  if (gapId === 'walk-final-return') {
+    return -1;
+  }
+  
+  const match = gapId.match(/walk-to-section-(\d+)/);
+  if (match) {
+    return parseInt(match[1], 10);
+  }
+  
+  const matchCluster = gapId.match(/walk-cluster-(\d+)-/);
+  if (matchCluster) {
+    return parseInt(matchCluster[1], 10);
+  }
+  
+  const matchTransfer = gapId.match(/walk-transfer-(\d+)-/);
+  if (matchTransfer) {
+    return parseInt(matchTransfer[1], 10);
+  }
+  
+  const matchTransport = gapId.match(/walk-transport-to-cluster-(\d+)/);
+  if (matchTransport) {
+    return parseInt(matchTransport[1], 10);
+  }
+  
+  const matchWalkSection = gapId.match(/walk-section-(\d+)/);
+  if (matchWalkSection) {
+    return parseInt(matchWalkSection[1], 10);
+  }
+  
+  const gapMatch = gapId.match(/^(\d+)-(\d+)$/);
+  if (gapMatch) {
+    return parseInt(gapMatch[1], 10);
+  }
+  
+  return -1;
 };

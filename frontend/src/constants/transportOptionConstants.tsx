@@ -1,5 +1,5 @@
 import { Train, Bus, Clock } from 'lucide-react';
-import type { TransportOption } from '../components/Panels/input-panel/helpers/types';
+import type { TransportOption } from '../types';
 
 export const TRANSPORT_OPTIONS: TransportOption[] = [
   { id: 'metro', name: 'Метро', icon: <Train size={16} /> },
