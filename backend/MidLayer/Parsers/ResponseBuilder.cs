@@ -73,7 +73,8 @@ namespace MidLayer.Parsers
             return new ClusterDto
             {
                 MainAttraction = main,
-                OtherAttractions = [.. others]
+                OtherAttractions = [.. others],
+                EstimatedTimeInMinutes = cluster.EstimatedTime
             };
         }
 

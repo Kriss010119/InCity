@@ -92,7 +92,7 @@ namespace RoutePlanning.CityData
 
         public Pair<IStation[], MetroStation[]> GetClosestStations(Station st, TransportFilter filter, int amount = 20, int searchRad = 1000)
         {
-            return GetClosestStations(st.Latitude, st.Longitude, filter, amount);
+            return GetClosestStations(st.Latitude, st.Longitude, filter, amount, searchRad);
         }
 
         public BusStop[] GetClosestBusStops(double latitude, double longitude, int amount = 16, int searchRad = 1000)

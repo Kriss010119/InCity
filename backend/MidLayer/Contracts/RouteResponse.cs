@@ -22,6 +22,9 @@ namespace MidLayer.Contracts
 
         [JsonPropertyName("otherAttractions")]
         public VisitPointDto[] OtherAttractions { get; set; } = [];
+
+        [JsonPropertyName("estimatedTimeInMinutes")]
+        public int EstimatedTimeInMinutes { get; set; }
     }
 
     public class VisitPointDto

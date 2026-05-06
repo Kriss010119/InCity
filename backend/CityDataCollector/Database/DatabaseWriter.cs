@@ -306,9 +306,10 @@ namespace CityDataCollector.Database
                     var first = lineRoutes[0];
 
                     long[] forwardIds = first.Stops.Select(s => s.NodeId).ToArray();
-                    long[] backwardIds = lineRoutes.Count > 1
-                        ? lineRoutes[1].Stops.Select(s => s.NodeId).ToArray()
-                        : Array.Empty<long>();
+                    //long[] backwardIds = lineRoutes.Count > 1
+                    //    ? lineRoutes[1].Stops.Select(s => s.NodeId).ToArray()
+                    //    : Array.Empty<long>();
+                    long[] backwardIds = forwardIds.Reverse().ToArray();
 
                     string sql = @"INSERT INTO metro_lines 
                         (city_id, name, route_number, operator, color_code, station_ids_forward, station_ids_backward) 

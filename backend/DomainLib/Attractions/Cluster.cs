@@ -16,50 +16,22 @@ namespace DomainLib.Attractions
         {
             Categories = categories;
             Attractions = attractions;
-            EstimatedTime = 0;
 
+            double time = 0;
             double interestRateUnnormilized = 0;
-
-            if (categories.Length == 1 && categories[0] == AttractionCategories.GastronomicObjects)
+            foreach (var attraction in attractions)
             {
-                foreach (IAttraction attr in attractions)
+                time += attraction.EstimatedVisitMinutes;
+                if (attraction is Attraction)
                 {
-                    if (attr is Attraction)
-                    {
-                        EstimatedTime = Math.Max(EstimatedTime, attr.EstimatedVisitMinutes);
-                        interestRateUnnormilized += GetTagCount(attr);
-                    }
+                    interestRateUnnormilized += GetTagCount(attraction) * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                }
+                else
+                {
+                    interestRateUnnormilized += 18 * attraction.EstimatedVisitMinutes;
                 }
             }
-            else
-            {
-                double time = 0;
-                int flag = 0;
-                int numOfGastro = 0;
-                foreach (IAttraction attraction in attractions)
-                {
-                    if (attraction.Category == AttractionCategories.GastronomicObjects)
-                    {
-                        flag = 1;
-                        numOfGastro++;
-                    }
-                    else
-                    {
-                        time += attraction.EstimatedVisitMinutes;
-                    }
-
-                    if (attraction is Attraction)
-                    {
-                        interestRateUnnormilized += GetTagCount(attraction) * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.03 : 1);
-                    }
-                    else
-                    {
-                        interestRateUnnormilized += 18 * attraction.EstimatedVisitMinutes;
-                    }
-                }
-                EstimatedTime = (int)(time / Math.Sqrt(attractions.Length - numOfGastro)) + flag * 90;
-            }
-
+            EstimatedTime = (int)(time / Math.Sqrt(attractions.Length));
             InterestRate = interestRateUnnormilized / (double)EstimatedTime;
         }
 

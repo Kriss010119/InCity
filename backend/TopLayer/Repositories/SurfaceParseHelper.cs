@@ -51,6 +51,7 @@ namespace TopLayer.Repositories
                 return routes;
             }
 
+            HashSet<string> hs = new();
             foreach (Match match in MetroLineInfoPattern.Matches(text))
             {
                 int lineId = int.Parse(match.Groups[1].Value);
@@ -58,7 +59,16 @@ namespace TopLayer.Repositories
                 string color = match.Groups[3].Value.Trim('"');
                 int sequence = int.Parse(match.Groups[4].Value);
 
-                ulong routeId = (ulong)(lineId * 10 + 1);
+                ulong routeId = (ulong)(lineId * 10);
+
+                if (hs.Add(routeNumber))
+                {
+                    routeId += 1;
+                }
+                else
+                {
+                    routeId += 2;
+                }
                 routes.Add(new MetroRouteInfo(routeId, routeNumber, sequence, color));
             }
 

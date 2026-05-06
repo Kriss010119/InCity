@@ -18,6 +18,7 @@ namespace DomainLib.Attractions
         {
             AttractionCategories.MuseumsAndGalleries,
             AttractionCategories.TheatersAndConcertHalls,
+            AttractionCategories.GastronomicObjects,
             AttractionCategories.ChildrenObjects,
             AttractionCategories.FamousPeoplePlaces,
             AttractionCategories.ScienceAndEducation,
@@ -58,17 +59,8 @@ namespace DomainLib.Attractions
                 new HashSet<string>
                 {
                     AttractionCategories.ParksAndGardens,
-                    AttractionCategories.GastronomicObjects,
                     AttractionCategories.MonumentsAndMemorials,
                     AttractionCategories.ArchitecturalObjects
-                }
-            },
-            {
-                AttractionCategories.GastronomicObjects,
-                new HashSet<string>
-                {
-                    AttractionCategories.GastronomicObjects,
-                    AttractionCategories.ParksAndGardens
                 }
             },
             {
