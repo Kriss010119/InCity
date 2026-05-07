@@ -19,10 +19,10 @@ namespace MidLayer.Mapping
 
         public static readonly Dictionary<string, int> MinTimeForClustersAccordingToDuration = new Dictionary<string, int>
         {
-            { "very-short", 15 },
-            { "short", 25 },
-            { "medium", 50 },
-            { "long", 70 }
+            { "very-short", 5 },
+            { "short", 20 },
+            { "medium", 40 },
+            { "long", 60 }
         };
 
         public static readonly Dictionary<string, string> CategoryMap = new Dictionary<string, string>

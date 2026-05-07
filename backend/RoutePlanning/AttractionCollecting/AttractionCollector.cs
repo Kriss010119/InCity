@@ -53,7 +53,7 @@ namespace RoutePlanning.AttractionCollecting
         /// Фактор расстояния учитывает позицию целевого кластера: высчитывается относительно соседей в маршруте.
         /// Замена не должна нарушать требование по количеству гастрономических кластеров.
         /// </summary>
-        public Cluster[] GetReplacements(Cluster[] route, Cluster[] confirmed, int targetIndex, double startLat, double startLon, int time)
+        public Cluster[] GetReplacements(Cluster[] route, Cluster[] confirmed, int targetIndex, double startLat, double startLon, int time, int minTimeForCluster)
         {
             if (targetIndex < 0 || targetIndex >= route.Length)
             {
@@ -61,11 +61,7 @@ namespace RoutePlanning.AttractionCollecting
             }
 
             Cluster targetCluster = route[targetIndex];
-            int requiredGastro = time > LongRouteDurationThreshold ? 2 : 1;
-
-            bool targetIsGastro = IsGastronomyCluster(targetCluster);
-            int gastroInRoute = CountGastronomyClusters(route);
-            int gastroAfterRemoval = targetIsGastro ? gastroInRoute - 1 : gastroInRoute;
+            bool gastroRequired = IsGastronomyCluster(targetCluster);
 
             HashSet<ulong> routeAttractionIds = CollectAttractionIds(route, targetIndex);
             routeAttractionIds = routeAttractionIds.Concat(CollectAttractionIds(confirmed)).ToHashSet();
@@ -108,12 +104,22 @@ namespace RoutePlanning.AttractionCollecting
                     continue;
                 }
 
+                if (cluster.EstimatedTime < minTimeForCluster)
+                {
+                    continue;
+                }
+
                 if (HasOverlappingAttractions(cluster, routeAttractionIds))
                 {
                     continue;
                 }
 
-                if (!CanReplaceWithoutViolatingGastro(cluster, targetIsGastro, gastroAfterRemoval, requiredGastro))
+                if (gastroRequired && !cluster.Categories.Contains(AttractionCategories.GastronomicObjects))
+                {
+                    continue;
+                }
+
+                if (!gastroRequired && cluster.Categories.Contains(AttractionCategories.GastronomicObjects))
                 {
                     continue;
                 }
@@ -183,7 +189,7 @@ namespace RoutePlanning.AttractionCollecting
                 ? interestRate / maxInterestRate
                 : 0;
 
-            return Math.Sqrt(normalizedInterest * distanceRate);
+            return normalizedInterest * distanceRate;
         }
 
         /// <summary>
@@ -403,22 +409,6 @@ namespace RoutePlanning.AttractionCollecting
             }
 
             return ordered;
-        }
-
-        /// <summary>
-        /// Проверяет, можно ли заменить целевой кластер на кандидата без нарушения требования по гастрокластерам.
-        /// </summary>
-        private static bool CanReplaceWithoutViolatingGastro(Cluster candidate, bool targetWasGastro,
-            int gastroAfterRemoval, int requiredGastro)
-        {
-            bool candidateIsGastro = IsGastronomyCluster(candidate);
-
-            if (targetWasGastro && !candidateIsGastro && gastroAfterRemoval < requiredGastro)
-            {
-                return false;
-            }
-
-            return true;
         }
 
         /// <summary>

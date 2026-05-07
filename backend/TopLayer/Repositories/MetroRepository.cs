@@ -114,7 +114,8 @@ namespace TopLayer.Repositories
                 {
                     List<MetroStation> stations = new List<MetroStation>();
                     foreach (long sid in forwardIds)
-                        if (stationsDict.TryGetValue(sid, out MetroStation? st)) stations.Add(st);
+                        if (stationsDict.TryGetValue(sid, out MetroStation? st)) 
+                            stations.Add(st);
 
                     if (stations.Count > 0)
                     {
@@ -127,7 +128,8 @@ namespace TopLayer.Repositories
                 {
                     List<MetroStation> stations = new List<MetroStation>();
                     foreach (long sid in backwardIds)
-                        if (stationsDict.TryGetValue(sid, out MetroStation? st)) stations.Add(st);
+                        if (stationsDict.TryGetValue(sid, out MetroStation? st)) 
+                            stations.Add(st);
 
                     if (stations.Count > 0)
                     {

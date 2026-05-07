@@ -64,6 +64,9 @@ namespace RoutePlanning.CityData
 
         public TRoute? DirectRouteBetween(TStation start, TStation end)
         {
+            TRoute? ans = default;
+            int bestDiff = int.MinValue;
+
             foreach (TRoute route in _routes)
             {
                 ulong routeID = route.ID;
@@ -76,13 +79,14 @@ namespace RoutePlanning.CityData
                     continue;
                 }
 
-                if (r1.Order < r2.Order)
+                if (r1.Order < r2.Order && bestDiff > r2.Order - r1.Order)
                 {
-                    return route;
+                    bestDiff = r2.Order - r1.Order;
+                    ans = route;
                 }
             }
 
-            return default;
+            return ans;
         }
 
         public TRoute? GetRouteById(ulong routeId)

@@ -51,14 +51,14 @@ namespace RoutePlanning.CityData
             }
         }
 
-        public Pair<IStation[], MetroStation[]> GetClosestStations(double latitude, double longitude, TransportFilter filter, int amount = 20, int searchRad = 1000)
+        public Pair<IStation[], MetroStation[]> GetClosestStations(double latitude, double longitude, TransportFilter filter, int amount = 12, int searchRad = 600)
         {
             List<IStation> ansSt = new List<IStation>();
             List<MetroStation> ansM = new List<MetroStation>();
 
             if (filter.BusesIncluded)
             {
-                ansSt.AddRange(GetClosestBusStops(latitude, longitude, 16, searchRad));
+                ansSt.AddRange(GetClosestBusStops(latitude, longitude, 12, searchRad));
             }
             if (filter.TramsIncluded)
             {
@@ -66,7 +66,7 @@ namespace RoutePlanning.CityData
             }
             if (filter.TrolleybusesIncluded)
             {
-                ansSt.AddRange(GetClosestTrolleybusStops(latitude, longitude, 10, searchRad));
+                ansSt.AddRange(GetClosestTrolleybusStops(latitude, longitude, 5, searchRad));
             }
             if (filter.MetroIncluded)
             {
@@ -150,7 +150,7 @@ namespace RoutePlanning.CityData
             return MetroManager!.GetClosestStopsToPoint(latitude, longitude, amount, searchRad);
         }
 
-        public MetroStation[] GetClosestMetroStations(Station st, int amount = 5, int searchRad = 1000)
+        public MetroStation[] GetClosestMetroStations(IStation st, int amount = 5, int searchRad = 1000)
         {
             return GetClosestMetroStations(st.Latitude, st.Longitude, amount, searchRad);
         }

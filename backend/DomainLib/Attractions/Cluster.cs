@@ -24,15 +24,15 @@ namespace DomainLib.Attractions
                 time += attraction.EstimatedVisitMinutes;
                 if (attraction is Attraction)
                 {
-                    interestRateUnnormilized += GetTagCount(attraction) * attraction.EstimatedVisitMinutes * (attraction.Category == AttractionCategories.GastronomicObjects ? 1.07 : 1);
+                    interestRateUnnormilized += GetTagCount(attraction) * 1.02;
                 }
                 else
                 {
-                    interestRateUnnormilized += 18 * attraction.EstimatedVisitMinutes;
+                    interestRateUnnormilized += 8;
                 }
             }
             EstimatedTime = (int)(time / Math.Sqrt(attractions.Length));
-            InterestRate = interestRateUnnormilized / (double)EstimatedTime;
+            InterestRate = interestRateUnnormilized / attractions.Length;
         }
 
         private int GetTagCount(IAttraction attraction)

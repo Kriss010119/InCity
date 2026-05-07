@@ -18,9 +18,9 @@ namespace RoutePlanning.AttractionConnecting
         private CityTransportFacade CTF;
         private AttractionCollector AT;
 
-        private const double BusMinutesPerStop = 1.5;
-        private const double TrolleybusMinutesPerStop = 1.5;
-        private const double TramMinutesPerStop = 3.0;
+        private const double BusMinutesPerStop = 1.35;
+        private const double TrolleybusMinutesPerStop = 1.35;
+        private const double TramMinutesPerStop = 1.35;
         private const double MetroMinutesPerStop = 2.0;
 
         private const int BusTransferMinutes = 10;
@@ -42,11 +42,11 @@ namespace RoutePlanning.AttractionConnecting
         public Pair<Cluster[], Section[]> Execute(double rootLat, double rootLon, TransportFilter filter, int time, int minTimeForCluster)
         {
             Cluster[] visitPoints = AT.SelectClusters(rootLat, rootLon, time, minTimeForCluster);
-            Pair<List<Cluster>, List<Section>> result = BuildRoute(rootLat, rootLon, filter, visitPoints, time);
+            Pair<List<Cluster>, List<Section>> result = BuildRoute(rootLat, rootLon, filter, visitPoints, time, minTimeForCluster);
             return new Pair<Cluster[], Section[]>([.. result.First], [.. result.Second]);
         }
 
-        private Pair<List<Cluster>, List<Section>> BuildRoute(double rootLat, double rootLon, TransportFilter filter, Cluster[] visitPoints, int time)
+        private Pair<List<Cluster>, List<Section>> BuildRoute(double rootLat, double rootLon, TransportFilter filter, Cluster[] visitPoints, int time, int minTimeForCluster)
         {
             List<Cluster> confirmed = new();
             List<Section> ans = new();
@@ -59,6 +59,7 @@ namespace RoutePlanning.AttractionConnecting
             for (int i = 0; i < visitPoints.Length; i++)
             {
                 double lat1, lon1;
+                double searchRad1 = 600, searchRad2 = 600;
                 if (confirmed.Count == 0)
                 {
                     lat1 = rootLat;
@@ -69,6 +70,10 @@ namespace RoutePlanning.AttractionConnecting
                     IAttraction lastConfirmed = GetMainAttraction(confirmed[^1]);
                     lat1 = lastConfirmed.Latitude;
                     lon1 = lastConfirmed.Longitude;
+                    if (lastConfirmed != null && lastConfirmed.Category == AttractionCategories.ParksAndGardens)
+                    {
+                        searchRad1 = Math.Sqrt((lastConfirmed as Attraction)!.Square ?? 810000) / 1.5;
+                    }
                 }
 
                 IAttraction target = GetMainAttraction(visitPoints[i]);
@@ -76,21 +81,31 @@ namespace RoutePlanning.AttractionConnecting
                 double lon2 = target.Longitude;
                 double dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
 
-                if (TryToFindRouteBetweenPoints(lat1, lon1, lat2, lon2, dist, filter, out Section sec))
+                if (target != null && target.Category == AttractionCategories.ParksAndGardens)
+                {
+                    searchRad2 = Math.Sqrt((target as Attraction)!.Square ?? 810000) / 1.5;
+                }
+
+                if (TryToFindRouteBetweenPoints(lat1, lon1, lat2, lon2, dist, filter, out Section sec, searchRad1, searchRad2))
                 {
                     confirmed.Add(visitPoints[i]);
                     ans.Add(sec);
                     continue;
                 }
 
-                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], i, rootLat, rootLon, time);
+                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], i, rootLat, rootLon, time, minTimeForCluster);
 
                 foreach (Cluster replacement in replacements)
                 {
                     IAttraction repMain = GetMainAttraction(replacement);
                     double repDist = SpatialMath.Distance(lat1, lon1, repMain.Latitude, repMain.Longitude);
 
-                    if (TryToFindRouteBetweenPoints(lat1, lon1, repMain.Latitude, repMain.Longitude, repDist, filter, out Section repSec))
+                    if (repMain != null && repMain.Category == AttractionCategories.ParksAndGardens)
+                    {
+                        searchRad2 = Math.Sqrt((repMain as Attraction)!.Square ?? 810000) / 1.5;
+                    }
+
+                    if (TryToFindRouteBetweenPoints(lat1, lon1, repMain.Latitude, repMain.Longitude, repDist, filter, out Section repSec, searchRad1, searchRad2))
                     {
                         confirmed.Add(replacement);
                         ans.Add(repSec);
@@ -111,19 +126,32 @@ namespace RoutePlanning.AttractionConnecting
                 double lat1 = lastConfirmed.Latitude;
                 double lon1 = lastConfirmed.Longitude;
                 double dist = SpatialMath.Distance(lat1, lon1, rootLat, rootLon);
+                double searchRad = 600;
 
-                if (TryToFindRouteBetweenPoints(lat1, lon1, rootLat, rootLon, dist, filter, out Section sec))
+                if (lastConfirmed != null && lastConfirmed.Category == AttractionCategories.ParksAndGardens)
+                {
+                    searchRad = Math.Sqrt((lastConfirmed as Attraction)!.Square ?? 810000) / 1.5;
+                }
+
+                if (TryToFindRouteBetweenPoints(lat1, lon1, rootLat, rootLon, dist, filter, out Section sec, searchRad))
                 {
                     ans.Add(sec);
                     return new Pair<List<Cluster>, List<Section>>(confirmed, ans);
                 }
 
-                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], confirmed.Count - 1, rootLat, rootLon, time);
+                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], confirmed.Count - 1, rootLat, rootLon, time, minTimeForCluster);
                 bool found = false;
 
                 foreach (Cluster replacement in replacements)
                 {
                     IAttraction repMain = GetMainAttraction(replacement);
+                    double searchRadRep = 600;
+                    double searchRadPrev = 600;
+
+                    if (repMain != null && repMain.Category == AttractionCategories.ParksAndGardens)
+                    {
+                        searchRadRep = Math.Sqrt((repMain as Attraction)!.Square ?? 810000) / 1.5;
+                    }
 
                     double prevLat, prevLon;
                     if (confirmed.Count == 1)
@@ -136,18 +164,23 @@ namespace RoutePlanning.AttractionConnecting
                         IAttraction prev = GetMainAttraction(confirmed[^2]);
                         prevLat = prev.Latitude;
                         prevLon = prev.Longitude;
+
+                        if (prev != null && prev.Category == AttractionCategories.ParksAndGardens)
+                        {
+                            searchRadPrev = Math.Sqrt((prev as Attraction)!.Square ?? 810000) / 1.5;
+                        }
                     }
 
                     double distToRep = SpatialMath.Distance(prevLat, prevLon, repMain.Latitude, repMain.Longitude);
 
-                    if (!TryToFindRouteBetweenPoints(prevLat, prevLon, repMain.Latitude, repMain.Longitude, distToRep, filter, out Section secToRep))
+                    if (!TryToFindRouteBetweenPoints(prevLat, prevLon, repMain.Latitude, repMain.Longitude, distToRep, filter, out Section secToRep, searchRadPrev, searchRadRep))
                     {
                         continue;
                     }
 
                     double distRepToRoot = SpatialMath.Distance(repMain.Latitude, repMain.Longitude, rootLat, rootLon);
 
-                    if (TryToFindRouteBetweenPoints(repMain.Latitude, repMain.Longitude, rootLat, rootLon, distRepToRoot, filter, out Section secToRoot))
+                    if (TryToFindRouteBetweenPoints(repMain.Latitude, repMain.Longitude, rootLat, rootLon, distRepToRoot, filter, out Section secToRoot, searchRadPrev))
                     {
                         confirmed[^1] = replacement;
                         ans[^1] = secToRep;
@@ -178,35 +211,42 @@ namespace RoutePlanning.AttractionConnecting
         /// 1. stopB должна быть ближе к цели (lat2,lon2) чем stopA.
         /// Проверка выполняется внутри TryToFindDirectRoute/IntersectionRoute/TransferRoute.
         /// </summary>
-        private bool TryToFindRouteBetweenPoints(double lat1, double lon1, double lat2, double lon2, double dist, TransportFilter filter, out Section sect)
+        private bool TryToFindRouteBetweenPoints(double lat1, double lon1, double lat2, double lon2, double dist, TransportFilter filter, out Section sect, double searchRadFor1 = 600, double searchRadFor2 = 600)
         {
             if (dist <= 700)
             {
                 sect = new Section([], [], (int)(dist / 66), 0, false);
                 return true;
             }
+            searchRadFor1 *= GetDistanceMultilpier(dist);
+            searchRadFor2 *= GetDistanceMultilpier(dist);
 
-            Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter, searchRad: 600);
-            Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter, searchRad: 600);
+            int SR1 = searchRadFor1 >= int.MaxValue ? int.MaxValue : (int)searchRadFor1;
+            int SR2 = searchRadFor2 >= int.MaxValue ? int.MaxValue : (int)searchRadFor2;
 
-            //if (TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
-            //{
-            //    return true;
-            //}
-
-            //if (TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out sect))
-            //{
-            //    return true;
-            //}
-
-            //if (TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out sect))
-            //{
-            //    return true;
-            //}
+            Pair<IStation[], MetroStation[]> stationsForPoint1 = CTF.GetClosestStations(lat1, lon1, filter, searchRad: SR1);
+            Pair<IStation[], MetroStation[]> stationsForPoint2 = CTF.GetClosestStations(lat2, lon2, filter, searchRad: SR2);
 
             bool hasDirectRoute = TryToFindDirectRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out var sect1);
+            if (hasDirectRoute && JudgeSection(sect1) == 1)
+            {
+                sect = sect1;
+                return true;
+            }
+
             bool hasIntersectionRoute = TryToFindIntersectionRoute(stationsForPoint1, stationsForPoint2, lat1, lon1, lat2, lon2, out var sect2);
+            if (hasIntersectionRoute && JudgeSection(sect2) == 1)
+            {
+                sect = sect2;
+                return true;
+            }
+
             bool hasTransferRoute = TryToFindTransferRoute(stationsForPoint1, stationsForPoint2, dist, filter, lat1, lon1, lat2, lon2, out var sect3);
+            if (hasTransferRoute && JudgeSection(sect3) == 1)
+            {
+                sect = sect3;
+                return true;
+            }
 
             sect = null!;
             if (hasDirectRoute)
@@ -255,6 +295,41 @@ namespace RoutePlanning.AttractionConnecting
             sect = null!;
             double bestWalkDistance = double.MaxValue;
 
+            if (CTF.HasMetroSystem)
+            {
+                foreach (MetroStation ms1 in st1.Second)
+                {
+                    foreach (MetroStation ms2 in st2.Second)
+                    {
+                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
+                        {
+                            continue;
+                        }
+
+                        Section? candidate = TryBuildDirectMetroGap(ms1, ms2);
+
+                        if (candidate != null)
+                        {
+                            switch (JudgeSection(candidate))
+                            {
+                                case -1: continue;
+                                case 1: sect = candidate; return true;
+                                case 0: break;
+                            }
+
+                            double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
+                                            + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
+
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
+                            {
+                                bestWalkDistance = walkDist;
+                                sect = candidate;
+                            }
+                        }
+                    }
+                }
+            }
+
             foreach (IStation stop1 in st1.First)
             {
                 foreach (IStation stop2 in st2.First)
@@ -273,6 +348,13 @@ namespace RoutePlanning.AttractionConnecting
 
                     if (candidate != null)
                     {
+                        switch (JudgeSection(candidate))
+                        {
+                            case -1: continue;
+                            case 1: sect = candidate; return true;
+                            case 0: break;
+                        }
+
                         double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
                                         + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
 
@@ -280,34 +362,6 @@ namespace RoutePlanning.AttractionConnecting
                         {
                             bestWalkDistance = walkDist;
                             sect = candidate;
-                        }
-                    }
-                }
-            }
-
-            if (CTF.HasMetroSystem)
-            {
-                foreach (MetroStation ms1 in st1.Second)
-                {
-                    foreach (MetroStation ms2 in st2.Second)
-                    {
-                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
-                        {
-                            continue;
-                        }
-
-                        Section? candidate = TryBuildDirectMetroGap(ms1, ms2);
-
-                        if (candidate != null)
-                        {
-                            double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
-                                            + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
-
-                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
-                            {
-                                bestWalkDistance = walkDist;
-                                sect = candidate;
-                            }
                         }
                     }
                 }
@@ -328,6 +382,41 @@ namespace RoutePlanning.AttractionConnecting
             sect = null!;
             double bestWalkDistance = double.MaxValue;
 
+            if (CTF.HasMetroSystem)
+            {
+                foreach (MetroStation ms1 in st1.Second)
+                {
+                    foreach (MetroStation ms2 in st2.Second)
+                    {
+                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
+                        {
+                            continue;
+                        }
+
+                        Section? candidate = TryBuildMetroWithTransfers(ms1, ms2);
+
+                        if (candidate != null)
+                        {
+                            switch (JudgeSection(candidate))
+                            {
+                                case -1: continue;
+                                case 1: sect = candidate; return true;
+                                case 0: break;
+                            }
+
+                            double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
+                                            + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
+
+                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
+                            {
+                                bestWalkDistance = walkDist;
+                                sect = candidate;
+                            }
+                        }
+                    }
+                }
+            }
+
             foreach (IStation stop1 in st1.First)
             {
                 foreach (IStation stop2 in st2.First)
@@ -346,6 +435,13 @@ namespace RoutePlanning.AttractionConnecting
 
                     if (candidate != null)
                     {
+                        switch (JudgeSection(candidate))
+                        {
+                            case -1: continue;
+                            case 1: sect = candidate; return true;
+                            case 0: break;
+                        }
+
                         double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
                                         + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
 
@@ -353,34 +449,6 @@ namespace RoutePlanning.AttractionConnecting
                         {
                             bestWalkDistance = walkDist;
                             sect = candidate;
-                        }
-                    }
-                }
-            }
-
-            if (CTF.HasMetroSystem)
-            {
-                foreach (MetroStation ms1 in st1.Second)
-                {
-                    foreach (MetroStation ms2 in st2.Second)
-                    {
-                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
-                        {
-                            continue;
-                        }
-
-                        Section? candidate = TryBuildMetroWithTransfers(ms1, ms2);
-
-                        if (candidate != null)
-                        {
-                            double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
-                                            + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
-
-                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
-                            {
-                                bestWalkDistance = walkDist;
-                                sect = candidate;
-                            }
                         }
                     }
                 }
@@ -402,37 +470,6 @@ namespace RoutePlanning.AttractionConnecting
             sect = null!;
             double bestWalkDistance = double.MaxValue;
 
-            // Стратегия 1: наземный тип A → наземный тип B
-            foreach (IStation stop1 in st1.First)
-            {
-                foreach (IStation stop2 in st2.First)
-                {
-                    if (stop1 is Station s1 && stop2 is Station s2 && s1.Type == s2.Type)
-                    {
-                        continue;
-                    }
-
-                    if (!IsValidStopPair(stop1.Latitude, stop1.Longitude, stop2.Latitude, stop2.Longitude, targetLat, targetLon, startLat, startLon))
-                    {
-                        continue;
-                    }
-
-                    Section? candidate = TryBuildCrossSurfaceRoute(stop1, stop2);
-
-                    if (candidate != null)
-                    {
-                        double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
-                                        + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
-
-                        if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
-                        {
-                            bestWalkDistance = walkDist;
-                            sect = candidate;
-                        }
-                    }
-                }
-            }
-
             if (!CTF.HasMetroSystem)
             {
                 return sect != null;
@@ -441,9 +478,9 @@ namespace RoutePlanning.AttractionConnecting
             // Стратегия 2: наземный → метро → пешком до точки 2
             foreach (IStation surfaceStop1 in st1.First)
             {
-                MetroStation[] metroNearStop1 = CTF.GetClosestMetroStations(surfaceStop1.Latitude, surfaceStop1.Longitude, 3, 700);
+                MetroStation[] metroNearSurfaceRoutes = GetMetroStationsNearRoutes(surfaceStop1, false);
 
-                foreach (MetroStation metroEntry in metroNearStop1)
+                foreach (MetroStation metroEntry in metroNearSurfaceRoutes)
                 {
                     foreach (MetroStation metroExit in st2.Second)
                     {
@@ -451,6 +488,13 @@ namespace RoutePlanning.AttractionConnecting
 
                         if (candidate != null)
                         {
+                            switch (JudgeSection(candidate))
+                            {
+                                case -1: continue;
+                                case 1: sect = candidate; return true;
+                                case 0: break;
+                            }
+
                             double walkDist = SpatialMath.Distance(startLat, startLon, surfaceStop1.Latitude, surfaceStop1.Longitude)
                                             + SpatialMath.Distance(metroExit.Latitude, metroExit.Longitude, targetLat, targetLon);
 
@@ -469,14 +513,21 @@ namespace RoutePlanning.AttractionConnecting
             {
                 foreach (IStation surfaceStop2 in st2.First)
                 {
-                    MetroStation[] metroNearStop2 = CTF.GetClosestMetroStations(surfaceStop2.Latitude, surfaceStop2.Longitude, 3, 700);
+                    MetroStation[] metroNearSurfaceRoutes = GetMetroStationsNearRoutes(surfaceStop2, true);
 
-                    foreach (MetroStation metroExit in metroNearStop2)
+                    foreach (MetroStation metroExit in metroNearSurfaceRoutes)
                     {
                         Section? candidate = TryBuildMetroThenSurface(metroEntry, metroExit, surfaceStop2);
 
                         if (candidate != null)
                         {
+                            switch (JudgeSection(candidate))
+                            {
+                                case -1: continue;
+                                case 1: sect = candidate; return true;
+                                case 0: break;
+                            }
+
                             double walkDist = SpatialMath.Distance(startLat, startLon, metroEntry.Latitude, metroEntry.Longitude)
                                             + SpatialMath.Distance(surfaceStop2.Latitude, surfaceStop2.Longitude, targetLat, targetLon);
 
@@ -485,6 +536,43 @@ namespace RoutePlanning.AttractionConnecting
                                 bestWalkDistance = walkDist;
                                 sect = candidate;
                             }
+                        }
+                    }
+                }
+            }
+
+            foreach (IStation stop1 in st1.First)
+            {
+                foreach (IStation stop2 in st2.First)
+                {
+                    if (stop1 is Station s1 && stop2 is Station s2 && s1.Type == s2.Type)
+                    {
+                        continue;
+                    }
+
+                    if (!IsValidStopPair(stop1.Latitude, stop1.Longitude, stop2.Latitude, stop2.Longitude, targetLat, targetLon, startLat, startLon))
+                    {
+                        continue;
+                    }
+
+                    Section? candidate = TryBuildCrossSurfaceRoute(stop1, stop2);
+
+                    if (candidate != null)
+                    {
+                        switch (JudgeSection(candidate))
+                        {
+                            case -1: continue;
+                            case 1: sect = candidate; return true;
+                            case 0: break;
+                        }
+
+                        double walkDist = SpatialMath.Distance(startLat, startLon, stop1.Latitude, stop1.Longitude)
+                                        + SpatialMath.Distance(stop2.Latitude, stop2.Longitude, targetLat, targetLon);
+
+                        if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
+                        {
+                            bestWalkDistance = walkDist;
+                            sect = candidate;
                         }
                     }
                 }
@@ -826,8 +914,7 @@ namespace RoutePlanning.AttractionConnecting
             }
             else
             {
-                // Нет наземного Gap-а — пешком до метро
-                return metroSection;
+                return null;
             }
         }
 
@@ -862,7 +949,7 @@ namespace RoutePlanning.AttractionConnecting
             }
             else
             {
-                return metroSection;
+                return null;
             }
         }
 
@@ -936,6 +1023,88 @@ namespace RoutePlanning.AttractionConnecting
 
         // ==================== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ====================
 
+        private int JudgeSection(Section section)
+        {
+            double lat1, lon1;
+            double lat2, lon2;
+
+            if (section.MetroGaps.Length == 0)
+            {
+                if (section.Gaps.Length == 0)
+                {
+                    return 0;
+                }
+
+                IStation start = section.Gaps[0].StartNode;
+                IStation end = section.Gaps[^1].EndNode;
+
+                lat1 = start.Latitude;
+                lon1 = start.Longitude;
+                lat2 = end.Latitude;
+                lon2 = end.Longitude;
+            }
+            else if (section.Gaps.Length == 0)
+            {
+                MetroStation start = section.MetroGaps[0].StartNode;
+                MetroStation end = section.MetroGaps[^1].EndNode;
+
+                lat1 = start.Latitude;
+                lon1 = start.Longitude;
+                lat2 = end.Latitude;
+                lon2 = end.Longitude;
+            }
+            else
+            {
+                if (section.MetrosFirst)
+                {
+                    MetroStation start = section.MetroGaps[0].StartNode;
+                    IStation end = section.Gaps[^1].EndNode;
+
+                    lat1 = start.Latitude;
+                    lon1 = start.Longitude;
+                    lat2 = end.Latitude;
+                    lon2 = end.Longitude;
+                }
+                else
+                {
+                    IStation start = section.Gaps[0].StartNode;
+                    MetroStation end = section.MetroGaps[^1].EndNode;
+
+                    lat1 = start.Latitude;
+                    lon1 = start.Longitude;
+                    lat2 = end.Latitude;
+                    lon2 = end.Longitude;
+                }
+            }
+
+            double dist = SpatialMath.Distance(lat1, lon1, lat2, lon2);
+            double averageSpeed = dist / section.EstimatedTimeInMinutes;
+
+            if (averageSpeed < 145)
+            {
+                return -1;
+            }
+            if (averageSpeed >= 230)
+            {
+                return 1;
+            }
+
+            return 0;
+        }
+
+        private double GetDistanceMultilpier(double dist)
+        {
+            if (dist < 5000)
+            {
+                return 1.0;
+            }
+            if (dist < 15000)
+            {
+                return 1.2;
+            }
+
+            return 1.5;
+        }
         /// <summary>
         /// Ищет прямой маршрут наземного транспорта между двумя остановками одного типа.
         /// </summary>
@@ -1031,6 +1200,37 @@ namespace RoutePlanning.AttractionConnecting
             }
 
             return [];
+        }
+
+        private MetroStation[] GetMetroStationsNearRoutes(IStation stop, bool earlier)
+        {
+            HashSet<MetroStation> hs = [];
+            TransportType type = GetStationType(stop);
+
+            foreach (RouteInfo ri in stop.Routes)
+            {
+                IRoute? route = GetSurfaceRoute(ri.RouteID, type);
+                if (route != null)
+                {
+                    int start = earlier ? 0 : ri.Order;
+                    int end = earlier ? ri.Order : route.Stops.Count;
+
+                    for (int i = start; i < end; i++)
+                    {
+                        MetroStation[] arr = CTF.GetClosestMetroStations(route.Stops[i], 3, 400);
+                        foreach (MetroStation st2 in arr)
+                        {
+                            _ = hs.Add(st2);
+                        }
+                    }
+                }
+            }
+
+            MetroStation[] ans = [.. hs];
+            Array.Sort(ans, (el1, el2) => SpatialMath.Distance(el1.Latitude, el1.Longitude, stop.Latitude, stop.Longitude).
+                CompareTo(SpatialMath.Distance(el2.Latitude, el2.Longitude, stop.Latitude, stop.Longitude)));
+
+            return ans;
         }
 
         /// <summary>
