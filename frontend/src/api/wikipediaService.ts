@@ -88,9 +88,7 @@ export const getHighQualityImageUrl = (thumbUrl: string): string => {
       const lastSlash = highQuality.lastIndexOf('/');
       if (lastSlash !== -1) {
         const pathWithoutSize = highQuality.substring(0, lastSlash);
-        const fileNamePart = highQuality.substring(lastSlash + 1);
-        const cleanFileName = fileNamePart.replace(/^\d+px-/, '');
-        highQuality = `${pathWithoutSize}/${cleanFileName}`;
+        highQuality = `${pathWithoutSize}`;
       }
     }
     if (!highQuality.includes('?') && !highQuality.includes('width=')) {
