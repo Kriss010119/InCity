@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Tooltip } from 'react-leaflet';
 import { Clock, MapPin, Building2 } from 'lucide-react';
 import type { MapMarker } from '../../../../types';
@@ -11,39 +11,38 @@ type MarkerTooltipProps = {
 };
 
 export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
-  const [image, setImage] = useState<string | null>(null);
-  const [description, setDescription] = useState<string | null>(null);
-  const [imageError, setImageError] = useState(false);
-  const fetchedRef = useRef(false);
   const { getCachedData } = usePlaceCache();
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
-    setImage(null);
-    setDescription(null);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setImageError(false);
-    fetchedRef.current = false;
+  }, [marker.placeData]);
 
-    if (!marker.placeData) {
-        return;
-    }
-    
-    const cached = getCachedData(marker.placeData.id);
-    if (cached) {
-      if (cached.images?.[0]) {
-        setImage(cached.images[0]);
-      } else {
-        setImageError(true);
-      }
+  const cachedData = useMemo(() => {
+    if (!marker.placeData) return null;
+    return getCachedData(marker.placeData.id);
+  }, [marker.placeData, getCachedData]);
 
-      if (cached.details?.wikipediaExtract) {
-        setDescription(cached.details.wikipediaExtract);
-      }
-    } else {
-      setImageError(true);
-    }
-  }, [marker, getCachedData]);
+  const image = useMemo(() => {
+    if (imageError) return null;
+    return cachedData?.images?.[0] ?? null;
+  }, [cachedData, imageError]);
 
-  const categoryLabel = marker.type === 'selected' ? 'Точка назначения' : marker.type === 'end' ? 'Отель' : marker.category || 'Достопримечательность';
+  const description = useMemo(() => {
+    return cachedData?.details?.wikipediaExtract ?? null;
+  }, [cachedData]);
+
+  const handleImageError = useCallback(() => {
+    setImageError(true);
+  }, []);
+
+  const categoryLabel =
+    marker.type === 'selected'
+      ? 'Точка назначения'
+      : marker.type === 'end'
+        ? 'Отель'
+        : marker.category || 'Достопримечательность';
   const isSpecial = marker.type === 'selected' || marker.type === 'end';
   const categoryColor = isSpecial ? '#FFD700' : getCategoryColor(marker.category || '');
 
@@ -59,12 +58,7 @@ export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
       <div className={styles.tooltipCard}>
         {image && !imageError ? (
           <div className={styles.tooltipImage}>
-            <img
-              src={image}
-              alt={marker.title}
-              loading="lazy"
-              onError={() => setImageError(true)}
-            />
+            <img src={image} alt={marker.title} loading="lazy" onError={handleImageError} />
           </div>
         ) : (
           <div className={styles.tooltipImagePlaceholder}>

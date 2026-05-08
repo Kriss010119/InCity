@@ -1,11 +1,14 @@
-import type { RouteResponse, VisitPointGroup, WalkingSegment, TransportType, VisitPoint } from '../../../types';
+import type {
+  RouteResponse,
+  VisitPointGroup,
+  WalkingSegment,
+  TransportType,
+  VisitPoint,
+} from '../../../types';
 import type { MapMarker, RouteSegment } from '../../../types';
+import { extractTagValue } from '../../../utils/categoryUtils';
 
 type LatLng = { lat: number; lng: number };
-
-export const extractTagValue = (tags: string[], key: string): string => {
-  return tags.find(tag => tag.startsWith(key))?.split('=')[1] || '';
-};
 
 export const createMarkerFromPoint = (point: VisitPoint): MapMarker => ({
   id: point.id.toString(),
@@ -60,7 +63,7 @@ export const createPlaceFromMarker = (marker: MapMarker): VisitPoint => {
       marker.address ? `addr:full=${marker.address}` : '',
       marker.phone ? `phone=${marker.phone}` : '',
       marker.website ? `website=${marker.website}` : '',
-    ].filter(tag => tag !== ''),
+    ].filter((tag) => tag !== ''),
   };
 };
 
@@ -68,7 +71,7 @@ export const getCurvedPath = (
   start: [number, number],
   end: [number, number],
   curvature: number = 0.4,
-  numPoints: number = 20
+  numPoints: number = 20,
 ): [number, number][] => {
   const points: [number, number][] = [];
   const lat1 = start[0];
@@ -99,7 +102,7 @@ export const buildFullRouteSegments = (
   routeResponse: RouteResponse | null | undefined,
   visitPoints: VisitPointGroup[],
   startLat?: number,
-  startLng?: number
+  startLng?: number,
 ): RouteSegment[] => {
   if (!routeResponse || !startLat || !startLng || !visitPoints.length) {
     return [];
@@ -120,7 +123,10 @@ export const buildFullRouteSegments = (
       : startPoint;
 
     // пешком к началу секции
-    if (i < sections.length - 1 || (i === sections.length - 1 && section.gaps && section.gaps.length > 0)) {
+    if (
+      i < sections.length - 1 ||
+      (i === sections.length - 1 && section.gaps && section.gaps.length > 0)
+    ) {
       let sectionStart: LatLng;
       let sectionStartName = 'Остановка';
       if (section.gaps && section.gaps.length > 0) {
@@ -141,7 +147,10 @@ export const buildFullRouteSegments = (
         segments.push({
           id: `walk-to-section-${i}`,
           type: 'walk',
-          points: [[curPos.lat, curPos.lng], [sectionStart.lat, sectionStart.lng]],
+          points: [
+            [curPos.lat, curPos.lng],
+            [sectionStart.lat, sectionStart.lng],
+          ],
           gapId: `walk-to-section-${i}`,
           startName: lastLocationName,
           endName: sectionStartName,
@@ -164,10 +173,12 @@ export const buildFullRouteSegments = (
           id: `transport-${i}-gap-${j}`,
           type: gap.transport as TransportType,
           routeNumber: gap.routeNumber,
-          points: gapPoints.map(p => [p.lat, p.lng] as [number, number]),
+          points: gapPoints.map((p) => [p.lat, p.lng] as [number, number]),
           estimatedTime: section.estimatedTimeInMinutes,
           intermediateStops: gap.nodesVisited.map((n) => n.name),
           gapId: `${i}-${j}`,
+          startName: gap.startNode.name,
+          endName: gap.endNode.name,
         });
         curPos = gapPoints[gapPoints.length - 1];
         lastLocationName = gap.endNode.name;
@@ -184,7 +195,10 @@ export const buildFullRouteSegments = (
             segments.push({
               id: `walk-transfer-${i}-${j}`,
               type: 'walk',
-              points: [[curPos.lat, curPos.lng], [nextSt.lat, nextSt.lng]],
+              points: [
+                [curPos.lat, curPos.lng],
+                [nextSt.lat, nextSt.lng],
+              ],
               gapId: `walk-transfer-${i}-${j}`,
               startName: gap.endNode.name,
               endName: nextGap.startNode.name,
@@ -206,7 +220,10 @@ export const buildFullRouteSegments = (
           segments.push({
             id: `walk-transport-to-cluster-${i}`,
             type: 'walk',
-            points: [[curPos.lat, curPos.lng], [mainPoint.lat, mainPoint.lng]],
+            points: [
+              [curPos.lat, curPos.lng],
+              [mainPoint.lat, mainPoint.lng],
+            ],
             gapId: `walk-transport-to-cluster-${i}`,
             startName: lastLocationName,
             endName: places.mainAttraction.name,
@@ -223,7 +240,10 @@ export const buildFullRouteSegments = (
           segments.push({
             id: `walk-section-${i}`,
             type: 'walk',
-            points: [[curPos.lat, curPos.lng], [point.lat, point.lng]],
+            points: [
+              [curPos.lat, curPos.lng],
+              [point.lat, point.lng],
+            ],
             estimatedTime: section.estimatedTimeInMinutes,
             gapId: `walk-section-${i}`,
             startName: lastLocationName,
@@ -244,7 +264,10 @@ export const buildFullRouteSegments = (
         segments.push({
           id: `walk-cluster-${i}-${u}`,
           type: 'walk',
-          points: [[from.latitude, from.longitude], [to.latitude, to.longitude]],
+          points: [
+            [from.latitude, from.longitude],
+            [to.latitude, to.longitude],
+          ],
           gapId: `walk-cluster-${i}-${u}`,
           startName: from.name,
           endName: to.name,
@@ -260,7 +283,10 @@ export const buildFullRouteSegments = (
   segments.push({
     id: 'walk-final-return',
     type: 'walk',
-    points: [[curPos.lat, curPos.lng], [startPoint.lat, startPoint.lng]],
+    points: [
+      [curPos.lat, curPos.lng],
+      [startPoint.lat, startPoint.lng],
+    ],
     gapId: 'walk-final-return',
     startName: lastLocationName,
     endName: 'Начало маршрута',
@@ -272,7 +298,12 @@ export const buildFullRouteSegments = (
 export const getSegmentCurvedPoints = (segment: RouteSegment): [number, number][] => {
   const validPoints = segment.points.filter(
     (p): p is [number, number] =>
-      p && p.length === 2 && typeof p[0] === 'number' && !isNaN(p[0]) && typeof p[1] === 'number' && !isNaN(p[1])
+      p &&
+      p.length === 2 &&
+      typeof p[0] === 'number' &&
+      !isNaN(p[0]) &&
+      typeof p[1] === 'number' &&
+      !isNaN(p[1]),
   );
   if (validPoints.length < 2) {
     return [];
@@ -291,15 +322,15 @@ export const getSegmentCurvedPoints = (segment: RouteSegment): [number, number][
 };
 
 export const extractWalkingSegmentsFromRouteSegments = (
-  segments: RouteSegment[]
+  segments: RouteSegment[],
 ): WalkingSegment[] => {
   return segments
-    .filter(seg => seg.type === 'walk' && seg.gapId)
-    .map(seg => {
+    .filter((seg) => seg.type === 'walk' && seg.gapId)
+    .map((seg) => {
       const startPoint = seg.points[0];
       const endPoint = seg.points[seg.points.length - 1];
       const distance = Math.hypot(startPoint[0] - endPoint[0], startPoint[1] - endPoint[1]);
-      const estimatedTime = Math.round(distance * 111000 / 80);
+      const estimatedTime = Math.round((distance * 111000) / 80);
       return {
         id: seg.gapId!,
         sectionIndex: extractSectionIndexFromGapId(seg.gapId!),
@@ -321,54 +352,59 @@ export const extractWalkingSegmentsFromRouteSegments = (
 export const extractWalkingSegmentsForInfoPanel = (
   routeResponse: RouteResponse | null | undefined,
   startLat?: number,
-  startLng?: number
+  startLng?: number,
 ): WalkingSegment[] => {
   if (!routeResponse || !startLat || !startLng) {
     return [];
   }
-  const segments = buildFullRouteSegments(routeResponse, routeResponse.visitPoints, startLat, startLng);
+  const segments = buildFullRouteSegments(
+    routeResponse,
+    routeResponse.visitPoints,
+    startLat,
+    startLng,
+  );
   return extractWalkingSegmentsFromRouteSegments(segments);
 };
 
-const extractSectionIndexFromGapId = (gapId: string): number => {
+export const extractSectionIndexFromGapId = (gapId: string): number => {
   const sectionMatch = gapId.match(/^section-(\d+)$/);
   if (sectionMatch) {
     return parseInt(sectionMatch[1], 10);
   }
-  
+
   if (gapId === 'walk-final-return') {
     return -1;
   }
-  
+
   const match = gapId.match(/walk-to-section-(\d+)/);
   if (match) {
     return parseInt(match[1], 10);
   }
-  
+
   const matchCluster = gapId.match(/walk-cluster-(\d+)-/);
   if (matchCluster) {
     return parseInt(matchCluster[1], 10);
   }
-  
+
   const matchTransfer = gapId.match(/walk-transfer-(\d+)-/);
   if (matchTransfer) {
     return parseInt(matchTransfer[1], 10);
   }
-  
+
   const matchTransport = gapId.match(/walk-transport-to-cluster-(\d+)/);
   if (matchTransport) {
     return parseInt(matchTransport[1], 10);
   }
-  
+
   const matchWalkSection = gapId.match(/walk-section-(\d+)/);
   if (matchWalkSection) {
     return parseInt(matchWalkSection[1], 10);
   }
-  
+
   const gapMatch = gapId.match(/^(\d+)-(\d+)$/);
   if (gapMatch) {
     return parseInt(gapMatch[1], 10);
   }
-  
+
   return -1;
 };

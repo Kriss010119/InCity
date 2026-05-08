@@ -1,13 +1,12 @@
 import type { FormData } from '../types';
 import type { TicketDetails } from '../types';
 
-
 export const geocodeCity = async (city: string): Promise<{ lat: number; lng: number } | null> => {
   if (!city.trim()) return null;
   try {
     const response = await fetch(
       `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}&limit=1&countrycodes=ru`,
-      { headers: { 'User-Agent': 'InCityApp/1.0' } }
+      { headers: { 'User-Agent': 'InCityApp/1.0' } },
     );
     const data = await response.json();
     if (data && data[0]) {
@@ -20,13 +19,13 @@ export const geocodeCity = async (city: string): Promise<{ lat: number; lng: num
   }
 };
 
-
 export const applyTicketToFormData = (
   ticketNumber: string,
-  ticketDetails: TicketDetails
+  ticketDetails: TicketDetails,
 ): Partial<FormData> => {
   if (ticketDetails.orderType === 'train') {
-    const city = ticketDetails.details.arrivalStationCode === '2000000' ? 'Москва' : 'Санкт-Петербург';
+    const city =
+      ticketDetails.details.arrivalStationCode === '2000000' ? 'Москва' : 'Санкт-Петербург';
     const lat = city === 'Москва' ? 55.7558 : 59.9343;
     const lng = city === 'Москва' ? 37.6173 : 30.3351;
     return {
@@ -48,10 +47,4 @@ export const applyTicketToFormData = (
     };
   }
   return {};
-};
-
-
-export const validateTicketNumber = (value: string): boolean => {
-  const trimmed = value.trim();
-  return /^(HT|TR)-\d{6}$/i.test(trimmed);
 };

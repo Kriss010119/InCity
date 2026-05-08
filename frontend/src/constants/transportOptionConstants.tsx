@@ -9,7 +9,12 @@ export const TRANSPORT_OPTIONS: TransportOption[] = [
 ];
 
 export const DURATION_OPTIONS = [
-  { id: 'very-short', name: 'Очень короткий', description: 'Менее 2 часов', icon: <Clock size={14} /> },
+  {
+    id: 'very-short',
+    name: 'Очень короткий',
+    description: 'Менее 2 часов',
+    icon: <Clock size={14} />,
+  },
   { id: 'short', name: 'Короткий', description: '2-3 часа', icon: <Clock size={14} /> },
   { id: 'medium', name: 'Средний', description: '3-6 часов', icon: <Clock size={14} /> },
   { id: 'long', name: 'Длинный', description: '6-9 часов', icon: <Clock size={14} /> },

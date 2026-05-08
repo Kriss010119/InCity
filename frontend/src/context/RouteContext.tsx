@@ -4,7 +4,7 @@ import { type RouteStateType } from '../types';
 const initialState: RouteStateType = {
   from: null,
   to: null,
-  places: []
+  places: [],
 };
 
 interface RouteContextType {
@@ -22,14 +22,13 @@ interface RouteProviderProps {
 export function RouteProvider({ children }: RouteProviderProps) {
   const [route, setRoute] = useState<RouteStateType>(initialState);
 
-  const value = React.useMemo(() => ({
-    route,
-    setRoute
-  }), [route]);
-
-  return (
-    <RouteContext.Provider value={value}>
-      {children}
-    </RouteContext.Provider>
+  const value = React.useMemo(
+    () => ({
+      route,
+      setRoute,
+    }),
+    [route],
   );
+
+  return <RouteContext.Provider value={value}>{children}</RouteContext.Provider>;
 }

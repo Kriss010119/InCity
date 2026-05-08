@@ -10,23 +10,26 @@ type DatePickerProps = {
   isEnabled: boolean;
   onOpen?: () => void;
   onClose?: () => void;
-}
+};
 
-export const DatePicker = ({ 
-  value, 
-  onChange, 
-  isEnabled,
-  onOpen,
-  onClose
-}: DatePickerProps) => {
+export const DatePicker = ({ value, onChange, isEnabled, onOpen, onClose }: DatePickerProps) => {
   const [showCalendar, setShowCalendar] = useState(false);
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [calendarPosition, setCalendarPosition] = useState<{ top: number; left: number } | null>(null);
+  const [currentMonth, setCurrentMonth] = useState(() => {
+    if (value) {
+      const [year, month] = value.split('-').map(Number);
+      return new Date(year, month - 1, 1);
+    }
+    return new Date();
+  });
+  const [calendarPosition, setCalendarPosition] = useState<{ top: number; left: number } | null>(
+    null,
+  );
   const calendarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (value) {
       const [year, month] = value.split('-').map(Number);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentMonth(new Date(year, month - 1, 1));
     }
   }, [value]);
@@ -50,11 +53,11 @@ export const DatePicker = ({
       const rect = dateInput.getBoundingClientRect();
       const calendarWidth = 320;
       let left = rect.right + 12;
-      
+
       if (left + calendarWidth > window.innerWidth) {
         left = rect.left - calendarWidth - 12;
       }
-      
+
       return {
         top: rect.top + rect.height / 2,
         left: left,
@@ -91,7 +94,7 @@ export const DatePicker = ({
     const monthStr = String(selectedDate.getMonth() + 1).padStart(2, '0');
     const dayStr = String(selectedDate.getDate()).padStart(2, '0');
     const formattedDate = `${yearStr}-${monthStr}-${dayStr}`;
-    
+
     onChange(formattedDate);
     setShowCalendar(false);
     setCalendarPosition(null);
@@ -114,16 +117,16 @@ export const DatePicker = ({
     return date.toLocaleDateString('ru-RU', {
       day: 'numeric',
       month: 'long',
-      year: 'numeric'
+      year: 'numeric',
     });
   };
 
   const isSelectedDay = (day: number) => {
     if (!value) return false;
     const [year, month, dayStr] = value.split('-').map(Number);
-    return year === currentMonth.getFullYear() && 
-           month === currentMonth.getMonth() + 1 &&
-           day === dayStr;
+    return (
+      year === currentMonth.getFullYear() && month === currentMonth.getMonth() + 1 && day === dayStr
+    );
   };
 
   return (
@@ -133,7 +136,7 @@ export const DatePicker = ({
         <span>Дата</span>
       </label>
       <div className={styles.datePickerWrapper}>
-        <div 
+        <div
           className={`${styles.dateInput} ${!isEnabled ? styles.inputDisabled : ''}`}
           onClick={handleDateClick}
         >
@@ -142,19 +145,19 @@ export const DatePicker = ({
           </span>
           <Calendar size={16} className={styles.calendarIcon} />
         </div>
-        
+
         {showCalendar && calendarPosition && (
           <Portal>
-            <div 
-              className={styles.calendarOverlay} 
+            <div
+              className={styles.calendarOverlay}
               onClick={() => {
                 setShowCalendar(false);
                 setCalendarPosition(null);
                 onClose?.();
-              }} 
+              }}
             />
-            <div 
-              className={styles.calendarDropdown} 
+            <div
+              className={styles.calendarDropdown}
               ref={calendarRef}
               style={{
                 top: `${calendarPosition.top}px`,
@@ -166,34 +169,36 @@ export const DatePicker = ({
                   <ChevronLeft size={18} />
                 </button>
                 <span className={styles.calendarMonth}>
-                  {currentMonth.toLocaleDateString('ru-RU', { 
-                    month: 'long', 
-                    year: 'numeric' 
+                  {currentMonth.toLocaleDateString('ru-RU', {
+                    month: 'long',
+                    year: 'numeric',
                   })}
                 </span>
                 <button onClick={handleNextMonth} className={styles.calendarNav}>
                   <ChevronRight size={18} />
                 </button>
               </div>
-              
+
               <div className={styles.calendarWeekdays}>
-                {WEEKDAYS.map(day => (
-                  <div key={day} className={styles.weekday}>{day}</div>
+                {WEEKDAYS.map((day) => (
+                  <div key={day} className={styles.weekday}>
+                    {day}
+                  </div>
                 ))}
               </div>
-              
+
               <div className={styles.calendarDays}>
                 {Array.from({ length: getFirstDayOfMonth(currentMonth) - 1 }, (_, i) => (
                   <div key={`empty-${i}`} className={styles.emptyDay} />
                 ))}
-                
+
                 {Array.from({ length: getDaysInMonth(currentMonth) }, (_, i) => {
                   const day = i + 1;
                   const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
                   const isToday = date.toDateString() === new Date().toDateString();
                   const isSelected = isSelectedDay(day);
                   const isPast = date < new Date(new Date().setHours(0, 0, 0, 0));
-                  
+
                   return (
                     <div
                       key={day}

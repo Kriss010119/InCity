@@ -1,24 +1,7 @@
 import { useState, useEffect } from 'react';
-import { usePlaceCache } from '../context/PlaceCacheContext';
 import { buildFullPlaceDetails } from '../api/wikipediaService';
-import type { VisitPoint } from '../types';
-
-type PlaceDetails = {
-  description?: string;
-  images?: string[];
-  address?: string;
-  phone?: string;
-  website?: string;
-  openingHours?: string;
-  wikidata?: string;
-  wikipedia?: string;
-  wikipediaExtract?: string;
-  wikipediaImage?: string;
-  wikipediaUrl?: string;
-  imageLicense?: string;
-  imageAuthor?: string;
-  source?: 'cache' | 'wikipedia' | 'wikidata' | 'osm';
-};
+import type { VisitPoint, PlaceDetails } from '../types';
+import { usePlaceCache } from '../context/PlaceCacheContext';
 
 export const usePlaceDetails = (place: VisitPoint | null) => {
   const [details, setDetails] = useState<PlaceDetails>({});
@@ -36,10 +19,10 @@ export const usePlaceDetails = (place: VisitPoint | null) => {
       const cached = getCachedData(place.id);
       if (cached) {
         if (isMounted) {
-          setDetails({ 
-            ...cached.details, 
+          setDetails({
+            ...cached.details,
             images: cached.images || [],
-            source: 'cache' 
+            source: 'cache',
           });
           setIsLoading(false);
         }
@@ -52,7 +35,7 @@ export const usePlaceDetails = (place: VisitPoint | null) => {
       try {
         const { details: parsedDetails, images } = await buildFullPlaceDetails(
           place.tags || [],
-          abortController.signal
+          abortController.signal,
         );
 
         if (isMounted) {

@@ -1,3 +1,9 @@
+import type {
+  WikipediaSummary,
+  WikidataResponse,
+  WikipediaQueryResponse,
+  PlaceDetails,
+} from '../types';
 import { getWikimediaDirectUrl } from '../utils/categoryUtils';
 
 const parseWikipediaTag = (wikipediaTag: string): { lang: string; title: string } | null => {
@@ -13,8 +19,8 @@ const parseWikipediaTag = (wikipediaTag: string): { lang: string; title: string 
 
 export const fetchWikipediaData = async (
   wikipediaTag: string,
-  signal?: AbortSignal
-) => {
+  signal?: AbortSignal,
+): Promise<WikipediaSummary | null> => {
   const parsed = parseWikipediaTag(wikipediaTag);
   if (!parsed) {
     return null;
@@ -28,12 +34,14 @@ export const fetchWikipediaData = async (
       signal,
       headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' },
     });
-    if (!response.ok) return null;
-    const data = await response.json();
+    if (!response.ok) {
+      return null;
+    }
+    const data: WikipediaSummary = await response.json();
     return {
       extract: data.extract,
       content_urls: data.content_urls,
-      thumbnail: data.thumbnail?.source,
+      thumbnail: data.thumbnail ? { source: data.thumbnail.source } : undefined,
     };
   } catch (error) {
     if (error instanceof Error && error.name !== 'AbortError') {
@@ -44,7 +52,7 @@ export const fetchWikipediaData = async (
 };
 
 export const getWikipediaTitleFromWikidata = async (
-  wikidataId: string
+  wikidataId: string,
 ): Promise<{ lang: string; title: string } | null> => {
   try {
     const url = `https://www.wikidata.org/wiki/Special:EntityData/${wikidataId}.json`;
@@ -52,7 +60,7 @@ export const getWikipediaTitleFromWikidata = async (
       headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' },
     });
     if (!resp.ok) return null;
-    const data = await resp.json();
+    const data: WikidataResponse = await resp.json();
     const entity = data.entities[wikidataId];
     if (!entity?.sitelinks) return null;
 
@@ -103,7 +111,7 @@ export const fetchImageForPlace = async (
   tags: string[],
   wikipedia?: string,
   wikidata?: string,
-  signal?: AbortSignal
+  signal?: AbortSignal,
 ): Promise<string | null> => {
   if (signal?.aborted) return null;
 
@@ -126,25 +134,26 @@ export const fetchImageForPlace = async (
 
   if (wikipedia) {
     if (signal?.aborted) return null;
-    
+
     const wikiData = await fetchWikipediaData(wikipedia, signal);
     if (wikiData?.thumbnail) {
-      return getHighQualityImageUrl(wikiData.thumbnail);
+      return getHighQualityImageUrl(wikiData.thumbnail.source);
     }
 
     if (signal?.aborted) return null;
-    
+
     try {
       const parsed = parseWikipediaTag(wikipedia);
       if (parsed) {
-        const apiUrl = `https://${parsed.lang}.wikipedia.org/w/api.php?` +
+        const apiUrl =
+          `https://${parsed.lang}.wikipedia.org/w/api.php?` +
           `action=query&titles=${encodeURIComponent(parsed.title)}&` +
           `prop=pageimages&format=json&pithumbsize=800&origin=*`;
         const resp = await fetch(apiUrl, { signal });
-        const json = await resp.json();
+        const json: WikipediaQueryResponse = await resp.json();
         const pages = json.query?.pages;
         if (pages) {
-          const page = Object.values(pages)[0] as any;
+          const page = Object.values(pages)[0];
           if (page.thumbnail?.source) {
             return getHighQualityImageUrl(page.thumbnail.source);
           }
@@ -159,13 +168,13 @@ export const fetchImageForPlace = async (
 
   if (wikidata && !wikipedia) {
     if (signal?.aborted) return null;
-    
+
     try {
       const resp = await fetch(
         `https://www.wikidata.org/wiki/Special:EntityData/${wikidata}.json`,
-        { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } }
+        { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } },
       );
-      const data = await resp.json();
+      const data: WikidataResponse = await resp.json();
       const entity = data.entities[wikidata];
 
       const imageClaim = entity?.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
@@ -248,10 +257,10 @@ export const extractImagesFromTags = (tags: string[]): string[] => {
 };
 
 export const enrichWithWikipediaData = async (
-  parsedDetails: any,
+  parsedDetails: PlaceDetails,
   images: string[],
-  signal?: AbortSignal
-) => {
+  signal?: AbortSignal,
+): Promise<void> => {
   if (!parsedDetails.wikipedia) return;
 
   try {
@@ -266,11 +275,11 @@ export const enrichWithWikipediaData = async (
 
     const response = await fetch(
       `https://${wikiLang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wikiTitle)}`,
-      { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } }
+      { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } },
     );
 
     if (response.ok) {
-      const data = await response.json();
+      const data: WikipediaSummary = await response.json();
       parsedDetails.wikipediaExtract = data.extract;
       parsedDetails.wikipediaUrl = data.content_urls?.desktop?.page;
       parsedDetails.source = 'wikipedia';
@@ -308,20 +317,20 @@ export const enrichWithWikipediaData = async (
 };
 
 export const enrichWithWikidataData = async (
-  parsedDetails: any,
+  parsedDetails: PlaceDetails,
   images: string[],
-  signal?: AbortSignal
-) => {
+  signal?: AbortSignal,
+): Promise<void> => {
   if (!parsedDetails.wikidata) return;
 
   try {
     const response = await fetch(
       `https://www.wikidata.org/wiki/Special:EntityData/${parsedDetails.wikidata}.json`,
-      { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } }
+      { signal, headers: { Accept: 'application/json', 'User-Agent': 'InCity/1.0' } },
     );
 
     if (response.ok) {
-      const data = await response.json();
+      const data: WikidataResponse = await response.json();
       const entity = data.entities[parsedDetails.wikidata];
 
       const imageClaim = entity.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
@@ -349,7 +358,7 @@ export const enrichWithWikidataData = async (
   }
 };
 
-export const buildPlaceDetails = (tags: string[]): any => {
+export const buildPlaceDetails = (tags: string[]): PlaceDetails => {
   return {
     address:
       getTagValue(tags, 'addr:full') ||
@@ -366,13 +375,13 @@ export const buildPlaceDetails = (tags: string[]): any => {
 
 export const buildFullPlaceDetails = async (
   tags: string[],
-  signal?: AbortSignal
-): Promise<{ details: any; images: string[] }> => {
+  signal?: AbortSignal,
+): Promise<{ details: PlaceDetails; images: string[] }> => {
   const details = buildPlaceDetails(tags);
   const images = extractImagesFromTags(tags);
 
-  const wikipedia = tags.find(t => t.startsWith('wikipedia='))?.split('=')[1];
-  const wikidata = tags.find(t => t.startsWith('wikidata='))?.split('=')[1];
+  const wikipedia = tags.find((t) => t.startsWith('wikipedia='))?.split('=')[1];
+  const wikidata = tags.find((t) => t.startsWith('wikidata='))?.split('=')[1];
 
   const externalImage = await fetchImageForPlace(tags, wikipedia, wikidata, signal);
   if (externalImage && !images.includes(externalImage)) {

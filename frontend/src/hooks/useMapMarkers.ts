@@ -1,6 +1,10 @@
 import { useState, useCallback, useMemo } from 'react';
 import type { MapMarker, RouteResponse, VisitPoint } from '../types';
-import { createHotelMarker, createMarkerFromPoint, createSelectedMarker } from '../components/Panels/map-panel/utils';
+import {
+  createHotelMarker,
+  createMarkerFromPoint,
+  createSelectedMarker,
+} from '../components/Panels/map-panel/utils';
 
 interface UseMapMarkersProps {
   routeResponse?: RouteResponse | null;
@@ -13,7 +17,9 @@ interface UseMapMarkersProps {
   onClusterClick?: (lat: number, lng: number, groupIndex: number, groupName: string) => void;
 }
 
-const getAllPointsWithGroup = (response?: RouteResponse | null): { point: VisitPoint; groupIndex: number }[] => {
+const getAllPointsWithGroup = (
+  response?: RouteResponse | null,
+): { point: VisitPoint; groupIndex: number }[] => {
   if (!response?.visitPoints) return [];
   const points: { point: VisitPoint; groupIndex: number }[] = [];
   response.visitPoints.forEach((group, idx) => {
@@ -53,7 +59,7 @@ export const useMapMarkers = ({
       marker.title = `${mainPoint.name}`;
       marker.category = `Кластер (${totalPoints} мест)`;
       marker.type = 'point';
-      
+
       marker.clusterData = {
         isCluster: true,
         groupIndex,
@@ -63,7 +69,7 @@ export const useMapMarkers = ({
         centerLng: mainPoint.longitude,
         centerName: mainPoint.name,
       };
-      
+
       clusters.push(marker);
     });
 
@@ -118,17 +124,20 @@ export const useMapMarkers = ({
     setSelectedMarker(null);
   }, []);
 
-  const handleClusterClick = useCallback((marker: MapMarker) => {
-    const clusterData = (marker as any).clusterData;
-    if (clusterData?.isCluster && onClusterClick) {
-      onClusterClick(
-        clusterData.centerLat, 
-        clusterData.centerLng, 
-        clusterData.groupIndex,
-        clusterData.centerName
-      );
-    }
-  }, [onClusterClick]);
+  const handleClusterClick = useCallback(
+    (marker: MapMarker) => {
+      const clusterData = marker.clusterData;
+      if (clusterData?.isCluster && onClusterClick) {
+        onClusterClick(
+          clusterData.centerLat,
+          clusterData.centerLng,
+          clusterData.groupIndex,
+          clusterData.centerName,
+        );
+      }
+    },
+    [onClusterClick],
+  );
 
   return {
     markers,

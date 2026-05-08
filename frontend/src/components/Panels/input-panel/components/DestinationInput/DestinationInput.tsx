@@ -24,6 +24,15 @@ type DestinationInputProps = {
   name?: string;
 };
 
+type ItemProps = {
+  display_name: string;
+  lat: string;
+  lon: string;
+  place_id: string;
+  type: string;
+  importance: number;
+};
+
 const suggestionsCache = new Map<string, Suggestion[]>();
 const CACHE_SIZE_LIMIT = 100;
 const CACHE_TTL = 1000 * 60 * 60;
@@ -33,19 +42,21 @@ export const DestinationInput = ({
   value,
   onChange,
   isLocked = false,
-  placeholder = "Введите конечную точку",
+  placeholder = 'Введите конечную точку',
   onMapSelect,
   isSelectingOnMap = false,
   onAddressSelect,
-  id = "destination-input",
-  name = "destination",
+  id = 'destination-input',
+  name = 'destination',
 }: DestinationInputProps) => {
-  const [query, setQuery] = useState(value);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [suggestionsPosition, setSuggestionsPosition] = useState<{ top: number; left: number } | null>(null);
+  const [suggestionsPosition, setSuggestionsPosition] = useState<{
+    top: number;
+    left: number;
+  } | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -81,22 +92,25 @@ export const DestinationInput = ({
         `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchQuery)}&limit=7&countrycodes=ru&addressdetails=1&dedupe=1&extratags=1`,
         {
           signal: abortControllerRef.current.signal,
-          headers: { 'User-Agent': 'InCityApp/1.0', 'Accept-Language': 'ru' }
-        }
+          headers: { 'User-Agent': 'InCityApp/1.0', 'Accept-Language': 'ru' },
+        },
       );
       if (!response.ok) throw new Error('Network response was not ok');
-      const data = await response.json();
-      const processed = data.map((item: any) => ({
+      const data: ItemProps[] = await response.json();
+      const processed: Suggestion[] = data.map((item) => ({
         display_name: item.display_name,
         lat: parseFloat(item.lat),
         lon: parseFloat(item.lon),
         place_id: item.place_id,
         type: item.type,
-        importance: item.importance || 0
-      })).sort((a: Suggestion, b: Suggestion) => (b.importance || 0) - (a.importance || 0));
+        importance: item.importance || 0,
+      }));
+      processed.sort((a, b) => (b.importance || 0) - (a.importance || 0));
       if (processed.length > 0) {
         if (suggestionsCache.size >= CACHE_SIZE_LIMIT) {
-          const oldestKey = Array.from(cacheTimestamps.entries()).sort(([, a], [, b]) => a - b)[0]?.[0];
+          const oldestKey = Array.from(cacheTimestamps.entries()).sort(
+            ([, a], [, b]) => a - b,
+          )[0]?.[0];
           if (oldestKey) {
             suggestionsCache.delete(oldestKey);
             cacheTimestamps.delete(oldestKey);
@@ -107,46 +121,65 @@ export const DestinationInput = ({
       }
       return processed;
     } catch (error) {
-      if (error instanceof Error && error.name !== 'AbortError') console.error('Error fetching suggestions:', error);
+      if (error instanceof Error && error.name !== 'AbortError')
+        console.error('Error fetching suggestions:', error);
       return [];
     }
   }, []);
 
-  const debouncedSearch = useCallback((searchQuery: string) => {
-    if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
-    if (searchQuery.length < 3) {
-      setSuggestions([]);
-      return;
-    }
-    debounceTimerRef.current = setTimeout(async () => {
-      setIsLoading(true);
-      try {
-        const results = await fetchSuggestions(searchQuery);
-        setSuggestions(results);
-      } catch (error) {
-        console.error('Search error:', error);
-      } finally {
-        setIsLoading(false);
+  const debouncedSearch = useCallback(
+    (searchQuery: string) => {
+      if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
+      if (searchQuery.length < 3) {
+        setSuggestions([]);
+        return;
       }
-    }, 400);
-  }, [fetchSuggestions]);
-
-  useEffect(() => {
-    setQuery(value);
-  }, [value]);
+      debounceTimerRef.current = setTimeout(async () => {
+        setIsLoading(true);
+        try {
+          const results = await fetchSuggestions(searchQuery);
+          setSuggestions(results);
+        } catch (error) {
+          console.error('Search error:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      }, 400);
+    },
+    [fetchSuggestions],
+  );
 
   useEffect(() => {
     if (!isLocked) {
       cleanCache();
-      debouncedSearch(query);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      debouncedSearch(value);
     }
-  }, [query, debouncedSearch, cleanCache, isLocked]);
+  }, [value, debouncedSearch, cleanCache, isLocked]);
+
+  const calculatePosition = useCallback(() => {
+    if (inputRef.current) {
+      const rect = inputRef.current.getBoundingClientRect();
+      const dropdownWidth = 400;
+      let left = rect.right + 12;
+      if (left + dropdownWidth > window.innerWidth) {
+        left = rect.left - dropdownWidth - 12;
+      }
+      return {
+        top: rect.top + rect.height / 2,
+        left: left,
+      };
+    }
+    return null;
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        suggestionsRef.current && !suggestionsRef.current.contains(e.target as Node) &&
-        inputRef.current && !inputRef.current.contains(e.target as Node)
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(e.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(e.target as Node)
       ) {
         setShowSuggestions(false);
       }
@@ -163,7 +196,7 @@ export const DestinationInput = ({
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('resize', handleResize);
     };
-  }, [showSuggestions, isMobile]);
+  }, [showSuggestions, isMobile, calculatePosition]);
 
   useEffect(() => {
     return () => {
@@ -172,23 +205,7 @@ export const DestinationInput = ({
     };
   }, []);
 
-  const calculatePosition = () => {
-    if (inputRef.current) {
-      const rect = inputRef.current.getBoundingClientRect();
-      const dropdownWidth = 400;
-      let left = rect.right + 12;
-      if (left + dropdownWidth > window.innerWidth) {
-        left = rect.left - dropdownWidth - 12;
-      }
-      return {
-        top: rect.top + rect.height / 2,
-        left: left,
-      };
-    }
-    return null;
-  };
-
-  const handleFocus = () => {
+  const handleFocus = useCallback(() => {
     if (!isLocked) {
       if (!isMobile) {
         const pos = calculatePosition();
@@ -196,69 +213,87 @@ export const DestinationInput = ({
       }
       setShowSuggestions(true);
     }
-  };
+  }, [isLocked, isMobile, calculatePosition]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (isLocked) {
-      return;
-    }
+    if (isLocked) return;
     const newValue = e.target.value;
-    setQuery(newValue);
     onChange(newValue);
     setShowSuggestions(true);
     setActiveIndex(-1);
+    debouncedSearch(newValue);
   };
 
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     if (isLocked) return;
-    setQuery('');
     onChange('');
     setShowSuggestions(false);
     setActiveIndex(-1);
     inputRef.current?.focus();
-  };
+  }, [isLocked, onChange]);
 
-  const handleSuggestionClick = (suggestion: Suggestion) => {
-    setQuery(suggestion.display_name);
-    onChange(suggestion.display_name);
-    if (onAddressSelect) onAddressSelect(suggestion.lat, suggestion.lon, suggestion.display_name);
-    setShowSuggestions(false);
-    setActiveIndex(-1);
-  };
+  const handleSuggestionClick = useCallback(
+    (suggestion: Suggestion) => {
+      onChange(suggestion.display_name);
+      if (onAddressSelect) onAddressSelect(suggestion.lat, suggestion.lon, suggestion.display_name);
+      setShowSuggestions(false);
+      setActiveIndex(-1);
+    },
+    [onChange, onAddressSelect],
+  );
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (isLocked) return;
-    if (!showSuggestions || suggestions.length === 0) {
-      if (e.key === 'Escape' && query) handleClear();
-      return;
-    }
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setActiveIndex(prev => prev < suggestions.length - 1 ? prev + 1 : prev);
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setActiveIndex(prev => prev > 0 ? prev - 1 : -1);
-        break;
-      case 'Enter':
-        e.preventDefault();
-        if (activeIndex >= 0) handleSuggestionClick(suggestions[activeIndex]);
-        else if (suggestions.length > 0) handleSuggestionClick(suggestions[0]);
-        break;
-      case 'Escape':
-        setShowSuggestions(false);
-        setActiveIndex(-1);
-        break;
-    }
-  };
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (isLocked) {
+        return;
+      }
+      if (!showSuggestions || suggestions.length === 0) {
+        if (e.key === 'Escape' && value) handleClear();
+        return;
+      }
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          setActiveIndex((prev) => (prev < suggestions.length - 1 ? prev + 1 : prev));
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setActiveIndex((prev) => (prev > 0 ? prev - 1 : -1));
+          break;
+        case 'Enter':
+          e.preventDefault();
+          if (activeIndex >= 0) handleSuggestionClick(suggestions[activeIndex]);
+          else if (suggestions.length > 0) handleSuggestionClick(suggestions[0]);
+          break;
+        case 'Escape':
+          setShowSuggestions(false);
+          setActiveIndex(-1);
+          break;
+      }
+    },
+    [
+      isLocked,
+      showSuggestions,
+      suggestions,
+      activeIndex,
+      value,
+      handleClear,
+      handleSuggestionClick,
+    ],
+  );
 
   const highlightMatch = (text: string, searchQuery: string) => {
     if (!searchQuery) return text;
     const escaped = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escaped})`, 'gi');
     return text.split(regex).map((part, i) =>
-      regex.test(part) ? <span key={i} className={styles.highlight}>{part}</span> : <span key={i}>{part}</span>
+      regex.test(part) ? (
+        <span key={i} className={styles.highlight}>
+          {part}
+        </span>
+      ) : (
+        <span key={i}>{part}</span>
+      ),
     );
   };
 
@@ -280,15 +315,20 @@ export const DestinationInput = ({
         >
           <MapPin size={14} className={styles.suggestionIcon} />
           <div className={styles.suggestionText}>
-            {highlightMatch(suggestion.display_name, query)}
+            {highlightMatch(suggestion.display_name, value)}
             {suggestion.type && (
               <span className={styles.suggestionType}>
-                {suggestion.type === 'city' ? 'Город' :
-                suggestion.type === 'town' ? 'Город' :
-                suggestion.type === 'village' ? 'Деревня' :
-                suggestion.type === 'street' ? 'Улица' :
-                suggestion.type === 'building' ? 'Здание' :
-                suggestion.type === 'amenity' ? 'Место' : ''}
+                {suggestion.type === 'city' || suggestion.type === 'town'
+                  ? 'Город'
+                  : suggestion.type === 'village'
+                    ? 'Деревня'
+                    : suggestion.type === 'street'
+                      ? 'Улица'
+                      : suggestion.type === 'building'
+                        ? 'Здание'
+                        : suggestion.type === 'amenity'
+                          ? 'Место'
+                          : ''}
               </span>
             )}
           </div>
@@ -311,12 +351,12 @@ export const DestinationInput = ({
               id={id}
               name={name}
               type="text"
-              value={query}
+              value={value}
               onChange={handleInputChange}
               onFocus={handleFocus}
               onKeyDown={handleKeyDown}
               disabled={isLocked}
-              placeholder={isLocked ? "Точка определена билетом" : placeholder}
+              placeholder={isLocked ? 'Точка определена билетом' : placeholder}
               className={`${styles.input} ${isLocked ? styles.inputLocked : ''}`}
               autoComplete="off"
               aria-label="Пункт назначения"
@@ -327,7 +367,7 @@ export const DestinationInput = ({
             {!isLocked && (
               <div className={styles.inputIcons}>
                 {isLoading && <Loader size={18} className={styles.spinner} aria-label="Загрузка" />}
-                {!isLoading && query && (
+                {!isLoading && value && (
                   <button
                     type="button"
                     onClick={handleClear}
@@ -341,57 +381,69 @@ export const DestinationInput = ({
               </div>
             )}
           </div>
-          
-          {!isLocked && showSuggestions && suggestions.length > 0 && !isMobile && suggestionsPosition && (
-            <Portal>
-              <div className={styles.suggestionsOverlay} onClick={() => setShowSuggestions(false)} />
-              <div
-                className={styles.suggestionsDropdown}
-                style={{
-                  position: 'fixed',
-                  top: suggestionsPosition.top,
-                  left: suggestionsPosition.left,
-                  width: '400px',
-                  margin: 0,
-                  zIndex: 10000
-                }}
-              >
-                {suggestions.map((suggestion, index) => (
-                  <div
-                    key={suggestion.place_id}
-                    className={`${styles.suggestion} ${index === activeIndex ? styles.active : ''}`}
-                    onClick={() => handleSuggestionClick(suggestion)}
-                    onMouseEnter={() => setActiveIndex(index)}
-                  >
-                    <MapPin size={14} className={styles.suggestionIcon} />
-                    <div className={styles.suggestionText}>
-                      {highlightMatch(suggestion.display_name, query)}
-                      {suggestion.type && (
-                        <span className={styles.suggestionType}>
-                          {suggestion.type === 'city' ? 'Город' :
-                          suggestion.type === 'town' ? 'Город' :
-                          suggestion.type === 'village' ? 'Деревня' :
-                          suggestion.type === 'street' ? 'Улица' :
-                          suggestion.type === 'building' ? 'Здание' :
-                          suggestion.type === 'amenity' ? 'Место' : ''}
-                        </span>
-                      )}
+
+          {!isLocked &&
+            showSuggestions &&
+            suggestions.length > 0 &&
+            !isMobile &&
+            suggestionsPosition && (
+              <Portal>
+                <div
+                  className={styles.suggestionsOverlay}
+                  onClick={() => setShowSuggestions(false)}
+                />
+                <div
+                  className={styles.suggestionsDropdown}
+                  style={{
+                    position: 'fixed',
+                    top: suggestionsPosition.top,
+                    left: suggestionsPosition.left,
+                    width: '400px',
+                    margin: 0,
+                    zIndex: 10000,
+                  }}
+                >
+                  {suggestions.map((suggestion, index) => (
+                    <div
+                      key={suggestion.place_id}
+                      className={`${styles.suggestion} ${index === activeIndex ? styles.active : ''}`}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      onMouseEnter={() => setActiveIndex(index)}
+                    >
+                      <MapPin size={14} className={styles.suggestionIcon} />
+                      <div className={styles.suggestionText}>
+                        {highlightMatch(suggestion.display_name, value)}
+                        {suggestion.type && (
+                          <span className={styles.suggestionType}>
+                            {suggestion.type === 'city' || suggestion.type === 'town'
+                              ? 'Город'
+                              : suggestion.type === 'village'
+                                ? 'Деревня'
+                                : suggestion.type === 'street'
+                                  ? 'Улица'
+                                  : suggestion.type === 'building'
+                                    ? 'Здание'
+                                    : suggestion.type === 'amenity'
+                                      ? 'Место'
+                                      : ''}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </Portal>
-          )}
+                  ))}
+                </div>
+              </Portal>
+            )}
           {!isLocked && showSuggestions && suggestions.length > 0 && isMobile && suggestionsContent}
         </div>
-        
+
         {!isLocked && (
           <button
             type="button"
             onClick={onMapSelect}
             className={`${styles.mapSelectButton} ${isSelectingOnMap ? styles.active : ''}`}
             title="Выбрать на карте"
-            aria-label={isSelectingOnMap ? "Отменить выбор на карте" : "Выбрать точку на карте"}
+            aria-label={isSelectingOnMap ? 'Отменить выбор на карте' : 'Выбрать точку на карте'}
           >
             <MapPin size={18} />
             <span>{isSelectingOnMap ? 'Отмена' : 'Выбрать на карте'}</span>

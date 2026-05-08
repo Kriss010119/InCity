@@ -1,5 +1,22 @@
 import type { VisitPoint } from '../domain';
 
+export type PlaceDetails = {
+  description?: string;
+  images?: string[];
+  address?: string;
+  phone?: string;
+  website?: string;
+  openingHours?: string;
+  wikidata?: string;
+  wikipedia?: string;
+  wikipediaExtract?: string;
+  wikipediaImage?: string;
+  wikipediaUrl?: string;
+  imageLicense?: string;
+  imageAuthor?: string;
+  source?: 'cache' | 'wikipedia' | 'wikidata' | 'osm';
+};
+
 export type PlaceDetailsModalProps = {
   place: VisitPoint | null;
   onClose: () => void;

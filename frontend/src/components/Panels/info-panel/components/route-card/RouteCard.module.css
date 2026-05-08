@@ -145,6 +145,8 @@
 
 .transportIcon {
   color: #b8b8b8ff;
+  width: 16px;
+  height: 16px;
 }
 
 .gapRouteNumber {
@@ -371,7 +373,7 @@
     align-items: flex-start;
     gap: var(--spacing-xs);
   }
-  
+
   .walkArrow {
     transform: rotate(90deg);
     margin-left: var(--spacing-md);

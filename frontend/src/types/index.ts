@@ -1,34 +1,68 @@
 export type {
-  VisitPoint, VisitPointGroup,
-  RouteNode, RouteGap, RouteSection, RouteResponse,
+  VisitPoint,
+  VisitPointGroup,
+  RouteNode,
+  RouteGap,
+  RouteSection,
+  RouteResponse,
   WalkingSegment,
-  TicketData, TicketDetails, TrainTicketDetails, HotelTicketDetails,
+  TicketData,
+  TicketDetails,
+  TrainTicketDetails,
+  HotelTicketDetails,
   MetroLine,
+  CityType,
+  WikipediaSummary,
+  WikidataEntity,
+  WikidataResponse,
+  WikipediaPageImage,
+  WikipediaQueryResponse,
 } from './domain';
 
-export type {
-  DestinationPoint, RouteFromPointQuery, RouteFromOrderQuery,
-} from './api';
-
+export type { DestinationPoint, RouteFromPointQuery, RouteFromOrderQuery } from './api';
 
 export type {
-  MapMarker, MapMarkerType, MapPanelProps, MapHandlersProps,
-  MapResizeHandlerProps, MapMarkersProps, RouteSegment, TransportType,
-
-  FormData, InputPanelProps, TransportOption, CheckboxOption,
-
-  InfoPanelProps, AttractionCardProps, RouteSectionProps, RouteGapProps, TabType,
-
-  PlaceDetailsModalProps, ImageGalleryProps, ImagePlaceholderProps,
-  CategoryBadgeProps, PlaceHeaderProps, InfoCardProps,
+  MapMarker,
+  MapMarkerType,
+  MapPanelProps,
+  MapHandlersProps,
+  MapResizeHandlerProps,
+  MapMarkersProps,
+  MapAction,
+  MapState,
+  RouteSegment,
+  TransportType,
+  FormData,
+  InputPanelProps,
+  TransportOption,
+  CheckboxOption,
+  InfoPanelProps,
+  AttractionCardProps,
+  RouteSectionProps,
+  RouteGapProps,
+  TabType,
+  PlaceDetails,
+  PlaceDetailsModalProps,
+  ImageGalleryProps,
+  ImagePlaceholderProps,
+  CategoryBadgeProps,
+  PlaceHeaderProps,
+  InfoCardProps,
 } from './components';
-
 
 export type {
   Coordinates,
-  Suggestion, SelectedLocation, AddressAutocompleteProps,
-  Theme, ThemeContextType,
+  Suggestion,
+  SelectedLocation,
+  AddressAutocompleteProps,
+  Theme,
+  ThemeContextType,
 } from './common';
 
-
-export type { RoutePointType, PlaceType, RouteStateType } from './state';
+export type {
+  RoutePointType,
+  PlaceType,
+  RouteStateType,
+  PlaceCacheContextType,
+  CachedPlaceData,
+} from './state';

@@ -1,4 +1,5 @@
-import type { VisitPoint } from '../domain';
+import type { MobileTab } from '../../components/MobileTabBar/MobileTabBar';
+import type { CityType, RouteResponse, VisitPoint, WalkingSegment, TabType, FormData } from '..';
 
 export type MapMarkerType = 'start' | 'end' | 'point' | 'event' | 'selected';
 
@@ -41,6 +42,7 @@ export type RouteSegment = {
   gapId?: string;
   startName?: string;
   endName?: string;
+  metroCity?: CityType;
 };
 
 export type MapPanelProps = {
@@ -73,3 +75,44 @@ export type MapMarkersProps = {
   markers: MapMarker[];
   onMarkerClick: (marker: MapMarker) => void;
 };
+
+export type MapState = {
+  routeData: FormData | null;
+  lastRouteData: FormData | null;
+  isDestinationLocked: boolean;
+  routeResponse: RouteResponse | null;
+  isLoading: boolean;
+  error: string | null;
+  isInfoPanelCollapsed: boolean;
+  isSelectingOnMap: boolean;
+  mobileActiveTab: MobileTab;
+  isMobile: boolean;
+  walkingSegments: WalkingSegment[];
+  selectedGapId: string | null;
+  activeTab: TabType;
+  showNotification: boolean;
+}
+
+export type MapAction =
+  | { type: 'SET_ROUTE_DATA'; payload: FormData | null }
+  | { type: 'SET_LAST_ROUTE_DATA'; payload: FormData | null }
+  | { type: 'SET_DESTINATION_LOCKED'; payload: boolean }
+  | { type: 'SET_ROUTE_RESPONSE'; payload: RouteResponse | null }
+  | { type: 'SET_LOADING'; payload: boolean }
+  | { type: 'SET_ERROR'; payload: string | null }
+  | { type: 'SET_INFO_PANEL_COLLAPSED'; payload: boolean }
+  | { type: 'SET_SELECTING_ON_MAP'; payload: boolean }
+  | { type: 'SET_MOBILE_ACTIVE_TAB'; payload: MobileTab }
+  | { type: 'SET_IS_MOBILE'; payload: boolean }
+  | { type: 'SET_WALKING_SEGMENTS'; payload: WalkingSegment[] }
+  | { type: 'SET_SELECTED_GAP_ID'; payload: string | null }
+  | { type: 'SET_ACTIVE_TAB'; payload: TabType }
+  | { type: 'SET_SHOW_NOTIFICATION'; payload: boolean }
+  | { type: 'INITIALIZE_FROM_TICKET'; payload: FormData }
+  | { type: 'INITIALIZE_FROM_CUSTOM_ROUTE'; payload: FormData }
+  | { type: 'INITIALIZE_FROM_BUILDER'; payload: FormData }
+  | { type: 'UPDATE_ROUTE_DATA'; payload: FormData }
+  | { type: 'RESET_ALL' }
+  | { type: 'HANDLE_ROUTE_UPDATE_START'; payload: FormData }
+  | { type: 'HANDLE_ROUTE_UPDATE_SUCCESS'; payload: RouteResponse }
+  | { type: 'HANDLE_ROUTE_UPDATE_ERROR'; payload: string };

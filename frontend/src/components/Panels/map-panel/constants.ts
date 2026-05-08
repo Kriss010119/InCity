@@ -1,6 +1,9 @@
+// MapPanel/constants.ts
 import type { TransportType } from '../../../types';
-import { TRANSPORT_COLORS as BASE_TRANSPORT_COLORS, getTransportColor } from '../../../constants/transportConstants';
-
+import {
+  TRANSPORT_COLORS as BASE_TRANSPORT_COLORS,
+  getTransportColor,
+} from '../../../constants/transportConstants';
 
 export const TRANSPORT_COLORS = BASE_TRANSPORT_COLORS;
 
@@ -11,27 +14,32 @@ export const HOTEL_ZOOM = 15;
 export const ROUTE_ZOOM = 13;
 
 export const TILE_LAYER_URL = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-export const TILE_LAYER_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+export const TILE_LAYER_ATTRIBUTION =
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 export const getSegmentColor = (
-  type: TransportType, 
-  routeNumber?: string, 
-  stationName?: string
+  type: TransportType,
+  routeNumber?: string,
+  stationName?: string,
+  stopLat?: number,
+  stopLng?: number,
 ): string => {
   if (type === 'metro' && routeNumber) {
-    return getTransportColor(type, routeNumber, stationName);
+    return getTransportColor(type, routeNumber, stationName, { lat: stopLat, lng: stopLng });
   }
   return TRANSPORT_COLORS[type] || '#888888';
 };
 
 export const getPolylineOptions = (
-  type: TransportType, 
+  type: TransportType,
   isSelected = false,
   routeNumber?: string,
-  stationName?: string
+  stationName?: string,
+  stopLat?: number,
+  stopLng?: number,
 ) => {
-  const color = getSegmentColor(type, routeNumber, stationName);
-  
+  const color = getSegmentColor(type, routeNumber, stationName, stopLat, stopLng);
+
   const baseOptions = {
     color,
     weight: isSelected ? 6 : 3,
@@ -39,7 +47,7 @@ export const getPolylineOptions = (
     lineCap: 'round' as const,
     lineJoin: 'round' as const,
   };
-  
+
   if (type === 'bus' || type === 'tram' || type === 'trolleybus') {
     return {
       ...baseOptions,
@@ -49,17 +57,19 @@ export const getPolylineOptions = (
       lineJoin: 'round' as const,
     };
   }
-  
+
   return baseOptions;
 };
 
 export const getActivePolylineOptions = (
   type: TransportType,
   routeNumber?: string,
-  stationName?: string
+  stationName?: string,
+  stopLat?: number,
+  stopLng?: number,
 ) => {
-  const color = getSegmentColor(type, routeNumber, stationName);
-  
+  const color = getSegmentColor(type, routeNumber, stationName, stopLat, stopLng);
+
   return {
     color,
     weight: 4,
@@ -70,14 +80,11 @@ export const getActivePolylineOptions = (
   };
 };
 
-export const getSecondaryPolylineOptions = (
-  type: TransportType,
-  isSelected = false,
-) => {
+export const getSecondaryPolylineOptions = (type: TransportType, isSelected = false) => {
   if (type !== 'bus' && type !== 'tram' && type !== 'trolleybus') {
     return null;
   }
-  
+
   return {
     color: '#ffffff',
     weight: isSelected ? 4 : 2,

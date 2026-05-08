@@ -3,7 +3,7 @@ import { RouteSection } from './RouteSection';
 import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
 import type { RouteResponse, WalkingSegment } from '../../../../../types';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useRef, useCallback } from 'react';
 import { extractSectionIndexFromGapId } from './utils';
 
 type RouteTabProps = {
@@ -13,44 +13,38 @@ type RouteTabProps = {
   onSelectGap?: (gapId: string | null) => void;
 };
 
-export const RouteTab = ({ 
-  routeResponse, 
-  walkingSegments = [], 
-  selectedGapId, 
-  onSelectGap 
+export const RouteTab = ({
+  routeResponse,
+  walkingSegments = [],
+  selectedGapId,
+  onSelectGap,
 }: RouteTabProps) => {
   const { t } = useLocale();
   const [selectedSection, setSelectedSection] = useState<number | null>(null);
+  const isInternalChange = useRef(false);
+  const prevSelectedGapId = useRef<string | null | undefined>(undefined);
 
-  const travelTime = routeResponse.sections.reduce(
-    (acc, s) => acc + s.estimatedTimeInMinutes, 0
-  );
-  
-  const visitTime = routeResponse.visitPoints.reduce(
-    (acc, group) => 
-      acc + 
-      (group.mainAttraction.estimatedVisitMinutes || 0) +
-      group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0),
-    0
-  );
+  const travelTime = routeResponse.sections.reduce((acc, s) => acc + s.estimatedTimeInMinutes, 0);
 
-  const totalWalkTime = walkingSegments.reduce(
-    (acc, walk) => acc + (walk.estimatedTime || 0), 0
-  );
-  
-  const totalTime = (travelTime + visitTime + totalWalkTime) / 60;
-  
-  const totalTransfers = routeResponse.sections.reduce(
-    (acc, s) => acc + s.numberOfTransfers, 0
-  );
-  
+  const visitTime = useMemo(() => {
+    return routeResponse.visitPoints.reduce(
+      (acc, group) => acc + (group.estimatedTimeInMinutes || 0),
+      0,
+    );
+  }, [routeResponse.visitPoints]);
+
+  const totalTime = (travelTime + visitTime) / 60;
+
+  const totalTransfers = routeResponse.sections.reduce((acc, s) => acc + s.numberOfTransfers, 0);
+
   const totalPoints = routeResponse.visitPoints.reduce(
-    (acc, group) => acc + 1 + group.otherAttractions.length, 0
+    (acc, group) => acc + 1 + group.otherAttractions.length,
+    0,
   );
 
   const walkingSegmentsBySection = useMemo(() => {
     const grouped: Record<number, WalkingSegment[]> = {};
-    walkingSegments.forEach(segment => {
+    walkingSegments.forEach((segment) => {
       const idx = segment.sectionIndex;
       if (!grouped[idx]) grouped[idx] = [];
       grouped[idx].push(segment);
@@ -71,53 +65,74 @@ export const RouteTab = ({
   const getVisitTimeForSection = (sectionIndex: number): number => {
     const visitPoints = routeResponse.visitPoints;
     if (sectionIndex >= visitPoints.length) return 0;
-    
+
     const group = visitPoints[sectionIndex];
     if (!group) return 0;
-    
-    return (group.mainAttraction.estimatedVisitMinutes || 0) +
-      group.otherAttractions.reduce((sum, p) => sum + (p.estimatedVisitMinutes || 0), 0);
+
+    return group.estimatedTimeInMinutes || 0;
   };
 
-  const handleSectionClick = (sectionIndex: number) => {
-    if (selectedSection === sectionIndex) {
-      setSelectedSection(null);
-      onSelectGap?.(null);
-    } else {
-      setSelectedSection(sectionIndex);
-      onSelectGap?.(`section-${sectionIndex}`);
+  const getSectionFromGapId = useCallback((gapId: string): number | null => {
+    const sectionMatch = gapId.match(/^section-(\d+)$/);
+    if (sectionMatch) {
+      return parseInt(sectionMatch[1], 10);
     }
-  };
+    const sectionIndex = extractSectionIndexFromGapId(gapId);
+    return sectionIndex !== -1 ? sectionIndex : null;
+  }, []);
+
+  const handleSectionClick = useCallback(
+    (sectionIndex: number) => {
+      isInternalChange.current = true;
+
+      if (selectedSection === sectionIndex) {
+        setSelectedSection(null);
+        onSelectGap?.(null);
+      } else {
+        setSelectedSection(sectionIndex);
+        onSelectGap?.(`section-${sectionIndex}`);
+      }
+    },
+    [selectedSection, onSelectGap],
+  );
+
+  useEffect(() => {
+    if (isInternalChange.current) {
+      isInternalChange.current = false;
+      return;
+    }
+
+    if (selectedGapId === prevSelectedGapId.current) {
+      return;
+    }
+
+    prevSelectedGapId.current = selectedGapId;
+
+    const frameId = requestAnimationFrame(() => {
+      if (!selectedGapId) {
+        setSelectedSection(null);
+      } else {
+        const section = getSectionFromGapId(selectedGapId);
+        setSelectedSection(section);
+      }
+    });
+
+    return () => cancelAnimationFrame(frameId);
+  }, [selectedGapId, getSectionFromGapId]);
 
   useEffect(() => {
     if (!selectedGapId) {
-      setSelectedSection(null);
       return;
     }
-    
-    const sectionMatch = selectedGapId.match(/^section-(\d+)$/);
-    if (sectionMatch) {
-      setSelectedSection(parseInt(sectionMatch[1], 10));
-    } else {
-      const sectionIndex = extractSectionIndexFromGapId(selectedGapId);
-      if (sectionIndex !== -1) {
-        setSelectedSection(sectionIndex);
+    const timer = setTimeout(() => {
+      const element = document.getElementById(selectedGapId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        element.classList.add('highlight-flash');
+        setTimeout(() => element.classList.remove('highlight-flash'), 500);
       }
-    }
-  }, [selectedGapId]);
-
-  useEffect(() => {
-    if (selectedGapId) {
-      const timer = setTimeout(() => {
-        const element = document.getElementById(selectedGapId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          element.classList.add('highlight-flash');
-          setTimeout(() => element.classList.remove('highlight-flash'), 500);
-        }
-      }, 100);
-      return () => clearTimeout(timer);
-    }
+    }, 100);
+    return () => clearTimeout(timer);
   }, [selectedGapId]);
 
   return (
@@ -126,7 +141,9 @@ export const RouteTab = ({
       <div className={styles.stats}>
         <div className={styles.stat}>
           <Clock size={18} />
-          <span className={styles.value}>{totalTime.toFixed(0)} {t('infoPanel.hours')}</span>
+          <span className={styles.value}>
+            {totalTime.toFixed(1)} {t('infoPanel.hours')}
+          </span>
           <span className={styles.label}>{t('infoPanel.totalTime')}</span>
         </div>
         <div className={styles.stat}>
@@ -151,9 +168,9 @@ export const RouteTab = ({
           <h4 className={styles.sectionTitle}>{t('infoPanel.detailedRoute')}</h4>
           <div className={styles.sections}>
             {routeResponse.sections.map((section, index) => (
-              <RouteSection 
-                key={index} 
-                section={section} 
+              <RouteSection
+                key={index}
+                section={section}
                 sectionIndex={index}
                 selectedGapId={selectedGapId}
                 onSelectGap={onSelectGap}

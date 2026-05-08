@@ -1,8 +1,6 @@
-// RouteSection.tsx
-import { useMemo } from 'react';
 import { RouteGap } from './RouteGap';
 import { RouteWalk } from './RouteWalk';
-import type { RouteSectionProps } from '../../../../../types';
+import type { RouteSectionProps, RouteGap as RouteGapType } from '../../../../../types';
 import type { WalkingSegment } from '../../../../../types';
 import styles from './RouteCard.module.css';
 import { useLocale } from '../../../../../hooks';
@@ -14,15 +12,14 @@ interface ExtendedRouteSectionProps {
   onSelectGap?: (gapId: string | null) => void;
   walkingSegments?: WalkingSegment[];
   visitTime?: number;
-  // Добавляем новые пропсы для выделения секции
   isSectionSelected?: boolean;
   onSectionClick?: (sectionIndex: number) => void;
 }
 
-export const RouteSection = ({ 
-  section, 
-  sectionIndex, 
-  selectedGapId, 
+export const RouteSection = ({
+  section,
+  sectionIndex,
+  selectedGapId,
   onSelectGap,
   walkingSegments = [],
   visitTime = 0,
@@ -32,7 +29,6 @@ export const RouteSection = ({
   const { t } = useLocale();
 
   const handleWalkClick = (walkId: string) => {
-    // При клике на отдельный переход останавливаем всплытие
     onSelectGap?.(walkId);
   };
 
@@ -40,13 +36,17 @@ export const RouteSection = ({
     onSelectGap?.(gapId);
   };
 
-  const handleSectionClick = (e: React.MouseEvent) => {
-    // Проверяем, что клик был именно по sectionItem, а не по вложенным элементам
-    if (e.target === e.currentTarget || 
-        (e.target as HTMLElement).classList.contains(styles.sectionItem) ||
-        (e.target as HTMLElement).classList.contains(styles.sectionHeader) ||
-        (e.target as HTMLElement).classList.contains(styles.sectionNumber) ||
-        (e.target as HTMLElement).classList.contains(styles.sectionTime)) {
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>,
+  ) => {
+    const target = e.target as HTMLElement;
+    if (
+      e.target === e.currentTarget ||
+      target.classList.contains(styles.sectionItem) ||
+      target.classList.contains(styles.sectionHeader) ||
+      target.classList.contains(styles.sectionNumber) ||
+      target.classList.contains(styles.sectionTime)
+    ) {
       onSectionClick?.(sectionIndex);
     }
   };
@@ -75,14 +75,11 @@ export const RouteSection = ({
   };
 
   const numGaps = section.gaps.length;
-  const totalWalkTime = useMemo(() => {
-    return walkingSegments.reduce((sum, walk) => sum + (walk.estimatedTime || 0), 0);
-  }, [walkingSegments]);
 
-  const totalSectionTime = section.estimatedTimeInMinutes + totalWalkTime + visitTime;
+  const totalSectionTime = section.estimatedTimeInMinutes + visitTime;
 
   const items: Array<
-    | { type: 'gap'; gap: any; gapIndex: number; order: number; gapId: string }
+    | { type: 'gap'; gap: RouteGapType; gapIndex: number; order: number; gapId: string }
     | { type: 'walk'; walk: WalkingSegment; order: number }
   > = [];
 
@@ -97,7 +94,7 @@ export const RouteSection = ({
     });
   });
 
-  walkingSegments.forEach(walk => {
+  walkingSegments.forEach((walk) => {
     items.push({
       type: 'walk',
       walk,
@@ -108,16 +105,12 @@ export const RouteSection = ({
   items.sort((a, b) => a.order - b.order);
 
   return (
-    <div 
+    <div
       className={`${styles.sectionItem} ${isSectionSelected ? styles.sectionItemActive : ''}`}
       onClick={handleSectionClick}
+      onKeyDown={handleSectionClick}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          handleSectionClick(e as any);
-        }
-      }}
     >
       <div className={styles.sectionHeader}>
         <span className={styles.sectionNumber}>

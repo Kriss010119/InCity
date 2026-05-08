@@ -8,20 +8,37 @@ const CACHE_TTL = 1000 * 60 * 60;
 const CHACHE_TIMESTAMPS = new Map<string, number>();
 const SUGGESTIONS_CHACHE = new Map<string, Suggestion[]>();
 
-export const AddressAutocomplete = ({ 
-  value, 
-  onChange, 
+interface ItemProps {
+  display_name: string;
+  lat: string;
+  lon: string;
+  place_id: string;
+  type: string;
+  importance: number;
+  address?: {
+    city?: string;
+    town?: string;
+    village?: string;
+    street?: string;
+    house_number?: string;
+    postcode?: string;
+    country?: string;
+  };
+}
+
+export const AddressAutocomplete = ({
+  value,
+  onChange,
   onSelect,
   isLocked = false,
-  placeholder = "Введите адрес или точку"
+  placeholder = 'Введите адрес или точку',
 }: AddressAutocompleteProps) => {
-  const [query, setQuery] = useState(value);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [, setLastSelected] = useState<SelectedLocation | null>(null);
-  
+
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
   const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -53,7 +70,7 @@ export const AddressAutocomplete = ({
       street: address.street || address.town || address.village || '',
       house: houseNumber,
       postcode: address.postcode,
-      country: address.country
+      country: address.country,
     };
   };
 
@@ -71,53 +88,52 @@ export const AddressAutocomplete = ({
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?` +
-        `format=json&q=${encodeURIComponent(searchQuery)}&` +
-        `limit=7&countrycodes=ru&addressdetails=1&` +
-        `extratags=1&namedetails=1&` +
-        `accept-language=ru`,
+          `format=json&q=${encodeURIComponent(searchQuery)}&` +
+          `limit=7&countrycodes=ru&addressdetails=1&` +
+          `extratags=1&namedetails=1&` +
+          `accept-language=ru`,
         {
           signal: abortControllerRef.current.signal,
           headers: {
             'User-Agent': 'InCityApp/1.0',
-            'Accept-Language': 'ru'
-          }
-        }
+            'Accept-Language': 'ru',
+          },
+        },
       );
-      
+
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.status}`);
       }
-      
+
       const data = await response.json();
-      
+
       const processed = data
-        .map((item: any) => ({
+        .map((item: ItemProps) => ({
           display_name: item.display_name,
           lat: parseFloat(item.lat),
           lon: parseFloat(item.lon),
           place_id: item.place_id,
           type: item.type,
           importance: item.importance || 0,
-          address: item.address
+          address: item.address,
         }))
-        .sort((a: Suggestion, b: Suggestion) => 
-          (b.importance || 0) - (a.importance || 0)
-        );
+        .sort((a: Suggestion, b: Suggestion) => (b.importance || 0) - (a.importance || 0));
 
       if (processed.length > 0) {
         if (SUGGESTIONS_CHACHE.size >= CACHE_SIZE_LIMIT) {
-          const oldestKey = Array.from(CHACHE_TIMESTAMPS.entries())
-            .sort(([, a], [, b]) => a - b)[0]?.[0];
+          const oldestKey = Array.from(CHACHE_TIMESTAMPS.entries()).sort(
+            ([, a], [, b]) => a - b,
+          )[0]?.[0];
           if (oldestKey) {
             SUGGESTIONS_CHACHE.delete(oldestKey);
             CHACHE_TIMESTAMPS.delete(oldestKey);
           }
         }
-        
+
         SUGGESTIONS_CHACHE.set(searchQuery, processed);
         CHACHE_TIMESTAMPS.set(searchQuery, Date.now());
       }
-      
+
       return processed;
     } catch (error) {
       if (error instanceof Error && error.name !== 'AbortError') {
@@ -127,47 +143,48 @@ export const AddressAutocomplete = ({
     }
   }, []);
 
-  const debouncedSearch = useCallback((searchQuery: string) => {
-    if (debounceTimerRef.current) {
-      clearTimeout(debounceTimerRef.current);
-    }
-
-    if (searchQuery.length < 3) {
-      setSuggestions([]);
-      setShowSuggestions(false);
-      return;
-    }
-
-    debounceTimerRef.current = setTimeout(async () => {
-      setIsLoading(true);
-      try {
-        const results = await fetchSuggestions(searchQuery);
-        setSuggestions(results);
-        setShowSuggestions(results.length > 0);
-      } catch (error) {
-        console.error('Search error:', error);
-        setSuggestions([]);
-      } finally {
-        setIsLoading(false);
+  const debouncedSearch = useCallback(
+    (searchQuery: string) => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
       }
-    }, 500);
-  }, [fetchSuggestions]);
+
+      if (searchQuery.length < 3) {
+        setSuggestions([]);
+        setShowSuggestions(false);
+        return;
+      }
+
+      debounceTimerRef.current = setTimeout(async () => {
+        setIsLoading(true);
+        try {
+          const results = await fetchSuggestions(searchQuery);
+          setSuggestions(results);
+          setShowSuggestions(results.length > 0);
+        } catch (error) {
+          console.error('Search error:', error);
+          setSuggestions([]);
+        } finally {
+          setIsLoading(false);
+        }
+      }, 500);
+    },
+    [fetchSuggestions],
+  );
 
   useEffect(() => {
-    setQuery(value);
-  }, [value]);
-
-  useEffect(() => {
-    if (!isLocked) {
-      cleanCache();
-      debouncedSearch(query);
-    }
-  }, [query, debouncedSearch, cleanCache, isLocked]);
+    const interval = setInterval(() => {
+      if (!isLocked) {
+        cleanCache();
+      }
+    }, CACHE_TTL);
+    return () => clearInterval(interval);
+  }, [cleanCache, isLocked]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        suggestionsRef.current && 
+        suggestionsRef.current &&
         !suggestionsRef.current.contains(e.target as Node) &&
         inputRef.current &&
         !inputRef.current.contains(e.target as Node)
@@ -193,12 +210,12 @@ export const AddressAutocomplete = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (isLocked) return;
-    
+
     const newValue = e.target.value;
-    setQuery(newValue);
     onChange(newValue);
     setShowSuggestions(true);
     setActiveIndex(-1);
+    debouncedSearch(newValue);
   };
 
   const handleSuggestionClick = (suggestion: Suggestion) => {
@@ -208,10 +225,9 @@ export const AddressAutocomplete = ({
       lng: suggestion.lon,
       address: suggestion.display_name,
       placeId: suggestion.place_id,
-      details
+      details,
     };
 
-    setQuery(suggestion.display_name);
     onChange(suggestion.display_name);
     onSelect(selectedLocation);
     setShowSuggestions(false);
@@ -221,8 +237,7 @@ export const AddressAutocomplete = ({
 
   const handleClear = () => {
     if (isLocked) return;
-    
-    setQuery('');
+
     onChange('');
     setShowSuggestions(false);
     setActiveIndex(-1);
@@ -230,11 +245,17 @@ export const AddressAutocomplete = ({
     inputRef.current?.focus();
   };
 
+  const handleFocus = () => {
+    if (!isLocked && value.length >= 3) {
+      setShowSuggestions(true);
+    }
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (isLocked) return;
-    
+
     if (!showSuggestions || suggestions.length === 0) {
-      if (e.key === 'Escape' && query) {
+      if (e.key === 'Escape' && value) {
         handleClear();
       }
       return;
@@ -243,9 +264,7 @@ export const AddressAutocomplete = ({
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
-        setActiveIndex(prev => 
-          prev < suggestions.length - 1 ? prev + 1 : prev
-        );
+        setActiveIndex((prev) => (prev < suggestions.length - 1 ? prev + 1 : prev));
         if (suggestionsRef.current) {
           const activeElement = suggestionsRef.current.children[activeIndex + 1] as HTMLElement;
           activeElement?.scrollIntoView({ block: 'nearest' });
@@ -253,7 +272,7 @@ export const AddressAutocomplete = ({
         break;
       case 'ArrowUp':
         e.preventDefault();
-        setActiveIndex(prev => prev > 0 ? prev - 1 : -1);
+        setActiveIndex((prev) => (prev > 0 ? prev - 1 : -1));
         if (suggestionsRef.current && activeIndex > 0) {
           const activeElement = suggestionsRef.current.children[activeIndex - 1] as HTMLElement;
           activeElement?.scrollIntoView({ block: 'nearest' });
@@ -280,11 +299,11 @@ export const AddressAutocomplete = ({
         <input
           ref={inputRef}
           type="text"
-          value={query}
+          value={value}
           onChange={handleInputChange}
-          onFocus={() => !isLocked && query.length >= 3 && setShowSuggestions(true)}
+          onFocus={handleFocus}
           onKeyDown={handleKeyDown}
-          placeholder={isLocked ? "Точка определена билетом" : placeholder}
+          placeholder={isLocked ? 'Точка определена билетом' : placeholder}
           disabled={isLocked}
           className={`${styles.input} ${isLocked ? styles.inputLocked : ''}`}
           autoComplete="off"
@@ -292,11 +311,11 @@ export const AddressAutocomplete = ({
           aria-expanded={showSuggestions}
           aria-autocomplete="list"
         />
-        
+
         <div className={styles.inputIcons}>
           {isLoading && <Loader size={18} className={styles.spinner} />}
-          {!isLoading && query && !isLocked && (
-            <button 
+          {!isLoading && value && !isLocked && (
+            <button
               type="button"
               onClick={handleClear}
               className={styles.clearButton}
@@ -311,8 +330,8 @@ export const AddressAutocomplete = ({
       </div>
 
       {!isLocked && showSuggestions && suggestions.length > 0 && (
-        <div 
-          ref={suggestionsRef} 
+        <div
+          ref={suggestionsRef}
           className={styles.suggestions}
           role="listbox"
           aria-label="Предложения адресов"
@@ -326,6 +345,7 @@ export const AddressAutocomplete = ({
               role="option"
               aria-selected={index === activeIndex}
             >
+              {suggestion.display_name}
             </div>
           ))}
         </div>

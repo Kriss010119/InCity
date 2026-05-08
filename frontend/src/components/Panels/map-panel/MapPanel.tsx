@@ -14,17 +14,20 @@ import {
   TILE_LAYER_ATTRIBUTION,
   DEFAULT_CENTER,
   DEFAULT_ZOOM,
+  HOTEL_ZOOM,
 } from './constants';
 import { buildFullRouteSegments, createPlaceFromMarker } from './utils';
 import L from 'leaflet';
 import styles from './MapPanel.module.css';
-import type { MapMarker, MapPanelProps, VisitPoint } from '../../../types';
+import type { CityType, MapMarker, MapPanelProps, VisitPoint } from '../../../types';
 import { useReverseGeocode } from '../../../hooks';
 import { useMapMarkers } from '../../../hooks/useMapMarkers';
 import { RouteArrows } from './components/RouteArrows';
 import { ZoomHandler } from './components/ZoomHandler';
-import { usePlaceCache } from '../../../context/PlaceCacheContext';
+
 import { extractSectionIndexFromGapId } from '../info-panel/components/route-card/utils';
+import { detectMetroCity } from '../../../constants/metroConstants';
+import { usePlaceCache } from '../../../context/PlaceCacheContext';
 
 export const MapPanel = ({
   destinationLat,
@@ -40,8 +43,23 @@ export const MapPanel = ({
   onSelectGap,
 }: MapPanelProps) => {
   const [selectedPlace, setSelectedPlace] = useState<VisitPoint | null>(null);
-  const [mapCenter, setMapCenter] = useState<[number, number]>(DEFAULT_CENTER);
-  const [mapZoom, setMapZoom] = useState(DEFAULT_ZOOM);
+
+  const getInitialCenter = useCallback((): [number, number] => {
+    if (destinationLat && destinationLng) {
+      return [destinationLat, destinationLng];
+    }
+    return DEFAULT_CENTER;
+  }, [destinationLat, destinationLng]);
+
+  const getInitialZoom = useCallback((): number => {
+    if (destinationLat && destinationLng) {
+      return HOTEL_ZOOM;
+    }
+    return DEFAULT_ZOOM;
+  }, [destinationLat, destinationLng]);
+
+  const [mapCenter, setMapCenter] = useState<[number, number]>(getInitialCenter);
+  const [mapZoom, setMapZoom] = useState<number>(getInitialZoom);
   const [mapKey, setMapKey] = useState(0);
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
   const [shouldFlyTo, setShouldFlyTo] = useState(false);
@@ -50,16 +68,44 @@ export const MapPanel = ({
   const [targetBounds, setTargetBounds] = useState<L.LatLngBounds | null>(null);
   const { reverseGeocode } = useReverseGeocode();
   const { preloadPlace } = usePlaceCache();
-  
+
   const prevCollapsedRef = useRef(isInfoPanelCollapsed);
   const prevSelectedGapRef = useRef(selectedGapId);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    if (!routeResponse?.visitPoints) return;
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
 
-    routeResponse.visitPoints.forEach(group => {
+    if (destinationLat && destinationLng) {
+      const timeoutId = setTimeout(() => {
+        setMapCenter([destinationLat, destinationLng]);
+        setTargetCenter([destinationLat, destinationLng]);
+        setTargetZoom(HOTEL_ZOOM);
+        setMapZoom(HOTEL_ZOOM);
+        setShouldFlyTo(true);
+      }, 0);
+
+      const resetTimeoutId = setTimeout(() => {
+        setShouldFlyTo(false);
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeoutId);
+        clearTimeout(resetTimeoutId);
+      };
+    }
+  }, [destinationLat, destinationLng]);
+
+  useEffect(() => {
+    if (!routeResponse?.visitPoints) {
+      return;
+    }
+    routeResponse.visitPoints.forEach((group) => {
       preloadPlace(group.mainAttraction);
-      group.otherAttractions.forEach(point => preloadPlace(point));
+      group.otherAttractions.forEach((point) => preloadPlace(point));
     });
   }, [routeResponse, preloadPlace]);
 
@@ -73,7 +119,11 @@ export const MapPanel = ({
     setTimeout(() => setShouldFlyTo(false), 1000);
   }, []);
 
-  const { markers, clearSelectedMarker, handleClusterClick: clusterClickHandler } = useMapMarkers({
+  const {
+    markers,
+    clearSelectedMarker,
+    handleClusterClick: clusterClickHandler,
+  } = useMapMarkers({
     routeResponse,
     isHotelTicket,
     destinationLat,
@@ -88,68 +138,99 @@ export const MapPanel = ({
 
   const allRouteSegments = useMemo(
     () => buildFullRouteSegments(routeResponse, visitPoints, destinationLat, destinationLng),
-    [routeResponse, visitPoints, destinationLat, destinationLng]
+    [routeResponse, visitPoints, destinationLat, destinationLng],
   );
+
+  const segmentCities = useMemo(() => {
+    const cities = new Map<string, CityType>();
+
+    allRouteSegments.forEach((segment) => {
+      if (segment.type === 'metro' && segment.routeNumber) {
+        const firstPoint = segment.points[0];
+        if (firstPoint && firstPoint.length === 2) {
+          const city = detectMetroCity(segment.startName || '', {
+            lat: firstPoint[0],
+            lng: firstPoint[1],
+            routeNumber: segment.routeNumber,
+          });
+          cities.set(segment.id, city);
+        }
+      }
+    });
+
+    return cities;
+  }, [allRouteSegments]);
+
+  const segmentsWithCity = useMemo(() => {
+    return allRouteSegments.map((segment) => ({
+      ...segment,
+      metroCity: segment.type === 'metro' ? segmentCities.get(segment.id) : undefined,
+    }));
+  }, [allRouteSegments, segmentCities]);
 
   const displayedSegments = useMemo(() => {
     if (!selectedGapId) {
-      return allRouteSegments;
+      return segmentsWithCity;
     }
-    
+
     const sectionMatch = selectedGapId.match(/^section-(\d+)$/);
-    const sectionIndex = sectionMatch 
+    const sectionIndex = sectionMatch
       ? parseInt(sectionMatch[1], 10)
       : extractSectionIndexFromGapId(selectedGapId);
-    
+
     if (sectionIndex === -1) {
-      return allRouteSegments;
+      return segmentsWithCity;
     }
-    
-    return allRouteSegments.filter(segment => {
+
+    return segmentsWithCity.filter((segment) => {
       const segmentSectionIndex = extractSectionIndexFromGapId(segment.gapId || '');
-      
+
       if (segmentSectionIndex === sectionIndex) {
         return true;
       }
-      
-      if (segment.id.includes(`transport-${sectionIndex}-`) || 
-          segment.id.includes(`walk-to-section-${sectionIndex}`) ||
-          segment.id.includes(`walk-section-${sectionIndex}`) ||
-          segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
-          segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
-          segment.id.includes(`walk-transfer-${sectionIndex}-`)) {
+
+      if (
+        segment.id.includes(`transport-${sectionIndex}-`) ||
+        segment.id.includes(`walk-to-section-${sectionIndex}`) ||
+        segment.id.includes(`walk-section-${sectionIndex}`) ||
+        segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
+        segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
+        segment.id.includes(`walk-transfer-${sectionIndex}-`)
+      ) {
         return true;
       }
-      
+
       return false;
     });
-  }, [allRouteSegments, selectedGapId]);
+  }, [segmentsWithCity, selectedGapId]);
 
   useEffect(() => {
     if (selectedGapId !== prevSelectedGapRef.current) {
       prevSelectedGapRef.current = selectedGapId;
-      
+
       if (selectedGapId) {
         const sectionIndex = extractSectionIndexFromGapId(selectedGapId);
         if (sectionIndex !== -1) {
           const sectionPoints: [number, number][] = [];
-          allRouteSegments.forEach(segment => {
+          allRouteSegments.forEach((segment) => {
             const segmentSectionIndex = extractSectionIndexFromGapId(segment.gapId || '');
-            if (segmentSectionIndex === sectionIndex || 
-                segment.id.includes(`transport-${sectionIndex}-`) ||
-                segment.id.includes(`walk-to-section-${sectionIndex}`) ||
-                segment.id.includes(`walk-section-${sectionIndex}`) ||
-                segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
-                segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
-                segment.id.includes(`walk-transfer-${sectionIndex}-`)) {
-              segment.points.forEach(point => {
+            if (
+              segmentSectionIndex === sectionIndex ||
+              segment.id.includes(`transport-${sectionIndex}-`) ||
+              segment.id.includes(`walk-to-section-${sectionIndex}`) ||
+              segment.id.includes(`walk-section-${sectionIndex}`) ||
+              segment.id.includes(`walk-transport-to-cluster-${sectionIndex}`) ||
+              segment.id.includes(`walk-cluster-${sectionIndex}-`) ||
+              segment.id.includes(`walk-transfer-${sectionIndex}-`)
+            ) {
+              segment.points.forEach((point) => {
                 if (point && point.length === 2 && !isNaN(point[0]) && !isNaN(point[1])) {
                   sectionPoints.push([point[0], point[1]]);
                 }
               });
             }
           });
-          
+
           if (sectionPoints.length > 0) {
             const bounds = L.latLngBounds(sectionPoints);
             const frameId = requestAnimationFrame(() => {
@@ -171,25 +252,25 @@ export const MapPanel = ({
     if (!selectedGapId || displayedSegments.length === 0) {
       return null;
     }
-    
+
     const allPoints: [number, number][] = [];
-    displayedSegments.forEach(segment => {
-      segment.points.forEach(point => {
+    displayedSegments.forEach((segment) => {
+      segment.points.forEach((point) => {
         if (point && point.length === 2 && !isNaN(point[0]) && !isNaN(point[1])) {
           allPoints.push([point[0], point[1]]);
         }
       });
     });
-    
+
     if (allPoints.length > 1) {
       return L.latLngBounds(allPoints);
     }
-    
-    const segment = displayedSegments.find(s => s.gapId === selectedGapId);
+
+    const segment = displayedSegments.find((s) => s.gapId === selectedGapId);
     if (segment && segment.points.length > 1) {
-      return L.latLngBounds(segment.points.map(p => [p[0], p[1]]));
+      return L.latLngBounds(segment.points.map((p) => [p[0], p[1]]));
     }
-    
+
     return null;
   }, [selectedGapId, displayedSegments]);
 
@@ -202,11 +283,11 @@ export const MapPanel = ({
   useEffect(() => {
     if (prevCollapsedRef.current !== isInfoPanelCollapsed) {
       prevCollapsedRef.current = isInfoPanelCollapsed;
-      
+
       const rafId = requestAnimationFrame(() => {
         setMapKey((prev) => prev + 1);
       });
-      
+
       return () => cancelAnimationFrame(rafId);
     }
   }, [isInfoPanelCollapsed]);
@@ -224,17 +305,20 @@ export const MapPanel = ({
       setMapZoom(16);
       setTimeout(() => setShouldFlyTo(false), 2000);
     },
-    [reverseGeocode, onDestinationSelect]
+    [reverseGeocode, onDestinationSelect],
   );
 
-  const handleMarkerClick = useCallback((marker: MapMarker) => {
-    if (marker.clusterData?.isCluster) {
-      clusterClickHandler(marker);
-    } else {
-      const place = createPlaceFromMarker(marker);
-      setSelectedPlace(place);
-    }
-  }, [clusterClickHandler]);
+  const handleMarkerClick = useCallback(
+    (marker: MapMarker) => {
+      if (marker.clusterData?.isCluster) {
+        clusterClickHandler(marker);
+      } else {
+        const place = createPlaceFromMarker(marker);
+        setSelectedPlace(place);
+      }
+    },
+    [clusterClickHandler],
+  );
 
   if (isLoading) {
     return <LoadingState />;
@@ -254,7 +338,7 @@ export const MapPanel = ({
           <MapResizeHandler isInfoPanelCollapsed={isInfoPanelCollapsed} />
           <MapClickHandler onMapClick={handleMapClick} isSelectingMode={isSelectingMode} />
           <TileLayer attribution={TILE_LAYER_ATTRIBUTION} url={TILE_LAYER_URL} />
-          
+
           <CurvedRouteSegments
             segments={displayedSegments}
             selectedGapId={selectedGapId}
@@ -265,18 +349,15 @@ export const MapPanel = ({
           <MapMarkers markers={markers} onMarkerClick={handleMarkerClick} />
         </MapContainer>
         <MapHint isSelectingMode={isSelectingMode} />
-        
+
         {selectedGapId && (
           <div className={styles.selectedGapInfo}>
             <span>
-              {selectedGapId.startsWith('section-') 
-                ? `Участок ${parseInt(selectedGapId.split('-')[1]) + 1}` 
+              {selectedGapId.startsWith('section-')
+                ? `Участок ${parseInt(selectedGapId.split('-')[1]) + 1}`
                 : 'Выбран транспортный сегмент'}
             </span>
-            <button 
-              onClick={() => onSelectGap?.(null)}
-              className={styles.clearSelectionButton}
-            >
+            <button onClick={() => onSelectGap?.(null)} className={styles.clearSelectionButton}>
               ✕
             </button>
           </div>
