@@ -1,41 +1,27 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useMemo } from 'react';
 import { Tooltip } from 'react-leaflet';
 import { Clock, MapPin, Building2 } from 'lucide-react';
 import type { MapMarker } from '../../../../types';
 import { getCategoryColor } from '../../../../utils/categoryUtils';
 import styles from '../MapPanel.module.css';
-import { usePlaceCache } from '../../../../context/PlaceCacheContext';
+import { usePlaceDetails } from '../../../../hooks/usePlaceDetails';
 
 type MarkerTooltipProps = {
   marker: MapMarker;
 };
 
 export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
-  const { getCachedData } = usePlaceCache();
+  const { details, isLoading } = usePlaceDetails(marker.placeData || null);
   const [imageError, setImageError] = useState(false);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setImageError(false);
-  }, [marker.placeData]);
-
-  const cachedData = useMemo(() => {
-    if (!marker.placeData) return null;
-    return getCachedData(marker.placeData.id);
-  }, [marker.placeData, getCachedData]);
 
   const image = useMemo(() => {
     if (imageError) return null;
-    return cachedData?.images?.[0] ?? null;
-  }, [cachedData, imageError]);
+    return details.images?.[0] ?? null;
+  }, [details.images, imageError]);
 
   const description = useMemo(() => {
-    return cachedData?.details?.wikipediaExtract ?? null;
-  }, [cachedData]);
-
-  const handleImageError = useCallback(() => {
-    setImageError(true);
-  }, []);
+    return details.wikipediaExtract ?? null;
+  }, [details.wikipediaExtract]);
 
   const categoryLabel =
     marker.type === 'selected'
@@ -45,6 +31,8 @@ export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
         : marker.category || 'Достопримечательность';
   const isSpecial = marker.type === 'selected' || marker.type === 'end';
   const categoryColor = isSpecial ? '#FFD700' : getCategoryColor(marker.category || '');
+
+  const handleImageError = () => setImageError(true);
 
   return (
     <Tooltip
@@ -94,7 +82,9 @@ export const MarkerTooltip = ({ marker }: MarkerTooltipProps) => {
             <p className={styles.tooltipDescription}>{description.substring(0, 200)}...</p>
           ) : (
             marker.type === 'point' && (
-              <p className={styles.tooltipHint}>Нажмите, чтобы узнать больше</p>
+              <p className={styles.tooltipHint}>
+                {isLoading ? 'Загрузка...' : 'Нажмите, чтобы узнать больше'}
+              </p>
             )
           )}
         </div>
