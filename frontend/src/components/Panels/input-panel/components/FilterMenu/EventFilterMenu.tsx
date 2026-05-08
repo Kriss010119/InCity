@@ -34,8 +34,10 @@ export const EventFilterMenu = ({ selectedEvents, onEventChange }: EventFilterMe
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        menuRef.current && !menuRef.current.contains(e.target as Node) &&
-        buttonRef.current && !buttonRef.current.contains(e.target as Node)
+        menuRef.current &&
+        !menuRef.current.contains(e.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target as Node)
       ) {
         setIsOpen(false);
         setMenuPosition(null);
@@ -66,7 +68,7 @@ export const EventFilterMenu = ({ selectedEvents, onEventChange }: EventFilterMe
 
   const handleEventToggle = (eventId: string) => {
     const newSelected = selectedEvents.includes(eventId)
-      ? selectedEvents.filter(id => id !== eventId)
+      ? selectedEvents.filter((id) => id !== eventId)
       : [...selectedEvents, eventId];
     onEventChange(newSelected);
   };
@@ -88,12 +90,21 @@ export const EventFilterMenu = ({ selectedEvents, onEventChange }: EventFilterMe
         <Calendar size={16} />
         <span>События</span>
         {selectedCount > 0 && <span className={styles.filterBadge}>{selectedCount}</span>}
-        <ChevronDown size={14} className={`${styles.filterChevron} ${isOpen ? styles.rotated : ''}`} />
+        <ChevronDown
+          size={14}
+          className={`${styles.filterChevron} ${isOpen ? styles.rotated : ''}`}
+        />
       </button>
 
       {isOpen && menuPosition && (
         <Portal>
-          <div className={styles.filterMenuOverlay} onClick={() => { setIsOpen(false); setMenuPosition(null); }} />
+          <div
+            className={styles.filterMenuOverlay}
+            onClick={() => {
+              setIsOpen(false);
+              setMenuPosition(null);
+            }}
+          />
           <div
             ref={menuRef}
             className={styles.filterMenu}
@@ -116,7 +127,7 @@ export const EventFilterMenu = ({ selectedEvents, onEventChange }: EventFilterMe
                   <span>Все события</span>
                 </div>
                 <div className={styles.filterOptions}>
-                  {EVENT_TYPES.options.map(option => (
+                  {EVENT_TYPES.options.map((option) => (
                     <label key={option.id} className={styles.filterOption}>
                       <input
                         type="checkbox"
@@ -137,8 +148,8 @@ export const EventFilterMenu = ({ selectedEvents, onEventChange }: EventFilterMe
 
       {selectedCount > 0 && (
         <div className={styles.selectedFiltersPreview}>
-          {selectedEvents.slice(0, 5).map(id => {
-            const option = EVENT_TYPES.options.find(o => o.id === id);
+          {selectedEvents.slice(0, 5).map((id) => {
+            const option = EVENT_TYPES.options.find((o) => o.id === id);
             return option ? (
               <span key={id} className={styles.selectedFilterTag}>
                 {option.icon && <span className={styles.tagIcon}>{option.icon}</span>}

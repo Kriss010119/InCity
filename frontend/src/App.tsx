@@ -8,6 +8,6 @@ const App = () => {
       <RouterProvider router={router} />
     </AppProvider>
   );
-}
+};
 
 export default App;

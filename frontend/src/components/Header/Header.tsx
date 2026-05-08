@@ -9,24 +9,17 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles["logo-container"]}>
+      <div className={styles['logo-container']}>
         <a href="https://www.tbank.ru/travel/" target="_blank" rel="noopener noreferrer">
-            <img
-            src="/icons/TBankIcon.svg"
-            alt="T-Bank"
-            className={styles['tbank-icon']}
-            />
+          <img src="/icons/TBankIcon.svg" alt="T-Bank" className={styles['tbank-icon']} />
         </a>
         <span className={styles.logo}>InCity</span>
-        
       </div>
 
       <nav className={styles.nav}>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            `${styles["nav-link"]} ${isActive ? styles.active : ''}`
-          }
+          className={({ isActive }) => `${styles['nav-link']} ${isActive ? styles.active : ''}`}
           end
         >
           {t('nav.home')}
@@ -34,25 +27,15 @@ export const Header = () => {
 
         <NavLink
           to="/map"
-          className={({ isActive }) =>
-            `${styles["nav-link"]} ${isActive ? styles.active : ''}`
-          }
+          className={({ isActive }) => `${styles['nav-link']} ${isActive ? styles.active : ''}`}
         >
           {t('nav.map')}
         </NavLink>
       </nav>
 
-      <button 
-        className={styles["theme-toggle"]} 
-        onClick={toggleTheme} 
-        aria-label="Toggle theme"
-      >
-        <img 
-          src={themeIcon} 
-          alt="Theme icon" 
-          className={styles['theme-icon']} 
-        />
+      <button className={styles['theme-toggle']} onClick={toggleTheme} aria-label="Toggle theme">
+        <img src={themeIcon} alt="Theme icon" className={styles['theme-icon']} />
       </button>
     </header>
   );
-}
+};

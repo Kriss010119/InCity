@@ -5,24 +5,17 @@ type ActionButtonsProps = {
   onSearch: () => void;
   onReset: () => void;
   isSearchDisabled: boolean;
-}
+};
 
 export const ActionButtons = ({ onSearch, onReset, isSearchDisabled }: ActionButtonsProps) => {
   return (
     <div className={styles.buttonGroup}>
-      <button 
-        onClick={onSearch}
-        className={styles.searchButton}
-        disabled={isSearchDisabled}
-      >
+      <button onClick={onSearch} className={styles.searchButton} disabled={isSearchDisabled}>
         <Search size={16} />
         Построить маршрут
       </button>
 
-      <button 
-        onClick={onReset}
-        className={styles.resetButton}
-      >
+      <button onClick={onReset} className={styles.resetButton}>
         Сбросить
       </button>
     </div>

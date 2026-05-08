@@ -16,9 +16,9 @@ interface RouteWalkProps {
 
 export const RouteWalk = ({ walk, walkId, isSelected, onSelect }: RouteWalkProps) => {
   const { t } = useLocale();
-  
+
   return (
-    <div 
+    <div
       id={walkId}
       className={`${styles.gap} ${isSelected ? styles.active : ''} ${styles.walkGap}`}
       onClick={() => onSelect()}
@@ -33,7 +33,7 @@ export const RouteWalk = ({ walk, walkId, isSelected, onSelect }: RouteWalkProps
           </span>
         </div>
       </div>
-      
+
       <div className={styles.walkRoute}>
         <span className={styles.walkPoint}>{walk.startPoint.name}</span>
         <span className={styles.walkArrow}>→</span>

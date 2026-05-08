@@ -1,3 +1,4 @@
+// MapPanel/components/TransportStops.tsx
 import { useMemo } from 'react';
 import { CircleMarker, Popup } from 'react-leaflet';
 import type { RouteResponse } from '../../../../types';
@@ -24,8 +25,8 @@ export const TransportStops = ({ routeResponse }: TransportStopsProps) => {
     const stopsList: StopPoint[] = [];
     const seenStopIds = new Set<string | number>();
 
-    routeResponse.sections.forEach(section => {
-      section.gaps.forEach(gap => {
+    routeResponse.sections.forEach((section) => {
+      section.gaps.forEach((gap) => {
         if (gap.startNode && !seenStopIds.has(gap.startNode.nodeId)) {
           seenStopIds.add(gap.startNode.nodeId);
           stopsList.push({
@@ -52,7 +53,7 @@ export const TransportStops = ({ routeResponse }: TransportStopsProps) => {
           });
         }
 
-        gap.nodesVisited?.forEach(node => {
+        gap.nodesVisited?.forEach((node) => {
           if (!seenStopIds.has(node.nodeId)) {
             seenStopIds.add(node.nodeId);
             stopsList.push({
@@ -76,12 +77,16 @@ export const TransportStops = ({ routeResponse }: TransportStopsProps) => {
 
   return (
     <>
-      {stops.map(stop => (
-       <CircleMarker
+      {stops.map((stop) => (
+        <CircleMarker
           key={stop.id}
           center={[stop.lat, stop.lng]}
           radius={stop.type === 'intermediate' ? 4 : 6}
-          fillColor={getTransportColor(stop.transportType || 'bus', stop.routeNumber, stop.name)}
+          fillColor={getTransportColor(stop.transportType || 'bus', stop.routeNumber, stop.name, {
+            lat: stop.lat,
+            lng: stop.lng,
+            routeNumber: stop.routeNumber,
+          })}
           color="#ffffff"
           weight={stop.type === 'intermediate' ? 1.5 : 2}
           fillOpacity={0.85}

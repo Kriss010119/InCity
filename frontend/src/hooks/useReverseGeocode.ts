@@ -4,14 +4,14 @@ export const useReverseGeocode = () => {
   const reverseGeocode = useCallback(async (lat: number, lng: number): Promise<string> => {
     try {
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`
+        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
       );
       const data = await response.json();
-      
+
       if (data.display_name) {
         return data.display_name;
       }
-      
+
       const address = data.address;
       if (address) {
         const parts = [];
@@ -22,7 +22,7 @@ export const useReverseGeocode = () => {
         }
         if (parts.length > 0) return parts.join(', ');
       }
-      
+
       return `Точка на карте (${lat.toFixed(4)}, ${lng.toFixed(4)})`;
     } catch (error) {
       console.error('Error reverse geocoding:', error);

@@ -73,7 +73,7 @@
   color: var(--text-main);
 }
 
-:root[data-theme="dark"] .notification {
+:root[data-theme='dark'] .notification {
   background: var(--bg-secondary);
   border-color: var(--tbank-yellow);
 }

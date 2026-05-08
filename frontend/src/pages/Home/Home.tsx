@@ -1,4 +1,4 @@
-import { Header, Landing, HomeInfo, Footer } from "../../components";
+import { Header, Landing, HomeInfo, Footer } from '../../components';
 
 export const Home = () => {
   return (

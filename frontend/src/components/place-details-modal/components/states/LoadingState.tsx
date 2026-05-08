@@ -8,12 +8,12 @@ interface LoadingStateProps {
 
 export const LoadingState = ({ source }: LoadingStateProps) => {
   const { t } = useLocale();
-  
+
   return (
     <div className={styles.loading}>
       <Loader size={24} className={styles.spinner} />
       <span>
-        {source === 'cache' 
+        {source === 'cache'
           ? t('placeDetails.loading.fromCache')
           : t('placeDetails.loading.loading')}
       </span>

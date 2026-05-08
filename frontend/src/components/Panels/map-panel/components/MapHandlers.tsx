@@ -15,14 +15,14 @@ export const MapClickHandler = ({ onMapClick, isSelectingMode }: MapHandlersProp
 
 export const MapResizeHandler = ({ isInfoPanelCollapsed }: MapResizeHandlerProps) => {
   const map = useMap();
-  
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       map.invalidateSize();
     }, 300);
-    
+
     return () => clearTimeout(timeoutId);
   }, [isInfoPanelCollapsed, map]);
-  
+
   return null;
 };

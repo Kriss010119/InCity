@@ -507,7 +507,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -516,16 +517,20 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(var(--spacing-xxxl));
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -581,7 +586,9 @@
 }
 
 .routeSegment {
-  transition: stroke-width var(--transition-duration-fast) ease, opacity var(--transition-duration-fast) ease;
+  transition:
+    stroke-width var(--transition-duration-fast) ease,
+    opacity var(--transition-duration-fast) ease;
 }
 
 .routeSegment:hover {
@@ -606,28 +613,28 @@
     padding: var(--spacing-xs) var(--spacing-lg);
     white-space: nowrap;
   }
-  
+
   .legend {
     bottom: 70px;
     left: var(--spacing-lg);
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  
+
   .legendItem {
     gap: var(--spacing-sm);
     font-size: var(--font-size-sm);
   }
-  
+
   .legendDot {
     width: var(--size-base);
     height: var(--size-base);
   }
-  
+
   .legendLine {
     width: var(--spacing-xxl);
     height: var(--spacing-xs);
   }
-  
+
   .clearSelection,
   .resetView {
     bottom: var(--spacing-lg);
@@ -635,55 +642,55 @@
     padding: var(--spacing-xs) var(--spacing-lg);
     font-size: var(--font-size-sm);
   }
-  
+
   .modalOverlay {
     padding: var(--spacing-xl);
   }
-  
+
   .modal {
     max-width: 100%;
     max-height: 90vh;
     border-radius: var(--radius-xl);
   }
-  
+
   .modalImageContainer {
     height: 180px;
   }
-  
+
   .modalContent {
     padding: var(--spacing-xxl);
   }
-  
+
   .modalTitle {
     font-size: var(--font-size-xxxl);
   }
-  
+
   .modalBadge {
     bottom: var(--spacing-xl);
     left: var(--spacing-xl);
     font-size: var(--font-size-sm);
     padding: var(--spacing-sm) var(--spacing-base);
   }
-  
+
   .modalInfo {
     padding: var(--spacing-xl);
     gap: var(--spacing-base);
   }
-  
+
   .modalInfoRow {
     gap: var(--spacing-base);
   }
-  
+
   .modalInfoText,
   .modalInfoLink {
     font-size: var(--font-size-base);
   }
-  
+
   .modalDescription {
     font-size: var(--font-size-md);
     margin-bottom: var(--spacing-xxl);
   }
-  
+
   .modalLink {
     padding: var(--spacing-base) var(--spacing-xl);
     font-size: var(--font-size-base);
@@ -703,7 +710,8 @@
     padding: var(--spacing-base);
   }
 
-  .tooltipTitle, .selectedGapInfo {
+  .tooltipTitle,
+  .selectedGapInfo {
     font-size: var(--font-size-sm);
   }
 

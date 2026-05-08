@@ -12,12 +12,12 @@ type PlaceDetails = {
   website?: string;
   price?: string;
   ageRestriction?: number | string;
-}
+};
 
 type InfoGridProps = {
   place: VisitPoint;
   details: Partial<PlaceDetails>;
-}
+};
 
 export const InfoGrid = ({ place, details }: InfoGridProps) => {
   const { t } = useLocale();
@@ -27,8 +27,8 @@ export const InfoGrid = ({ place, details }: InfoGridProps) => {
     <div className={styles.infoGrid}>
       {(details.address || extractValue('addr:street')) && (
         <InfoCard icon={<MapPin size={20} />} title={t('placeDetails.address')}>
-          {details.address || 
-           `${extractValue('addr:street') || ''} ${extractValue('addr:housenumber') || ''}`.trim()}
+          {details.address ||
+            `${extractValue('addr:street') || ''} ${extractValue('addr:housenumber') || ''}`.trim()}
         </InfoCard>
       )}
 
@@ -43,9 +43,13 @@ export const InfoGrid = ({ place, details }: InfoGridProps) => {
       {details.openingHours && (
         <InfoCard icon={<Calendar size={20} />} title={t('placeDetails.workingHours')}>
           <div className={styles.openingHours}>
-            {formatOpeningHours(details.openingHours).split(';').map((line, i) => (
-              <div key={i} className={styles.hoursLine}>{line.trim()}</div>
-            ))}
+            {formatOpeningHours(details.openingHours)
+              .split(';')
+              .map((line, i) => (
+                <div key={i} className={styles.hoursLine}>
+                  {line.trim()}
+                </div>
+              ))}
           </div>
         </InfoCard>
       )}

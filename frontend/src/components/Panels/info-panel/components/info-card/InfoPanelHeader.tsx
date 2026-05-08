@@ -24,20 +24,20 @@ export const InfoPanelHeader = ({ isCollapsed, onCollapse }: InfoPanelHeaderProp
   if (isMobile) {
     return null;
   }
-  
+
   return (
     <div className={isCollapsed ? styles.collapsedHeader : styles.panelHeader}>
-      <button 
+      <button
         className={`${styles.collapseButton} ${isCollapsed ? styles.fixedButton : ''}`}
         onClick={onCollapse}
         aria-label={isCollapsed ? t('infoPanel.expand') : t('infoPanel.hide')}
       >
-        <ChevronRight 
-          size={16} 
-          style={{ 
+        <ChevronRight
+          size={16}
+          style={{
             transform: isCollapsed ? 'rotate(180deg)' : 'none',
-            transition: 'transform 0.3s ease'
-          }} 
+            transition: 'transform 0.3s ease',
+          }}
         />
         <span className={styles.collapseButtonText}>
           {isCollapsed ? t('infoPanel.expand') : t('infoPanel.hide')}

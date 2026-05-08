@@ -5,7 +5,7 @@ import styles from './TransportSelector.module.css';
 type TransportSelectorProps = {
   selected: string[];
   onToggle: (transportId: string) => void;
-}
+};
 
 export const TransportSelector = ({ selected, onToggle }: TransportSelectorProps) => {
   return (
@@ -15,7 +15,7 @@ export const TransportSelector = ({ selected, onToggle }: TransportSelectorProps
         <span>Транспорт</span>
       </label>
       <div className={styles.transportGrid}>
-        {TRANSPORT_OPTIONS.map(option => (
+        {TRANSPORT_OPTIONS.map((option) => (
           <button
             key={option.id}
             type="button"

@@ -5,23 +5,20 @@ import { getCategoryColor } from '../../../../../utils/categoryUtils';
 import { useState } from 'react';
 import type { AttractionCardProps } from '../../../../../types';
 
-
-
 interface ExtendedAttractionCardProps extends AttractionCardProps {
   isMain?: boolean;
 }
 
-
 export const AttractionCard = ({ place, onClick, isMain = false }: ExtendedAttractionCardProps) => {
   const { details, isLoading } = usePlaceDetails(place);
   const [imageError, setImageError] = useState(false);
-  
+
   const getImageUrl = (): string | null => {
     if (!place.tags) return null;
     if (!imageError && details.images && details.images.length > 0) {
       return details.images[0];
     }
-    const imageTag = place.tags.find(tag => tag.startsWith('image='));
+    const imageTag = place.tags.find((tag) => tag.startsWith('image='));
     if (imageTag && !imageError) {
       return imageTag.split('=')[1];
     }
@@ -31,8 +28,8 @@ export const AttractionCard = ({ place, onClick, isMain = false }: ExtendedAttra
   const getAddress = (): string => {
     if (details.address) return details.address;
     if (!place.tags) return '';
-    const street = place.tags.find(tag => tag.startsWith('addr:street='))?.split('=')[1];
-    const house = place.tags.find(tag => tag.startsWith('addr:housenumber='))?.split('=')[1];
+    const street = place.tags.find((tag) => tag.startsWith('addr:street='))?.split('=')[1];
+    const house = place.tags.find((tag) => tag.startsWith('addr:housenumber='))?.split('=')[1];
     if (street && house) return `${street}, ${house}`;
     return street || '';
   };
@@ -42,49 +39,43 @@ export const AttractionCard = ({ place, onClick, isMain = false }: ExtendedAttra
   const categoryColor = getCategoryColor(place.category);
 
   return (
-    <div 
+    <div
       className={`${styles.attractionCard} ${isMain ? styles.mainAttraction : ''}`}
       onClick={() => onClick(place)}
     >
       <div className={styles.attractionImageContainer}>
         {imageUrl && !isLoading ? (
-          <img 
-            src={imageUrl} 
+          <img
+            src={imageUrl}
             alt={place.name}
             className={styles.attractionImage}
             loading="lazy"
             onError={() => setImageError(true)}
           />
         ) : (
-          <div className={styles.attractionImagePlaceholder}>
-            {isLoading ? '...' : 'Фото'}
-          </div>
+          <div className={styles.attractionImagePlaceholder}>{isLoading ? '...' : 'Фото'}</div>
         )}
       </div>
-      
+
       <div className={styles.attractionInfo}>
-        <h4 className={styles.attractionName}>
-          {place.name}
-        </h4>
-        
+        <h4 className={styles.attractionName}>{place.name}</h4>
+
         <div className={styles.attractionMeta}>
-          <span 
+          <span
             className={styles.attractionCategory}
             style={{ backgroundColor: categoryColor + '20', color: categoryColor }}
           >
             {place.subcategory || place.category}
           </span>
-          <span className={styles.attractionTime}>
-            {place.estimatedVisitMinutes} мин
-          </span>
+          <span className={styles.attractionTime}>{place.estimatedVisitMinutes} мин</span>
         </div>
-        
+
         {address && <div className={styles.attractionAddress}>{address}</div>}
-        
+
         {details.wikipediaExtract && (
           <p className={styles.attractionExcerpt}>
-            {details.wikipediaExtract.length > 100 
-              ? details.wikipediaExtract.substring(0, 100) + '...' 
+            {details.wikipediaExtract.length > 100
+              ? details.wikipediaExtract.substring(0, 100) + '...'
               : details.wikipediaExtract}
           </p>
         )}

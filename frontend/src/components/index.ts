@@ -6,4 +6,4 @@ export { MapPanel } from './Panels/map-panel/MapPanel';
 export { InputPanel } from './Panels/input-panel/InputPanel';
 export { InfoPanel } from './Panels/info-panel/InfoPanel';
 export { TransportIcon } from './transport-icon/TransportIcon';
-export {RouteUpdateNotification} from './notification/RouteUpdateNotification'
+export { RouteUpdateNotification } from './notification/RouteUpdateNotification';

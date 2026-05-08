@@ -19,10 +19,10 @@ interface ExtendedInfoPanelProps extends InfoPanelProps {
   onSelectGap?: (gapId: string | null) => void;
 }
 
-export const InfoPanel = ({ 
-  routeResponse, 
+export const InfoPanel = ({
+  routeResponse,
   walkingSegments = [],
-  isLoading, 
+  isLoading,
   onAttractionClick,
   onCollapseChange,
   selectedGapId,
@@ -52,14 +52,14 @@ export const InfoPanel = ({
             <>
               <InfoPanelTabs activeTab={activeTab} onTabChange={onTabChange} />
               {activeTab === 'route' ? (
-                <RouteTab 
-                  routeResponse={routeResponse} 
+                <RouteTab
+                  routeResponse={routeResponse}
                   walkingSegments={walkingSegments}
                   selectedGapId={selectedGapId}
                   onSelectGap={onSelectGap}
                 />
               ) : (
-                <AttractionsTab 
+                <AttractionsTab
                   visitPointGroups={routeResponse.visitPoints}
                   onAttractionClick={onAttractionClick || (() => {})}
                   onPlaceSelect={setSelectedPlace}

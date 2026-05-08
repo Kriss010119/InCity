@@ -9,7 +9,7 @@ type TicketContextType = {
   setIsLoading: (loading: boolean) => void;
   error: string | null;
   setError: (error: string | null) => void;
-}
+};
 
 const TicketContext = createContext<TicketContextType | undefined>(undefined);
 
@@ -44,7 +44,7 @@ export const TicketProvider = ({ children }: { children: ReactNode }) => {
         isLoading,
         setIsLoading,
         error,
-        setError
+        setError,
       }}
     >
       {children}

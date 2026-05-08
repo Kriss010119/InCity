@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { TicketDetails } from '../types';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5001",
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001',
   timeout: 20000,
 });
 
@@ -23,8 +23,8 @@ export const fetchTicketDetails = async (ticketNumber: string): Promise<TicketDe
           arrivalDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
           departureTime: '08:30',
           arrivalTime: '12:45',
-          passengers: 1
-        }
+          passengers: 1,
+        },
       };
     } else if (ticketNumber.includes('HT-')) {
       return {
@@ -35,14 +35,14 @@ export const fetchTicketDetails = async (ticketNumber: string): Promise<TicketDe
           hotelName: 'Lotte Hotel Moscow',
           coordinates: {
             latitude: 55.7494,
-            longitude: 37.5820
+            longitude: 37.582,
           },
           checkIn: new Date(Date.now() + 86400000).toISOString(),
-          checkOut: new Date(Date.now() + 172800000).toISOString()
-        }
+          checkOut: new Date(Date.now() + 172800000).toISOString(),
+        },
       };
     }
-    
+
     if (axios.isAxiosError(error)) {
       throw new Error(error.response?.data?.message || 'Ошибка при загрузке данных билета');
     }

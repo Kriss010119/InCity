@@ -11,7 +11,8 @@ export const HomeInfo = () => {
   return (
     <div>
       <section className={styles['info-section']}>
-        {Array.isArray(items) && items.map((item: HomeInfoItem, i: number) => <InfoCard key={i} item={item} i={i} />)}
+        {Array.isArray(items) &&
+          items.map((item: HomeInfoItem, i: number) => <InfoCard key={i} item={item} i={i} />)}
       </section>
 
       <section className={styles['form-section']} id="form">

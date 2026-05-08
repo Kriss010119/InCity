@@ -6,15 +6,15 @@ type RouteUpdateNotificationProps = {
   show: boolean;
   onUpdate: () => void;
   onDismiss: () => void;
-}
+};
 
 export const RouteUpdateNotification = ({
   show,
   onUpdate,
-  onDismiss
+  onDismiss,
 }: RouteUpdateNotificationProps) => {
   const { t } = useLocale();
-  
+
   if (!show) return null;
 
   return (

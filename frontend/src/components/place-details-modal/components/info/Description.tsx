@@ -9,14 +9,14 @@ type DescriptionProps = {
 
 export const Description = ({ text, wikipediaUrl }: DescriptionProps) => {
   const { t } = useLocale();
-  
+
   return (
     <div className={styles.description}>
       <h3>{t('placeDetails.about')}</h3>
       <p>{text}</p>
-      
+
       {wikipediaUrl && (
-        <a 
+        <a
           href={wikipediaUrl}
           target="_blank"
           rel="noopener noreferrer"

@@ -9,16 +9,16 @@ interface AttractionsTabProps {
   onPlaceSelect: (place: VisitPoint) => void;
 }
 
-export const AttractionsTab = ({ 
-  visitPointGroups, 
+export const AttractionsTab = ({
+  visitPointGroups,
   onAttractionClick,
-  onPlaceSelect 
+  onPlaceSelect,
 }: AttractionsTabProps) => {
   const { t } = useLocale();
-  
+
   const totalPoints = visitPointGroups.reduce(
     (acc, group) => acc + 1 + group.otherAttractions.length,
-    0
+    0,
   );
 
   return (
@@ -27,11 +27,11 @@ export const AttractionsTab = ({
       <p className={styles.attractionsCount}>
         {totalPoints} {t('infoPanel.attractionsCount')}
       </p>
-      
+
       <div className={styles.attractionsList}>
         {visitPointGroups.map((group, idx) => (
           <div key={idx} className={styles.attractionGroup}>
-            <AttractionCard 
+            <AttractionCard
               place={group.mainAttraction}
               onClick={(place) => {
                 onPlaceSelect(place);
@@ -40,7 +40,7 @@ export const AttractionsTab = ({
               isMain={true}
             />
             {group.otherAttractions.map((place) => (
-              <AttractionCard 
+              <AttractionCard
                 key={place.id}
                 place={place}
                 onClick={(place) => {

@@ -9,7 +9,8 @@
 }
 
 .transport-icon-car {
-  animation: car-border-move var(--transport-animation-duration-car) var(--transport-animation-easing) infinite;
+  animation: car-border-move var(--transport-animation-duration-car)
+    var(--transport-animation-easing) infinite;
   z-index: var(--z-index-transport-car);
   left: var(--frame-x, 0);
   top: var(--frame-y, 0);
@@ -20,155 +21,164 @@
 
 .transport-icon-plane {
   top: var(--transport-plane-top);
-  animation: plane-snake-move-combined var(--transport-animation-duration-plane) var(--transport-animation-easing) infinite;
+  animation: plane-snake-move-combined var(--transport-animation-duration-plane)
+    var(--transport-animation-easing) infinite;
 }
 
 .transport-icon-train {
   bottom: var(--transport-train-bottom);
   left: var(--transport-train-start-left);
-  animation: train-move var(--transport-animation-duration-train) var(--transport-animation-easing) infinite;
+  animation: train-move var(--transport-animation-duration-train) var(--transport-animation-easing)
+    infinite;
   z-index: var(--z-index-transport-train);
 }
 
 @keyframes car-border-move {
   0% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-1));
+      )
+      rotate(var(--car-rotate-angle-1));
   }
-  
+
   18% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-1));
+      )
+      rotate(var(--car-rotate-angle-1));
   }
-  
+
   22% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-2));
+      )
+      rotate(var(--car-rotate-angle-2));
   }
-  
+
   25% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-2));
+      )
+      rotate(var(--car-rotate-angle-2));
   }
-  
+
   43% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-2));
+      )
+      rotate(var(--car-rotate-angle-2));
   }
-  
+
   47% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-3));
+      )
+      rotate(var(--car-rotate-angle-3));
   }
-  
+
   50% {
-    transform: 
-      translate(
-        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)), 
+    transform: translate(
+        calc(var(--border-width, 800px) - calc(var(--car-size, 70px) / 2)),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-3));
+      )
+      rotate(var(--car-rotate-angle-3));
   }
-  
+
   68% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-3));
+      )
+      rotate(var(--car-rotate-angle-3));
   }
-  
+
   72% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-4));
+      )
+      rotate(var(--car-rotate-angle-4));
   }
-  
+
   75% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(var(--border-height, 300px) - calc(var(--car-size, 70px) / 2))
-      ) rotate(var(--car-rotate-angle-4));
+      )
+      rotate(var(--car-rotate-angle-4));
   }
-  
+
   93% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-4));
+      )
+      rotate(var(--car-rotate-angle-4));
   }
-  
+
   97% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-5));
+      )
+      rotate(var(--car-rotate-angle-5));
   }
-  
+
   100% {
-    transform: 
-      translate(
-        calc(0px - var(--car-size, 70px) / 2), 
+    transform: translate(
+        calc(0px - var(--car-size, 70px) / 2),
         calc(0px - var(--car-size, 70px) / 2)
-      ) rotate(var(--car-rotate-angle-5));
+      )
+      rotate(var(--car-rotate-angle-5));
   }
 }
 
 @keyframes plane-snake-move-combined {
   0% {
-    transform: translateX(calc(100vw + var(--plane-start-offset-x))) translateY(var(--plane-wave-offset-y));
+    transform: translateX(calc(100vw + var(--plane-start-offset-x)))
+      translateY(var(--plane-wave-offset-y));
   }
   10% {
-    transform: translateX(90vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
+    transform: translateX(90vw)
+      translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   20% {
     transform: translateX(80vw) translateY(var(--plane-wave-offset-y));
   }
   30% {
-    transform: translateX(70vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
+    transform: translateX(70vw)
+      translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   40% {
     transform: translateX(60vw) translateY(var(--plane-wave-offset-y));
   }
   50% {
-    transform: translateX(50vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
+    transform: translateX(50vw)
+      translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   60% {
     transform: translateX(40vw) translateY(var(--plane-wave-offset-y));
   }
   70% {
-    transform: translateX(30vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
+    transform: translateX(30vw)
+      translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   80% {
     transform: translateX(20vw) translateY(var(--plane-wave-offset-y));
   }
   90% {
-    transform: translateX(10vw) translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
+    transform: translateX(10vw)
+      translateY(calc(var(--plane-wave-offset-y) + var(--plane-wave-amplitude)));
   }
   100% {
-    transform: translateX(calc(-1 * var(--plane-start-offset-x))) translateY(var(--plane-wave-offset-y));
+    transform: translateX(calc(-1 * var(--plane-start-offset-x)))
+      translateY(var(--plane-wave-offset-y));
   }
 }
 
@@ -191,11 +201,11 @@
     width: var(--transport-icon-size-mobile);
     height: var(--transport-icon-size-mobile);
   }
-  
+
   .transport-icon-plane {
     top: var(--transport-plane-top-mobile);
   }
-  
+
   .transport-icon-train {
     bottom: var(--transport-train-bottom-mobile);
   }

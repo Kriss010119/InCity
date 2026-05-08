@@ -23,7 +23,7 @@ export const MobileTabBar = ({ activeTab, onTabChange }: MobileTabBarProps) => {
         <Sliders size={20} />
         <span>Маршрут</span>
       </button>
-      
+
       <button
         className={`${styles.tabButton} ${activeTab === 'map' ? styles.active : ''}`}
         onClick={() => handleTabChange('map')}
@@ -31,7 +31,7 @@ export const MobileTabBar = ({ activeTab, onTabChange }: MobileTabBarProps) => {
         <Map size={20} />
         <span>Карта</span>
       </button>
-      
+
       <button
         className={`${styles.tabButton} ${activeTab === 'info' ? styles.active : ''}`}
         onClick={() => handleTabChange('info')}

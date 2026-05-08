@@ -91,7 +91,7 @@ export type MapState = {
   selectedGapId: string | null;
   activeTab: TabType;
   showNotification: boolean;
-}
+};
 
 export type MapAction =
   | { type: 'SET_ROUTE_DATA'; payload: FormData | null }

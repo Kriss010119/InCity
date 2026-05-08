@@ -8,9 +8,9 @@ type MapHintProps = {
 
 export const MapHint = ({ isSelectingMode }: MapHintProps) => {
   const { t } = useLocale();
-  
+
   if (!isSelectingMode) return null;
-  
+
   return (
     <div className={styles.mapSelectingHint}>
       <MapPin size={16} />

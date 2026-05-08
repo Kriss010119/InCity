@@ -28,7 +28,7 @@
   color: var(--text-main);
 }
 
-:root[data-theme="dark"] .info-card.even {
+:root[data-theme='dark'] .info-card.even {
   background: var(--info-card-yellow);
   color: var(--text-black);
 }
@@ -37,7 +37,7 @@
   background: var(--info-card-gray-light);
 }
 
-:root[data-theme="dark"] .info-card.odd {
+:root[data-theme='dark'] .info-card.odd {
   background: var(--info-card-gray-dark);
 }
 
@@ -95,7 +95,7 @@
     grid-template-columns: 1fr;
     gap: calc(var(--info-section-gap) * var(--scale-mobile-gap));
     padding: calc(var(--info-section-padding) * var(--scale-mobile-padding));
-    margin: var(--spacing-xxxl) 0px calc(var(--spacing-xxxl)/2);
+    margin: var(--spacing-xxxl) 0px calc(var(--spacing-xxxl) / 2);
     box-sizing: border-box;
   }
 

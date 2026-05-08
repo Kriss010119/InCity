@@ -5,7 +5,7 @@ import styles from './DurationSelector.module.css';
 type DurationSelectorProps = {
   selected: string;
   onChange: (durationId: string) => void;
-}
+};
 
 export const DurationSelector = ({ selected, onChange }: DurationSelectorProps) => {
   return (
@@ -15,13 +15,11 @@ export const DurationSelector = ({ selected, onChange }: DurationSelectorProps) 
         <span>Продолжительность</span>
       </label>
       <div className={styles.durationGrid}>
-        {DURATION_OPTIONS.map(option => (
+        {DURATION_OPTIONS.map((option) => (
           <button
             key={option.id}
             type="button"
-            className={`${styles.durationButton} ${
-              selected === option.id ? styles.active : ''
-            }`}
+            className={`${styles.durationButton} ${selected === option.id ? styles.active : ''}`}
             onClick={() => onChange(option.id)}
             title={option.description}
           >

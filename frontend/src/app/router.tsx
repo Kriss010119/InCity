@@ -1,13 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import {Home, Map} from '../pages';
+import { Home, Map } from '../pages';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <Home />,
   },
   {
     path: '/map',
-    element: <Map />
-  }
+    element: <Map />,
+  },
 ]);

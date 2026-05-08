@@ -14,43 +14,50 @@ export const CompactInputForm = () => {
 
   const totalSteps = 5;
 
-  const isStepValid = useCallback((step: number): boolean => {
-    if (step === 0) {
-      const ticketValid = /^(HT|TR)-\d{6}$/i.test(formData.ticketNumber.trim());
-      const placeValid = formData.destinationCity.trim() !== '' && formData.travelDate !== '';
-      return ticketValid || placeValid;
-    }
-    if (step === 1) {
+  const isStepValid = useCallback(
+    (step: number): boolean => {
+      if (step === 0) {
+        const ticketValid = /^(HT|TR)-\d{6}$/i.test(formData.ticketNumber.trim());
+        const placeValid = formData.destinationCity.trim() !== '' && formData.travelDate !== '';
+        return ticketValid || placeValid;
+      }
+      if (step === 1) {
+        return true;
+      }
+      if (step === 2) {
+        return formData.duration !== null;
+      }
       return true;
-    }
-    if (step === 2) {
-      return formData.duration !== null;
-    }
-    return true;
-  }, [formData]);
+    },
+    [formData],
+  );
 
   const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const toggleTransport = (id: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      transport: prev.transport.includes(id) ? prev.transport.filter(t => t !== id) : [...prev.transport, id],
+      transport: prev.transport.includes(id)
+        ? prev.transport.filter((t) => t !== id)
+        : [...prev.transport, id],
     }));
   };
 
   const toggleAttraction = (id: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      attractions: prev.attractions.includes(id) ? prev.attractions.filter(a => a !== id) : [...prev.attractions, id],
+      attractions: prev.attractions.includes(id)
+        ? prev.attractions.filter((a) => a !== id)
+        : [...prev.attractions, id],
     }));
   };
 
   const toggleEvent = (id: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      events: prev.events.includes(id) ? prev.events.filter(e => e !== id) : [...prev.events, id],
+      events: prev.events.includes(id) ? prev.events.filter((e) => e !== id) : [...prev.events, id],
     }));
   };
 
@@ -59,8 +66,7 @@ export const CompactInputForm = () => {
     if (!isStepValid(currentStep)) {
       if (currentStep === 0) {
         setError('Укажите билет (HT-XXXXXX или TR-XXXXXX) либо город и дату');
-      }
-      else if (currentStep === 2) {
+      } else if (currentStep === 2) {
         setError('Выберите продолжительность маршрута');
       }
       return;
@@ -68,12 +74,12 @@ export const CompactInputForm = () => {
     if (currentStep === totalSteps - 1) {
       handleBuild();
     } else {
-      setCurrentStep(prev => prev + 1);
+      setCurrentStep((prev) => prev + 1);
     }
   };
 
   const goPrev = () => {
-    if (currentStep > 0) setCurrentStep(prev => prev - 1);
+    if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   };
 
   const handleBuild = async () => {
@@ -123,7 +129,7 @@ export const CompactInputForm = () => {
       to: city,
       date: date,
       transport: formData.transport,
-      attractions: formData.attractions, 
+      attractions: formData.attractions,
       events: formData.events,
       duration: formData.duration!,
       destinationLat: lat,
@@ -137,7 +143,7 @@ export const CompactInputForm = () => {
 
   const handleTicketChange = (value: string) => {
     setError('');
-    setFormData(prev => {
+    setFormData((prev) => {
       const updated = { ...prev, ticketNumber: value };
       const trimmed = value.trim();
       if (trimmed && (trimmed.startsWith('TR-') || trimmed.startsWith('HT-'))) {
@@ -165,8 +171,8 @@ export const CompactInputForm = () => {
                 placeholder="HT-123456 или TR-654321"
                 value={formData.ticketNumber}
                 onChange={(e) => {
-                  handleTicketChange(e.target.value)
-                  updateField('ticketNumber', e.target.value)
+                  handleTicketChange(e.target.value);
+                  updateField('ticketNumber', e.target.value);
                 }}
               />
             </div>
@@ -199,7 +205,7 @@ export const CompactInputForm = () => {
           <div className={styles.slide}>
             <div className={styles.stepTitle}>Транспорт</div>
             <div className={styles.chipGroup}>
-              {TRANSPORT_OPTIONS.map(opt => (
+              {TRANSPORT_OPTIONS.map((opt) => (
                 <div
                   key={opt.id}
                   className={`${styles.chip} ${formData.transport.includes(opt.id) ? styles.selected : ''}`}
@@ -219,11 +225,11 @@ export const CompactInputForm = () => {
           <div className={styles.slide}>
             <div className={styles.stepTitle}>Длительность маршрута</div>
             <div className={styles.chipGroup}>
-              {DURATION_OPTIONS.map(opt => (
+              {DURATION_OPTIONS.map((opt) => (
                 <div
                   key={opt.id}
                   className={`${styles.chip} ${formData.duration === opt.id ? styles.selected : ''}`}
-                  onClick={() => updateField('duration', opt.id as FormData["duration"])}
+                  onClick={() => updateField('duration', opt.id as FormData['duration'])}
                 >
                   {opt.name}
                 </div>
@@ -238,7 +244,7 @@ export const CompactInputForm = () => {
           <div className={styles.slide}>
             <div className={styles.stepTitle}>Достопримечательности</div>
             <div className={styles.multiselectGroup}>
-              {ATTRACTION_CATEGORIES.map(cat => (
+              {ATTRACTION_CATEGORIES.map((cat) => (
                 <div
                   key={cat.id}
                   className={`${styles.multiselectItem} ${formData.attractions.includes(cat.id) ? styles.selected : ''}`}
@@ -258,7 +264,7 @@ export const CompactInputForm = () => {
           <div className={styles.slide}>
             <div className={styles.stepTitle}>События</div>
             <div className={styles.multiselectGroup}>
-              {EVENTS.map(ev => (
+              {EVENTS.map((ev) => (
                 <div
                   key={ev.id}
                   className={`${styles.multiselectItem} ${formData.events.includes(ev.id) ? styles.selected : ''}`}
@@ -281,7 +287,10 @@ export const CompactInputForm = () => {
   return (
     <div className={styles.formContainer}>
       <div className={styles.slidesArea}>
-        <div className={styles.slidesTrack} style={{ transform: `translateX(-${currentStep * 100}%)` }}>
+        <div
+          className={styles.slidesTrack}
+          style={{ transform: `translateX(-${currentStep * 100}%)` }}
+        >
           {Array.from({ length: totalSteps }).map((_, idx) => (
             <div key={idx} className={styles.slideWrapper}>
               {renderSlide()}
@@ -297,8 +306,16 @@ export const CompactInputForm = () => {
         <span className={styles.stepIndicator}>
           {currentStep + 1}/{totalSteps}
         </span>
-        <button className={`${styles.navBtn} ${styles.navBtnPrimary}`} onClick={goNext} disabled={isGeocoding}>
-          {currentStep === totalSteps - 1 ? (isGeocoding ? 'Геокодирование...' : 'Построить') : 'Далее'}
+        <button
+          className={`${styles.navBtn} ${styles.navBtnPrimary}`}
+          onClick={goNext}
+          disabled={isGeocoding}
+        >
+          {currentStep === totalSteps - 1
+            ? isGeocoding
+              ? 'Геокодирование...'
+              : 'Построить'
+            : 'Далее'}
         </button>
       </div>
     </div>

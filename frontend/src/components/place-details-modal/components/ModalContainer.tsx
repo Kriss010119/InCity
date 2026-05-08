@@ -6,7 +6,7 @@ interface ModalContainerProps {
 
 export const ModalContainer = ({ children }: ModalContainerProps) => {
   return (
-    <div className={styles.modal} onClick={e => e.stopPropagation()}>
+    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
       {children}
     </div>
   );

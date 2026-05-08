@@ -8,20 +8,14 @@ type CheckboxGroupProps = {
   options: CheckboxOption[];
   selected: string[];
   onToggle: (id: string) => void;
-}
+};
 
 const ICONS = {
   star: Star,
-  calendar: CalendarDays
+  calendar: CalendarDays,
 };
 
-export const CheckboxGroup = ({
-  title,
-  icon,
-  options,
-  selected,
-  onToggle
-}: CheckboxGroupProps) => {
+export const CheckboxGroup = ({ title, icon, options, selected, onToggle }: CheckboxGroupProps) => {
   const Icon = ICONS[icon];
 
   return (
@@ -31,7 +25,7 @@ export const CheckboxGroup = ({
         <span>{title}</span>
       </label>
       <div className={styles.checkboxGrid}>
-        {options.map(option => (
+        {options.map((option) => (
           <label key={option.id} className={styles.checkboxItem}>
             <input
               type="checkbox"

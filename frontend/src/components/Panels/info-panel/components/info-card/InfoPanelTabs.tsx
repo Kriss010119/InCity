@@ -8,7 +8,7 @@ interface InfoPanelTabsProps {
 
 export const InfoPanelTabs = ({ activeTab, onTabChange }: InfoPanelTabsProps) => {
   const { t } = useLocale();
-  
+
   return (
     <div className={styles.tabs}>
       <button

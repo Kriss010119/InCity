@@ -10,7 +10,7 @@ type TicketSectionProps = {
   onTicketApply: () => void;
   onTicketRemove: () => void;
   isDestinationLocked?: boolean;
-}
+};
 
 export const TicketSection = ({
   ticketNumber,
@@ -18,7 +18,7 @@ export const TicketSection = ({
   ticketError,
   onTicketApply,
   onTicketRemove,
-  isDestinationLocked
+  isDestinationLocked,
 }: TicketSectionProps) => {
   const { ticketData } = useTicket();
 
@@ -28,7 +28,7 @@ export const TicketSection = ({
         <Ticket size={16} />
         <span>Билет Т-Путешествий</span>
       </label>
-      
+
       {!ticketData ? (
         <div className={styles.ticketInputWrapper}>
           <input
@@ -39,25 +39,21 @@ export const TicketSection = ({
             className={styles.ticketInput}
             disabled={isDestinationLocked}
           />
-          <button 
+          <button
             onClick={onTicketApply}
             className={styles.ticketApplyButton}
             disabled={!ticketNumber.trim() || isDestinationLocked}
           >
             Применить
           </button>
-          {ticketError && (
-            <span className={styles.ticketError}>{ticketError}</span>
-          )}
+          {ticketError && <span className={styles.ticketError}>{ticketError}</span>}
         </div>
       ) : (
         <div className={styles.ticketActive}>
           <div className={styles.ticketInfo}>
-            <span className={styles.ticketNumber}>
-              {ticketData.ticketNumber}
-            </span>
+            <span className={styles.ticketNumber}>{ticketData.ticketNumber}</span>
           </div>
-          <button 
+          <button
             onClick={onTicketRemove}
             className={styles.ticketRemoveButton}
             title="Удалить билет"

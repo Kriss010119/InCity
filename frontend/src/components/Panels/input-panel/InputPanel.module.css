@@ -23,46 +23,46 @@
   box-sizing: border-box;
 }
 
-:root[data-theme="dark"] .calendarDropdown,
-:root[data-theme="dark"] .suggestionsDropdown,
-:root[data-theme="dark"] .filterMenu {
+:root[data-theme='dark'] .calendarDropdown,
+:root[data-theme='dark'] .suggestionsDropdown,
+:root[data-theme='dark'] .filterMenu {
   background: var(--bg-secondary);
   border-color: var(--border-dark);
   box-shadow: var(--shadow-3xl);
 }
 
-:root[data-theme="dark"] .calendarDay,
-:root[data-theme="dark"] .filterOption {
+:root[data-theme='dark'] .calendarDay,
+:root[data-theme='dark'] .filterOption {
   background: var(--bg-secondary);
   border-color: var(--border-dark);
 }
 
-:root[data-theme="dark"] .calendarDay:hover,
-:root[data-theme="dark"] .filterOption:hover {
+:root[data-theme='dark'] .calendarDay:hover,
+:root[data-theme='dark'] .filterOption:hover {
   background: rgba(255, 221, 45, 0.1);
 }
 
-:root[data-theme="dark"] .suggestion,
-:root[data-theme="dark"] .filterCategoryTitle {
+:root[data-theme='dark'] .suggestion,
+:root[data-theme='dark'] .filterCategoryTitle {
   border-color: var(--border-dark);
 }
 
-:root[data-theme="dark"] .suggestion:hover,
-:root[data-theme="dark"] .suggestion.active {
+:root[data-theme='dark'] .suggestion:hover,
+:root[data-theme='dark'] .suggestion.active {
   background: rgba(255, 221, 45, 0.15);
 }
 
-:root[data-theme="dark"] .selectedFilterTag {
+:root[data-theme='dark'] .selectedFilterTag {
   background: rgba(255, 221, 45, 0.15);
 }
 
-:root[data-theme="dark"] .moreFilters,
-:root[data-theme="dark"] .filterTab {
+:root[data-theme='dark'] .moreFilters,
+:root[data-theme='dark'] .filterTab {
   background: var(--bg-secondary);
   border-color: var(--border-dark);
 }
 
-:root[data-theme="dark"] .filterTab.activeTab {
+:root[data-theme='dark'] .filterTab.activeTab {
   background: var(--tbank-yellow);
   border-color: var(--tbank-yellow);
   color: var(--text-black);
@@ -90,13 +90,13 @@
   background: var(--text-secondary);
 }
 
-:root[data-theme="dark"] .filterMenuContent::-webkit-scrollbar-track,
-:root[data-theme="dark"] .suggestionsDropdown::-webkit-scrollbar-track {
+:root[data-theme='dark'] .filterMenuContent::-webkit-scrollbar-track,
+:root[data-theme='dark'] .suggestionsDropdown::-webkit-scrollbar-track {
   background: var(--bg-secondary);
 }
 
-:root[data-theme="dark"] .filterMenuContent::-webkit-scrollbar-thumb,
-:root[data-theme="dark"] .suggestionsDropdown::-webkit-scrollbar-thumb {
+:root[data-theme='dark'] .filterMenuContent::-webkit-scrollbar-thumb,
+:root[data-theme='dark'] .suggestionsDropdown::-webkit-scrollbar-thumb {
   background: var(--border-dark);
 }
 

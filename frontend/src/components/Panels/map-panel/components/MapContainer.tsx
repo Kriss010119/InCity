@@ -11,13 +11,7 @@ type MapContainerProps = {
 
 export const MapContainer = ({ key, center, zoom, children }: MapContainerProps) => {
   return (
-    <LeafletMap
-      key={key}
-      center={center}
-      zoom={zoom}
-      className={styles.map}
-      zoomControl={false}
-    >
+    <LeafletMap key={key} center={center} zoom={zoom} className={styles.map} zoomControl={false}>
       {children}
     </LeafletMap>
   );

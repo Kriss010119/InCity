@@ -179,7 +179,9 @@
 .infoCard {
   background: var(--bg-main);
   padding: var(--spacing-xxl);
-  transition: transform var(--transition-duration-fast) ease, box-shadow var(--transition-duration-fast) ease;
+  transition:
+    transform var(--transition-duration-fast) ease,
+    box-shadow var(--transition-duration-fast) ease;
   border: var(--border-width-default) solid var(--border-light);
 }
 
@@ -324,7 +326,8 @@
   transition: color var(--transition-duration-fast) ease;
 }
 
-.phoneLink:hover, .websiteLink:hover {
+.phoneLink:hover,
+.websiteLink:hover {
   color: var(--tbank-yellow-dark);
   text-decoration: underline;
 }
@@ -370,12 +373,12 @@
   .modal {
     max-height: 85vh;
   }
-  
+
   .imageGallery {
     height: var(--modal-image-height-mobile);
   }
 
-  .title ,
+  .title,
   .description h3,
   .infoHeader {
     font-size: var(--font-size-xxl);
@@ -385,19 +388,19 @@
     font-size: var(--font-size-lg);
   }
 
-  .category, 
-  .visitTime, 
-  .description p, 
-  .infoContent, 
-  .price, 
-  .ageRestriction, 
-  .linkButton,  
-  .readMore, 
+  .category,
+  .visitTime,
+  .description p,
+  .infoContent,
+  .price,
+  .ageRestriction,
+  .linkButton,
+  .readMore,
   .error {
     font-size: var(--font-size-base);
   }
 
   .category {
-      max-width: calc(100% - 70px);
+    max-width: calc(100% - 70px);
   }
 }

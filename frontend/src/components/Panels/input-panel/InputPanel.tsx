@@ -1,12 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTicket } from '../../../context/TicketContext';
-import { 
-  ActionButtons, DatePicker, DestinationInput, 
-  TicketSection, TransportSelector, DurationSelector,
-  ObjectFilterMenu, EventFilterMenu 
+import {
+  ActionButtons,
+  DatePicker,
+  DestinationInput,
+  TicketSection,
+  TransportSelector,
+  DurationSelector,
+  ObjectFilterMenu,
+  EventFilterMenu,
 } from './components';
-import type { FormData, InputPanelProps } from './helpers/types';
 import styles from './InputPanel.module.css';
+import type { InputPanelProps, FormData } from '../../../types';
 
 export const InputPanel = ({
   onRouteUpdate,
@@ -24,34 +29,19 @@ export const InputPanel = ({
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticketError, setTicketError] = useState('');
 
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormData>(() => ({
     to: initialData?.to || '',
     date: initialData?.date || '',
     transport: initialData?.transport || ['metro', 'bus'],
     attractions: initialData?.attractions || [],
     events: initialData?.events || [],
     duration: initialData?.duration,
-    useTicket: false
-  });
-
-  useEffect(() => {
-    if (!initialData) return;
-    setFormData(prev => ({
-      ...prev,
-      ...initialData
-    }));
-  }, [initialData]);
-
-  useEffect(() => {
-    if (ticketData?.ticketDetails) {
-      setIsDestinationLocked?.(true);
-      setFormData(prev => ({ ...prev, useTicket: true }));
-    }
-  }, [ticketData, setIsDestinationLocked]);
+    useTicket: !!ticketData?.ticketDetails || initialData?.useTicket || false,
+  }));
 
   const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
     if (field === 'to' && isDestinationLocked) return;
-    setFormData(prev => {
+    setFormData((prev) => {
       const next = { ...prev, [field]: value };
       if (field === 'to') {
         next.destinationLat = undefined;
@@ -65,7 +55,7 @@ export const InputPanel = ({
   };
 
   const handleAddressSelect = (lat: number, lng: number, address: string) => {
-    setFormData(prev => {
+    setFormData((prev) => {
       const nextFormData: FormData = {
         ...prev,
         to: address,
@@ -84,7 +74,7 @@ export const InputPanel = ({
 
   const handleTransportToggle = (transportId: string) => {
     const newTransport = formData.transport.includes(transportId)
-      ? formData.transport.filter(t => t !== transportId)
+      ? formData.transport.filter((t) => t !== transportId)
       : [...formData.transport, transportId];
     updateField('transport', newTransport);
   };
@@ -105,9 +95,9 @@ export const InputPanel = ({
       destinationLat: undefined,
       destinationLng: undefined,
       destinationName: undefined,
-      useTicket: false
+      useTicket: false,
     } satisfies FormData;
-    
+
     setFormData(resetData);
     onRouteUpdate(resetData);
     onReset?.();
@@ -136,13 +126,13 @@ export const InputPanel = ({
           arrivalDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
           departureTime: '08:30',
           arrivalTime: '12:45',
-          passengers: 1
-        }
+          passengers: 1,
+        },
       };
 
       setTicketData({
         ticketNumber,
-        ticketDetails
+        ticketDetails,
       });
 
       const newFormData = {
@@ -152,7 +142,7 @@ export const InputPanel = ({
         destinationName: 'Москва',
         destinationLat: 55.7558,
         destinationLng: 37.6173,
-        useTicket: true
+        useTicket: true,
       };
 
       setFormData(newFormData);
@@ -168,16 +158,16 @@ export const InputPanel = ({
           hotelName: 'Lotte Hotel Moscow',
           coordinates: {
             latitude: 55.7494,
-            longitude: 37.5820
+            longitude: 37.582,
           },
           checkIn: new Date(Date.now() + 86400000).toISOString(),
-          checkOut: new Date(Date.now() + 172800000).toISOString()
-        }
+          checkOut: new Date(Date.now() + 172800000).toISOString(),
+        },
       };
 
       setTicketData({
         ticketNumber,
-        ticketDetails
+        ticketDetails,
       });
 
       const newFormData = {
@@ -187,7 +177,7 @@ export const InputPanel = ({
         destinationName: 'Lotte Hotel Moscow',
         destinationLat: ticketDetails.details.coordinates.latitude,
         destinationLng: ticketDetails.details.coordinates.longitude,
-        useTicket: true
+        useTicket: true,
       };
 
       setFormData(newFormData);
@@ -204,22 +194,22 @@ export const InputPanel = ({
     setIsDestinationLocked?.(false);
     setTicketNumber('');
     setTicketError('');
-    
-    setFormData(prev => ({
+
+    setFormData((prev) => ({
       ...prev,
       to: '',
       date: '',
       destinationLat: undefined,
       destinationLng: undefined,
       destinationName: undefined,
-      useTicket: false
+      useTicket: false,
     }));
   };
 
   const handleMapSelectClick = () => {
     const newState = !isSelectingOnMap;
     onMapSelectModeChange?.(newState);
-    
+
     if (newState) {
       console.log('Режим выбора на карте активирован. Кликните на карту чтобы выбрать точку.');
     }
@@ -230,7 +220,7 @@ export const InputPanel = ({
   return (
     <div className={styles.panel}>
       <h3 className={styles.title}>Планирование маршрута</h3>
-      
+
       <TicketSection
         ticketNumber={ticketNumber}
         setTicketNumber={setTicketNumber}
@@ -244,7 +234,7 @@ export const InputPanel = ({
         value={formData.to}
         onChange={(value: string) => updateField('to', value)}
         isLocked={isDestinationLocked}
-        placeholder={ticketData ? "Можно изменить вручную" : "Введите конечную точку"}
+        placeholder={ticketData ? 'Можно изменить вручную' : 'Введите конечную точку'}
         onMapSelect={handleMapSelectClick}
         isSelectingOnMap={isSelectingOnMap}
         onAddressSelect={handleAddressSelect}
@@ -258,20 +248,19 @@ export const InputPanel = ({
 
       <DurationSelector
         selected={formData.duration || ''}
-        onChange={(duration: string | undefined) => updateField('duration', duration as FormData['duration'])}
+        onChange={(duration: string | undefined) =>
+          updateField('duration', duration as FormData['duration'])
+        }
       />
 
-      <TransportSelector
-        selected={formData.transport}
-        onToggle={handleTransportToggle}
-      />
+      <TransportSelector selected={formData.transport} onToggle={handleTransportToggle} />
 
-      <ObjectFilterMenu 
+      <ObjectFilterMenu
         selectedFilters={formData.attractions}
         onFilterChange={(filters: string[]) => updateField('attractions', filters)}
       />
-      
-      <EventFilterMenu 
+
+      <EventFilterMenu
         selectedEvents={formData.events}
         onEventChange={(events: string[]) => updateField('events', events)}
       />

@@ -8,10 +8,14 @@ import { useTicket } from '../../context/TicketContext';
 import type { VisitPoint, FormData } from '../../types';
 import { extractWalkingSegmentsForInfoPanel } from '../../components/Panels/map-panel/utils';
 import { STORAGE_KEYS } from '../../constants/map.ts';
-import { mapReducer, getInitialState, saveToStorage, expandCategoriesToSubOptions } from './mapReducer.ts';
+import {
+  mapReducer,
+  getInitialState,
+  saveToStorage,
+  expandCategoriesToSubOptions,
+} from './mapReducer.ts';
 
 import styles from './Map.module.css';
-
 
 export const Map = () => {
   const [state, dispatch] = useReducer(mapReducer, null, getInitialState);

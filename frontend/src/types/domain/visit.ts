@@ -14,4 +14,5 @@ export type VisitPoint = {
 export type VisitPointGroup = {
   mainAttraction: VisitPoint;
   otherAttractions: VisitPoint[];
+  estimatedTimeInMinutes: number;
 };

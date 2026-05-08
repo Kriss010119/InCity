@@ -1,8 +1,8 @@
-import { ALL_FILTER_OPTIONS } from "../../constants/filterConstants";
-import { STORAGE_KEYS } from "../../constants/map";
-import type { MapState, RouteResponse, MapAction, FormData } from "../../types";
+import { ALL_FILTER_OPTIONS } from '../../constants/filterConstants';
+import { STORAGE_KEYS } from '../../constants/map';
+import type { MapState, RouteResponse, MapAction, FormData } from '../../types';
 
-export const saveToStorage = <T,>(key: string, data: T): void => {
+export const saveToStorage = <T>(key: string, data: T): void => {
   try {
     localStorage.setItem(key, JSON.stringify(data));
   } catch (error) {
@@ -10,7 +10,7 @@ export const saveToStorage = <T,>(key: string, data: T): void => {
   }
 };
 
-export const loadFromStorage = <T,>(key: string): T | null => {
+export const loadFromStorage = <T>(key: string): T | null => {
   try {
     const saved = localStorage.getItem(key);
     if (saved) {

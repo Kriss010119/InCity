@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useInView = (threshold = 0.2) =>{
+export const useInView = (threshold = 0.2) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -14,7 +14,7 @@ export const useInView = (threshold = 0.2) =>{
           observer.disconnect();
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(ref.current);
@@ -23,4 +23,4 @@ export const useInView = (threshold = 0.2) =>{
   }, [threshold]);
 
   return { ref, isVisible };
-}
+};

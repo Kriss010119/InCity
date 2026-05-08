@@ -19,12 +19,12 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
     if (buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
       const menuWidth = 480;
-      
+
       let left = rect.right + 12;
       if (left + menuWidth > window.innerWidth) {
         left = rect.left - menuWidth - 12;
       }
-      
+
       return {
         top: rect.top + rect.height / 2,
         left: left,
@@ -36,7 +36,7 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        menuRef.current && 
+        menuRef.current &&
         !menuRef.current.contains(e.target as Node) &&
         buttonRef.current &&
         !buttonRef.current.contains(e.target as Node)
@@ -55,7 +55,7 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
 
     document.addEventListener('mousedown', handleClickOutside);
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('resize', handleResize);
@@ -75,7 +75,7 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
 
   const handleFilterToggle = (filterId: string) => {
     const newSelected = selectedFilters.includes(filterId)
-      ? selectedFilters.filter(id => id !== filterId)
+      ? selectedFilters.filter((id) => id !== filterId)
       : [...selectedFilters, filterId];
     onFilterChange(newSelected);
   };
@@ -96,20 +96,21 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
       >
         <Building2 size={16} />
         <span>Объекты</span>
-        {selectedCount > 0 && (
-          <span className={styles.filterBadge}>{selectedCount}</span>
-        )}
-        <ChevronDown size={14} className={`${styles.filterChevron} ${isOpen ? styles.rotated : ''}`} />
+        {selectedCount > 0 && <span className={styles.filterBadge}>{selectedCount}</span>}
+        <ChevronDown
+          size={14}
+          className={`${styles.filterChevron} ${isOpen ? styles.rotated : ''}`}
+        />
       </button>
 
       {isOpen && menuPosition && (
         <Portal>
-          <div 
-            className={styles.filterMenuOverlay} 
+          <div
+            className={styles.filterMenuOverlay}
             onClick={() => {
               setIsOpen(false);
               setMenuPosition(null);
-            }} 
+            }}
           />
           <div
             ref={menuRef}
@@ -130,14 +131,14 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
             </div>
 
             <div className={styles.filterMenuContent}>
-              {OBJECT_CATEGORIES.map(category => (
+              {OBJECT_CATEGORIES.map((category) => (
                 <div key={category.id} className={styles.filterCategory}>
                   <div className={styles.filterCategoryTitle}>
                     {category.icon && <span className={styles.categoryIcon}>{category.icon}</span>}
                     <span>{category.name}</span>
                   </div>
                   <div className={styles.filterOptions}>
-                    {category.options.map(option => (
+                    {category.options.map((option) => (
                       <label key={option.id} className={styles.filterOption}>
                         <input
                           type="checkbox"
@@ -159,10 +160,10 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
 
       {selectedCount > 0 && (
         <div className={styles.selectedFiltersPreview}>
-          {selectedFilters.slice(0, 5).map(id => {
+          {selectedFilters.slice(0, 5).map((id) => {
             let option = null;
             for (const category of OBJECT_CATEGORIES) {
-              const found = category.options.find(o => o.id === id);
+              const found = category.options.find((o) => o.id === id);
               if (found) {
                 option = found;
                 break;
@@ -178,9 +179,7 @@ export const ObjectFilterMenu = ({ selectedFilters, onFilterChange }: ObjectFilt
               </span>
             ) : null;
           })}
-          {selectedCount > 5 && (
-            <span className={styles.moreFilters}>+{selectedCount - 5}</span>
-          )}
+          {selectedCount > 5 && <span className={styles.moreFilters}>+{selectedCount - 5}</span>}
         </div>
       )}
     </div>

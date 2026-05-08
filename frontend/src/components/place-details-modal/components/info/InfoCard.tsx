@@ -8,9 +8,7 @@ export const InfoCard = ({ icon, title, children }: InfoCardProps) => {
         {icon}
         <span>{title}</span>
       </div>
-      <div className={styles.infoContent}>
-        {children}
-      </div>
+      <div className={styles.infoContent}>{children}</div>
     </div>
   );
 };
