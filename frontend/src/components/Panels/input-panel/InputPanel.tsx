@@ -1,4 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useEffect, useState } from 'react';
 import { useTicket } from '../../../context/TicketContext';
 import {
   ActionButtons,
@@ -10,8 +11,8 @@ import {
   ObjectFilterMenu,
   EventFilterMenu,
 } from './components';
+import type { FormData, InputPanelProps } from '../../../types';
 import styles from './InputPanel.module.css';
-import type { InputPanelProps, FormData } from '../../../types';
 
 export const InputPanel = ({
   onRouteUpdate,
@@ -29,15 +30,29 @@ export const InputPanel = ({
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticketError, setTicketError] = useState('');
 
-  const [formData, setFormData] = useState<FormData>(() => ({
+  const [formData, setFormData] = useState<FormData>({
     to: initialData?.to || '',
     date: initialData?.date || '',
     transport: initialData?.transport || ['metro', 'bus'],
     attractions: initialData?.attractions || [],
     events: initialData?.events || [],
     duration: initialData?.duration,
-    useTicket: !!ticketData?.ticketDetails || initialData?.useTicket || false,
-  }));
+    useTicket: false,
+  });
+
+  useEffect(() => {
+    if (!initialData) {
+      return;
+    }
+    setFormData((prev) => ({ ...prev, ...initialData }));
+  }, [initialData]);
+
+  useEffect(() => {
+    if (ticketData?.ticketDetails) {
+      setIsDestinationLocked?.(true);
+      setFormData((prev) => ({ ...prev, useTicket: true }));
+    }
+  }, [ticketData, setIsDestinationLocked]);
 
   const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
     if (field === 'to' && isDestinationLocked) return;
