@@ -20,7 +20,7 @@ export const geocodeCity = async (city: string): Promise<{ lat: number; lng: num
 };
 
 export const applyTicketToFormData = (
-  ticketNumber: string,
+  _ticketNumber: string,
   ticketDetails: TicketDetails,
 ): Partial<FormData> => {
   if (ticketDetails.orderType === 'train') {

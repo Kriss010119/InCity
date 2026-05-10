@@ -48,6 +48,8 @@ export type {
   CategoryBadgeProps,
   PlaceHeaderProps,
   InfoCardProps,
+  HomeInfoItem,
+  CardInfoItem,
 } from './components';
 
 export type {

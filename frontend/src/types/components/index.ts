@@ -27,3 +27,7 @@ export type {
   MapAction,
   MapState,
 } from './map';
+export type {
+  HomeInfoItem,
+  CardInfoItem
+} from './home-info';

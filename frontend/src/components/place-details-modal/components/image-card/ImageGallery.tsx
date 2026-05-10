@@ -1,4 +1,4 @@
-import type { ImageGalleryProps } from '../../types';
+import type { ImageGalleryProps } from '../../../../types';
 import styles from '../../PlaceDetailsModal.module.css';
 import { ImagePlaceholder } from './ImagePlaceholder';
 

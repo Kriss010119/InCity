@@ -763,7 +763,7 @@ export const getMetroLineName = (routeNumber: string, city: CityType): string =>
 };
 
 export const detectMetroCity = (
-  stationName: string,
+  _stationName: string,
   context?: { lat?: number; lng?: number; routeNumber?: string },
 ): CityType => {
   if (context?.lat !== undefined && context?.lng !== undefined) {

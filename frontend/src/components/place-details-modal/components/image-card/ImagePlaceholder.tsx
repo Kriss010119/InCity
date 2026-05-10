@@ -1,6 +1,6 @@
 import { Building2 } from 'lucide-react';
 import { useLocale } from '../../../../hooks/useLocale';
-import type { ImagePlaceholderProps } from '../../types';
+import type { ImagePlaceholderProps } from '../../../../types';
 import styles from '../../PlaceDetailsModal.module.css';
 
 export const ImagePlaceholder = ({ icon, hasImageTag }: ImagePlaceholderProps) => {

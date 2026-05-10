@@ -1,4 +1,4 @@
-import type { InfoCardProps } from '../../types';
+import type { InfoCardProps } from '../../../../types';
 import styles from '../../PlaceDetailsModal.module.css';
 
 export const InfoCard = ({ icon, title, children }: InfoCardProps) => {

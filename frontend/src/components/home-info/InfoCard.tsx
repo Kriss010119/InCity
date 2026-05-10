@@ -1,8 +1,8 @@
 import { useInView } from '../../hooks';
 import styles from './HomeInfo.module.css';
-import type { CardInfoItem } from './types';
 
-export const InfoCard = ({ item, i }: { item: CardInfoItem; i: number }) => {
+
+export const InfoCard = ({ item, i }: { item: any; i: number }) => {
   const { ref, isVisible } = useInView(0.3);
 
   return (

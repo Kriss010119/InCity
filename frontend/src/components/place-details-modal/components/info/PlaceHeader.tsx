@@ -1,6 +1,6 @@
 import { Clock } from 'lucide-react';
 import { useLocale } from '../../../../hooks/useLocale';
-import type { PlaceHeaderProps } from '../../types';
+import type { PlaceHeaderProps } from '../../../../types';
 import styles from '../../PlaceDetailsModal.module.css';
 
 export const PlaceHeader = ({ name, estimatedTime }: PlaceHeaderProps) => {
