@@ -105,7 +105,7 @@ export const mapReducer = (state: MapState, action: MapAction): MapState => {
         ...state,
         routeData: action.payload,
         lastRouteData: action.payload,
-        showNotification: false,
+        showNotification: true,
         error: null,
       };
 
@@ -113,7 +113,7 @@ export const mapReducer = (state: MapState, action: MapAction): MapState => {
       return {
         ...state,
         routeData: action.payload,
-        lastRouteData: action.payload,
+        lastRouteData: state.routeData,
         showNotification: false,
         error: null,
         isLoading: true,
