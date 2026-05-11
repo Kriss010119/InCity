@@ -1,4 +1,3 @@
-// MapPanel/components/TransportStops.tsx
 import { useMemo } from 'react';
 import { CircleMarker, Popup } from 'react-leaflet';
 import type { RouteResponse } from '../../../../types';

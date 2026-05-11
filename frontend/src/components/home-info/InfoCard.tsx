@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useInView } from '../../hooks';
 import styles from './HomeInfo.module.css';
-
 
 export const InfoCard = ({ item, i }: { item: any; i: number }) => {
   const { ref, isVisible } = useInView(0.3);

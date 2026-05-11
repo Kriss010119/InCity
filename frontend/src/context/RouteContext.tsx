@@ -1,4 +1,4 @@
-import React, { createContext, useState, type ReactNode } from 'react';
+import React, { createContext, useContext, useState, type ReactNode } from 'react';
 import { type RouteStateType } from '../types';
 
 const initialState: RouteStateType = {
@@ -31,4 +31,13 @@ export function RouteProvider({ children }: RouteProviderProps) {
   );
 
   return <RouteContext.Provider value={value}>{children}</RouteContext.Provider>;
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useRoute() {
+  const context = useContext(RouteContext);
+  if (!context) {
+    throw new Error('useRoute must be used within RouteProvider');
+  }
+  return context;
 }

@@ -1,4 +1,8 @@
 {
+  "extends": "./tsconfig.base.json",
   "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.test.json" }],
+  "compilerOptions": {
+    "types": ["vite/client", "jest", "@testing-library/jest-dom", "node"]
+  }
 }

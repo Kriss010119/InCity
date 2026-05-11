@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { mapAttractionsToBackend } from '../constants/filterConstants.tsx';
+import { mapAttractionsToBackend } from '../constants/filterConstants';
 import type { FormData, RouteResponse } from '../types';
 
 const api = axios.create({

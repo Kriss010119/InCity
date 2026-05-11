@@ -1,5 +1,5 @@
 import { Clock } from 'lucide-react';
-import { DURATION_OPTIONS } from '../../../../../constants/filterConstants.tsx';
+import { DURATION_OPTIONS } from '../../../../../constants/filterConstants';
 import styles from './DurationSelector.module.css';
 
 type DurationSelectorProps = {

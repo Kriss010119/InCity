@@ -1,4 +1,3 @@
-// MapPanel/constants.ts
 import type { TransportType } from '../../../types';
 import {
   TRANSPORT_COLORS as BASE_TRANSPORT_COLORS,

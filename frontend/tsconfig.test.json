@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": false,
+    "erasableSyntaxOnly": false,
+    "types": ["jest", "@testing-library/jest-dom", "node"],
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/*.spec.ts", "src/**/*.spec.tsx"],
+  "exclude": ["node_modules"]
+}

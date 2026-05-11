@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Building2, ChevronDown, X } from 'lucide-react';
 import { Portal } from '../../../../portal/Portal';
-import { OBJECT_CATEGORIES } from '../../../../../constants/filterConstants.tsx';
+import { OBJECT_CATEGORIES } from '../../../../../constants/filterConstants';
 import styles from './FilterMenu.module.css';
 
 type ObjectFilterMenuProps = {

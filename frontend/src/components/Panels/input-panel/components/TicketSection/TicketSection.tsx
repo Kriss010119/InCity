@@ -1,4 +1,3 @@
-// components/InputPanel/TicketSection.tsx
 import { Ticket, X } from 'lucide-react';
 import { useTicket } from '../../../../../context/TicketContext';
 import styles from './TicketSection.module.css';

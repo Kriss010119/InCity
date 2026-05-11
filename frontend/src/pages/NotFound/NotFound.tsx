@@ -11,8 +11,8 @@ export const NotFound = () => {
           <div className={styles.code}>404</div>
           <h1 className={styles.title}>Страница не найдена</h1>
           <p className={styles.text}>
-            Похоже, вы забрели в незнакомое место. 
-            Но не волнуйтесь, мы поможем вернуться на главную!
+            Похоже, вы забрели в незнакомое место. Но не волнуйтесь, мы поможем вернуться на
+            главную!
           </p>
           <Link to="/" className={styles.button}>
             Вернуться на главную
