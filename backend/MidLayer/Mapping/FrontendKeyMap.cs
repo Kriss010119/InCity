@@ -48,30 +48,40 @@ namespace MidLayer.Mapping
             { "war", AttractionCategories.Museums.War },
             { "gallery", AttractionCategories.Museums.Gallery },
             { "general-museum", AttractionCategories.Museums.General },
+
             { "historic-architecture", AttractionCategories.Architecture.Historic },
             { "castles", AttractionCategories.Architecture.Castles },
+
             { "urban", AttractionCategories.Parks.Urban },
             { "natural", AttractionCategories.Parks.Natural },
+
             { "sculpture", AttractionCategories.Monuments.Sculpture },
             { "memorials", AttractionCategories.Monuments.Memorials },
             { "fountains", AttractionCategories.Monuments.Fountains },
+
             { "academic", AttractionCategories.Theaters.Academic },
             { "concert-hall", AttractionCategories.Theaters.ConcertHalls },
             { "cinema-hall", AttractionCategories.Theaters.Cinemas },
+
             { "christian", AttractionCategories.Religious.Christian },
             { "monasteries", AttractionCategories.Religious.Monasteries },
             { "muslim", AttractionCategories.Religious.Muslim },
             { "jewish", AttractionCategories.Religious.Jewish },
+
             { "libraries", AttractionCategories.ScienceEducation.Libraries },
             { "observatories", AttractionCategories.ScienceEducation.Observatories },
             { "planetariums", AttractionCategories.ScienceEducation.Planetariums },
+            
             { "restaurant", AttractionCategories.Gastronomy.Restaurant },
             { "cafe", AttractionCategories.Gastronomy.Cafes },
             { "fine-dining", AttractionCategories.Gastronomy.FineDining },
+            
             { "contemporary-galleries", AttractionCategories.ContemporaryArt.Galleries },
             { "public-art", AttractionCategories.ContemporaryArt.PublicArt },
+            
             { "house-museums", AttractionCategories.FamousPeople.HouseMuseums },
             { "residences", AttractionCategories.FamousPeople.Residences },
+            
             { "aquariums", AttractionCategories.Children.Aquariums },
             { "dolphinarium", AttractionCategories.Children.Dolphinarium },
             { "circuses", AttractionCategories.Children.Circuses },
