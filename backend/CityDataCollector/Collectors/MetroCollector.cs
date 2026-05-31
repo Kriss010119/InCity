@@ -52,8 +52,6 @@ namespace CityDataCollector.Collectors
 
     /// <summary>
     /// Сборщик данных метро.
-    /// Логика и OSM-запросы взяты из старого MetroDataCollector,
-    /// адаптированы к новым моделям и инфраструктуре (OverpassClient с retry).
     /// </summary>
     public class MetroCollector
     {
@@ -71,7 +69,6 @@ namespace CityDataCollector.Collectors
 
             var result = new MetroResult();
 
-            // ШАГ 1: Получаем все маршруты метро
             FileLogger.Instance.Log($"  Метро ШАГ 1: Получаем маршруты...");
             var routes = await GetAllMetroRoutesAsync(cityName);
 
@@ -85,7 +82,6 @@ namespace CityDataCollector.Collectors
             routes = EnsureBothDirections(routes, cityName);
             FileLogger.Instance.Log($"  Метро: после EnsureBothDirections — {routes.Count} направлений");
 
-            // ШАГ 2: Получаем все станции метро
             FileLogger.Instance.Log($"  Метро ШАГ 2: Получаем станции...");
             var stations = await GetAllMetroStationsAsync(cityName);
 
@@ -98,7 +94,6 @@ namespace CityDataCollector.Collectors
             FileLogger.Instance.Log($"  Метро: получено {stations.Count} станций");
             BuildStationDictionary(stations);
 
-            // ШАГ 3: Обработка
             FileLogger.Instance.Log($"  Метро ШАГ 3: Обработка...");
             EnrichRoutesWithStationNames(routes);
             EnrichStationsWithRouteInfo(stations, routes);
@@ -108,7 +103,6 @@ namespace CityDataCollector.Collectors
             if (stations.Count < beforeDedup)
                 FileLogger.Instance.Log($"  Метро: дедупликация станций {beforeDedup} → {stations.Count}");
 
-            // ШАГ 4: Замена Stops маршрутов на станции (с их ID вместо ID точек остановки)
             FileLogger.Instance.Log($"  Метро ШАГ 4: Замена Stops маршрутов на станции...");
             RebuildRouteStopsFromStations(routes, stations);
 
@@ -124,7 +118,6 @@ namespace CityDataCollector.Collectors
 
         private async Task<List<MetroRouteData>> GetAllMetroRoutesAsync(string cityName)
         {
-            // Сначала получаем ID маршрутов (легкий запрос)
             string idsQuery = $@"
                 [out:json][timeout:120];
                 area[name=""{cityName}""]->.searchArea;
@@ -263,7 +256,6 @@ namespace CityDataCollector.Collectors
 
         private void EnrichStationsWithRouteInfo(List<MetroStationData> stations, List<MetroRouteData> routes)
         {
-            // Маппинг по имени (как в старом коде — станция может дублироваться по ID, но имена совпадают)
             var stationsByName = new Dictionary<string, List<MetroStationData>>();
             foreach (var s in stations)
             {
@@ -295,13 +287,6 @@ namespace CityDataCollector.Collectors
             }
         }
 
-        /// <summary>
-        /// Объединяет станции-дубликаты в одну.
-        /// Дубликаты — станции с одинаковым набором Routes (RouteNumber + Order).
-        /// Это происходит когда пересадочные станции с одним именем (например "Октябрьская"
-        /// на кольцевой и на линии 6) после EnrichStationsWithRouteInfo получают
-        /// одинаковые Routes. Оставляем одну станцию — она будет принадлежать всем маршрутам.
-        /// </summary>
         private List<MetroStationData> DeduplicateStations(List<MetroStationData> stations)
         {
             var seen = new HashSet<string>();
@@ -309,14 +294,12 @@ namespace CityDataCollector.Collectors
 
             foreach (var station in stations)
             {
-                // Формируем ключ из отсортированных Routes
                 var routeKey = string.Join("|",
                     station.Routes
                         .OrderBy(r => r.RouteNumber)
                         .ThenBy(r => r.Order)
                         .Select(r => $"{r.RouteNumber}:{r.Order}:{r.Color}"));
 
-                // Добавляем имя в ключ, чтобы не слить разные станции с одинаковыми Routes
                 string key = $"{station.Name}|{routeKey}";
 
                 if (seen.Add(key))
@@ -328,17 +311,8 @@ namespace CityDataCollector.Collectors
             return result;
         }
 
-        /// <summary>
-        /// Заменяет Stops каждого маршрута на данные из станций (с ID станций, а не ID точек остановки).
-        /// После EnrichStationsWithRouteInfo каждая станция знает свои Routes (маршруты и Order на них).
-        /// Проходимся по станциям, для каждого RouteRef находим соответствующий маршрут
-        /// и добавляем станцию в его Stops. В конце сортируем Stops по Sequence.
-        /// Конечным станциям (кроме кольцевых маршрутов) ставим специальные роли.
-        /// </summary>
         private void RebuildRouteStopsFromStations(List<MetroRouteData> routes, List<MetroStationData> stations)
         {
-            // Словарь маршрутов по (RouteNumber, Name) для быстрого поиска
-            // Name нужен чтобы различать направления одного маршрута
             var routeByKey = new Dictionary<string, MetroRouteData>();
             foreach (var route in routes)
             {
@@ -346,7 +320,6 @@ namespace CityDataCollector.Collectors
                 routeByKey.TryAdd(key, route);
             }
 
-            // Также строим индекс по RouteNumber → список маршрутов (для fallback)
             var routesByNumber = new Dictionary<string, List<MetroRouteData>>();
             foreach (var route in routes)
             {
@@ -355,32 +328,26 @@ namespace CityDataCollector.Collectors
                 routesByNumber[route.RouteNumber].Add(route);
             }
 
-            // Опустошаем Stops у всех маршрутов
             foreach (var route in routes)
             {
                 route.Stops.Clear();
             }
 
-            // Проходимся по станциям, добавляем их в Stops маршрутов
             foreach (var station in stations)
             {
                 foreach (var routeRef in station.Routes)
                 {
-                    // Ищем маршрут по RouteNumber — станция может быть на нескольких направлениях
                     if (!routesByNumber.TryGetValue(routeRef.RouteNumber, out var matchingRoutes))
                         continue;
 
                     foreach (var route in matchingRoutes)
                     {
-                        // Проверяем что у станции есть RouteRef именно для этого маршрута
-                        // (по RouteNumber и Color, так как Color уникален для линии)
                         bool belongsToThisRoute = station.Routes.Any(r =>
                             r.RouteNumber == route.RouteNumber && r.Color == route.Color);
 
                         if (!belongsToThisRoute)
                             continue;
 
-                        // Проверяем что станция ещё не добавлена в этот маршрут
                         if (route.Stops.Any(s => s.NodeId == station.Id))
                             continue;
 
@@ -397,14 +364,12 @@ namespace CityDataCollector.Collectors
                 }
             }
 
-            // Сортируем Stops по Sequence и расставляем роли конечных станций
             foreach (var route in routes)
             {
                 route.Stops = route.Stops.OrderBy(s => s.Sequence).ToList();
 
                 if (route.Stops.Count < 2) continue;
 
-                // Проверяем, кольцевой ли маршрут
                 string nameLower = (route.Name ?? "").ToLower();
                 bool isRing = nameLower.Contains("кольц") || nameLower.Contains("кольцо");
 
@@ -415,7 +380,6 @@ namespace CityDataCollector.Collectors
                 }
             }
 
-            // Убираем маршруты без станций
             routes.RemoveAll(r => r.Stops.Count == 0);
 
             int totalStops = routes.Sum(r => r.Stops.Count);
@@ -513,7 +477,6 @@ namespace CityDataCollector.Collectors
             string reverseName;
             try
             {
-                // Кольцевые линии Москвы
                 bool isMoscow = cityName.ToLower() == "москва";
                 bool isRing = isMoscow &&
                     (original.RouteNumber == "5" || original.RouteNumber == "11" || original.RouteNumber == "14");
@@ -530,7 +493,6 @@ namespace CityDataCollector.Collectors
                     string prefix = original.Name[..(original.Name.IndexOf(":") + 1)];
                     string originalDirection = original.Name[(original.Name.IndexOf(":") + 2)..];
 
-                    // Ищем разделитель между конечными станциями (→, -, –, —)
                     string separator = " → ";
                     if (!originalDirection.Contains(separator))
                     {
@@ -609,7 +571,6 @@ namespace CityDataCollector.Collectors
 
         /// <summary>
         /// Парсит ответ Overpass содержащий ноды и relation-ы.
-        /// Точная копия логики из старого MetroDataCollector.ParseRoutesWithStations.
         /// </summary>
         private List<MetroRouteData> ParseRoutesWithNodes(string json)
         {
@@ -621,7 +582,6 @@ namespace CityDataCollector.Collectors
                 using var doc = JsonDocument.Parse(json);
                 var elements = doc.RootElement.GetProperty("elements");
 
-                // Первый проход: собираем ноды с именами
                 foreach (var el in elements.EnumerateArray())
                 {
                     if (el.GetProperty("type").GetString() == "node")
@@ -638,7 +598,6 @@ namespace CityDataCollector.Collectors
                     }
                 }
 
-                // Второй проход: собираем маршруты
                 foreach (var el in elements.EnumerateArray())
                 {
                     if (el.GetProperty("type").GetString() != "relation") continue;
@@ -666,7 +625,7 @@ namespace CityDataCollector.Collectors
         }
 
         /// <summary>
-        /// Парсит один relation маршрута метро. Логика из старого ParseMetroRoute.
+        /// Парсит один relation маршрута метро.
         /// </summary>
         private MetroRouteData? ParseSingleRoute(JsonElement relation, Dictionary<long, (string name, double lat, double lon)> nodes)
         {
@@ -693,7 +652,6 @@ namespace CityDataCollector.Collectors
             if (string.IsNullOrEmpty(route.Name))
                 route.Name = routeNumber;
 
-            // Парсим members — ищем ноды с ролью stop/platform/пустая
             if (relation.TryGetProperty("members", out var members))
             {
                 foreach (var member in members.EnumerateArray())

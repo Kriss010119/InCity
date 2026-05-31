@@ -25,7 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "init", "init", "{ED4A0875-1
 		02_seed.sql = 02_seed.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityDataCollector", "CityDataCollector\CityDataCollector.csproj", "{3FA232B5-1806-46C3-8FDB-EF86281D0446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityDataCollector", "CityDataCollector\CityDataCollector.csproj", "{3FA232B5-1806-46C3-8FDB-EF86281D0446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLib.Tests", "DomainLib.Tests\DomainLib.Tests.csproj", "{AE0137C7-9E2B-41A3-836C-6C23C77CDAB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{3FA232B5-1806-46C3-8FDB-EF86281D0446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FA232B5-1806-46C3-8FDB-EF86281D0446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FA232B5-1806-46C3-8FDB-EF86281D0446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0137C7-9E2B-41A3-836C-6C23C77CDAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0137C7-9E2B-41A3-836C-6C23C77CDAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0137C7-9E2B-41A3-836C-6C23C77CDAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0137C7-9E2B-41A3-836C-6C23C77CDAB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

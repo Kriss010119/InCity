@@ -12,9 +12,25 @@ export const SELECTED_ZOOM = 16;
 export const HOTEL_ZOOM = 15;
 export const ROUTE_ZOOM = 13;
 
-export const TILE_LAYER_URL = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-export const TILE_LAYER_ATTRIBUTION =
+export const TILE_LAYER_URL_LIGHT =
+  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+export const TILE_LAYER_URL_DARK = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+
+export const TILE_LAYER_ATTRIBUTION_LIGHT =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+export const TILE_LAYER_ATTRIBUTION_DARK =
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> & CartoDB';
+
+export const TILE_LAYER_URL = TILE_LAYER_URL_LIGHT;
+export const TILE_LAYER_ATTRIBUTION = TILE_LAYER_ATTRIBUTION_LIGHT;
+
+export const getTileLayerUrl = (isDark: boolean) => {
+  return isDark ? TILE_LAYER_URL_DARK : TILE_LAYER_URL_LIGHT;
+};
+
+export const getTileLayerAttribution = (isDark: boolean) => {
+  return isDark ? TILE_LAYER_ATTRIBUTION_DARK : TILE_LAYER_ATTRIBUTION_LIGHT;
+};
 
 export const getSegmentColor = (
   type: TransportType,

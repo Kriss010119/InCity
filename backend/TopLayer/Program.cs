@@ -30,7 +30,7 @@ namespace TopLayer
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173") //5173
+                    policy.WithOrigins("http://localhost:5173")
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
@@ -62,41 +62,6 @@ namespace TopLayer
                     };
 
                     RouteResponse response = await routeService.BuildRouteFromPointAsync(query);
-                    return Results.Ok(response);
-                }
-                catch (Exception ex)
-                {
-                    return Results.Problem(detail: ex.Message, statusCode: 500);
-                }
-            });
-
-            app.MapGet("/route-from-order", async (string? arrivalCode, string? duration, string? transport,
-                string? attractions, string? subattractions, string? events, RouteService routeService) =>
-            {
-                if (string.IsNullOrEmpty(arrivalCode))
-                {
-                    return Results.BadRequest(new { error = "arrivalCode is required" });
-                }
-
-                try
-                {
-                    RouteFromOrderQuery query = new RouteFromOrderQuery
-                    {
-                        ArrivalCode = arrivalCode,
-                        Duration = duration ?? "medium",
-                        Transport = transport ?? "",
-                        Attractions = attractions ?? "",
-                        Subattractions = subattractions ?? "",
-                        Events = events ?? ""
-                    };
-
-                    RouteResponse response = await routeService.BuildRouteFromOrderAsync(query);
-
-                    if (response.VisitPoints.Length == 0)
-                    {
-                        return Results.NotFound(new { error = "station or airport not found for the given code" });
-                    }
-
                     return Results.Ok(response);
                 }
                 catch (Exception ex)

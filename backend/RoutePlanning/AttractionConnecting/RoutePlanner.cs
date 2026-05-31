@@ -13,10 +13,13 @@ using DomainLib;
 
 namespace RoutePlanning.AttractionConnecting
 {
+    /// <summary>
+    /// Класс планировки маршрута.
+    /// </summary>
     public class RoutePlanner
     {
-        private CityTransportFacade CTF;
-        private AttractionCollector AT;
+        private readonly CityTransportFacade CTF;
+        private readonly AttractionCollector AT;
 
         private const double BusMinutesPerStop = 1.35;
         private const double TrolleybusMinutesPerStop = 1.35;
@@ -39,6 +42,15 @@ namespace RoutePlanning.AttractionConnecting
             AT = new AttractionCollector(attractions);
         }
 
+        /// <summary>
+        /// Метод построения маршрута.
+        /// </summary>
+        /// <param name="rootLat">Долгота точки старта.</param>
+        /// <param name="rootLon">Широта точки старта.</param>
+        /// <param name="filter">фильтр транспорта.</param>
+        /// <param name="time">Время, отведенное на прохождение маршрута.</param>
+        /// <param name="minTimeForCluster">Минимальная граница для отведенного времени посещения для отобранных кластеров.</param>
+        /// <returns></returns>
         public Pair<Cluster[], Section[]> Execute(double rootLat, double rootLon, TransportFilter filter, int time, int minTimeForCluster)
         {
             Cluster[] visitPoints = AT.SelectClusters(rootLat, rootLon, time, minTimeForCluster);
@@ -59,7 +71,7 @@ namespace RoutePlanning.AttractionConnecting
             for (int i = 0; i < visitPoints.Length; i++)
             {
                 double lat1, lon1;
-                double searchRad1 = 600, searchRad2 = 600;
+                double searchRad1 = 500, searchRad2 = 500;
                 if (confirmed.Count == 0)
                 {
                     lat1 = rootLat;
@@ -93,7 +105,8 @@ namespace RoutePlanning.AttractionConnecting
                     continue;
                 }
 
-                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], i, rootLat, rootLon, time, minTimeForCluster);
+                int timeCurr = confirmed.Sum(el => el.EstimatedTime) + visitPoints[i..].Sum(el => el.EstimatedTime);
+                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], i, false, rootLat, rootLon, time, timeCurr, minTimeForCluster);
 
                 foreach (Cluster replacement in replacements)
                 {
@@ -126,7 +139,7 @@ namespace RoutePlanning.AttractionConnecting
                 double lat1 = lastConfirmed.Latitude;
                 double lon1 = lastConfirmed.Longitude;
                 double dist = SpatialMath.Distance(lat1, lon1, rootLat, rootLon);
-                double searchRad = 600;
+                double searchRad = 500;
 
                 if (lastConfirmed != null && lastConfirmed.Category == AttractionCategories.ParksAndGardens)
                 {
@@ -139,14 +152,15 @@ namespace RoutePlanning.AttractionConnecting
                     return new Pair<List<Cluster>, List<Section>>(confirmed, ans);
                 }
 
-                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], confirmed.Count - 1, rootLat, rootLon, time, minTimeForCluster);
+                int timeCurr = confirmed.Sum(el => el.EstimatedTime);
+                Cluster[] replacements = AT.GetReplacements(visitPoints, [.. confirmed], confirmed.Count - 1, true, rootLat, rootLon, time, timeCurr, minTimeForCluster);
                 bool found = false;
 
                 foreach (Cluster replacement in replacements)
                 {
                     IAttraction repMain = GetMainAttraction(replacement);
-                    double searchRadRep = 600;
-                    double searchRadPrev = 600;
+                    double searchRadRep = 500;
+                    double searchRadPrev = 500;
 
                     if (repMain != null && repMain.Category == AttractionCategories.ParksAndGardens)
                     {
@@ -206,14 +220,10 @@ namespace RoutePlanning.AttractionConnecting
         /// <summary>
         /// Пытается найти маршрут между двумя точками, пробуя методы в порядке приоритета:
         /// прямой маршрут → маршрут с пересадкой внутри одного вида → маршрут с пересадкой между видами транспорта.
-        /// Дополнительная фильтрация пар остановок (попарная):
-        /// Для каждой пары (stopA из множества у старта, stopB из множества у цели):
-        /// 1. stopB должна быть ближе к цели (lat2,lon2) чем stopA.
-        /// Проверка выполняется внутри TryToFindDirectRoute/IntersectionRoute/TransferRoute.
         /// </summary>
         private bool TryToFindRouteBetweenPoints(double lat1, double lon1, double lat2, double lon2, double dist, TransportFilter filter, out Section sect, double searchRadFor1 = 600, double searchRadFor2 = 600)
         {
-            if (dist <= 700)
+            if (dist <= 800)
             {
                 sect = new Section([], [], (int)(dist / 66), 0, false);
                 return true;
@@ -267,13 +277,6 @@ namespace RoutePlanning.AttractionConnecting
             return hasDirectRoute || hasIntersectionRoute || hasTransferRoute;
         }
 
-        // ==================== ПРЯМОЙ МАРШРУТ (БЕЗ ПЕРЕСАДОК) ====================
-
-        /// <summary>
-        /// Проверяет два условия:
-        /// 1. stopB (у цели) ближе к цели чем текущее местоположение (startLat, startLon).
-        /// 2. stopB ближе к цели чем stopA (у старта).
-        /// </summary>
         private static bool IsValidStopPair(double stopALat, double stopALon, double stopBLat, double stopBLon,
             double targetLat, double targetLon, double startLat, double startLon)
         {
@@ -288,7 +291,6 @@ namespace RoutePlanning.AttractionConnecting
         /// <summary>
         /// Ищет прямой маршрут (без пересадок) между наборами станций у двух точек.
         /// Перебирает все пары наземных остановок и станций метро, выбирает вариант с минимальным временем.
-        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
         /// </summary>
         private bool TryToFindDirectRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
@@ -306,7 +308,7 @@ namespace RoutePlanning.AttractionConnecting
                             continue;
                         }
 
-                        Section? candidate = TryBuildDirectMetroGap(ms1, ms2);
+                        Section? candidate = TryBuildMetroSection(ms1, ms2);
 
                         if (candidate != null)
                         {
@@ -370,52 +372,14 @@ namespace RoutePlanning.AttractionConnecting
             return sect != null;
         }
 
-        // ==================== МАРШРУТ С ПЕРЕСАДКОЙ ВНУТРИ ОДНОГО ВИДА ====================
-
         /// <summary>
         /// Ищет маршрут с одной пересадкой внутри одного вида наземного транспорта
-        /// или с пересадками внутри метро (через MetroManager.GetRoutesIntersection).
-        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
+        /// или с пересадками внутри метро.
         /// </summary>
         private bool TryToFindIntersectionRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
             sect = null!;
             double bestWalkDistance = double.MaxValue;
-
-            if (CTF.HasMetroSystem)
-            {
-                foreach (MetroStation ms1 in st1.Second)
-                {
-                    foreach (MetroStation ms2 in st2.Second)
-                    {
-                        if (!IsValidStopPair(ms1.Latitude, ms1.Longitude, ms2.Latitude, ms2.Longitude, targetLat, targetLon, startLat, startLon))
-                        {
-                            continue;
-                        }
-
-                        Section? candidate = TryBuildMetroWithTransfers(ms1, ms2);
-
-                        if (candidate != null)
-                        {
-                            switch (JudgeSection(candidate))
-                            {
-                                case -1: continue;
-                                case 1: sect = candidate; return true;
-                                case 0: break;
-                            }
-
-                            double walkDist = SpatialMath.Distance(startLat, startLon, ms1.Latitude, ms1.Longitude)
-                                            + SpatialMath.Distance(ms2.Latitude, ms2.Longitude, targetLat, targetLon);
-
-                            if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
-                            {
-                                bestWalkDistance = walkDist;
-                                sect = candidate;
-                            }
-                        }
-                    }
-                }
-            }
 
             foreach (IStation stop1 in st1.First)
             {
@@ -457,37 +421,49 @@ namespace RoutePlanning.AttractionConnecting
             return sect != null;
         }
 
-        // ==================== МАРШРУТ С ПЕРЕСАДКОЙ МЕЖДУ ВИДАМИ ТРАНСПОРТА ====================
-
         /// <summary>
         /// Ищет маршрут с пересадкой между различными видами транспорта:
         /// наземный одного типа → наземный другого типа, наземный → метро, метро → наземный.
         /// Допускается не более одной пересадки на наземный транспорт.
-        /// Пара (stopA, stopB) рассматривается только если stopB ближе к цели чем stopA.
         /// </summary>
         private bool TryToFindTransferRoute(Pair<IStation[], MetroStation[]> st1, Pair<IStation[], MetroStation[]> st2, double dist, TransportFilter filter, double startLat, double startLon, double targetLat, double targetLon, out Section sect)
         {
             sect = null!;
             double bestWalkDistance = double.MaxValue;
 
-            if (!CTF.HasMetroSystem)
+            if (CTF.HasMetroSystem)
             {
-                return sect != null;
-            }
+                MetroStation[] metroNearStartWide = CTF.GetClosestMetroStations(startLat, startLon, 5, 6000);
+                MetroStation[] metroNearTargetWide = CTF.GetClosestMetroStations(targetLat, targetLon, 5, 6000);
 
-            // Стратегия 2: наземный → метро → пешком до точки 2
-            foreach (IStation surfaceStop1 in st1.First)
-            {
-                MetroStation[] metroNearSurfaceRoutes = GetMetroStationsNearRoutes(surfaceStop1, false);
-
-                foreach (MetroStation metroEntry in metroNearSurfaceRoutes)
+                foreach (MetroStation metroEntry in metroNearStartWide)
                 {
                     foreach (MetroStation metroExit in st2.Second)
                     {
-                        Section? candidate = TryBuildSurfaceThenMetro(surfaceStop1, metroEntry, metroExit);
+                        Section? metroSection = TryBuildMetroSection(metroEntry, metroExit);
 
-                        if (candidate != null)
+                        if (metroSection == null)
                         {
+                            continue;
+                        }
+
+                        foreach (IStation surfaceStop in st1.First)
+                        {
+                            Gap<IStation>? surfaceGap = BuildSurfaceGapToMetro(surfaceStop, metroEntry);
+
+                            if (surfaceGap == null)
+                            {
+                                continue;
+                            }
+
+                            TransportType surfaceType = GetStationType(surfaceStop);
+                            int surfaceTime = (int)((surfaceGap.NodesVisited.Length + 1) * GetMinutesPerStop(surfaceType))
+                                + GetTransferMinutes(surfaceType);
+                            int totalTime = surfaceTime + MetroTransferMinutes + metroSection.EstimatedTimeInMinutes;
+                            int totalTransfers = 1 + metroSection.NumberOfTransfers;
+
+                            Section candidate = new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, false);
+
                             switch (JudgeSection(candidate))
                             {
                                 case -1: continue;
@@ -495,7 +471,7 @@ namespace RoutePlanning.AttractionConnecting
                                 case 0: break;
                             }
 
-                            double walkDist = SpatialMath.Distance(startLat, startLon, surfaceStop1.Latitude, surfaceStop1.Longitude)
+                            double walkDist = SpatialMath.Distance(startLat, startLon, surfaceStop.Latitude, surfaceStop.Longitude)
                                             + SpatialMath.Distance(metroExit.Latitude, metroExit.Longitude, targetLat, targetLon);
 
                             if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
@@ -506,21 +482,35 @@ namespace RoutePlanning.AttractionConnecting
                         }
                     }
                 }
-            }
 
-            // Стратегия 3: пешком до метро → метро → наземный от метро до точки 2
-            foreach (MetroStation metroEntry in st1.Second)
-            {
-                foreach (IStation surfaceStop2 in st2.First)
+                foreach (MetroStation metroEntry in st1.Second)
                 {
-                    MetroStation[] metroNearSurfaceRoutes = GetMetroStationsNearRoutes(surfaceStop2, true);
-
-                    foreach (MetroStation metroExit in metroNearSurfaceRoutes)
+                    foreach (MetroStation metroExit in metroNearTargetWide)
                     {
-                        Section? candidate = TryBuildMetroThenSurface(metroEntry, metroExit, surfaceStop2);
+                        Section? metroSection = TryBuildMetroSection(metroEntry, metroExit);
 
-                        if (candidate != null)
+                        if (metroSection == null)
                         {
+                            continue;
+                        }
+
+                        foreach (IStation surfaceStop in st2.First)
+                        {
+                            Gap<IStation>? surfaceGap = BuildSurfaceGapFromMetro(metroExit, surfaceStop);
+
+                            if (surfaceGap == null)
+                            {
+                                continue;
+                            }
+
+                            TransportType surfaceType = GetStationType(surfaceStop);
+                            int surfaceTime = (int)((surfaceGap.NodesVisited.Length + 1) * GetMinutesPerStop(surfaceType))
+                                + GetTransferMinutes(surfaceType);
+                            int totalTime = metroSection.EstimatedTimeInMinutes + GetTransferMinutes(surfaceType) + surfaceTime;
+                            int totalTransfers = metroSection.NumberOfTransfers + 1;
+
+                            Section candidate = new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, true);
+
                             switch (JudgeSection(candidate))
                             {
                                 case -1: continue;
@@ -529,7 +519,7 @@ namespace RoutePlanning.AttractionConnecting
                             }
 
                             double walkDist = SpatialMath.Distance(startLat, startLon, metroEntry.Latitude, metroEntry.Longitude)
-                                            + SpatialMath.Distance(surfaceStop2.Latitude, surfaceStop2.Longitude, targetLat, targetLon);
+                                            + SpatialMath.Distance(surfaceStop.Latitude, surfaceStop.Longitude, targetLat, targetLon);
 
                             if (BetterTiming(candidate, sect, walkDist, bestWalkDistance))
                             {
@@ -580,8 +570,6 @@ namespace RoutePlanning.AttractionConnecting
 
             return sect != null;
         }
-
-        // ==================== ПОСТРОЕНИЕ GAP-ОВ ДЛЯ НАЗЕМНОГО ТРАНСПОРТА ====================
 
         /// <summary>
         /// Пытается построить прямой Gap для наземного транспорта между двумя остановками.
@@ -702,7 +690,6 @@ namespace RoutePlanning.AttractionConnecting
             Section? bestSection = null;
             int bestTime = int.MaxValue;
 
-            // Для каждого маршрута stop1 находим его остановки и ищем рядом остановки типа type2
             foreach (RouteInfo ri1 in stop1.Routes)
             {
                 IRoute? route1 = GetSurfaceRoute(ri1.RouteID, type1);
@@ -712,7 +699,6 @@ namespace RoutePlanning.AttractionConnecting
                     continue;
                 }
 
-                // Перебираем остановки route1, которые идут после stop1
                 foreach (IStation midStop in route1.Stops)
                 {
                     RouteInfo? riMid = midStop.Routes.Find(r => r.RouteID == ri1.RouteID);
@@ -722,7 +708,6 @@ namespace RoutePlanning.AttractionConnecting
                         continue;
                     }
 
-                    // Ищем остановки type2 рядом с этой промежуточной остановкой
                     IStation[] nearbyStops = GetClosestSurfaceStops(midStop.Latitude, midStop.Longitude, type2, 3, 300);
 
                     foreach (IStation transferStop in nearbyStops)
@@ -769,188 +754,47 @@ namespace RoutePlanning.AttractionConnecting
             return bestSection;
         }
 
-        // ==================== ПОСТРОЕНИЕ GAP-ОВ ДЛЯ МЕТРО ====================
-
         /// <summary>
-        /// Пытается построить прямой MetroGap (обе станции на одной линии, без пересадок).
+        /// Строит оптимальный маршрут метро между двумя станциями, используя алгоритм Дейкстры
+        /// из MetroManager. Поддерживает произвольное количество пересадок и кольцевые линии.
         /// </summary>
-        private Section? TryBuildDirectMetroGap(MetroStation ms1, MetroStation ms2)
+        private Section? TryBuildMetroSection(MetroStation ms1, MetroStation ms2)
         {
             if (!CTF.HasMetroSystem)
             {
                 return null;
             }
 
-            MetroRoute? directRoute = CTF.MetroManager!.GetDirectRouteBetween(ms1, ms2);
+            MetroPathResult? pathResult = CTF.MetroManager!.FindShortestPath(ms1, ms2);
 
-            if (directRoute == null)
+            if (pathResult == null || pathResult.Segments.Count == 0)
             {
                 return null;
             }
 
-            int idx1 = directRoute.Stations.FindIndex(s => s.ID == ms1.ID);
-            int idx2 = directRoute.Stations.FindIndex(s => s.ID == ms2.ID);
+            MetroGap[] gaps = new MetroGap[pathResult.Segments.Count];
 
-            if (idx1 < 0 || idx2 < 0 || idx1 >= idx2)
+            int totalTime = 0;
+
+            for (int i = 0; i < pathResult.Segments.Count; i++)
             {
-                return null;
+                MetroPathSegment seg = pathResult.Segments[i];
+
+                gaps[i] = new MetroGap(
+                    i,
+                    seg.From,
+                    seg.To,
+                    seg.Intermediate,
+                    "metro",
+                    seg.Route.RouteNumber ?? ""
+                );
+
+                totalTime += (int)(seg.StopCount * MetroMinutesPerStop) + MetroTransferMinutes;
             }
 
-            MetroStation[] visited = ExtractVisitedMetroStations(directRoute, idx1, idx2);
+            totalTime += pathResult.TransferCount * MetroTransferMinutes;
 
-            MetroGap gap = new MetroGap(0, ms1, ms2, visited, "metro", directRoute.RouteNumber ?? "");
-
-            int timeMinutes = (int)((visited.Length + 1) * MetroMinutesPerStop) + MetroTransferMinutes;
-
-            return new Section([], [gap], timeMinutes, 0, true);
-        }
-
-        /// <summary>
-        /// Пытается построить маршрут метро с пересадками между линиями.
-        /// Использует MetroManager.GetRoutesIntersection для поиска пересадочных станций.
-        /// </summary>
-        private Section? TryBuildMetroWithTransfers(MetroStation ms1, MetroStation ms2)
-        {
-            if (!CTF.HasMetroSystem)
-            {
-                return null;
-            }
-
-            // Находим линии для каждой станции
-            List<MetroRoute> routes1 = GetMetroRoutesForStation(ms1);
-            List<MetroRoute> routes2 = GetMetroRoutesForStation(ms2);
-
-            Section? bestSection = null;
-            int bestTime = int.MaxValue;
-
-            foreach (MetroRoute mr1 in routes1)
-            {
-                foreach (MetroRoute mr2 in routes2)
-                {
-                    if (mr1.ID == mr2.ID)
-                    {
-                        continue;
-                    }
-
-                    Pair<MetroStation, MetroStation>? intersections = CTF.MetroManager!.GetRoutesIntersections(mr1, mr2);
-
-                    if (intersections == null)
-                    {
-                        continue;
-                    }
-
-                    MetroStation transferOut = intersections.First;  // станция на mr1
-                    MetroStation transferIn = intersections.Second;  // станция на mr2
-
-                    int idx1Start = mr1.Stations.FindIndex(s => s.ID == ms1.ID);
-                    int idx1End = mr1.Stations.FindIndex(s => s.ID == transferOut.ID);
-
-                    int idx2Start = mr2.Stations.FindIndex(s => s.ID == transferIn.ID);
-                    int idx2End = mr2.Stations.FindIndex(s => s.ID == ms2.ID);
-
-                    if (idx1Start < 0 || idx1End < 0 || idx2Start < 0 || idx2End < 0)
-                    {
-                        continue;
-                    }
-
-                    if (idx1Start >= idx1End || idx2Start >= idx2End)
-                    {
-                        continue;
-                    }
-
-                    MetroStation[] visited1 = ExtractVisitedMetroStations(mr1, idx1Start, idx1End);
-                    MetroStation[] visited2 = ExtractVisitedMetroStations(mr2, idx2Start, idx2End);
-
-                    MetroGap gap1 = new MetroGap(0, ms1, transferOut, visited1, "metro", mr1.RouteNumber ?? "");
-                    MetroGap gap2 = new MetroGap(1, transferIn, ms2, visited2, "metro", mr2.RouteNumber ?? "");
-
-                    int totalTime = (int)((visited1.Length + 1) * MetroMinutesPerStop)
-                        + MetroTransferMinutes * 2
-                        + (int)((visited2.Length + 1) * MetroMinutesPerStop);
-
-                    if (totalTime < bestTime)
-                    {
-                        bestTime = totalTime;
-                        bestSection = new Section([], [gap1, gap2], totalTime, 1, true);
-                    }
-                }
-            }
-
-            return bestSection;
-        }
-
-        // ==================== КОМБИНИРОВАННЫЕ МАРШРУТЫ (НАЗЕМНЫЙ + МЕТРО) ====================
-
-        /// <summary>
-        /// Строит маршрут: наземный транспорт до станции метро, затем метро до точки назначения.
-        /// </summary>
-        private Section? TryBuildSurfaceThenMetro(IStation surfaceStop, MetroStation metroEntry, MetroStation metroExit)
-        {
-            // Ищем наземный Gap от surfaceStop до остановки рядом с metroEntry
-            Gap<IStation>? surfaceGap = BuildSurfaceGapToMetro(surfaceStop, metroEntry);
-
-            // Ищем метро-маршрут от metroEntry до metroExit (прямой или с пересадками внутри метро)
-            Section? metroSection = TryBuildDirectMetroGap(metroEntry, metroExit);
-            if (metroSection == null)
-            {
-                metroSection = TryBuildMetroWithTransfers(metroEntry, metroExit);
-            }
-
-            if (metroSection == null)
-            {
-                return null;
-            }
-
-            if (surfaceGap != null)
-            {
-                TransportType surfaceType = GetStationType(surfaceStop);
-                int surfaceTime = (int)((surfaceGap.NodesVisited.Length + 1) * GetMinutesPerStop(surfaceType))
-                    + GetTransferMinutes(GetStationType(surfaceStop));
-                int transferTime = MetroTransferMinutes;
-                int totalTime = surfaceTime + transferTime + metroSection.EstimatedTimeInMinutes;
-                int totalTransfers = 1 + metroSection.NumberOfTransfers;
-
-                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, false);
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Строит маршрут: метро, затем наземный транспорт от станции метро до точки назначения.
-        /// </summary>
-        private Section? TryBuildMetroThenSurface(MetroStation metroEntry, MetroStation metroExit, IStation surfaceStop)
-        {
-            Section? metroSection = TryBuildDirectMetroGap(metroEntry, metroExit);
-            if (metroSection == null)
-            {
-                metroSection = TryBuildMetroWithTransfers(metroEntry, metroExit);
-            }
-
-            if (metroSection == null)
-            {
-                return null;
-            }
-
-            Gap<IStation>? surfaceGap = BuildSurfaceGapFromMetro(metroExit, surfaceStop);
-
-            if (surfaceGap != null)
-            {
-                TransportType surfaceType = GetStationType(surfaceStop);
-                int surfaceTime = (int)((surfaceGap.NodesVisited.Length + 1) * GetMinutesPerStop(surfaceType))
-                    + GetTransferMinutes(GetStationType(surfaceStop));
-                int transferTime = GetTransferMinutes(surfaceType);
-                int totalTime = metroSection.EstimatedTimeInMinutes + transferTime + surfaceTime;
-                int totalTransfers = metroSection.NumberOfTransfers + 1;
-
-                return new Section([surfaceGap], metroSection.MetroGaps, totalTime, totalTransfers, true);
-            }
-            else
-            {
-                return null;
-            }
+            return new Section([], gaps, totalTime, pathResult.TransferCount, true);
         }
 
         /// <summary>
@@ -1020,8 +864,6 @@ namespace RoutePlanning.AttractionConnecting
 
             return null;
         }
-
-        // ==================== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ====================
 
         private int JudgeSection(Section section)
         {
@@ -1202,37 +1044,6 @@ namespace RoutePlanning.AttractionConnecting
             return [];
         }
 
-        private MetroStation[] GetMetroStationsNearRoutes(IStation stop, bool earlier)
-        {
-            HashSet<MetroStation> hs = [];
-            TransportType type = GetStationType(stop);
-
-            foreach (RouteInfo ri in stop.Routes)
-            {
-                IRoute? route = GetSurfaceRoute(ri.RouteID, type);
-                if (route != null)
-                {
-                    int start = earlier ? 0 : ri.Order;
-                    int end = earlier ? ri.Order : route.Stops.Count;
-
-                    for (int i = start; i < end; i++)
-                    {
-                        MetroStation[] arr = CTF.GetClosestMetroStations(route.Stops[i], 3, 400);
-                        foreach (MetroStation st2 in arr)
-                        {
-                            _ = hs.Add(st2);
-                        }
-                    }
-                }
-            }
-
-            MetroStation[] ans = [.. hs];
-            Array.Sort(ans, (el1, el2) => SpatialMath.Distance(el1.Latitude, el1.Longitude, stop.Latitude, stop.Longitude).
-                CompareTo(SpatialMath.Distance(el2.Latitude, el2.Longitude, stop.Latitude, stop.Longitude)));
-
-            return ans;
-        }
-
         /// <summary>
         /// Извлекает промежуточные остановки маршрута между двумя позициями Order (не включая start и end).
         /// </summary>
@@ -1246,81 +1057,6 @@ namespace RoutePlanning.AttractionConnecting
             }
 
             return [.. visited];
-
-            //foreach (IStation stop in route.Stops)
-            //{
-            //    RouteInfo? ri = stop.Routes.Find(r => r.RouteID == route.ID);
-
-            //    if (ri != null && ri.Order > startOrder && ri.Order < endOrder)
-            //    {
-            //        visited.Add(stop);
-            //    }
-            //}
-
-            //visited.Sort((a, b) =>
-            //{
-            //    RouteInfo? ra = a.Routes.Find(r => r.RouteID == route.ID);
-            //    RouteInfo? rb = b.Routes.Find(r => r.RouteID == route.ID);
-            //    return (ra?.Order ?? 0).CompareTo(rb?.Order ?? 0);
-            //});
-
-            //return [.. visited];
-        }
-
-        /// <summary>
-        /// Извлекает промежуточные станции метро между двумя индексами в списке станций маршрута.
-        /// </summary>
-        private static MetroStation[] ExtractVisitedMetroStations(MetroRoute route, int idx1, int idx2)
-        {
-            List<MetroStation> visited = new List<MetroStation>();
-            int startIdx = Math.Min(idx1, idx2);
-
-            for (int i = startIdx + 1; i < idx2; i++)
-            {
-                visited.Add(route.Stations[i]);
-            }
-
-            return [.. visited];
-        }
-
-        /// <summary>
-        /// Возвращает все метро-маршруты, проходящие через станцию (включая пересадочные линии).
-        /// </summary>
-        private List<MetroRoute> GetMetroRoutesForStation(MetroStation station)
-        {
-            List<MetroRoute> result = new List<MetroRoute>();
-            HashSet<ulong> addedRouteIds = new HashSet<ulong>();
-
-            // Маршруты, проходящие непосредственно через станцию
-            if (station.Routes != null)
-            {
-                foreach (MetroRouteInfo mri in station.Routes)
-                {
-                    if (addedRouteIds.Add(mri.RouteID))
-                    {
-                        MetroRoute? route = FindMetroRouteById(mri.RouteID);
-                        if (route != null)
-                        {
-                            result.Add(route);
-                        }
-                    }
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Ищет метро-маршрут по ID.
-        /// </summary>
-        private MetroRoute? FindMetroRouteById(ulong routeId)
-        {
-            if (!CTF.HasMetroSystem)
-            {
-                return null;
-            }
-
-            return CTF.MetroManager!.GetRouteById(routeId);
         }
 
         private static TransportType GetStationType(IStation stop)

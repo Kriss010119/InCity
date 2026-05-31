@@ -63,13 +63,6 @@ namespace TopLayer.Repositories
             long[] ids = stationIds.Select(id => (long)id).ToArray();
             if (ids.Length == 0) return [];
 
-            //string sql = @"
-            //    SELECT id, name, route_number, operator, color_code, 
-            //           station_ids_forward, station_ids_backward
-            //    FROM metro_lines
-            //    WHERE station_ids_forward && @stationIds
-            //       OR station_ids_backward && @stationIds";
-
             string sql = @"
                 SELECT id, name, route_number, operator, color_code, 
                        station_ids_forward, station_ids_backward
@@ -93,10 +86,8 @@ namespace TopLayer.Repositories
                     foreach (long sid in backwardIds) allStationIds.Add(sid);
             }
 
-            // Загружаем все станции этих линий
             Dictionary<long, MetroStation> stationsDict = await LoadStationsByIds(connection, allStationIds);
 
-            // Строим MetroRoute для каждого направления
             List<MetroRoute> result = new List<MetroRoute>();
 
             foreach (var line in lineList)

@@ -64,14 +64,12 @@ namespace TopLayer.Services
         private async Task<RouteResponse> BuildRouteAsync(double lat, double lon, int durationMinutes, int minTimeForCluster,
             TransportFilter transportFilter, AttractionFilter attractionFilter, string[] eventCategories)
         {
-            // Запускаем загрузку данных из БД
             Task<CityData> cityDataTask = _dataLoader.LoadCityDataAsync(
                 lat, lon,
                 attractionFilter.Categories,
                 attractionFilter.Subcategories
             );
 
-            // Параллельно запрашиваем события из KudaGo (если фронтенд запросил)
             Task<List<Event>> eventsTask;
             if (eventCategories.Length > 0)
             {

@@ -8,7 +8,6 @@ namespace TopLayer.Repositories
     /// <summary>
     /// Парсер текстового представления composite type массивов из PostgreSQL.
     /// SQL-запросы кастят composite type массивы в ::text, чтобы Dapper мог их прочитать.
-    /// PostgreSQL формат: {"(1,259,25)","(2,275,17)"}
     /// </summary>
     internal static class SurfaceParseHelper
     {

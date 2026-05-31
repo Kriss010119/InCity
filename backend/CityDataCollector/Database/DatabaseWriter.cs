@@ -32,7 +32,6 @@ namespace CityDataCollector.Database
             using var conn = new NpgsqlConnection(_connectionString);
             await conn.OpenAsync();
 
-            // Ищем существующий
             using var selectCmd = new NpgsqlCommand("SELECT id FROM cities WHERE name = @name", conn);
             selectCmd.Parameters.AddWithValue("name", cityName);
             var result = await selectCmd.ExecuteScalarAsync();
@@ -44,7 +43,6 @@ namespace CityDataCollector.Database
                 return id;
             }
 
-            // Создаём
             using var insertCmd = new NpgsqlCommand("INSERT INTO cities (name) VALUES (@name) RETURNING id", conn);
             insertCmd.Parameters.AddWithValue("name", cityName);
             int newId = Convert.ToInt32(await insertCmd.ExecuteScalarAsync());
@@ -52,12 +50,11 @@ namespace CityDataCollector.Database
             return newId;
         }
 
-        // ==================== БЭКАП ПЕРЕД ОБНОВЛЕНИЕМ ====================
 
         private string _backupDir = "backups";
 
         /// <summary>
-        /// Устанавливает директорию для бэкапов. По умолчанию — "backups" рядом с exe.
+        /// Устанавливает директорию для бэкапов. По умолчанию - "backups" рядом с exe.
         /// </summary>
         public void SetBackupDirectory(string dir)
         {
@@ -117,8 +114,6 @@ namespace CityDataCollector.Database
             }
         }
 
-        // ==================== НАЗЕМНЫЙ ТРАНСПОРТ ====================
-
         /// <summary>
         /// Записывает данные наземного транспорта (автобусы/трамваи/троллейбусы).
         /// Удаляет старые данные для города и вставляет новые в одной транзакции.
@@ -146,7 +141,6 @@ namespace CityDataCollector.Database
                     throw new ArgumentException($"Unknown transport type: {transportType}");
             }
 
-            // Бэкап перед обновлением (на отдельном соединении)
             string cityName = _cityNames.TryGetValue(cityId, out string? cn) ? cn : $"city_{cityId}";
             await BackupTablesAsync(cityId, cityName, stopTable, routeTable);
 
@@ -156,7 +150,6 @@ namespace CityDataCollector.Database
 
             try
             {
-                // Удаляем старые данные
                 using (var delStops = new NpgsqlCommand($"DELETE FROM {stopTable} WHERE city_id = @cityId", conn, tx))
                 {
                     delStops.Parameters.AddWithValue("cityId", cityId);
@@ -168,9 +161,8 @@ namespace CityDataCollector.Database
                     await delRoutes.ExecuteNonQueryAsync();
                 }
 
-                // Вставляем маршруты и запоминаем реальные ID из БД
-                var routeDbIds = new Dictionary<string, List<long>>(); // routeNumber → list of DB IDs (может быть несколько маршрутов с одним номером)
-                var routeIdByIndex = new Dictionary<int, long>(); // index in routes list → DB ID
+                var routeDbIds = new Dictionary<string, List<long>>();
+                var routeIdByIndex = new Dictionary<int, long>();
 
                 for (int ri = 0; ri < routes.Count; ri++)
                 {
@@ -200,10 +192,8 @@ namespace CityDataCollector.Database
                     routeDbIds[route.RouteNumber].Add(dbId);
                 }
 
-                // Вставляем остановки (с route_info как composite type array)
                 foreach (var stop in stops)
                 {
-                    // Формируем route_info[] используя реальные ID из БД
                     string routeInfoArray = BuildRouteInfoArray(stop.Routes, routes, routeIdByIndex);
 
                     string sql = $@"INSERT INTO {stopTable} 
@@ -237,8 +227,6 @@ namespace CityDataCollector.Database
 
         /// <summary>
         /// Строит строковое представление route_info[] для SQL.
-        /// Формат: ARRAY[ROW(route_id, route_number, sequence_num)::route_info, ...]
-        /// route_id — реальный serial ID из таблицы маршрутов, полученный через RETURNING id.
         /// </summary>
         private string BuildRouteInfoArray(List<Collectors.StopRouteRef> stopRoutes,
             List<Collectors.SurfaceRouteData> allRoutes, Dictionary<int, long> routeIdByIndex)
@@ -251,10 +239,8 @@ namespace CityDataCollector.Database
             var parts = new List<string>();
             foreach (var sr in stopRoutes)
             {
-                // Используем RouteIndex — точный индекс маршрута (с учётом направления)
                 int routeIndex = sr.RouteIndex;
 
-                // Получаем реальный ID маршрута из БД
                 if (!routeIdByIndex.TryGetValue(routeIndex, out long dbRouteId)) continue;
 
                 string escaped = sr.RouteNumber.Replace("'", "''");
@@ -269,12 +255,9 @@ namespace CityDataCollector.Database
             return $"ARRAY[{string.Join(", ", parts)}]";
         }
 
-        // ==================== МЕТРО ====================
-
         public async Task WriteMetroAsync(int cityId,
             List<Collectors.MetroRouteData> routes, List<Collectors.MetroStationData> stations)
         {
-            // Бэкап перед обновлением
             string cityName = _cityNames.TryGetValue(cityId, out string? cn) ? cn : $"city_{cityId}";
             await BackupTablesAsync(cityId, cityName, "metro_stations", "metro_lines");
 
@@ -284,7 +267,6 @@ namespace CityDataCollector.Database
 
             try
             {
-                // Удаляем старые данные
                 using (var cmd = new NpgsqlCommand("DELETE FROM metro_stations WHERE city_id = @cityId", conn, tx))
                 {
                     cmd.Parameters.AddWithValue("cityId", cityId);
@@ -296,9 +278,8 @@ namespace CityDataCollector.Database
                     await cmd.ExecuteNonQueryAsync();
                 }
 
-                // Группируем маршруты по парам (прямой/обратный) для metro_lines
                 var lineGroups = routes.GroupBy(r => r.RouteNumber).ToList();
-                var lineDbIds = new Dictionary<string, long>(); // routeNumber → DB ID
+                var lineDbIds = new Dictionary<string, long>();
 
                 foreach (var group in lineGroups)
                 {
@@ -306,9 +287,6 @@ namespace CityDataCollector.Database
                     var first = lineRoutes[0];
 
                     long[] forwardIds = first.Stops.Select(s => s.NodeId).ToArray();
-                    //long[] backwardIds = lineRoutes.Count > 1
-                    //    ? lineRoutes[1].Stops.Select(s => s.NodeId).ToArray()
-                    //    : Array.Empty<long>();
                     long[] backwardIds = forwardIds.Reverse().ToArray();
 
                     string sql = @"INSERT INTO metro_lines 
@@ -329,7 +307,6 @@ namespace CityDataCollector.Database
                     lineDbIds[first.RouteNumber] = dbId;
                 }
 
-                // Вставляем станции
                 foreach (var station in stations)
                 {
                     string lineInfoArray = BuildMetroLineInfoArray(station.Routes, lineDbIds);
@@ -415,11 +392,8 @@ namespace CityDataCollector.Database
                 : "ARRAY[]";
         }
 
-        // ==================== ДОСТОПРИМЕЧАТЕЛЬНОСТИ ====================
-
         public async Task WriteAttractionsAsync(int cityId, List<Collectors.AttractionData> attractions)
         {
-            // Бэкап перед обновлением
             string cityName = _cityNames.TryGetValue(cityId, out string? cn) ? cn : $"city_{cityId}";
             await BackupTablesAsync(cityId, cityName, "attractions");
 

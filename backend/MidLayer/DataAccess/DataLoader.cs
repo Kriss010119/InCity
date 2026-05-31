@@ -17,7 +17,7 @@ namespace MidLayer.DataAccess
         private readonly IMetroRepository _metroRepo;
         private readonly ICityRepository _cityRepo;
 
-        private const int DefaultSearchRadiusMeters = 25000;
+        private const int DefaultSearchRadiusMeters = 20000;
 
         public DataLoader(
             IAttractionRepository attractionRepo,
@@ -43,7 +43,6 @@ namespace MidLayer.DataAccess
         public async Task<CityData> LoadCityDataAsync(double latitude, double longitude,
             string[] categories, string[] subcategories, int searchRadius = DefaultSearchRadiusMeters)
         {
-            // Первая волна: остановки и достопримечательности
             Task<IEnumerable<IAttraction>> attractionsTask = _attractionRepo.GetAttractionsAsync(
                 latitude, longitude, searchRadius, categories, subcategories);
 
@@ -60,7 +59,6 @@ namespace MidLayer.DataAccess
             IEnumerable<TrolleybusStop> trolleybusStops = trolleybusStopsTask.Result;
             IEnumerable<MetroStation> metroStations = metroStationsTask.Result;
 
-            // Вторая волна: маршруты по ID найденных остановок/станций
             ulong[] busStopIds = busStops.Select(s => s.ID).ToArray();
             ulong[] tramStopIds = tramStops.Select(s => s.ID).ToArray();
             ulong[] trolleybusStopIds = trolleybusStops.Select(s => s.ID).ToArray();

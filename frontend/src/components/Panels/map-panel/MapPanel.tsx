@@ -10,8 +10,8 @@ import { CurvedRouteSegments } from './components/CurvedRouteSegments';
 import { TransportStops } from './components/TransportStops';
 import { MapController } from './components/MapController';
 import {
-  TILE_LAYER_URL,
-  TILE_LAYER_ATTRIBUTION,
+  getTileLayerAttribution,
+  getTileLayerUrl,
   DEFAULT_CENTER,
   DEFAULT_ZOOM,
   HOTEL_ZOOM,
@@ -28,6 +28,7 @@ import { ZoomHandler } from './components/ZoomHandler';
 import { extractSectionIndexFromGapId } from '../info-panel/components/route-card/utils';
 import { detectMetroCity } from '../../../constants/metroConstants';
 import { usePlaceCache } from '../../../context/PlaceCacheContext';
+import { useTheme } from '../../../context/ThemeContext';
 
 export const MapPanel = ({
   destinationLat,
@@ -60,7 +61,6 @@ export const MapPanel = ({
 
   const [mapCenter, setMapCenter] = useState<[number, number]>(getInitialCenter);
   const [mapZoom, setMapZoom] = useState<number>(getInitialZoom);
-  const [mapKey, setMapKey] = useState(0);
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
   const [shouldFlyTo, setShouldFlyTo] = useState(false);
   const [targetCenter, setTargetCenter] = useState<[number, number] | null>(null);
@@ -72,6 +72,15 @@ export const MapPanel = ({
   const prevCollapsedRef = useRef(isInfoPanelCollapsed);
   const prevSelectedGapRef = useRef(selectedGapId);
   const isInitialMount = useRef(true);
+
+  const { theme } = useTheme();
+  const isDarkTheme = theme === 'dark';
+  const tileLayerUrl = getTileLayerUrl(isDarkTheme);
+  const tileLayerAtribution = getTileLayerAttribution(isDarkTheme);
+
+  const mapKey = useMemo(() => {
+    return theme === 'dark' ? 1 : 0;
+  }, [theme]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -337,7 +346,7 @@ export const MapPanel = ({
           <ZoomHandler onZoomChange={setCurrentZoom} />
           <MapResizeHandler isInfoPanelCollapsed={isInfoPanelCollapsed} />
           <MapClickHandler onMapClick={handleMapClick} isSelectingMode={isSelectingMode} />
-          <TileLayer attribution={TILE_LAYER_ATTRIBUTION} url={TILE_LAYER_URL} />
+          <TileLayer attribution={tileLayerAtribution} url={tileLayerUrl} />
 
           <CurvedRouteSegments
             segments={displayedSegments}

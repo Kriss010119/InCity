@@ -60,10 +60,6 @@ namespace CityDataCollector.Collectors
         public long StopId { get; set; }
         public string RouteNumber { get; set; } = "";
         public int Order { get; set; }
-
-        /// <summary>
-        /// Индекс маршрута в списке routes (для точной идентификации направления).
-        /// </summary>
         public int RouteIndex { get; set; }
     }
 
@@ -108,7 +104,6 @@ namespace CityDataCollector.Collectors
 
             var result = new SurfaceTransportResult();
 
-            // ШАГ 1: Получаем ID маршрутов
             var routeIds = await GetRouteIdsAsync(cityName);
 
             if (routeIds.Count == 0)
@@ -119,12 +114,9 @@ namespace CityDataCollector.Collectors
 
             FileLogger.Instance.Log($"  {_typeName}: найдено {routeIds.Count} ID маршрутов");
 
-            // ШАГ 2: Загружаем маршруты с их остановками (пачками)
             var routes = await LoadRoutesBatchAsync(routeIds, batchSize: _batchSize);
             FileLogger.Instance.Log($"  {_typeName}: загружено {routes.Count} маршрутов с остановками");
 
-            // ШАГ 3: Строим остановки из маршрутов (новый подход)
-            // Словарь: stopId → SurfaceStopData (с координатами и RouteInfo из маршрутов)
             var stopDict = new Dictionary<long, SurfaceStopData>();
 
             for (int routeIndex = 0; routeIndex < routes.Count; routeIndex++)
@@ -158,7 +150,6 @@ namespace CityDataCollector.Collectors
                 }
             }
 
-            // ШАГ 4: Получаем названия остановок из OSM (отдельный запрос)
             await EnrichStopNamesAsync(stopDict, cityName);
 
             result.Routes = routes;
@@ -167,8 +158,6 @@ namespace CityDataCollector.Collectors
             FileLogger.Instance.Log($"  {_typeName}: итого {routes.Count} маршрутов, {result.Stops.Count} остановок");
             return result;
         }
-
-        // ==================== ЗАПРОСЫ К OSM ====================
 
         private async Task<List<long>> GetRouteIdsAsync(string cityName)
         {
@@ -281,8 +270,6 @@ namespace CityDataCollector.Collectors
             }
         }
 
-        // ==================== ПАРСИНГ ====================
-
         private List<SurfaceRouteData> ParseRoutesWithStops(string json)
         {
             var routes = new List<SurfaceRouteData>();
@@ -293,7 +280,6 @@ namespace CityDataCollector.Collectors
                 using var doc = JsonDocument.Parse(json);
                 var elements = doc.RootElement.GetProperty("elements");
 
-                // Первый проход: собираем ноды
                 foreach (var el in elements.EnumerateArray())
                 {
                     if (el.GetProperty("type").GetString() == "node")
@@ -307,7 +293,6 @@ namespace CityDataCollector.Collectors
                     }
                 }
 
-                // Второй проход: собираем маршруты
                 foreach (var el in elements.EnumerateArray())
                 {
                     if (el.GetProperty("type").GetString() != "relation") continue;

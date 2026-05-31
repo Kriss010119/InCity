@@ -4,7 +4,7 @@ import type { FormData, RouteResponse } from '../types';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001',
-  timeout: 20000,
+  timeout: 60000,
 });
 
 const toCsv = (values?: string[]) => (values && values.length > 0 ? values.join(',') : '');

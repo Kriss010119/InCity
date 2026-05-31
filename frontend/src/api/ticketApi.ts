@@ -3,7 +3,7 @@ import type { TicketDetails } from '../types';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001',
-  timeout: 20000,
+  timeout: 60000,
 });
 
 export const fetchTicketDetails = async (ticketNumber: string): Promise<TicketDetails> => {

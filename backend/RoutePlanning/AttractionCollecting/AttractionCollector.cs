@@ -12,12 +12,13 @@ namespace RoutePlanning.AttractionCollecting
         private IAttraction[] _attractions;
         private List<Cluster> _clusters;
 
+        // Константы калибровки.
         private const double MinTimeFactor = 0.6;
         private const double MaxTimeFactor = 0.8;
         private const int LongRouteDurationThreshold = 300;
-        private const double DistanceNormalizationMeters = 2000.0;
+        private const double DistanceNormalizationMeters = 3000.0;
         private const int ReplacementCandidatesCount = 5;
-        private const int MaxGastroClusters = 3;
+        private const int MaxGastroClusters = 2;
 
         public AttractionCollector(IEnumerable<IAttraction> attractions)
         {
@@ -53,14 +54,14 @@ namespace RoutePlanning.AttractionCollecting
         /// Фактор расстояния учитывает позицию целевого кластера: высчитывается относительно соседей в маршруте.
         /// Замена не должна нарушать требование по количеству гастрономических кластеров.
         /// </summary>
-        public Cluster[] GetReplacements(Cluster[] route, Cluster[] confirmed, int targetIndex, double startLat, double startLon, int time, int minTimeForCluster)
+        public Cluster[] GetReplacements(Cluster[] route, Cluster[] confirmed, int targetIndex, bool forConfirmed, double startLat, double startLon, int time, int timeCurr, int minTimeForCluster)
         {
             if (targetIndex < 0 || targetIndex >= route.Length)
             {
                 return [];
             }
 
-            Cluster targetCluster = route[targetIndex];
+            Cluster targetCluster = forConfirmed ? confirmed[targetIndex] : route[targetIndex];
             bool gastroRequired = IsGastronomyCluster(targetCluster);
 
             HashSet<ulong> routeAttractionIds = CollectAttractionIds(route, targetIndex);
@@ -93,8 +94,6 @@ namespace RoutePlanning.AttractionCollecting
                 nextLon = 0;
             }
 
-            double maxInterestRate = GetMaxInterestRate(_clusters);
-
             List<Pair<Cluster, double>> candidates = new List<Pair<Cluster, double>>();
 
             foreach (Cluster cluster in _clusters)
@@ -105,6 +104,13 @@ namespace RoutePlanning.AttractionCollecting
                 }
 
                 if (cluster.EstimatedTime < minTimeForCluster)
+                {
+                    continue;
+                }
+
+                int timePred = timeCurr + cluster.EstimatedTime - targetCluster.EstimatedTime;
+
+                if (timePred < time * MinTimeFactor ||  timePred > time * MaxTimeFactor)
                 {
                     continue;
                 }
@@ -128,7 +134,7 @@ namespace RoutePlanning.AttractionCollecting
                     ? CalculateDistanceRateBetween(cluster, prevLat, prevLon, nextLat, nextLon)
                     : CalculateDistanceRate(cluster, prevLat, prevLon);
 
-                double mvr = CalculateMustVisitRate(cluster.InterestRate, maxInterestRate, distRate);
+                double mvr = CalculateMustVisitRate(cluster.InterestRate, distRate);
 
                 candidates.Add(new Pair<Cluster, double>(cluster, mvr));
             }
@@ -183,13 +189,9 @@ namespace RoutePlanning.AttractionCollecting
         /// Вычисляет mustVisitRate — итоговый рейтинг кластера как среднее геометрическое
         /// нормализованного коэффициента интереса и коэффициента близости.
         /// </summary>
-        private static double CalculateMustVisitRate(double interestRate, double maxInterestRate, double distanceRate)
+        private static double CalculateMustVisitRate(double interestRate, double distanceRate)
         {
-            double normalizedInterest = maxInterestRate > 0
-                ? interestRate / maxInterestRate
-                : 0;
-
-            return normalizedInterest * distanceRate;
+            return interestRate * distanceRate;
         }
 
         /// <summary>
@@ -199,15 +201,13 @@ namespace RoutePlanning.AttractionCollecting
         private static List<Cluster> SelectByRating(List<Cluster> allClusters, double startLat, double startLon,
             int minTime, int maxTime, int requiredGastro, int minTimeForCluster)
         {
-            double maxInterestRate = GetMaxInterestRate(allClusters);
-
             List<Pair<Cluster, double>> gastroClusters = new List<Pair<Cluster, double>>();
             List<Pair<Cluster, double>> otherClusters = new List<Pair<Cluster, double>>();
 
             for (int i = 0; i < allClusters.Count; i++)
             {
                 double distRate = CalculateDistanceRate(allClusters[i], startLat, startLon);
-                double mvr = CalculateMustVisitRate(allClusters[i].InterestRate, maxInterestRate, distRate);
+                double mvr = CalculateMustVisitRate(allClusters[i].InterestRate, distRate);
 
                 Pair<Cluster, double> entry = new(allClusters[i], mvr);
 

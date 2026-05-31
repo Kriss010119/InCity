@@ -37,7 +37,6 @@ namespace CityDataCollector
             Console.OutputEncoding = Encoding.UTF8;
             FileLogger.Initialize();
 
-            // Определяем режим работы
             string mode = GetArgValue(args, "--mode") ?? "db";
             string? singleCity = GetArgValue(args, "--city");
 
@@ -105,8 +104,6 @@ namespace CityDataCollector
 
             FileLogger.Instance.Log($"=== Завершено. Успешно: {completed}, ошибок: {failed} ===");
         }
-
-        // ==================== РЕЖИМ JSON ====================
 
         private static async Task CollectCityToJsonAsync(OverpassClient client, string cityName, string outputDir)
         {
@@ -186,8 +183,6 @@ namespace CityDataCollector
             FileLogger.Instance.Log($"=== {cityName}: сбор завершён ===");
         }
 
-        // ==================== РЕЖИМ БД ====================
-
         private static async Task CollectCityToDbAsync(OverpassClient client, DatabaseWriter dbWriter, string cityName)
         {
             FileLogger.Instance.Log($"=== {cityName}: сбор данных (БД) ===");
@@ -263,8 +258,6 @@ namespace CityDataCollector
 
             FileLogger.Instance.Log($"=== {cityName}: сбор завершён ===");
         }
-
-        // ==================== УТИЛИТЫ ====================
 
         private static string GetConnectionString(string[] args)
         {

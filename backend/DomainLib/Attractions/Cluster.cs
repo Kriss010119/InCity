@@ -24,7 +24,8 @@ namespace DomainLib.Attractions
                 time += attraction.EstimatedVisitMinutes;
                 if (attraction is Attraction)
                 {
-                    interestRateUnnormilized += GetTagCount(attraction) * 1.02;
+                    interestRateUnnormilized += GetTagCount(attraction);
+                    interestRateUnnormilized *= 1.02;
                 }
                 else
                 {
